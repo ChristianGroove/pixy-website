@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permisos de la Aplicación | Pixy</title>
+    <meta name="description"
+        content="Información detallada sobre los permisos que Pixy solicita al conectar con Facebook, Instagram y WhatsApp.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="legal-page">
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+
+    <header class="legal-header">
+        <a href="index.html" class="back-link">← Volver al inicio</a>
+        <h1>Permisos de la Aplicación</h1>
+        <p class="updated">Guía para Revisores de Meta y Usuarios</p>
+    </header>
+
+    <main class="legal-content">
+        <nav class="legal-toc">
+            <h4>Contenido</h4>
+            <ol>
+                <li><a href="#resumen">Resumen de la Aplicación</a></li>
+                <li><a href="#caso-uso">Caso de Uso Principal</a></li>
+                <li><a href="#permisos-facebook">Permisos de Facebook</a></li>
+                <li><a href="#permisos-instagram">Permisos de Instagram</a></li>
+                <li><a href="#permisos-whatsapp">Permisos de WhatsApp Business</a></li>
+                <li><a href="#flujo-datos">Flujo de Datos</a></li>
+                <li><a href="#seguridad">Medidas de Seguridad</a></li>
+                <li><a href="#instrucciones-revisor">Instrucciones para Revisores</a></li>
+            </ol>
+        </nav>
+
+        <h2 id="resumen">1. Resumen de la Aplicación</h2>
+        <p>
+            <strong>Pixy</strong> es una plataforma SaaS (Software as a Service) de gestión empresarial
+            diseñada para pequeñas y medianas empresas. Permite a las empresas:
+        </p>
+        <ul>
+            <li>Gestionar sus contactos y clientes (CRM)</li>
+            <li>Centralizar comunicaciones de múltiples canales en un inbox unificado</li>
+            <li>Generar cotizaciones y facturas</li>
+            <li>Automatizar flujos de trabajo</li>
+            <li>Ofrecer un portal de autoservicio a sus clientes</li>
+        </ul>
+
+        <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; margin: 20px 0;">
+            <p><strong>Información de la Aplicación:</strong></p>
+            <ul>
+                <li><strong>Nombre:</strong> Pixy</li>
+                <li><strong>Tipo:</strong> Business / B2B SaaS</li>
+                <li><strong>URL:</strong> <a href="https://app.pixy.com.co">app.pixy.com.co</a></li>
+                <li><strong>Empresa:</strong> Pixy SAS (Colombia)</li>
+            </ul>
+        </div>
+
+        <h2 id="caso-uso">2. Caso de Uso Principal</h2>
+        <p>
+            Los usuarios de Pixy son <strong>agencias de marketing, consultoras y empresas de servicios</strong>
+            que gestionan comunicaciones con sus clientes a través de múltiples canales.
+        </p>
+        <p><strong>Ejemplo de flujo:</strong></p>
+        <ol>
+            <li>Un cliente envía un mensaje de Instagram Direct a la página de la agencia</li>
+            <li>El mensaje aparece en el inbox unificado de Pixy</li>
+            <li>El equipo de la agencia responde desde Pixy</li>
+            <li>La respuesta se envía automáticamente a Instagram</li>
+            <li>El contacto se asocia al CRM para seguimiento</li>
+        </ol>
+        <p>
+            <strong>Beneficio:</strong> Las empresas no necesitan revisar múltiples aplicaciones;
+            todo está centralizado en Pixy.
+        </p>
+
+        <h2 id="permisos-facebook">3. Permisos de Facebook</h2>
+
+        <h3>3.1 pages_messaging</h3>
+        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+            <tr>
+                <td style="padding: 12px; width: 30%; background: rgba(255,255,255,0.05);"><strong>Permiso</strong></td>
+                <td style="padding: 12px;"><code>pages_messaging</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Qué permite?</strong></td>
+                <td style="padding: 12px;">Enviar y recibir mensajes de Facebook Messenger en nombre de Páginas
+                    administradas por el usuario</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Por qué lo necesitamos?</strong>
+                </td>
+                <td style="padding: 12px;">Para mostrar mensajes de Messenger en el inbox unificado y permitir responder
+                    desde Pixy</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>Datos accedidos</strong></td>
+                <td style="padding: 12px;">Mensajes entrantes/salientes, nombre del remitente, ID de conversación</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>Cómo se usan</strong></td>
+                <td style="padding: 12px;">Se muestran en el inbox, se asocian a contactos del CRM, se almacenan para
+                    historial</td>
+            </tr>
+        </table>
+
+        <h3>3.2 pages_manage_metadata</h3>
+        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+            <tr>
+                <td style="padding: 12px; width: 30%; background: rgba(255,255,255,0.05);"><strong>Permiso</strong></td>
+                <td style="padding: 12px;"><code>pages_manage_metadata</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Qué permite?</strong></td>
+                <td style="padding: 12px;">Suscribirse a webhooks de la Página para recibir notificaciones en tiempo
+                    real</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Por qué lo necesitamos?</strong>
+                </td>
+                <td style="padding: 12px;">Para recibir notificaciones instantáneas cuando llega un nuevo mensaje</td>
+            </tr>
+        </table>
+
+        <h3>3.3 pages_read_engagement</h3>
+        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+            <tr>
+                <td style="padding: 12px; width: 30%; background: rgba(255,255,255,0.05);"><strong>Permiso</strong></td>
+                <td style="padding: 12px;"><code>pages_read_engagement</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Qué permite?</strong></td>
+                <td style="padding: 12px;">Leer comentarios y reacciones en publicaciones de la Página</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Por qué lo necesitamos?</strong>
+                </td>
+                <td style="padding: 12px;">Para incluir comentarios en el inbox y responder a interacciones</td>
+            </tr>
+        </table>
+
+        <h2 id="permisos-instagram">4. Permisos de Instagram</h2>
+
+        <h3>4.1 instagram_basic</h3>
+        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+            <tr>
+                <td style="padding: 12px; width: 30%; background: rgba(255,255,255,0.05);"><strong>Permiso</strong></td>
+                <td style="padding: 12px;"><code>instagram_basic</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Qué permite?</strong></td>
+                <td style="padding: 12px;">Acceder a información básica del perfil de Instagram Business/Creator</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>Datos accedidos</strong></td>
+                <td style="padding: 12px;">ID de cuenta, nombre de usuario, foto de perfil</td>
+            </tr>
+        </table>
+
+        <h3>4.2 instagram_manage_messages</h3>
+        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+            <tr>
+                <td style="padding: 12px; width: 30%; background: rgba(255,255,255,0.05);"><strong>Permiso</strong></td>
+                <td style="padding: 12px;"><code>instagram_manage_messages</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Qué permite?</strong></td>
+                <td style="padding: 12px;">Enviar y recibir mensajes de Instagram Direct</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Por qué lo necesitamos?</strong>
+                </td>
+                <td style="padding: 12px;">Para centralizar DMs de Instagram en el inbox unificado</td>
+            </tr>
+        </table>
+
+        <h3>4.3 instagram_manage_comments</h3>
+        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+            <tr>
+                <td style="padding: 12px; width: 30%; background: rgba(255,255,255,0.05);"><strong>Permiso</strong></td>
+                <td style="padding: 12px;"><code>instagram_manage_comments</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Qué permite?</strong></td>
+                <td style="padding: 12px;">Leer y responder comentarios en publicaciones de Instagram</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Por qué lo necesitamos?</strong>
+                </td>
+                <td style="padding: 12px;">Para gestionar comentarios desde el mismo inbox</td>
+            </tr>
+        </table>
+
+        <h2 id="permisos-whatsapp">5. Permisos de WhatsApp Business</h2>
+
+        <h3>5.1 whatsapp_business_messaging</h3>
+        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+            <tr>
+                <td style="padding: 12px; width: 30%; background: rgba(255,255,255,0.05);"><strong>Permiso</strong></td>
+                <td style="padding: 12px;"><code>whatsapp_business_messaging</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Qué permite?</strong></td>
+                <td style="padding: 12px;">Enviar y recibir mensajes de WhatsApp Business API</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Por qué lo necesitamos?</strong>
+                </td>
+                <td style="padding: 12px;">Para integrar WhatsApp Business en el inbox unificado</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>Datos accedidos</strong></td>
+                <td style="padding: 12px;">Mensajes, números de teléfono de contactos, estado de entrega</td>
+            </tr>
+        </table>
+
+        <h3>5.2 whatsapp_business_management</h3>
+        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+            <tr>
+                <td style="padding: 12px; width: 30%; background: rgba(255,255,255,0.05);"><strong>Permiso</strong></td>
+                <td style="padding: 12px;"><code>whatsapp_business_management</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Qué permite?</strong></td>
+                <td style="padding: 12px;">Gestionar la cuenta de WhatsApp Business (plantillas, configuración)</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; background: rgba(255,255,255,0.05);"><strong>¿Por qué lo necesitamos?</strong>
+                </td>
+                <td style="padding: 12px;">Para verificar el estado de la cuenta y gestionar plantillas de mensajes</td>
+            </tr>
+        </table>
+
+        <h2 id="flujo-datos">6. Flujo de Datos</h2>
+        <p>A continuación se muestra cómo fluyen los datos desde las plataformas de Meta hacia Pixy:</p>
+
+        <div
+            style="background: rgba(255,255,255,0.03); padding: 24px; border-radius: 12px; margin: 20px 0; font-family: monospace; font-size: 14px;">
+            <pre style="margin: 0; overflow-x: auto;">
+┌─────────────────┐     Webhook      ┌─────────────────┐
+│   Facebook      │ ───────────────► │                 │
+│   Messenger     │                  │                 │
+└─────────────────┘                  │                 │
+                                     │                 │
+┌─────────────────┐     Webhook      │     PIXY        │
+│   Instagram     │ ───────────────► │                 │
+│   Direct        │                  │    (Inbox)      │
+└─────────────────┘                  │                 │
+                                     │                 │
+┌─────────────────┐     Webhook      │                 │
+│   WhatsApp      │ ───────────────► │                 │
+│   Business      │                  │                 │
+└─────────────────┘                  └────────┬────────┘
+                                              │
+                                              ▼
+                                     ┌─────────────────┐
+                                     │   Base de Datos │
+                                     │   (Encriptada)  │
+                                     └─────────────────┘
+            </pre>
+        </div>
+
+        <p><strong>Proceso:</strong></p>
+        <ol>
+            <li>Usuario conecta su cuenta de Meta con Pixy</li>
+            <li>Pixy se suscribe a webhooks para las páginas/cuentas autorizadas</li>
+            <li>Cuando llega un mensaje, Meta envía un webhook a Pixy</li>
+            <li>Pixy almacena el mensaje en la base de datos encriptada</li>
+            <li>El mensaje aparece en el inbox del usuario</li>
+            <li>El usuario responde desde Pixy</li>
+            <li>Pixy envía la respuesta a través de la API de Meta</li>
+        </ol>
+
+        <h2 id="seguridad">7. Medidas de Seguridad</h2>
+        <ul>
+            <li><strong>Encriptación en tránsito:</strong> TLS 1.3 para todas las comunicaciones</li>
+            <li><strong>Encriptación en reposo:</strong> AES-256 para datos almacenados</li>
+            <li><strong>Tokens de acceso:</strong> Almacenados de forma segura, nunca expuestos al cliente</li>
+            <li><strong>Row Level Security (RLS):</strong> Aislamiento de datos entre organizaciones</li>
+            <li><strong>Auditoría:</strong> Logs de acceso a datos sensibles</li>
+            <li><strong>Eliminación de datos:</strong> Proceso automatizado para solicitudes de eliminación</li>
+        </ul>
+
+        <h2 id="instrucciones-revisor">8. Instrucciones para Revisores de Meta</h2>
+        <p>Para probar la aplicación, siga estos pasos:</p>
+
+        <h3>8.1 Credenciales de Prueba</h3>
+        <div style="background: rgba(242, 5, 226, 0.1); padding: 20px; border-radius: 12px; margin: 20px 0;">
+            <p><strong>URL de la aplicación:</strong> <a href="https://app.pixy.com.co">https://app.pixy.com.co</a></p>
+            <p><strong>Usuario de prueba:</strong> reviewer@pixy.com.co</p>
+            <p><strong>Contraseña:</strong> [Proporcionada en la solicitud de App Review]</p>
+        </div>
+
+        <h3>8.2 Pasos para Probar</h3>
+        <ol>
+            <li>Inicie sesión con las credenciales proporcionadas</li>
+            <li>Vaya a <strong>Configuración → Integraciones → Meta</strong></li>
+            <li>Haga clic en "Conectar Facebook/Instagram"</li>
+            <li>Autorice los permisos solicitados</li>
+            <li>Seleccione una Página de Facebook para conectar</li>
+            <li>Vaya al <strong>Inbox</strong> para ver los mensajes</li>
+            <li>Envíe un mensaje de prueba a la Página conectada</li>
+            <li>Verifique que el mensaje aparece en Pixy</li>
+            <li>Responda desde Pixy y verifique que llega a Messenger</li>
+        </ol>
+
+        <h3>8.3 Páginas de Prueba</h3>
+        <p>Hemos configurado las siguientes páginas para pruebas:</p>
+        <ul>
+            <li>Página de Facebook: [Proporcionada en la solicitud]</li>
+            <li>Cuenta de Instagram Business: [Proporcionada en la solicitud]</li>
+        </ul>
+
+        <h3>8.4 Video Demostrativo</h3>
+        <p>
+            Un video mostrando el flujo completo está disponible en:
+            <a href="#">[Enlace proporcionado en la solicitud de App Review]</a>
+        </p>
+
+        <h3>8.5 Contacto para Revisores</h3>
+        <p>Si tiene alguna pregunta durante la revisión:</p>
+        <ul>
+            <li><strong>Email:</strong> developers@pixy.com.co</li>
+            <li><strong>Respuesta estimada:</strong> Menos de 24 horas</li>
+        </ul>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/logo.png" alt="Pixy" class="footer-logo">
+                <p>© 2024-2026 Pixy. Todos los derechos reservados.</p>
+            </div>
+            <nav class="footer-links">
+                <h4>Legal</h4>
+                <a href="privacy.html">Política de Privacidad</a>
+                <a href="terms.html">Términos de Servicio</a>
+                <a href="data-deletion.html">Eliminación de Datos</a>
+                <a href="cookies.html">Política de Cookies</a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>Pixy SAS | NIT: [PENDIENTE] | Bogotá, Colombia</p>
+        </div>
+    </footer>
+</body>
+
+</html>
