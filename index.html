@@ -1,93 +1,147 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixy - Plataforma SaaS de Gestión Empresarial | Próximamente</title>
-    <meta name="description" content="Pixy es una plataforma SaaS de gestión empresarial que conecta tus canales de comunicación, CRM, facturación y más. Próximamente disponible.">
-    
+    <meta name="description"
+        content="Pixy es una plataforma SaaS de gestión empresarial que conecta tus canales de comunicación, CRM, facturación y más. Próximamente disponible.">
+
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pixy.com.co/">
     <meta property="og:title" content="Pixy - Plataforma SaaS de Gestión Empresarial">
-    <meta property="og:description" content="Conecta todos tus canales de comunicación en una sola plataforma. CRM, facturación, WhatsApp Business y más.">
+    <meta property="og:description"
+        content="Conecta todos tus canales de comunicación en una sola plataforma. CRM, facturación, WhatsApp Business y más.">
     <meta property="og:image" content="https://pixy.com.co/assets/og-image.png">
-    
+    <meta property="og:site_name" content="Pixy">
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Pixy - Plataforma SaaS de Gestión Empresarial">
     <meta name="twitter:description" content="Conecta todos tus canales de comunicación en una sola plataforma.">
     <meta name="twitter:image" content="https://pixy.com.co/assets/og-image.png">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <!-- Background Animation -->
+    <!-- Background Effects -->
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
-    
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="/">
+                <img src="assets/logo.png" alt="Pixy" class="nav-logo">
+            </a>
+            <div class="nav-links">
+                <a href="#features">Características</a>
+                <a href="#newsletter">Notificaciones</a>
+                <a href="https://app.pixy.com.co" target="_blank">Acceder</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Main Content -->
     <main class="container">
         <!-- Logo -->
         <div class="logo-container">
             <img src="assets/logo.png" alt="Pixy Logo" class="logo">
         </div>
-        
+
         <!-- Hero -->
         <div class="hero">
             <span class="badge">🚀 Próximamente</span>
-            <h1>La plataforma que conecta tu negocio</h1>
+            <h1>La plataforma que <span class="gradient-text">conecta</span> tu negocio</h1>
             <p class="subtitle">
-                Gestiona clientes, facturas, comunicaciones y más desde un solo lugar. 
+                Gestiona clientes, facturas, comunicaciones y más desde un solo lugar.
                 Integración con WhatsApp Business, Instagram, Facebook y más.
             </p>
         </div>
-        
+
         <!-- Features Preview -->
-        <div class="features">
-            <div class="feature">
+        <div class="features" id="features">
+            <div class="feature animate-on-scroll">
                 <div class="feature-icon">💬</div>
-                <h3>Multicanal</h3>
-                <p>WhatsApp, Instagram, Facebook Messenger en un inbox unificado</p>
+                <h3>Inbox Multicanal</h3>
+                <p>WhatsApp, Instagram, Facebook Messenger en un solo lugar. Nunca pierdas un mensaje de tus clientes.
+                </p>
             </div>
-            <div class="feature">
+            <div class="feature animate-on-scroll">
                 <div class="feature-icon">📊</div>
                 <h3>CRM Inteligente</h3>
-                <p>Gestiona contactos, pipeline de ventas y automatizaciones</p>
+                <p>Gestiona contactos, pipeline de ventas y automatizaciones. Todo conectado con tus comunicaciones.</p>
             </div>
-            <div class="feature">
+            <div class="feature animate-on-scroll">
                 <div class="feature-icon">💰</div>
-                <h3>Facturación</h3>
-                <p>Cotizaciones, facturas y portal de clientes integrado</p>
+                <h3>Facturación Integrada</h3>
+                <p>Cotizaciones, facturas y portal de clientes. Cobra más rápido con pagos en línea.</p>
+            </div>
+            <div class="feature animate-on-scroll">
+                <div class="feature-icon">🤖</div>
+                <h3>Automatizaciones</h3>
+                <p>Flujos de trabajo automáticos para facturación, recordatorios y seguimiento de clientes.</p>
+            </div>
+            <div class="feature animate-on-scroll">
+                <div class="feature-icon">📱</div>
+                <h3>Portal de Clientes</h3>
+                <p>Tus clientes acceden a facturas, cotizaciones y pueden pagar en línea desde cualquier dispositivo.
+                </p>
+            </div>
+            <div class="feature animate-on-scroll">
+                <div class="feature-icon">🎨</div>
+                <h3>Multi-Tenant</h3>
+                <p>Administra múltiples organizaciones desde una sola cuenta. Perfecto para agencias.</p>
             </div>
         </div>
-        
+
+        <!-- Newsletter Section -->
+        <div class="newsletter animate-on-scroll" id="newsletter">
+            <h2>¿Quieres ser de los primeros?</h2>
+            <p>Déjanos tu correo y te notificaremos cuando estemos listos para lanzar.</p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" placeholder="tu@email.com" required>
+                <button type="submit" class="btn-primary">
+                    Notificarme
+                </button>
+            </form>
+        </div>
+
         <!-- CTA -->
         <div class="cta">
-            <p class="cta-text">¿Quieres ser de los primeros en probarlo?</p>
-            <a href="mailto:hola@pixy.com.co" class="btn-primary">
-                Contáctanos
-            </a>
+            <p style="color: var(--text-secondary); margin-bottom: 16px;">¿Ya tienes acceso?</p>
+            <div class="cta-buttons">
+                <a href="https://app.pixy.com.co" class="btn-primary" target="_blank">
+                    Ir a la App →
+                </a>
+                <a href="mailto:hola@pixy.com.co" class="btn-secondary">
+                    Contactar
+                </a>
+            </div>
         </div>
     </main>
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
                 <img src="assets/logo.png" alt="Pixy" class="footer-logo">
-                <p>© 2024-2026 Pixy. Todos los derechos reservados.</p>
+                <p>© 2024-2026 Pixy.<br>Todos los derechos reservados.</p>
             </div>
-            
+
             <nav class="footer-links">
                 <h4>Legal</h4>
                 <a href="privacy.html">Política de Privacidad</a>
@@ -95,25 +149,46 @@
                 <a href="data-deletion.html">Eliminación de Datos</a>
                 <a href="cookies.html">Política de Cookies</a>
             </nav>
-            
+
             <nav class="footer-links">
                 <h4>Desarrolladores</h4>
-                <a href="permissions.html">Permisos de la Aplicación</a>
+                <a href="permissions.html">Permisos de la App</a>
                 <a href="https://app.pixy.com.co" target="_blank">Acceder a la App</a>
             </nav>
-            
+
             <div class="footer-contact">
                 <h4>Contacto</h4>
                 <p>hola@pixy.com.co</p>
                 <p>Bogotá, Colombia</p>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
-            <p>Pixy SAS | NIT: [PENDIENTE] | Bogotá, Colombia</p>
+            <p>Pixy SAS | Bogotá, Colombia</p>
         </div>
     </footer>
-    
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
     <script src="js/main.js"></script>
 </body>
+
 </html>
