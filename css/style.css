@@ -229,33 +229,35 @@ body {
     transition: filter 0.3s ease;
 }
 
-/* In dark mode, logo shows as-is (designed for dark bg) - brighten slightly */
+/* In DARK mode: invert black logo to white */
 [data-theme="dark"] .logo {
-    filter: drop-shadow(0 0 30px rgba(242, 5, 226, 0.3)) brightness(1.1);
+    filter: drop-shadow(0 0 30px rgba(242, 5, 226, 0.3)) brightness(0) invert(1);
 }
 
-/* In light mode, invert logo to show dark version */
+/* In LIGHT mode: keep logo as-is (black text) */
 [data-theme="light"] .logo,
-:root:not([data-theme="dark"]) .logo {
-    filter: drop-shadow(0 0 20px rgba(242, 5, 226, 0.15)) invert(1) hue-rotate(180deg);
+:root:not([data-theme="dark"]):not([data-theme="light"]) .logo {
+    filter: drop-shadow(0 0 20px rgba(242, 5, 226, 0.15));
 }
 
-/* Nav and Footer logos - smaller, same treatment */
+/* Nav and Footer logos - same treatment */
 .nav-logo,
 .footer-logo {
     transition: filter 0.3s ease;
 }
 
+/* DARK mode: invert to white */
 [data-theme="dark"] .nav-logo,
 [data-theme="dark"] .footer-logo {
-    filter: brightness(1);
+    filter: brightness(0) invert(1);
 }
 
+/* LIGHT mode: keep black */
 [data-theme="light"] .nav-logo,
 [data-theme="light"] .footer-logo,
-:root:not([data-theme="dark"]) .nav-logo,
-:root:not([data-theme="dark"]) .footer-logo {
-    filter: invert(1) hue-rotate(180deg);
+:root:not([data-theme="dark"]):not([data-theme="light"]) .nav-logo,
+:root:not([data-theme="dark"]):not([data-theme="light"]) .footer-logo {
+    filter: none;
 }
 
 @keyframes logoFloat {
