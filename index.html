@@ -34,12 +34,18 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
 
 <body>
     <!-- Background Effects -->
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
+
+    <!-- Background Orbs -->
+    <div class="orb orb-pink" style="top: 10%; left: 10%; width: 300px; height: 300px;"></div>
+    <div class="orb orb-purple" style="top: 20%; right: 10%; width: 400px; height: 400px; animation-delay: -2s;"></div>
+    <div class="orb orb-pink" style="bottom: 10%; left: 30%; width: 200px; height: 200px; animation-delay: -4s;"></div>
 
     <!-- Navigation -->
     <nav class="nav">
@@ -49,9 +55,10 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="#features">Características</a>
-                <a href="#newsletter">Notificaciones</a>
-                <a href="https://app.pixy.com.co" target="_blank">Acceder</a>
+                <a href="#features" class="neon-link">Características</a>
+                <a href="#newsletter" class="neon-link">Notificaciones</a>
+                <a href="https://app.pixy.com.co" target="_blank" class="btn-neon-outline"
+                    style="padding: 8px 16px; font-size: 14px;">Acceder</a>
             </div>
         </div>
     </nav>
@@ -66,7 +73,7 @@
 
         <!-- Hero -->
         <div class="hero">
-            <span class="badge">🚀 Próximamente</span>
+            <span class="neon-badge neon-badge-pulse">🚀 Próximamente</span>
             <h1>La plataforma que <span class="gradient-text">conecta</span> tu negocio</h1>
             <p class="subtitle">
                 Gestiona clientes, facturas, comunicaciones y más desde un solo lugar.
@@ -76,47 +83,49 @@
 
         <!-- Features Preview -->
         <div class="features" id="features">
-            <div class="feature animate-on-scroll">
-                <div class="feature-icon">💬</div>
+            <div class="glass-card animate-on-scroll">
+                <div class="glass-card-icon">💬</div>
                 <h3>Inbox Multicanal</h3>
                 <p>WhatsApp, Instagram, Facebook Messenger en un solo lugar. Nunca pierdas un mensaje de tus clientes.
                 </p>
             </div>
-            <div class="feature animate-on-scroll">
-                <div class="feature-icon">📊</div>
+            <div class="glass-card animate-on-scroll" style="animation-delay: 0.1s;">
+                <div class="glass-card-icon">📊</div>
                 <h3>CRM Inteligente</h3>
                 <p>Gestiona contactos, pipeline de ventas y automatizaciones. Todo conectado con tus comunicaciones.</p>
             </div>
-            <div class="feature animate-on-scroll">
-                <div class="feature-icon">💰</div>
+            <div class="glass-card animate-on-scroll" style="animation-delay: 0.2s;">
+                <div class="glass-card-icon">💰</div>
                 <h3>Facturación Integrada</h3>
                 <p>Cotizaciones, facturas y portal de clientes. Cobra más rápido con pagos en línea.</p>
             </div>
-            <div class="feature animate-on-scroll">
-                <div class="feature-icon">🤖</div>
+            <div class="glass-card animate-on-scroll">
+                <div class="glass-card-icon">🤖</div>
                 <h3>Automatizaciones</h3>
                 <p>Flujos de trabajo automáticos para facturación, recordatorios y seguimiento de clientes.</p>
             </div>
-            <div class="feature animate-on-scroll">
-                <div class="feature-icon">📱</div>
+            <div class="glass-card animate-on-scroll" style="animation-delay: 0.1s;">
+                <div class="glass-card-icon">📱</div>
                 <h3>Portal de Clientes</h3>
                 <p>Tus clientes acceden a facturas, cotizaciones y pueden pagar en línea desde cualquier dispositivo.
                 </p>
             </div>
-            <div class="feature animate-on-scroll">
-                <div class="feature-icon">🎨</div>
+            <div class="glass-card animate-on-scroll" style="animation-delay: 0.2s;">
+                <div class="glass-card-icon">🎨</div>
                 <h3>Multi-Tenant</h3>
                 <p>Administra múltiples organizaciones desde una sola cuenta. Perfecto para agencias.</p>
             </div>
         </div>
 
         <!-- Newsletter Section -->
-        <div class="newsletter animate-on-scroll" id="newsletter">
+        <div class="glass-card animate-on-scroll" id="newsletter" style="max-width: 700px; padding: 48px;">
             <h2>¿Quieres ser de los primeros?</h2>
             <p>Déjanos tu correo y te notificaremos cuando estemos listos para lanzar.</p>
             <form class="newsletter-form" id="newsletter-form">
-                <input type="email" placeholder="tu@email.com" required>
-                <button type="submit" class="btn-primary">
+                <div class="neon-input-wrapper">
+                    <input type="email" class="neon-input" placeholder="tu@email.com" required>
+                </div>
+                <button type="submit" class="btn-neon">
                     Notificarme
                 </button>
             </form>
@@ -124,12 +133,12 @@
 
         <!-- CTA -->
         <div class="cta">
-            <p style="color: var(--text-secondary); margin-bottom: 16px;">¿Ya tienes acceso?</p>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">¿Ya tienes acceso?</p>
             <div class="cta-buttons">
-                <a href="https://app.pixy.com.co" class="btn-primary" target="_blank">
+                <a href="https://app.pixy.com.co" class="btn-neon" target="_blank">
                     Ir a la App →
                 </a>
-                <a href="mailto:hola@pixy.com.co" class="btn-secondary">
+                <a href="mailto:hola@pixy.com.co" class="btn-neon-outline">
                     Contactar
                 </a>
             </div>
@@ -147,16 +156,16 @@
 
             <nav class="footer-links">
                 <h4>Legal</h4>
-                <a href="privacy.html">Política de Privacidad</a>
-                <a href="terms.html">Términos de Servicio</a>
-                <a href="data-deletion.html">Eliminación de Datos</a>
-                <a href="cookies.html">Política de Cookies</a>
+                <a href="privacy.html" class="neon-link">Política de Privacidad</a>
+                <a href="terms.html" class="neon-link">Términos de Servicio</a>
+                <a href="data-deletion.html" class="neon-link">Eliminación de Datos</a>
+                <a href="cookies.html" class="neon-link">Política de Cookies</a>
             </nav>
 
             <nav class="footer-links">
                 <h4>Desarrolladores</h4>
-                <a href="permissions.html">Permisos de la App</a>
-                <a href="https://app.pixy.com.co" target="_blank">Acceder a la App</a>
+                <a href="permissions.html" class="neon-link">Permisos de la App</a>
+                <a href="https://app.pixy.com.co" target="_blank" class="neon-link">Acceder a la App</a>
             </nav>
 
             <div class="footer-contact">
