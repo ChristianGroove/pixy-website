@@ -481,9 +481,122 @@
     margin-bottom: 8px;
 }
 
-.stat-label {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+/* ============================================
+   BENTO GRID - Advanced Feature Layout
+   ============================================ */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, minmax(250px, auto));
+    gap: 24px;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.bento-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+}
+
+[data-theme="light"] .bento-item {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.bento-item:hover {
+    transform: translateY(-5px) scale(1.01);
+    border-color: rgba(242, 5, 226, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.bento-span-2 {
+    grid-column: span 2;
+}
+
+.bento-row-2 {
+    grid-row: span 2;
+}
+
+@media (max-width: 900px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .bento-span-2,
+    .bento-row-2 {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+/* ============================================
+   VERTICALS TIMELINE - Progressive Rollout
+   ============================================ */
+.verticals-section {
+    position: relative;
+    padding: 100px 0;
+}
+
+.vertical-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.vertical-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, var(--brand-purple) 0%, transparent 70%);
+    opacity: 0.2;
+    filter: blur(20px);
+}
+
+.vertical-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, var(--brand-pink), var(--brand-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ============================================
+   GLOW TEXT & EFFECTS
+   ============================================ */
+.text-glow {
+    text-shadow: 0 0 20px rgba(242, 5, 226, 0.5);
+}
+
+.gradient-border-bottom {
+    position: relative;
+}
+
+.gradient-border-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--brand-pink), var(--brand-purple));
+    border-radius: 3px;
 }
