@@ -354,21 +354,12 @@
     text-decoration: none;
     position: relative;
     font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.neon-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--brand-pink), var(--brand-purple));
-    transition: width 0.3s ease;
-}
-
-.neon-link:hover::after {
-    width: 100%;
+.neon-link:hover {
+    color: var(--brand-pink-light);
+    text-shadow: 0 0 10px rgba(242, 5, 226, 0.5);
 }
 
 /* ============================================
