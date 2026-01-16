@@ -229,28 +229,31 @@ body {
 }
 
 /* Dual Logo System - Show/hide based on theme */
-.logo-dark,
-.nav-logo-dark,
-.footer-logo-dark {
-    display: none;
-}
+/* logo-light = white text logo (for dark backgrounds) */
+/* logo-dark = black text logo (for light backgrounds) */
 
 .logo-light,
 .nav-logo-light,
 .footer-logo-light {
+    display: none;
+}
+
+.logo-dark,
+.nav-logo-dark,
+.footer-logo-dark {
     display: block;
 }
 
-/* Dark mode: show dark logo (white text), hide light logo */
-[data-theme="dark"] .logo-dark,
-[data-theme="dark"] .nav-logo-dark,
-[data-theme="dark"] .footer-logo-dark {
-    display: block;
-}
-
+/* Dark mode: show light logo (white text), hide dark logo */
 [data-theme="dark"] .logo-light,
 [data-theme="dark"] .nav-logo-light,
 [data-theme="dark"] .footer-logo-light {
+    display: block;
+}
+
+[data-theme="dark"] .logo-dark,
+[data-theme="dark"] .nav-logo-dark,
+[data-theme="dark"] .footer-logo-dark {
     display: none;
 }
 
