@@ -226,10 +226,36 @@ body {
     width: auto;
     filter: drop-shadow(0 0 30px rgba(242, 5, 226, 0.2));
     animation: logoFloat 3s ease-in-out infinite;
+    transition: filter 0.3s ease;
 }
 
+/* In dark mode, logo shows as-is (designed for dark bg) - brighten slightly */
 [data-theme="dark"] .logo {
     filter: drop-shadow(0 0 30px rgba(242, 5, 226, 0.3)) brightness(1.1);
+}
+
+/* In light mode, invert logo to show dark version */
+[data-theme="light"] .logo,
+:root:not([data-theme="dark"]) .logo {
+    filter: drop-shadow(0 0 20px rgba(242, 5, 226, 0.15)) invert(1) hue-rotate(180deg);
+}
+
+/* Nav and Footer logos - smaller, same treatment */
+.nav-logo,
+.footer-logo {
+    transition: filter 0.3s ease;
+}
+
+[data-theme="dark"] .nav-logo,
+[data-theme="dark"] .footer-logo {
+    filter: brightness(1);
+}
+
+[data-theme="light"] .nav-logo,
+[data-theme="light"] .footer-logo,
+:root:not([data-theme="dark"]) .nav-logo,
+:root:not([data-theme="dark"]) .footer-logo {
+    filter: invert(1) hue-rotate(180deg);
 }
 
 @keyframes logoFloat {
