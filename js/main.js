@@ -3,8 +3,17 @@
 // Theme Toggle, Animations, Newsletter
 // ============================================
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Initialize theme from localStorage or system preference
+document.addEventListener('DOMContentLoaded', () => {
+    // Mouse Spotlight Effect
+    const spotlight = document.querySelector('.mouse-spotlight');
+    if (spotlight) {
+        document.addEventListener('mousemove', (e) => {
+            spotlight.style.left = e.clientX + 'px';
+            spotlight.style.top = e.clientY + 'px';
+        });
+    }
+
+    // Theme Toggle Logicze theme from localStorage or system preference
     initTheme();
 
     // Smooth scroll for anchor links
