@@ -208,12 +208,16 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
+/* Navigation Content & Layout */
 .nav-content {
     max-width: var(--container-max);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
+    padding: 20px 0;
+    /* Add vertical breathing room */
 }
 
 .nav-logo {
@@ -221,9 +225,11 @@ body {
     width: auto;
 }
 
+/* Ensure links are vertically centered */
 .nav-links {
     display: flex;
     gap: 32px;
+    align-items: center;
 }
 
 .nav-links a {
@@ -518,6 +524,43 @@ h1 .gradient-text {
 .footer-bottom p {
     color: var(--text-muted);
     font-size: 0.8rem;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 900;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    color: var(--brand-pink);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background: var(--brand-pink);
+    color: #ffffff;
+    border-color: var(--brand-pink);
+    box-shadow: 0 0 20px rgba(242, 5, 226, 0.4);
+    transform: translateY(-5px);
 }
 
 /* Legal Pages Styles */

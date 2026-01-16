@@ -40,6 +40,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Intersection Observer for fade-in animations
     initScrollAnimations();
 
+    // Scroll to Top Button Logic
+    const scrollTopBtn = document.querySelector('.scroll-to-top');
+    if (scrollTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+    }
+
     // Console easter egg
     console.log('%c🚀 Pixy', 'font-size: 24px; font-weight: bold; color: #f205e2;');
     console.log('%cBuilding the future of business management', 'color: #9ca3af;');
