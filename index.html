@@ -4,190 +4,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixy - Plataforma SaaS de Gestión Empresarial | Próximamente</title>
+    <title>Pixy - Plataforma de Gestión Empresarial Inteligente</title>
     <meta name="description"
-        content="Pixy es una plataforma SaaS de gestión empresarial que conecta tus canales de comunicación, CRM, facturación y más. Próximamente disponible.">
+        content="Pixy conecta todos tus canales de comunicación, CRM y facturación en una sola plataforma inteligente.">
 
-    <!-- Open Graph / Social -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pixy.com.co/">
-    <meta property="og:title" content="Pixy - Plataforma SaaS de Gestión Empresarial">
-    <meta property="og:description"
-        content="Conecta todos tus canales de comunicación en una sola plataforma. CRM, facturación, WhatsApp Business y más.">
+    <meta property="og:title" content="Pixy - Gestión Empresarial Inteligente">
+    <meta property="og:description" content="Centraliza WhatsApp, Instagram, CRM y Facturación en un solo lugar.">
     <meta property="og:image" content="https://pixy.com.co/assets/og-image.png">
-    <meta property="og:site_name" content="Pixy">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pixy - Plataforma SaaS de Gestión Empresarial">
-    <meta name="twitter:description" content="Conecta todos tus canales de comunicación en una sola plataforma.">
-    <meta name="twitter:image" content="https://pixy.com.co/assets/og-image.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="apple-touch-icon" href="assets/favicon.png">
-
-    <!-- Fonts -->
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
 </head>
 
 <body class="landing-page">
     <div class="mouse-spotlight"></div>
-    <!-- Background Effects -->
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
-
-    <!-- Background Orbs -->
-    <div class="orb orb-pink" style="top: 10%; left: 10%; width: 300px; height: 300px;"></div>
-    <div class="orb orb-purple" style="top: 20%; right: 10%; width: 400px; height: 400px; animation-delay: -2s;"></div>
-    <div class="orb orb-pink" style="bottom: 10%; left: 30%; width: 200px; height: 200px; animation-delay: -4s;"></div>
 
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-content">
-            <a href="/">
+            <a href="/" class="nav-brand">
                 <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark">
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
+
             <div class="nav-links">
-                <a href="#features" class="neon-link">Características</a>
-                <a href="#newsletter" class="neon-link">Notificaciones</a>
-                <a href="https://app.pixy.com.co" target="_blank" class="btn-neon-outline"
-                    style="padding: 8px 16px; font-size: 14px;">Acceder</a>
+
+                <a href="/" class="neon-link">Inicio</a>
+                <a href="pricing.html" class="neon-link">Precios</a>
+                <div class="nav-item has-dropdown">
+                    <a href="industries.html" class="neon-link">Spaces</a>
+                </div>
+                <a href="about.html" class="neon-link">Nosotros</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;">Entrar</a>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Logo -->
-        <div class="logo-container">
-            <img src="assets/logos/logo-dark.svg" alt="Pixy Logo" class="logo logo-dark">
-            <img src="assets/logos/logo-light.svg" alt="Pixy Logo" class="logo logo-light">
+    <!-- Hero Section -->
+    <header class="container" style="padding-top: 140px; padding-bottom: 80px; text-align: center;">
+        <div class="badge">🚀 Nuevo: Pixy Spaces</div>
+        <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px;">
+            <span class="gradient-text">Pixy Spaces</span>: Tu empresa operando<br>desde un solo lugar.
+        </h1>
+        <p class="subtitle" style="max-width: 800px; margin: 0 auto 40px;">
+            Centraliza conversaciones, clientes y automatizaciones en un <strong>espacio de trabajo inteligente</strong>
+            diseñado específicamente para tu industria. Olvídate de herramientas dispersas.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center;">
+            <a href="industries.html" class="btn-neon">Crear mi Space</a>
+            <a href="#como-funciona" class="btn-neon-outline">Ver cómo funciona</a>
         </div>
+    </header>
 
-        <!-- Hero -->
-        <div class="hero">
-            <span class="neon-badge neon-badge-pulse">🚀 Próximamente</span>
-            <h1>La plataforma que <span class="gradient-text">conecta</span> tu negocio</h1>
-            <p class="subtitle">
-                Gestiona clientes, facturas, comunicaciones y más desde un solo lugar.
-                Integración con WhatsApp Business, Instagram, Facebook y más.
+    <!-- Logo Strip -->
+    <div class="logo-strip">
+        <div class="logo-track">
+            <!-- Placeholders for client logos -->
+            <div class="logo-item" style="color:white; font-weight:bold; font-size:1.5rem;">ACME Corp</div>
+            <div class="logo-item" style="color:white; font-weight:bold; font-size:1.5rem;">GlobalTech</div>
+            <div class="logo-item" style="color:white; font-weight:bold; font-size:1.5rem;">Nexus</div>
+            <div class="logo-item" style="color:white; font-weight:bold; font-size:1.5rem;">Starlight</div>
+            <div class="logo-item" style="color:white; font-weight:bold; font-size:1.5rem;">Umbrella</div>
+            <div class="logo-item" style="color:white; font-weight:bold; font-size:1.5rem;">Cyberdyne</div>
+            <div class="logo-item" style="color:white; font-weight:bold; font-size:1.5rem;">Massive</div>
+            <!-- Duplicate for infinite scroll -->
+            <div class="logo-item" style="color:white; font-weight:bold; font-size:1.5rem;">ACME Corp</div>
+            <div class="logo-item" style="color:white; font-weight:bold; font-size:1.5rem;">GlobalTech</div>
+            <div class="logo-item" style="color:white; font-weight:bold; font-size:1.5rem;">Nexus</div>
+        </div>
+    </div>
+
+    <main class="container" style="padding-top: 80px;">
+
+        <!-- 2. The Problem -->
+        <section style="margin-bottom: 120px; text-align: center;">
+            <h2 class="section-title">El problema real: <span class="gradient-text">Caos Operativo</span></h2>
+            <p class="subtitle" style="margin-bottom: 60px;">Tener tus herramientas dispersas te está costando clientes.
             </p>
-        </div>
 
-        <!-- Features Preview -->
-        <div class="features" id="features">
-            <div class="glass-card animate-on-scroll">
-                <div class="glass-card-icon">💬</div>
-                <h3>Inbox Multicanal</h3>
-                <p>WhatsApp, Instagram, Facebook Messenger en un solo lugar. Nunca pierdas un mensaje de tus clientes.
-                </p>
-            </div>
-            <div class="glass-card animate-on-scroll" style="animation-delay: 0.1s;">
-                <div class="glass-card-icon">📊</div>
-                <h3>CRM Inteligente</h3>
-                <p>Gestiona contactos, pipeline de ventas y automatizaciones. Todo conectado con tus comunicaciones.</p>
-            </div>
-            <div class="glass-card animate-on-scroll" style="animation-delay: 0.2s;">
-                <div class="glass-card-icon">💰</div>
-                <h3>Facturación Integrada</h3>
-                <p>Cotizaciones, facturas y portal de clientes. Cobra más rápido con pagos en línea.</p>
-            </div>
-            <div class="glass-card animate-on-scroll">
-                <div class="glass-card-icon">🤖</div>
-                <h3>Automatizaciones</h3>
-                <p>Flujos de trabajo automáticos para facturación, recordatorios y seguimiento de clientes.</p>
-            </div>
-            <div class="glass-card animate-on-scroll" style="animation-delay: 0.1s;">
-                <div class="glass-card-icon">📱</div>
-                <h3>Portal de Clientes</h3>
-                <p>Tus clientes acceden a facturas, cotizaciones y pueden pagar en línea desde cualquier dispositivo.
-                </p>
-            </div>
-            <div class="glass-card animate-on-scroll" style="animation-delay: 0.2s;">
-                <div class="glass-card-icon">🎨</div>
-                <h3>Multi-Tenant</h3>
-                <p>Administra múltiples organizaciones desde una sola cuenta. Perfecto para agencias.</p>
-            </div>
-        </div>
-
-        <!-- Verticals Section (New) -->
-        <section class="verticals-section" id="verticals">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 16px;">Una plataforma, infinitas
-                    industrias</h2>
-                <p class="subtitle">Pixy se adapta a las necesidades específicas de tu sector.</p>
-            </div>
-
-            <div class="bento-grid">
-                <div class="vertical-card bento-item">
-                    <div class="vertical-icon">🏢</div>
-                    <h3>Inmobiliarias</h3>
-                    <p>Gestiona propiedades, programa visitas y automatiza el seguimiento de prospectos interesados.</p>
-                    <a href="#" class="neon-link" style="margin-top: auto;">Próximamente →</a>
+            <div class="grid-3">
+                <div class="glass-card">
+                    <div class="glass-card-icon">❌</div>
+                    <h3>Canales Dispersos</h3>
+                    <p>WhatsApp en el celular, email en la web, Instagram en la app. Responder tarde es perder la venta.
+                    </p>
                 </div>
-                <div class="vertical-card bento-item">
-                    <div class="vertical-icon">⚖️</div>
-                    <h3>Legal</h3>
-                    <p>Expedientes organizados, facturación de honorarios y comunicación segura con clientes.</p>
-                    <a href="#" class="neon-link" style="margin-top: auto;">Próximamente →</a>
+                <div class="glass-card">
+                    <div class="glass-card-icon">🧠</div>
+                    <h3>Seguimiento Manual</h3>
+                    <p>Depender de la memoria o de hojas de cálculo para saber en qué quedó cada cliente genera olvidos
+                        costosos.</p>
                 </div>
-                <div class="vertical-card bento-item">
-                    <div class="vertical-icon">🩺</div>
-                    <h3>Salud</h3>
-                    <p>Citas médicas, historia clínica básica y recordatorios automáticos por WhatsApp.</p>
-                    <a href="#" class="neon-link" style="margin-top: auto;">Próximamente →</a>
-                </div>
-                <div class="vertical-card bento-item bento-span-2">
-                    <div class="vertical-icon">🚀</div>
-                    <h3>Agencias & SaaS</h3>
-                    <p>La solución perfecta para gestionar múltiples clientes, facturación recurrente y soporte
-                        unificado.</p>
-                    <span class="neon-badge" style="margin-top: 16px; align-self: flex-start;">Disponible</span>
-                </div>
-                <div class="vertical-card bento-item">
-                    <div class="vertical-icon">🛍️</div>
-                    <h3>Retail</h3>
-                    <p>Ventas por catálogo, integración con Instagram Shop y pagos rápidos.</p>
-                    <a href="#" class="neon-link" style="margin-top: auto;">Próximamente →</a>
+                <div class="glass-card">
+                    <div class="glass-card-icon">📉</div>
+                    <h3>Procesos Rotos</h3>
+                    <p>Sin automatización, cada tarea depende de ti. Tu negocio no escala, solo te ocupas más.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Newsletter Section -->
-        <div class="glass-card animate-on-scroll" id="newsletter"
-            style="max-width: 700px; padding: 48px; margin: 0 auto 80px;">
-            <h2>¿Quieres ser de los primeros?</h2>
-            <p>Déjanos tu correo y te notificaremos cuando estemos listos para lanzar.</p>
-            <form class="newsletter-form" id="newsletter-form">
-                <div class="neon-input-wrapper">
-                    <input type="email" class="neon-input" placeholder="tu@email.com" required>
-                </div>
-                <button type="submit" class="btn-neon">
-                    Notificarme
-                </button>
-            </form>
-        </div>
+        <!-- 3. The Solution -->
+        <section style="margin-bottom: 120px;">
+            <div class="grid-2-feature" style="align-items: center; gap: 60px;">
+                <div style="text-align: left;">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">La Solución: <br><span
+                            class="gradient-text">Sistema Operativo Comercial</span></h2>
+                    <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 32px;">
+                        Pixy no es solo un CRM. Es el motor que centraliza toda tu operación comercial en un solo flujo
+                        lógico.
+                    </p>
 
-        <!-- CTA -->
-        <div class="cta">
-            <p style="color: var(--text-secondary); margin-bottom: 24px;">¿Ya tienes acceso?</p>
-            <div class="cta-buttons">
-                <a href="https://app.pixy.com.co" class="btn-neon" target="_blank">
-                    Ir a la App →
+                    <div class="feature-row" style="margin-bottom: 24px;">
+                        <div class="feature-icon-small">💬</div>
+                        <div>
+                            <h4>Inbox Unificado</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">WhatsApp, Instagram y Messenger en
+                                una sola bandeja compartida con tu equipo.</p>
+                        </div>
+                    </div>
+                    <div class="feature-row" style="margin-bottom: 24px;">
+                        <div class="feature-icon-small">⚡</div>
+                        <div>
+                            <h4>Automatización Real</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Respuestas automáticas, asignación
+                                de leads y recordatorios sin intervención humana.</p>
+                        </div>
+                    </div>
+                    <div class="feature-row">
+                        <div class="feature-icon-small">📊</div>
+                        <div>
+                            <h4>CRM Conversacional</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Gestiona tu pipeline de ventas
+                                directamente desde la conversación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card"
+                    style="min-height: 400px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.02);">
+                    <!-- Abstract Interface Visual -->
+                    <div style="text-align: center;">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--brand-pink)"
+                            stroke-width="1.5" style="opacity: 0.8; margin-bottom: 16px;">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <p style="color: var(--text-secondary);">Interfaz Unificada Pixy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Pixy Spaces (The Core) -->
+        <section id="features" style="margin-bottom: 120px;">
+            <div style="text-align: center; margin-bottom: 32px;">
+                <span class="neon-badge" style="margin-bottom: 16px; display: inline-block;">Descubre tu Space</span>
+                <h2 class="section-title">¡No somos genéricos, somos <span class="gradient-text">Spaces</span>!</h2>
+                <p class="subtitle" style="margin-top: 16px;">Descubre los espacios diseñados con los flujos
+                    operaciones, herramientas y métricas de tu industria.</p>
+            </div>
+
+            <div class="grid-2" style="gap: 24px;">
+                <!-- Space 1: Agency -->
+                <a href="industries.html" class="glass-card space-card-simple"
+                    style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; border: 1px solid rgba(147, 51, 234, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <span class="status-badge active" style="margin-bottom: 16px;">Disponible</span>
+                    <h3 style="margin-bottom: 12px; font-size: 1.5rem; color: var(--text-primary);">Pixy Agency</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">
+                        Para agencias de marketing y desarrollo. Gestiona múltiples clientes (Multi-tenant) con marca
+                        blanca.
+                    </p>
                 </a>
-                <a href="mailto:hola@pixy.com.co" class="btn-neon-outline">
-                    Contactar
+
+                <!-- Space 2: Resto -->
+                <a href="industries.html" class="glass-card space-card-simple"
+                    style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <span class="status-badge soon" style="margin-bottom: 16px;">Próximamente</span>
+                    <h3 style="margin-bottom: 12px; font-size: 1.5rem; color: var(--text-primary);">Pixy Resto</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">
+                        Para restaurantes y dark kitchens. Centraliza pedidos de WhatsApp y gestiona reservas.
+                    </p>
+                </a>
+
+                <!-- Space 3: Commerce -->
+                <a href="industries.html" class="glass-card space-card-simple"
+                    style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <span class="status-badge soon" style="margin-bottom: 16px;">Próximamente</span>
+                    <h3 style="margin-bottom: 12px; font-size: 1.5rem; color: var(--text-primary);">Pixy Commerce</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">
+                        Para e-commerce y tiendas. Recupera carritos abandonados y gestiona soporte post-venta.
+                    </p>
+                </a>
+
+                <!-- Space 4: Services -->
+                <a href="industries.html" class="glass-card space-card-simple"
+                    style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <span class="status-badge soon" style="margin-bottom: 16px;">Próximamente</span>
+                    <h3 style="margin-bottom: 12px; font-size: 1.5rem; color: var(--text-primary);">Pixy Services</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">
+                        Para clínicas, spas y servicios a domicilio. Agendamiento y recordatorios automáticos.
+                    </p>
                 </a>
             </div>
-        </div>
+        </section>
+
+        <!-- 5. How It Works -->
+        <section id="como-funciona" style="margin-bottom: 120px;">
+            <div class="glass-card" style="padding: 60px;">
+                <h2 class="section-title" style="text-align: center;">Cómo empezar</h2>
+                <div class="grid-3" style="margin-top: 40px; text-align: center;">
+                    <div>
+                        <div style="font-size: 3rem; margin-bottom: 16px; opacity: 0.5;">01</div>
+                        <h4>Elige tu Space</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Selecciona la industria que define tu
+                            negocio para cargar las configuraciones óptimas.</p>
+                    </div>
+                    <div>
+                        <div style="font-size: 3rem; margin-bottom: 16px; opacity: 0.5;">02</div>
+                        <h4>Conecta tus Canales</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Vincula WhatsApp, Instagram, Facebook y
+                            tu sitio web en segundos con código QR.</p>
+                    </div>
+                    <div>
+                        <div style="font-size: 3rem; margin-bottom: 16px; opacity: 0.5;">03</div>
+                        <h4>Automatiza y Escala</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Activa los flujos predefinidos y empieza
+                            a recuperar tiempo y clientes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Final CTA -->
+        <section style="text-align: center; margin-bottom: 80px;">
+            <h2 class="gradient-text" style="font-size: 3rem; margin-bottom: 24px;">Deja de perder clientes hoy.</h2>
+            <p class="subtitle" style="margin-bottom: 40px;">Configura tu Pixy Space en minutos. Sin tarjetas de crédito
+                para probar.</p>
+            <a href="https://app.pixy.com.co/signup" class="btn-neon"
+                style="font-size: 1.2rem; padding: 16px 48px;">Comenzar Ahora</a>
+        </section>
+
+        <!-- Testimonials Section (Custom Slider) -->
+        <!-- Testimonials Section (Custom Slider) -->
+        <section class="testimonials-slider-section" id="testimonials" style="margin-top: 40px; margin-bottom: 40px;">
+            <div class="testimonial-slider-container">
+
+                <!-- Rotating Images Area -->
+                <div class="testimonial-images-wrapper">
+                    <div class="testimonial-halo"></div>
+                    <div class="testimonial-images-track">
+                        <!-- Images injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Text Area -->
+                <div class="testimonial-content-wrapper">
+                    <!-- Text injected by JS -->
+                    <div class="testimonial-quote-container">
+                        <p class="testimonial-quote"></p>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="testimonial-controls">
+                    <!-- Buttons injected by JS -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Banner (MATCHING SPACES STYLE) -->
+        <section class="glass-card"
+            style="text-align: center; padding: 60px; background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);">
+            <h2 style="font-size: 2rem; margin-bottom: 16px;">¿Listo para escalar?</h2>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 32px;">
+                Únete a las empresas que están automatizando su futuro hoy mismo.
+            </p>
+            <a href="contact.html" class="btn-neon-outline">Hablar con Ventas</a>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -201,6 +313,7 @@
 
             <nav class="footer-links">
                 <h4>Producto</h4>
+
                 <a href="pricing.html" class="neon-link">Precios</a>
                 <a href="industries.html" class="neon-link">Soluciones</a>
             </nav>
@@ -227,7 +340,7 @@
         </div>
     </footer>
 
-    <!-- Theme Toggle Button -->
+    <!-- Theme Toggle -->
     <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
         <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -246,15 +359,12 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
     </button>
-
-    <!-- Scroll to Top Button -->
     <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Volver arriba">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
-
     <script src="js/main.js"></script>
 </body>
 
