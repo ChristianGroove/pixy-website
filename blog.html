@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Pixy</title>
+    <!-- Dependencies -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=final">
-    <link rel="stylesheet" href="css/components.css?v=final">
-    <link rel="stylesheet" href="css/pages.css?v=final">
-    <link rel="stylesheet" href="css/typography-reset.css?v=final">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
 </head>
 
 <body class="blog-page">
+    <div class="mouse-spotlight"></div>
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
 
+    <!-- Navigation (Shared) -->
     <nav class="nav">
         <div class="nav-content">
             <a href="/" class="nav-brand">
@@ -24,10 +26,11 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
+
                 <a href="/" class="neon-link">Inicio</a>
                 <a href="pricing.html" class="neon-link">Precios</a>
                 <div class="nav-item has-dropdown">
-                    <a href="industries.html" class="neon-link">Spaces</a>
+                    <a href="industries.html" class="neon-link">Soluciones</a>
                 </div>
                 <a href="about.html" class="neon-link">Nosotros</a>
             </div>
@@ -38,12 +41,74 @@
         </div>
     </nav>
 
-    <main class="container" style="padding-top: 140px; padding-bottom: 80px; min-height: 60vh; text-align: center;">
-        <span class="neon-badge">Blog</span>
-        <h1 class="section-title">Noticias y <span class="gradient-text">Actualizaciones</span></h1>
-        <p class="subtitle">Próximamente publicaremos artículos sobre gestión, tecnología y crecimiento.</p>
+    <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
+
+        <header style="text-align: center; margin-bottom: 60px;">
+            <span class="neon-badge">Recursos</span>
+            <h1 style="font-size: 3rem; margin: 16px 0;">Insights & Noticias</h1>
+            <p class="subtitle">Guías, tutoriales y novedades sobre automatización empresarial.</p>
+        </header>
+
+        <!-- Newsletter CTA -->
+        <div class="glass-card"
+            style="margin-bottom: 80px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
+            <h3>Suscríbete a nuestro boletín</h3>
+            <p style="margin: 16px 0 24px;">Recibe consejos semanales directo en tu inbox.</p>
+            <form id="newsletter-form" style="display: flex; gap: 8px;">
+                <input type="email" placeholder="tu@email.com" class="neon-input" style="flex: 1;">
+                <button type="submit" class="btn-neon" style="padding: 12px 24px;">Suscribir</button>
+            </form>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="blog-grid">
+            <!-- Article 1 -->
+            <a href="#" class="blog-card" style="text-decoration: none; color: inherit;">
+                <div class="blog-image">
+                    <span class="blog-tag">Guía</span>
+                    <!-- Placeholder Gradient -->
+                    <div
+                        style="width: 100%; height: 100%; background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);">
+                    </div>
+                </div>
+                <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Cómo automatizar tu facturación en 2026</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; flex: 1;">
+                    Descubre las estrategias clave para reducir la carga operativa de tu equipo financiero usando Pixy.
+                </p>
+                <span class="neon-link" style="margin-top: 16px; display: inline-block;">Leer más →</span>
+            </a>
+
+            <!-- Article 2 -->
+            <a href="#" class="blog-card" style="text-decoration: none; color: inherit;">
+                <div class="blog-image">
+                    <span class="blog-tag">Novedad</span>
+                    <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #8E2DE2, #4A00E0);"></div>
+                </div>
+                <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Marketing por WhatsApp: Guía Definitiva</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; flex: 1;">
+                    Aprende a enviar campañas masivas sin ser bloqueado y con tasas de apertura del 98%.
+                </p>
+                <span class="neon-link" style="margin-top: 16px; display: inline-block;">Leer más →</span>
+            </a>
+
+            <!-- Article 3 -->
+            <a href="#" class="blog-card" style="text-decoration: none; color: inherit;">
+                <div class="blog-image">
+                    <span class="blog-tag">Caso de Éxito</span>
+                    <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #11998e, #38ef7d);"></div>
+                </div>
+                <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Cómo InmoGroup duplicó sus ventas</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; flex: 1;">
+                    La historia de cómo una inmobiliaria tradicional adoptó la automatización y transformó sus
+                    resultados.
+                </p>
+                <span class="neon-link" style="margin-top: 16px; display: inline-block;">Leer más →</span>
+            </a>
+        </div>
+
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -51,11 +116,14 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
                 <p>Tu operación, bien diseñada.</p>
             </div>
+
             <nav class="footer-links">
                 <h4>Producto</h4>
+
                 <a href="pricing.html" class="neon-link">Precios</a>
                 <a href="industries.html" class="neon-link">Soluciones</a>
             </nav>
+
             <nav class="footer-links">
                 <h4>Empresa</h4>
                 <a href="about.html" class="neon-link">Nosotros</a>
@@ -63,6 +131,7 @@
                 <a href="contact.html" class="neon-link">Contacto</a>
                 <a href="blog.html" class="neon-link">Blog</a>
             </nav>
+
             <nav class="footer-links">
                 <h4>Legal</h4>
                 <a href="privacy.html" class="neon-link">Privacidad</a>
@@ -76,6 +145,29 @@
             <p>© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <button class="theme-toggle" onclick="toggleTheme()"><svg class="sun-icon" xmlns="http://www.w3.org/2000/svg"
+            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg><svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg></button>
+    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
     <script src="js/main.js"></script>
 </body>
 

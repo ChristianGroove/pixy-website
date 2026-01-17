@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Pixy</title>
+    <!-- Dependencies -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=final">
-    <link rel="stylesheet" href="css/components.css?v=final">
-    <link rel="stylesheet" href="css/pages.css?v=final">
-    <link rel="stylesheet" href="css/typography-reset.css?v=final">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
 </head>
 
 <body class="contact-page">
+    <div class="mouse-spotlight"></div>
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
 
+    <!-- Navigation (Shared) -->
     <nav class="nav">
         <div class="nav-content">
             <a href="/" class="nav-brand">
@@ -24,6 +26,7 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
+
                 <a href="/" class="neon-link">Inicio</a>
                 <a href="pricing.html" class="neon-link">Precios</a>
                 <div class="nav-item has-dropdown">
@@ -39,24 +42,103 @@
         </div>
     </nav>
 
-    <main class="container" style="padding-top: 140px; padding-bottom: 80px; max-width: 800px;">
-        <div class="text-center mb-60">
-            <span class="neon-badge">Hablemos</span>
-            <h1 class="section-title">Ponte en <span class="gradient-text">contacto</span></h1>
-            <p class="subtitle">Estamos aquí para ayudarte a escalar tu operación.</p>
-        </div>
+    <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
 
-        <div class="glass-card" style="padding: 48px;">
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 32px;">
-                Escríbenos directamente o agenda una demostración.
-            </p>
-            <div style="display: flex; gap: 24px; justify-content: center;">
-                <a href="mailto:hola@pixy.com.co" class="btn-neon">Email: hola@pixy.com.co</a>
-                <a href="#" class="btn-neon-outline">WhatsApp</a>
+        <header style="text-align: center; margin-bottom: 80px;">
+            <h1 style="font-size: 3rem; margin-bottom: 16px;">Hablemos</h1>
+            <p class="subtitle">¿Tienes dudas o quieres ver Pixy en acción? Estamos aquí.</p>
+        </header>
+
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="glass-card">
+                <form id="contactForm">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+                        <div class="neon-input-wrapper">
+                            <label
+                                style="display: block; margin-bottom: 8px; color: var(--text-secondary);">Nombre</label>
+                            <input type="text" class="neon-input" placeholder="Juan Pérez" required>
+                        </div>
+                        <div class="neon-input-wrapper">
+                            <label
+                                style="display: block; margin-bottom: 8px; color: var(--text-secondary);">Empresa</label>
+                            <input type="text" class="neon-input" placeholder="Tu Empresa SAS">
+                        </div>
+                    </div>
+
+                    <div class="neon-input-wrapper" style="margin-bottom: 24px;">
+                        <label style="display: block; margin-bottom: 8px; color: var(--text-secondary);">Correo
+                            Electrónico</label>
+                        <input type="email" class="neon-input" placeholder="juan@empresa.com" required>
+                    </div>
+
+                    <div class="neon-input-wrapper" style="margin-bottom: 24px;">
+                        <label style="display: block; margin-bottom: 8px; color: var(--text-secondary);">Asunto</label>
+                        <select class="neon-input">
+                            <option>Quiero una Demo</option>
+                            <option>Soporte Técnico</option>
+                            <option>Ventas / Precios</option>
+                            <option>Aliados / Partners</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="neon-input-wrapper" style="margin-bottom: 32px;">
+                        <label style="display: block; margin-bottom: 8px; color: var(--text-secondary);">Mensaje</label>
+                        <textarea class="neon-input" rows="5" placeholder="Cuéntanos cómo podemos ayudarte..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-neon" style="width: 100%;">Enviar Mensaje</button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div style="padding-top: 24px;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 32px;">Información de Contacto</h3>
+
+                <div class="contact-info-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <h4 style="margin-bottom: 4px;">Email</h4>
+                        <p style="color: var(--text-muted);">hola@pixy.com.co</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h4 style="margin-bottom: 4px;">Oficinas</h4>
+                        <p style="color: var(--text-muted);">Bogotá, Colombia</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">(Disponible Remoto Global)</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-icon">🌐</div>
+                    <div>
+                        <h4 style="margin-bottom: 4px;">Redes Sociales</h4>
+                        <div style="display: flex; gap: 16px; margin-top: 8px;">
+                            <a href="#" class="neon-link">LinkedIn</a>
+                            <a href="#" class="neon-link">Instagram</a>
+                            <a href="#" class="neon-link">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card"
+                    style="margin-top: 40px; background: rgba(147, 51, 234, 0.1); border-color: var(--brand-purple);">
+                    <h4>¿Eres Cliente?</h4>
+                    <p style="font-size: 0.9rem; margin: 8px 0 16px; color: var(--text-secondary);">Accede al centro de
+                        ayuda para tutoriales y guías.</p>
+                    <a href="#" class="btn-neon-outline" style="font-size: 0.9rem; padding: 8px 16px;">Ir a Ayuda</a>
+                </div>
             </div>
         </div>
+
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -64,11 +146,14 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
                 <p>Tu operación, bien diseñada.</p>
             </div>
+
             <nav class="footer-links">
                 <h4>Producto</h4>
+
                 <a href="pricing.html" class="neon-link">Precios</a>
                 <a href="industries.html" class="neon-link">Soluciones</a>
             </nav>
+
             <nav class="footer-links">
                 <h4>Empresa</h4>
                 <a href="about.html" class="neon-link">Nosotros</a>
@@ -76,6 +161,7 @@
                 <a href="contact.html" class="neon-link">Contacto</a>
                 <a href="blog.html" class="neon-link">Blog</a>
             </nav>
+
             <nav class="footer-links">
                 <h4>Legal</h4>
                 <a href="privacy.html" class="neon-link">Privacidad</a>
@@ -89,6 +175,29 @@
             <p>© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <button class="theme-toggle" onclick="toggleTheme()"><svg class="sun-icon" xmlns="http://www.w3.org/2000/svg"
+            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg><svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg></button>
+    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
     <script src="js/main.js"></script>
 </body>
 

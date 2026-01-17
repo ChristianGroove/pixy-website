@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Precios - Pixy</title>
+    <!-- Dependencies -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=final">
-    <link rel="stylesheet" href="css/components.css?v=final">
-    <link rel="stylesheet" href="css/pages.css?v=final">
-    <link rel="stylesheet" href="css/typography-reset.css?v=final">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
 </head>
 
 <body class="pricing-page">
+    <div class="mouse-spotlight"></div>
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
 
+    <!-- Navigation (Shared) -->
     <nav class="nav">
         <div class="nav-content">
             <a href="/" class="nav-brand">
@@ -24,6 +26,7 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
+
                 <a href="/" class="neon-link">Inicio</a>
                 <a href="pricing.html" class="neon-link active">Precios</a>
                 <div class="nav-item has-dropdown">
@@ -39,37 +42,224 @@
     </nav>
 
     <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
-        <div class="text-center mb-60">
-            <span class="neon-badge">Planes Flexibles</span>
-            <h1 class="section-title">Precios transparentes para <span class="gradient-text">crecer</span></h1>
-            <p class="subtitle">Sin costos ocultos. Comienza gratis y escala cuando lo necesites.</p>
+
+        <header style="text-align: center; margin-bottom: 60px;">
+            <div class="badge">Planes Flexibles</div>
+            <h1 style="font-size: 3rem; margin: 16px 0;">Escala sin límites</h1>
+            <p class="subtitle">Elige el plan que mejor se adapte a la etapa de tu negocio.</p>
+        </header>
+
+        <!-- Pricing Toggle -->
+        <div class="pricing-toggle">
+            <span style="color: var(--text-muted);">Mensual</span>
+            <div class="toggle-switch active" onclick="this.classList.toggle('active')">
+                <div class="toggle-thumb"></div>
+            </div>
+            <span style="color: var(--text-primary); font-weight: 600;">Anual <span
+                    style="font-size: 0.8rem; color: var(--brand-pink); margin-left: 4px;">(2 meses
+                    gratis)</span></span>
         </div>
 
-        <!-- Pricing Cards Placeholder -->
-        <div class="grid-3" style="gap: 32px; max-width: 1200px; margin: 0 auto;">
-            <div class="glass-card" style="padding: 40px; text-align: center;">
-                <h3>Starts</h3>
-                <div class="price" style="font-size: 2.5rem; font-weight: 700; margin: 20px 0;">Gratis</div>
-                <p>Para emprendedores que inician.</p>
-                <a href="#" class="btn-neon-outline" style="width: 100%; margin-top: 24px;">Comenzar</a>
+        <!-- Pricing Cards -->
+        <div class="pricing-grid">
+            <!-- Starter -->
+            <div class="glass-card">
+                <h3>Startup</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Para equipos que están empezando.</p>
+                <div class="price-amount" style="font-size: 2.5rem;">
+                    Cotizar
+                </div>
+                <a href="contact.html" class="btn-neon-outline" style="width: 100%; margin-bottom: 32px;">Contactar
+                    Ventas</a>
+
+                <ul class="feature-list">
+                    <li class="feature-item"><span class="feature-icon">✓</span> 3 Usuarios</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> 1 Canal de WhatsApp</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> CRM Básico</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> Facturación Ilimitada</li>
+                </ul>
             </div>
-            <div class="glass-card popular" style="padding: 40px; text-align: center; border-color: var(--primary);">
-                <span class="status-badge active" style="margin-bottom: 16px;">Más Popular</span>
+
+            <!-- Scale (Popular) -->
+            <div class="glass-card pricing-card-highlight" style="transform: scale(1.05);">
+                <span class="neon-badge"
+                    style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%);">Más Popular</span>
                 <h3>Scale</h3>
-                <div class="price" style="font-size: 2.5rem; font-weight: 700; margin: 20px 0;">$29<span
-                        style="font-size: 1rem;">/mes</span></div>
-                <p>Para negocios en crecimiento.</p>
-                <a href="#" class="btn-neon" style="width: 100%; margin-top: 24px;">Prueba Gratis</a>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Para empresas en crecimiento.</p>
+                <div class="price-amount" style="font-size: 2.5rem;">
+                    Cotizar
+                </div>
+                <a href="contact.html" class="btn-neon" style="width: 100%; margin-bottom: 32px;">Contactar Ventas</a>
+
+                <ul class="feature-list">
+                    <li class="feature-item"><span class="feature-icon">✓</span> 10 Usuarios</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> 3 Canales de WhatsApp</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> CRM Avanzado + Automatización</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> API Access</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> Soporte Prioritario</li>
+                </ul>
             </div>
-            <div class="glass-card" style="padding: 40px; text-align: center;">
+
+            <!-- Enterprise -->
+            <div class="glass-card">
                 <h3>Enterprise</h3>
-                <div class="price" style="font-size: 2.5rem; font-weight: 700; margin: 20px 0;">Custom</div>
-                <p>Para grandes operaciones.</p>
-                <a href="contact.html" class="btn-neon-outline" style="width: 100%; margin-top: 24px;">Contactar</a>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Soluciones a medida y marca blanca.</p>
+                <div class="price-amount" style="font-size: 2.5rem;">
+                    A Medida
+                </div>
+                <a href="contact.html" class="btn-neon-outline" style="width: 100%; margin-bottom: 32px;">Solicitar
+                    Consultoría</a>
+
+                <ul class="feature-list">
+                    <li class="feature-item"><span class="feature-icon">✓</span> Usuarios Ilimitados</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> Canales Ilimitados</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> Marca Blanca (White Label)</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> Infraestructura Dedicada</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> Gerente de Cuenta</li>
+                </ul>
             </div>
         </div>
+
+        <!-- Comparison Table -->
+        <section style="margin: 100px 0;">
+            <h2 style="text-align: center; margin-bottom: 40px;">Comparativa Detallada</h2>
+            <div style="overflow-x: auto;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 40%;">Características</th>
+                            <th style="width: 20%;">Startup</th>
+                            <th style="width: 20%;">Scale</th>
+                            <th style="width: 20%;">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Inbox Multicanal</td>
+                            <td><span class="comparison-check">✓</span></td>
+                            <td><span class="comparison-check">✓</span></td>
+                            <td><span class="comparison-check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Automatización (Bots)</td>
+                            <td><span class="comparison-x">—</span></td>
+                            <td><span class="comparison-check">✓</span></td>
+                            <td><span class="comparison-check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Generación de Proformas</td>
+                            <td><span class="comparison-check">✓</span></td>
+                            <td><span class="comparison-check">✓</span></td>
+                            <td><span class="comparison-check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Facturación Electrónica (Próximamente)</td>
+                            <td><span class="comparison-x">—</span></td>
+                            <td><span class="comparison-check">✓</span></td>
+                            <td><span class="comparison-check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Marca Blanca</td>
+                            <td><span class="comparison-x">—</span></td>
+                            <td><span class="comparison-x">—</span></td>
+                            <td><span class="comparison-check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>API Access</td>
+                            <td><span class="comparison-x">—</span></td>
+                            <td><span class="comparison-check">✓</span></td>
+                            <td><span class="comparison-check">✓</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 40px;">Preguntas Frecuentes</h2>
+
+            <div class="glass-card" style="padding: 0 32px;">
+                <!-- Question 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        ¿Puedo cambiar de plan en cualquier momento?
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        Sí, puedes actualizar o reducir tu plan en cualquier momento. Los cambios se aplicarán en tu
+                        próximo ciclo de facturación.
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        ¿Cómo funciona la facturación?
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        Actualmente Pixy genera proformas y cuentas de cobro profesionales. La facturación electrónica
+                        directa con la DIAN está en desarrollo y será una actualización gratuita próximamente.
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        ¿Qué métodos de pago aceptan?
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        Aceptamos tarjetas de crédito (Visa, Mastercard), transferencias PSE y pagos bancarios directos
+                        para planes anuales.
+                    </div>
+                </div>
+
+                <!-- NEW: Question 4 (Security) -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        ¿Mis datos están seguros con Pixy?
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        Absolutamente. Utilizamos encriptación de grado bancario (AES-256) para todos tus datos y
+                        realizamos copias de seguridad automáticas diarias. Tu información es confidencial y nunca la
+                        compartimos.
+                    </div>
+                </div>
+
+                <!-- NEW: Question 5 (Support) -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        ¿Qué tipo de soporte recibo?
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        Ofrecemos soporte por chat y correo electrónico en todos los planes. Los clientes del plan Scale
+                        tienen prioridad, y los clientes Enterprise cuentan con un Gerente de Cuenta dedicado vía
+                        WhatsApp.
+                    </div>
+                </div>
+
+                <!-- NEW: Question 6 (Onboarding) -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        ¿Ayudan con la configuración inicial?
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        Sí. Nuestro equipo te guiará en la conexión de tus líneas de WhatsApp y la importación de
+                        clientes para que quedes operativo en menos de 24 horas.
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -77,11 +267,14 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
                 <p>Tu operación, bien diseñada.</p>
             </div>
+
             <nav class="footer-links">
                 <h4>Producto</h4>
+
                 <a href="pricing.html" class="neon-link">Precios</a>
                 <a href="industries.html" class="neon-link">Soluciones</a>
             </nav>
+
             <nav class="footer-links">
                 <h4>Empresa</h4>
                 <a href="about.html" class="neon-link">Nosotros</a>
@@ -89,6 +282,7 @@
                 <a href="contact.html" class="neon-link">Contacto</a>
                 <a href="blog.html" class="neon-link">Blog</a>
             </nav>
+
             <nav class="footer-links">
                 <h4>Legal</h4>
                 <a href="privacy.html" class="neon-link">Privacidad</a>
@@ -102,6 +296,29 @@
             <p>© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <button class="theme-toggle" onclick="toggleTheme()"><svg class="sun-icon" xmlns="http://www.w3.org/2000/svg"
+            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg><svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg></button>
+    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
     <script src="js/main.js"></script>
 </body>
 
