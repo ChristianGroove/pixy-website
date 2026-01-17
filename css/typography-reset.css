@@ -1,0 +1,168 @@
+/* TYPOGRAPHY RESET & SAFE EFFECTS */
+
+/* 1. Global Safety Reset for Text */
+.rebuild-text-wrapper * {
+    hyphens: manual !important;
+    -webkit-hyphens: manual !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    white-space: normal;
+}
+
+/* 2. Hero Section Rebuild */
+.rebuild-hero-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 100px;
+    /* Spacing below */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+
+    /* SAFE ANIMATION: Fade In Up */
+    opacity: 0;
+    animation: safeFadeInUp 0.8s ease-out forwards;
+}
+
+.rebuild-badge {
+    display: inline-block;
+    padding: 8px 24px;
+    background: rgba(242, 5, 226, 0.15);
+    border: 1px solid rgba(242, 5, 226, 0.4);
+    border-radius: 100px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.rebuild-h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    /* NORMALIZED FONT SIZE to match global styles */
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1.15;
+    text-align: center;
+    color: var(--text-primary, #ffffff);
+    margin-bottom: 30px;
+    letter-spacing: -0.02em;
+}
+
+/* SAFE GRADIENT: Pure CSS, inline only */
+.rebuild-gradient {
+    background: linear-gradient(135deg, #f205e2 0%, #9333ea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline;
+    /* STRICTLY INLINE */
+
+    /* Optional: Subtle animation */
+    background-size: 200% auto;
+    animation: gradientFlow 5s linear infinite;
+}
+
+.rebuild-subtitle {
+    font-size: 1.25rem;
+    /* Standardized */
+    line-height: 1.7;
+    color: var(--text-secondary, #94a3b8);
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* 3. Vision Section Rebuild */
+.rebuild-vision-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 120px;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #f205e2;
+    border-radius: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Safety for mobile */
+    gap: 60px;
+    align-items: center;
+
+    /* SAFE ANIMATION */
+    opacity: 0;
+    animation: safeFadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.rebuild-vision-text {
+    flex: 1;
+    /* Takes available space */
+    min-width: 320px;
+    /* Prevents squashing to tiny columns */
+}
+
+.rebuild-h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    /* Standardized */
+    line-height: 1.2;
+    color: var(--text-primary, #ffffff);
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.rebuild-p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary, #94a3b8);
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.rebuild-cards-container {
+    flex: 1;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 columns for cards */
+    gap: 16px;
+}
+
+/* 4. Mobile Adjustments */
+@media (max-width: 768px) {
+    .rebuild-vision-section {
+        flex-direction: column;
+        padding: 30px;
+        gap: 40px;
+    }
+}
+
+/* 5. Safe Animations */
+@keyframes safeFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

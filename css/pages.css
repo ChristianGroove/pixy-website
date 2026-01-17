@@ -1,0 +1,714 @@
+/* ============================================
+   PIXY WEBSITE - PAGE SPECIFIC STYLES
+   ============================================ */
+
+/* --- Pricing Page --- */
+.pricing-section {
+    padding: var(--section-padding) 0;
+    position: relative;
+}
+
+.pricing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 60px;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toggle-switch.active {
+    background: var(--brand-pink);
+    border-color: var(--brand-pink);
+}
+
+.toggle-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toggle-switch.active .toggle-thumb {
+    transform: translateX(28px);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.pricing-card-highlight {
+    border-color: var(--brand-pink);
+    box-shadow: 0 0 40px rgba(242, 5, 226, 0.15);
+    background: rgba(242, 5, 226, 0.05);
+}
+
+.price-amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 24px 0 8px;
+    background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.price-period {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.feature-list {
+    list-style: none;
+    margin: 32px 0;
+    padding: 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+}
+
+.feature-icon {
+    color: var(--brand-pink);
+    font-size: 1.2rem;
+}
+
+/* --- About/Team Page --- */
+/* --- Emergency Clean Titles --- */
+.clean-hero-section {
+    max-width: 900px;
+    margin: 0 auto 120px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.clean-hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 32px;
+    color: var(--text-primary);
+    text-align: center;
+    word-break: normal;
+    overflow-wrap: break-word;
+    /* Safe wrapping */
+    hyphens: none;
+}
+
+.clean-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.clean-vision-container {
+    text-align: left;
+    /* Container left */
+    width: 100%;
+}
+
+.clean-vision-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    text-align: left;
+    /* Specific align */
+    word-break: normal;
+    hyphens: none;
+}
+
+/* Gradient Text Reset */
+.clean-gradient {
+    background: linear-gradient(135deg, var(--brand-pink), var(--brand-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline;
+    /* Important: strictly inline */
+}
+
+/* --- About/Team Page (Editorial Redesign) --- */
+.team-grid-editorial {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.team-card-editorial {
+    background: transparent;
+    text-align: left;
+}
+
+.editorial-image {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    /* Sharp editorial look */
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.editorial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.2, 1, 0.2, 1), filter 0.5s ease;
+    filter: grayscale(0.4) contrast(1.1);
+    /* Editorial vibe */
+}
+
+.team-card-editorial:hover .editorial-image img {
+    transform: scale(1.05);
+    filter: grayscale(0) contrast(1);
+}
+
+.editorial-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.role-text {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--brand-pink);
+    margin-bottom: 16px;
+    font-family: monospace;
+    /* Tech feel */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bio-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+/* Space Mini Cards (Vision Section) */
+.space-mini-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.space-mini-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--brand-pink);
+}
+
+.space-mini-card.disabled {
+    opacity: 0.6;
+    border-style: dashed;
+}
+
+/* --- Features Page --- */
+.feature-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto 60px;
+    overflow-x: auto;
+    padding-bottom: 16px;
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    background: rgba(242, 5, 226, 0.1);
+    border-color: var(--brand-pink);
+    color: var(--brand-pink);
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.detail-grid.reversed {
+    direction: rtl;
+    /* Simple hack for layout swap, text needs explicit ltr */
+}
+
+.detail-grid.reversed>* {
+    direction: ltr;
+}
+
+.detail-grid .detail-content {
+    text-align: left;
+}
+
+.detail-grid.reversed .detail-content {
+    text-align: right;
+}
+
+.detail-grid.reversed .feature-item {
+    flex-direction: row-reverse;
+}
+
+.detail-image {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Contact Page --- */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: var(--brand-pink);
+    flex-shrink: 0;
+}
+
+/* --- Blog/Resources --- */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.blog-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-image {
+    height: 200px;
+    background: #2a2a3e;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 968px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+}
+
+/* --- 3D Spaces Carousel --- */
+.spaces-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    margin: 0 auto 80px;
+    perspective: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spaces-carousel {
+    position: relative;
+    width: 340px;
+    height: 500px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.space-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    background: rgba(20, 20, 25, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Centered */
+    padding: 32px;
+    text-align: center;
+    /* Centered */
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    opacity: 0;
+    z-index: 0;
+}
+
+/* Specific visibility for Active/Next/Prev */
+.space-card.active {
+    opacity: 1 !important;
+    z-index: 20 !important;
+    transform: translateX(0) scale(1.1) translateZ(50px) !important;
+}
+
+.space-card.next {
+    opacity: 0.6 !important;
+    z-index: 10 !important;
+    transform: translateX(250px) scale(0.85) translateZ(-50px) rotateY(-20deg) !important;
+}
+
+.space-card.prev {
+    opacity: 0.6 !important;
+    z-index: 10 !important;
+    transform: translateX(-250px) scale(0.85) translateZ(-50px) rotateY(20deg) !important;
+}
+
+/* Fallback: First child visible if NO active class exists on ANY sibling (CSS logic limited here, so we stick to simple) */
+.space-card:first-child:not(.active):not(.next):not(.prev) {
+    /* If JS fails completely, hardcoded HTML classes should save us. 
+       But if they are missing for some reason, at least show the first one flat. */
+    opacity: 1;
+    z-index: 5;
+}
+
+/* Fallback: If JS fails, show the first card static */
+.space-card:first-child:not(.active):not(.next):not(.prev) {
+    opacity: 1;
+    z-index: 2;
+    transform: none;
+}
+
+/* Light Mode Card Override */
+[data-theme="light"] .space-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.space-card .card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Ensure internal centering */
+}
+
+/* Isotype Glow Effect */
+.card-iso {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 24px;
+    filter: drop-shadow(0 0 15px rgba(242, 5, 226, 0.5));
+    animation: isoPulse 3s ease-in-out infinite;
+}
+
+@keyframes isoPulse {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 15px rgba(242, 5, 226, 0.5));
+        transform: scale(1);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 30px rgba(242, 5, 226, 0.8));
+        transform: scale(1.05);
+    }
+}
+
+.space-card h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.space-card p.card-desc {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    line-height: 1.5;
+    max-width: 90%;
+}
+
+.status-badge {
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.status-badge.active {
+    background: rgba(46, 213, 115, 0.15);
+    color: #2ed573;
+    border: 1px solid rgba(46, 213, 115, 0.3);
+}
+
+.status-badge.soon {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px;
+    text-align: left;
+    /* Keep features list left-aligned for readability? Or center? User asked for 'justificacion de componentes centrada'. */
+    /* Let's keep the LIST centered but items aligned visually if possible. */
+    text-align: center;
+    /* Align text center as requested */
+    width: 100%;
+}
+
+.card-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center items */
+}
+
+.card-features li::before {
+    content: '•';
+    color: var(--brand-pink);
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    /* Safety margin */
+    pointer-events: none;
+    /* Let clicks pass through container */
+    z-index: 20;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    pointer-events: auto;
+}
+
+.control-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    /* Discrete default */
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    /* Enable clicks */
+}
+
+.control-btn:hover {
+    background: var(--brand-pink);
+    color: white;
+    border-color: var(--brand-pink);
+    box-shadow: 0 0 20px rgba(242, 5, 226, 0.4);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .spaces-carousel-wrapper {
+        height: 550px;
+        perspective: none;
+        overflow: hidden;
+    }
+
+    .spaces-carousel {
+        width: 90%;
+        height: 480px;
+    }
+
+    .space-card.next,
+    .space-card.prev {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .space-card.active {
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* ============================================
+   NEW GRID UTILITIES (REDESIGN)
+   ============================================ */
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.grid-2-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+@media (max-width: 900px) {
+
+    .grid-3,
+    .grid-2,
+    .grid-2-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-2-feature {
+        gap: 40px;
+    }
+}
+
+.feature-row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.feature-icon-small {
+    background: rgba(147, 51, 234, 0.1);
+    color: var(--brand-pink);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.check-list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
