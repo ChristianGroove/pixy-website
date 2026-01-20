@@ -718,8 +718,8 @@ h1 .gradient-text {
 }
 
 .astronaut-hero {
-    width: 936px;
-    /* Increased by 30% from 720px per user request */
+    width: 1310px;
+    /* Increased by another 40% per user request */
     max-width: 85vw;
     height: auto;
     filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
@@ -749,8 +749,8 @@ h1 .gradient-text {
 
     .astronaut-hero {
         width: 100%;
-        max-width: 455px;
-        /* Increased by 30% */
+        max-width: 637px;
+        /* Increased by another 40% */
         opacity: 0.5;
     }
 
