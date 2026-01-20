@@ -275,7 +275,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             gsap.registerPlugin(ScrollTrigger);
 
-            // 1. Hero Entrance
+            // 1. Hero Entrance (Text Only - Astronaut is always visible)
             const tl = gsap.timeline();
 
             tl.from('.hero-content-left > *', {
@@ -285,15 +285,9 @@
                 stagger: 0.1,
                 ease: "power2.out"
             });
+            // Removed default opacity fade-in for astronaut to prevent "invisible start"
 
-            tl.from('.hero-visual-right', {
-                x: 50,
-                opacity: 0,
-                duration: 1,
-                ease: "power2.out"
-            }, "-=0.6");
-
-            // 2. Astronaut Float (Base Animation)
+            // 2. Astronaut Idle Float
             gsap.to('.astronaut-hero', {
                 y: 20,
                 rotation: 5,
@@ -303,22 +297,34 @@
                 ease: "sine.inOut"
             });
 
-            // 3. SCROLL EFFECT: Move Astronaut Behind Next Section
-            gsap.to('.hero-visual-right', {
+            // 3. SCROLL ODYSSEY: Grow & Descend to Footer
+            // We create a timeline that spans the entire page scroll
+            const scrollTl = gsap.timeline({
                 scrollTrigger: {
-                    trigger: ".hero-space",
-                    start: "top top",
-                    end: "bottom center", // Animation duration linked to scroll
-                    scrub: 1 // Smooth scrubbing
-                },
-                y: 600, // Move down significantly
-                x: -100, // Move slightly left to center behind card
-                scale: 0.8, // Shrink slightly
-                opacity: 0.8,
-                ease: "none"
+                    trigger: "body",       // Track the whole page
+                    start: "top top",      // Start when page is at top
+                    end: "bottom bottom",  // End when page is at bottom
+                    scrub: 1               // Smooth scrubbing
+                }
             });
 
-            // 3. Bento Grid Stagger
+            scrollTl.to('.hero-visual-right', {
+                y: 2500,     // Move down heavily to reach footer
+                x: -50,      // Slight drift
+                ease: "none" // Linear movement tied to scroll
+            }, 0) // Start at time 0
+
+                .to('.astronaut-hero', {
+                    scale: 1.3,  // Grow from base size
+                    ease: "none"
+                }, 0) // Sync with movement
+
+                .to('.hero-visual-right', {
+                    opacity: 0,  // Fade out
+                    ease: "power2.in"
+                }, 0.8); // Start fading out at 80% of the scroll (near footer)
+
+            // 4. Bento Grid Stagger
             gsap.from('.bento-grid > div', {
                 scrollTrigger: {
                     trigger: '.bento-grid',
