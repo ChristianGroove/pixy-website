@@ -697,7 +697,7 @@ font-weight: 500;
 .card-iso-icon {
     width: 40px;
     height: 40px;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    /* filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); Removed per user request */
 }
 
 /* --- Action Button --- */
