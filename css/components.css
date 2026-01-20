@@ -1489,8 +1489,31 @@
 }
 
 /* ============================================
-   ARTICLE DETAIL PAGE STYLES
+   FLOATING DROID
    ============================================ */
+.floating-droid {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    z-index: 0;
+    opacity: 0.9;
+    pointer-events: none;
+    animation: float-y 6s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes float-y {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
 .article-hero {
     position: relative;
     padding: 160px 0 60px;
