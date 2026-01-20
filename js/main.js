@@ -277,12 +277,17 @@ function initScrollAnimations() {
     // Exclude hero sections to avoid conflicting with detailed GSAP timelines
     const selector = `
         section:not(.hero-space):not(#hero),
+        header:not(.hero-space):not(#hero), 
+        article,
         .glass-card, 
-        .step-card, 
+        .step-card,
+        .space-card,
+        .blog-card,
         .feature-row, 
         .grid-2, 
         .grid-3,
         .steps-flow-container,
+        .pricing-toggle,
         .footer
     `;
 
@@ -304,7 +309,11 @@ function initScrollAnimations() {
 
     elements.forEach(el => {
         // Only observe if it's not already visible or transformed
-        if (!el.classList.contains('fade-in-visible') && !el.classList.contains('hero-content-left')) {
+        // Also skip the main nav to avoid hiding it
+        if (!el.classList.contains('fade-in-visible') &&
+            !el.classList.contains('hero-content-left') &&
+            !el.closest('.nav')) {
+
             el.classList.add('fade-in-hidden');
             observer.observe(el);
         }
