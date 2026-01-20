@@ -1515,6 +1515,25 @@
     }
 }
 
+.floating-droid.droid-flip {
+    transform: scaleX(-1);
+    /* Flip horizontally */
+    animation: float-y-flip 6s ease-in-out infinite;
+}
+
+@keyframes float-y-flip {
+
+    0%,
+    100% {
+        transform: scaleX(-1) translateY(0);
+    }
+
+    50% {
+        transform: scaleX(-1) translateY(-20px);
+    }
+}
+}
+
 .article-hero {
     position: relative;
     padding: 160px 0 60px;
