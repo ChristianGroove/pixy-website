@@ -4,12 +4,13 @@
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Mouse Spotlight Effect
+    // Mouse Spotlight Effect (Enhanced logic in CSS)
     const spotlight = document.querySelector('.mouse-spotlight');
     if (spotlight) {
-        document.addEventListener('mousemove', (e) => {
-            spotlight.style.left = e.clientX + 'px';
-            spotlight.style.top = e.clientY + 'px';
+        window.addEventListener('mousemove', (e) => {
+            // Using requestAnimationFrame implicit via mousemove is okay, 
+            // but we use translate3d for hardware acceleration
+            spotlight.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
         });
     }
 
@@ -87,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Load Lego Header (Dependent on GSAP)
             loadScript('js/header-lego.js');
             // Load Magnetic Cursor (No deps, but good to group)
-            loadScript('js/cursor-light.js');
+            // loadScript('js/cursor-light.js'); // DISABLED: Heavy performance impact
         })
         .catch(err => console.error('Error loading scripts:', err));
 

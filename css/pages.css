@@ -83,23 +83,6 @@
     pointer-events: none;
 }
 
-.mouse-spotlight {
-    pointer-events: none;
-    position: fixed;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    mix-blend-mode: overlay;
-}
-
-transform: translate(-50%, -50%);
-z-index: 9999;
-mix-blend-mode: overlay;
-}
-
 /* --- Comparison Section (Chaos vs Order) --- */
 .comparison-grid {
     display: grid;
@@ -1020,14 +1003,9 @@ mix-blend-mode: overlay;
     font-weight: 500;
 }
 
-/* Centered Items */
-gap: 12px;
-padding: 12px 0;
-border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-color: var(--text-secondary);
-font-size: 0.95rem;
-font-weight: 500;
-}
+
+/* Centered Items (Handled by previous block) */
+
 
 [data-theme="light"] .card-features-list li {
     border-bottom-color: rgba(0, 0, 0, 0.05);
