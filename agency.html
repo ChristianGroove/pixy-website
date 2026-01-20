@@ -173,72 +173,114 @@
         </section>
 
 
-        <!-- FEATURES BENTO GRID -->
+        <!-- ECOSYSTEM DEEP DIVE GRID -->
         <section id="features" style="margin-bottom: 120px; position: relative; z-index: 5;">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Ecosistema Unificado</h2>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Capacidades de la Plataforma</h2>
 
-            <div class="bento-grid"
-                style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 0 20px;">
+            <div class="deep-dive-grid">
 
-                <!-- Feature 1: Project Management (Large) -->
-                <div class="glass-card"
-                    style="grid-column: span 2; position: relative; overflow: hidden; min-height: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
-                    <div style="position: relative; z-index: 2;">
-                        <span class="status-badge active" style="margin-bottom: 12px;">Gestión 360°</span>
-                        <h3 style="font-size: 2rem; margin-bottom: 12px;">Proyectos & Tiempo</h3>
-                        <p style="color: var(--text-secondary); max-width: 80%;">
-                            Cronometra cada tarea. Asigna recursos y obtén reportes de rentabilidad en tiempo real por
-                            cliente.
-                        </p>
-                    </div>
-                    <!-- Abstract UI Mockup Background -->
-                    <div
-                        style="position: absolute; top: 20px; right: 20px; width: 60%; opacity: 0.1; transform: rotate(-5deg); pointer-events: none;">
-                        <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0" y="0" width="400" height="300" rx="20" fill="white" />
-                            <rect x="40" y="40" width="320" height="40" rx="8" fill="white" opacity="0.5" />
-                            <rect x="40" y="100" width="100" height="100" rx="8" fill="white" opacity="0.3" />
-                            <rect x="160" y="100" width="100" height="100" rx="8" fill="white" opacity="0.3" />
-                        </svg>
+                <!-- Card 1: Client Portal -->
+                <div class="feature-card-lg theme-portal">
+                    <h3>Portal de Clientes</h3>
+                    <p>Un espacio VIP para tus clientes. Acceso a documentos, pagos online y estatus de proyectos sin
+                        necesidad de preguntarte a ti.</p>
+
+                    <div class="ui-mockup-frame">
+                        <div class="ui-header">
+                            <div class="ui-dots">
+                                <div class="ui-dot"></div>
+                                <div class="ui-dot"></div>
+                                <div class="ui-dot"></div>
+                            </div>
+                            <div class="ui-tag success">Acceso Cliente</div>
+                        </div>
+                        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                            <div
+                                style="flex: 1; height: 60px; background: rgba(255,255,255,0.05); border-radius: 8px; padding: 10px;">
+                                <div style="font-size: 0.7rem; color: #888;">Factura Pendiente</div>
+                                <div style="color: #fff; font-weight: bold;">$1,200.00 USD</div>
+                            </div>
+                            <button
+                                style="height: 60px; padding: 0 20px; background: #10b981; border: none; border-radius: 8px; color: white; font-weight: bold; cursor: pointer;">Pagar
+                                Ahora</button>
+                        </div>
+                        <div class="ui-row"></div>
+                        <div class="ui-row short"></div>
                     </div>
                 </div>
 
-                <!-- Feature 2: Retainers (Tall) -->
-                <div class="glass-card"
-                    style="grid-column: span 1; grid-row: span 2; display: flex; flex-direction: column;">
-                    <span class="status-badge soon" style="align-self: flex-start; margin-bottom: 12px;">Finanzas</span>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Retainers Recurrentes</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 32px; flex-grow: 1;">
-                        Olvídate de cobrar manual. Pixy genera y envía facturas de tus igualas automáticamente mes a
-                        mes.
-                    </p>
+                <!-- Card 2: Operations Center -->
+                <div class="feature-card-lg theme-ops">
+                    <h3>Centro de Operaciones</h3>
+                    <p>Briefings estandarizados, catálogo de servicios y asignación de tareas. Tu equipo sabe qué hacer
+                        y cuándo hacerlo.</p>
 
-                    <!-- CSS Mock Finance Widget -->
-                    <div
-                        style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                            <span style="font-size: 0.8rem; color: #aaa;">Ingresos este mes</span>
-                            <span style="font-size: 0.8rem; color: #10b981;">+12%</span>
+                    <div class="ui-mockup-frame">
+                        <div class="ui-header">
+                            <div class="ui-title-bar"></div>
+                            <div class="ui-tag purple">Briefing Nuevo</div>
                         </div>
-                        <div style="font-size: 1.8rem; font-weight: 700;">$45,200</div>
-                        <div style="height: 4px; background: #333; margin-top: 10px; border-radius: 2px;">
-                            <div style="width: 70%; height: 100%; background: #9333ea; border-radius: 2px;"></div>
+                        <div class="ui-row highlight"
+                            style="height: 40px; border-radius: 8px; display: flex; align-items: center; padding: 0 10px; justify-content: space-between;">
+                            <span style="font-size: 0.8rem; color: #ccc;">Campaña Q4 Launch</span>
+                            <span style="font-size: 0.7rem; color: #aaa;">Hace 2 min</span>
+                        </div>
+                        <div style="display: flex; gap: 8px;">
+                            <div class="ui-tag">Design</div>
+                            <div class="ui-tag">Copy ID: #8821</div>
+                        </div>
+                        <div class="ui-row"></div>
+                    </div>
+                </div>
+
+                <!-- Card 3: AI & Legal -->
+                <div class="feature-card-lg theme-ai">
+                    <h3>IA & Contratos</h3>
+                    <p>Genera documentos legales y propuestas comerciales en segundos con IA. Firmas digitales
+                        integradas.</p>
+
+                    <div class="ui-mockup-frame">
+                        <div class="ui-header">
+                            <span style="font-size: 0.8rem; color: #f205e2;">✨ Pixy AI Generating...</span>
+                        </div>
+                        <div
+                            style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 8px; border-left: 3px solid #f205e2;">
+                            <div class="ui-row short" style="width: 80%;"></div>
+                            <div class="ui-row" style="width: 90%;"></div>
+                            <div class="ui-row" style="width: 60%;"></div>
+                        </div>
+                        <div
+                            style="align-self: flex-end; width: 100px; height: 30px; background: #f205e2; border-radius: 4px; margin-top: auto;">
                         </div>
                     </div>
                 </div>
 
-                <!-- Feature 3: Client Portal (Normal) -->
-                <div class="glass-card"
-                    style="grid-column: span 2; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
-                    <div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Portal de Clientes</h3>
-                        <p style="color: var(--text-secondary);">
-                            Tus clientes aprueban diseños, descargan facturas y piden cambios sin correos interminables.
-                        </p>
-                    </div>
-                    <div
-                        style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 8px 16px; border-radius: 50px; border: 1px solid rgba(16, 185, 129, 0.2); font-weight: 600;">
-                        ✓ Aprobado
+                <!-- Card 4: CRM Canvas -->
+                <div class="feature-card-lg theme-crm">
+                    <h3>Super CRM Canvas</h3>
+                    <p>Gestión visual de leads. Arrastra y suelta oportunidades en un canvas infinito. Automatizaciones
+                        nativas.</p>
+
+                    <div class="ui-mockup-frame"
+                        style="background-image: radial-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px); background-size: 20px 20px;">
+                        <div style="display: flex; gap: 15px; height: 100%;">
+                            <!-- Col 1 -->
+                            <div
+                                style="width: 80px; background: rgba(255,255,255,0.05); border-radius: 6px; padding: 8px;">
+                                <div
+                                    style="height: 40px; background: rgba(59, 130, 246, 0.3); border-radius: 4px; margin-bottom: 8px;">
+                                </div>
+                                <div style="height: 40px; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
+                            </div>
+                            <!-- Arrow -->
+                            <div style="align-self: center; font-size: 1.5rem; color: #3b82f6;">→</div>
+                            <!-- Col 2 -->
+                            <div
+                                style="width: 80px; background: rgba(255,255,255,0.05); border-radius: 6px; padding: 8px;">
+                                <div style="height: 40px; background: rgba(16, 185, 129, 0.3); border-radius: 4px;">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
