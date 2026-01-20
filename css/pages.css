@@ -459,9 +459,9 @@
 
 .spaces-carousel {
     position: relative;
-    width: 380px !important;
-    /* Slightly narrower for elegance */
-    min-width: 380px !important;
+    width: 750px !important;
+    /* Wide Imposing Width */
+    min-width: 750px !important;
     height: auto;
     min-height: 520px;
     display: grid;
@@ -584,27 +584,39 @@
     -webkit-text-fill-color: transparent;
 }
 
-/* --- Features List --- */
+/* --- Features List (Grid Layout) --- */
 .card-features-list {
     list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;
-    text-align: left;
-    /* List looks better aligned left usually, but centering for this layout */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 Columns */
+    gap: 16px 32px;
+    /* Row Gap / Column Gap */
 }
 
 .card-features-list li {
     display: flex;
     align-items: center;
-    justify-content: center;
-    /* Centered Items */
-    gap: 12px;
-    padding: 12px 0;
+    justify-content: flex-start;
+    /* Left aligned within cell */
+    gap: 10px;
+    padding: 8px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     color: var(--text-secondary);
     font-size: 0.95rem;
     font-weight: 500;
+}
+
+/* Centered Items */
+gap: 12px;
+padding: 12px 0;
+border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+color: var(--text-secondary);
+font-size: 0.95rem;
+font-weight: 500;
 }
 
 [data-theme="light"] .card-features-list li {
