@@ -57,21 +57,25 @@
             isAnimating = true;
 
             const tl = gsap.timeline({
-                onComplete: () => { isAnimating = false; }
+                onComplete: () => {
+                    // Move container out of way after elements are gone
+                    gsap.set(nav, { y: -100 });
+                    isAnimating = false;
+                }
             });
 
-            // 1. Move Nav Up & Fade Out
-            tl.to(nav, {
-                y: -100,
-                opacity: 0,
-                duration: 0.4,
-                ease: "power2.in"
-            }, 0);
+            // "Polite" Disassembly: Elements leave upwards sequentially
+            // 1. Logo leaves
+            tl.to(logo, { y: -30, opacity: 0, duration: 0.2, ease: "power2.in" }, 0);
 
-            // 2. Preset "Exploded" state for re-entry
-            gsap.set(logo, { y: -50 });
-            gsap.set(links, { y: 50, scale: 0.9 });
-            gsap.set(actions, { x: 50 });
+            // 2. Links leave (slightly later)
+            tl.to(links, { y: -30, opacity: 0, duration: 0.2, ease: "power2.in" }, 0.1);
+
+            // 3. Actions leave
+            tl.to(actions, { y: -30, opacity: 0, duration: 0.2, ease: "power2.in" }, 0.2);
+
+            // 4. Fade out background at the end
+            tl.to(nav, { opacity: 0, duration: 0.2 }, 0.3);
         }
 
         function showHeader() {
@@ -90,22 +94,24 @@
                 ease: "power2.out"
             }, 0);
 
-            // 2. Snap Components
+            // 2. SNAP: Logo from Top
             tl.fromTo(logo,
                 { y: -50, opacity: 0 },
                 { y: 0, opacity: 1, duration: 0.6, ease: "back.out(1.7)" },
                 0.1
             );
 
+            // 3. SNAP: Links from Bottom
             tl.fromTo(links,
-                { y: 30, opacity: 0, scale: 0.95 },
-                { y: 0, opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2)" },
+                { y: 20, opacity: 0, scale: 0.95 }, // Reduced Y distance
+                { y: 0, opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" }, // Softer ease
                 0.2
             );
 
+            // 4. SNAP: Actions (Scale Pop instead of Slide X to avoid clipping)
             tl.fromTo(actions,
-                { x: 30, opacity: 0 },
-                { x: 0, opacity: 1, duration: 0.5, ease: "power4.out" },
+                { scale: 0.8, opacity: 0 }, // No X translation
+                { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.5)" },
                 0.25
             );
         }

@@ -56,13 +56,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // Initialize GSAP Hero Animations
-    initGSAPHero();
+    // Initialize GSAP Hero Animations (Only if GSAP exists)
+    if (typeof gsap !== 'undefined') {
+        initGSAPHero();
+    }
 
-    // Load Magnetic Cursor
-    const cursorScript = document.createElement('script');
-    cursorScript.src = 'js/cursor-light.js';
-    document.body.appendChild(cursorScript);
+    // ----------------------------------------------------
+    // GLOBAL DEPENDENCY INJECTION (GSAP + Scripts)
+    // ----------------------------------------------------
+
+    const loadScript = (src) => {
+        return new Promise((resolve, reject) => {
+            if (document.querySelector(`script[src="${src}"]`)) {
+                resolve();
+                return;
+            }
+            const script = document.createElement('script');
+            script.src = src;
+            script.onload = resolve;
+            script.onerror = reject;
+            document.body.appendChild(script);
+        });
+    };
+
+    // Sequence: Load GSAP -> Then ScrollTrigger -> Then Custom Scripts
+    Promise.resolve()
+        .then(() => loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js'))
+        .then(() => loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js'))
+        .then(() => {
+            // Load Lego Header (Dependent on GSAP)
+            loadScript('js/header-lego.js');
+            // Load Magnetic Cursor (No deps, but good to group)
+            loadScript('js/cursor-light.js');
+        })
+        .catch(err => console.error('Error loading scripts:', err));
 
     // Scroll to Top Button Logic
     let scrollTopBtn = document.querySelector('.scroll-to-top');
