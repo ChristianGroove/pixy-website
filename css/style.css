@@ -682,30 +682,38 @@ h1 .gradient-text {
    ============================================ */
 .hero-space {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    /* Back to row for initial separation */
+    justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-    padding-top: 100px;
+    padding: 100px 5% 0;
+    /* Add horizontal padding */
     position: relative;
-    overflow: visible;
-    text-align: center;
+    overflow: hidden;
+    /* Prevent horizontal scroll from movement */
+    text-align: left;
+    /* Left align text */
 }
 
 .hero-content-left {
     z-index: 10;
     position: relative;
-    max-width: 900px;
+    max-width: 50%;
+    /* Limit text width */
+    flex: 1;
 }
 
 .hero-visual-right {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    right: -10%;
+    /* Start off-center to the right */
+    transform: translateY(-50%);
     z-index: 1;
     pointer-events: none;
-    width: 100%;
+    width: 60%;
+    /* Occupy right side */
     height: 100%;
     display: flex;
     justify-content: center;
@@ -713,16 +721,44 @@ h1 .gradient-text {
 }
 
 .astronaut-hero {
-    width: 80vh;
-    max-width: 800px;
+    width: 600px;
+    max-width: 80vw;
     height: auto;
     filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
-    opacity: 0;
-    /* Hidden initially for GSAP reveal */
+    opacity: 1;
+    /* Fully visible */
+    transform-origin: center;
 }
 
 @media (max-width: 900px) {
-    .astronaut-hero {}
+    .hero-space {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-content-left {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .hero-visual-right {
+        position: relative;
+        right: auto;
+        width: 100%;
+        opacity: 0.5;
+    }
+
+    .astronaut-hero {
+        width: 100%;
+        max-width: 350px;
+        opacity: 0.5;
+    }
+
+    .hero-content-left h1,
+    .hero-content-left p {
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    }
 
     body {
         background: white;

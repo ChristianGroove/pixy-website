@@ -461,58 +461,85 @@ function initGSAPHero() {
 
     const hero = document.querySelector('.hero-space');
     const astronaut = document.querySelector('.astronaut-hero');
+    const containerRight = document.querySelector('.hero-visual-right');
     const content = document.querySelector('.hero-content-left');
 
     if (!hero || !astronaut) return;
 
-    // 1. Entrance Animation
+    // 1. Initial State Set (Clean slate)
+    gsap.set(astronaut, {
+        scale: 0.8,
+        opacity: 0, // Start hidden for entrance
+        rotation: 15,
+        y: 50
+    });
+
+    // 2. Entrance (Gentle Fade In of elements)
     const tl = gsap.timeline();
 
-    tl.fromTo(astronaut,
-        { scale: 0.5, opacity: 0, rotation: -15, y: 100 },
-        { duration: 1.5, scale: 1, opacity: 1, rotation: 0, y: 0, ease: "power3.out" }
-    )
+    // Astronaut Entrance
+    tl.to(astronaut, {
+        duration: 1.5,
+        opacity: 1,
+        ease: "power2.out"
+    })
         .from(content.children, {
-            duration: 0.8,
-            y: 30,
+            duration: 1,
+            y: 20,
             opacity: 0,
-            stagger: 0.2,
-            ease: "back.out(1.7)"
+            stagger: 0.1,
+            ease: "power2.out"
         }, "-=1");
 
-    // 2. Floating Animation (Continuous)
+    // 3. Floating Animation (Slower, Natural)
+    // We animate the 'y' property in a separate tween for continuous movement
     gsap.to(astronaut, {
-        y: -30,
-        rotation: 2,
-        duration: 4,
+        y: -40,
+        rotation: 5,
+        duration: 8, // Much slower
         ease: "sine.inOut",
         yoyo: true,
         repeat: -1
     });
 
-    // 3. Scroll Parallax & Rotation
+    // 4. Scroll Logic (Right -> Center)
+    // We move the CONTAINER or the Element. 
+    // Moving containerRight from right edge to center.
+
+    gsap.to(containerRight, {
+        scrollTrigger: {
+            trigger: hero,
+            start: "top top", // Start when hero is at top
+            end: "bottom center", // Finish when hero bottom hits center of view
+            scrub: 1.5 // Smooth scrubbing
+        },
+        right: '25%', // Move inwards (less drastic than previous)
+        ease: "none"
+    });
+
     gsap.to(astronaut, {
         scrollTrigger: {
             trigger: hero,
             start: "top top",
-            end: "bottom top",
+            end: "bottom 30%",
             scrub: 1
         },
-        y: 150, // Parallax movement down
-        rotation: 10, // Slight rotation as you scroll
-        scale: 1.1 // Slight zoom
+        scale: 1, // Grow slightly
+        rotation: 0, // Straighten up
+        x: -50 // Move slightly left towards center
     });
 
-    // Fade out text on scroll
+    // Fade out text faster to avoid clash
     gsap.to(content, {
         scrollTrigger: {
             trigger: hero,
             start: "top top",
-            end: "50% top",
+            end: "30% top",
             scrub: 1
         },
         opacity: 0,
-        y: -50
+        y: -100,
+        filter: "blur(10px)"
     });
 }
 
