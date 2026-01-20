@@ -213,10 +213,11 @@ body {
     max-width: var(--container-max);
     margin: 0 auto;
     display: flex;
+
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 20px 0;
+    padding: 20px 24px;
     /* Add vertical breathing room */
 }
 
@@ -460,6 +461,7 @@ h1 .gradient-text {
 .footer-content {
     max-width: var(--container-max);
     margin: 0 auto;
+    padding: 0 24px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
@@ -709,6 +711,10 @@ h1 .gradient-text {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .footer-logo {
+        margin: 0 auto 16px;
     }
 
     .footer-links {
