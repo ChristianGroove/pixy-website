@@ -22,33 +22,80 @@
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
 
-    <!-- Background Orbs -->
-    <div class="orb orb-pink" style="top: -10%; left: -10%; width: 500px; height: 500px;"></div>
-    <div class="orb orb-purple" style="bottom: 20%; right: -5%; width: 400px; height: 400px;"></div>
+    <!-- Navigation (Shared) -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="/" class="nav-brand">
+                <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark">
+                <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
+            </a>
+            <div class="nav-links">
+                <a href="/" class="neon-link">Inicio</a>
+                <a href="pricing.html" class="neon-link">Precios</a>
+                <div class="nav-item has-dropdown">
+                    <a href="industries.html" class="neon-link">Spaces</a>
+                </div>
+                <a href="about.html" class="neon-link">Nosotros</a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;">Entrar</a>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+            </div>
+        </div>
+    </nav>
 
-    <header class="legal-header">
-        <a href="index.html" class="back-link neon-link">← Volver al inicio</a>
-        <h1 class="gradient-text text-glow">Programa de Partners</h1>
-        <p class="subtitle" style="margin-top: 16px;">
-            Lleva la transformación digital a tus clientes con Pixy.
-        </p>
-    </header>
+    <main class="container" style="padding-top: 140px; text-align: left; align-items: center; max-width: 1200px;">
 
-    <main class="container" style="padding-top: 20px; text-align: left; align-items: flex-start; max-width: 1000px;">
+        <header style="text-align: center; width: 100%; margin-bottom: 80px; max-width: 800px;">
+            <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px;">
+                <span class="gradient-text text-glow">Programa de Partners</span>
+            </h1>
+            <p class="subtitle"
+                style="font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                Lleva la transformación digital a tus clientes con Pixy.
+            </p>
+        </header>
 
-        <div class="bento-grid">
-            <div class="bento-item">
-                <div class="vertical-icon">🚀</div>
+        <div class="grid-3" style="gap: 32px; margin-bottom: 80px;">
+            <div class="glass-card">
+                <div class="glass-card-icon">
+                    <!-- Icon: Rocket / Growth -->
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                        </path>
+                        <path d="M12 15l-3-3a22 22 0 0 1 2-9.56 12.14 12.14 0 0 1 10.56 3 22 22 0 0 1-9.56 2z"></path>
+                        <path d="M2.5 12.5l5 5"></path>
+                        <path d="M11 20H8.5a1.5 1.5 0 0 1-1-2.5 1.5 1.5 0 0 1 0-2"></path>
+                    </svg>
+                </div>
                 <h3>Crecimiento Acelerado</h3>
                 <p>Ofrece una solución SaaS completa sin costos de desarrollo. Aumenta tu ticket promedio.</p>
             </div>
-            <div class="bento-item">
-                <div class="vertical-icon">💎</div>
+            <div class="glass-card">
+                <div class="glass-card-icon">
+                    <!-- Icon: Diamond / Commission -->
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 3h12l4 6-10 13L2 9Z"></path>
+                        <path d="M11 3 8 9l4 13 4-13-3-6"></path>
+                        <path d="M2 9h20"></path>
+                    </svg>
+                </div>
                 <h3>Comisiones Recurrentes</h3>
                 <p>Gana un porcentaje de por vida por cada cliente que traigas a la plataforma.</p>
             </div>
-            <div class="bento-item">
-                <div class="vertical-icon">🤝</div>
+            <div class="glass-card">
+                <div class="glass-card-icon">
+                    <!-- Icon: Handshake / Support -->
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m19 11-4-7"></path>
+                        <path d="M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6Z"></path>
+                        <path d="m11 22 4-7"></path>
+                    </svg>
+                </div>
                 <h3>Soporte Prioritario</h3>
                 <p>Acceso directo a nuestro equipo de producto y material de ventas exclusivo.</p>
             </div>
