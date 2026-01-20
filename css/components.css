@@ -380,6 +380,12 @@
     text-shadow: 0 0 10px rgba(242, 5, 226, 0.5);
 }
 
+.neon-link.active {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(242, 5, 226, 0.8);
+    border-bottom: 2px solid var(--brand-pink);
+}
+
 /* ============================================
    NEON TOOLTIP
    ============================================ */
