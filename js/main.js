@@ -33,9 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
         newsletterForm.addEventListener('submit', handleNewsletterSubmit);
     }
 
-    // Add scroll-based nav styling
-    handleNavScroll();
-    window.addEventListener('scroll', handleNavScroll);
+    // Add scroll-based nav styling (DISABLED: Replaced by Lego Header)
+    // handleNavScroll();
+    // window.addEventListener('scroll', handleNavScroll);
+
+    // Load Lego Header Effect
+    const headerScript = document.createElement('script');
+    headerScript.src = 'js/header-lego.js';
+    document.body.appendChild(headerScript);
 
     // Intersection Observer for fade-in animations
     initScrollAnimations();
@@ -49,8 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Spaces Carousel
     initSpacesCarousel();
 
-    // Initialize Spaces Carousel
-    initSpacesCarousel();
+
 
     // Initialize GSAP Hero Animations
     initGSAPHero();
