@@ -108,10 +108,11 @@
                 0.2
             );
 
-            // 4. SNAP: Actions (Scale Pop instead of Slide X to avoid clipping)
+            // 4. SNAP: Actions (Match Links/Logo - Vertical Only)
+            // User requested: "Same animation as logo/menu... go up or return"
             tl.fromTo(actions,
-                { scale: 0.8, opacity: 0 }, // No X translation
-                { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.5)" },
+                { y: -30, opacity: 0 }, // Drop in from top (matching natural gravity or "hide" direction)
+                { y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.5)" },
                 0.25
             );
         }
