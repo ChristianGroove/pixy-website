@@ -1471,8 +1471,134 @@ pointer-events: none;
 
 .blog-footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* ============================================
+   ARTICLE DETAIL PAGE STYLES
+   ============================================ */
+.article-hero {
+    position: relative;
+    padding: 160px 0 100px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.article-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 30%, rgba(242, 5, 226, 0.15), transparent 70%);
+    z-index: -1;
+}
+
+.article-meta {
+    display: inline-flex;
+    gap: 16px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.article-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.article-content h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-top: 60px;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.article-content h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.article-content p {
+    margin-bottom: 24px;
+}
+
+.article-content ul,
+.article-content ol {
+    margin-bottom: 24px;
+    padding-left: 24px;
+}
+
+.article-content li {
+    margin-bottom: 12px;
+}
+
+.neon-quote {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border-left: 4px solid var(--brand-pink);
+    padding: 32px;
+    border-radius: 0 16px 16px 0;
+    margin: 40px 0;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--text-primary);
+    position: relative;
+}
+
+.neon-quote::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 4rem;
+    color: rgba(242, 5, 226, 0.2);
+    font-family: serif;
+    line-height: 1;
+}
+
+.article-cta-box {
+    background: linear-gradient(135deg, rgba(242, 5, 226, 0.1), rgba(147, 51, 234, 0.1));
+    border: 1px solid rgba(242, 5, 226, 0.3);
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    margin: 60px 0;
+    box-shadow: 0 0 30px rgba(242, 5, 226, 0.1);
+}
+
+.author-bio {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 32px;
+    border-radius: 24px;
+    margin-top: 80px;
+}
+
+.author-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--brand-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
 }
