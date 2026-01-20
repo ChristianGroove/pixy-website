@@ -40,6 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Intersection Observer for fade-in animations
     initScrollAnimations();
 
+    // Initialize Testimonials
+    initTestimonials();
+
+    // Initialize Accordion
+    initAccordion();
+
+    // Initialize Spaces Carousel
+    initSpacesCarousel();
+
     // Scroll to Top Button Logic
     const scrollTopBtn = document.querySelector('.scroll-to-top');
     if (scrollTopBtn) {
@@ -280,3 +289,234 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// ============================================
+// TESTIMONIALS SLIDER
+// ============================================
+
+function initTestimonials() {
+    const container = document.querySelector('.testimonial-slider-container');
+    if (!container) return; // Exit if not on home page
+
+    const track = document.querySelector('.testimonial-images-track');
+    const contentWrapper = document.querySelector('.testimonial-content-wrapper');
+    const controlsContainer = document.querySelector('.testimonial-controls');
+
+    // Data
+    const testimonials = [
+        {
+            name: "Carlos Mendoza",
+            role: "CEO, Marketing Flow",
+            image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80",
+            quote: "Pixy transformó nuestra agencia. Pasamos de usar 5 herramientas diferentes a tener todo en un solo lugar. La facturación automatizada nos ahorra 20 horas al mes."
+        },
+        {
+            name: "Ana Lucía Torres",
+            role: "Fundadora, Green Eat",
+            image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
+            quote: "La plantilla de Restaurante es increíble. Ya venía configurada con el menú digital y los pedidos por WhatsApp. En una tarde estábamos operando."
+        },
+        {
+            name: "Javier Costa",
+            role: "Director, Tech Solutions",
+            image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
+            quote: "El soporte multi-tenant es lo que buscábamos. Podemos gestionar a todos nuestros clientes desde un solo dashboard sin mezclar datos."
+        },
+        {
+            name: "Sofía Vergara",
+            role: "Gerente, Style Store",
+            image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
+            quote: "Recuperamos el 30% de los carritos abandonados gracias a las automatizaciones de Pixy. Se pagó solo en la primera semana."
+        }
+    ];
+
+    let currentIndex = 0;
+    let autoPlayInterval;
+
+    // Render Initial State
+    function render() {
+        // Clear Tracks
+        track.innerHTML = '';
+        controlsContainer.innerHTML = '';
+
+        // 1. Render Images (Orbiting System)
+        testimonials.forEach((item, index) => {
+            const img = document.createElement('img');
+            img.src = item.image;
+            img.alt = item.name;
+            img.className = 'testimonial-img';
+
+            // Calculate Position relative to current
+            // 0 = Active/Center
+            // -1 = Previous
+            // 1 = Next
+            // Others = hidden/waiting
+            let position = 'hidden';
+            if (index === currentIndex) position = 'active';
+            else if (index === (currentIndex - 1 + testimonials.length) % testimonials.length) position = 'prev';
+            else if (index === (currentIndex + 1) % testimonials.length) position = 'next';
+
+            img.classList.add(position);
+
+            // Allow click to jump
+            img.onclick = () => {
+                if (position !== 'active') {
+                    setIndex(index);
+                }
+            };
+
+            track.appendChild(img);
+        });
+
+        // 2. Render Text with Fade Animation
+        const quoteBox = contentWrapper.querySelector('.testimonial-quote-container');
+        // Reset Logic to force re-flow animation
+        const newHtml = `
+            <p class="testimonial-quote">"${testimonials[currentIndex].quote}"</p>
+            <div>
+                <div class="testimonial-author">${testimonials[currentIndex].name}</div>
+                <div class="testimonial-role">${testimonials[currentIndex].role}</div>
+            </div>
+        `;
+        quoteBox.innerHTML = newHtml;
+
+        // 3. Render Controls (Dots/Arrows)
+        // Previous Button
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'testimonial-btn';
+        prevBtn.innerHTML = '←'; // Or SVG
+        prevBtn.onclick = () => prev();
+        controlsContainer.appendChild(prevBtn);
+
+        // Next Button
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'testimonial-btn';
+        nextBtn.innerHTML = '→'; // Or SVG
+        nextBtn.onclick = () => next();
+        controlsContainer.appendChild(nextBtn);
+    }
+
+    function setIndex(index) {
+        currentIndex = index;
+        render();
+        resetAutoPlay();
+    }
+
+    function next() {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        render();
+        resetAutoPlay();
+    }
+
+    function prev() {
+        currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+        render();
+        resetAutoPlay();
+    }
+
+    function resetAutoPlay() {
+        clearInterval(autoPlayInterval);
+        autoPlayInterval = setInterval(next, 5000); // 5 seconds rotation
+    }
+
+    // Initialize
+    render();
+    resetAutoPlay();
+}
+
+// ============================================
+// ACCORDION (FAQ)
+// ============================================
+
+function initAccordion() {
+    const accordions = document.querySelectorAll('.accordion-item');
+
+    accordions.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+
+        header.addEventListener('click', () => {
+            // Close others (Optional - strict accordion)
+            accordions.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Toggle current
+            item.classList.toggle('active');
+        });
+    });
+}
+
+// ============================================
+// SPACES CAROUSEL (3D)
+// ============================================
+
+function initSpacesCarousel() {
+    const carousel = document.querySelector('.spaces-carousel-wrapper');
+    if (!carousel) return;
+
+    const cards = Array.from(document.querySelectorAll('.space-card'));
+    let currentIndex = 0;
+
+    // Initial State
+    updateCarousel();
+
+    // Expose global function for HTML onclick
+    window.rotateCarousel = (direction) => {
+        if (direction === 'next') {
+            currentIndex = (currentIndex + 1) % cards.length;
+        } else {
+            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+        }
+        updateCarousel();
+    };
+
+    function updateCarousel() {
+        cards.forEach((card, index) => {
+            // Reset classes
+            card.className = 'space-card hidden';
+
+            // Determine position
+            if (index === currentIndex) {
+                card.className = 'space-card active';
+            } else if (index === (currentIndex + 1) % cards.length) {
+                card.className = 'space-card next';
+                card.onclick = () => { currentIndex = index; updateCarousel(); };
+            } else if (index === (currentIndex - 1 + cards.length) % cards.length) {
+                card.className = 'space-card prev';
+                card.onclick = () => { currentIndex = index; updateCarousel(); };
+            }
+        });
+    }
+
+    // Touch / Swipe Logic
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const carouselTrack = document.querySelector('.spaces-carousel');
+
+    carouselTrack.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    carouselTrack.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+        const threshold = 50;
+        const swipeDistance = touchStartX - touchEndX;
+
+        if (Math.abs(swipeDistance) > threshold) {
+            if (swipeDistance > 0) {
+                // Swiped Left -> Next
+                window.rotateCarousel('next');
+            } else {
+                // Swiped Right -> Prev
+                window.rotateCarousel('prev');
+            }
+        }
+    }
+}
+

@@ -10,7 +10,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/pages.css?v=6">
 </head>
 
 <body class="industries-page">
@@ -55,94 +55,137 @@
         <!-- 3D CAROUSEL CONTAINER -->
         <div class="spaces-carousel-wrapper">
             <div class="spaces-carousel">
-
                 <!-- Card 1: Agency (Active) -->
                 <div class="space-card active" data-space="agency">
-                    <div class="card-glow"></div>
-                    <div class="card-content">
-                        <img src="assets/logos/iso.svg" class="card-iso" alt="Pixy Agency">
-                        <h2>Pixy Agency</h2>
-                        <span class="status-badge active">Disponible</span>
-                        <p class="card-desc">
-                            CRM + Proyectos + Facturación.
-                            El sistema operativo para agencias creativas y consultoras.
-                        </p>
-                        <ul class="card-features">
-                            <li>🎨 Marca Blanca</li>
-                            <li>🔄 Suscripciones</li>
-                            <li>👥 Portal Clientes</li>
+                    <div class="card-floating-iso">
+                        <div class="iso-circle">
+                            <img src="assets/logos/iso.svg" class="card-iso-icon" alt="Pixy Agency">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-subtitle">Industry OS</span>
+                        <h2>Agency</h2>
+                        <div class="card-divider"></div>
+                        <ul class="card-features-list">
+                            <li>
+                                <span class="feature-dot"></span>
+                                <span>Marca Blanca</span>
+                            </li>
+                            <li>
+                                <span class="feature-dot"></span>
+                                <span>Suscripciones</span>
+                            </li>
+                            <li>
+                                <span class="feature-dot"></span>
+                                <span>Portal Clientes</span>
+                            </li>
                         </ul>
-                        <a href="contact.html" class="btn-neon small">Solicitar Demo</a>
+                    </div>
+                    <div class="card-floating-action">
+                        <a href="agency.html" class="btn-card-action">Explorar Space</a>
                     </div>
                 </div>
 
                 <!-- Card 2: Resto -->
                 <div class="space-card next" data-space="resto">
-                    <div class="card-content">
-                        <img src="assets/logos/iso.svg" class="card-iso" alt="Pixy Resto">
-                        <h2>Pixy Resto</h2>
-                        <span class="status-badge soon">Pronto</span>
-                        <p class="card-desc">
-                            Reservas + Pedidos + Pagos.
-                            Todo lo que tu restaurante necesita para operar y crecer.
-                        </p>
-                        <ul class="card-features">
-                            <li>📅 Motor de Reservas</li>
-                            <li>📱 Menú QR Digital</li>
-                            <li>🛵 Delivery Manager</li>
+                    <div class="card-floating-iso">
+                        <div class="iso-circle">
+                            <img src="assets/logos/iso.svg" class="card-iso-icon" alt="Pixy Resto">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-subtitle">F&B OS</span>
+                        <h2>Resto</h2>
+                        <div class="card-divider"></div>
+                        <ul class="card-features-list">
+                            <li>
+                                <span class="feature-dot"></span>
+                                <span>Reservas</span>
+                            </li>
+                            <li>
+                                <span class="feature-dot"></span>
+                                <span>Menú QR</span>
+                            </li>
+                            <li>
+                                <span class="feature-dot"></span>
+                                <span>Pedidos</span>
+                            </li>
                         </ul>
+                    </div>
+                    <div class="card-floating-action">
+                        <button class="btn-card-action disabled" disabled>Próximamente</button>
                     </div>
                 </div>
 
                 <!-- Card 3: Commerce -->
                 <div class="space-card" data-space="commerce">
-                    <div class="card-content">
-                        <img src="assets/logos/iso.svg" class="card-iso" alt="Pixy Commerce">
-                        <h2>Pixy Commerce</h2>
-                        <span class="status-badge soon">Pronto</span>
-                        <p class="card-desc">
-                            Ventas + Clientes + Retargeting.
-                            Automatiza tu e-commerce y recupera carritos abandonados.
-                        </p>
-                        <ul class="card-features">
-                            <li>🛒 Recuperación IA</li>
-                            <li>📦 Seguimiento Envíos</li>
-                            <li>💬 Soporte Automático</li>
+                    <div class="card-floating-iso">
+                        <div class="iso-circle">
+                            <img src="assets/logos/iso.svg" class="card-iso-icon" alt="Pixy Commerce">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-subtitle">Retail OS</span>
+                        <h2>Commerce</h2>
+                        <div class="card-divider"></div>
+                        <ul class="card-features-list">
+                            <li>
+                                <span class="feature-dot"></span>
+                                <span>Inventario</span>
+                            </li>
+                            <li>
+                                <span class="feature-dot"></span>
+                                <span>Shopify Sync</span>
+                            </li>
+                            <li>
+                                <span class="feature-dot"></span>
+                                <span>Logistic</span>
+                            </li>
                         </ul>
+                    </div>
+                    <div class="card-floating-action">
+                        <button class="btn-card-action disabled" disabled>Próximamente</button>
                     </div>
                 </div>
 
                 <!-- Card 4: Services -->
                 <div class="space-card prev" data-space="services">
-                    <div class="card-content">
-                        <img src="assets/logos/iso.svg" class="card-iso" alt="Pixy Services">
-                        <h2>Pixy Services</h2>
-                        <span class="status-badge soon">Pronto</span>
-                        <p class="card-desc">
-                            Citas + Documentos + Honorarios.
-                            Para abogados, contadores y profesionales independientes.
-                        </p>
-                        <ul class="card-features">
-                            <li>📅 Agendamiento 24/7</li>
-                            <li>📄 Gestión Documental</li>
-                            <li>🔐 Portal Seguro</li>
+                    <div class="card-floating-iso">
+                        <div class="iso-circle">
+                            <img src="assets/logos/iso.svg" class="card-iso-icon" alt="Pixy Services">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-subtitle">Pro OS</span>
+                        <h2>Services</h2>
+                        <div class="card-divider"></div>
+                        <ul class="card-features-list">
+                            <li>
+                                <span class="feature-dot"></span>
+                                <span>Agendamiento</span>
+                            </li>
+                            <li>
+                                <span class="feature-dot"></span>
+                                <span>Pagos Link</span>
+                            </li>
+                            <li>
+                                <span class="feature-dot"></span>
+                                <span>Historial</span>
+                            </li>
                         </ul>
                     </div>
+                    <div class="card-floating-action">
+                        <button class="btn-card-action disabled" disabled>Próximamente</button>
+                    </div>
                 </div>
-
             </div>
+        </div>
 
-            <!-- Controls -->
-            <div class="carousel-controls">
-                <button class="control-btn prev-btn" onclick="rotateCarousel('prev')">←</button>
-                <div class="carousel-indicators">
-                    <span class="indicator active"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                </div>
-                <button class="control-btn next-btn" onclick="rotateCarousel('next')">→</button>
-            </div>
+        <!-- Controls -->
+        <div class="carousel-controls">
+            <button class="control-btn prev-btn" onclick="rotateCarousel('prev')">←</button>
+            <button class="control-btn next-btn" onclick="rotateCarousel('next')">→</button>
+        </div>
         </div>
 
         <!-- MIGRATED FEATURES CONTENT -->
