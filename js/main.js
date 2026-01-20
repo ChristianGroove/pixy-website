@@ -49,8 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Spaces Carousel
     initSpacesCarousel();
 
-    // Initialize Hero Parallax
-    initHeroParallax();
+    // Initialize Spaces Carousel
+    initSpacesCarousel();
+
+    // Initialize GSAP Hero Animations
+    initGSAPHero();
 
     // Scroll to Top Button Logic
     const scrollTopBtn = document.querySelector('.scroll-to-top');
@@ -451,22 +454,65 @@ function initAccordion() {
 }
 
 /* ============================================
-   HERO PARALLAX
+   GSAP HERO ANIMATION
    ============================================ */
-function initHeroParallax() {
-    const heroImage = document.querySelector('.scroll-parallax');
-    if (!heroImage) return;
+function initGSAPHero() {
+    gsap.registerPlugin(ScrollTrigger);
 
-    window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        // Move image down at 20% speed of scroll for depth effect
-        const rate = scrolled * 0.15;
+    const hero = document.querySelector('.hero-space');
+    const astronaut = document.querySelector('.astronaut-hero');
+    const content = document.querySelector('.hero-content-left');
 
-        // Apply transform to the container to avoid conflicting with the CSS animation on the image itself
-        const container = document.querySelector('.hero-visual-right');
-        if (container) {
-            container.style.transform = `translateY(${rate}px)`;
-        }
+    if (!hero || !astronaut) return;
+
+    // 1. Entrance Animation
+    const tl = gsap.timeline();
+
+    tl.fromTo(astronaut,
+        { scale: 0.5, opacity: 0, rotation: -15, y: 100 },
+        { duration: 1.5, scale: 1, opacity: 1, rotation: 0, y: 0, ease: "power3.out" }
+    )
+        .from(content.children, {
+            duration: 0.8,
+            y: 30,
+            opacity: 0,
+            stagger: 0.2,
+            ease: "back.out(1.7)"
+        }, "-=1");
+
+    // 2. Floating Animation (Continuous)
+    gsap.to(astronaut, {
+        y: -30,
+        rotation: 2,
+        duration: 4,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1
+    });
+
+    // 3. Scroll Parallax & Rotation
+    gsap.to(astronaut, {
+        scrollTrigger: {
+            trigger: hero,
+            start: "top top",
+            end: "bottom top",
+            scrub: 1
+        },
+        y: 150, // Parallax movement down
+        rotation: 10, // Slight rotation as you scroll
+        scale: 1.1 // Slight zoom
+    });
+
+    // Fade out text on scroll
+    gsap.to(content, {
+        scrollTrigger: {
+            trigger: hero,
+            start: "top top",
+            end: "50% top",
+            scrub: 1
+        },
+        opacity: 0,
+        y: -50
     });
 }
 
