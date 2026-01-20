@@ -721,8 +721,9 @@ h1 .gradient-text {
 }
 
 .astronaut-hero {
-    width: 600px;
-    max-width: 80vw;
+    width: 720px;
+    /* Increased by 20% from 600px */
+    max-width: 85vw;
     height: auto;
     filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
     opacity: 1;
