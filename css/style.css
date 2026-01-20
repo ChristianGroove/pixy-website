@@ -690,8 +690,8 @@ h1 .gradient-text {
     padding: 100px 5% 0;
     /* Add horizontal padding */
     position: relative;
-    overflow: hidden;
-    /* Prevent horizontal scroll from movement */
+    overflow: visible;
+    /* Allow astronaut to go outside bounds */
     text-align: left;
     /* Left align text */
 }

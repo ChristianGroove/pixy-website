@@ -466,80 +466,81 @@ function initGSAPHero() {
 
     if (!hero || !astronaut) return;
 
-    // 1. Initial State Set (Clean slate)
+    // 1. Initial CLEAR & SET
+    // Clear any conflicting transforms first
+    gsap.set(astronaut, { clearProps: "all" });
+    gsap.set(containerRight, { clearProps: "all" });
+
+    // Set Initial State
     gsap.set(astronaut, {
+        y: 0,
+        rotation: 0,
         scale: 0.8,
-        opacity: 0, // Start hidden for entrance
-        rotation: 15,
-        y: 50
+        opacity: 0
     });
 
-    // 2. Entrance (Gentle Fade In of elements)
+    gsap.set(containerRight, {
+        right: "-10%" // Start slightly off-screen
+    });
+
+    // 2. TIMELINE: Entrance
     const tl = gsap.timeline();
 
-    // Astronaut Entrance
-    tl.to(astronaut, {
-        duration: 1.5,
-        opacity: 1,
-        ease: "power2.out"
+    // a. Text Entrance
+    tl.from(content.children, {
+        duration: 1,
+        y: 30,
+        opacity: 0,
+        stagger: 0.1,
+        ease: "power3.out"
     })
-        .from(content.children, {
-            duration: 1,
-            y: 20,
-            opacity: 0,
-            stagger: 0.1,
+        // b. Astronaut Fade In & Scale Up (Concurrent)
+        .to(astronaut, {
+            duration: 1.5,
+            scale: 1,
+            opacity: 1,
             ease: "power2.out"
-        }, "-=1");
+        }, "-=0.8");
 
-    // 3. Floating Animation (Slower, Natural)
-    // We animate the 'y' property in a separate tween for continuous movement
+    // 3. SEPARATE LOOP: Continuous Float (Physics)
+    // Applied ONLY to the Astronaut (Y and Rotation)
+    // We use a clean fromTo to ensure no conflicts
     gsap.to(astronaut, {
-        y: -40,
-        rotation: 5,
-        duration: 8, // Much slower
+        y: -30, // Float up
+        rotation: 3, // Slight rotation
+        duration: 6,
         ease: "sine.inOut",
         yoyo: true,
         repeat: -1
     });
 
-    // 4. Scroll Logic (Right -> Center)
-    // We move the CONTAINER or the Element. 
-    // Moving containerRight from right edge to center.
+    // 4. SCROLL TRIGGER: Parallax & Layout Movement
+    // Applied to the CONTAINER (Left/Right movement)
+    // This avoids conflict with the Astronaut's Y/Rotation loop
 
     gsap.to(containerRight, {
         scrollTrigger: {
             trigger: hero,
-            start: "top top", // Start when hero is at top
-            end: "bottom center", // Finish when hero bottom hits center of view
-            scrub: 1.5 // Smooth scrubbing
+            start: "top top",
+            end: "bottom center",
+            scrub: 1
         },
-        right: '25%', // Move inwards (less drastic than previous)
+        right: "10%", // Move container inwards
+        y: 100, // Move container down (Parallax)
         ease: "none"
     });
 
-    gsap.to(astronaut, {
-        scrollTrigger: {
-            trigger: hero,
-            start: "top top",
-            end: "bottom 30%",
-            scrub: 1
-        },
-        scale: 1, // Grow slightly
-        rotation: 0, // Straighten up
-        x: -50 // Move slightly left towards center
-    });
-
-    // Fade out text faster to avoid clash
+    // Fade out text
     gsap.to(content, {
         scrollTrigger: {
             trigger: hero,
             start: "top top",
-            end: "30% top",
+            end: "40% top",
             scrub: 1
         },
         opacity: 0,
-        y: -100,
-        filter: "blur(10px)"
+        y: -50,
+        filter: "blur(5px)"
     });
 }
 
