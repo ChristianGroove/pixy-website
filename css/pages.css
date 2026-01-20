@@ -865,16 +865,18 @@ font-weight: 500;
 .carousel-controls {
     position: absolute;
     top: 65%;
-    /* Pushed down significantly */
+    /* Visual center */
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 150%;
-    /* Extended width */
-    max-width: 1600px;
+    width: 950px;
+    /* Calculated: 750px card + 100px padding each side */
+    max-width: 100vw;
+    /* Responsive safety */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 0 20px;
+    /* Small safety padding */
     pointer-events: none;
     /* Pass clicks */
     z-index: 50;
