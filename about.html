@@ -24,13 +24,20 @@
     <meta name="twitter:title" content="Nosotros - El Futuro del Trabajo">
     <meta name="twitter:description"
         content="En Pixy creemos que el software debe adaptarse al negocio. Nuestra misión es democratizar la automatización empresarial en LatAm.">
-    content="Conoce al equipo detrás de Pixy. Nuestra misión es devolverle el tiempo a los emprendedores de
-    Latinoamérica mediante automatización inteligente.">
+
     <meta name="twitter:image" content="https://pixy.com.co/assets/og-image.png">
 
     <!-- Dependencies -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <!-- Critical FOUC Fix -->
+    <style>
+        body {
+            background-color: #0F0F1A;
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
     <link rel="stylesheet" href="css/style.css?v=final">
     <link rel="stylesheet" href="css/components.css?v=final">
     <link rel="stylesheet" href="css/pages.css?v=final">
