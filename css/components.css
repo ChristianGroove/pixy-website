@@ -997,29 +997,30 @@
     align-items: center;
 }
 
-width: 320px;
-/* Standard width */
-height: 480px;
-/* Height to fit everything */
-background: rgba(10, 10, 20, 0.85);
-/* Dark Glass */
-backdrop-filter: blur(16px);
-border: 1px solid rgba(255, 255, 255, 0.1);
-border-radius: 32px;
-transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-opacity: 0;
-transform: translateX(0) scale(0.8);
-z-index: 1;
+.space-card {
+    width: 320px;
+    /* Standard width */
+    height: 480px;
+    /* Height to fit everything */
+    background: rgba(10, 10, 20, 0.85);
+    /* Dark Glass */
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 32px;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0;
+    transform: translateX(0) scale(0.8);
+    z-index: 1;
 
-/* Auto Layout Container */
-display: flex;
-flex-direction: column;
-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-overflow: visible !important;
+    /* Auto Layout Container */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    overflow: visible !important;
 
-/* Padding: Top 54px for Logo, Bottom 16px for Button Spacing */
-padding: 54px 24px 16px 24px;
-gap: 0;
+    /* Padding: Top 54px for Logo, Bottom 16px for Button Spacing */
+    padding: 54px 24px 16px 24px;
+    gap: 0;
 }
 
 /* Content Wrapper - Fits tightly around content */
@@ -1076,23 +1077,24 @@ gap: 0;
     padding: 4px 10px;
 }
 
-width: 72px;
-height: 48px;
-/* Slightly taller for overlap */
-position: absolute;
-top: -36px;
-left: 50%;
-transform: translateX(-50%);
-z-index: 10;
-/* Gradient Mask: Solid top (matches page), transparent bottom (inside card) */
-background: linear-gradient(to bottom, var(--bg-primary) 50%, transparent 50%);
-border-radius: 20px;
-display: flex;
-justify-content: center;
-align-items: center;
-box-shadow: none !important;
-border: none !important;
-pointer-events: none;
+.iso-wrapper {
+    width: 72px;
+    height: 48px;
+    /* Slightly taller for overlap */
+    position: absolute;
+    top: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    /* Gradient Mask: Solid top (matches page), transparent bottom (inside card) */
+    background: linear-gradient(to bottom, var(--bg-primary) 50%, transparent 50%);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none !important;
+    border: none !important;
+    pointer-events: none;
 }
 
 /* Icon sits inside wrapper, needs to be centered relative to the whole visual block */
@@ -1342,6 +1344,16 @@ pointer-events: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+}
+
+@media (max-width: 768px) {
+
+    .grid-3,
+    .grid-2,
+    .grid-2-feature {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
 }
 
 /* ============================================
