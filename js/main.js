@@ -268,11 +268,32 @@ function showToast(message, type = 'info') {
 // SCROLL ANIMATIONS
 // ============================================
 
+// ============================================
+// SCROLL ANIMATIONS (Standardized Site-Wide)
+// ============================================
+
 function initScrollAnimations() {
+    // 1. Define elements to animate automatically
+    // Exclude hero sections to avoid conflicting with detailed GSAP timelines
+    const selector = `
+        section:not(.hero-space):not(#hero),
+        .glass-card, 
+        .step-card, 
+        .feature-row, 
+        .grid-2, 
+        .grid-3,
+        .steps-flow-container,
+        .footer
+    `;
+
+    const elements = document.querySelectorAll(selector);
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
+                // Add staggered delay if multiple elements appear at once
+                // logic can be complex, for now simple fade up is cleaner
+                entry.target.classList.add('fade-in-visible');
                 observer.unobserve(entry.target);
             }
         });
@@ -281,8 +302,17 @@ function initScrollAnimations() {
         rootMargin: '0px 0px -50px 0px'
     });
 
-    // Observe elements with animation class
+    elements.forEach(el => {
+        // Only observe if it's not already visible or transformed
+        if (!el.classList.contains('fade-in-visible') && !el.classList.contains('hero-content-left')) {
+            el.classList.add('fade-in-hidden');
+            observer.observe(el);
+        }
+    });
+
+    // Keep support for manual .animate-on-scroll class just in case
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        el.classList.add('fade-in-hidden');
         observer.observe(el);
     });
 }
