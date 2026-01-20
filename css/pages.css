@@ -864,12 +864,13 @@ font-weight: 500;
 /* --- Controls (Arrows) --- */
 .carousel-controls {
     position: absolute;
-    top: 50%;
+    top: 58%;
+    /* Visually pushed down to match card center */
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: 1100px;
-    /* Wider than carousel to sit on sides */
+    width: 140%;
+    /* Very wide to clear the 750px card */
+    max-width: 1400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
