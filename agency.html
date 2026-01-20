@@ -99,65 +99,76 @@
         </section>
 
         <!-- PROBLEM VS SOLUTION SECTION -->
+        <!-- PROBLEM VS SOLUTION SECTION: Redesigned -->
         <section id="comparison-section" style="margin-bottom: 120px; position: relative; z-index: 5;">
-            <div class="glass-card"
-                style="padding: 60px; background: rgba(10, 10, 10, 0.7); backdrop-filter: blur(20px);">
-                <h2 style="text-align: center; margin-bottom: 50px; font-size: 2rem;">¿Tu agencia se siente así?</h2>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">El Costo de no Automatizar</h2>
 
-                <div class="grid-2" style="gap: 40px; align-items: start;">
-                    <!-- The Old Way -->
-                    <div>
-                        <h3 style="color: #ef4444; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
-                            <span>⚠️</span> El Caos Actual
-                        </h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li
-                                style="margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #ef4444; color: var(--text-muted);">
-                                <strong style="color: white; display: block; margin-bottom: 4px;">Archivos
-                                    dispersos</strong>
-                                Briefs en WhatsApp, diseños en Drive, facturas en Excel. Nada conecta con nada.
-                            </li>
-                            <li
-                                style="margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #ef4444; color: var(--text-muted);">
-                                <strong style="color: white; display: block; margin-bottom: 4px;">Cambios
-                                    infinitos</strong>
-                                Feedback del cliente perdido en cadenas de correos de 50 mensajes.
-                            </li>
-                            <li
-                                style="margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #ef4444; color: var(--text-muted);">
-                                <strong style="color: white; display: block; margin-bottom: 4px;">Rentabilidad
-                                    ciega</strong>
-                                No sabes si ese cliente "grande" realmente te está haciendo perder dinero por las horas
-                                extra.
-                            </li>
-                        </ul>
+            <div class="comparison-grid">
+                <!-- Left: CHAOS (The Old Way) -->
+                <div class="comparison-card chaos-card">
+                    <div class="card-header-chaos">
+                        <span class="chaos-icon">⚠️</span>
+                        <h3>Modo Tradicional</h3>
                     </div>
+                    <div class="chaos-content">
+                        <div class="chaos-item">
+                            <span class="x-mark">✕</span>
+                            <div>
+                                <strong>Fragmentación Total</strong>
+                                <p>Briefs en WhatsApp, archivos en Drive, Excel para cobros. Nada conecta.</p>
+                            </div>
+                        </div>
+                        <div class="chaos-item">
+                            <span class="x-mark">✕</span>
+                            <div>
+                                <strong>Cambios Infinitos</strong>
+                                <p>Feedback perdido en correos eternos. "¿Viste la v4_final_final.pdf?"</p>
+                            </div>
+                        </div>
+                        <div class="chaos-item">
+                            <span class="x-mark">✕</span>
+                            <div>
+                                <strong>Ceguera Financiera</strong>
+                                <p>Sin reportes de rentabilidad por cliente. Trabajas horas gratis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chaos-overlay"></div>
+                </div>
 
-                    <!-- The New Way -->
-                    <div>
-                        <h3 style="color: #10b981; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
-                            <span>🚀</span> La Manera Pixy
-                        </h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li
-                                style="margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #10b981; color: var(--text-muted);">
-                                <strong style="color: white; display: block; margin-bottom: 4px;">Todo
-                                    Centralizado</strong>
-                                Un solo link para que tu cliente vea cronogramas, apruebe diseños y pague facturas.
-                            </li>
-                            <li
-                                style="margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #10b981; color: var(--text-muted);">
-                                <strong style="color: white; display: block; margin-bottom: 4px;">Feedback
-                                    Visual</strong>
-                                Comentarios puntuales sobre las imágenes. Aprobaciones formales con un clic.
-                            </li>
-                            <li
-                                style="margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #10b981; color: var(--text-muted);">
-                                <strong style="color: white; display: block; margin-bottom: 4px;">Profit real</strong>
-                                Reportes automáticos que cruzan horas trabajadas vs. valor facturado.
-                            </li>
-                        </ul>
+                <!-- VS Badge -->
+                <div class="vs-badge">VS</div>
+
+                <!-- Right: ORDER (The Pixy Way) -->
+                <div class="comparison-card order-card">
+                    <div class="card-header-order">
+                        <span class="order-icon">✨</span>
+                        <h3>Ecosistema Pixy</h3>
                     </div>
+                    <div class="order-content">
+                        <div class="order-item">
+                            <span class="check-mark">✓</span>
+                            <div>
+                                <strong>Centralización Absoluta</strong>
+                                <p>Un solo link para el cliente: Cronograma, Archivos, Pagos y Chat.</p>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <span class="check-mark">✓</span>
+                            <div>
+                                <strong>Feedback Visual</strong>
+                                <p>Comentarios puntuales sobre imágenes. Aprobaciones legales en 1 clic.</p>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <span class="check-mark">✓</span>
+                            <div>
+                                <strong>Profit en Tiempo Real</strong>
+                                <p>Dashboard financiero que cruza horas invertidas vs. ingreso real.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-glow"></div>
                 </div>
             </div>
         </section>
@@ -165,7 +176,7 @@
 
         <!-- FEATURES BENTO GRID -->
         <section id="features" style="margin-bottom: 120px; position: relative; z-index: 5;">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Todo en un solo lugar</h2>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Ecosistema Unificado</h2>
 
             <div class="bento-grid"
                 style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 0 20px;">
