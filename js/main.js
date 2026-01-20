@@ -55,6 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize GSAP Hero Animations
     initGSAPHero();
 
+    // Load Magnetic Cursor
+    const cursorScript = document.createElement('script');
+    cursorScript.src = 'js/cursor-light.js';
+    document.body.appendChild(cursorScript);
+
     // Scroll to Top Button Logic
     let scrollTopBtn = document.querySelector('.scroll-to-top');
 
