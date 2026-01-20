@@ -1347,9 +1347,6 @@ font-weight: 500;
 }
 
 /* Grid utilities moved to components.css */
-gap: 40px;
-}
-}
 
 .feature-row {
     display: flex;
