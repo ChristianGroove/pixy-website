@@ -49,6 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Spaces Carousel
     initSpacesCarousel();
 
+    // Initialize Hero Parallax
+    initHeroParallax();
+
     // Scroll to Top Button Logic
     const scrollTopBtn = document.querySelector('.scroll-to-top');
     if (scrollTopBtn) {
@@ -443,8 +446,27 @@ function initAccordion() {
             });
 
             // Toggle current
-            item.classList.toggle('active');
         });
+    });
+}
+
+/* ============================================
+   HERO PARALLAX
+   ============================================ */
+function initHeroParallax() {
+    const heroImage = document.querySelector('.scroll-parallax');
+    if (!heroImage) return;
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        // Move image down at 20% speed of scroll for depth effect
+        const rate = scrolled * 0.15;
+
+        // Apply transform to the container to avoid conflicting with the CSS animation on the image itself
+        const container = document.querySelector('.hero-visual-right');
+        if (container) {
+            container.style.transform = `translateY(${rate}px)`;
+        }
     });
 }
 
