@@ -66,15 +66,78 @@
 
             <!-- Right: Astro4 Floating -->
             <div class="hero-visual-right"
-                style="position: relative; width: 45%; height: 500px; display: flex; justify-content: center; align-items: center;">
+                style="position: relative; width: 45%; height: 600px; display: flex; justify-content: center; align-items: center; margin-top: 80px;">
                 <!-- Glowing Halo -->
                 <div
-                    style="position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(147,51,234,0.2), transparent 70%); filter: blur(40px); z-index: -1;">
+                    style="position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(147,51,234,0.3), transparent 70%); filter: blur(60px); z-index: -1; animation: pulseHalo 4s infinite alternate;">
                 </div>
 
                 <!-- Astro4 Image -->
                 <img src="assets/astro4.png" class="astronaut-hero" alt="Pixy Agency Astronaut"
-                    style="width: 100%; max-width: 450px; height: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));">
+                    style="width: 100%; max-width: 500px; height: auto; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6)); transform-style: preserve-3d;">
+            </div>
+        </section>
+
+        <!-- PROBLEM VS SOLUTION SECTION -->
+        <section style="margin-bottom: 120px;">
+            <div class="glass-card" style="padding: 60px;">
+                <h2 style="text-align: center; margin-bottom: 50px; font-size: 2rem;">¿Tu agencia se siente así?</h2>
+
+                <div class="grid-2" style="gap: 40px; align-items: start;">
+                    <!-- The Old Way -->
+                    <div>
+                        <h3 style="color: #ef4444; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
+                            <span>⚠️</span> El Caos Actual
+                        </h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li
+                                style="margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #ef4444; color: var(--text-muted);">
+                                <strong style="color: white; display: block; margin-bottom: 4px;">Archivos
+                                    dispersos</strong>
+                                Briefs en WhatsApp, diseños en Drive, facturas en Excel. Nada conecta con nada.
+                            </li>
+                            <li
+                                style="margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #ef4444; color: var(--text-muted);">
+                                <strong style="color: white; display: block; margin-bottom: 4px;">Cambios
+                                    infinitos</strong>
+                                Feedback del cliente perdido en cadenas de correos de 50 mensajes.
+                            </li>
+                            <li
+                                style="margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #ef4444; color: var(--text-muted);">
+                                <strong style="color: white; display: block; margin-bottom: 4px;">Rentabilidad
+                                    ciega</strong>
+                                No sabes si ese cliente "grande" realmente te está haciendo perder dinero por las horas
+                                extra.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- The New Way -->
+                    <div>
+                        <h3 style="color: #10b981; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
+                            <span>🚀</span> La Manera Pixy
+                        </h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li
+                                style="margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #10b981; color: var(--text-muted);">
+                                <strong style="color: white; display: block; margin-bottom: 4px;">Todo
+                                    Centralizado</strong>
+                                Un solo link para que tu cliente vea cronogramas, apruebe diseños y pague facturas.
+                            </li>
+                            <li
+                                style="margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #10b981; color: var(--text-muted);">
+                                <strong style="color: white; display: block; margin-bottom: 4px;">Feedback
+                                    Visual</strong>
+                                Comentarios puntuales sobre las imágenes. Aprobaciones formales con un clic.
+                            </li>
+                            <li
+                                style="margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #10b981; color: var(--text-muted);">
+                                <strong style="color: white; display: block; margin-bottom: 4px;">Profit real</strong>
+                                Reportes automáticos que cruzan horas trabajadas vs. valor facturado.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -223,10 +286,11 @@
                     ease: "power2.out"
                 }, "-=0.6");
 
-                // 2. Astronaut Float
+                // 2. Astronaut Float (Enhanced)
                 gsap.to('.astronaut-hero', {
-                    y: 25,
-                    duration: 3,
+                    y: 30,
+                    rotation: 5,
+                    duration: 4,
                     repeat: -1,
                     yoyo: true,
                     ease: "sine.inOut"
