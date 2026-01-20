@@ -71,38 +71,30 @@
 
     <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
 
-        <!-- HERO SECTION: Split Layout with Astro4 -->
-        <section class="hero-space"
-            style="margin-bottom: 220px; display: flex; align-items: center; justify-content: space-between; min-height: 60vh;">
+        <!-- HERO SECTION: Refactored with BEM -->
+        <section class="agency-hero">
             <!-- Left: Text -->
-            <div class="hero-content-left" style="max-width: 50%; z-index: 10;">
+            <div class="agency-hero__content">
                 <div class="badge" style="margin-bottom: 24px;">Pixy Agency Space</div>
-                <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px;">
+                <h1 class="agency-hero__title">
                     Tu Agencia, <br>
                     <span class="gradient-text">Bajo Control.</span>
                 </h1>
-                <p class="subtitle" style="font-size: 1.1rem; margin-bottom: 40px; color: var(--text-secondary);">
+                <p class="subtitle"
+                    style="font-size: 1.25rem; margin-bottom: 40px; color: var(--text-secondary); max-width: 600px;">
                     El sistema operativo (OS) definitivo para agencias creativas. Centraliza proyectos, finanzas y
-                    clientes en un solo dash.
+                    clientes en un solo dashboard inteligente.
                 </p>
-                <div style="display: flex; gap: 16px;">
+                <div style="display: flex; gap: 16px; flex-wrap: wrap;">
                     <a href="contact.html" class="btn-neon">Empezar Ahora</a>
                     <a href="#features" class="btn-neon-outline">Ver Demo</a>
                 </div>
             </div>
 
-            <!-- Right: Astro4 Floating -->
-            <!-- Initial State: Smaller and more to the right -->
-            <div class="hero-visual-right"
-                style="position: relative; width: 45%; height: 600px; display: flex; justify-content: flex-end; align-items: center; margin-top: 80px; z-index: 1;">
-                <!-- Glowing Halo -->
-                <div
-                    style="position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(147,51,234,0.3), transparent 70%); filter: blur(60px); z-index: -1; right: 0;">
-                </div>
-
-                <!-- Astro4 Image -->
-                <img src="assets/astro4.png" class="astronaut-hero" alt="Pixy Agency Astronaut"
-                    style="width: 100%; max-width: 380px; height: auto; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6)); transform-style: preserve-3d; margin-right: -40px;">
+            <!-- Right: Astro Visual -->
+            <div class="agency-hero__visual">
+                <div class="agency-hero__glow"></div>
+                <img src="assets/astro4.png" class="astronaut-hero" alt="Pixy Agency Astronaut">
             </div>
         </section>
 
