@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/pages.css">
 </head>
 
-<body class="features-page">
+<body class="agency-page">
     <div class="mouse-spotlight"></div>
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
@@ -28,7 +28,7 @@
             <div class="nav-links">
                 <a href="/" class="neon-link">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="industries.html" class="neon-link">Spaces</a>
+                    <a href="industries.html" class="neon-link active">Spaces</a>
                 </div>
                 <a href="about.html" class="neon-link">Nosotros</a>
                 <a href="pricing.html" class="neon-link">Precios</a>
@@ -44,53 +44,119 @@
 
     <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
 
-        <header style="text-align: center; margin-bottom: 80px;">
-            <span class="neon-badge" style="margin-bottom: 24px;">Pixy Agency Space</span>
-            <h1 style="font-size: 3rem; margin-bottom: 16px;">Control Total para tu Agencia</h1>
-            <p class="subtitle" style="max-width: 800px; margin: 0 auto;">
-                Desde la prospección hasta la facturación. El único sistema diseñado para el flujo de trabajo creativo.
-            </p>
-        </header>
-
-        <!-- Features Grid -->
-        <div class="bento-grid">
-            <!-- Feature 1 -->
-            <div class="glass-card" style="grid-column: span 2;">
-                <h3>Gestión de Proyectos + Tiempo</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 24px;">
-                    Vincula cada hora registrada a un proyecto y a una factura. Sabrás exactamente la rentabilidad de
-                    cada cliente.
+        <!-- HERO SECTION: Split Layout with Astro4 -->
+        <section class="hero-space"
+            style="margin-bottom: 120px; display: flex; align-items: center; justify-content: space-between; min-height: 60vh;">
+            <!-- Left: Text -->
+            <div class="hero-content-left" style="max-width: 50%;">
+                <div class="badge" style="margin-bottom: 24px;">Pixy Agency Space</div>
+                <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px;">
+                    Tu Agencia, <br>
+                    <span class="gradient-text">Bajo Control.</span>
+                </h1>
+                <p class="subtitle" style="font-size: 1.1rem; margin-bottom: 40px; color: var(--text-secondary);">
+                    El sistema operativo (OS) definitivo para agencias creativas. Centraliza proyectos, finanzas y
+                    clientes en un solo dash.
                 </p>
-                <div class="feature-tags">
-                    <span class="status-badge active">Time Tracking</span>
-                    <span class="status-badge active">Rentabilidad</span>
+                <div style="display: flex; gap: 16px;">
+                    <a href="contact.html" class="btn-neon">Empezar Ahora</a>
+                    <a href="#features" class="btn-neon-outline">Ver Demo</a>
                 </div>
             </div>
 
-            <!-- Feature 2 -->
-            <div class="glass-card">
-                <h3>Portal de Clientes</h3>
-                <p style="color: var(--text-secondary);">
-                    Dale acceso a tus clientes para aprobar entregables, ver facturas y solicitar cambios. Todo con tu
-                    marca.
-                </p>
-            </div>
+            <!-- Right: Astro4 Floating -->
+            <div class="hero-visual-right"
+                style="position: relative; width: 45%; height: 500px; display: flex; justify-content: center; align-items: center;">
+                <!-- Glowing Halo -->
+                <div
+                    style="position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(147,51,234,0.2), transparent 70%); filter: blur(40px); z-index: -1;">
+                </div>
 
-            <!-- Feature 3 -->
-            <div class="glass-card">
-                <h3>Facturación Recurrente</h3>
-                <p style="color: var(--text-secondary);">
-                    Automatiza el cobro de retainers mensuales. Pixy envía la factura y el recordatorio de pago por ti.
-                </p>
+                <!-- Astro4 Image -->
+                <img src="assets/astro4.png" class="astronaut-hero" alt="Pixy Agency Astronaut"
+                    style="width: 100%; max-width: 450px; height: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));">
             </div>
-        </div>
+        </section>
+
+
+        <!-- FEATURES BENTO GRID -->
+        <section id="features" style="margin-bottom: 120px;">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Todo en un solo lugar</h2>
+
+            <div class="bento-grid"
+                style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 0 20px;">
+
+                <!-- Feature 1: Project Management (Large) -->
+                <div class="glass-card"
+                    style="grid-column: span 2; position: relative; overflow: hidden; min-height: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
+                    <div style="position: relative; z-index: 2;">
+                        <span class="status-badge active" style="margin-bottom: 12px;">Gestión 360°</span>
+                        <h3 style="font-size: 2rem; margin-bottom: 12px;">Proyectos & Tiempo</h3>
+                        <p style="color: var(--text-secondary); max-width: 80%;">
+                            Cronometra cada tarea. Asigna recursos y obtén reportes de rentabilidad en tiempo real por
+                            cliente.
+                        </p>
+                    </div>
+                    <!-- Abstract UI Mockup Background -->
+                    <div
+                        style="position: absolute; top: 20px; right: 20px; width: 60%; opacity: 0.1; transform: rotate(-5deg); pointer-events: none;">
+                        <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="400" height="300" rx="20" fill="white" />
+                            <rect x="40" y="40" width="320" height="40" rx="8" fill="white" opacity="0.5" />
+                            <rect x="40" y="100" width="100" height="100" rx="8" fill="white" opacity="0.3" />
+                            <rect x="160" y="100" width="100" height="100" rx="8" fill="white" opacity="0.3" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Retainers (Tall) -->
+                <div class="glass-card"
+                    style="grid-column: span 1; grid-row: span 2; display: flex; flex-direction: column;">
+                    <span class="status-badge soon" style="align-self: flex-start; margin-bottom: 12px;">Finanzas</span>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Retainers Recurrentes</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 32px; flex-grow: 1;">
+                        Olvídate de cobrar manual. Pixy genera y envía facturas de tus igualas automáticamente mes a
+                        mes.
+                    </p>
+
+                    <!-- CSS Mock Finance Widget -->
+                    <div
+                        style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                            <span style="font-size: 0.8rem; color: #aaa;">Ingresos este mes</span>
+                            <span style="font-size: 0.8rem; color: #10b981;">+12%</span>
+                        </div>
+                        <div style="font-size: 1.8rem; font-weight: 700;">$45,200</div>
+                        <div style="height: 4px; background: #333; margin-top: 10px; border-radius: 2px;">
+                            <div style="width: 70%; height: 100%; background: #9333ea; border-radius: 2px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Client Portal (Normal) -->
+                <div class="glass-card"
+                    style="grid-column: span 2; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+                    <div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Portal de Clientes</h3>
+                        <p style="color: var(--text-secondary);">
+                            Tus clientes aprueban diseños, descargan facturas y piden cambios sin correos interminables.
+                        </p>
+                    </div>
+                    <div
+                        style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 8px 16px; border-radius: 50px; border: 1px solid rgba(16, 185, 129, 0.2); font-weight: 600;">
+                        ✓ Aprobado
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <!-- CTA -->
         <section style="margin-top: 100px; text-align: center;">
             <div class="glass-card highlight-card" style="max-width: 800px; margin: 0 auto; padding: 60px;">
-                <h2>¿Listo para organizar tu agencia?</h2>
-                <p class="subtitle" style="margin-bottom: 40px;">Únete a las agencias que ya operan con tranquilidad.
-                </p>
+                <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 16px;">¿Listo para escalar?</h2>
+                <p class="subtitle" style="margin-bottom: 40px; font-size: 1.1rem;">Únete a las agencias que ya operan
+                    con tranquilidad usando Pixy.</p>
                 <a href="contact.html" class="btn-neon">Solicitar Demo Agency</a>
             </div>
         </section>
@@ -135,6 +201,52 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <!-- Page Specific Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof gsap !== 'undefined') {
+                // 1. Hero Entrance
+                const tl = gsap.timeline();
+
+                tl.from('.hero-content-left > *', {
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.1,
+                    ease: "power2.out"
+                });
+
+                tl.from('.hero-visual-right', {
+                    x: 50,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power2.out"
+                }, "-=0.6");
+
+                // 2. Astronaut Float
+                gsap.to('.astronaut-hero', {
+                    y: 25,
+                    duration: 3,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut"
+                });
+
+                // 3. Bento Grid Stagger
+                gsap.from('.bento-grid > div', {
+                    scrollTrigger: {
+                        trigger: '.bento-grid',
+                        start: "top 80%"
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.6,
+                    stagger: 0.2,
+                    ease: "power2.out"
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
