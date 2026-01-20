@@ -52,7 +52,7 @@
         <section class="hero-space"
             style="margin-bottom: 220px; display: flex; align-items: center; justify-content: space-between; min-height: 60vh;">
             <!-- Left: Text -->
-            <div class="hero-content-left" style="max-width: 50%;">
+            <div class="hero-content-left" style="max-width: 50%; z-index: 10;">
                 <div class="badge" style="margin-bottom: 24px;">Pixy Agency Space</div>
                 <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px;">
                     Tu Agencia, <br>
@@ -69,23 +69,24 @@
             </div>
 
             <!-- Right: Astro4 Floating -->
-            <!-- Adjusted margin-top to 160px as requested -->
+            <!-- Initial State: Smaller and more to the right -->
             <div class="hero-visual-right"
-                style="position: relative; width: 45%; height: 600px; display: flex; justify-content: center; align-items: center; margin-top: 160px;">
+                style="position: relative; width: 45%; height: 600px; display: flex; justify-content: flex-end; align-items: center; margin-top: 80px; z-index: 1;">
                 <!-- Glowing Halo -->
                 <div
-                    style="position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(147,51,234,0.3), transparent 70%); filter: blur(60px); z-index: -1; animation: pulseHalo 4s infinite alternate;">
+                    style="position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(147,51,234,0.3), transparent 70%); filter: blur(60px); z-index: -1; right: 0;">
                 </div>
 
                 <!-- Astro4 Image -->
                 <img src="assets/astro4.png" class="astronaut-hero" alt="Pixy Agency Astronaut"
-                    style="width: 100%; max-width: 500px; height: auto; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6)); transform-style: preserve-3d;">
+                    style="width: 100%; max-width: 380px; height: auto; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6)); transform-style: preserve-3d; margin-right: -40px;">
             </div>
         </section>
 
         <!-- PROBLEM VS SOLUTION SECTION -->
-        <section style="margin-bottom: 120px;">
-            <div class="glass-card" style="padding: 60px;">
+        <section id="comparison-section" style="margin-bottom: 120px; position: relative; z-index: 5;">
+            <div class="glass-card"
+                style="padding: 60px; background: rgba(10, 10, 10, 0.7); backdrop-filter: blur(20px);">
                 <h2 style="text-align: center; margin-bottom: 50px; font-size: 2rem;">¿Tu agencia se siente así?</h2>
 
                 <div class="grid-2" style="gap: 40px; align-items: start;">
@@ -148,7 +149,7 @@
 
 
         <!-- FEATURES BENTO GRID -->
-        <section id="features" style="margin-bottom: 120px;">
+        <section id="features" style="margin-bottom: 120px; position: relative; z-index: 5;">
             <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Todo en un solo lugar</h2>
 
             <div class="bento-grid"
@@ -292,14 +293,29 @@
                 ease: "power2.out"
             }, "-=0.6");
 
-            // 2. Astronaut Float (Intensified)
+            // 2. Astronaut Float (Base Animation)
             gsap.to('.astronaut-hero', {
-                y: 40,
-                rotation: 8,
-                duration: 3.5,
+                y: 20,
+                rotation: 5,
+                duration: 3,
                 repeat: -1,
                 yoyo: true,
                 ease: "sine.inOut"
+            });
+
+            // 3. SCROLL EFFECT: Move Astronaut Behind Next Section
+            gsap.to('.hero-visual-right', {
+                scrollTrigger: {
+                    trigger: ".hero-space",
+                    start: "top top",
+                    end: "bottom center", // Animation duration linked to scroll
+                    scrub: 1 // Smooth scrubbing
+                },
+                y: 600, // Move down significantly
+                x: -100, // Move slightly left to center behind card
+                scale: 0.8, // Shrink slightly
+                opacity: 0.8,
+                ease: "none"
             });
 
             // 3. Bento Grid Stagger
