@@ -4,14 +4,28 @@
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Mouse Spotlight Effect (Enhanced logic in CSS)
+    // Mouse Spotlight Effect (Enhanced logic & performance)
     const spotlight = document.querySelector('.mouse-spotlight');
     if (spotlight) {
+        let mouseX = 0, mouseY = 0;
+        let spotlightX = 0, spotlightY = 0;
+
         window.addEventListener('mousemove', (e) => {
-            // Using requestAnimationFrame implicit via mousemove is okay, 
-            // but we use translate3d for hardware acceleration
-            spotlight.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+            mouseX = e.clientX;
+            mouseY = e.clientY;
         });
+
+        function updateSpotlight() {
+            // Smooth positioning
+            spotlightX = mouseX;
+            spotlightY = mouseY;
+
+            spotlight.style.setProperty('--x', `${spotlightX}px`);
+            spotlight.style.setProperty('--y', `${spotlightY}px`);
+
+            requestAnimationFrame(updateSpotlight);
+        }
+        requestAnimationFrame(updateSpotlight);
     }
 
     // Theme Toggle Logicze theme from localStorage or system preference
