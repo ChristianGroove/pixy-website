@@ -1481,9 +1481,28 @@ pointer-events: none;
    ============================================ */
 .article-hero {
     position: relative;
-    padding: 160px 0 100px;
+    padding: 160px 0 60px;
+    /* Reduced bottom padding */
     text-align: center;
     overflow: hidden;
+}
+
+/* Fix for spacing issues */
+.article-hero .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: auto !important;
+    justify-content: flex-start;
+}
+
+.article-hero h1 {
+    font-size: 2.5rem !important;
+    /* Override standard H1 */
+    line-height: 1.2;
+    margin-bottom: 24px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .article-hero-bg {
