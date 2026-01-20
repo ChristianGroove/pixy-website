@@ -26,7 +26,6 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-
                 <a href="/" class="neon-link">Inicio</a>
                 <a href="pricing.html" class="neon-link">Precios</a>
                 <div class="nav-item has-dropdown">
@@ -46,65 +45,176 @@
 
         <header style="text-align: center; margin-bottom: 60px;">
             <span class="neon-badge">Recursos</span>
-            <h1 style="font-size: 3rem; margin: 16px 0;">Insights & Noticias</h1>
-            <p class="subtitle">Guías, tutoriales y novedades sobre automatización empresarial.</p>
+            <h1 style="font-size: 3.5rem; margin: 16px 0;">Insights & <span class="gradient-text">Estrategia</span></h1>
+            <p class="subtitle">Guías tácticas para escalar tu negocio con automatización y tecnología.</p>
         </header>
 
         <!-- Newsletter CTA -->
         <div class="glass-card"
-            style="margin-bottom: 80px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
-            <h3>Suscríbete a nuestro boletín</h3>
-            <p style="margin: 16px 0 24px;">Recibe consejos semanales directo en tu inbox.</p>
-            <form id="newsletter-form" style="display: flex; gap: 8px;">
-                <input type="email" placeholder="tu@email.com" class="neon-input" style="flex: 1;">
+            style="margin-bottom: 80px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; padding: 40px;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Únete a +2,000 líderes</h3>
+            <p style="margin: 0 0 24px; color: var(--text-secondary);">Recibe estrategias de automatización
+                semanalmente.</p>
+            <form id="newsletter-form" style="display: flex; gap: 12px;">
+                <div class="neon-input-wrapper" style="flex: 1;">
+                    <input type="email" placeholder="tu@email.com" class="neon-input" style="padding: 12px 16px;">
+                </div>
                 <button type="submit" class="btn-neon" style="padding: 12px 24px;">Suscribir</button>
             </form>
         </div>
 
         <!-- Blog Grid -->
         <div class="blog-grid">
-            <!-- Article 1 -->
-            <a href="#" class="blog-card" style="text-decoration: none; color: inherit;">
-                <div class="blog-image">
-                    <span class="blog-tag">Guía</span>
-                    <!-- Placeholder Gradient -->
-                    <div
-                        style="width: 100%; height: 100%; background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);">
+
+            <!-- Article 1: CRM/WhatsApp -->
+            <article class="blog-card">
+                <div class="blog-image-wrapper">
+                    <span class="blog-category-badge">Estrategia</span>
+                    <div class="blog-image-placeholder"></div>
+                    <!-- IMG tag will go here once generated, simplified structure for now -->
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta-row">
+                        <span>5 min lectura</span>
+                        <span>•</span>
+                        <span>Ene 12, 2026</span>
+                    </div>
+                    <h3>El Fin del "Visto": WhatsApp CRM innegociable</h3>
+                    <p class="blog-excerpt">
+                        Tus clientes esperan respuestas inmediatas. Descubre por qué centralizar tu inbox es la única
+                        forma de no perder el 40% de tus leads por demoras.
+                    </p>
+                    <div class="blog-footer">
+                        <span style="font-weight: 600; font-size: 0.9rem;">Por Carlos M.</span>
+                        <a href="#" class="neon-link">Leer Artículo →</a>
                     </div>
                 </div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Cómo automatizar tu facturación en 2026</h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; flex: 1;">
-                    Descubre las estrategias clave para reducir la carga operativa de tu equipo financiero usando Pixy.
-                </p>
-                <span class="neon-link" style="margin-top: 16px; display: inline-block;">Leer más →</span>
-            </a>
+            </article>
 
-            <!-- Article 2 -->
-            <a href="#" class="blog-card" style="text-decoration: none; color: inherit;">
-                <div class="blog-image">
-                    <span class="blog-tag">Novedad</span>
-                    <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #8E2DE2, #4A00E0);"></div>
+            <!-- Article 2: Chaos/Systems -->
+            <article class="blog-card">
+                <div class="blog-image-wrapper">
+                    <span class="blog-category-badge"
+                        style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border-color: rgba(245, 158, 11, 0.4);">Gestión</span>
+                    <div class="blog-image-placeholder"></div>
                 </div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Marketing por WhatsApp: Guía Definitiva</h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; flex: 1;">
-                    Aprende a enviar campañas masivas sin ser bloqueado y con tasas de apertura del 98%.
-                </p>
-                <span class="neon-link" style="margin-top: 16px; display: inline-block;">Leer más →</span>
-            </a>
+                <div class="blog-content">
+                    <div class="blog-meta-row">
+                        <span>7 min lectura</span>
+                        <span>•</span>
+                        <span>Ene 10, 2026</span>
+                    </div>
+                    <h3>Caos Operativo: 5 señales de alerta roja</h3>
+                    <p class="blog-excerpt">
+                        Si tu equipo cambia entre 10 apps para cerrar una venta, estás perdiendo dinero. Te mostramos
+                        cómo un Sistema Operativo Unificado recupera horas productivas.
+                    </p>
+                    <div class="blog-footer">
+                        <span style="font-weight: 600; font-size: 0.9rem;">Por Ana R.</span>
+                        <a href="#" class="neon-link">Leer Artículo →</a>
+                    </div>
+                </div>
+            </article>
 
-            <!-- Article 3 -->
-            <a href="#" class="blog-card" style="text-decoration: none; color: inherit;">
-                <div class="blog-image">
-                    <span class="blog-tag">Caso de Éxito</span>
-                    <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #11998e, #38ef7d);"></div>
+            <!-- Article 3: Conversational Commerce -->
+            <article class="blog-card">
+                <div class="blog-image-wrapper">
+                    <span class="blog-category-badge"
+                        style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Ventas</span>
+                    <div class="blog-image-placeholder"></div>
                 </div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Cómo InmoGroup duplicó sus ventas</h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; flex: 1;">
-                    La historia de cómo una inmobiliaria tradicional adoptó la automatización y transformó sus
-                    resultados.
-                </p>
-                <span class="neon-link" style="margin-top: 16px; display: inline-block;">Leer más →</span>
-            </a>
+                <div class="blog-content">
+                    <div class="blog-meta-row">
+                        <span>4 min lectura</span>
+                        <span>•</span>
+                        <span>Ene 08, 2026</span>
+                    </div>
+                    <h3>Conversational Commerce: Retención x2</h3>
+                    <p class="blog-excerpt">
+                        No se trata solo de vender, sino de recordar. Cómo el contexto histórico en tus chats de
+                        WhatsApp puede duplicar tu tasa de recompra.
+                    </p>
+                    <div class="blog-footer">
+                        <span style="font-weight: 600; font-size: 0.9rem;">Por Carlos M.</span>
+                        <a href="#" class="neon-link">Leer Artículo →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 4: Scheduling -->
+            <article class="blog-card">
+                <div class="blog-image-wrapper">
+                    <span class="blog-category-badge"
+                        style="background: rgba(59, 130, 246, 0.2); color: #60a5fa; border-color: rgba(59, 130, 246, 0.4);">Automatización</span>
+                    <div class="blog-image-placeholder"></div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta-row">
+                        <span>6 min lectura</span>
+                        <span>•</span>
+                        <span>Ene 05, 2026</span>
+                    </div>
+                    <h3>Automatización de Citas: Recupera leads</h3>
+                    <p class="blog-excerpt">
+                        El "ida y vuelta" para agendar una reunión mata el interés. Implementa calendarios inteligentes
+                        y deja que tus leads se agenden solos 24/7.
+                    </p>
+                    <div class="blog-footer">
+                        <span style="font-weight: 600; font-size: 0.9rem;">Por Ana R.</span>
+                        <a href="#" class="neon-link">Leer Artículo →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 5: Omnichannel -->
+            <article class="blog-card">
+                <div class="blog-image-wrapper">
+                    <span class="blog-category-badge"
+                        style="background: rgba(236, 72, 153, 0.2); color: #f472b6; border-color: rgba(236, 72, 153, 0.4);">Tendencias</span>
+                    <div class="blog-image-placeholder"></div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta-row">
+                        <span>8 min lectura</span>
+                        <span>•</span>
+                        <span>Ene 02, 2026</span>
+                    </div>
+                    <h3>El "Cliente Híbrido": Uniendo mundos</h3>
+                    <p class="blog-excerpt">
+                        Compran online, recogen en tienda, reclaman por WhatsApp. Cómo preparar tu infraestructura para
+                        la experiencia omnicanal verdadera.
+                    </p>
+                    <div class="blog-footer">
+                        <span style="font-weight: 600; font-size: 0.9rem;">Por David S.</span>
+                        <a href="#" class="neon-link">Leer Artículo →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 6: Analytics -->
+            <article class="blog-card">
+                <div class="blog-image-wrapper">
+                    <span class="blog-category-badge">Tecnología</span>
+                    <div class="blog-image-placeholder"></div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta-row">
+                        <span>5 min lectura</span>
+                        <span>•</span>
+                        <span>Dic 28, 2025</span>
+                    </div>
+                    <h3>Data-Driven: Dashboards que sí funcionan</h3>
+                    <p class="blog-excerpt">
+                        Deja de mirar Exceles del mes pasado. Por qué necesitas métricas en tiempo real para tomar
+                        decisiones que muevan la aguja hoy.
+                    </p>
+                    <div class="blog-footer">
+                        <span style="font-weight: 600; font-size: 0.9rem;">Por Carlos M.</span>
+                        <a href="#" class="neon-link">Leer Artículo →</a>
+                    </div>
+                </div>
+            </article>
+
         </div>
 
     </main>
@@ -130,7 +240,7 @@
                 <a href="about.html" class="neon-link">Nosotros</a>
                 <a href="partners.html" class="neon-link">Partners</a>
                 <a href="contact.html" class="neon-link">Contacto</a>
-                <a href="blog.html" class="neon-link">Blog</a>
+                <a href="blog.html" class="neon-link active">Blog</a>
             </nav>
 
             <nav class="footer-links">
