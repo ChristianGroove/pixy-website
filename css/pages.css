@@ -122,6 +122,25 @@
     box-shadow: 0 0 30px rgba(16, 185, 129, 0.05);
 }
 
+[data-theme="light"] .comparison-card {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .chaos-card {
+    background: #fff5f5;
+    /* Very light red */
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+[data-theme="light"] .order-card {
+    background: #f0fdf4;
+    /* Very light green */
+    border-color: rgba(16, 185, 129, 0.2);
+    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.1);
+}
+
 .chaos-overlay {
     position: absolute;
     top: 0;
@@ -374,6 +393,44 @@
     margin: 0 auto;
     border: 2px solid #333;
     z-index: 10;
+}
+
+[data-theme="light"] .vs-badge {
+    background: #ffffff;
+    color: #000000;
+    border-color: #e5e7eb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .chaos-item {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+[data-theme="light"] .order-item {
+    background: rgba(16, 185, 129, 0.1);
+}
+
+[data-theme="light"] .chaos-item strong {
+    color: #991b1b;
+    /* Dark Red */
+}
+
+[data-theme="light"] .order-item strong {
+    color: #065f46;
+    /* Dark Green */
+}
+
+[data-theme="light"] .chaos-item p,
+[data-theme="light"] .order-item p {
+    color: var(--text-secondary);
+}
+
+/* Ensure left alignment for items inside cards */
+.comparison-card h3,
+.chaos-item,
+.order-item {
+    text-align: left;
+    justify-content: flex-start;
 }
 
 /* --- Visibility Fixes for Bento Grid --- */
@@ -754,6 +811,12 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+[data-theme="light"] .detail-image {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1),
+        0 0 20px rgba(242, 5, 226, 0.05) inset;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
 .detail-image img {
     width: 100%;
     height: auto;
@@ -809,6 +872,56 @@
     margin-bottom: 24px;
     position: relative;
     overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Blog Light Mode Fixes */
+[data-theme="light"] .blog-image {
+    background: #f1f5f9;
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+.blog-card:hover .blog-image {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+    border-color: rgba(242, 5, 226, 0.3);
+}
+
+[data-theme="light"] .blog-card:hover .blog-image {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08),
+        0 0 15px rgba(242, 5, 226, 0.05) inset;
+    border-color: rgba(242, 5, 226, 0.2);
+}
+
+
+/* Handle .blog-image-wrapper as used in HTML */
+.blog-image-wrapper {
+    height: 200px;
+    background: #2a2a3e;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] .blog-image-wrapper {
+    background: #f1f5f9;
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+.blog-card:hover .blog-image-wrapper {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+    border-color: rgba(242, 5, 226, 0.3);
+}
+
+[data-theme="light"] .blog-card:hover .blog-image-wrapper {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08),
+        0 0 15px rgba(242, 5, 226, 0.05) inset;
+    border-color: rgba(242, 5, 226, 0.2);
 }
 
 .blog-tag {
