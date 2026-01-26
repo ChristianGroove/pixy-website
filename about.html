@@ -57,18 +57,27 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="industries.html" class="neon-link">Spaces</a>
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="about.html" class="neon-link active">Nosotros</a>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="blog.html" class="neon-link">Blog</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
+                <a href="about.html" class="neon-link active" data-i18n="nav.about">Nosotros</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;">Entrar</a>
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <!-- Language Switcher -->
+                <button id="lang-toggle" class="btn-lang"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+
+                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;"
+                    data-i18n="nav.login">Entrar</a>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;"
+                    data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
@@ -78,18 +87,16 @@
         <!-- SECCIÓN 1: PROPÓSITO (Hero) -->
         <!-- REBUILD 1: HERO SECTION -->
         <div class="rebuild-hero-container">
-            <div class="badge">Nuestra Razón de Ser</div>
+            <div class="badge" data-i18n="about.badge">Nuestra Filosofía</div>
 
-            <h1 style="font-size: 3rem; line-height: 1.1; margin-bottom: 24px;">
-                Pixy existe para eliminar el <br>
-                <span class="gradient-text">caos operativo</span> de los negocios.
+            <h1 style="font-size: 3rem; line-height: 1.1; margin-bottom: 24px;" data-i18n="about.title">
+                Software que se <br>
+                <span class="gradient-text">Siente Vivo</span>
             </h1>
 
-            <p class="subtitle">
-                Vemos empresas fragmentadas por herramientas rígidas y software genérico que no entiende su industria.
-                <br><br>
-                Pixy no es solo una app; es infraestructura adaptable diseñada para unificar conversaciones, datos y
-                procesos en un solo sistema operativo comercial.
+            <p class="subtitle" data-i18n="about.subtitle">
+                No somos otra herramienta corporativa aburrida. Somos ingenieros y diseñadores obsesionados con la
+                fricción cero.
             </p>
             <img src="assets/droid.png" class="floating-droid"
                 style="bottom: -40px; left: 5%; width: 100px; opacity: 0.8;" alt="">
@@ -99,12 +106,13 @@
         <!-- REBUILD 2: VISION SECTION -->
         <div class="rebuild-vision-section">
             <div class="rebuild-vision-text" style="text-align: left;">
-                <h2 style="margin-bottom: 24px; font-size: 2.5rem; line-height: 1.1;">
+                <h2 style="margin-bottom: 24px; font-size: 2.5rem; line-height: 1.1;" data-i18n="spaces.title">
                     Una plataforma, múltiples <br>
                     <span class="gradient-text">espacios de trabajo.</span>
                 </h2>
 
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;">
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;"
+                    data-i18n="spaces.subtitle">
                     Creemos que el software debe adaptarse al negocio, no al revés. Por eso creamos <strong>Pixy
                         Spaces</strong>.
                 </p>
@@ -247,35 +255,35 @@
             <div class="footer-brand">
                 <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
-                <p>Tu negocio, bien diseñado.</p>
+                <p data-i18n="footer.slogan">Tu negocio, bien diseñado.</p>
             </div>
 
             <nav class="footer-links">
-                <h4>Producto</h4>
+                <h4 data-i18n="footer.product">Producto</h4>
 
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="industries.html" class="neon-link">Soluciones</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Empresa</h4>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="partners.html" class="neon-link">Partners</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
-                <a href="blog.html" class="neon-link">Blog</a>
+                <h4 data-i18n="footer.company">Empresa</h4>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Legal</h4>
-                <a href="privacy.html" class="neon-link">Privacidad</a>
-                <a href="terms.html" class="neon-link">Términos</a>
-                <a href="data-deletion.html" class="neon-link">Eliminación de Datos</a>
-                <a href="cookies.html" class="neon-link">Cookies</a>
-                <a href="permissions.html" class="neon-link">Permisos</a>
+                <h4 data-i18n="footer.legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="footer.deletion">Eliminación de Datos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
+                <a href="permissions.html" class="neon-link" data-i18n="footer.permissions">Permisos</a>
             </nav>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Pixy. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -301,6 +309,7 @@
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 

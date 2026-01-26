@@ -72,19 +72,27 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="industries.html" class="neon-link">Spaces</a>
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="blog.html" class="neon-link">Blog</a>
-                <a href="contact.html" class="neon-link active">Contacto</a>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link active" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;">Entrar</a>
-                <a href="contact.html" class="btn-neon-outline active"
-                    style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <!-- Language Switcher -->
+                <button id="lang-toggle" class="btn-lang"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+
+                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;"
+                    data-i18n="nav.login">Entrar</a>
+                <a href="contact.html" class="btn-neon-outline active" style="padding: 8px 20px; font-size: 0.9rem;"
+                    data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
@@ -92,10 +100,11 @@
     <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
 
         <header style="text-align: center; margin-bottom: 120px; width: 100%; position: relative;">
-            <div class="badge" style="margin: 0 auto 24px auto;">Soporte y Ventas</div>
-            <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px;">Hablemos de tu <span
-                    class="gradient-text">Crecimiento</span></h1>
-            <p class="subtitle" style="margin: 0 auto; max-width: 600px;">¿Tienes dudas o quieres ver Pixy en acción?
+            <div class="badge" style="margin: 0 auto 24px auto;" data-i18n="contact.badge">Soporte y Ventas</div>
+            <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px;" data-i18n="contact.title">Hablemos de
+                tu <span class="gradient-text">Crecimiento</span></h1>
+            <p class="subtitle" style="margin: 0 auto; max-width: 600px;" data-i18n="contact.subtitle">¿Tienes dudas o
+                quieres ver Pixy en acción?
                 Nuestro
                 equipo está listo para ayudarte a
                 escalar.</p>
@@ -107,8 +116,10 @@
 
             <!-- Left Column: Contact Info & Value Prop -->
             <div style="text-align: left;">
-                <h2 style="font-size: 2rem; margin-bottom: 24px;">Estamos aquí para ti</h2>
-                <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem; line-height: 1.6;">
+                <h2 style="font-size: 2rem; margin-bottom: 24px;" data-i18n="contact.support_title">Estamos aquí para ti
+                </h2>
+                <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem; line-height: 1.6;"
+                    data-i18n="contact.support_desc">
                     Ya sea que tengas una pregunta sobre características, pruebas, precios, necesidad de una demo, o
                     cualquier otra cosa, nuestro equipo está listo para responder todas tus preguntas.
                 </p>
@@ -127,8 +138,10 @@
                             </svg>
                         </div>
                         <div>
-                            <h4 style="font-size: 1.2rem; margin-bottom: 4px;">Email</h4>
-                            <p style="color: var(--text-muted); margin-bottom: 4px;">Nuestro equipo responde rápido.</p>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 4px;" data-i18n="contact.email_title">Email
+                            </h4>
+                            <p style="color: var(--text-muted); margin-bottom: 4px;" data-i18n="contact.email_desc">
+                                Nuestro equipo responde rápido.</p>
                             <a href="mailto:hola@pixy.com.co" class="neon-link">hola@pixy.com.co</a>
                         </div>
                     </div>
@@ -145,9 +158,12 @@
                             </svg>
                         </div>
                         <div>
-                            <h4 style="font-size: 1.2rem; margin-bottom: 4px;">Oficinas</h4>
-                            <p style="color: var(--text-muted); margin-bottom: 4px;">Bogotá, Colombia</p>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem;">(Disponible Remoto Global)</p>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 4px;" data-i18n="contact.office_title">Oficinas
+                            </h4>
+                            <p style="color: var(--text-muted); margin-bottom: 4px;" data-i18n="contact.office_desc">
+                                Bogotá, Colombia</p>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;" data-i18n="contact.office_sub">
+                                (Disponible Remoto Global)</p>
                         </div>
                     </div>
 
@@ -162,8 +178,10 @@
                             </svg>
                         </div>
                         <div>
-                            <h4 style="font-size: 1.2rem; margin-bottom: 4px;">Redes Sociales</h4>
-                            <p style="color: var(--text-muted); margin-bottom: 8px;">Síguenos para novedades.</p>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 4px;" data-i18n="contact.social_title">Redes
+                                Sociales</h4>
+                            <p style="color: var(--text-muted); margin-bottom: 8px;" data-i18n="contact.social_desc">
+                                Síguenos para novedades.</p>
                             <div style="display: flex; gap: 16px;">
                                 <a href="#" class="neon-link">LinkedIn</a>
                                 <a href="#" class="neon-link">Instagram</a>
@@ -181,46 +199,56 @@
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px;">
                         <div class="neon-input-wrapper">
                             <label
-                                style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;">Nombre</label>
-                            <input type="text" class="neon-input" placeholder="Juan Pérez" required>
+                                style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;"
+                                data-i18n="contact.form_name_label">Nombre</label>
+                            <input type="text" class="neon-input" placeholder="Juan Pérez" required
+                                data-i18n-placeholder="contact.form_name_placeholder">
                         </div>
                         <div class="neon-input-wrapper">
                             <label
-                                style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;">Empresa</label>
-                            <input type="text" class="neon-input" placeholder="Tu Empresa SAS">
+                                style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;"
+                                data-i18n="contact.form_company_label">Empresa</label>
+                            <input type="text" class="neon-input" placeholder="Tu Empresa SAS"
+                                data-i18n-placeholder="contact.form_company_placeholder">
                         </div>
                     </div>
 
                     <div class="neon-input-wrapper" style="margin-bottom: 24px;">
                         <label
-                            style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;">Correo
+                            style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;"
+                            data-i18n="contact.form_email_label">Correo
                             Electrónico</label>
-                        <input type="email" class="neon-input" placeholder="juan@empresa.com" required>
+                        <input type="email" class="neon-input" placeholder="juan@empresa.com" required
+                            data-i18n-placeholder="contact.form_email_placeholder">
                     </div>
 
                     <div class="neon-input-wrapper" style="margin-bottom: 24px;">
                         <label
-                            style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;">Asunto</label>
+                            style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;"
+                            data-i18n="contact.form_subject_label">Asunto</label>
                         <select class="neon-input">
-                            <option>Quiero una Demo</option>
-                            <option>Soporte Técnico</option>
-                            <option>Ventas / Precios</option>
-                            <option>Aliados / Partners</option>
-                            <option>Otro</option>
+                            <option data-i18n="contact.form_subject_opt1">Quiero una Demo</option>
+                            <option data-i18n="contact.form_subject_opt2">Soporte Técnico</option>
+                            <option data-i18n="contact.form_subject_opt3">Ventas / Precios</option>
+                            <option data-i18n="contact.form_subject_opt4">Aliados / Partners</option>
+                            <option data-i18n="contact.form_subject_opt5">Otro</option>
                         </select>
                     </div>
 
                     <div class="neon-input-wrapper" style="margin-bottom: 32px;">
                         <label
-                            style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;">Mensaje</label>
-                        <textarea class="neon-input" rows="5" placeholder="Cuéntanos cómo podemos ayudarte..."
-                            required></textarea>
+                            style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;"
+                            data-i18n="contact.form_message_label">Mensaje</label>
+                        <textarea class="neon-input" rows="5" placeholder="Cuéntanos cómo podemos ayudarte..." required
+                            data-i18n-placeholder="contact.form_message_placeholder"></textarea>
                     </div>
 
-                    <button type="submit" class="btn-neon" style="width: 100%; justify-content: center;">Enviar
+                    <button type="submit" class="btn-neon" style="width: 100%; justify-content: center;"
+                        data-i18n="contact.form_submit">Enviar
                         Mensaje</button>
                     <p style="text-align: center; margin-top: 16px; font-size: 0.85rem; color: var(--text-muted);">
-                        Al enviar este formulario aceptas nuestra <a href="privacy.html" class="neon-link">Política de
+                        <span data-i18n="contact.form_privacy_1">Al enviar este formulario aceptas nuestra</span> <a
+                            href="privacy.html" class="neon-link" data-i18n="contact.form_privacy_link">Política de
                             Privacidad</a>.
                     </p>
                 </form>
@@ -235,35 +263,35 @@
             <div class="footer-brand">
                 <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
-                <p>Tu negocio, bien diseñado.</p>
+                <p data-i18n="footer.slogan">Tu negocio, bien diseñado.</p>
             </div>
 
             <nav class="footer-links">
-                <h4>Producto</h4>
+                <h4 data-i18n="footer.product">Producto</h4>
 
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="industries.html" class="neon-link">Soluciones</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Empresa</h4>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="partners.html" class="neon-link">Partners</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
-                <a href="blog.html" class="neon-link">Blog</a>
+                <h4 data-i18n="footer.company">Empresa</h4>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Legal</h4>
-                <a href="privacy.html" class="neon-link">Privacidad</a>
-                <a href="terms.html" class="neon-link">Términos</a>
-                <a href="data-deletion.html" class="neon-link">Eliminación de Datos</a>
-                <a href="cookies.html" class="neon-link">Cookies</a>
-                <a href="permissions.html" class="neon-link">Permisos</a>
+                <h4 data-i18n="footer.legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="footer.deletion">Eliminación de Datos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
+                <a href="permissions.html" class="neon-link" data-i18n="footer.permissions">Permisos</a>
             </nav>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Pixy. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -286,6 +314,7 @@
         </svg>
     </button>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 

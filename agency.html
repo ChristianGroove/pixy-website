@@ -60,18 +60,27 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="industries.html" class="neon-link active">Spaces</a>
+                    <a href="spaces.html" class="neon-link active" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="blog.html" class="neon-link">Blog</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;">Entrar</a>
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <!-- Language Switcher -->
+                <button id="lang-toggle" class="btn-lang"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+
+                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;"
+                    data-i18n="nav.login">Entrar</a>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;"
+                    data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
@@ -82,18 +91,19 @@
         <section class="agency-hero">
             <!-- Left: Text -->
             <div class="agency-hero__content">
-                <h1 class="agency-hero__title">
+                <h1 class="agency-hero__title" data-i18n="agency.hero_title">
                     Tu Agencia, <br>
                     <span class="gradient-text">Bajo Control.</span>
                 </h1>
                 <p class="subtitle"
-                    style="font-size: 1.25rem; margin-bottom: 40px; color: var(--text-secondary); max-width: 600px;">
+                    style="font-size: 1.25rem; margin-bottom: 40px; color: var(--text-secondary); max-width: 600px;"
+                    data-i18n="agency.hero_subtitle">
                     El sistema operativo (OS) definitivo para agencias creativas. Centraliza proyectos, finanzas y
                     clientes en un solo dashboard inteligente.
                 </p>
                 <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-                    <a href="contact.html" class="btn-neon">Empezar Ahora</a>
-                    <a href="#features" class="btn-neon-outline">Ver Demo</a>
+                    <a href="contact.html" class="btn-neon" data-i18n="agency.cta_start">Empezar Ahora</a>
+                    <a href="#features" class="btn-neon-outline" data-i18n="agency.cta_demo">Ver Demo</a>
                 </div>
             </div>
 
@@ -107,7 +117,8 @@
         <!-- PROBLEM VS SOLUTION SECTION -->
         <!-- PROBLEM VS SOLUTION SECTION: Redesigned -->
         <section id="comparison-section" style="margin-bottom: 120px; position: relative; z-index: 5;">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">El Costo de no Automatizar</h2>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;"
+                data-i18n="agency.comparison_title">El Costo de no Automatizar</h2>
 
             <div class="comparison-grid">
                 <!-- Left: CHAOS (The Old Way) -->
@@ -123,28 +134,31 @@
                             <line x1="12" y1="9" x2="12" y2="13"></line>
                             <line x1="12" y1="17" x2="12.01" y2="17"></line>
                         </svg>
-                        <h3>Modo Tradicional</h3>
+                        <h3 data-i18n="agency.chaos_title">Modo Tradicional</h3>
                     </div>
                     <div class="chaos-content">
                         <div class="chaos-item">
                             <span class="x-mark-neon">✕</span>
                             <div>
-                                <strong>Fragmentación Total</strong>
-                                <p>Briefs en WhatsApp, archivos en Drive, Excel para cobros. Nada conecta.</p>
+                                <strong data-i18n="agency.chaos_1_title">Fragmentación Total</strong>
+                                <p data-i18n="agency.chaos_1_desc">Briefs en WhatsApp, archivos en Drive, Excel para
+                                    cobros. Nada conecta.</p>
                             </div>
                         </div>
                         <div class="chaos-item">
                             <span class="x-mark-neon">✕</span>
                             <div>
-                                <strong>Cambios Infinitos</strong>
-                                <p>Feedback perdido en correos eternos. "¿Viste la v4_final_final.pdf?"</p>
+                                <strong data-i18n="agency.chaos_2_title">Cambios Infinitos</strong>
+                                <p data-i18n="agency.chaos_2_desc">Feedback perdido en correos eternos. "¿Viste la
+                                    v4_final_final.pdf?"</p>
                             </div>
                         </div>
                         <div class="chaos-item">
                             <span class="x-mark-neon">✕</span>
                             <div>
-                                <strong>Ceguera Financiera</strong>
-                                <p>Sin reportes de rentabilidad por cliente. Trabajas horas gratis.</p>
+                                <strong data-i18n="agency.chaos_3_title">Ceguera Financiera</strong>
+                                <p data-i18n="agency.chaos_3_desc">Sin reportes de rentabilidad por cliente. Trabajas
+                                    horas gratis.</p>
                             </div>
                         </div>
                     </div>
@@ -192,14 +206,16 @@
 
         <!-- ECOSYSTEM DEEP DIVE GRID -->
         <section id="features" style="margin-bottom: 120px; position: relative; z-index: 5;">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Capacidades de la Plataforma</h2>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;"
+                data-i18n="agency.features_title">Capacidades de la Plataforma</h2>
 
             <div class="deep-dive-grid">
 
                 <!-- Card 1: Client Portal -->
                 <div class="feature-card-lg theme-portal">
-                    <h3>Portal de Clientes</h3>
-                    <p>Un espacio VIP para tus clientes. Acceso a documentos, pagos online y estatus de proyectos sin
+                    <h3 data-i18n="agency.feat_portal_title">Portal de Clientes</h3>
+                    <p data-i18n="agency.feat_portal_desc">Un espacio VIP para tus clientes. Acceso a documentos, pagos
+                        online y estatus de proyectos sin
                         necesidad de preguntarte a ti.</p>
 
                     <div class="ui-mockup-frame">
@@ -228,8 +244,9 @@
 
                 <!-- Card 2: Operations Center -->
                 <div class="feature-card-lg theme-ops">
-                    <h3>Centro de Operaciones</h3>
-                    <p>Briefings estandarizados, catálogo de servicios y asignación de tareas. Tu equipo sabe qué hacer
+                    <h3 data-i18n="agency.feat_ops_title">Centro de Operaciones</h3>
+                    <p data-i18n="agency.feat_ops_desc">Briefings estandarizados, catálogo de servicios y asignación de
+                        tareas. Tu equipo sabe qué hacer
                         y cuándo hacerlo.</p>
 
                     <div class="ui-mockup-frame">
@@ -252,8 +269,9 @@
 
                 <!-- Card 3: AI & Legal -->
                 <div class="feature-card-lg theme-ai">
-                    <h3>IA & Contratos</h3>
-                    <p>Genera documentos legales y propuestas comerciales en segundos con IA. Firmas digitales
+                    <h3 data-i18n="agency.feat_ai_title">IA & Contratos</h3>
+                    <p data-i18n="agency.feat_ai_desc">Genera documentos legales y propuestas comerciales en segundos
+                        con IA. Firmas digitales
                         integradas.</p>
 
                     <div class="ui-mockup-frame">
@@ -274,8 +292,9 @@
 
                 <!-- Card 4: CRM Canvas -->
                 <div class="feature-card-lg theme-crm">
-                    <h3>Super CRM Canvas</h3>
-                    <p>Gestión visual de leads. Arrastra y suelta oportunidades en un canvas infinito. Automatizaciones
+                    <h3 data-i18n="agency.feat_crm_title">Super CRM Canvas</h3>
+                    <p data-i18n="agency.feat_crm_desc">Gestión visual de leads. Arrastra y suelta oportunidades en un
+                        canvas infinito. Automatizaciones
                         nativas.</p>
 
                     <div class="ui-mockup-frame"
@@ -307,10 +326,12 @@
         <!-- CTA -->
         <section style="margin-top: 100px; text-align: center;">
             <div class="glass-card highlight-card" style="max-width: 800px; margin: 0 auto; padding: 60px;">
-                <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 16px;">¿Listo para escalar?</h2>
-                <p class="subtitle" style="margin-bottom: 40px; font-size: 1.1rem;">Únete a las agencias que ya operan
+                <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 16px;"
+                    data-i18n="agency.cta_bottom_title">¿Listo para escalar?</h2>
+                <p class="subtitle" style="margin-bottom: 40px; font-size: 1.1rem;"
+                    data-i18n="agency.cta_bottom_subtitle">Únete a las agencias que ya operan
                     con tranquilidad usando Pixy.</p>
-                <a href="contact.html" class="btn-neon">Solicitar Demo Agency</a>
+                <a href="contact.html" class="btn-neon" data-i18n="agency.cta_bottom_btn">Solicitar Demo Agency</a>
             </div>
         </section>
 
@@ -329,7 +350,7 @@
                 <h4>Producto</h4>
 
                 <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="industries.html" class="neon-link">Soluciones</a>
+                <a href="spaces.html" class="neon-link">Soluciones</a>
             </nav>
 
             <nav class="footer-links">
@@ -374,6 +395,7 @@
         </svg>
     </button>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <!-- Page Specific Animations -->
     <script>

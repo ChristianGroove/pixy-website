@@ -7,12 +7,12 @@
     <title>Pixy Spaces - Industria por Industria</title>
     <meta name="description"
         content="Descubre el Space diseñado para tu negocio. Flujos y automatizaciones nativas para Agencias, Restaurantes, Comercios y Servicios.">
-    <link rel="canonical" href="https://pixy.com.co/industries.html">
+    <link rel="canonical" href="https://pixy.com.co/spaces.html">
     <link rel="icon" type="image/png" href="assets/favicon.png">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pixy.com.co/industries.html">
+    <meta property="og:url" content="https://pixy.com.co/spaces.html">
     <meta property="og:title" content="Pixy Spaces - Industria por Industria">
     <meta property="og:description"
         content="Descubre el Space diseñado para tu negocio. Flujos y automatizaciones nativas para Agencias, Restaurantes, Comercios y Servicios.">
@@ -20,7 +20,7 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://pixy.com.co/industries.html">
+    <meta name="twitter:url" content="https://pixy.com.co/spaces.html">
     <meta name="twitter:title" content="Pixy Spaces - Industria por Industria">
     <meta name="twitter:description"
         content="Descubre el Space diseñado para tu negocio. Flujos y automatizaciones nativas para Agencias, Restaurantes, Comercios y Servicios.">
@@ -55,18 +55,27 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="industries.html" class="neon-link active">Spaces</a>
+                    <a href="spaces.html" class="neon-link active" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="blog.html" class="neon-link">Blog</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;">Entrar</a>
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <!-- Language Switcher -->
+                <button id="lang-toggle" class="btn-lang"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+
+                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;"
+                    data-i18n="nav.login">Entrar</a>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;"
+                    data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
@@ -74,10 +83,11 @@
     <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
 
         <header style="text-align: center; margin-bottom: 60px;">
-            <div class="badge">Pixy Spaces</div>
-            <h1 style="font-size: 3rem; margin-bottom: 16px;">Una plataforma. <span class="gradient-text">Múltiples
+            <div class="badge" data-i18n="industries.badge">Pixy Spaces</div>
+            <h1 style="font-size: 3rem; margin-bottom: 16px;" data-i18n="industries.title">Una plataforma. <span
+                    class="gradient-text">Múltiples
                     espacios.</span></h1>
-            <p class="subtitle" style="max-width: 800px; margin: 0 auto;">
+            <p class="subtitle" style="max-width: 800px; margin: 0 auto;" data-i18n="industries.subtitle">
                 Desliza para explorar el Space diseñado para tu industria.
             </p>
         </header>
@@ -93,8 +103,8 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <span class="card-subtitle">Industry OS</span>
-                        <h2>Agency</h2>
+                        <span class="card-subtitle" data-i18n="industries.card_agency_subtitle">Industry OS</span>
+                        <h2 data-i18n="industries.card_agency_title">Agency</h2>
                         <ul class="card-features-list">
                             <li><span class="feature-dot"></span>Pixy Flows</li>
                             <li><span class="feature-dot"></span>Marca Blanca</li>
@@ -105,7 +115,8 @@
                         </ul>
                     </div>
                     <div class="card-floating-action">
-                        <a href="agency.html" class="btn-card-action">Explorar Space</a>
+                        <a href="agency.html" class="btn-card-action" data-i18n="industries.card_agency_btn">Explorar
+                            Space</a>
                     </div>
                 </div>
 
@@ -117,8 +128,8 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <span class="card-subtitle">F&B OS</span>
-                        <h2>Resto</h2>
+                        <span class="card-subtitle" data-i18n="industries.card_resto_subtitle">F&B OS</span>
+                        <h2 data-i18n="industries.card_resto_title">Resto</h2>
                         <ul class="card-features-list">
                             <li><span class="feature-dot"></span>Pixy Flows</li>
                             <li><span class="feature-dot"></span>Reservas</li>
@@ -129,7 +140,8 @@
                         </ul>
                     </div>
                     <div class="card-floating-action">
-                        <button class="btn-card-action disabled" disabled>Próximamente</button>
+                        <button class="btn-card-action disabled" disabled
+                            data-i18n="industries.card_resto_btn">Próximamente</button>
                     </div>
                 </div>
 
@@ -141,8 +153,8 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <span class="card-subtitle">Retail OS</span>
-                        <h2>Commerce</h2>
+                        <span class="card-subtitle" data-i18n="industries.card_commerce_subtitle">Retail OS</span>
+                        <h2 data-i18n="industries.card_commerce_title">Commerce</h2>
                         <ul class="card-features-list">
                             <li><span class="feature-dot"></span>Pixy Flows</li>
                             <li><span class="feature-dot"></span>Inventario</li>
@@ -165,8 +177,8 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <span class="card-subtitle">Professional OS</span>
-                        <h2>Services</h2>
+                        <span class="card-subtitle" data-i18n="industries.card_services_subtitle">Professional OS</span>
+                        <h2 data-i18n="industries.card_services_title">Services</h2>
                         <ul class="card-features-list">
                             <li><span class="feature-dot"></span>Pixy Flows</li>
                             <li><span class="feature-dot"></span>Citas</li>
@@ -177,7 +189,8 @@
                         </ul>
                     </div>
                     <div class="card-floating-action">
-                        <button class="btn-card-action disabled" disabled>Próximamente</button>
+                        <button class="btn-card-action disabled" disabled
+                            data-i18n="industries.card_services_btn">Próximamente</button>
                     </div>
                 </div>
 
@@ -195,9 +208,9 @@
         <!-- MIGRATED FEATURES CONTENT -->
         <div style="margin-top: 60px; margin-bottom: 80px;">
             <header style="text-align: center; margin-bottom: 80px;">
-                <h2 class="section-title" style="font-size: 3rem;">El poder detrás de cada <span
-                        class="text-gradient">Space</span></h2>
-                <p class="subtitle" style="max-width: 700px; margin: 0 auto;">
+                <h2 class="section-title" style="font-size: 3rem;" data-i18n="industries.features_title">El poder detrás
+                    de cada <span class="text-gradient">Space</span></h2>
+                <p class="subtitle" style="max-width: 700px; margin: 0 auto;" data-i18n="industries.features_subtitle">
                     Todos los Pixy Spaces incluyen estas capacidades nucleares, adaptadas a la lógica de tu industria.
                 </p>
             </header>
@@ -205,30 +218,35 @@
             <!-- Feature 1: CRM & AI -->
             <section class="detail-grid reversed" style="align-items: center;">
                 <div class="detail-content" style="text-align: right;">
-                    <span class="neon-badge">El Cerebro</span>
-                    <h2 style="font-size: 2.5rem; margin: 16px 0;">CRM Impulsado por IA</h2>
-                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;">
+                    <span class="neon-badge" data-i18n="industries.feat_crm_badge">El Cerebro</span>
+                    <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="industries.feat_crm_title">CRM Impulsado
+                        por IA</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;"
+                        data-i18n="industries.feat_crm_desc">
                         Olvídate de las hojas de cálculo. Pixy centraliza cada cliente, cada interacción y cada venta en
                         una
                         base de datos viva.
                     </p>
                     <ul class="feature-list">
                         <li class="feature-item" style="flex-direction: row-reverse;"><span class="feature-icon"
-                                style="margin-right: 0; margin-left: 12px;">✓</span> <strong>Base de Datos
-                                Unificada:</strong> Historial 360° de cada cliente.</li>
+                                style="margin-right: 0; margin-left: 12px;">✓</span> <span
+                                data-i18n="industries.feat_crm_1"><strong>Base de Datos
+                                    Unificada:</strong> Historial 360° de cada cliente.</span></li>
                         <li class="feature-item" style="flex-direction: row-reverse;"><span class="feature-icon"
-                                style="margin-right: 0; margin-left: 12px;">✓</span> <strong>Pipelines
-                                Visuales:</strong> Mueve tus ventas de "Prospecto" a "Pagado".</li>
+                                style="margin-right: 0; margin-left: 12px;">✓</span> <span
+                                data-i18n="industries.feat_crm_2"><strong>Pipelines
+                                    Visuales:</strong> Mueve tus ventas de "Prospecto" a "Pagado".</span></li>
                         <li class="feature-item" style="flex-direction: row-reverse;"><span class="feature-icon"
-                                style="margin-right: 0; margin-left: 12px;">✓</span> <strong>Etiquetado
-                                Automático:</strong> Segmentación inteligente.</li>
+                                style="margin-right: 0; margin-left: 12px;">✓</span> <span
+                                data-i18n="industries.feat_crm_3"><strong>Etiquetado
+                                    Automático:</strong> Segmentación inteligente.</span></li>
                     </ul>
                 </div>
                 <div class="detail-image glass-card"
                     style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
                     <div style="text-align: center; opacity: 0.6;">
                         <span style="font-size: 5rem;">🧠</span>
-                        <p>Inteligencia de Negocio</p>
+                        <p data-i18n="industries.feat_crm_img">Inteligencia de Negocio</p>
                     </div>
                 </div>
             </section>
@@ -236,26 +254,31 @@
             <!-- Feature 2: Communication -->
             <section class="detail-grid" style="align-items: center;">
                 <div class="detail-content" style="text-align: left;">
-                    <span class="neon-badge">La Voz</span>
-                    <h2 style="font-size: 2.5rem; margin: 16px 0;">Inbox Omnicanal</h2>
-                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;">
+                    <span class="neon-badge" data-i18n="industries.feat_chat_badge">La Voz</span>
+                    <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="industries.feat_chat_title">Inbox
+                        Omnicanal</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;"
+                        data-i18n="industries.feat_chat_desc">
                         Tus clientes están en todas partes. Responde WhatsApp, Instagram y Messenger desde una sola
                         pantalla compartida.
                     </p>
                     <ul class="feature-list">
-                        <li class="feature-item"><span class="feature-icon">✓</span> <strong>Chat Multi-Agente:</strong>
-                            Colaboración en tiempo real.</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <strong>Multimedia Full:</strong>
-                            Audios, fotos y documentos.</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <strong>Notas Internas:</strong>
-                            Chatea con tu equipo sin salir del chat.</li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="industries.feat_chat_1"><strong>Chat Multi-Agente:</strong>
+                                Colaboración en tiempo real.</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="industries.feat_chat_2"><strong>Multimedia Full:</strong>
+                                Audios, fotos y documentos.</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="industries.feat_chat_3"><strong>Notas Internas:</strong>
+                                Chatea con tu equipo sin salir del chat.</span></li>
                     </ul>
                 </div>
                 <div class="detail-image glass-card"
                     style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
                     <div style="text-align: center; opacity: 0.6;">
                         <span style="font-size: 5rem;">💬</span>
-                        <p>Centro de Comando</p>
+                        <p data-i18n="industries.feat_chat_img">Centro de Comando</p>
                     </div>
                 </div>
             </section>
@@ -263,28 +286,33 @@
             <!-- Feature 3: Finance -->
             <section class="detail-grid reversed" style="align-items: center;">
                 <div class="detail-content" style="text-align: right;">
-                    <span class="neon-badge">Lo Financiero</span>
-                    <h2 style="font-size: 2.5rem; margin: 16px 0;">Cobros y Pagos</h2>
-                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;">
+                    <span class="neon-badge" data-i18n="industries.feat_fin_badge">Lo Financiero</span>
+                    <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="industries.feat_fin_title">Cobros y Pagos
+                    </h2>
+                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;"
+                        data-i18n="industries.feat_fin_desc">
                         Genera cotizaciones y cuentas de cobro, envía enlaces de pago y automatiza el recaudo.
                     </p>
                     <ul class="feature-list">
                         <li class="feature-item" style="flex-direction: row-reverse;"><span class="feature-icon"
-                                style="margin-right: 0; margin-left: 12px;">✓</span> <strong>Recaudo
-                                Automático:</strong> Recordatorios que salen solos.</li>
+                                style="margin-right: 0; margin-left: 12px;">✓</span> <span
+                                data-i18n="industries.feat_fin_1"><strong>Recaudo
+                                    Automático:</strong> Recordatorios que salen solos.</span></li>
                         <li class="feature-item" style="flex-direction: row-reverse;"><span class="feature-icon"
-                                style="margin-right: 0; margin-left: 12px;">✓</span> <strong>Cotizaciones Web:</strong>
-                            Propuestas interactivas.</li>
+                                style="margin-right: 0; margin-left: 12px;">✓</span> <span
+                                data-i18n="industries.feat_fin_2"><strong>Cotizaciones Web:</strong>
+                                Propuestas interactivas.</span></li>
                         <li class="feature-item" style="flex-direction: row-reverse;"><span class="feature-icon"
-                                style="margin-right: 0; margin-left: 12px;">✓</span> <strong>Conciliación:</strong>
-                            Conectado a tu flujo de caja.</li>
+                                style="margin-right: 0; margin-left: 12px;">✓</span> <span
+                                data-i18n="industries.feat_fin_3"><strong>Conciliación:</strong>
+                                Conectado a tu flujo de caja.</span></li>
                     </ul>
                 </div>
                 <div class="detail-image glass-card"
                     style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
                     <div style="text-align: center; opacity: 0.6;">
                         <span style="font-size: 5rem;">💳</span>
-                        <p>Flujo de Caja</p>
+                        <p data-i18n="industries.feat_fin_img">Flujo de Caja</p>
                     </div>
                 </div>
             </section>
@@ -292,26 +320,31 @@
             <!-- Feature 4: Automation -->
             <section class="detail-grid" style="align-items: center;">
                 <div class="detail-content" style="text-align: left;">
-                    <span class="neon-badge">Piloto Automático</span>
-                    <h2 style="font-size: 2.5rem; margin: 16px 0;">Automatización 24/7</h2>
-                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;">
+                    <span class="neon-badge" data-i18n="industries.feat_auto_badge">Piloto Automático</span>
+                    <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="industries.feat_auto_title">Automatización
+                        24/7</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;"
+                        data-i18n="industries.feat_auto_desc">
                         Duplica tu capacidad operativa sin contratar más personal. Diseña flujos que califican leads y
                         agendan citas.
                     </p>
                     <ul class="feature-list">
-                        <li class="feature-item"><span class="feature-icon">✓</span> <strong>Chatbots IA:</strong>
-                            Atención inmediata.</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <strong>Webhooks:</strong> Conecta
-                            con +5000 apps.</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <strong>Reglas de Negocio:</strong>
-                            "Si pasa X, haz Y".</li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="industries.feat_auto_1"><strong>Chatbots IA:</strong>
+                                Atención inmediata.</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="industries.feat_auto_2"><strong>Webhooks:</strong> Conecta
+                                con +5000 apps.</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="industries.feat_auto_3"><strong>Reglas de Negocio:</strong>
+                                "Si pasa X, haz Y".</span></li>
                     </ul>
                 </div>
                 <div class="detail-image glass-card"
                     style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
                     <div style="text-align: center; opacity: 0.6;">
                         <span style="font-size: 5rem;">⚡</span>
-                        <p>Productividad Infinita</p>
+                        <p data-i18n="industries.feat_auto_img">Productividad Infinita</p>
                     </div>
                 </div>
             </section>
@@ -320,11 +353,14 @@
         <!-- CTA Enterprise -->
         <section class="glass-card"
             style="text-align: center; padding: 60px; background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);">
-            <h2 style="font-size: 2rem; margin-bottom: 16px;">¿Necesitas un Space a medida?</h2>
-            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 32px;">
+            <h2 style="font-size: 2rem; margin-bottom: 16px;" data-i18n="industries.cta_enterprise_title">¿Necesitas un
+                Space a medida?</h2>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 32px;"
+                data-i18n="industries.cta_enterprise_desc">
                 Si tu operación es única, podemos configurar un Pixy Space Enterprise para ti.
             </p>
-            <a href="contact.html" class="btn-neon-outline">Hablar con Consultor</a>
+            <a href="contact.html" class="btn-neon-outline" data-i18n="industries.cta_enterprise_btn">Hablar con
+                Consultor</a>
         </section>
 
     </main>
@@ -335,35 +371,35 @@
             <div class="footer-brand">
                 <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
-                <p>Tu negocio, bien diseñado.</p>
+                <p data-i18n="footer.slogan">Tu negocio, bien diseñado.</p>
             </div>
 
             <nav class="footer-links">
-                <h4>Producto</h4>
+                <h4 data-i18n="footer.product">Producto</h4>
 
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="industries.html" class="neon-link">Soluciones</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Empresa</h4>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="partners.html" class="neon-link">Partners</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
-                <a href="blog.html" class="neon-link">Blog</a>
+                <h4 data-i18n="footer.company">Empresa</h4>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Legal</h4>
-                <a href="privacy.html" class="neon-link">Privacidad</a>
-                <a href="terms.html" class="neon-link">Términos</a>
-                <a href="data-deletion.html" class="neon-link">Eliminación de Datos</a>
-                <a href="cookies.html" class="neon-link">Cookies</a>
-                <a href="permissions.html" class="neon-link">Permisos</a>
+                <h4 data-i18n="footer.legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="footer.deletion">Eliminación de Datos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
+                <a href="permissions.html" class="neon-link" data-i18n="footer.permissions">Permisos</a>
             </nav>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Pixy. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -389,7 +425,9 @@
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>

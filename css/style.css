@@ -239,6 +239,12 @@ body {
     color: var(--brand-pink);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 /* Logo */
 .logo-container {
     margin-bottom: 48px;
@@ -897,4 +903,45 @@ h1 .gradient-text {
 
 .step-card:nth-child(3) {
     transition-delay: 0.2s;
+}
+
+/* LIGHT MODE FIXES FOR STEPS (PIXY FLOW) */
+[data-theme="light"] .step-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08),
+        0 0 15px rgba(242, 5, 226, 0.05) inset;
+    border-color: rgba(242, 5, 226, 0.2);
+}
+
+[data-theme="light"] .step-title {
+    background: none;
+    -webkit-text-fill-color: initial;
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .step-icon-wrapper {
+    background: rgba(242, 5, 226, 0.08);
+    /* Light pink bg */
+    color: var(--brand-pink);
+    border: 1px solid rgba(242, 5, 226, 0.1);
+}
+
+[data-theme="light"] .step-card:hover .step-icon-wrapper {
+    background: var(--brand-pink);
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(242, 5, 226, 0.3);
+}
+
+[data-theme="light"] .step-card::before {
+    color: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .step-card:hover::before {
+    color: rgba(242, 5, 226, 0.05);
 }

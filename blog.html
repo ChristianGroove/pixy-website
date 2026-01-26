@@ -55,18 +55,27 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="industries.html" class="neon-link">Spaces</a>
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="blog.html" class="neon-link active">Blog</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link active" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;">Entrar</a>
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <!-- Language Switcher -->
+                <button id="lang-toggle" class="btn-lang"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+
+                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;"
+                    data-i18n="nav.login">Entrar</a>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;"
+                    data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
@@ -74,24 +83,29 @@
     <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
 
         <header style="text-align: center; margin-bottom: 60px;">
-            <div class="badge">Recursos</div>
-            <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px;">Insights & <span
-                    class="gradient-text">Estrategia</span></h1>
-            <p class="subtitle" style="margin-bottom: 40px;">Guías tácticas para escalar tu negocio con automatización y
+            <div class="badge" data-i18n="blog.badge">Recursos</div>
+            <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px;" data-i18n="blog.title">Insights &
+                <span class="gradient-text">Estrategia</span>
+            </h1>
+            <p class="subtitle" style="margin-bottom: 40px;" data-i18n="blog.subtitle">Guías tácticas para escalar tu
+                negocio con automatización y
                 tecnología.</p>
         </header>
 
         <!-- Newsletter CTA -->
         <div class="glass-card"
             style="margin-bottom: 80px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; padding: 40px;">
-            <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Únete a +2,000 líderes</h3>
-            <p style="margin: 0 0 24px; color: var(--text-secondary);">Recibe estrategias de automatización
+            <h3 style="font-size: 1.5rem; margin-bottom: 12px;" data-i18n="blog.newsletter_title">Únete a +2,000 líderes
+            </h3>
+            <p style="margin: 0 0 24px; color: var(--text-secondary);" data-i18n="blog.newsletter_desc">Recibe
+                estrategias de automatización
                 semanalmente.</p>
             <form id="newsletter-form" style="display: flex; gap: 12px;">
                 <div class="neon-input-wrapper" style="flex: 1;">
                     <input type="email" placeholder="tu@email.com" class="neon-input" style="padding: 12px 16px;">
                 </div>
-                <button type="submit" class="btn-neon" style="padding: 12px 24px;">Suscribir</button>
+                <button type="submit" class="btn-neon" style="padding: 12px 24px;"
+                    data-i18n="blog.newsletter_btn">Suscribir</button>
             </form>
         </div>
 
@@ -107,18 +121,19 @@
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta-row">
-                        <span>5 min lectura</span>
+                        <span data-i18n="blog.min_read">5 min lectura</span>
                         <span>•</span>
                         <span>Ene 12, 2026</span>
                     </div>
-                    <h3>El Fin del "Visto": WhatsApp CRM innegociable</h3>
-                    <p class="blog-excerpt">
+                    <h3 data-i18n="blog.art_1_title">El Fin del "Visto": WhatsApp CRM innegociable</h3>
+                    <p class="blog-excerpt" data-i18n="blog.art_1_desc">
                         Tus clientes esperan respuestas inmediatas. Descubre por qué centralizar tu inbox es la única
                         forma de no perder el 40% de tus leads por demoras.
                     </p>
                     <div class="blog-footer">
                         <span style="font-weight: 600; font-size: 0.9rem;">Por Carlos M.</span>
-                        <a href="article-whatsapp-crm.html" class="neon-link">Leer Artículo →</a>
+                        <a href="article-whatsapp-crm.html" class="neon-link" data-i18n="blog.read_more">Leer Artículo
+                            →</a>
                     </div>
                 </div>
             </article>
@@ -132,18 +147,19 @@
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta-row">
-                        <span>7 min lectura</span>
+                        <span data-i18n="blog.min_read">7 min lectura</span>
                         <span>•</span>
                         <span>Ene 10, 2026</span>
                     </div>
-                    <h3>Caos Operativo: 5 señales de alerta roja</h3>
-                    <p class="blog-excerpt">
+                    <h3 data-i18n="blog.art_2_title">Caos Operativo: 5 señales de alerta roja</h3>
+                    <p class="blog-excerpt" data-i18n="blog.art_2_desc">
                         Si tu equipo cambia entre 10 apps para cerrar una venta, estás perdiendo dinero. Te mostramos
                         cómo un Sistema Operativo Unificado recupera horas productivas.
                     </p>
                     <div class="blog-footer">
                         <span style="font-weight: 600; font-size: 0.9rem;">Por Ana R.</span>
-                        <a href="article-operational-chaos.html" class="neon-link">Leer Artículo →</a>
+                        <a href="article-operational-chaos.html" class="neon-link" data-i18n="blog.read_more">Leer
+                            Artículo →</a>
                     </div>
                 </div>
             </article>
@@ -157,18 +173,19 @@
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta-row">
-                        <span>4 min lectura</span>
+                        <span data-i18n="blog.min_read">4 min lectura</span>
                         <span>•</span>
                         <span>Ene 08, 2026</span>
                     </div>
-                    <h3>Conversational Commerce: Retención x2</h3>
-                    <p class="blog-excerpt">
+                    <h3 data-i18n="blog.art_3_title">Conversational Commerce: Retención x2</h3>
+                    <p class="blog-excerpt" data-i18n="blog.art_3_desc">
                         No se trata solo de vender, sino de recordar. Cómo el contexto histórico en tus chats de
                         WhatsApp puede duplicar tu tasa de recompra.
                     </p>
                     <div class="blog-footer">
                         <span style="font-weight: 600; font-size: 0.9rem;">Por Carlos M.</span>
-                        <a href="article-conversational-commerce.html" class="neon-link">Leer Artículo →</a>
+                        <a href="article-conversational-commerce.html" class="neon-link" data-i18n="blog.read_more">Leer
+                            Artículo →</a>
                     </div>
                 </div>
             </article>
@@ -182,18 +199,19 @@
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta-row">
-                        <span>6 min lectura</span>
+                        <span data-i18n="blog.min_read">6 min lectura</span>
                         <span>•</span>
                         <span>Ene 05, 2026</span>
                     </div>
-                    <h3>Automatización de Citas: Recupera leads</h3>
-                    <p class="blog-excerpt">
+                    <h3 data-i18n="blog.art_4_title">Automatización de Citas: Recupera leads</h3>
+                    <p class="blog-excerpt" data-i18n="blog.art_4_desc">
                         El "ida y vuelta" para agendar una reunión mata el interés. Implementa calendarios inteligentes
                         y deja que tus leads se agenden solos 24/7.
                     </p>
                     <div class="blog-footer">
                         <span style="font-weight: 600; font-size: 0.9rem;">Por Ana R.</span>
-                        <a href="article-automation.html" class="neon-link">Leer Artículo →</a>
+                        <a href="article-automation.html" class="neon-link" data-i18n="blog.read_more">Leer Artículo
+                            →</a>
                     </div>
                 </div>
             </article>
@@ -207,18 +225,19 @@
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta-row">
-                        <span>8 min lectura</span>
+                        <span data-i18n="blog.min_read">8 min lectura</span>
                         <span>•</span>
                         <span>Ene 02, 2026</span>
                     </div>
-                    <h3>El "Cliente Híbrido": Uniendo mundos</h3>
-                    <p class="blog-excerpt">
+                    <h3 data-i18n="blog.art_5_title">El "Cliente Híbrido": Uniendo mundos</h3>
+                    <p class="blog-excerpt" data-i18n="blog.art_5_desc">
                         Compran online, recogen en tienda, reclaman por WhatsApp. Cómo preparar tu infraestructura para
                         la experiencia omnicanal verdadera.
                     </p>
                     <div class="blog-footer">
                         <span style="font-weight: 600; font-size: 0.9rem;">Por David S.</span>
-                        <a href="article-omnichannel.html" class="neon-link">Leer Artículo →</a>
+                        <a href="article-omnichannel.html" class="neon-link" data-i18n="blog.read_more">Leer Artículo
+                            →</a>
                     </div>
                 </div>
             </article>
@@ -231,22 +250,22 @@
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta-row">
-                        <span>5 min lectura</span>
+                        <span data-i18n="blog.min_read">5 min lectura</span>
                         <span>•</span>
                         <span>Dic 28, 2025</span>
                     </div>
-                    <h3>Data-Driven: Dashboards que sí funcionan</h3>
-                    <p class="blog-excerpt">
+                    <h3 data-i18n="blog.art_6_title">Data-Driven: Dashboards que sí funcionan</h3>
+                    <p class="blog-excerpt" data-i18n="blog.art_6_desc">
                         Deja de mirar Exceles del mes pasado. Por qué necesitas métricas en tiempo real para tomar
                         decisiones que muevan la aguja hoy.
                     </p>
                     <div class="blog-footer">
                         <span style="font-weight: 600; font-size: 0.9rem;">Por Carlos M.</span>
-                        <a href="article-data-driven.html" class="neon-link">Leer Artículo →</a>
+                        <a href="article-data-driven.html" class="neon-link" data-i18n="blog.read_more">Leer Artículo
+                            →</a>
                     </div>
                 </div>
             </article>
-
         </div>
 
     </main>
@@ -257,35 +276,35 @@
             <div class="footer-brand">
                 <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
-                <p>Tu negocio, bien diseñado.</p>
+                <p data-i18n="footer.slogan">Tu negocio, bien diseñado.</p>
             </div>
 
             <nav class="footer-links">
-                <h4>Producto</h4>
+                <h4 data-i18n="footer.product">Producto</h4>
 
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="industries.html" class="neon-link">Soluciones</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Empresa</h4>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="partners.html" class="neon-link">Partners</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
-                <a href="blog.html" class="neon-link">Blog</a>
+                <h4 data-i18n="footer.company">Empresa</h4>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Legal</h4>
-                <a href="privacy.html" class="neon-link">Privacidad</a>
-                <a href="terms.html" class="neon-link">Términos</a>
-                <a href="data-deletion.html" class="neon-link">Eliminación de Datos</a>
-                <a href="cookies.html" class="neon-link">Cookies</a>
-                <a href="permissions.html" class="neon-link">Permisos</a>
+                <h4 data-i18n="footer.legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="footer.deletion">Eliminación de Datos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
+                <a href="permissions.html" class="neon-link" data-i18n="footer.permissions">Permisos</a>
             </nav>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Pixy. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -311,6 +330,7 @@
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 

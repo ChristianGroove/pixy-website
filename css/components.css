@@ -176,9 +176,15 @@
 .glass-card:hover {
     transform: translateY(-8px);
     border-color: rgba(242, 5, 226, 0.3);
-    box-shadow:
-        0 20px 40px -10px rgba(0, 0, 0, 0.5),
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5),
         0 0 20px rgba(242, 5, 226, 0.15) inset;
+}
+
+[data-theme="light"] .glass-card:hover {
+    box-shadow:
+        0 20px 40px -10px rgba(0, 0, 0, 0.08),
+        0 0 15px rgba(242, 5, 226, 0.05) inset;
+    border-color: rgba(242, 5, 226, 0.2);
 }
 
 .glass-card:hover::before {
@@ -386,6 +392,12 @@
     border-bottom: 2px solid var(--brand-pink);
 }
 
+[data-theme="light"] .neon-link.active {
+    color: #0f0f1a;
+    text-shadow: none;
+    font-weight: 700;
+}
+
 /* ============================================
    NEON TOOLTIP
    ============================================ */
@@ -530,6 +542,11 @@
     transform: translateY(-5px) scale(1.01);
     border-color: rgba(242, 5, 226, 0.3);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .bento-item:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+    border-color: rgba(242, 5, 226, 0.2);
 }
 
 .bento-span-2 {
@@ -1386,6 +1403,8 @@
         0 20px 40px -10px rgba(0, 0, 0, 0.5),
         0 0 20px rgba(242, 5, 226, 0.1) inset;
 }
+
+
 
 .blog-image-wrapper {
     position: relative;

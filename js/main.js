@@ -555,6 +555,7 @@ function initAccordion() {
             });
 
             // Toggle current
+            item.classList.toggle('active');
         });
     });
 }

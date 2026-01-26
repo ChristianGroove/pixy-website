@@ -53,220 +53,225 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="industries.html" class="neon-link">Spaces</a>
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="blog.html" class="neon-link">Blog</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;">Entrar</a>
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <!-- Language Switcher -->
+                <button id="lang-toggle" class="btn-lang"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+
+                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;"
+                    data-i18n="nav.login">Entrar</a>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;"
+                    data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
 
     <div class="container" style="padding-top: 140px; margin-bottom: 40px; text-align: center;">
-        <h1 class="gradient-text">Política de Privacidad</h1>
-        <p class="updated" style="color: var(--text-secondary);">Última actualización: 15 de enero de 2026</p>
+        <h1 class="gradient-text" data-i18n="legal.privacy.title">Política de Privacidad</h1>
+        <p class="updated" style="color: var(--text-secondary);" data-i18n="legal.common.updated">Última actualización:
+            15 de enero de 2026</p>
     </div>
 
     <main class="legal-content">
         <!-- Table of Contents -->
         <nav class="legal-toc">
-            <h4>Contenido</h4>
+            <h4 data-i18n="legal.common.toc_title">Contenido</h4>
             <ol>
-                <li><a href="#introduccion">Introducción</a></li>
-                <li><a href="#responsable">Responsable del Tratamiento</a></li>
-                <li><a href="#datos-recopilados">Datos que Recopilamos</a></li>
-                <li><a href="#finalidades">Finalidades del Tratamiento</a></li>
-                <li><a href="#base-legal">Base Legal para el Tratamiento</a></li>
-                <li><a href="#terceros">Compartición con Terceros</a></li>
-                <li><a href="#integraciones">Integraciones con Plataformas de Terceros</a></li>
-                <li><a href="#transferencias">Transferencias Internacionales</a></li>
-                <li><a href="#retencion">Período de Retención</a></li>
-                <li><a href="#derechos">Tus Derechos</a></li>
-                <li><a href="#menores">Menores de Edad</a></li>
-                <li><a href="#seguridad">Medidas de Seguridad</a></li>
-                <li><a href="#cambios">Cambios a Esta Política</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#introduccion" data-i18n="legal.privacy.toc_1">1. Introducción</a></li>
+                <li><a href="#responsable" data-i18n="legal.privacy.toc_2">2. Responsable</a></li>
+                <li><a href="#datos-recopilados" data-i18n="legal.privacy.toc_3">Datos que Recopilamos</a></li>
+                <li><a href="#finalidades" data-i18n="legal.privacy.toc_4">Finalidades del Tratamiento</a></li>
+                <li><a href="#base-legal" data-i18n="legal.privacy.toc_5">Base Legal para el Tratamiento</a></li>
+                <li><a href="#terceros" data-i18n="legal.privacy.toc_6">Compartición con Terceros</a></li>
+                <li><a href="#integraciones" data-i18n="legal.privacy.toc_7">Integraciones con Plataformas de
+                        Terceros</a></li>
+                <li><a href="#transferencias" data-i18n="legal.privacy.toc_8">Transferencias Internacionales</a></li>
+                <li><a href="#retencion" data-i18n="legal.privacy.toc_9">Período de Retención</a></li>
+                <li><a href="#derechos" data-i18n="legal.privacy.toc_10">Tus Derechos</a></li>
+                <li><a href="#menores" data-i18n="legal.privacy.toc_11">Menores de Edad</a></li>
+                <li><a href="#seguridad" data-i18n="legal.privacy.toc_12">Medidas de Seguridad</a></li>
+                <li><a href="#cambios" data-i18n="legal.privacy.toc_13">Cambios a Esta Política</a></li>
+                <li><a href="#contacto" data-i18n="legal.privacy.toc_14">Contacto</a></li>
             </ol>
         </nav>
 
         <!-- 1. Introduction -->
-        <h2 id="introduccion">1. Introducción</h2>
-        <p>
-            En <strong>Pixy</strong> ("nosotros", "nuestro" o "la Plataforma"), operada por <strong>Pixy SAS</strong>,
-            nos comprometemos a proteger la privacidad y los datos personales de nuestros usuarios. Esta Política
-            de Privacidad explica cómo recopilamos, utilizamos, almacenamos, compartimos y protegemos tu información
-            personal cuando utilizas nuestra plataforma de gestión empresarial SaaS (Software as a Service).
+        <h2 id="introduccion" data-i18n="legal.privacy.intro_title">1. Introducción</h2>
+        <p data-i18n="legal.privacy.intro_text_1">
+            En <strong>Pixy</strong> respetamos tu derecho a controlar tus datos personales. Esta página
+            explica cómo puedes solicitar la eliminación de tu información de nuestra plataforma, incluyendo
+            datos obtenidos a través de integraciones con Meta (Facebook, Instagram, WhatsApp Business).
         </p>
-        <p>
-            Esta política se aplica a todos los servicios ofrecidos a través de:
+        <p data-i18n="legal.privacy.intro_text_2">
+            De conformidad con la Ley 1581 de 2012 de Colombia, el Reglamento General de Protección de Datos
+            (RGPD) de la Unión Europea y las políticas de Meta Platforms, Inc., procesaremos tu solicitud
+            de eliminación de manera oportuna y completa.
         </p>
-        <ul>
-            <li>La aplicación web disponible en <strong>app.pixy.com.co</strong></li>
-            <li>El sitio web corporativo <strong>pixy.com.co</strong></li>
-            <li>Cualquier API, integración o servicio relacionado</li>
-            <li>Portales de cliente generados por la plataforma</li>
-        </ul>
-        <p>
+        <div data-i18n="legal.privacy.intro_list">
+            <ul>
+                <li>La aplicación web disponible en <strong>app.pixy.com.co</strong></li>
+                <li>El sitio web corporativo <strong>pixy.com.co</strong></li>
+                <li>Cualquier API, integración o servicio relacionado</li>
+                <li>Portales de cliente generados por la plataforma</li>
+            </ul>
+        </div>
+        <p data-i18n="legal.privacy.intro_text_3">
             Al utilizar nuestros servicios, aceptas las prácticas descritas en esta Política de Privacidad.
             Te recomendamos leerla detenidamente.
         </p>
 
         <!-- 2. Data Controller -->
-        <h2 id="responsable">2. Responsable del Tratamiento</h2>
-        <p>El responsable del tratamiento de tus datos personales es:</p>
-        <ul>
-            <li><strong>Razón Social:</strong> Pixy SAS</li>
-            <li><strong>Dirección:</strong> Bogotá D.C., Colombia</li>
-            <li><strong>Correo electrónico:</strong> privacidad@pixy.com.co</li>
-        </ul>
-        <p>
+        <h2 id="responsable" data-i18n="legal.privacy.sec_2_title">2. Responsable del Tratamiento</h2>
+        <div data-i18n="legal.privacy.sec_2_list">
+            <ul>
+                <li><strong>Razón Social:</strong> Pixy SAS</li>
+                <li><strong>Dirección:</strong> Bogotá D.C., Colombia</li>
+                <li><strong>Correo electrónico:</strong> privacidad@pixy.com.co</li>
+            </ul>
+        </div>
+        <p data-i18n="legal.privacy.sec_2_text">
             Para cualquier consulta relacionada con el tratamiento de tus datos personales, puedes contactarnos
             a través del correo electrónico indicado.
         </p>
 
         <!-- 3. Data We Collect -->
-        <h2 id="datos-recopilados">3. Datos que Recopilamos</h2>
-        <p>Recopilamos diferentes tipos de información dependiendo de cómo interactúas con nuestra plataforma:</p>
+        <h2 id="datos-recopilados" data-i18n="legal.privacy.sec_3_title">3. Datos que Recopilamos</h2>
+        <p data-i18n="legal.privacy.sec_3_intro">Recopilamos diferentes tipos de información dependiendo de cómo
+            interactúas con nuestra plataforma:</p>
 
-        <h3>3.1 Información de Cuenta y Registro</h3>
-        <ul>
-            <li><strong>Datos de identificación:</strong> Nombre completo, correo electrónico, número de teléfono</li>
-            <li><strong>Datos de autenticación:</strong> Contraseña encriptada, tokens de sesión</li>
-            <li><strong>Información empresarial:</strong> Nombre de la empresa, NIT/identificación fiscal, dirección
-                comercial</li>
-            <li><strong>Datos de facturación:</strong> Método de pago, historial de transacciones</li>
-        </ul>
+        <h3 data-i18n="legal.privacy.sec_3_1_title">3.1 Información de Cuenta y Registro</h3>
+        <div data-i18n="legal.privacy.sec_3_1_list">
+            <ul>
+                <li><strong>Datos de identificación:</strong> Nombre completo, correo electrónico, número de teléfono
+                </li>
+                <li><strong>Datos de autenticación:</strong> Contraseña encriptada, tokens de sesión</li>
+                <li><strong>Información empresarial:</strong> Nombre de la empresa, NIT/identificación fiscal, dirección
+                    comercial</li>
+                <li><strong>Datos de facturación:</strong> Método de pago, historial de transacciones</li>
+            </ul>
+        </div>
 
-        <h3>3.2 Información de Uso de la Plataforma</h3>
-        <ul>
-            <li><strong>Datos de clientes:</strong> Información que almacenas sobre tus propios clientes en el CRM</li>
-            <li><strong>Comunicaciones:</strong> Mensajes enviados/recibidos a través de canales integrados</li>
-            <li><strong>Documentos:</strong> Cotizaciones, facturas, contratos que generas</li>
-            <li><strong>Archivos adjuntos:</strong> Imágenes, documentos PDF y otros archivos subidos</li>
-        </ul>
+        <h3 data-i18n="legal.privacy.sec_3_2_title">3.2 Información de Uso de la Plataforma</h3>
+        <div data-i18n="legal.privacy.sec_3_2_list">
+            <ul>
+                <li><strong>Datos de clientes:</strong> Información que almacenas sobre tus propios clientes en el CRM
+                </li>
+                <li><strong>Comunicaciones:</strong> Mensajes enviados/recibidos a través de canales integrados</li>
+                <li><strong>Documentos:</strong> Cotizaciones, facturas, contratos que generas</li>
+                <li><strong>Archivos adjuntos:</strong> Imágenes, documentos PDF y otros archivos subidos</li>
+            </ul>
+        </div>
 
-        <h3>3.3 Información Técnica y de Dispositivo</h3>
-        <ul>
-            <li><strong>Dirección IP</strong></li>
-            <li><strong>Tipo de navegador y versión</strong></li>
-            <li><strong>Sistema operativo</strong></li>
-            <li><strong>Identificadores de dispositivo</strong></li>
-            <li><strong>Páginas visitadas y acciones realizadas</strong></li>
-            <li><strong>Fecha y hora de acceso</strong></li>
-        </ul>
+        <h3 data-i18n="legal.privacy.sec_3_3_title">3.3 Información Técnica y de Dispositivo</h3>
+        <div data-i18n="legal.privacy.sec_3_3_list">
+            <ul>
+                <li><strong>Dirección IP</strong></li>
+                <li><strong>Tipo de navegador y versión</strong></li>
+                <li><strong>Sistema operativo</strong></li>
+                <li><strong>Identificadores de dispositivo</strong></li>
+                <li><strong>Páginas visitadas y acciones realizadas</strong></li>
+                <li><strong>Fecha y hora de acceso</strong></li>
+            </ul>
+        </div>
 
-        <h3>3.4 Información de Integraciones con Redes Sociales</h3>
-        <p>Cuando conectas tu cuenta de Pixy con servicios de terceros (Meta/Facebook, Instagram, WhatsApp Business),
+        <h3 data-i18n="legal.privacy.sec_3_4_title">3.4 Información de Integraciones con Redes Sociales</h3>
+        <p data-i18n="legal.privacy.sec_3_4_intro">Cuando conectas tu cuenta de Pixy con servicios de terceros
+            (Meta/Facebook, Instagram, WhatsApp Business),
             podemos recibir:</p>
-        <ul>
-            <li><strong>De Meta (Facebook/Instagram):</strong>
-                <ul>
-                    <li>ID de usuario y páginas asociadas</li>
-                    <li>Nombre de la página/cuenta</li>
-                    <li>Mensajes de Messenger e Instagram Direct (cuando autorizas)</li>
-                    <li>Comentarios en publicaciones (cuando autorizas)</li>
-                    <li>Información básica del perfil público</li>
-                </ul>
-            </li>
-            <li><strong>De WhatsApp Business API:</strong>
-                <ul>
-                    <li>Número de teléfono de WhatsApp Business</li>
-                    <li>Mensajes enviados y recibidos</li>
-                    <li>Estado de entrega de mensajes</li>
-                    <li>Plantillas de mensajes aprobadas</li>
-                </ul>
-            </li>
-        </ul>
-        <p>
+        <div data-i18n="legal.privacy.sec_3_4_list">
+            <ul>
+                <li><strong>De Meta (Facebook/Instagram):</strong>
+                    <ul>
+                        <li>ID de usuario y páginas asociadas</li>
+                        <li>Nombre de la página/cuenta</li>
+                        <li>Mensajes de Messenger e Instagram Direct (cuando autorizas)</li>
+                        <li>Comentarios en publicaciones (cuando autorizas)</li>
+                        <li>Información básica del perfil público</li>
+                    </ul>
+                </li>
+                <li><strong>De WhatsApp Business API:</strong>
+                    <ul>
+                        <li>Número de teléfono de WhatsApp Business</li>
+                        <li>Mensajes enviados y recibidos</li>
+                        <li>Estado de entrega de mensajes</li>
+                        <li>Plantillas de mensajes aprobadas</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <p data-i18n="legal.privacy.sec_3_4_warning">
             <strong>Importante:</strong> Solo accedemos a la información que explícitamente autorizas durante
             el proceso de vinculación de cuenta. No accedemos a mensajes personales, amigos, fotos privadas
             ni otra información que no sea estrictamente necesaria para el funcionamiento del servicio.
         </p>
 
         <!-- 3.5 Meta Permissions (Explicit Compliance) -->
-        <h3 id="meta-permissions" class="text-glow" style="margin-top: 40px; color: var(--brand-pink);">3.5 Uso de Datos
+        <h3 id="meta-permissions" class="text-glow" style="margin-top: 40px; color: var(--brand-pink);"
+            data-i18n="legal.privacy.sec_3_5_title">3.5 Uso de Datos
             de Meta y Permisos Específicos</h3>
-        <p>Para la funcionalidad de integración con Facebook e Instagram, Pixy solicita permisos específicos a través
+        <p data-i18n="legal.privacy.sec_3_5_text">Para la funcionalidad de integración con Facebook e Instagram, Pixy
+            solicita permisos específicos a través
             del protocolo OAuth de Meta. A continuación, detallamos el uso exacto de cada permiso solicitado:</p>
 
         <div class="glass-card mb-4" style="border: 1px solid rgba(242, 5, 226, 0.3);">
             <h4 class="h5 mb-3" style="color: var(--text-primary);">Permisos Solicitados</h4>
-            <ul class="list-unstyled">
-                <li class="mb-3">
-                    <strong style="color: var(--brand-pink);">pages_show_list</strong>
-                    <p class="text-muted small mb-0"><strong>Uso:</strong> Permite listar las Páginas de Facebook que
-                        usted administra para que pueda seleccionar cuáles conectar a Pixy. No obtenemos datos de
-                        páginas que no seleccione explícitamente.</p>
-                </li>
-                <li class="mb-3">
-                    <strong style="color: var(--brand-pink);">pages_manage_metadata</strong>
-                    <p class="text-muted small mb-0"><strong>Uso:</strong> Permite a Pixy suscribirse a los webhooks de
-                        su página para recibir notificaciones de mensajes entrantes en tiempo real. Es esencial para el
-                        funcionamiento del CRM conversacional.</p>
-                </li>
-                <li class="mb-3">
-                    <strong style="color: var(--brand-pink);">pages_read_engagement</strong>
-                    <p class="text-muted small mb-0"><strong>Uso:</strong> Permite leer los comentarios y mensajes
-                        públicos en sus páginas conectadas para que pueda responderlos desde el panel de control
-                        unificado de Pixy.</p>
-                </li>
-                <li class="mb-3">
-                    <strong style="color: var(--brand-pink);">instagram_basic</strong>
-                    <p class="text-muted small mb-0"><strong>Uso:</strong> Permite leer información básica (nombre, ID,
-                        foto de perfil) de las cuentas profesionales de Instagram vinculadas a sus páginas de Facebook,
-                        para mostrarlas en su dashboard.</p>
-                </li>
-                <li class="mb-3">
-                    <strong style="color: var(--brand-pink);">instagram_manage_messages</strong>
-                    <p class="text-muted small mb-0"><strong>Uso:</strong> Permite recibir y responder mensajes directos
-                        (DMs) de Instagram desde la interfaz de Pixy. Sin este permiso, la función de inbox unificado no
-                        funcionaría para Instagram.</p>
-                </li>
-                <li class="mb-3">
-                    <strong style="color: var(--brand-pink);">instagram_content_publish</strong>
-                    <p class="text-muted small mb-0"><strong>Uso:</strong> Permite publicar contenido (fotos, videos) en
-                        su cuenta de Instagram únicamente cuando usted programa o ejecuta una publicación desde el
-                        módulo de Marketing de Pixy.</p>
-                </li>
+            <ul class="list-unstyled" data-i18n="legal.privacy.sec_3_5_list">
+                <!-- Using innerHTML replace here so we don't duplicate 50 lines -->
             </ul>
         </div>
 
-        <h4 class="h6 mt-4">Almacenamiento y Seguridad de Datos de Meta</h4>
-        <p>Pixy almacena únicamente el <strong>Token de Acceso (Access Token)</strong>, el <strong>ID de la
-                Página</strong> y el <strong>Nombre de la Página</strong> para mantener la conexión activa. Estos datos:
-        </p>
-        <ul>
-            <li>Se almacenan encriptados en nuestra base de datos segura.</li>
-            <li><strong>NO</strong> se comparten con terceros, anunciantes ni redes de datos.</li>
-            <li>Se utilizan <strong>exclusivamente</strong> para ejecutar las acciones que usted solicita dentro de la
-                plataforma (ej. responder un mensaje).</li>
-        </ul>
+        <h4 class="h6 mt-4" data-i18n="legal.privacy.sec_3_5_storage_title">Almacenamiento y Seguridad de Datos de Meta
+        </h4>
+        <div data-i18n="legal.privacy.sec_3_5_storage_text">
+            <p>Pixy almacena únicamente el <strong>Token de Acceso (Access Token)</strong>, el <strong>ID de la
+                    Página</strong> y el <strong>Nombre de la Página</strong> para mantener la conexión activa. Estos
+                datos:
+            </p>
+            <ul>
+                <li>Se almacenan encriptados en nuestra base de datos segura.</li>
+                <li><strong>NO</strong> se comparten con terceros, anunciantes ni redes de datos.</li>
+                <li>Se utilizan <strong>exclusivamente</strong> para ejecutar las acciones que usted solicita dentro de
+                    la
+                    plataforma (ej. responder un mensaje).</li>
+            </ul>
+        </div>
 
-        <h4 class="h6 mt-4">Revocación de Permisos</h4>
-        <p>Usted puede revocar el acceso de Pixy a sus datos de Meta en cualquier momento de dos formas:</p>
-        <ol>
-            <li>Desde la configuración de Pixy, desconectando sus cuentas.</li>
-            <li>Directamente desde la configuración de <a href="https://www.facebook.com/settings?tab=business_tools"
-                    target="_blank" class="neon-link">Integraciones Comerciales de Facebook</a>.</li>
-        </ol>
-        <p>Al revocar el acceso, nuestro sistema eliminará los tokens de acceso asociados y dejará de tener capacidad
-            para leer o publicar en sus páginas inmediatamente.</p>
+        <h4 class="h6 mt-4" data-i18n="legal.privacy.sec_3_5_revocation_title">Revocación de Permisos</h4>
+        <div data-i18n="legal.privacy.sec_3_5_revocation_text">
+            <p>Usted puede revocar el acceso de Pixy a sus datos de Meta en cualquier momento de dos formas:</p>
+            <ol>
+                <li>Desde la configuración de Pixy, desconectando sus cuentas.</li>
+                <li>Directamente desde la configuración de <a
+                        href="https://www.facebook.com/settings?tab=business_tools" target="_blank"
+                        class="neon-link">Integraciones Comerciales de Facebook</a>.</li>
+            </ol>
+            <p>Al revocar el acceso, nuestro sistema eliminará los tokens de acceso asociados y dejará de tener
+                capacidad
+                para leer o publicar en sus páginas inmediatamente.</p>
+        </div>
 
         <!-- 3.6 AI Policy Compliance (Meta 2026) -->
-        <h3 id="ai-policy" class="text-glow" style="margin-top: 40px; color: var(--brand-pink);">3.6 Cumplimiento de
+        <h3 id="ai-policy" class="text-glow" style="margin-top: 40px; color: var(--brand-pink);"
+            data-i18n="legal.privacy.sec_3_6_title">3.6 Cumplimiento de
             Política de IA y Datos de WhatsApp</h3>
-        <p>En estricto cumplimiento con la <strong>"WhatsApp AI Policy 2026"</strong> y los requisitos para Proveedores
+        <p data-i18n="legal.privacy.sec_3_6_text">En estricto cumplimiento con la <strong>"WhatsApp AI Policy
+                2026"</strong> y los requisitos para Proveedores
             Tecnológicos de Meta, PIXY declara lo siguiente:</p>
 
         <div class="glass-card mb-4" style="border: 1px solid rgba(16, 185, 129, 0.3);">
-            <ul class="list-unstyled">
+            <ul class="list-unstyled" data-i18n="legal.privacy.sec_3_6_list">
                 <li class="mb-3">
                     <strong style="color: #10b981;">Declaración de No Entrenamiento (No Training)</strong>
                     <p class="text-muted small mb-0">PIXY <strong>no utiliza, procesa ni comparte</strong> datos
@@ -292,227 +297,259 @@
         </div>
 
         <!-- 4. Purposes -->
-        <h2 id="finalidades">4. Finalidades del Tratamiento</h2>
-        <p>Utilizamos tu información personal para los siguientes propósitos:</p>
+        <h2 id="finalidades" data-i18n="legal.privacy.sec_4_title">4. Finalidades del Tratamiento</h2>
+        <p data-i18n="legal.privacy.sec_4_intro">Utilizamos tu información personal para los siguientes propósitos:</p>
 
-        <h3>4.1 Prestación del Servicio</h3>
-        <ul>
-            <li>Crear y administrar tu cuenta de usuario</li>
-            <li>Proporcionar acceso a las funcionalidades de la plataforma</li>
-            <li>Procesar tus solicitudes y transacciones</li>
-            <li>Gestionar tu suscripción y facturación</li>
-        </ul>
+        <div data-i18n="legal.privacy.sec_4_list">
+            <h3>4.1 Prestación del Servicio</h3>
+            <ul>
+                <li>Crear y administrar tu cuenta de usuario</li>
+                <li>Proporcionar acceso a las funcionalidades de la plataforma</li>
+                <li>Procesar tus solicitudes y transacciones</li>
+                <li>Gestionar tu suscripción y facturación</li>
+            </ul>
 
-        <h3>4.2 Comunicación</h3>
-        <ul>
-            <li>Enviarte notificaciones sobre tu cuenta y servicio</li>
-            <li>Responder a tus consultas y solicitudes de soporte</li>
-            <li>Informarte sobre actualizaciones importantes del servicio</li>
-            <li>Enviarte comunicaciones de marketing (con tu consentimiento previo)</li>
-        </ul>
+            <h3>4.2 Comunicación</h3>
+            <ul>
+                <li>Enviarte notificaciones sobre tu cuenta y servicio</li>
+                <li>Responder a tus consultas y solicitudes de soporte</li>
+                <li>Informarte sobre actualizaciones importantes del servicio</li>
+                <li>Enviarte comunicaciones de marketing (con tu consentimiento previo)</li>
+            </ul>
 
-        <h3>4.3 Mejora del Servicio</h3>
-        <ul>
-            <li>Analizar patrones de uso para mejorar la experiencia</li>
-            <li>Desarrollar nuevas funcionalidades</li>
-            <li>Resolver problemas técnicos</li>
-            <li>Realizar investigación y análisis estadístico (datos anonimizados)</li>
-        </ul>
+            <h3>4.3 Mejora del Servicio</h3>
+            <ul>
+                <li>Analizar patrones de uso para mejorar la experiencia</li>
+                <li>Desarrollar nuevas funcionalidades</li>
+                <li>Resolver problemas técnicos</li>
+                <li>Realizar investigación y análisis estadístico (datos anonimizados)</li>
+            </ul>
 
-        <h3>4.4 Seguridad y Cumplimiento Legal</h3>
-        <ul>
-            <li>Proteger la plataforma contra fraudes y abusos</li>
-            <li>Verificar la identidad de los usuarios cuando sea necesario</li>
-            <li>Cumplir con obligaciones legales y regulatorias</li>
-            <li>Responder a solicitudes legítimas de autoridades</li>
-        </ul>
+            <h3>4.4 Seguridad y Cumplimiento Legal</h3>
+            <ul>
+                <li>Proteger la plataforma contra fraudes y abusos</li>
+                <li>Verificar la identidad de los usuarios cuando sea necesario</li>
+                <li>Cumplir con obligaciones legales y regulatorias</li>
+                <li>Responder a solicitudes legítimas de autoridades</li>
+            </ul>
+        </div>
 
         <!-- 5. Legal Basis -->
-        <h2 id="base-legal">5. Base Legal para el Tratamiento</h2>
-        <p>El tratamiento de tus datos personales se fundamenta en las siguientes bases legales:</p>
-        <ul>
-            <li><strong>Ejecución de Contrato:</strong> Es necesario para prestarte el servicio que contrataste</li>
-            <li><strong>Consentimiento:</strong> Para comunicaciones de marketing y ciertas integraciones opcionales
-            </li>
-            <li><strong>Interés Legítimo:</strong> Para mejorar nuestros servicios y prevenir fraudes</li>
-            <li><strong>Obligación Legal:</strong> Para cumplir con requisitos legales y regulatorios</li>
-        </ul>
-        <p>
+        <h2 id="base-legal" data-i18n="legal.privacy.sec_5_title">5. Base Legal para el Tratamiento</h2>
+        <p data-i18n="legal.privacy.sec_5_intro">El tratamiento de tus datos personales se fundamenta en las siguientes
+            bases legales:</p>
+        <div data-i18n="legal.privacy.sec_5_list">
+            <ul>
+                <li><strong>Ejecución de Contrato:</strong> Es necesario para prestarte el servicio que contrataste</li>
+                <li><strong>Consentimiento:</strong> Para comunicaciones de marketing y ciertas integraciones opcionales
+                </li>
+                <li><strong>Interés Legítimo:</strong> Para mejorar nuestros servicios y prevenir fraudes</li>
+                <li><strong>Obligación Legal:</strong> Para cumplir con requisitos legales y regulatorios</li>
+            </ul>
+        </div>
+        <p data-i18n="legal.privacy.sec_5_text">
             Cuando el tratamiento se base en tu consentimiento, podrás retirarlo en cualquier momento
             sin que ello afecte la licitud del tratamiento previo.
         </p>
 
         <!-- 6. Third Party Sharing -->
-        <h2 id="terceros">6. Compartición con Terceros</h2>
-        <p>Podemos compartir tu información con las siguientes categorías de terceros:</p>
+        <h2 id="terceros" data-i18n="legal.privacy.sec_6_title">6. Compartición con Terceros</h2>
+        <p data-i18n="legal.privacy.sec_6_intro">Podemos compartir tu información con las siguientes categorías de
+            terceros:</p>
 
-        <h3>6.1 Proveedores de Servicios</h3>
-        <ul>
-            <li><strong>Supabase Inc.:</strong> Infraestructura de base de datos y autenticación (EE.UU.)</li>
-            <li><strong>Vercel Inc.:</strong> Hosting y distribución de la aplicación (EE.UU.)</li>
-            <li><strong>Stripe / Procesadores de Pago:</strong> Procesamiento de pagos (EE.UU./Global)</li>
-            <li><strong>Servicios de Email:</strong> Envío de correos transaccionales</li>
-        </ul>
+        <div data-i18n="legal.privacy.sec_6_list">
+            <h3>6.1 Proveedores de Servicios</h3>
+            <ul>
+                <li><strong>Supabase Inc.:</strong> Infraestructura de base de datos y autenticación (EE.UU.)</li>
+                <li><strong>Vercel Inc.:</strong> Hosting y distribución de la aplicación (EE.UU.)</li>
+                <li><strong>Stripe / Procesadores de Pago:</strong> Procesamiento de pagos (EE.UU./Global)</li>
+                <li><strong>Servicios de Email:</strong> Envío de correos transaccionales</li>
+            </ul>
 
-        <h3>6.2 Plataformas de Integración</h3>
-        <ul>
-            <li><strong>Meta Platforms, Inc.:</strong> Para integraciones de Facebook, Instagram y WhatsApp Business
-            </li>
-            <li><strong>Twilio Inc.:</strong> Para servicios de mensajería (cuando aplica)</li>
-        </ul>
+            <h3>6.2 Plataformas de Integración</h3>
+            <ul>
+                <li><strong>Meta Platforms, Inc.:</strong> Para integraciones de Facebook, Instagram y WhatsApp Business
+                </li>
+                <li><strong>Twilio Inc.:</strong> Para servicios de mensajería (cuando aplica)</li>
+            </ul>
 
-        <h3>6.3 Autoridades Legales</h3>
-        <p>
-            Podemos divulgar información cuando sea requerido por ley, orden judicial, o para proteger
-            nuestros derechos legales.
-        </p>
+            <h3>6.3 Autoridades Legales</h3>
+            <p>
+                Podemos divulgar información cuando sea requerido por ley, orden judicial, o para proteger
+                nuestros derechos legales.
+            </p>
 
-        <p><strong>No vendemos, alquilamos ni comercializamos tus datos personales a terceros para fines de
-                marketing.</strong></p>
+            <p><strong>No vendemos, alquilamos ni comercializamos tus datos personales a terceros para fines de
+                    marketing.</strong></p>
+        </div>
 
         <!-- 7. Platform Integrations -->
-        <h2 id="integraciones">7. Integraciones con Plataformas de Terceros</h2>
+        <h2 id="integraciones" data-i18n="legal.privacy.sec_7_title">7. Integraciones con Plataformas de Terceros</h2>
 
-        <h3>7.1 Integración con Meta (Facebook, Instagram, WhatsApp)</h3>
-        <p>
+        <h3 data-i18n="legal.privacy.sec_7_1_title">7.1 Integración con Meta (Facebook, Instagram, WhatsApp)</h3>
+        <p data-i18n="legal.privacy.sec_7_1_text">
             Cuando vinculas tu cuenta de Meta con Pixy, utilizamos la API oficial de Meta para acceder
             únicamente a la información que autorizas explícitamente. Los permisos solicitados dependen
             de las funcionalidades que desees utilizar:
         </p>
-        <ul>
-            <li><strong>pages_messaging:</strong> Para enviar y recibir mensajes de Facebook Messenger</li>
-            <li><strong>instagram_basic:</strong> Para acceder a información básica de cuentas de Instagram Business
-            </li>
-            <li><strong>instagram_manage_messages:</strong> Para gestionar mensajes de Instagram Direct</li>
-            <li><strong>whatsapp_business_messaging:</strong> Para enviar y recibir mensajes de WhatsApp Business</li>
-        </ul>
-        <p>
+        <div data-i18n="legal.privacy.sec_7_1_list">
+            <ul>
+                <li><strong>pages_messaging:</strong> Para enviar y recibir mensajes de Facebook Messenger</li>
+                <li><strong>instagram_basic:</strong> Para acceder a información básica de cuentas de Instagram Business
+                </li>
+                <li><strong>instagram_manage_messages:</strong> Para gestionar mensajes de Instagram Direct</li>
+                <li><strong>whatsapp_business_messaging:</strong> Para enviar y recibir mensajes de WhatsApp Business
+                </li>
+            </ul>
+        </div>
+        <p data-i18n="legal.privacy.sec_7_1_text_2">
             Puedes revocar estos permisos en cualquier momento desde la configuración de tu cuenta de Meta
             o desde la sección de integraciones de Pixy.
         </p>
 
-        <h3>7.2 Uso de Datos de Meta</h3>
-        <p>Los datos recibidos de Meta se utilizan exclusivamente para:</p>
-        <ul>
-            <li>Mostrar y responder mensajes recibidos en tu inbox unificado</li>
-            <li>Asociar conversaciones con perfiles de clientes en tu CRM</li>
-            <li>Generar estadísticas de comunicación para tu negocio</li>
-        </ul>
-        <p>
-            <strong>Nunca utilizamos datos de Meta para:</strong>
-        </p>
-        <ul>
-            <li>Vender o compartir con terceros no autorizados</li>
-            <li>Crear perfiles de publicidad sin tu consentimiento</li>
-            <li>Acceder a información más allá de lo autorizado</li>
-        </ul>
+        <h3 data-i18n="legal.privacy.sec_7_2_title">7.2 Uso de Datos de Meta</h3>
+        <div data-i18n="legal.privacy.sec_7_2_text">
+            <p>Los datos recibidos de Meta se utilizan exclusivamente para:</p>
+            <ul>
+                <li>Mostrar y responder mensajes recibidos en tu inbox unificado</li>
+                <li>Asociar conversaciones con perfiles de clientes en tu CRM</li>
+                <li>Generar estadísticas de comunicación para tu negocio</li>
+            </ul>
+            <p>
+                <strong>Nunca utilizamos datos de Meta para:</strong>
+            </p>
+            <ul>
+                <li>Vender o compartir con terceros no autorizados</li>
+                <li>Crear perfiles de publicidad sin tu consentimiento</li>
+                <li>Acceder a información más allá de lo autorizado</li>
+            </ul>
+        </div>
 
         <!-- 8. International Transfers -->
-        <h2 id="transferencias">8. Transferencias Internacionales</h2>
-        <p>
-            Debido a la naturaleza de los servicios en la nube, tus datos pueden ser procesados en servidores
-            ubicados fuera de Colombia, principalmente en Estados Unidos. Garantizamos que dichas transferencias
-            cumplan con las normativas aplicables de protección de datos, incluyendo:
-        </p>
-        <ul>
-            <li>Utilización de proveedores que cumplen con estándares internacionales de seguridad</li>
-            <li>Implementación de medidas contractuales adecuadas</li>
-            <li>Cumplimiento de frameworks como EU-US Data Privacy Framework cuando aplique</li>
-        </ul>
+        <h2 id="transferencias" data-i18n="legal.privacy.sec_8_title">8. Transferencias Internacionales</h2>
+        <div data-i18n="legal.privacy.sec_8_text">
+            <p>
+                Debido a la naturaleza de los servicios en la nube, tus datos pueden ser procesados en servidores
+                ubicados fuera de Colombia, principalmente en Estados Unidos. Garantizamos que dichas transferencias
+                cumplan con las normativas aplicables de protección de datos, incluyendo:
+            </p>
+            <ul>
+                <li>Utilización de proveedores que cumplen con estándares internacionales de seguridad</li>
+                <li>Implementación de medidas contractuales adecuadas</li>
+                <li>Cumplimiento de frameworks como EU-US Data Privacy Framework cuando aplique</li>
+            </ul>
+        </div>
 
         <!-- 9. Retention -->
-        <h2 id="retencion">9. Período de Retención</h2>
-        <p>Conservamos tus datos personales durante los siguientes períodos:</p>
-        <ul>
-            <li><strong>Datos de cuenta activa:</strong> Mientras mantengas tu suscripción activa</li>
-            <li><strong>Datos de cuenta cancelada:</strong> 30 días después de la cancelación, excepto datos requeridos
-                legalmente</li>
-            <li><strong>Datos de facturación:</strong> 5 años por obligaciones tributarias colombianas</li>
-            <li><strong>Logs de seguridad:</strong> 12 meses</li>
-            <li><strong>Comunicaciones de soporte:</strong> 3 años</li>
-        </ul>
-        <p>
+        <h2 id="retencion" data-i18n="legal.privacy.sec_9_title">9. Período de Retención</h2>
+        <p data-i18n="legal.privacy.sec_9_intro">Conservamos tus datos personales durante los siguientes períodos:</p>
+        <div data-i18n="legal.privacy.sec_9_list">
+            <ul>
+                <li><strong>Datos de cuenta activa:</strong> Mientras mantengas tu suscripción activa</li>
+                <li><strong>Datos de cuenta cancelada:</strong> 30 días después de la cancelación, excepto datos
+                    requeridos
+                    legalmente</li>
+                <li><strong>Datos de facturación:</strong> 5 años por obligaciones tributarias colombianas</li>
+                <li><strong>Logs de seguridad:</strong> 12 meses</li>
+                <li><strong>Comunicaciones de soporte:</strong> 3 años</li>
+            </ul>
+        </div>
+        <p data-i18n="legal.privacy.sec_9_text">
             Puedes solicitar la eliminación de tus datos en cualquier momento, sujeto a las excepciones
             legales aplicables.
         </p>
 
         <!-- 10. Your Rights -->
-        <h2 id="derechos">10. Tus Derechos</h2>
-        <p>
+        <h2 id="derechos" data-i18n="legal.privacy.sec_10_title">10. Tus Derechos</h2>
+        <p data-i18n="legal.privacy.sec_10_intro">
             De acuerdo con la Ley 1581 de 2012 de Colombia y el Reglamento General de Protección de Datos (RGPD)
             de la Unión Europea (cuando aplique), tienes los siguientes derechos:
         </p>
-        <ul>
-            <li><strong>Acceso:</strong> Conocer qué datos personales tenemos sobre ti</li>
-            <li><strong>Rectificación:</strong> Corregir datos inexactos o incompletos</li>
-            <li><strong>Supresión:</strong> Solicitar la eliminación de tus datos (ver <a
-                    href="data-deletion.html">Instrucciones de Eliminación</a>)</li>
-            <li><strong>Oposición:</strong> Oponerte al tratamiento de tus datos en ciertas circunstancias</li>
-            <li><strong>Limitación:</strong> Solicitar la restricción del tratamiento</li>
-            <li><strong>Portabilidad:</strong> Recibir tus datos en formato estructurado y transferible</li>
-            <li><strong>Revocación del consentimiento:</strong> Retirar tu consentimiento cuando sea la base del
-                tratamiento</li>
-        </ul>
-        <p>
-            Para ejercer cualquiera de estos derechos, envía un correo a <strong>privacidad@pixy.com.co</strong>
-            con tu solicitud y una copia de tu documento de identidad.
-        </p>
-        <p>
-            También puedes presentar una queja ante la <strong>Superintendencia de Industria y Comercio (SIC)</strong>
-            de Colombia si consideras que tus derechos han sido vulnerados.
-        </p>
+        <div data-i18n="legal.privacy.sec_10_list">
+            <ul>
+                <li><strong>Acceso:</strong> Conocer qué datos personales tenemos sobre ti</li>
+                <li><strong>Rectificación:</strong> Corregir datos inexactos o incompletos</li>
+                <li><strong>Supresión:</strong> Solicitar la eliminación de tus datos (ver <a
+                        href="data-deletion.html">Instrucciones de Eliminación</a>)</li>
+                <li><strong>Oposición:</strong> Oponerte al tratamiento de tus datos en ciertas circunstancias</li>
+                <li><strong>Limitación:</strong> Solicitar la restricción del tratamiento</li>
+                <li><strong>Portabilidad:</strong> Recibir tus datos en formato estructurado y transferible</li>
+                <li><strong>Revocación del consentimiento:</strong> Retirar tu consentimiento cuando sea la base del
+                    tratamiento</li>
+            </ul>
+        </div>
+        <div data-i18n="legal.privacy.sec_10_contact">
+            <p>
+                Para ejercer cualquiera de estos derechos, envía un correo a <strong>privacidad@pixy.com.co</strong>
+                con tu solicitud y una copia de tu documento de identidad.
+            </p>
+            <p>
+                También puedes presentar una queja ante la <strong>Superintendencia de Industria y Comercio
+                    (SIC)</strong>
+                de Colombia si consideras que tus derechos han sido vulnerados.
+            </p>
+        </div>
 
         <!-- 11. Children -->
-        <h2 id="menores">11. Menores de Edad</h2>
-        <p>
+        <h2 id="menores" data-i18n="legal.privacy.sec_11_title">11. Menores de Edad</h2>
+        <p data-i18n="legal.privacy.sec_11_text">
             Pixy es un servicio empresarial dirigido a adultos mayores de 18 años. No recopilamos
             intencionalmente información de menores de edad. Si descubrimos que hemos recopilado datos
             de un menor sin el consentimiento parental adecuado, los eliminaremos de inmediato.
         </p>
 
         <!-- 12. Security -->
-        <h2 id="seguridad">12. Medidas de Seguridad</h2>
-        <p>Implementamos medidas de seguridad técnicas, administrativas y físicas para proteger tus datos:</p>
+        <h2 id="seguridad" data-i18n="legal.privacy.sec_12_title">12. Medidas de Seguridad</h2>
+        <p data-i18n="legal.privacy.sec_12_intro">Implementamos medidas de seguridad técnicas, administrativas y físicas
+            para proteger tus datos:</p>
 
-        <h3>12.1 Medidas Técnicas</h3>
-        <ul>
-            <li>Encriptación de datos en tránsito (TLS 1.3) y en reposo (AES-256)</li>
-            <li>Autenticación de dos factores (2FA) disponible</li>
-            <li>Seguridad a nivel de fila (Row Level Security) en base de datos</li>
-            <li>Monitoreo continuo de amenazas</li>
-            <li>Backups encriptados y distribuidos geográficamente</li>
-        </ul>
+        <div data-i18n="legal.privacy.sec_12_list">
+            <h3>12.1 Medidas Técnicas</h3>
+            <ul>
+                <li>Encriptación de datos en tránsito (TLS 1.3) y en reposo (AES-256)</li>
+                <li>Autenticación de dos factores (2FA) disponible</li>
+                <li>Seguridad a nivel de fila (Row Level Security) en base de datos</li>
+                <li>Monitoreo continuo de amenazas</li>
+                <li>Backups encriptados y distribuidos geográficamente</li>
+            </ul>
 
-        <h3>12.2 Medidas Administrativas</h3>
-        <ul>
-            <li>Acceso restringido al personal autorizado</li>
-            <li>Capacitación en seguridad para empleados</li>
-            <li>Políticas de contraseñas robustas</li>
-            <li>Auditorías de seguridad periódicas</li>
-        </ul>
+            <h3>12.2 Medidas Administrativas</h3>
+            <ul>
+                <li>Acceso restringido al personal autorizado</li>
+                <li>Capacitación en seguridad para empleados</li>
+                <li>Políticas de contraseñas robustas</li>
+                <li>Auditorías de seguridad periódicas</li>
+            </ul>
+        </div>
 
         <!-- 13. Changes -->
-        <h2 id="cambios">13. Cambios a Esta Política</h2>
-        <p>
-            Podemos actualizar esta Política de Privacidad ocasionalmente para reflejar cambios en nuestras
-            prácticas o requisitos legales. Cuando realicemos cambios significativos:
-        </p>
-        <ul>
-            <li>Actualizaremos la fecha de "Última actualización" en la parte superior</li>
-            <li>Te notificaremos por correo electrónico si los cambios son materiales</li>
-            <li>Publicaremos un aviso en la plataforma</li>
-        </ul>
-        <p>Te recomendamos revisar esta política periódicamente.</p>
+        <h2 id="cambios" data-i18n="legal.privacy.sec_13_title">13. Cambios a Esta Política</h2>
+        <div data-i18n="legal.privacy.sec_13_text">
+            <p>
+                Podemos actualizar esta Política de Privacidad ocasionalmente para reflejar cambios en nuestras
+                prácticas o requisitos legales. Cuando realicemos cambios significativos:
+            </p>
+            <ul>
+                <li>Actualizaremos la fecha de "Última actualización" en la parte superior</li>
+                <li>Te notificaremos por correo electrónico si los cambios son materiales</li>
+                <li>Publicaremos un aviso en la plataforma</li>
+            </ul>
+            <p>Te recomendamos revisar esta política periódicamente.</p>
+        </div>
 
         <!-- 14. Contact -->
-        <h2 id="contacto">14. Contacto</h2>
-        <p>Si tienes preguntas sobre esta Política de Privacidad o sobre el tratamiento de tus datos:</p>
-        <ul>
-            <li><strong>Email:</strong> privacidad@pixy.com.co</li>
-            <li><strong>Dirección:</strong> Bogotá D.C., Colombia</li>
-            <li><strong>Formulario web:</strong> <a href="mailto:privacidad@pixy.com.co">Contactar</a></li>
-        </ul>
-        <p>Responderemos a tu solicitud en un plazo máximo de 15 días hábiles.</p>
+        <h2 id="contacto" data-i18n="legal.privacy.sec_14_title">14. Contacto</h2>
+        <p data-i18n="legal.privacy.sec_14_intro">Si tienes preguntas sobre esta Política de Privacidad o sobre el
+            tratamiento de tus datos:</p>
+        <div data-i18n="legal.privacy.sec_14_list">
+            <ul>
+                <li><strong>Email:</strong> privacidad@pixy.com.co</li>
+                <li><strong>Dirección:</strong> Bogotá D.C., Colombia</li>
+                <li><strong>Formulario web:</strong> <a href="mailto:privacidad@pixy.com.co">Contactar</a></li>
+            </ul>
+        </div>
+        <p data-i18n="legal.privacy.sec_14_footer">Responderemos a tu solicitud en un plazo máximo de 15 días hábiles.
+        </p>
 
     </main>
 
@@ -522,18 +559,36 @@
             <div class="footer-brand">
                 <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
-                <p>© 2024-2026 Pixy. Todos los derechos reservados.</p>
+                <p data-i18n="footer.slogan">Tu negocio, bien diseñado.</p>
             </div>
+
             <nav class="footer-links">
-                <h4>Legal</h4>
-                <a href="privacy.html" class="neon-link">Política de Privacidad</a>
-                <a href="terms.html" class="neon-link">Términos de Servicio</a>
-                <a href="data-deletion.html" class="neon-link">Eliminación de Datos</a>
-                <a href="cookies.html" class="neon-link">Política de Cookies</a>
+                <h4 data-i18n="footer.product">Producto</h4>
+
+                <a href="features.html" class="neon-link" data-i18n="nav.spaces">Características</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
+            </nav>
+
+            <nav class="footer-links">
+                <h4 data-i18n="footer.company">Empresa</h4>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+            </nav>
+
+            <nav class="footer-links">
+                <h4 data-i18n="footer.legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="footer.deletion">Eliminación de Datos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
+                <a href="permissions.html" class="neon-link" data-i18n="footer.permissions">Permisos</a>
             </nav>
         </div>
         <div class="footer-bottom">
-            <p>Pixy SAS | Bogotá, Colombia</p>
+            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -557,6 +612,7 @@
         </svg>
     </button>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 

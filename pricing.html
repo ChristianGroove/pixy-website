@@ -55,18 +55,27 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="industries.html" class="neon-link">Spaces</a>
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="pricing.html" class="neon-link active">Precios</a>
-                <a href="blog.html" class="neon-link">Blog</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="pricing.html" class="neon-link active" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;">Entrar</a>
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <!-- Language Switcher -->
+                <button id="lang-toggle" class="btn-lang"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+
+                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;"
+                    data-i18n="nav.login">Entrar</a>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;"
+                    data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
@@ -74,18 +83,19 @@
     <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
 
         <header style="text-align: center; margin-bottom: 60px;">
-            <div class="badge">Planes Flexibles</div>
-            <h1 style="font-size: 3rem; margin: 16px 0;">Escala sin límites</h1>
-            <p class="subtitle">Elige el plan que mejor se adapte a la etapa de tu negocio.</p>
+            <div class="badge" data-i18n="pricing.badge">Planes Flexibles</div>
+            <h1 style="font-size: 3rem; margin: 16px 0;" data-i18n="pricing.title">Escala sin límites</h1>
+            <p class="subtitle" data-i18n="pricing.subtitle">Elige el plan que mejor se adapte a la etapa de tu negocio.
+            </p>
         </header>
 
         <!-- Pricing Toggle -->
         <div class="pricing-toggle">
-            <span style="color: var(--text-muted);">Mensual</span>
+            <span style="color: var(--text-muted);" data-i18n="pricing.monthly">Mensual</span>
             <div class="toggle-switch active" onclick="this.classList.toggle('active')">
                 <div class="toggle-thumb"></div>
             </div>
-            <span style="color: var(--text-primary); font-weight: 600;">Anual <span
+            <span style="color: var(--text-primary); font-weight: 600;" data-i18n="pricing.yearly">Anual <span
                     style="font-size: 0.8rem; color: var(--brand-pink); margin-left: 4px;">(2 meses
                     gratis)</span></span>
         </div>
@@ -97,23 +107,30 @@
             <!-- Starter -->
             <div class="glass-card" style="display: flex; flex-direction: column; height: 100%;">
                 <div>
-                    <h3 style="font-size: 2rem; margin-bottom: 8px;">Startup</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">Para equipos que están
+                    <h3 style="font-size: 2rem; margin-bottom: 8px;" data-i18n="pricing.startup_title">Startup</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;"
+                        data-i18n="pricing.startup_desc">Para equipos que están
                         empezando.</p>
 
                     <ul class="feature-list" style="margin-bottom: 32px;">
-                        <li class="feature-item"><span class="feature-icon">✓</span> 3 Usuarios</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> 1 Canal de WhatsApp</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> CRM Básico</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> Facturación Ilimitada</li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="pricing.features_startup_1">3 Usuarios</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="pricing.features_startup_2">1 Canal de WhatsApp</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="pricing.features_startup_3">CRM Básico</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="pricing.features_startup_4">Facturación Ilimitada</span></li>
                     </ul>
                 </div>
 
                 <div style="margin-top: auto; text-align: center;">
-                    <div class="price-amount" style="font-size: 1.5rem; margin-bottom: 16px;">
+                    <div class="price-amount" style="font-size: 1.5rem; margin-bottom: 16px;"
+                        data-i18n="pricing.quote_btn">
                         Cotizar
                     </div>
-                    <a href="contact.html" class="btn-neon-outline" style="width: 100%;">Contactar Ventas</a>
+                    <a href="contact.html" class="btn-neon-outline" style="width: 100%;"
+                        data-i18n="pricing.contact_sales">Contactar Ventas</a>
                 </div>
             </div>
 
@@ -121,101 +138,120 @@
             <div class="glass-card pricing-card-highlight"
                 style="transform: scale(1.05); overflow: visible; z-index: 2; display: flex; flex-direction: column; height: 100%;">
                 <span class="neon-badge"
-                    style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); box-shadow: 0 0 20px rgba(242,5,226,0.5);">Más
+                    style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); box-shadow: 0 0 20px rgba(242,5,226,0.5);"
+                    data-i18n="pricing.scale_badge">Más
                     Popular</span>
                 <div>
-                    <h3 style="font-size: 2rem; margin-bottom: 8px;">Scale</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">Para empresas en
+                    <h3 style="font-size: 2rem; margin-bottom: 8px;" data-i18n="pricing.scale_title">Scale</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;"
+                        data-i18n="pricing.scale_desc">Para empresas en
                         crecimiento.</p>
 
                     <ul class="feature-list" style="margin-bottom: 32px;">
-                        <li class="feature-item"><span class="feature-icon">✓</span> 10 Usuarios</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> 3 Canales de WhatsApp</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> CRM Avanzado + Automatización</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> API Access</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> Soporte Prioritario</li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="pricing.features_scale_1">10 Usuarios</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="pricing.features_scale_2">3 Canales de WhatsApp</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="pricing.features_scale_3">CRM Avanzado + Automatización</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="pricing.features_scale_4">API Access</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="pricing.features_scale_5">Soporte Prioritario</span></li>
                     </ul>
                 </div>
 
                 <div style="margin-top: auto; text-align: center;">
-                    <div class="price-amount" style="font-size: 1.5rem; margin-bottom: 16px;">
+                    <div class="price-amount" style="font-size: 1.5rem; margin-bottom: 16px;"
+                        data-i18n="pricing.quote_btn">
                         Cotizar
                     </div>
-                    <a href="contact.html" class="btn-neon" style="width: 100%;">Contactar Ventas</a>
+                    <a href="contact.html" class="btn-neon" style="width: 100%;"
+                        data-i18n="pricing.contact_sales">Contactar Ventas</a>
                 </div>
             </div>
 
             <!-- Enterprise -->
             <div class="glass-card" style="display: flex; flex-direction: column; height: 100%;">
                 <div>
-                    <h3 style="font-size: 2rem; margin-bottom: 8px;">Enterprise</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">Soluciones a medida y
+                    <h3 style="font-size: 2rem; margin-bottom: 8px;" data-i18n="pricing.enterprise_title">Enterprise
+                    </h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;"
+                        data-i18n="pricing.enterprise_desc">Soluciones a medida y
                         marca blanca.</p>
 
                     <ul class="feature-list" style="margin-bottom: 32px;">
-                        <li class="feature-item"><span class="feature-icon">✓</span> Usuarios Ilimitados</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> Canales Ilimitados</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> Marca Blanca (White Label)</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> Infraestructura Dedicada</li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> Gerente de Cuenta</li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="pricing.features_ent_1">Usuarios Ilimitados</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="pricing.features_ent_2">Canales Ilimitados</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="pricing.features_ent_3">Marca Blanca (White Label)</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="pricing.features_ent_4">Infraestructura Dedicada</span></li>
+                        <li class="feature-item"><span class="feature-icon">✓</span> <span
+                                data-i18n="pricing.features_ent_5">Gerente de Cuenta</span></li>
                     </ul>
                 </div>
 
                 <div style="margin-top: auto; text-align: center;">
-                    <div class="price-amount" style="font-size: 1.5rem; margin-bottom: 16px;">
+                    <div class="price-amount" style="font-size: 1.5rem; margin-bottom: 16px;"
+                        data-i18n="pricing.custom_pricing">
                         A Medida
                     </div>
-                    <a href="contact.html" class="btn-neon-outline" style="width: 100%;">Solicitar Consultoría</a>
+                    <a href="contact.html" class="btn-neon-outline" style="width: 100%;"
+                        data-i18n="pricing.request_consulting">Solicitar Consultoría</a>
                 </div>
             </div>
         </div>
 
         <!-- Comparison Table -->
         <section style="margin: 100px 0;">
-            <h2 style="text-align: center; margin-bottom: 40px;">Comparativa Detallada</h2>
+            <h2 style="text-align: center; margin-bottom: 40px;" data-i18n="pricing.comp_title">Comparativa Detallada
+            </h2>
             <div style="overflow-x: auto;">
                 <table class="comparison-table">
                     <thead>
                         <tr>
-                            <th style="width: 40%;">Características</th>
-                            <th style="width: 20%;">Startup</th>
-                            <th style="width: 20%;">Scale</th>
-                            <th style="width: 20%;">Enterprise</th>
+                            <th style="width: 40%;" data-i18n="pricing.comp_th_features">Características</th>
+                            <th style="width: 20%;" data-i18n="pricing.startup_title">Startup</th>
+                            <th style="width: 20%;" data-i18n="pricing.scale_title">Scale</th>
+                            <th style="width: 20%;" data-i18n="pricing.enterprise_title">Enterprise</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Inbox Multicanal</td>
+                            <td data-i18n="pricing.comp_row_inbox">Inbox Multicanal</td>
                             <td><span class="comparison-check">✓</span></td>
                             <td><span class="comparison-check">✓</span></td>
                             <td><span class="comparison-check">✓</span></td>
                         </tr>
                         <tr>
-                            <td>Automatización (Bots)</td>
+                            <td data-i18n="pricing.comp_row_bots">Automatización (Bots)</td>
                             <td><span class="comparison-x">—</span></td>
                             <td><span class="comparison-check">✓</span></td>
                             <td><span class="comparison-check">✓</span></td>
                         </tr>
                         <tr>
-                            <td>Generación de Proformas</td>
+                            <td data-i18n="pricing.comp_row_proformas">Generación de Proformas</td>
                             <td><span class="comparison-check">✓</span></td>
                             <td><span class="comparison-check">✓</span></td>
                             <td><span class="comparison-check">✓</span></td>
                         </tr>
                         <tr>
-                            <td>Facturación Electrónica (Próximamente)</td>
+                            <td data-i18n="pricing.comp_row_billing">Facturación Electrónica (Próximamente)</td>
                             <td><span class="comparison-x">—</span></td>
                             <td><span class="comparison-check">✓</span></td>
                             <td><span class="comparison-check">✓</span></td>
                         </tr>
                         <tr>
-                            <td>Marca Blanca</td>
+                            <td data-i18n="pricing.comp_row_whitelabel">Marca Blanca</td>
                             <td><span class="comparison-x">—</span></td>
                             <td><span class="comparison-x">—</span></td>
                             <td><span class="comparison-check">✓</span></td>
                         </tr>
                         <tr>
-                            <td>API Access</td>
+                            <td data-i18n="pricing.comp_row_api">API Access</td>
                             <td><span class="comparison-x">—</span></td>
                             <td><span class="comparison-check">✓</span></td>
                             <td><span class="comparison-check">✓</span></td>
@@ -227,16 +263,16 @@
 
         <!-- FAQ -->
         <section style="max-width: 800px; margin: 0 auto;">
-            <h2 style="text-align: center; margin-bottom: 40px;">Preguntas Frecuentes</h2>
+            <h2 style="text-align: center; margin-bottom: 40px;" data-i18n="pricing.faq_title">Preguntas Frecuentes</h2>
 
             <div class="glass-card" style="padding: 0 32px;">
                 <!-- Question 1 -->
                 <div class="accordion-item">
                     <button class="accordion-header">
-                        ¿Puedo cambiar de plan en cualquier momento?
+                        <span data-i18n="pricing.faq_q1">¿Puedo cambiar de plan en cualquier momento?</span>
                         <span class="accordion-icon">+</span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content" data-i18n="pricing.faq_a1">
                         Sí, puedes actualizar o reducir tu plan en cualquier momento. Los cambios se aplicarán en tu
                         próximo ciclo de facturación.
                     </div>
@@ -245,10 +281,10 @@
                 <!-- Question 2 -->
                 <div class="accordion-item">
                     <button class="accordion-header">
-                        ¿Cómo funciona la facturación?
+                        <span data-i18n="pricing.faq_q2">¿Cómo funciona la facturación?</span>
                         <span class="accordion-icon">+</span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content" data-i18n="pricing.faq_a2">
                         Actualmente Pixy genera proformas y cuentas de cobro profesionales. La facturación electrónica
                         directa con la DIAN está en desarrollo y será una actualización gratuita próximamente.
                     </div>
@@ -257,10 +293,10 @@
                 <!-- Question 3 -->
                 <div class="accordion-item">
                     <button class="accordion-header">
-                        ¿Qué métodos de pago aceptan?
+                        <span data-i18n="pricing.faq_q3">¿Qué métodos de pago aceptan?</span>
                         <span class="accordion-icon">+</span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content" data-i18n="pricing.faq_a3">
                         Aceptamos tarjetas de crédito (Visa, Mastercard), transferencias PSE y pagos bancarios directos
                         para planes anuales.
                     </div>
@@ -269,10 +305,10 @@
                 <!-- NEW: Question 4 (Security) -->
                 <div class="accordion-item">
                     <button class="accordion-header">
-                        ¿Mis datos están seguros con Pixy?
+                        <span data-i18n="pricing.faq_q4">¿Mis datos están seguros con Pixy?</span>
                         <span class="accordion-icon">+</span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content" data-i18n="pricing.faq_a4">
                         Absolutamente. Utilizamos encriptación de grado bancario (AES-256) para todos tus datos y
                         realizamos copias de seguridad automáticas diarias. Tu información es confidencial y nunca la
                         compartimos.
@@ -315,35 +351,35 @@
             <div class="footer-brand">
                 <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
-                <p>Tu negocio, bien diseñado.</p>
+                <p data-i18n="footer.slogan">Tu negocio, bien diseñado.</p>
             </div>
 
             <nav class="footer-links">
-                <h4>Producto</h4>
+                <h4 data-i18n="footer.product">Producto</h4>
 
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="industries.html" class="neon-link">Soluciones</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Empresa</h4>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="partners.html" class="neon-link">Partners</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
-                <a href="blog.html" class="neon-link">Blog</a>
+                <h4 data-i18n="footer.company">Empresa</h4>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Legal</h4>
-                <a href="privacy.html" class="neon-link">Privacidad</a>
-                <a href="terms.html" class="neon-link">Términos</a>
-                <a href="data-deletion.html" class="neon-link">Eliminación de Datos</a>
-                <a href="cookies.html" class="neon-link">Cookies</a>
-                <a href="permissions.html" class="neon-link">Permisos</a>
+                <h4 data-i18n="footer.legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="footer.deletion">Eliminación de Datos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
+                <a href="permissions.html" class="neon-link" data-i18n="footer.permissions">Permisos</a>
             </nav>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Pixy. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -364,6 +400,7 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg></button>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 

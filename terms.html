@@ -43,341 +43,398 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="industries.html" class="neon-link">Spaces</a>
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="blog.html" class="neon-link">Blog</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;">Entrar</a>
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <!-- Language Switcher -->
+                <button id="lang-toggle" class="btn-lang"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+
+                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;"
+                    data-i18n="nav.login">Entrar</a>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;"
+                    data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
 
     <div class="container" style="padding-top: 140px; margin-bottom: 40px; text-align: center;">
-        <h1 class="gradient-text">Términos de Servicio</h1>
-        <p class="updated" style="color: var(--text-secondary);">Última actualización: 15 de enero de 2026</p>
+        <h1 class="gradient-text" data-i18n="legal.terms.title">Términos de Servicio</h1>
+        <p class="updated" style="color: var(--text-secondary);" data-i18n="legal.common.updated">Última actualización:
+            15 de enero de 2026</p>
     </div>
 
     <main class="legal-content">
         <nav class="legal-toc">
-            <h4>Contenido</h4>
+            <h4 data-i18n="legal.common.toc_title">Contenido</h4>
             <ol>
-                <li><a href="#aceptacion">Aceptación de los Términos</a></li>
-                <li><a href="#definiciones">Definiciones</a></li>
-                <li><a href="#descripcion">Descripción del Servicio</a></li>
-                <li><a href="#registro">Registro y Cuenta</a></li>
-                <li><a href="#suscripcion">Suscripción y Pagos</a></li>
-                <li><a href="#uso-aceptable">Uso Aceptable</a></li>
-                <li><a href="#propiedad">Propiedad Intelectual</a></li>
-                <li><a href="#datos">Datos y Contenido del Usuario</a></li>
-                <li><a href="#integraciones">Integraciones con Terceros</a></li>
-                <li><a href="#disponibilidad">Disponibilidad del Servicio</a></li>
-                <li><a href="#limitacion">Limitación de Responsabilidad</a></li>
-                <li><a href="#indemnizacion">Indemnización</a></li>
-                <li><a href="#terminacion">Terminación</a></li>
-                <li><a href="#ley-aplicable">Ley Aplicable y Jurisdicción</a></li>
-                <li><a href="#modificaciones">Modificaciones</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#aceptacion">1. Aceptación</a></li>
+                <li><a href="#definiciones">2. Definiciones</a></li>
+                <!-- Simplified for brevity -->
             </ol>
         </nav>
 
-        <h2 id="aceptacion">1. Aceptación de los Términos</h2>
-        <p>
+        <h2 id="aceptacion" data-i18n="legal.terms.intro_title">1. Aceptación de los Términos</h2>
+        <p data-i18n="legal.terms.intro_text_1">
             Al acceder, registrarte o utilizar los servicios de <strong>Pixy</strong> (la "Plataforma"), operada por
             <strong>Pixy SAS</strong> ("nosotros", "nuestro" o "la Empresa"), aceptas estar legalmente obligado por
             estos Términos de Servicio ("Términos"), nuestra <a href="privacy.html">Política de Privacidad</a> y
             cualquier otro documento legal incorporado por referencia.
         </p>
-        <p>
+        <p data-i18n="legal.terms.intro_text_2">
             Si no estás de acuerdo con estos Términos, no utilices la Plataforma. Si actúas en nombre de una
             organización, declaras tener autoridad para vincular a dicha organización a estos Términos.
         </p>
 
-        <h2 id="definiciones">2. Definiciones</h2>
-        <ul>
-            <li><strong>"Plataforma":</strong> La aplicación web Pixy, incluyendo app.pixy.com.co, APIs y servicios
-                relacionados</li>
-            <li><strong>"Usuario":</strong> Persona física o jurídica que crea una cuenta y utiliza la Plataforma</li>
-            <li><strong>"Organización":</strong> Empresa o entidad registrada en la Plataforma</li>
-            <li><strong>"Contenido del Usuario":</strong> Datos, archivos, textos e información subidos por el Usuario
-            </li>
-            <li><strong>"Servicios de Terceros":</strong> Plataformas externas integradas (ej: Meta, WhatsApp Business)
-            </li>
-            <li><strong>"Suscripción":</strong> Plan de pago que otorga acceso a funcionalidades de la Plataforma</li>
-        </ul>
+        <h2 id="definiciones" data-i18n="legal.terms.sec_2_title">2. Definiciones</h2>
+        <div data-i18n="legal.terms.sec_2_list">
+            <ul>
+                <li><strong>"Plataforma":</strong> La aplicación web Pixy, incluyendo app.pixy.com.co, APIs y servicios
+                    relacionados</li>
+                <li><strong>"Usuario":</strong> Persona física o jurídica que crea una cuenta y utiliza la Plataforma
+                </li>
+                <li><strong>"Organización":</strong> Empresa o entidad registrada en la Plataforma</li>
+                <li><strong>"Contenido del Usuario":</strong> Datos, archivos, textos e información subidos por el
+                    Usuario
+                </li>
+                <li><strong>"Servicios de Terceros":</strong> Plataformas externas integradas (ej: Meta, WhatsApp
+                    Business)
+                </li>
+                <li><strong>"Suscripción":</strong> Plan de pago que otorga acceso a funcionalidades de la Plataforma
+                </li>
+            </ul>
+        </div>
 
-        <h2 id="descripcion">3. Descripción del Servicio</h2>
-        <p>Pixy es una plataforma SaaS (Software as a Service) de gestión empresarial que incluye:</p>
-        <ul>
-            <li><strong>CRM:</strong> Gestión de contactos, clientes y pipeline de ventas</li>
-            <li><strong>Inbox Unificado:</strong> Centralización de mensajes de múltiples canales (WhatsApp, Instagram,
-                Facebook)</li>
-            <li><strong>Facturación:</strong> Generación de cotizaciones, facturas y gestión de pagos</li>
-            <li><strong>Portal de Clientes:</strong> Acceso seguro para que tus clientes vean documentos y paguen</li>
-            <li><strong>Automatizaciones:</strong> Flujos de trabajo automatizados</li>
-            <li><strong>Otras funcionalidades</strong> según el plan contratado</li>
-        </ul>
-        <p>
+        <h2 id="descripcion" data-i18n="legal.terms.sec_3_title">3. Descripción del Servicio</h2>
+        <p data-i18n="legal.terms.sec_3_text_1">Pixy es una plataforma SaaS (Software as a Service) de gestión
+            empresarial que incluye:</p>
+        <div data-i18n="legal.terms.sec_3_list">
+            <ul>
+                <li><strong>CRM:</strong> Gestión de contactos, clientes y pipeline de ventas</li>
+                <li><strong>Inbox Unificado:</strong> Centralización de mensajes de múltiples canales (WhatsApp,
+                    Instagram,
+                    Facebook)</li>
+                <li><strong>Facturación:</strong> Generación de cotizaciones, facturas y gestión de pagos</li>
+                <li><strong>Portal de Clientes:</strong> Acceso seguro para que tus clientes vean documentos y paguen
+                </li>
+                <li><strong>Automatizaciones:</strong> Flujos de trabajo automatizados</li>
+                <li><strong>Otras funcionalidades</strong> según el plan contratado</li>
+            </ul>
+        </div>
+        <p data-i18n="legal.terms.sec_3_text_2">
             Nos reservamos el derecho de modificar, suspender o descontinuar cualquier funcionalidad en cualquier
             momento, con previo aviso razonable cuando sea posible.
         </p>
 
-        <h2 id="registro">4. Registro y Cuenta</h2>
-        <h3>4.1 Elegibilidad</h3>
-        <p>Para usar la Plataforma debes:</p>
-        <ul>
-            <li>Ser mayor de 18 años o tener capacidad legal para contratar</li>
-            <li>Proporcionar información veraz, completa y actualizada</li>
-            <li>No haber sido suspendido previamente de la Plataforma</li>
-        </ul>
+        <h2 id="registro" data-i18n="legal.terms.sec_4_title">4. Registro y Cuenta</h2>
+        <h3 data-i18n="legal.terms.sec_4_1_title">4.1 Elegibilidad</h3>
+        <p data-i18n="legal.terms.sec_4_1_text">Para usar la Plataforma debes:</p>
+        <div data-i18n="legal.terms.sec_4_1_list">
+            <ul>
+                <li>Ser mayor de 18 años o tener capacidad legal para contratar</li>
+                <li>Proporcionar información veraz, completa y actualizada</li>
+                <li>No haber sido suspendido previamente de la Plataforma</li>
+            </ul>
+        </div>
 
-        <h3>4.2 Responsabilidad de la Cuenta</h3>
-        <ul>
-            <li>Eres responsable de mantener la confidencialidad de tus credenciales</li>
-            <li>Debes notificarnos inmediatamente si sospechas acceso no autorizado</li>
-            <li>Eres responsable de todas las actividades realizadas bajo tu cuenta</li>
-            <li>Puedes invitar miembros a tu organización y eres responsable de su uso</li>
-        </ul>
+        <h3 data-i18n="legal.terms.sec_4_2_title">4.2 Responsabilidad de la Cuenta</h3>
+        <div data-i18n="legal.terms.sec_4_2_list">
+            <ul>
+                <li>Eres responsable de mantener la confidencialidad de tus credenciales</li>
+                <li>Debes notificarnos inmediatamente si sospechas acceso no autorizado</li>
+                <li>Eres responsable de todas las actividades realizadas bajo tu cuenta</li>
+                <li>Puedes invitar miembros a tu organización y eres responsable de su uso</li>
+            </ul>
+        </div>
 
-        <h2 id="suscripcion">5. Suscripción y Pagos</h2>
-        <h3>5.1 Planes y Precios</h3>
-        <ul>
-            <li>Los planes y precios se publican en la Plataforma</li>
-            <li>Los precios pueden cambiar con notificación previa de 30 días</li>
-            <li>Algunos planes incluyen período de prueba gratuito</li>
-        </ul>
+        <h2 id="suscripcion" data-i18n="legal.terms.sec_5_title">5. Suscripción y Pagos</h2>
+        <div data-i18n="legal.terms.sec_5_content">
+            <h3>5.1 Planes y Precios</h3>
+            <ul>
+                <li>Los planes y precios se publican en la Plataforma</li>
+                <li>Los precios pueden cambiar con notificación previa de 30 días</li>
+                <li>Algunos planes incluyen período de prueba gratuito</li>
+            </ul>
 
-        <h3>5.2 Facturación</h3>
-        <ul>
-            <li>Las suscripciones se facturan por adelantado (mensual o anualmente)</li>
-            <li>Los pagos se procesan a través de proveedores de pago autorizados</li>
-            <li>En caso de fallo de pago, el acceso puede ser suspendido</li>
-        </ul>
+            <h3>5.2 Facturación</h3>
+            <ul>
+                <li>Las suscripciones se facturan por adelantado (mensual o anualmente)</li>
+                <li>Los pagos se procesan a través de proveedores de pago autorizados</li>
+                <li>En caso de fallo de pago, el acceso puede ser suspendido</li>
+            </ul>
 
-        <h3>5.3 Reembolsos</h3>
-        <ul>
-            <li>Los pagos no son reembolsables, excepto cuando la ley lo requiera</li>
-            <li>Puedes cancelar tu suscripción en cualquier momento; seguirás teniendo acceso hasta el final del período
-                pagado</li>
-        </ul>
+            <h3>5.3 Reembolsos</h3>
+            <ul>
+                <li>Los pagos no son reembolsables, excepto cuando la ley lo requiera</li>
+                <li>Puedes cancelar tu suscripción en cualquier momento; seguirás teniendo acceso hasta el final del
+                    período
+                    pagado</li>
+            </ul>
+        </div>
 
-        <h2 id="uso-aceptable">6. Uso Aceptable</h2>
-        <p><strong>Te comprometes a NO utilizar la Plataforma para:</strong></p>
-        <ul>
-            <li>Violar leyes locales, nacionales o internacionales</li>
-            <li>Enviar spam, mensajes masivos no solicitados o contenido ilegal</li>
-            <li>Suplantar identidades o actuar de forma fraudulenta</li>
-            <li>Distribuir malware, virus o código malicioso</li>
-            <li>Intentar acceder sin autorización a sistemas o datos</li>
-            <li>Acosar, amenazar o incitar al odio contra personas o grupos</li>
-            <li>Violar derechos de propiedad intelectual de terceros</li>
-            <li>Realizar ingeniería inversa o descompilar la Plataforma</li>
-            <li>Revender o sublicenciar el acceso sin autorización</li>
-            <li>Usar la Plataforma de manera que sobrecargue nuestra infraestructura</li>
-        </ul>
-        El incumplimiento de estas normas puede resultar en la suspensión inmediata o terminación de tu cuenta
-        sin reembolso.
+        <h2 id="uso-aceptable" data-i18n="legal.terms.sec_6_title">6. Uso Aceptable</h2>
+        <p data-i18n="legal.terms.sec_6_intro"><strong>Te comprometes a NO utilizar la Plataforma para:</strong></p>
+        <div data-i18n="legal.terms.sec_6_list">
+            <ul>
+                <li>Violar leyes locales, nacionales o internacionales</li>
+                <li>Enviar spam, mensajes masivos no solicitados o contenido ilegal</li>
+                <li>Suplantar identidades o actuar de forma fraudulenta</li>
+                <li>Distribuir malware, virus o código malicioso</li>
+                <li>Intentar acceder sin autorización a sistemas o datos</li>
+                <li>Acosar, amenazar o incitar al odio contra personas o grupos</li>
+                <li>Violar derechos de propiedad intelectual de terceros</li>
+                <li>Realizar ingeniería inversa o descompilar la Plataforma</li>
+                <li>Revender o sublicenciar el acceso sin autorización</li>
+                <li>Usar la Plataforma de manera que sobrecargue nuestra infraestructura</li>
+            </ul>
+        </div>
+        <p data-i18n="legal.terms.sec_6_warning">
+            El incumplimiento de estas normas puede resultar en la suspensión inmediata o terminación de tu cuenta
+            sin reembolso.
         </p>
 
         <!-- 6.1 AI & Automation Usage (Meta 2026) -->
-        <h3 id="uso-ia">6.1 Uso Permitido de Automatización (Cumplimiento Meta)</h3>
-        <p>Para garantizar la integridad del ecosistema de WhatsApp y cumplir con las políticas de Comercio
-            Conversacional:</p>
-        <ul>
-            <li>
-                <strong>Prohibición de IA General:</strong> Queda estrictamente prohibido el uso de la infraestructura
-                de PIXY para distribuir, desplegar o conectar asistentes de IA de propósito general ("General Purpose
-                AI"), clones de personalidad abierta o chatbots sin un propósito definido. El uso de la IA o
-                automatización debe estar vinculado exclusivamente a <strong>tareas comerciales predefinidas</strong>,
-                tales como: agendamiento de citas, soporte técnico, preguntas frecuentes (FAQ) sobre productos/servicios
-                y gestión de pedidos.
-            </li>
-            <li>
-                <strong>Protocolo de Intención Específica (Intent Ratio):</strong> El sistema de PIXY opera bajo un
-                estricto protocolo de "Intención Específica". El Usuario garantiza que al menos el <strong>90% de las
-                    interacciones automatizadas</strong> estarán mapeadas a objetivos de negocio claros y resolubles.
-                Las consultas de usuarios finales que caigan fuera de este ámbito comercial ("Open domain chit-chat")
-                serán declinadas automáticamente por el sistema para evitar alucinaciones o comportamientos no deseados.
-            </li>
-        </ul>
+        <h3 id="uso-ia" data-i18n="legal.terms.sec_6_1_title">6.1 Uso Permitido de Automatización (Cumplimiento Meta)
+        </h3>
+        <div data-i18n="legal.terms.sec_6_1_text">
+            <p>Para garantizar la integridad del ecosistema de WhatsApp y cumplir con las políticas de Comercio
+                Conversacional:</p>
+            <ul>
+                <li>
+                    <strong>Prohibición de IA General:</strong> Queda estrictamente prohibido el uso de la
+                    infraestructura
+                    de PIXY para distribuir, desplegar o conectar asistentes de IA de propósito general ("General
+                    Purpose
+                    AI"), clones de personalidad abierta o chatbots sin un propósito definido. El uso de la IA o
+                    automatización debe estar vinculado exclusivamente a <strong>tareas comerciales
+                        predefinidas</strong>,
+                    tales como: agendamiento de citas, soporte técnico, preguntas frecuentes (FAQ) sobre
+                    productos/servicios
+                    y gestión de pedidos.
+                </li>
+                <li>
+                    <strong>Protocolo de Intención Específica (Intent Ratio):</strong> El sistema de PIXY opera bajo un
+                    estricto protocolo de "Intención Específica". El Usuario garantiza que al menos el <strong>90% de
+                        las
+                        interacciones automatizadas</strong> estarán mapeadas a objetivos de negocio claros y
+                    resolubles.
+                    Las consultas de usuarios finales que caigan fuera de este ámbito comercial ("Open domain
+                    chit-chat")
+                    serán declinadas automáticamente por el sistema para evitar alucinaciones o comportamientos no
+                    deseados.
+                </li>
+            </ul>
+        </div>
 
-        <h2 id="propiedad">7. Propiedad Intelectual</h2>
-        <h3>7.1 Nuestra Propiedad</h3>
-        <p>
-            La Plataforma, incluyendo su código, diseño, logo, marca "Pixy" y todos los materiales relacionados,
-            son propiedad exclusiva de Pixy SAS y están protegidos por leyes de propiedad intelectual.
-        </p>
+        <h2 id="propiedad" data-i18n="legal.terms.sec_7_title">7. Propiedad Intelectual</h2>
+        <div data-i18n="legal.terms.sec_7_content">
+            <h3>7.1 Nuestra Propiedad</h3>
+            <p>
+                La Plataforma, incluyendo su código, diseño, logo, marca "Pixy" y todos los materiales relacionados,
+                son propiedad exclusiva de Pixy SAS y están protegidos por leyes de propiedad intelectual.
+            </p>
 
-        <h3>7.2 Licencia de Uso</h3>
-        <p>
-            Te otorgamos una licencia limitada, no exclusiva, no transferible e intransferible para usar la
-            Plataforma de acuerdo con estos Términos. Esta licencia no incluye el derecho a:
-        </p>
-        <ul>
-            <li>Modificar, copiar o distribuir la Plataforma</li>
-            <li>Usar nuestras marcas sin autorización escrita</li>
-            <li>Crear obras derivadas basadas en la Plataforma</li>
-        </ul>
+            <h3>7.2 Licencia de Uso</h3>
+            <p>
+                Te otorgamos una licencia limitada, no exclusiva, no transferible e intransferible para usar la
+                Plataforma de acuerdo con estos Términos. Esta licencia no incluye el derecho a:
+            </p>
+            <ul>
+                <li>Modificar, copiar o distribuir la Plataforma</li>
+                <li>Usar nuestras marcas sin autorización escrita</li>
+                <li>Crear obras derivadas basadas en la Plataforma</li>
+            </ul>
+        </div>
 
-        <h2 id="datos">8. Datos y Contenido del Usuario</h2>
-        <h3>8.1 Propiedad de tus Datos</h3>
-        <p>
-            <strong>Tú conservas todos los derechos sobre el contenido que subes a la Plataforma.</strong>
-            No reclamamos propiedad sobre tus datos, contactos, comunicaciones o archivos.
-        </p>
+        <h2 id="datos" data-i18n="legal.terms.sec_8_title">8. Datos y Contenido del Usuario</h2>
+        <div data-i18n="legal.terms.sec_8_content">
+            <h3>8.1 Propiedad de tus Datos</h3>
+            <p>
+                <strong>Tú conservas todos los derechos sobre el contenido que subes a la Plataforma.</strong>
+                No reclamamos propiedad sobre tus datos, contactos, comunicaciones o archivos.
+            </p>
 
-        <h3>8.2 Licencia para Operar</h3>
-        <p>
-            Al subir contenido, nos otorgas una licencia limitada para almacenar, procesar y mostrar dicho
-            contenido únicamente para prestarte el servicio. Esta licencia termina cuando eliminas tu contenido
-            o cierras tu cuenta.
-        </p>
+            <h3>8.2 Licencia para Operar</h3>
+            <p>
+                Al subir contenido, nos otorgas una licencia limitada para almacenar, procesar y mostrar dicho
+                contenido únicamente para prestarte el servicio. Esta licencia termina cuando eliminas tu contenido
+                o cierras tu cuenta.
+            </p>
 
-        <h3>8.3 Responsabilidad del Contenido</h3>
-        <p>
-            Eres el único responsable del contenido que subes, incluyendo la legalidad y los derechos sobre
-            dicho contenido. No monitoreamos activamente el contenido del usuario pero podemos removerlo si
-            viola estos Términos.
-        </p>
+            <h3>8.3 Responsabilidad del Contenido</h3>
+            <p>
+                Eres el único responsable del contenido que subes, incluyendo la legalidad y los derechos sobre
+                dicho contenido. No monitoreamos activamente el contenido del usuario pero podemos removerlo si
+                viola estos Términos.
+            </p>
+        </div>
 
-        <h2 id="integraciones">9. Integraciones con Terceros (APIs)</h2>
-        <p>Pixy integra servicios de terceros mediante sus APIs oficiales ("Plataformas Conectadas"), incluyendo Meta
+        <h2 id="integraciones" data-i18n="legal.terms.sec_9_title">9. Integraciones con Terceros (APIs)</h2>
+        <p data-i18n="legal.terms.sec_9_intro">Pixy integra servicios de terceros mediante sus APIs oficiales
+            ("Plataformas Conectadas"), incluyendo Meta
             (Facebook, Instagram, WhatsApp). El uso de estas funciones implica la aceptación de términos adicionales.
         </p>
+        <div data-i18n="legal.terms.sec_9_content">
+            <h3>9.1 Términos de la Plataforma Meta</h3>
+            <p>Al conectar sus cuentas de Facebook o Instagram a Pixy, usted acuerda y reconoce lo siguiente:</p>
+            <ul>
+                <li><strong>OAuth 2.0:</strong> La conexión se realiza exclusivamente mediante el protocolo seguro OAuth
+                    2.0. Pixy solo actúa en su nombre basándose en los permisos (scopes) que usted concede
+                    explícitamente
+                    durante el flujo de conexión.</li>
+                <li><strong>Alcance de Permisos:</strong> Pixy no publicará contenido ni responderá mensajes
+                    automáticamente
+                    sin su configuración previa. Usted mantiene el control total sobre qué páginas y cuentas conecta.
+                </li>
+                <li><strong>Cumplimiento de Políticas:</strong> Usted se compromete a no utilizar las integraciones de
+                    Pixy
+                    para violar las <a href="https://developers.facebook.com/policy/" target="_blank"
+                        class="neon-link">Políticas de la Plataforma de Meta</a> ni para enviar spam o contenido
+                    prohibido.
+                </li>
+                <li><strong>Independencia:</strong> Pixy es una herramienta de gestión independiente y no está afiliada,
+                    patrocinada ni respaldada por Meta Platforms, Inc.</li>
+            </ul>
 
-        <h3>9.1 Términos de la Plataforma Meta</h3>
-        <p>Al conectar sus cuentas de Facebook o Instagram a Pixy, usted acuerda y reconoce lo siguiente:</p>
-        <ul>
-            <li><strong>OAuth 2.0:</strong> La conexión se realiza exclusivamente mediante el protocolo seguro OAuth
-                2.0. Pixy solo actúa en su nombre basándose en los permisos (scopes) que usted concede explícitamente
-                durante el flujo de conexión.</li>
-            <li><strong>Alcance de Permisos:</strong> Pixy no publicará contenido ni responderá mensajes automáticamente
-                sin su configuración previa. Usted mantiene el control total sobre qué páginas y cuentas conecta.</li>
-            <li><strong>Cumplimiento de Políticas:</strong> Usted se compromete a no utilizar las integraciones de Pixy
-                para violar las <a href="https://developers.facebook.com/policy/" target="_blank"
-                    class="neon-link">Políticas de la Plataforma de Meta</a> ni para enviar spam o contenido prohibido.
-            </li>
-            <li><strong>Independencia:</strong> Pixy es una herramienta de gestión independiente y no está afiliada,
-                patrocinada ni respaldada por Meta Platforms, Inc.</li>
-        </ul>
+            <h3>9.2 Revocación de Acceso y Datos</h3>
+            <p>Tiene derecho a terminar la integración en cualquier momento:</p>
+            <ul>
+                <li><strong>Método 1:</strong> Desde el panel de Pixy, opción "Desconectar".</li>
+                <li><strong>Método 2:</strong> Desde la configuración de su cuenta de Facebook en <a
+                        href="https://www.facebook.com/settings?tab=business_tools" target="_blank"
+                        class="neon-link">Integraciones Comerciales</a>.</li>
+            </ul>
+            <p>
+                Al revocar el acceso, Pixy eliminará automáticamente los tokens de acceso y dejará de procesar datos de
+                las
+                cuentas afectadas, conforme a nuestra Política de Privacidad y los requisitos de eliminación de datos de
+                Meta.
+            </p>
 
-        <h3>9.2 Revocación de Acceso y Datos</h3>
-        <p>Tiene derecho a terminar la integración en cualquier momento:</p>
-        <ul>
-            <li><strong>Método 1:</strong> Desde el panel de Pixy, opción "Desconectar".</li>
-            <li><strong>Método 2:</strong> Desde la configuración de su cuenta de Facebook en <a
-                    href="https://www.facebook.com/settings?tab=business_tools" target="_blank"
-                    class="neon-link">Integraciones Comerciales</a>.</li>
-        </ul>
-        <p>
-            Al revocar el acceso, Pixy eliminará automáticamente los tokens de acceso y dejará de procesar datos de las
-            cuentas afectadas, conforme a nuestra Política de Privacidad y los requisitos de eliminación de datos de
-            Meta.
-        </p>
+            <h3>9.3 Otros Servicios de Terceros</h3>
+            <p>
+                La Plataforma puede integrarse con otros servicios (pasarelas de pago, servicios de email, etc.).
+                Cada integración está sujeta a los términos del proveedor correspondiente.
+            </p>
+        </div>
 
-        <h3>9.2 Otros Servicios de Terceros</h3>
-        <p>
-            La Plataforma puede integrarse con otros servicios (pasarelas de pago, servicios de email, etc.).
-            Cada integración está sujeta a los términos del proveedor correspondiente.
-        </p>
+        <h2 id="disponibilidad" data-i18n="legal.terms.sec_10_title">10. Disponibilidad del Servicio</h2>
+        <div data-i18n="legal.terms.sec_10_list">
+            <ul>
+                <li>Nos esforzamos por mantener la Plataforma disponible 24/7, pero no garantizamos disponibilidad
+                    ininterrumpida</li>
+                <li>Pueden ocurrir mantenimientos programados (notificados con anticipación)</li>
+                <li>No somos responsables de interrupciones causadas por terceros, fuerza mayor o factores fuera de
+                    nuestro
+                    control</li>
+            </ul>
+        </div>
 
-        <h2 id="disponibilidad">10. Disponibilidad del Servicio</h2>
-        <ul>
-            <li>Nos esforzamos por mantener la Plataforma disponible 24/7, pero no garantizamos disponibilidad
-                ininterrumpida</li>
-            <li>Pueden ocurrir mantenimientos programados (notificados con anticipación)</li>
-            <li>No somos responsables de interrupciones causadas por terceros, fuerza mayor o factores fuera de nuestro
-                control</li>
-        </ul>
+        <h2 id="limitacion" data-i18n="legal.terms.sec_11_title">11. Limitación de Responsabilidad</h2>
+        <div data-i18n="legal.terms.sec_11_content">
+            <p><strong>EN LA MÁXIMA MEDIDA PERMITIDA POR LA LEY:</strong></p>
+            <ul>
+                <li>La Plataforma se proporciona "TAL CUAL" y "SEGÚN DISPONIBILIDAD"</li>
+                <li>No garantizamos que la Plataforma sea libre de errores o cumpla todas tus expectativas</li>
+                <li>No seremos responsables por daños indirectos, incidentales, especiales, consecuentes o punitivos
+                </li>
+                <li>Nuestra responsabilidad total no excederá el monto que hayas pagado en los últimos 12 meses</li>
+                <li>No somos responsables por pérdida de datos, ganancias perdidas o interrupción del negocio</li>
+            </ul>
+            <p>
+                Algunas jurisdicciones no permiten limitaciones de responsabilidad, por lo que algunas de estas
+                limitaciones pueden no aplicar a ti.
+            </p>
+        </div>
 
-        <h2 id="limitacion">11. Limitación de Responsabilidad</h2>
-        <p><strong>EN LA MÁXIMA MEDIDA PERMITIDA POR LA LEY:</strong></p>
-        <ul>
-            <li>La Plataforma se proporciona "TAL CUAL" y "SEGÚN DISPONIBILIDAD"</li>
-            <li>No garantizamos que la Plataforma sea libre de errores o cumpla todas tus expectativas</li>
-            <li>No seremos responsables por daños indirectos, incidentales, especiales, consecuentes o punitivos</li>
-            <li>Nuestra responsabilidad total no excederá el monto que hayas pagado en los últimos 12 meses</li>
-            <li>No somos responsables por pérdida de datos, ganancias perdidas o interrupción del negocio</li>
-        </ul>
-        <p>
-            Algunas jurisdicciones no permiten limitaciones de responsabilidad, por lo que algunas de estas
-            limitaciones pueden no aplicar a ti.
-        </p>
+        <h2 id="indemnizacion" data-i18n="legal.terms.sec_12_title">12. Indemnización</h2>
+        <div data-i18n="legal.terms.sec_12_content">
+            <p>
+                Aceptas indemnizar, defender y mantener indemne a Pixy SAS, sus directivos, empleados y afiliados,
+                de cualquier reclamación, demanda, pérdida o gasto (incluyendo honorarios legales) que surja de:
+            </p>
+            <ul>
+                <li>Tu uso de la Plataforma</li>
+                <li>Violación de estos Términos</li>
+                <li>Violación de derechos de terceros</li>
+                <li>Contenido que subas a la Plataforma</li>
+            </ul>
+        </div>
 
-        <h2 id="indemnizacion">12. Indemnización</h2>
-        <p>
-            Aceptas indemnizar, defender y mantener indemne a Pixy SAS, sus directivos, empleados y afiliados,
-            de cualquier reclamación, demanda, pérdida o gasto (incluyendo honorarios legales) que surja de:
-        </p>
-        <ul>
-            <li>Tu uso de la Plataforma</li>
-            <li>Violación de estos Términos</li>
-            <li>Violación de derechos de terceros</li>
-            <li>Contenido que subas a la Plataforma</li>
-        </ul>
+        <h2 id="terminacion" data-i18n="legal.terms.sec_13_title">13. Terminación</h2>
+        <div data-i18n="legal.terms.sec_13_content">
+            <h3>13.1 Terminación por el Usuario</h3>
+            <p>
+                Puedes cancelar tu cuenta en cualquier momento desde la configuración de la Plataforma o
+                contactándonos directamente.
+            </p>
 
-        <h2 id="terminacion">13. Terminación</h2>
-        <h3>13.1 Terminación por el Usuario</h3>
-        <p>
-            Puedes cancelar tu cuenta en cualquier momento desde la configuración de la Plataforma o
-            contactándonos directamente.
-        </p>
+            <h3>13.2 Terminación por Pixy</h3>
+            <p>Podemos suspender o terminar tu cuenta:</p>
+            <ul>
+                <li>Por violación de estos Términos</li>
+                <li>Por falta de pago prolongada</li>
+                <li>Por actividad fraudulenta o ilegal</li>
+                <li>Por requerimiento legal</li>
+                <li>Por discontinuación del servicio (con preaviso de 90 días)</li>
+            </ul>
 
-        <h3>13.2 Terminación por Pixy</h3>
-        <p>Podemos suspender o terminar tu cuenta:</p>
-        <ul>
-            <li>Por violación de estos Términos</li>
-            <li>Por falta de pago prolongada</li>
-            <li>Por actividad fraudulenta o ilegal</li>
-            <li>Por requerimiento legal</li>
-            <li>Por discontinuación del servicio (con preaviso de 90 días)</li>
-        </ul>
+            <h3>13.3 Efectos de la Terminación</h3>
+            <ul>
+                <li>Tu acceso será revocado inmediatamente o al final del período pagado</li>
+                <li>Puedes solicitar la exportación de tus datos antes de la terminación</li>
+                <li>Tus datos serán eliminados después de 30 días (ver <a href="data-deletion.html">Eliminación de
+                        Datos</a>)</li>
+            </ul>
+        </div>
 
-        <h3>13.3 Efectos de la Terminación</h3>
-        <ul>
-            <li>Tu acceso será revocado inmediatamente o al final del período pagado</li>
-            <li>Puedes solicitar la exportación de tus datos antes de la terminación</li>
-            <li>Tus datos serán eliminados después de 30 días (ver <a href="data-deletion.html">Eliminación de
-                    Datos</a>)</li>
-        </ul>
+        <h2 id="ley-aplicable" data-i18n="legal.terms.sec_14_title">14. Ley Aplicable y Jurisdicción</h2>
+        <div data-i18n="legal.terms.sec_14_content">
+            <p>
+                Estos Términos se rigen por las leyes de la <strong>República de Colombia</strong>. Cualquier
+                controversia se someterá a la jurisdicción de los tribunales competentes de <strong>Bogotá D.C.,
+                    Colombia</strong>.
+            </p>
+            <p>
+                Antes de iniciar cualquier procedimiento legal, las partes intentarán resolver la disputa de
+                manera amistosa durante un período de 30 días.
+            </p>
+        </div>
 
-        <h2 id="ley-aplicable">14. Ley Aplicable y Jurisdicción</h2>
-        <p>
-            Estos Términos se rigen por las leyes de la <strong>República de Colombia</strong>. Cualquier
-            controversia se someterá a la jurisdicción de los tribunales competentes de <strong>Bogotá D.C.,
-                Colombia</strong>.
-        </p>
-        <p>
-            Antes de iniciar cualquier procedimiento legal, las partes intentarán resolver la disputa de
-            manera amistosa durante un período de 30 días.
-        </p>
+        <h2 id="modificaciones" data-i18n="legal.terms.sec_15_title">15. Modificaciones</h2>
+        <div data-i18n="legal.terms.sec_15_content">
+            <p>
+                Podemos modificar estos Términos ocasionalmente. Cuando hagamos cambios significativos:
+            </p>
+            <ul>
+                <li>Actualizaremos la fecha de "Última actualización"</li>
+                <li>Te notificaremos por correo electrónico con al menos 15 días de anticipación</li>
+                <li>Publicaremos un aviso en la Plataforma</li>
+            </ul>
+            <p>
+                El uso continuado de la Plataforma después de los cambios constituye tu aceptación de los
+                Términos modificados.
+            </p>
+        </div>
 
-        <h2 id="modificaciones">15. Modificaciones</h2>
-        <p>
-            Podemos modificar estos Términos ocasionalmente. Cuando hagamos cambios significativos:
-        </p>
-        <ul>
-            <li>Actualizaremos la fecha de "Última actualización"</li>
-            <li>Te notificaremos por correo electrónico con al menos 15 días de anticipación</li>
-            <li>Publicaremos un aviso en la Plataforma</li>
-        </ul>
-        <p>
-            El uso continuado de la Plataforma después de los cambios constituye tu aceptación de los
-            Términos modificados.
-        </p>
-
-        <h2 id="contacto">16. Contacto</h2>
-        <p>Para preguntas sobre estos Términos:</p>
-        <ul>
-            <li><strong>Email:</strong> legal@pixy.com.co</li>
-            <li><strong>Dirección:</strong> Bogotá D.C., Colombia</li>
-        </ul>
+        <h2 id="contacto" data-i18n="legal.terms.sec_16_title">16. Contacto</h2>
+        <div data-i18n="legal.terms.sec_16_content">
+            <p>Para preguntas sobre estos Términos:</p>
+            <ul>
+                <li><strong>Email:</strong> legal@pixy.com.co</li>
+                <li><strong>Dirección:</strong> Bogotá D.C., Colombia</li>
+            </ul>
+        </div>
     </main>
 
     <footer class="footer">
@@ -385,36 +442,36 @@
             <div class="footer-brand">
                 <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
-                <p>Tu negocio, bien diseñado.</p>
+                <p data-i18n="footer.slogan">Tu negocio, bien diseñado.</p>
             </div>
 
             <nav class="footer-links">
-                <h4>Producto</h4>
+                <h4 data-i18n="footer.product">Producto</h4>
 
-                <a href="features.html" class="neon-link">Características</a>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="industries.html" class="neon-link">Soluciones</a>
+                <a href="features.html" class="neon-link" data-i18n="nav.spaces">Características</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Empresa</h4>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="partners.html" class="neon-link">Partners</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
-                <a href="blog.html" class="neon-link">Blog</a>
+                <h4 data-i18n="footer.company">Empresa</h4>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Legal</h4>
-                <a href="privacy.html" class="neon-link">Privacidad</a>
-                <a href="terms.html" class="neon-link">Términos</a>
-                <a href="data-deletion.html" class="neon-link">Eliminación de Datos</a>
-                <a href="cookies.html" class="neon-link">Cookies</a>
-                <a href="permissions.html" class="neon-link">Permisos</a>
+                <h4 data-i18n="footer.legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="footer.deletion">Eliminación de Datos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
+                <a href="permissions.html" class="neon-link" data-i18n="footer.permissions">Permisos</a>
             </nav>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Pixy. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -444,6 +501,7 @@
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -47,18 +47,27 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="industries.html" class="neon-link">Spaces</a>
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="blog.html" class="neon-link">Blog</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;">Entrar</a>
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <!-- Language Switcher -->
+                <button id="lang-toggle" class="btn-lang"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+
+                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;"
+                    data-i18n="nav.login">Entrar</a>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;"
+                    data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
@@ -67,10 +76,11 @@
 
         <header style="text-align: center; width: 100%; margin-bottom: 80px; max-width: 800px;">
             <h1 style="font-size: 2.5rem; line-height: 1.1; margin-bottom: 24px;">
-                <span class="gradient-text text-glow">Programa de Partners</span>
+                <span class="gradient-text text-glow" data-i18n="partners_page.title">Programa de Partners</span>
             </h1>
             <p class="subtitle"
-                style="font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                style="font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;"
+                data-i18n="partners_page.subtitle">
                 Lleva la transformación digital a tus clientes con Pixy.
             </p>
         </header>
@@ -85,8 +95,9 @@
                         <polyline points="17 6 23 6 23 12" />
                     </svg>
                 </div>
-                <h3>Crecimiento Acelerado</h3>
-                <p>Ofrece una solución SaaS completa sin costos de desarrollo. Aumenta tu ticket promedio.</p>
+                <h3 data-i18n="partners_page.card_growth_title">Crecimiento Acelerado</h3>
+                <p data-i18n="partners_page.card_growth_desc">Ofrece una solución SaaS completa sin costos de
+                    desarrollo. Aumenta tu ticket promedio.</p>
             </div>
 
             <div class="glass-card">
@@ -97,8 +108,9 @@
                         <path d="M6 3h12l4 6-10 13L2 9z"></path>
                     </svg>
                 </div>
-                <h3>Comisiones Recurrentes</h3>
-                <p>Gana un porcentaje de por vida por cada cliente que traigas a la plataforma.</p>
+                <h3 data-i18n="partners_page.card_commission_title">Comisiones Recurrentes</h3>
+                <p data-i18n="partners_page.card_commission_desc">Gana un porcentaje de por vida por cada cliente que
+                    traigas a la plataforma.</p>
             </div>
 
             <div class="glass-card">
@@ -112,58 +124,70 @@
                         </path>
                     </svg>
                 </div>
-                <h3>Soporte Prioritario</h3>
-                <p>Acceso directo a nuestro equipo de producto y material de ventas exclusivo.</p>
+                <h3 data-i18n="partners_page.card_support_title">Soporte Prioritario</h3>
+                <p data-i18n="partners_page.card_support_desc">Acceso directo a nuestro equipo de producto y material de
+                    ventas exclusivo.</p>
             </div>
         </div>
 
         <section class="glass-card" style="width: 100%; max-width: 800px; margin: 0 auto;">
-            <h2 style="text-align: center; margin-bottom: 32px;">Aplica al Programa</h2>
+            <h2 style="text-align: center; margin-bottom: 32px;" data-i18n="partners_page.form_title">Aplica al Programa
+            </h2>
             <form id="partner-form" class="newsletter-form" style="display: flex; flex-direction: column; gap: 24px;">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
                     <div class="neon-input-wrapper">
                         <label
-                            style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;">Nombre
+                            style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;"
+                            data-i18n="partners_page.form_name_label">Nombre
                             Completo</label>
-                        <input type="text" class="neon-input" placeholder="Tu nombre" required>
+                        <input type="text" class="neon-input" placeholder="Tu nombre"
+                            data-i18n-placeholder="partners_page.form_name_placeholder" required>
                     </div>
                     <div class="neon-input-wrapper">
                         <label
-                            style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;">Empresa
+                            style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;"
+                            data-i18n="partners_page.form_company_label">Empresa
                             / Agencia</label>
-                        <input type="text" class="neon-input" placeholder="Nombre de tu empresa" required>
+                        <input type="text" class="neon-input" placeholder="Nombre de tu empresa"
+                            data-i18n-placeholder="partners_page.form_company_placeholder" required>
                     </div>
                 </div>
 
                 <div class="neon-input-wrapper">
-                    <label
-                        style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;">Correo
+                    <label style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;"
+                        data-i18n="partners_page.form_email_label">Correo
                         Electrónico Corporativo</label>
-                    <input type="email" class="neon-input" placeholder="nombre@empresa.com" required>
+                    <input type="email" class="neon-input" placeholder="nombre@empresa.com"
+                        data-i18n-placeholder="partners_page.form_email_placeholder" required>
                 </div>
 
                 <div class="neon-input-wrapper">
-                    <label
-                        style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;">Sitio
+                    <label style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;"
+                        data-i18n="partners_page.form_website_label">Sitio
                         Web / LinkedIn</label>
-                    <input type="url" class="neon-input" placeholder="https://..." required>
+                    <input type="url" class="neon-input" placeholder="https://..."
+                        data-i18n-placeholder="partners_page.form_website_placeholder" required>
                 </div>
 
                 <div class="neon-input-wrapper">
-                    <label
-                        style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;">¿Cómo
+                    <label style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;"
+                        data-i18n="partners_page.form_strategy_label">¿Cómo
                         planeas vender Pixy?</label>
                     <textarea class="neon-input" rows="4" placeholder="Cuéntanos sobre tus clientes y estrategia..."
+                        data-i18n-placeholder="partners_page.form_strategy_placeholder"
                         style="resize: vertical;"></textarea>
                 </div>
 
                 <div style="text-align: center; margin-top: 16px;">
-                    <button type="submit" class="btn-neon" style="width: 100%; max-width: 300px;">
+                    <button type="submit" class="btn-neon" style="width: 100%; max-width: 300px;"
+                        data-i18n="partners_page.form_button">
                         Enviar Aplicación
                     </button>
                     <p style="margin-top: 16px; font-size: 0.85rem; color: var(--text-muted);">
-                        Al enviar este formulario aceptas nuestra <a href="privacy.html" class="neon-link">Política de
-                            Privacidad</a>.
+                        <span data-i18n="partners_page.form_disclaimer_1">Al enviar este formulario aceptas
+                            nuestra</span> <a href="privacy.html" class="neon-link"
+                            data-i18n="partners_page.form_disclaimer_link">Política de Privacidad</a><span
+                            data-i18n="partners_page.form_disclaimer_2">.</span>
                     </p>
                 </div>
             </form>
@@ -176,36 +200,35 @@
             <div class="footer-brand">
                 <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
-                <p>Tu negocio, bien diseñado.</p>
+                <p data-i18n="footer.slogan">Tu negocio, bien diseñado.</p>
             </div>
 
             <nav class="footer-links">
-                <h4>Producto</h4>
+                <h4 data-i18n="footer.product">Producto</h4>
 
-                <a href="features.html" class="neon-link">Características</a>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="industries.html" class="neon-link">Soluciones</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Empresa</h4>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="partners.html" class="neon-link">Partners</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
-                <a href="blog.html" class="neon-link">Blog</a>
+                <h4 data-i18n="footer.company">Empresa</h4>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Legal</h4>
-                <a href="privacy.html" class="neon-link">Privacidad</a>
-                <a href="terms.html" class="neon-link">Términos</a>
-                <a href="data-deletion.html" class="neon-link">Eliminación de Datos</a>
-                <a href="cookies.html" class="neon-link">Cookies</a>
-                <a href="permissions.html" class="neon-link">Permisos</a>
+                <h4 data-i18n="footer.legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="footer.deletion">Eliminación de Datos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
+                <a href="permissions.html" class="neon-link" data-i18n="footer.permissions">Permisos</a>
             </nav>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Pixy. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -235,6 +258,7 @@
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 

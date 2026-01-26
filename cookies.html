@@ -45,221 +45,167 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="industries.html" class="neon-link">Spaces</a>
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="blog.html" class="neon-link">Blog</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;">Entrar</a>
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <!-- Language Switcher -->
+                <button id="lang-toggle" class="btn-lang"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+
+                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;"
+                    data-i18n="nav.login">Entrar</a>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;"
+                    data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
 
     <div class="container" style="padding-top: 140px; margin-bottom: 40px; text-align: center;">
-        <h1 class="gradient-text">Política de Cookies</h1>
-        <p class="updated" style="color: var(--text-secondary);">Última actualización: 15 de enero de 2026</p>
+        <h1 class="gradient-text" data-i18n="legal.cookies.title">Política de Cookies</h1>
+        <p class="updated" style="color: var(--text-secondary);" data-i18n="legal.common.updated">Última actualización:
+            15 de enero de 2026</p>
     </div>
 
     <main class="legal-content">
-        <h2>1. ¿Qué son las Cookies?</h2>
-        <p>
+        <nav class="legal-toc">
+            <h4 data-i18n="legal.common.toc_title">Contenido</h4>
+            <ol>
+                <li><a href="#what-are">1. ¿Qué son?</a></li>
+                <li><a href="#why-use">2. ¿Por qué usamos?</a></li>
+                <li><a href="#types">3. Tipos</a></li>
+                <li><a href="#third-party">4. Terceros</a></li>
+                <li><a href="#manage">5. Gestionar</a></li>
+            </ol>
+        </nav>
+
+        <h2 id="what-are" data-i18n="legal.cookies.sec_1_title">1. ¿Qué son las Cookies?</h2>
+        <p data-i18n="legal.cookies.sec_1_text">
             Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo (ordenador, tablet,
             móvil) cuando visitas un sitio web. Permiten que el sitio recuerde tus acciones y preferencias
             durante un período de tiempo.
         </p>
 
-        <h2>2. ¿Por qué Usamos Cookies?</h2>
-        <p>Utilizamos cookies para:</p>
-        <ul>
-            <li><strong>Mantener tu sesión activa:</strong> Para que no tengas que iniciar sesión repetidamente</li>
-            <li><strong>Recordar preferencias:</strong> Como idioma, tema (claro/oscuro) y configuraciones</li>
-            <li><strong>Seguridad:</strong> Para proteger tu cuenta y prevenir fraudes</li>
-            <li><strong>Análisis:</strong> Para entender cómo se usa la plataforma y mejorarla</li>
-        </ul>
+        <h2 id="why-use" data-i18n="legal.cookies.sec_2_title">2. ¿Por qué Usamos Cookies?</h2>
+        <div data-i18n="legal.cookies.sec_2_list">
+            <p>Utilizamos cookies para:</p>
+            <ul>
+                <li><strong>Mantener tu sesión activa:</strong> Para que no tengas que iniciar sesión repetidamente</li>
+                <li><strong>Recordar preferencias:</strong> Como idioma, tema (claro/oscuro) y configuraciones</li>
+                <li><strong>Seguridad:</strong> Para proteger tu cuenta y prevenir fraudes</li>
+                <li><strong>Análisis:</strong> Para entender cómo se usa la plataforma y mejorarla</li>
+            </ul>
+        </div>
 
-        <h2>3. Tipos de Cookies que Utilizamos</h2>
+        <h2 id="types" data-i18n="legal.cookies.sec_3_title">3. Tipos de Cookies que Utilizamos</h2>
 
-        <h3>3.1 Cookies Esenciales (Necesarias)</h3>
-        <p>Son imprescindibles para el funcionamiento de la plataforma. Sin ellas, no podrías iniciar sesión ni usar el
+        <h3 data-i18n="legal.cookies.sec_3_1_title">3.1 Cookies Esenciales (Necesarias)</h3>
+        <p data-i18n="legal.cookies.sec_3_1_desc">Son imprescindibles para el funcionamiento de la plataforma. Sin
+            ellas, no podrías iniciar sesión ni usar el
             servicio.</p>
-        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
-            <thead>
-                <tr style="background: rgba(255,255,255,0.1);">
-                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1);">Nombre
-                    </th>
-                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                        Propósito</th>
-                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                        Duración</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                        <code>sb-auth-token</code>
-                    </td>
-                    <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">Autenticación de usuario
-                        (Supabase)</td>
-                    <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">30 días</td>
-                </tr>
-                <tr>
-                    <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);"><code>current_org</code>
-                    </td>
-                    <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">Organización activa
-                        seleccionada</td>
-                    <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">Sesión</td>
-                </tr>
-                <tr>
-                    <td style="padding: 12px;"><code>csrf_token</code></td>
-                    <td style="padding: 12px;">Protección contra ataques CSRF</td>
-                    <td style="padding: 12px;">Sesión</td>
-                </tr>
-            </tbody>
-        </table>
+        <div data-i18n="legal.cookies.sec_3_1_table">
+            <!-- Table injected via i18n -->
+        </div>
 
-        <h3>3.2 Cookies de Preferencias</h3>
-        <p>Guardan tus preferencias para personalizar la experiencia.</p>
-        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
-            <thead>
-                <tr style="background: rgba(255,255,255,0.1);">
-                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1);">Nombre
-                    </th>
-                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                        Propósito</th>
-                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                        Duración</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);"><code>theme</code></td>
-                    <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">Preferencia de tema
-                        (claro/oscuro)</td>
-                    <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">1 año</td>
-                </tr>
-                <tr>
-                    <td style="padding: 12px;"><code>sidebar_collapsed</code></td>
-                    <td style="padding: 12px;">Estado del menú lateral</td>
-                    <td style="padding: 12px;">1 año</td>
-                </tr>
-            </tbody>
-        </table>
+        <h3 data-i18n="legal.cookies.sec_3_2_title">3.2 Cookies de Preferencias</h3>
+        <p data-i18n="legal.cookies.sec_3_2_desc">Guardan tus preferencias para personalizar la experiencia.</p>
+        <div data-i18n="legal.cookies.sec_3_2_table">
+            <!-- Table injected via i18n -->
+        </div>
 
-        <h3>3.3 Cookies de Análisis</h3>
-        <p>Nos ayudan a entender cómo usas la plataforma para mejorarla.</p>
-        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
-            <thead>
-                <tr style="background: rgba(255,255,255,0.1);">
-                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1);">Nombre
-                    </th>
-                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                        Propósito</th>
-                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                        Proveedor</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="padding: 12px;"><code>_vercel_insights</code></td>
-                    <td style="padding: 12px;">Análisis de rendimiento anónimo</td>
-                    <td style="padding: 12px;">Vercel</td>
-                </tr>
-            </tbody>
-        </table>
+        <h3 data-i18n="legal.cookies.sec_3_3_title">3.3 Cookies de Análisis</h3>
+        <p data-i18n="legal.cookies.sec_3_3_desc">Nos ayudan a entender cómo usas la plataforma para mejorarla.</p>
+        <div data-i18n="legal.cookies.sec_3_3_table">
+            <!-- Table injected via i18n -->
+        </div>
 
-        <h3>3.4 Cookies de Atribución y Publicidad (Meta)</h3>
-        <p>Utilizamos identificadores técnicos vinculados a la API de WhatsApp para medir la efectividad de los anuncios
+        <h3 data-i18n="legal.cookies.sec_3_4_title">3.4 Cookies de Atribución y Publicidad (Meta)</h3>
+        <p data-i18n="legal.cookies.sec_3_4_desc">Utilizamos identificadores técnicos vinculados a la API de WhatsApp
+            para medir la efectividad de los anuncios
             y flujos.</p>
-        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
-            <thead>
-                <tr style="background: rgba(255,255,255,0.1);">
-                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1);">Nombre
-                    </th>
-                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                        Propósito</th>
-                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                        Duración</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);"><code>fbp</code> /
-                        <code>fbc</code></td>
-                    <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">Identificadores de
-                        navegador para atribución de anuncios Click-to-WhatsApp.</td>
-                    <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">90 días</td>
-                </tr>
-                <tr>
-                    <td style="padding: 12px;"><code>wa_flow_token</code></td>
-                    <td style="padding: 12px;">Seguridad de la sesión en WhatsApp Flows v5.0. No rastrea fuera del
-                        flujo.</td>
-                    <td style="padding: 12px;">Sesión (1h)</td>
-                </tr>
-            </tbody>
-        </table>
+        <div data-i18n="legal.cookies.sec_3_4_table">
+            <!-- Table injected via i18n -->
+        </div>
 
-        <h2>4. Cookies de Terceros</h2>
-        <p>Cuando utilizas integraciones, pueden establecerse cookies de terceros:</p>
-        <ul>
-            <li><strong>Meta (Facebook):</strong> Cuando conectas tu cuenta de Facebook/Instagram</li>
-            <li><strong>Stripe:</strong> Durante el proceso de pago</li>
-        </ul>
-        <p>Estas cookies están sujetas a las políticas de privacidad de cada proveedor.</p>
-
-        <h2>5. Cómo Gestionar las Cookies</h2>
-        <p>Puedes controlar y/o eliminar las cookies de varias formas:</p>
-
-        <h3>5.1 Configuración del Navegador</h3>
-        <p>La mayoría de navegadores permiten:</p>
-        <ul>
-            <li>Ver qué cookies tienes instaladas</li>
-            <li>Eliminar cookies específicas o todas las cookies</li>
-            <li>Bloquear cookies de terceros</li>
-            <li>Bloquear todas las cookies (pero esto afectará el funcionamiento)</li>
-        </ul>
-        <p>Consulta la ayuda de tu navegador:</p>
-        <ul>
-            <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google
-                    Chrome</a></li>
-            <li><a href="https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en-"
-                    target="_blank" rel="noopener">Mozilla Firefox</a></li>
-            <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank"
-                    rel="noopener">Safari</a></li>
-            <li><a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-cookies-en-microsoft-edge"
-                    target="_blank" rel="noopener">Microsoft Edge</a></li>
-        </ul>
-
-        <h3>5.2 En Nuestra Plataforma</h3>
-        <p>
-            Para cookies no esenciales, puedes ajustar tus preferencias en
-            <strong>Configuración → Cuenta → Privacidad</strong>.
+        <h2 id="third-party" data-i18n="legal.cookies.sec_4_title">4. Cookies de Terceros</h2>
+        <p data-i18n="legal.cookies.sec_4_intro">Cuando utilizas integraciones, pueden establecerse cookies de terceros:
         </p>
+        <div data-i18n="legal.cookies.sec_4_list">
+            <ul>
+                <li><strong>Meta (Facebook):</strong> Cuando conectas tu cuenta de Facebook/Instagram</li>
+                <li><strong>Stripe:</strong> Durante el proceso de pago</li>
+            </ul>
+        </div>
+        <p data-i18n="legal.cookies.sec_4_footer">Estas cookies están sujetas a las políticas de privacidad de cada
+            proveedor.</p>
 
-        <h2>6. Impacto de Deshabilitar Cookies</h2>
-        <p>Si deshabilitas las cookies esenciales:</p>
-        <ul>
-            <li>No podrás mantener tu sesión activa</li>
-            <li>Deberás iniciar sesión cada vez que visites la plataforma</li>
-            <li>Algunas funcionalidades pueden no funcionar correctamente</li>
-        </ul>
+        <h2 id="manage" data-i18n="legal.cookies.sec_5_title">5. Cómo Gestionar las Cookies</h2>
+        <p data-i18n="legal.cookies.sec_5_intro">Puedes controlar y/o eliminar las cookies de varias formas:</p>
 
-        <h2>7. Actualizaciones</h2>
-        <p>
+        <h3 data-i18n="legal.cookies.sec_5_1_title">5.1 Configuración del Navegador</h3>
+        <p data-i18n="legal.cookies.sec_5_1_intro">La mayoría de navegadores permiten:</p>
+        <div data-i18n="legal.cookies.sec_5_1_list">
+            <ul>
+                <li>Ver qué cookies tienes instaladas</li>
+                <li>Eliminar cookies específicas o todas las cookies</li>
+                <li>Bloquear cookies de terceros</li>
+                <li>Bloquear todas las cookies (pero esto afectará el funcionamiento)</li>
+            </ul>
+        </div>
+        <div data-i18n="legal.cookies.sec_5_1_footer">
+            <p>Consulta la ayuda de tu navegador:</p>
+            <ul>
+                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google
+                        Chrome</a></li>
+                <li><a href="https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en-"
+                        target="_blank" rel="noopener">Mozilla Firefox</a></li>
+                <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank"
+                        rel="noopener">Safari</a></li>
+                <li><a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-cookies-en-microsoft-edge"
+                        target="_blank" rel="noopener">Microsoft Edge</a></li>
+            </ul>
+        </div>
+
+        <h3 data-i18n="legal.cookies.sec_5_2_title">5.2 En Nuestra Plataforma</h3>
+        <div data-i18n="legal.cookies.sec_5_2_text">
+            <p>
+                Para cookies no esenciales, puedes ajustar tus preferencias en
+                <strong>Configuración → Cuenta → Privacidad</strong>.
+            </p>
+        </div>
+
+        <h2 data-i18n="legal.cookies.sec_6_title">6. Impacto de Deshabilitar Cookies</h2>
+        <p data-i18n="legal.cookies.sec_6_intro">Si deshabilitas las cookies esenciales:</p>
+        <div data-i18n="legal.cookies.sec_6_list">
+            <ul>
+                <li>No podrás mantener tu sesión activa</li>
+                <li>Deberás iniciar sesión cada vez que visites la plataforma</li>
+                <li>Algunas funcionalidades pueden no funcionar correctamente</li>
+            </ul>
+        </div>
+
+        <h2 data-i18n="legal.cookies.sec_7_title">7. Actualizaciones</h2>
+        <p data-i18n="legal.cookies.sec_7_text">
             Esta política puede actualizarse. Te notificaremos sobre cambios significativos a través de
             la plataforma o por correo electrónico.
         </p>
 
-        <h2>8. Contacto</h2>
-        <p>Si tienes preguntas sobre nuestra política de cookies:</p>
-        <ul>
-            <li><strong>Email:</strong> privacidad@pixy.com.co</li>
-        </ul>
+        <h2 data-i18n="legal.cookies.sec_8_title">8. Contacto</h2>
+        <p data-i18n="legal.cookies.sec_8_intro">Si tienes preguntas sobre nuestra política de cookies:</p>
+        <div data-i18n="legal.cookies.sec_8_list">
+            <ul>
+                <li><strong>Email:</strong> privacidad@pixy.com.co</li>
+            </ul>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -268,35 +214,36 @@
             <div class="footer-brand">
                 <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
-                <p>Tu negocio, bien diseñado.</p>
+                <p data-i18n="footer.slogan">Tu negocio, bien diseñado.</p>
             </div>
 
             <nav class="footer-links">
-                <h4>Producto</h4>
+                <h4 data-i18n="footer.product">Producto</h4>
 
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="industries.html" class="neon-link">Soluciones</a>
+                <a href="features.html" class="neon-link" data-i18n="nav.spaces">Características</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Empresa</h4>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="partners.html" class="neon-link">Partners</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
-                <a href="blog.html" class="neon-link">Blog</a>
+                <h4 data-i18n="footer.company">Empresa</h4>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Legal</h4>
-                <a href="privacy.html" class="neon-link">Privacidad</a>
-                <a href="terms.html" class="neon-link">Términos</a>
-                <a href="data-deletion.html" class="neon-link">Eliminación de Datos</a>
-                <a href="cookies.html" class="neon-link">Cookies</a>
-                <a href="permissions.html" class="neon-link">Permisos</a>
+                <h4 data-i18n="footer.legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="footer.deletion">Eliminación de Datos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
+                <a href="permissions.html" class="neon-link" data-i18n="footer.permissions">Permisos</a>
             </nav>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Pixy. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -326,6 +273,7 @@
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 

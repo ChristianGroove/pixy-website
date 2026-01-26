@@ -40,9 +40,42 @@
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
 
+    <!-- Navigation (Shared) -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="/" class="nav-brand">
+                <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark">
+                <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
+            </a>
+            <div class="nav-links">
+                <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
+                <div class="nav-item has-dropdown">
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
+                </div>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+            </div>
+            <div class="nav-actions">
+                <!-- Language Switcher -->
+                <button id="lang-toggle" class="btn-lang"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+
+                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;"
+                    data-i18n="nav.login">Entrar</a>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;"
+                    data-i18n="nav.demo">Demo</a>
+            </div>
+        </div>
+    </nav>
+
     <main class="container" style="padding-top: 80px; max-width: 800px;">
         <div class="glass-card">
-            <h1>Reviewer Instructions</h1>
+            <h1 data-i18n="legal.permissions.title">Reviewer Instructions</h1>
             <p class="lead" style="color: var(--text-secondary); margin-bottom: 32px;">
                 Please follow these steps to test the OAuth flow and verify permission usage.
             </p>
@@ -50,8 +83,9 @@
             <div class="instruction-step">
                 <div class="step-number">1</div>
                 <div>
-                    <h3>Go to Login Page</h3>
-                    <p>Navigate to <a href="https://app.pixy.com.co" class="neon-link">app.pixy.com.co</a> (Production
+                    <h3 data-i18n="legal.permissions.step_1_title">Go to Login Page</h3>
+                    <p data-i18n="legal.permissions.step_1_desc">Navigate to <a href="https://app.pixy.com.co"
+                            class="neon-link">app.pixy.com.co</a> (Production
                         Environment).</p>
                 </div>
             </div>
@@ -59,16 +93,18 @@
             <div class="instruction-step">
                 <div class="step-number">2</div>
                 <div>
-                    <h3>Login with Meta</h3>
-                    <p>Click the "Sign in with Meta Strategy" button on the login screen.</p>
+                    <h3 data-i18n="legal.permissions.step_2_title">Login with Meta</h3>
+                    <p data-i18n="legal.permissions.step_2_desc">Click the "Sign in with Meta Strategy" button on the
+                        login screen.</p>
                 </div>
             </div>
 
             <div class="instruction-step">
                 <div class="step-number">3</div>
                 <div>
-                    <h3>Complete OAuth Flow</h3>
-                    <p>Accept the requested permissions in the Facebook popup window.</p>
+                    <h3 data-i18n="legal.permissions.step_3_title">Complete OAuth Flow</h3>
+                    <p data-i18n="legal.permissions.step_3_desc">Accept the requested permissions in the Facebook popup
+                        window.</p>
                     <ul class="text-muted small mt-2">
                         <li>pages_show_list</li>
                         <li>instagram_basic</li>
@@ -83,8 +119,9 @@
             <div class="instruction-step">
                 <div class="step-number">4</div>
                 <div>
-                    <h3>Verify Page Listing</h3>
-                    <p>Once redirected, you will see a list of Facebook Pages you administer. This demonstrates
+                    <h3 data-i18n="legal.permissions.step_4_title">Verify Page Listing</h3>
+                    <p data-i18n="legal.permissions.step_4_desc">Once redirected, you will see a list of Facebook Pages
+                        you administer. This demonstrates
                         <code>pages_show_list</code> usage.
                     </p>
                 </div>
@@ -93,15 +130,17 @@
             <div class="instruction-step">
                 <div class="step-number">5</div>
                 <div>
-                    <h3>Connect Instagram</h3>
-                    <p>Select a page with an Instagram Business account connected. The dashboard will display the IG
+                    <h3 data-i18n="legal.permissions.step_5_title">Connect Instagram</h3>
+                    <p data-i18n="legal.permissions.step_5_desc">Select a page with an Instagram Business account
+                        connected. The dashboard will display the IG
                         profile info. This demonstrates <code>instagram_basic</code> usage.</p>
                 </div>
             </div>
 
             <div class="alert alert-info mt-4 glass-card" style="border-left: 4px solid var(--brand-pink);">
-                <h4>Test Credentials</h4>
-                <p>If you need a specific test user account, please use the credentials provided in the App Review
+                <h4 data-i18n="legal.permissions.test_creds_title">Test Credentials</h4>
+                <p data-i18n="legal.permissions.test_creds_desc">If you need a specific test user account, please use
+                    the credentials provided in the App Review
                     submission form notes.</p>
             </div>
         </div>
@@ -113,35 +152,36 @@
             <div class="footer-brand">
                 <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
-                <p>Tu negocio, bien diseñado.</p>
+                <p data-i18n="footer.slogan">Tu negocio, bien diseñado.</p>
             </div>
 
             <nav class="footer-links">
-                <h4>Producto</h4>
+                <h4 data-i18n="footer.product">Producto</h4>
 
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="industries.html" class="neon-link">Soluciones</a>
+                <a href="features.html" class="neon-link" data-i18n="nav.spaces">Características</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Empresa</h4>
-                <a href="about.html" class="neon-link">Nosotros</a>
-                <a href="partners.html" class="neon-link">Partners</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
-                <a href="blog.html" class="neon-link">Blog</a>
+                <h4 data-i18n="footer.company">Empresa</h4>
+                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
+                <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
             </nav>
 
             <nav class="footer-links">
-                <h4>Legal</h4>
-                <a href="privacy.html" class="neon-link">Privacidad</a>
-                <a href="terms.html" class="neon-link">Términos</a>
-                <a href="data-deletion.html" class="neon-link">Eliminación de Datos</a>
-                <a href="cookies.html" class="neon-link">Cookies</a>
-                <a href="permissions.html" class="neon-link">Permisos</a>
+                <h4 data-i18n="footer.legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="footer.deletion">Eliminación de Datos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
+                <a href="permissions.html" class="neon-link" data-i18n="footer.permissions">Permisos</a>
             </nav>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Pixy. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -170,6 +210,7 @@
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 
