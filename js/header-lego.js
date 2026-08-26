@@ -24,7 +24,7 @@
             return;
         }
 
-        const logo = nav.querySelector('.nav-brand');
+        const logo = nav.querySelector('.nav-left-group') || nav.querySelector('.nav-brand')?.parentElement || nav.querySelector('.nav-brand');
         const links = nav.querySelector('.nav-links');
         const actions = nav.querySelector('.nav-actions');
 

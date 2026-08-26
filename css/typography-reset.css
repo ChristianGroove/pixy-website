@@ -42,9 +42,9 @@
 .rebuild-h1 {
     font-family: 'Inter', sans-serif;
     font-weight: 800;
-    /* NORMALIZED FONT SIZE to match global styles */
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    line-height: 1.15;
+    /* NORMALIZED FONT SIZE: 46px MAX */
+    font-size: clamp(28px, 4vw, 46px);
+    line-height: 1.16;
     text-align: center;
     color: var(--text-primary, #ffffff);
     margin-bottom: 30px;
@@ -106,9 +106,9 @@
 .rebuild-h2 {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    font-size: clamp(2rem, 4vw, 3rem);
-    /* Standardized */
-    line-height: 1.2;
+    font-size: clamp(22px, 3.2vw, 36px);
+    /* Standardized: Max 36px */
+    line-height: 1.25;
     color: var(--text-primary, #ffffff);
     margin-bottom: 24px;
     text-align: left;

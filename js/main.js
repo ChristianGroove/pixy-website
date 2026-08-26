@@ -566,88 +566,121 @@ function initGSAPHero() {
     gsap.registerPlugin(ScrollTrigger);
 
     const hero = document.querySelector('.hero-space');
-    const astronaut = document.querySelector('.astronaut-hero');
-    const containerRight = document.querySelector('.hero-visual-right');
-    const content = document.querySelector('.hero-content-left');
+    const content = document.querySelector('.hero-space .hero-content-left') || document.querySelector('.hero-content-left');
+    const astroWrapper = document.querySelector('.hero-space .agency-hero-astronaut-wrapper') || document.querySelector('.spaces-astro-pos') || document.querySelector('.astronaut-hero');
+    const orbWrapper = document.querySelector('.hero-space .hero-hand-orb-wrapper') || document.querySelector('.spaces-orb-pos') || document.querySelector('.hero-hand-orb');
+    const glow = document.querySelector('.hero-space .agency-visual-glow');
 
-    if (!hero || !astronaut) return;
+    if (!hero || !astroWrapper) return;
 
-    // 1. Initial CLEAR & SET
-    // Clear any conflicting transforms first
-    gsap.set(astronaut, { clearProps: "all" });
-    gsap.set(containerRight, { clearProps: "all" });
+    // 1. TIMELINE: Entrance ("In") Animation
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    // Set Initial State
-    gsap.set(astronaut, {
-        y: 0,
-        rotation: 0,
-        scale: 0.8,
-        opacity: 0
-    });
+    if (content) {
+        tl.from(content.children, {
+            y: 40,
+            opacity: 0,
+            duration: 1.1,
+            stagger: 0.12
+        });
+    }
 
-    gsap.set(containerRight, {
-        right: "-10%" // Start slightly off-screen
-    });
+    if (glow) {
+        tl.from(glow, {
+            scale: 0.3,
+            opacity: 0,
+            duration: 1.6,
+            ease: 'power2.out'
+        }, '<');
+    }
 
-    // 2. TIMELINE: Entrance
-    const tl = gsap.timeline();
+    if (astroWrapper) {
+        tl.from(astroWrapper, {
+            y: 60,
+            scale: 0.8,
+            opacity: 0,
+            duration: 1.4,
+            ease: 'power2.out'
+        }, '-=0.9');
+    }
 
-    // a. Text Entrance
-    tl.from(content.children, {
-        duration: 1,
-        y: 30,
-        opacity: 0,
-        stagger: 0.1,
-        ease: "power3.out"
-    })
-        // b. Astronaut Fade In & Scale Up (Concurrent)
-        .to(astronaut, {
-            duration: 1.5,
-            scale: 1,
-            opacity: 1,
-            ease: "power2.out"
-        }, "-=0.8");
+    if (orbWrapper) {
+        tl.from(orbWrapper, {
+            x: -50,
+            y: 35,
+            scale: 0.4,
+            opacity: 0,
+            duration: 1.2,
+            ease: 'back.out(1.6)'
+        }, '-=0.9');
+    }
 
-    // 3. SEPARATE LOOP: Continuous Float (Physics)
-    // Applied ONLY to the Astronaut (Y and Rotation)
-    // We use a clean fromTo to ensure no conflicts
-    gsap.to(astronaut, {
-        y: -30, // Float up
-        rotation: 3, // Slight rotation
-        duration: 6,
-        ease: "sine.inOut",
-        yoyo: true,
-        repeat: -1
-    });
+    // 2. SCROLL TRIGGER: Parallax (Gradual Zoom + Downward Motion + Soft Fade)
+    if (astroWrapper) {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: hero,
+                start: 'top top',
+                end: '+=750',
+                scrub: 1.2
+            }
+        })
+        .to(astroWrapper, {
+            y: 100,
+            scale: 1.18,
+            opacity: 0.95,
+            duration: 0.55,
+            ease: 'none'
+        })
+        .to(astroWrapper, {
+            y: 190,
+            scale: 1.30,
+            opacity: 0,
+            duration: 0.45,
+            ease: 'power1.inOut'
+        });
+    }
 
-    // 4. SCROLL TRIGGER: Parallax & Layout Movement
-    // Applied to the CONTAINER (Left/Right movement)
-    // This avoids conflict with the Astronaut's Y/Rotation loop
+    if (orbWrapper) {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: hero,
+                start: 'top top',
+                end: '+=800',
+                scrub: 1.0
+            }
+        })
+        .to(orbWrapper, {
+            y: 150,
+            x: -50,
+            scale: 1.8,
+            opacity: 0.95,
+            duration: 0.55,
+            ease: 'none'
+        })
+        .to(orbWrapper, {
+            y: 280,
+            x: -95,
+            scale: 2.5,
+            opacity: 0,
+            duration: 0.45,
+            ease: 'power1.inOut'
+        });
+    }
 
-    gsap.to(containerRight, {
-        scrollTrigger: {
-            trigger: hero,
-            start: "top top",
-            end: "bottom center",
-            scrub: 1
-        },
-        right: "10%", // Move container inwards
-        y: 100, // Move container down (Parallax)
-        ease: "none"
-    });
-
-    // Fade out text
-    gsap.to(content, {
-        scrollTrigger: {
-            trigger: hero,
-            start: "top top",
-            end: "40% top",
-            scrub: 1
-        },
-        opacity: 0,
-        y: -50,
-        filter: "blur(5px)"
-    });
+    if (glow) {
+        gsap.to(glow, {
+            scrollTrigger: {
+                trigger: hero,
+                start: 'top top',
+                end: '+=750',
+                scrub: 1.2
+            },
+            scale: 1.6,
+            opacity: 0,
+            ease: 'power1.inOut'
+        });
+    }
 }
 
 // ============================================

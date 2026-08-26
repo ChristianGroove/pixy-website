@@ -6,15 +6,13 @@
     "nav": {
         "home": "Inicio",
         "spaces": "Spaces",
-        "about": "Nosotros",
         "pricing": "Precios",
         "blog": "Blog",
         "contact": "Contacto",
-        "login": "Entrar",
         "demo": "Demo"
     },
     "hero": {
-        "title": "Gestiona tu <br> Negocio desde <br> <span class=\"gradient-text\">tu Space</span>",
+        "title": "Gestiona tu Negocio <br>desde <span class=\"gradient-text\">tu Space</span>",
         "subtitle": "Rompe las barreras de lo tradicional. Pixy centraliza inteligencia, ventas y operaciones en un <strong>espacio de trabajo</strong> que siente como flotar en el espacio.",
         "cta_primary": "Comenzar Gratis",
         "cta_secondary": "Solicitar Demo"
@@ -394,11 +392,6 @@
         "form_privacy_1": "Al enviar este formulario aceptas nuestra",
         "form_privacy_link": "Política de Privacidad"
     },
-    "about": {
-        "badge": "Nuestra Filosofía",
-        "title": "Software que se <span class=\"gradient-text\">Siente Vivo</span>",
-        "subtitle": "No somos otra herramienta corporativa aburrida. Somos ingenieros y diseñadores obsesionados con la fricción cero."
-    },
     "agency": {
         "hero_title": "Tu Agencia, <br> <span class=\"gradient-text\">Bajo Control.</span>",
         "hero_subtitle": "El sistema operativo (OS) definitivo para agencias creativas. Centraliza proyectos, finanzas y clientes en un solo dashboard inteligente.",
@@ -524,11 +517,11 @@
     "agency_creative": {
         "nav_home": "Inicio",
         "nav_services": "Servicios",
-        "nav_plans": "Planes Dedicados",
+        "nav_plans": "Planes",
         "nav_portfolio": "Portafolio",
         "nav_contact": "Contacto",
         "nav_quote": "Cotizar",
-        "hero_title": "Marcas de Élite & <br><span class=\"gradient-text\">Experiencias Digitales</span> <br>que Aceleran tu Escala",
+        "hero_title": "Diseño & Tecnología <br>para <span class=\"gradient-text\">Marcas Digitales</span>",
         "hero_subtitle": "Fusionamos diseño de alto nivel, desarrollo web ultra-rápido y tu propio <strong>departamento de diseño dedicado</strong> para transformar marcas audaces en referentes de su industria.",
         "btn_start": "Iniciar Proyecto",
         "btn_plans": "Ver Planes Dedicados",

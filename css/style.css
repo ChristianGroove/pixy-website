@@ -215,6 +215,19 @@ body {
     /* Add vertical breathing room */
 }
 
+.nav-left-group {
+    display: flex;
+    align-items: center;
+    gap: 32px !important;
+    flex-shrink: 0;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
 .nav-logo {
     height: 32px;
     width: auto;
@@ -368,19 +381,15 @@ body {
     }
 }
 
-h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 24px;
-    color: var(--text-primary);
-}
-
+.gradient-text,
 h1 .gradient-text {
-    background: linear-gradient(135deg, var(--brand-pink), var(--brand-purple));
+    background: linear-gradient(135deg, #F205E2 0%, #A855F7 50%, #3B82F6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: transparent;
+    text-shadow: none !important;
+    display: inline-block;
 }
 
 .subtitle {
@@ -683,99 +692,95 @@ h1 .gradient-text {
 /* ============================================
    SPACE HERO REVAMP (GSAP)
    ============================================ */
+/* ============================================
+   SPACE HERO STANDARDIZED (MATCHES AGENCY)
+   ============================================ */
 .hero-space {
+    position: relative;
+    padding-top: 130px;
+    padding-bottom: 60px;
     display: flex;
-    flex-direction: row;
-    /* Back to row for initial separation */
-    justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
-    padding: 100px 5% 0;
-    /* Add horizontal padding */
-    position: relative;
-    overflow: visible;
-    /* Allow astronaut to go outside bounds */
-    text-align: left;
-    /* Left align text */
+    min-height: auto;
+    width: 100%;
 }
 
-.hero-content-left {
-    z-index: 10;
-    position: relative;
-    max-width: 50%;
-    /* Limit text width */
-    flex: 1;
+.hero-space .agency-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    align-items: center;
+    width: 100%;
 }
 
-.hero-visual-right {
-    position: absolute;
-    top: 50%;
-    right: -10%;
-    /* Start off-center to the right */
-    transform: translateY(-50%);
-    z-index: 1;
-    pointer-events: none;
-    width: 60%;
-    /* Occupy right side */
-    height: 100%;
+.hero-space .hero-content-left {
+    z-index: 2;
+    position: relative;
+    max-width: 100%;
+}
+
+.hero-space .agency-hero-visual {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 480px;
+    width: 100%;
 }
 
-.astronaut-hero {
-    width: 1310px;
-    /* Increased by another 40% per user request */
-    max-width: 85vw;
+.hero-space .astronaut-hero,
+.hero-space .spaces-hero-astronaut {
+    position: relative;
+    max-width: 120%;
+    width: 620px;
     height: auto;
-    filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
-    opacity: 1;
-    /* Fully visible */
-    transform-origin: center;
+    max-height: 620px; /* +15% size */
+    filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.65));
+    animation: heroSpacesAstroFloat 6s ease-in-out infinite;
+    transform: rotate(45deg);
+    transform-origin: center center;
+    will-change: transform;
 }
 
-@media (max-width: 900px) {
-    .hero-space {
-        flex-direction: column;
-        justify-content: center;
+.hero-space .hero-hand-orb-wrapper {
+    position: absolute;
+    top: 18%;
+    left: -8%;
+    z-index: 4;
+    will-change: transform, opacity;
+}
+
+.hero-space .hero-hand-orb {
+    width: 76px;
+    height: auto;
+    filter: drop-shadow(0 15px 25px rgba(242, 5, 226, 0.55));
+    animation: orbFloatFlipped 4.5s ease-in-out infinite;
+    pointer-events: none;
+    will-change: transform;
+    transform: scaleX(-1) rotate(10deg);
+}
+
+@keyframes heroSpacesAstroFloat {
+    0%, 100% { transform: rotate(45deg) translateY(0px); }
+    50% { transform: rotate(48deg) translateY(-16px); }
+}
+
+@keyframes orbFloatFlipped {
+    0%, 100% { transform: scaleX(-1) translateY(0px) rotate(10deg) scale(1); }
+    50% { transform: scaleX(-1) translateY(-14px) rotate(16deg) scale(1.05); }
+}
+
+@media (max-width: 992px) {
+    .hero-space .agency-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
         text-align: center;
     }
 
-    .hero-content-left {
-        max-width: 100%;
-        margin-bottom: 40px;
-    }
-
-    .hero-visual-right {
-        position: relative;
-        right: auto;
-        width: 100%;
-        opacity: 0.5;
-    }
-
-    .astronaut-hero {
-        width: 100%;
-        max-width: 637px;
-        /* Increased by another 40% */
-        opacity: 0.5;
-    }
-
-    .hero-content-left h1,
-    .hero-content-left p {
-        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
-    }
-
-    body {
-        background: white;
-        color: black;
-    }
-
-    .legal-content {
-        max-width: 100%;
-    }
-
-    .footer {
-        display: none;
+    .hero-space .hero-content-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -825,7 +830,7 @@ h1 .gradient-text {
     position: absolute;
     top: -20px;
     right: -10px;
-    font-size: 8rem;
+    font-size: 46px;
     font-weight: 800;
     color: rgba(255, 255, 255, 0.03);
     z-index: -1;
@@ -944,4 +949,47 @@ h1 .gradient-text {
 
 [data-theme="light"] .step-card:hover::before {
     color: rgba(242, 5, 226, 0.05);
+}
+
+/* ===================================================
+   GLOBAL TITLE STANDARDIZATION (MAX 46PX STRICT CEILING)
+   Enforces maximum 46px on ALL titles and headers across
+   both Pixy Spaces and Pixy Agency ecosystems.
+   =================================================== */
+h1,
+.agency-hero-title,
+.hero-title,
+.page-title,
+.clean-hero-title,
+.rebuild-h1,
+.legal-header h1,
+.agency-page-header h1,
+.agency-page-header .page-title,
+.agency-page-header .agency-hero-title,
+.agency-hero__title {
+    font-size: clamp(28px, 4vw, 46px) !important;
+    line-height: 1.16 !important;
+    letter-spacing: -0.02em;
+}
+
+h2,
+.section-title,
+.section-header .section-title,
+.rebuild-h2 {
+    font-size: clamp(22px, 3.2vw, 36px) !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.015em;
+}
+
+h3 {
+    font-size: clamp(18px, 2.2vw, 26px) !important;
+    line-height: 1.3 !important;
+}
+
+/* Universal guard: No text or title anywhere shall exceed 46px */
+h1, h2, h3, h4, h5, h6,
+.hero-title, .agency-hero-title, .page-title,
+.clean-hero-title, .rebuild-h1, .rebuild-h2,
+[class*="title"], [class*="heading"] {
+    max-height: none;
 }

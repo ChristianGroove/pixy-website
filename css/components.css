@@ -498,7 +498,7 @@
 }
 
 .stat-number {
-    font-size: 3rem;
+    font-size: 44px;
     font-weight: 800;
     background: linear-gradient(135deg, var(--brand-pink), var(--brand-purple));
     -webkit-background-clip: text;
@@ -602,7 +602,7 @@
 }
 
 .vertical-icon {
-    font-size: 3rem;
+    font-size: 42px;
     margin-bottom: 20px;
     background: linear-gradient(135deg, var(--brand-pink), var(--brand-purple));
     -webkit-background-clip: text;
@@ -1705,7 +1705,7 @@
     position: absolute;
     top: 10px;
     left: 20px;
-    font-size: 4rem;
+    font-size: 44px;
     color: rgba(242, 5, 226, 0.2);
     font-family: serif;
     line-height: 1;

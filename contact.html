@@ -67,8 +67,8 @@
     <!-- Navigation (Shared) -->
     <nav class="nav">
         <div class="nav-content">
-            <div style="display: flex; align-items: center; gap: 16px;">
-                <a href="/" class="nav-brand">
+            <div class="nav-left-group" style="display: flex; align-items: center; gap: 32px;">
+                <a href="index.html" class="nav-brand">
                     <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark">
                     <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
                 </a>
@@ -78,11 +78,10 @@
                 </div>
             </div>
             <div class="nav-links">
-                <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
+                <a href="index.html" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
                     <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
                 <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
                 <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
                 <a href="contact.html" class="neon-link active" data-i18n="nav.contact">Contacto</a>
@@ -95,8 +94,6 @@
                     <span style="color:var(--brand-pink); font-size:10px;">▼</span>
                 </button>
 
-                <a href="https://app.pixy.com.co/login" class="neon-link" style="margin-right: 16px;"
-                    data-i18n="nav.login">Entrar</a>
                 <a href="contact.html" class="btn-neon-outline active" style="padding: 8px 20px; font-size: 0.9rem;"
                     data-i18n="nav.demo">Demo</a>
             </div>
@@ -107,7 +104,7 @@
 
         <header style="text-align: center; margin-bottom: 120px; width: 100%; position: relative;">
             <div class="badge" style="margin: 0 auto 24px auto;" data-i18n="contact.badge">Soporte y Ventas</div>
-            <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px;" data-i18n="contact.title">Hablemos de
+            <h1 style="font-size: clamp(28px, 4vw, 46px); line-height: 1.16; margin-bottom: 24px;" data-i18n="contact.title">Hablemos de
                 tu <span class="gradient-text">Crecimiento</span></h1>
             <p class="subtitle" style="margin: 0 auto; max-width: 600px;" data-i18n="contact.subtitle">¿Tienes dudas o
                 quieres ver Pixy en acción?
@@ -281,7 +278,6 @@
 
             <nav class="footer-links">
                 <h4 data-i18n="footer.company">Empresa</h4>
-                <a href="about.html" class="neon-link" data-i18n="nav.about">Nosotros</a>
                 <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
                 <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
                 <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>

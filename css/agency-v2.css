@@ -12,12 +12,12 @@
 }
 
 .agency-hero__title {
-    font-size: 3.5rem;
+    font-size: clamp(28px, 4vw, 46px);
 }
 
 @media (min-width: 768px) {
     .agency-hero__title {
-        font-size: 4rem;
+        font-size: 46px;
     }
 }
 

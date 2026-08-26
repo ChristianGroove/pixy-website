@@ -6,15 +6,13 @@
     "nav": {
         "home": "Home",
         "spaces": "Spaces",
-        "about": "About",
         "pricing": "Pricing",
         "blog": "Blog",
         "contact": "Contact",
-        "login": "Login",
         "demo": "Demo"
     },
     "hero": {
-        "title": "Manage your <br> Business from <br> <span class=\"gradient-text\">your Space</span>",
+        "title": "Manage your Business <br>from <span class=\"gradient-text\">your Space</span>",
         "subtitle": "Break traditional barriers. Pixy centralizes intelligence, sales, and operations in a <strong>workspace</strong> that feels like floating in space.",
         "cta_primary": "Start for Free",
         "cta_secondary": "Request Demo"
@@ -394,11 +392,6 @@
         "form_privacy_1": "By submitting this form you accept our",
         "form_privacy_link": "Privacy Policy"
     },
-    "about": {
-        "badge": "Our Philosophy",
-        "title": "Software that <span class=\"gradient-text\">Feels Alive</span>",
-        "subtitle": "We are not another boring corporate tool. We are engineers and designers obsessed with zero friction."
-    },
     "agency": {
         "hero_title": "Your Agency, <br> <span class=\"gradient-text\">Under Control.</span>",
         "hero_subtitle": "The definitive operating system (OS) for creative agencies. Centralize projects, finances, and clients in a single intelligent dashboard.",
@@ -524,11 +517,11 @@
     "agency_creative": {
         "nav_home": "Home",
         "nav_services": "Services",
-        "nav_plans": "Dedicated Plans",
+        "nav_plans": "Plans",
         "nav_portfolio": "Portfolio",
         "nav_contact": "Contact",
         "nav_quote": "Get Quote",
-        "hero_title": "Elite Brands & <br><span class=\"gradient-text\">Digital Experiences</span> <br>That Accelerate Your Scale",
+        "hero_title": "Design & Technology <br>for <span class=\"gradient-text\">Digital Brands</span>",
         "hero_subtitle": "We merge high-end design, ultra-fast web development, and your own <strong>dedicated design department</strong> to turn bold brands into industry leaders.",
         "btn_start": "Start Project",
         "btn_plans": "View Dedicated Plans",

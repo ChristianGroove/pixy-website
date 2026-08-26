@@ -50,7 +50,7 @@
     <!-- Navigation Bar with Segmented Dual Mode Switcher -->
     <nav class="nav">
         <div class="nav-content">
-            <div style="display: flex; align-items: center; gap: 16px;">
+            <div class="nav-left-group" style="display: flex; align-items: center; gap: 32px;">
                 <a href="../agency.html" class="nav-brand">
                     <img src="../assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark">
                     <img src="../assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
@@ -67,7 +67,7 @@
             <div class="nav-links">
                 <a href="../agency.html" class="neon-link active" data-i18n="agency_creative.nav_home">Inicio</a>
                 <a href="services.html" class="neon-link" data-i18n="agency_creative.nav_services">Servicios</a>
-                <a href="plans.html" class="neon-link" data-i18n="agency_creative.nav_plans">Planes Dedicados</a>
+                <a href="plans.html" class="neon-link" data-i18n="agency_creative.nav_plans">Planes</a>
                 <a href="portfolio.html" class="neon-link" data-i18n="agency_creative.nav_portfolio">Portafolio</a>
                 <a href="contact.html" class="neon-link" data-i18n="agency_creative.nav_contact">Contacto</a>
             </div>
@@ -80,7 +80,7 @@
                     <span style="color:var(--brand-pink); font-size:10px;">▼</span>
                 </button>
 
-                <a href="#calculator" class="btn-neon" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="agency_creative.nav_quote">Cotizar</a>
+                <a href="#blueprint" class="btn-neon" style="padding: 8px 20px; font-size: 0.9rem;">Blueprint</a>
             </div>
         </div>
     </nav>
@@ -88,15 +88,14 @@
     <!-- Main Agency Universe -->
     <main class="agency-universe">
 
-        <!-- 1. HERO SECTION (PARALLAX + LEFT ALIGNED) -->
+        <!-- 1. HERO SECTION (ASTRONAUT + SINGLE FLOATING ORB NEAR HAND) -->
         <section class="agency-hero-section">
             <div class="agency-hero-grid">
                 <!-- Left Column: Copy & Value Proposition -->
                 <div class="agency-hero-content">
                     <h1 class="agency-hero-title" data-i18n="agency_creative.hero_title">
-                        Marcas de Élite & <br>
-                        <span class="gradient-text">Experiencias Digitales</span> <br>
-                        que Aceleran tu Escala
+                        Diseño & Tecnología <br>
+                        para <span class="gradient-text">Marcas Digitales</span>
                     </h1>
 
                     <p class="agency-hero-subtitle" data-i18n="agency_creative.hero_subtitle">
@@ -110,39 +109,19 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Visual Composition with Parallax Astronaut & Floating Badges -->
+                <!-- Right Column: Visual Composition with Astronaut & Single Orb near Hand -->
                 <div class="agency-hero-visual">
                     <div class="agency-visual-glow"></div>
 
-                    <!-- Floating Parallax Badge 1 (Lucide Zap) -->
-                    <div class="floating-glass-badge badge-top">
-                        <div class="icon-box-neon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                            </svg>
-                        </div>
-                        <div class="badge-info">
-                            <strong>+340% Conversión</strong>
-                            <span>Webs de Alto Rendimiento</span>
-                        </div>
+                    <!-- Droid Orb Parallax Wrapper -->
+                    <div class="hero-hand-orb-wrapper">
+                        <img src="../assets/droid.png" alt="Pixy Droid Orb" class="hero-hand-orb">
                     </div>
 
-                    <!-- Floating Parallax Badge 2 (Lucide Layers) -->
-                    <div class="floating-glass-badge badge-bottom">
-                        <div class="icon-box-neon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                <polyline points="2 17 12 22 22 17"></polyline>
-                                <polyline points="2 12 12 17 22 12"></polyline>
-                            </svg>
-                        </div>
-                        <div class="badge-info">
-                            <strong>Entrega 24-48h</strong>
-                            <span>Depto. Diseño Dedicado</span>
-                        </div>
+                    <!-- Astronaut Parallax Wrapper -->
+                    <div class="agency-hero-astronaut-wrapper">
+                        <img src="../assets/sujetos pagina pixy/concept launch.png" alt="Pixy Futuristic Astronaut" class="agency-hero-astronaut">
                     </div>
-
-                    <img src="../assets/astro4.png" alt="Pixy Creative Astronaut" class="agency-hero-img">
                 </div>
             </div>
         </section>
@@ -169,7 +148,7 @@
             </div>
         </section>
 
-        <!-- 3. BENTO GRID OF HIGH-IMPACT SERVICES -->
+        <!-- 3. IMMERSIVE & UNIFORM BENTO GRID (ELEMENTOS DE SERVICIOS) -->
         <section id="services" class="bento-section">
             <div class="section-header">
                 <div class="badge" data-i18n="agency_creative.services_badge">Capacidades & Servicios</div>
@@ -177,299 +156,475 @@
                 <p class="subtitle" data-i18n="agency_creative.services_subtitle">Estrategias integrales sin intermediarios ni silos desconectados. Código limpio, estética premium y foco obsesivo en resultados.</p>
             </div>
 
-            <div class="bento-grid">
-                <!-- Bento 1: Desarrollo Web & WebApps -->
-                <div class="bento-card bento-card-col-8">
+            <div class="bento-grid-uniform">
+                <!-- Service 1: Desarrollo Web & WebApps -->
+                <div class="bento-card-clean">
                     <div>
-                        <div class="icon-box-neon" style="margin-bottom: 20px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="16 18 22 12 16 6"></polyline>
-                                <polyline points="8 6 2 12 8 18"></polyline>
-                            </svg>
+                        <div class="bento-card-header">
+                            <div class="icon-box-neon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <span class="bento-card-num">01 / Código & Web</span>
                         </div>
-                        <h3>Desarrollo Web & WebApps de Alto Rendimiento</h3>
-                        <p>Construimos sitios web ultra rápidos, tiendas e-commerce de conversión masiva y plataformas interactivas. Arquitectura moderna, cero plantillas lentas y optimización SEO 100/100 para cargar en milisegundos.</p>
+                        <h3>Desarrollo Web & WebApps High-Speed</h3>
+                        <p>Sitios web ultra rápidos, portales corporativos y plataformas web interactivas. Arquitectura JAMstack, animaciones GSAP y tiempos de carga menores a 1 segundo.</p>
+                    </div>
+                    <div class="bento-element-stage">
+                        <div class="bento-element-aura"></div>
+                        <img src="../assets/elementos de servicios/desarrollo.png" alt="Desarrollo Web 3D" class="bento-element-img">
                     </div>
                     <div class="bento-features-tags">
-                        <span class="bento-tag">JAMstack & Headless</span>
-                        <span class="bento-tag">Animaciones GSAP 60fps</span>
-                        <span class="bento-tag">Integración Nativa CRM</span>
-                        <span class="bento-tag">Core Web Vitals Verdes</span>
+                        <span class="bento-tag">JAMstack</span>
+                        <span class="bento-tag">GSAP 60fps</span>
+                        <span class="bento-tag">Vitals 100%</span>
                     </div>
                 </div>
 
-                <!-- Bento 2: Branding & Identidad Visual -->
-                <div class="bento-card bento-card-col-4">
+                <!-- Service 2: Branding & Identidad 3D -->
+                <div class="bento-card-clean">
                     <div>
-                        <div class="icon-box-neon" style="margin-bottom: 20px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                <polyline points="2 17 12 22 22 17"></polyline>
-                                <polyline points="2 12 12 17 22 12"></polyline>
-                            </svg>
+                        <div class="bento-card-header">
+                            <div class="icon-box-neon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                            </div>
+                            <span class="bento-card-num">02 / Identidad</span>
                         </div>
-                        <h3>Branding & Identidad Visual</h3>
-                        <p>Creamos identidades que dejan huella indeleble. Logotipos icónicos, manuales de marca, tipografías personalizadas y sistemas de diseño escalables.</p>
+                        <h3>Branding & Identidad 3D</h3>
+                        <p>Universos de marca memorables: logotipos vectoriales, manuales de identidad, tipografías exclusivas y bibliotecas de componentes 3D.</p>
+                    </div>
+                    <div class="bento-element-stage">
+                        <div class="bento-element-aura"></div>
+                        <img src="../assets/elementos de servicios/branding concept.png" alt="Branding 3D" class="bento-element-img">
                     </div>
                     <div class="bento-features-tags">
-                        <span class="bento-tag">Sistemas Visuales</span>
-                        <span class="bento-tag">Renders 3D</span>
-                        <span class="bento-tag">Brand Guidelines</span>
+                        <span class="bento-tag">Sistemas 3D</span>
+                        <span class="bento-tag">Identidad</span>
+                        <span class="bento-tag">Brand Guide</span>
                     </div>
                 </div>
 
-                <!-- Bento 3: Paid Media & Growth Ads -->
-                <div class="bento-card bento-card-col-4">
+                <!-- Service 3: Growth Ads & Paid Media -->
+                <div class="bento-card-clean">
                     <div>
-                        <div class="icon-box-neon" style="margin-bottom: 20px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                                <polyline points="17 6 23 6 23 12"></polyline>
-                            </svg>
+                        <div class="bento-card-header">
+                            <div class="icon-box-neon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                    <polyline points="17 6 23 6 23 12"></polyline>
+                                </svg>
+                            </div>
+                            <span class="bento-card-num">03 / Paid Media</span>
                         </div>
-                        <h3>Growth Ads & Paid Media</h3>
-                        <p>Campañas de adquisición en Meta Ads, Google Ads y TikTok con creativos de alto impacto, copywriting persuasivo y optimización continua de ROAS.</p>
+                        <h3>Growth Ads & Adquisición</h3>
+                        <p>Campañas de alto rendimiento en Meta Ads, Google Ads y TikTok con creativos de alto impacto, copywriting persuasivo y testing constante de ROAS.</p>
+                    </div>
+                    <div class="bento-element-stage">
+                        <div class="bento-element-aura"></div>
+                        <img src="../assets/elementos de servicios/marketing digital.png" alt="Growth Ads 3D" class="bento-element-img">
                     </div>
                     <div class="bento-features-tags">
-                        <span class="bento-tag">Meta & TikTok Ads</span>
-                        <span class="bento-tag">Creative Testing</span>
-                        <span class="bento-tag">Atribución Avanzada</span>
+                        <span class="bento-tag">Meta & TikTok</span>
+                        <span class="bento-tag">Creative Test</span>
+                        <span class="bento-tag">ROAS 8.4x</span>
                     </div>
                 </div>
 
-                <!-- Bento 4: Content Engine & Redes -->
-                <div class="bento-card bento-card-col-4">
+                <!-- Service 4: Content Engine & Redes Sociales -->
+                <div class="bento-card-clean">
                     <div>
-                        <div class="icon-box-neon" style="margin-bottom: 20px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
-                                <line x1="7" y1="2" x2="7" y2="22"></line>
-                                <line x1="17" y1="2" x2="17" y2="22"></line>
-                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                            </svg>
+                        <div class="bento-card-header">
+                            <div class="icon-box-neon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                                    <line x1="7" y1="2" x2="7" y2="22"></line>
+                                    <line x1="17" y1="2" x2="17" y2="22"></line>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                </svg>
+                            </div>
+                            <span class="bento-card-num">04 / Content Engine</span>
                         </div>
-                        <h3>Content Engine & Redes</h3>
-                        <p>Producción visual y audiovisual mensual. Reels, carruseles y creativos de alta frecuencia para construir autoridad de marca y fidelizar audiencias.</p>
+                        <h3>Content Engine & Social Media</h3>
+                        <p>Producción visual y audiovisual mensual: Reels dinámicos, motion graphics y storytelling estratégico para construir autoridad de marca.</p>
+                    </div>
+                    <div class="bento-element-stage">
+                        <div class="bento-element-aura"></div>
+                        <img src="../assets/elementos de servicios/contenido redes.png" alt="Content Engine 3D" class="bento-element-img">
                     </div>
                     <div class="bento-features-tags">
-                        <span class="bento-tag">Short-form Video</span>
-                        <span class="bento-tag">Estrategia Editorial</span>
-                        <span class="bento-tag">Diseño Social</span>
+                        <span class="bento-tag">Reels / Shorts</span>
+                        <span class="bento-tag">Estrategia</span>
+                        <span class="bento-tag">Motion 3D</span>
                     </div>
                 </div>
 
-                <!-- Bento 5: UI/UX & Conversión CRO -->
-                <div class="bento-card bento-card-col-4">
+                <!-- Service 5: E-Commerce & Conversión CRO -->
+                <div class="bento-card-clean">
                     <div>
-                        <div class="icon-box-neon" style="margin-bottom: 20px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="3" y1="9" x2="21" y2="9"></line>
-                                <line x1="9" y1="21" x2="9" y2="9"></line>
-                            </svg>
+                        <div class="bento-card-header">
+                            <div class="icon-box-neon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                            </div>
+                            <span class="bento-card-num">05 / E-Commerce</span>
                         </div>
-                        <h3>UI/UX & Optimización CRO</h3>
-                        <p>Auditorías de usabilidad y diseño de interfaces intuitivas enfocadas en eliminar puntos de fricción y disparar la tasa de conversión de tus funnels.</p>
+                        <h3>E-Commerce & Conversión CRO</h3>
+                        <p>Tiendas en línea optimizadas para ventas masivas, diseño de embudos sin fricción y auditorías UX para disparar el ticket promedio.</p>
+                    </div>
+                    <div class="bento-element-stage">
+                        <div class="bento-element-aura"></div>
+                        <img src="../assets/elementos de servicios/ecommerce.png" alt="E-Commerce 3D" class="bento-element-img">
                     </div>
                     <div class="bento-features-tags">
-                        <span class="bento-tag">Figma Design Systems</span>
+                        <span class="bento-tag">Shopify Pro</span>
+                        <span class="bento-tag">Funnels CRO</span>
                         <span class="bento-tag">A/B Testing</span>
-                        <span class="bento-tag">Heatmap Audits</span>
+                    </div>
+                </div>
+
+                <!-- Service 6: Automatizaciones & CRM -->
+                <div class="bento-card-clean">
+                    <div>
+                        <div class="bento-card-header">
+                            <div class="icon-box-neon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                    <rect x="9" y="9" width="6" height="6"></rect>
+                                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                                    <line x1="20" y1="14" x2="23" y2="14"></line>
+                                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                                    <line x1="1" y1="14" x2="4" y2="14"></line>
+                                </svg>
+                            </div>
+                            <span class="bento-card-num">06 / CRM & AI</span>
+                        </div>
+                        <h3>Automatizaciones & Conexión CRM</h3>
+                        <p>Conectamos tus funnels publicitarios y sitios web con WhatsApp API, chatbots inteligentes y la suite Pixy Spaces para cerrar ventas en piloto automático.</p>
+                    </div>
+                    <div class="bento-element-stage">
+                        <div class="bento-element-aura"></div>
+                        <img src="../assets/elementos de servicios/crm.png" alt="CRM & Automations 3D" class="bento-element-img">
+                    </div>
+                    <div class="bento-features-tags">
+                        <span class="bento-tag">WhatsApp API</span>
+                        <span class="bento-tag">Pixy Spaces</span>
+                        <span class="bento-tag">AI Routing</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 4. DEDICATED DESIGN DEPARTMENT (SUBSCRIPTION MODEL) -->
-        <section id="dedicated-dept" class="design-dept-section" style="padding: 40px 0 60px;">
+        <!-- 4. DEDICATED DESIGN DEPARTMENT (COMPACT BANNER WITH POPOUT GIRL) -->
+        <section id="dedicated-dept" class="design-dept-section">
             <div class="dept-highlight-banner">
-                <div style="text-align: left;">
-                    <div class="badge" style="background: rgba(242, 5, 226, 0.2); color: var(--brand-pink-light);" data-i18n="agency_creative.dept_badge">Modelo Innovador</div>
-                    <h2 style="font-size: 2.3rem; margin: 14px 0; color: var(--text-primary); text-align: left;" data-i18n="agency_creative.dept_title">
-                        Tu Propio <span class="gradient-text">Departamento de Diseño Dedicado</span>
+                <div>
+                    <h2 style="font-size: clamp(1.8rem, 3.2vw, 36px); margin: 0 0 14px; color: var(--text-primary); line-height: 1.2;" data-i18n="agency_creative.dept_title">
+                        Tu Propio <br>
+                        <span class="gradient-text">Departamento de Diseño Dedicado</span>
                     </h2>
-                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: 1.05rem; text-align: left;" data-i18n="agency_creative.dept_subtitle">
-                        Accede a directores de arte y diseñadores de primer nivel por una tarifa mensual fija.
-                        Sin nóminas pesadas, sin procesos de contratación lentos y con total flexibilidad para pausar o cancelar cuando quieras.
+                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.96rem; max-width: 620px; margin-bottom: 20px;" data-i18n="agency_creative.dept_subtitle">
+                        Accede a directores de arte, diseñadores UI/UX y creadores de contenido senior bajo un modelo de suscripción mensual flexible. Sin nóminas pesadas ni contrataciones lentas.
                     </p>
 
                     <ul class="dept-perks-list">
                         <li class="dept-perk-item">
-                            <span class="icon-box-neon" style="width: 28px; height: 28px; border-radius: 8px;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span class="icon-box-neon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                             </span>
                             <span>Solicitudes y revisiones ilimitadas</span>
                         </li>
                         <li class="dept-perk-item">
-                            <span class="icon-box-neon" style="width: 28px; height: 28px; border-radius: 8px;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span class="icon-box-neon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                             </span>
-                            <span>Entregas rápidas en 24 a 48 horas</span>
+                            <span>Entregas ágiles en 24 a 48 horas</span>
                         </li>
                         <li class="dept-perk-item">
-                            <span class="icon-box-neon" style="width: 28px; height: 28px; border-radius: 8px;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span class="icon-box-neon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                             </span>
                             <span>Diseñadores Seniors asignados</span>
                         </li>
                         <li class="dept-perk-item">
-                            <span class="icon-box-neon" style="width: 28px; height: 28px; border-radius: 8px;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span class="icon-box-neon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                             </span>
                             <span>Pausa o cancela en cualquier momento</span>
                         </li>
                     </ul>
+
+                    <div style="margin-top: 28px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+                        <a href="plans.html" class="btn-neon" data-i18n="agency_creative.btn_plans">Ver Planes y Tarifas</a>
+                        <a href="https://wa.me/573001234567?text=Hola%20Pixy,%20quiero%20conocer%20mas%20sobre%20el%20departamento%20de%20diseno%20dedicado" target="_blank" class="btn-neon-outline">Hablar por WhatsApp</a>
+                    </div>
                 </div>
 
-                <div style="text-align: left; background: rgba(0,0,0,0.3); padding: 32px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.08);">
-                    <span style="font-size: 0.85rem; text-transform: uppercase; color: var(--brand-pink-light); font-weight: 700; letter-spacing: 1px;">Disponibilidad Inmediata</span>
-                    <h3 style="font-size: 2.2rem; color: #fff; margin: 8px 0;">On-Demand</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 24px;">Reemplaza agencias lentas y contrataciones costosas con un flujo creativo continuo.</p>
-                    <a href="plans.html" class="btn-neon" style="width: 100%;">Explorar Todos los Planes</a>
-                </div>
-            </div>
-
-            <!-- Subscription Tiers Grid -->
-            <div id="plans-grid" class="pricing-tiers-grid">
-                <!-- Tier 1: Starter Creative -->
-                <div class="plan-card">
-                    <div class="plan-header" style="text-align: left;">
-                        <h3 class="plan-name">Starter Creative</h3>
-                        <p class="plan-desc">Ideal para startups o proyectos que requieren soporte visual constante y ágil.</p>
-                    </div>
-                    <div class="plan-price-box" style="text-align: left;">
-                        <span class="plan-price">$990</span>
-                        <span class="plan-period">USD / mes</span>
-                    </div>
-                    <ul class="plan-features-list" style="text-align: left;">
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> <strong>1 Solicitud activa</strong> a la vez</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Entregas en 48 horas promedio</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Revisiones ilimitadas</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Creativos para Ads y Redes</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Diseños para Landing Pages</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Pausa o cancela cuando quieras</li>
-                    </ul>
-                    <a href="https://wa.me/573001234567?text=Hola%20Pixy,%20me%20interesa%20el%20plan%20Starter%20Creative" class="btn-neon-outline">Comenzar Plan</a>
-                </div>
-
-                <!-- Tier 2: Pro Growth Studio (Popular) -->
-                <div class="plan-card popular">
-                    <div class="plan-popular-badge">Más Popular</div>
-                    <div class="plan-header" style="text-align: left;">
-                        <h3 class="plan-name">Pro Growth Studio</h3>
-                        <p class="plan-desc">Para empresas en expansión que demandan diseño de élite y entregas diarias.</p>
-                    </div>
-                    <div class="plan-price-box" style="text-align: left;">
-                        <span class="plan-price">$1,490</span>
-                        <span class="plan-period">USD / mes</span>
-                    </div>
-                    <ul class="plan-features-list" style="text-align: left;">
-                        <li class="plan-feature-item highlight"><span class="plan-feature-check">✓</span> <strong>2 Solicitudes activas</strong> en simultáneo</li>
-                        <li class="plan-feature-item highlight"><span class="plan-feature-check">✓</span> Entregas prioritarias en 24-48h</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Diseñador Senior + Director de Arte</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Diseño Web completo en Figma</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Branding y sistemas visuales</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Canal privado en Slack / WhatsApp</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Pausa o cancela cuando quieras</li>
-                    </ul>
-                    <a href="https://wa.me/573001234567?text=Hola%20Pixy,%20me%20interesa%20el%20plan%20Pro%20Growth%20Studio" class="btn-neon">Elegir Pro Studio</a>
-                </div>
-
-                <!-- Tier 3: Scale Enterprise -->
-                <div class="plan-card">
-                    <div class="plan-header" style="text-align: left;">
-                        <h3 class="plan-name">Scale Enterprise</h3>
-                        <p class="plan-desc">Equipo creativo multidisciplinario de máxima capacidad para escalar operaciones.</p>
-                    </div>
-                    <div class="plan-price-box" style="text-align: left;">
-                        <span class="plan-price">$2,490</span>
-                        <span class="plan-period">USD / mes</span>
-                    </div>
-                    <ul class="plan-features-list" style="text-align: left;">
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> <strong>4 Solicitudes activas</strong> concurrentes</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Entregas en el mismo día / 24h</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Equipo de Diseño + Dev Frontend</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Renders 3D y Motion Graphics</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Sesiones semanales de estrategia</li>
-                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Gerente de cuenta dedicado</li>
-                    </ul>
-                    <a href="https://wa.me/573001234567?text=Hola%20Pixy,%20me%20interesa%20el%20plan%20Scale%20Enterprise" class="btn-neon-outline">Hablar con Director</a>
+                <!-- Pop-out Graphic Design Subject protruding outside container -->
+                <div class="dept-girl-stage">
+                    <div class="agency-visual-glow" style="width: 280px; height: 280px; filter: blur(45px); opacity: 0.6;"></div>
+                    <img src="../assets/sujetos pagina pixy/graphic design.png" alt="Graphic Design Specialist" class="popout-dept-girl">
                 </div>
             </div>
         </section>
 
-        <!-- 5. INTERACTIVE PROJECT SCOPE CALCULATOR -->
-        <section id="calculator" class="calculator-section" style="padding: 40px 0 60px;">
+        <!-- 5. INTERACTIVE 3D WORKFLOW SLIDER (4 UNIQUE SUBJECTS) -->
+        <section style="margin-bottom: 60px;">
             <div class="section-header">
-                <div class="badge" data-i18n="agency_creative.calculator_badge">Cotizador Inteligente</div>
-                <h2 class="section-title" data-i18n="agency_creative.calculator_title">Estima tu Proyecto en <span class="gradient-text">Tiempo Real</span></h2>
-                <p class="subtitle" data-i18n="agency_creative.calculator_subtitle">Selecciona los servicios requeridos y calcula al instante el alcance estimado de inversión.</p>
+                <div class="badge" data-i18n="agency_creative.workflow_badge">Metodología Ágil</div>
+                <h2 class="section-title" data-i18n="agency_creative.workflow_title">Cómo Trabajamos <span class="gradient-text">Contigo</span></h2>
+                <p class="subtitle">Un flujo de trabajo fluido y transparente diseñado para avanzar a máxima velocidad sin burocracia.</p>
             </div>
 
-            <div id="agency-calculator" class="calculator-card">
-                <!-- Left: Options Selector -->
-                <div class="calc-inputs-col" style="text-align: left;">
-                    <div class="calc-step-title">
-                        <span>1. Selecciona los Servicios Deseados</span>
-                    </div>
-                    <div class="calc-services-grid">
-                        <button type="button" class="calc-option-btn selected" data-service="web">
-                            <span class="calc-option-title">Desarrollo Web & Landing</span>
-                            <span class="calc-option-subtitle">JAMstack / High-Speed</span>
-                        </button>
-                        <button type="button" class="calc-option-btn selected" data-service="branding">
-                            <span class="calc-option-title">Branding & Identidad</span>
-                            <span class="calc-option-subtitle">Logotipo, Guía y 3D</span>
-                        </button>
-                        <button type="button" class="calc-option-btn" data-service="ads">
-                            <span class="calc-option-title">Growth Ads & Paid Media</span>
-                            <span class="calc-option-subtitle">Meta, Google & TikTok</span>
-                        </button>
-                        <button type="button" class="calc-option-btn" data-service="content">
-                            <span class="calc-option-title">Content & Redes Sociales</span>
-                            <span class="calc-option-subtitle">Reels, Carruseles y Copys</span>
-                        </button>
-                        <button type="button" class="calc-option-btn" data-service="design_dept" style="grid-column: span 2;">
-                            <span class="calc-option-title">Depto. Diseño Dedicado (Suscripción Mensual)</span>
-                            <span class="calc-option-subtitle">Diseñador Senior On-Demand / Ilimitado</span>
-                        </button>
+            <!-- 3D Interactive Slider Component -->
+            <div class="workflow-slider-container">
+                <div id="workflow-track" class="workflow-slider-track">
+                    <!-- Slide 1: Kickoff -->
+                    <div class="workflow-slide">
+                        <div>
+                            <span class="workflow-slide-num">01</span>
+                            <h4>Kickoff & Briefing Estratégico</h4>
+                            <p>Definimos objetivos comerciales, requerimientos técnicos, estilo visual y metas de conversión en una sesión ágil de 20 minutos.</p>
+                        </div>
+                        <div class="workflow-slide-visual">
+                            <img src="../assets/sujetos pagina pixy/ux research.png" alt="Kickoff 3D" class="workflow-slide-img">
+                        </div>
                     </div>
 
-                    <div class="calc-step-title">
-                        <span>2. Velocidad de Entrega</span>
+                    <!-- Slide 2: Creación -->
+                    <div class="workflow-slide">
+                        <div>
+                            <span class="workflow-slide-num">02</span>
+                            <h4>Diseño & Creación en Sprints</h4>
+                            <p>Tu equipo creativo y de desarrollo entra en producción inmediata con entregas continuas y avances visibles en 24 a 48 horas.</p>
+                        </div>
+                        <div class="workflow-slide-visual">
+                            <img src="../assets/sujetos pagina pixy/developer2.png" alt="Desarrollo 3D" class="workflow-slide-img">
+                        </div>
                     </div>
-                    <div class="calc-speed-options">
-                        <button type="button" class="calc-speed-btn selected" data-multiplier="1.0">Estándar (Óptimo)</button>
-                        <button type="button" class="calc-speed-btn" data-multiplier="1.2">Sprint Rápido (+20%)</button>
-                        <button type="button" class="calc-speed-btn" data-multiplier="1.35">Lightning Express (+35%)</button>
+
+                    <!-- Slide 3: Feedback -->
+                    <div class="workflow-slide">
+                        <div>
+                            <span class="workflow-slide-num">03</span>
+                            <h4>Iteración & Pulido Ágil</h4>
+                            <p>Revisiones en tiempo real a través de tu canal privado de Slack o WhatsApp. Ajustamos cada detalle hasta alcanzar la perfección.</p>
+                        </div>
+                        <div class="workflow-slide-visual">
+                            <img src="../assets/sujetos pagina pixy/digital strategy2.png" alt="Feedback 3D" class="workflow-slide-img">
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Lanzamiento -->
+                    <div class="workflow-slide">
+                        <div>
+                            <span class="workflow-slide-num">04</span>
+                            <h4>Lanzamiento & Escala Comercial</h4>
+                            <p>Despliegue en producción a alta velocidad, entrega de todos los assets editables y optimización continua de conversión.</p>
+                        </div>
+                        <div class="workflow-slide-visual">
+                            <img src="../assets/sujetos pagina pixy/growth.png" alt="Growth 3D" class="workflow-slide-img">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Right: Live Summary Box -->
-                <div class="calc-summary-box" style="text-align: left;">
+                <!-- Slider Controls -->
+                <div class="workflow-controls">
+                    <button type="button" id="workflow-prev" class="workflow-nav-btn" aria-label="Anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <div id="workflow-dots" class="workflow-dots">
+                        <div class="workflow-dot active" data-index="0"></div>
+                        <div class="workflow-dot" data-index="1"></div>
+                        <div class="workflow-dot" data-index="2"></div>
+                    </div>
+                    <button type="button" id="workflow-next" class="workflow-nav-btn" aria-label="Siguiente">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. INTERACTIVE STRATEGIC BLUEPRINT CONFIGURATOR -->
+        <section id="blueprint" class="blueprint-section">
+            <div class="section-header">
+                <div class="badge">Architecture Engine</div>
+                <h2 class="section-title">Configura tu <span class="gradient-text">Blueprint Estratégico</span></h2>
+                <p class="subtitle">Selecciona tus objetivos y requerimientos para diseñar la arquitectura digital, stack tecnológico y roadmap de ejecución en tiempo real.</p>
+            </div>
+
+            <div id="agency-blueprint" class="blueprint-card">
+                <!-- Left: Interactive Controls -->
+                <div class="blueprint-inputs-col">
+                    <!-- Step 1: Objective -->
+                    <div class="blueprint-step-title">
+                        <span>01 / Core Objective</span>
+                    </div>
+                    <div class="blueprint-objectives-grid">
+                        <button type="button" class="blueprint-obj-btn selected" data-obj="web3d">
+                            <div class="blueprint-obj-header">
+                                <div class="blueprint-obj-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                </div>
+                                <span class="blueprint-obj-name">Web 3D & Next.js</span>
+                            </div>
+                            <span class="blueprint-obj-desc">Plataforma web inmersiva a 60fps con velocidad extrema.</span>
+                        </button>
+
+                        <button type="button" class="blueprint-obj-btn" data-obj="ecommerce">
+                            <div class="blueprint-obj-header">
+                                <div class="blueprint-obj-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </div>
+                                <span class="blueprint-obj-name">E-Commerce & CRO</span>
+                            </div>
+                            <span class="blueprint-obj-desc">Tienda Shopify Headless con checkout optimizado.</span>
+                        </button>
+
+                        <button type="button" class="blueprint-obj-btn" data-obj="branding">
+                            <div class="blueprint-obj-header">
+                                <div class="blueprint-obj-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                </div>
+                                <span class="blueprint-obj-name">Brand Identity & 3D</span>
+                            </div>
+                            <span class="blueprint-obj-desc">Sistema de marca, tipografía y activos 3D.</span>
+                        </button>
+
+                        <button type="button" class="blueprint-obj-btn" data-obj="growth">
+                            <div class="blueprint-obj-header">
+                                <div class="blueprint-obj-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                                </div>
+                                <span class="blueprint-obj-name">Growth & Performance</span>
+                            </div>
+                            <span class="blueprint-obj-desc">Campañas de alto ROAS en Meta, Google y TikTok.</span>
+                        </button>
+
+                        <button type="button" class="blueprint-obj-btn" data-obj="crm">
+                            <div class="blueprint-obj-header">
+                                <div class="blueprint-obj-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                                </div>
+                                <span class="blueprint-obj-name">Automation & CRM</span>
+                            </div>
+                            <span class="blueprint-obj-desc">Funnels WhatsApp Cloud API y Pixy Spaces.</span>
+                        </button>
+
+                        <button type="button" class="blueprint-obj-btn" data-obj="dept">
+                            <div class="blueprint-obj-header">
+                                <div class="blueprint-obj-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                                </div>
+                                <span class="blueprint-obj-name">Creative Dept On-Demand</span>
+                            </div>
+                            <span class="blueprint-obj-desc">Equipo senior bajo suscripción mensual continua.</span>
+                        </button>
+                    </div>
+
+                    <!-- Step 2: Stage -->
+                    <div class="blueprint-step-title">
+                        <span>02 / Business Stage</span>
+                    </div>
+                    <div class="blueprint-stage-row">
+                        <button type="button" class="blueprint-stage-btn" data-stage="startup">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                            <span>Startup / Early Stage</span>
+                        </button>
+                        <button type="button" class="blueprint-stage-btn selected" data-stage="scaleup">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                            <span>Scale-Up / Growth</span>
+                        </button>
+                        <button type="button" class="blueprint-stage-btn" data-stage="enterprise">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            <span>Enterprise Grade</span>
+                        </button>
+                    </div>
+
+                    <!-- Step 3: Modules -->
+                    <div class="blueprint-step-title">
+                        <span>03 / Specialized Modules</span>
+                    </div>
+                    <div class="blueprint-modules-grid">
+                        <button type="button" class="blueprint-module-chip selected" data-module="renders3d">
+                            <span class="chip-check-box">✓</span>
+                            <span>Modelado & Animación 3D</span>
+                        </button>
+                        <button type="button" class="blueprint-module-chip selected" data-module="gsap">
+                            <span class="chip-check-box">✓</span>
+                            <span>Animaciones GSAP 60fps</span>
+                        </button>
+                        <button type="button" class="blueprint-module-chip selected" data-module="whatsapp">
+                            <span class="chip-check-box">✓</span>
+                            <span>Integración WhatsApp API</span>
+                        </button>
+                        <button type="button" class="blueprint-module-chip" data-module="cro">
+                            <span class="chip-check-box">✓</span>
+                            <span>Auditoría & Optimización CRO</span>
+                        </button>
+                        <button type="button" class="blueprint-module-chip" data-module="copy">
+                            <span class="chip-check-box">✓</span>
+                            <span>Copywriting Persuasivo</span>
+                        </button>
+                        <button type="button" class="blueprint-module-chip" data-module="designsystem">
+                            <span class="chip-check-box">✓</span>
+                            <span>Sistema UI Tokens en Figma</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Sleek Tech Terminal Output -->
+                <div class="blueprint-terminal-box">
                     <div>
-                        <h4 class="summary-heading" style="text-align: left;">Resumen de Cotización</h4>
-                        <div id="calc-items-list" class="summary-items-list">
+                        <div class="blueprint-terminal-header">
+                            <div class="blueprint-live-indicator">
+                                <span class="live-dot-pulse"></span>
+                                <span>LIVE ARCHITECTURE ENGINE</span>
+                            </div>
+                            <span id="bp-match-badge" class="blueprint-match-badge">98% Precision</span>
+                        </div>
+
+                        <h3 id="bp-arch-title" class="blueprint-arch-title">Ecosistema Web Headless & Experiencia 3D</h3>
+
+                        <div id="bp-timeline-badge" class="blueprint-timeline-badge">
+                            Sprint Ágil: 2 a 3 semanas
+                        </div>
+
+                        <div style="font-family: 'Space Mono', monospace; font-size: 0.72rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Recommended Tech Stack:</div>
+                        <div id="bp-stack-tags" class="blueprint-stack-tags">
                             <!-- Injected dynamically by JS -->
                         </div>
+
+                        <div style="font-family: 'Space Mono', monospace; font-size: 0.72rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Strategic Roadmap:</div>
+                        <ul id="bp-deliverables-list" class="blueprint-deliverables-list">
+                            <!-- Injected dynamically by JS -->
+                        </ul>
                     </div>
 
                     <div>
-                        <div class="summary-total-box" style="text-align: left;">
-                            <span class="summary-total-label">Inversión Estimada</span>
-                            <div id="calc-total-estimate" class="summary-total-estimate">$2,100 USD</div>
-                        </div>
-
-                        <a id="calc-whatsapp-btn" href="#" target="_blank" class="btn-neon" style="width: 100%; text-align: center;">
-                            Agendar Kickoff por WhatsApp →
+                        <a id="bp-whatsapp-btn" href="#" target="_blank" class="btn-neon" style="width: 100%; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                            <span>Generar Blueprint & Roadmap en WhatsApp</span>
+                            <span>→</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 6. PORTFOLIO & WORK SHOWCASE -->
-        <section id="portfolio" class="portfolio-section" style="padding: 40px 0 60px;">
+        <!-- 7. PORTFOLIO & WORK SHOWCASE -->
+        <section id="portfolio" class="portfolio-section">
             <div class="section-header">
                 <div class="badge" data-i18n="agency_creative.portfolio_badge">Casos de Estudio</div>
                 <h2 class="section-title" data-i18n="agency_creative.portfolio_title">Trabajo de Élite que <span class="gradient-text">Genera Resultados</span></h2>
@@ -489,13 +644,13 @@
                 <!-- Project 1: Web -->
                 <div class="portfolio-card" data-category="web">
                     <div class="portfolio-thumb">
-                        <img src="../assets/droid.png" alt="AeroTech Landing" style="object-fit: contain; padding: 20px;">
+                        <img src="../assets/elementos de servicios/desarrollo.png" alt="AeroTech Landing">
                         <span class="portfolio-badge-metric">+410% Conversión</span>
                     </div>
-                    <div class="portfolio-info" style="text-align: left;">
+                    <div class="portfolio-info">
                         <span class="portfolio-category">Desarrollo Web & UI/UX</span>
                         <h4 class="portfolio-title">AeroTech AI Platform</h4>
-                        <p class="portfolio-desc">Rediseño completo de plataforma Web con animaciones GSAP y tiempo de carga menor a 0.7 segundos.</p>
+                        <p class="portfolio-desc">Plataforma Web SaaS con animaciones GSAP y velocidad de carga extrema de 0.6s.</p>
                         <div class="portfolio-tech-row">
                             <span class="bento-tag">JAMstack</span>
                             <span class="bento-tag">GSAP</span>
@@ -507,13 +662,13 @@
                 <!-- Project 2: Branding -->
                 <div class="portfolio-card" data-category="branding">
                     <div class="portfolio-thumb">
-                        <img src="../assets/hero-astronaut.png" alt="Nova Space Branding" style="object-fit: contain; padding: 20px;">
+                        <img src="../assets/elementos de servicios/branding concept.png" alt="Nova Space Branding">
                         <span class="portfolio-badge-metric">Identidad 3D Completa</span>
                     </div>
-                    <div class="portfolio-info" style="text-align: left;">
+                    <div class="portfolio-info">
                         <span class="portfolio-category">Branding & 3D</span>
                         <h4 class="portfolio-title">Nova FinTech Labs</h4>
-                        <p class="portfolio-desc">Sistema de identidad de marca futurista, manual de marca y biblioteca de componentes 3D vectoriales.</p>
+                        <p class="portfolio-desc">Sistema de identidad de marca futurista, manual de marca y biblioteca de componentes 3D.</p>
                         <div class="portfolio-tech-row">
                             <span class="bento-tag">Branding</span>
                             <span class="bento-tag">3D Assets</span>
@@ -525,13 +680,13 @@
                 <!-- Project 3: Ads -->
                 <div class="portfolio-card" data-category="ads">
                     <div class="portfolio-thumb">
-                        <img src="../assets/astro4.png" alt="Scale Media Growth" style="object-fit: contain; padding: 20px;">
+                        <img src="../assets/elementos de servicios/marketing digital.png" alt="Scale Media Growth">
                         <span class="portfolio-badge-metric">9.4x ROAS Promedio</span>
                     </div>
-                    <div class="portfolio-info" style="text-align: left;">
+                    <div class="portfolio-info">
                         <span class="portfolio-category">Growth Ads & Creatives</span>
                         <h4 class="portfolio-title">HyperCommerce Scale</h4>
-                        <p class="portfolio-desc">Estrategia multicanal de adquisición en Meta Ads y TikTok con creativos de alta frecuencia y funnels dinámicos.</p>
+                        <p class="portfolio-desc">Estrategia multicanal de adquisición en Meta Ads y TikTok con creativos de alta frecuencia.</p>
                         <div class="portfolio-tech-row">
                             <span class="bento-tag">Meta Ads</span>
                             <span class="bento-tag">Creative Engine</span>
@@ -543,38 +698,6 @@
 
             <div style="text-align: center; margin-top: 32px;">
                 <a href="portfolio.html" class="btn-neon-outline">Ver Todo el Portafolio</a>
-            </div>
-        </section>
-
-        <!-- 7. THE PIXY WORKFLOW (4-STEP PROCESS) -->
-        <section style="margin-bottom: 60px;">
-            <div class="section-header">
-                <div class="badge" data-i18n="agency_creative.workflow_badge">Metodología Ágil</div>
-                <h2 class="section-title" data-i18n="agency_creative.workflow_title">Cómo Trabajamos <span class="gradient-text">Contigo</span></h2>
-                <p class="subtitle">Un proceso sin fricción pensado para avanzar a máxima velocidad sin sacrificar calidad.</p>
-            </div>
-
-            <div class="grid-4" style="gap: 20px;">
-                <div class="glass-card" style="padding: 24px 20px; text-align: left;">
-                    <span style="font-size: 1.8rem; font-weight: 900; color: var(--brand-pink); display: block; margin-bottom: 8px;">01</span>
-                    <h4 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary);">Kickoff & Briefing</h4>
-                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Definimos objetivos, alcance, requerimientos y estilo visual en una sesión de 20 minutos.</p>
-                </div>
-                <div class="glass-card" style="padding: 24px 20px; text-align: left;">
-                    <span style="font-size: 1.8rem; font-weight: 900; color: var(--brand-pink); display: block; margin-bottom: 8px;">02</span>
-                    <h4 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary);">Diseño & Creación</h4>
-                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Tu equipo creativo asignado entra en producción con entregas continuas en 24-48 horas.</p>
-                </div>
-                <div class="glass-card" style="padding: 24px 20px; text-align: left;">
-                    <span style="font-size: 1.8rem; font-weight: 900; color: var(--brand-pink); display: block; margin-bottom: 8px;">03</span>
-                    <h4 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary);">Feedback & Pulido</h4>
-                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Revisiones ágiles en tiempo real a través de tu canal privado de comunicación sin burocracia.</p>
-                </div>
-                <div class="glass-card" style="padding: 24px 20px; text-align: left;">
-                    <span style="font-size: 1.8rem; font-weight: 900; color: var(--brand-pink); display: block; margin-bottom: 8px;">04</span>
-                    <h4 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary);">Lanzamiento & Escala</h4>
-                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Publicación en producción, entrega de assets finales y optimización constante de rendimiento.</p>
-                </div>
             </div>
         </section>
 
@@ -630,9 +753,9 @@
         </section>
 
         <!-- 9. FINAL CTA BANNER -->
-        <section class="glass-card" style="text-align: center; padding: 48px 32px; margin-bottom: 40px; position: relative; overflow: hidden;">
+        <section class="glass-card" style="text-align: center; padding: 48px 32px; margin-bottom: 40px; position: relative; overflow: hidden; border-radius: 28px;">
             <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 300px; height: 300px; background: radial-gradient(circle, rgba(242, 5, 226, 0.2) 0%, transparent 70%); filter: blur(40px); pointer-events: none;"></div>
-            <h2 class="gradient-text" style="font-size: 2.4rem; margin-bottom: 14px;" data-i18n="agency_creative.cta_title">¿Listo para llevar tu marca al siguiente nivel?</h2>
+            <h2 class="gradient-text" style="font-size: clamp(2rem, 4vw, 42px); margin-bottom: 14px;" data-i18n="agency_creative.cta_title">¿Listo para llevar tu marca al siguiente nivel?</h2>
             <p style="color: var(--text-secondary); max-width: 620px; margin: 0 auto 28px; font-size: 1rem;" data-i18n="agency_creative.cta_subtitle">
                 Agenda una llamada de 15 minutos o cotiza tu proyecto ahora mismo. Cupos limitados por mes.
             </p>
@@ -676,7 +799,7 @@
                         <li><a href="plans.html">Diseño Dedicado Starter</a></li>
                         <li><a href="plans.html">Pro Growth Studio</a></li>
                         <li><a href="plans.html">Scale Enterprise</a></li>
-                        <li><a href="#calculator">Cotizador de Proyectos</a></li>
+                        <li><a href="#blueprint">Architecture Engine</a></li>
                     </ul>
                 </div>
 
@@ -685,7 +808,7 @@
                     <h4>Portafolio</h4>
                     <ul class="agency-footer-links">
                         <li><a href="portfolio.html">Casos de Éxito</a></li>
-                        <li><a href="../about.html">Sobre Pixy</a></li>
+                        <li><a href="services.html">Servicios Creativos</a></li>
                         <li><a href="../blog.html">Blog & Insights</a></li>
                         <li><a href="contact.html">Contacto Directo</a></li>
                     </ul>
