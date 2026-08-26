@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Toggle Event
     if (langToggle) {
-        langToggle.addEventListener('click', () => {
+        langToggle.addEventListener('click', (e) => {
+            e.preventDefault();
             currentLang = currentLang === 'es' ? 'en' : 'es';
             localStorage.setItem('pixy_lang', currentLang);
             loadLanguage(currentLang);
@@ -19,12 +20,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function loadLanguage(lang) {
         try {
-            const response = await fetch(`locales/${lang}.json`);
-            if (!response.ok) throw new Error(`Could not load ${lang}.json`);
+            let response = null;
+            // 1. Try root-relative
+            try {
+                response = await fetch(`/locales/${lang}.json`);
+            } catch (e) { }
+
+            // 2. Try relative based on path
+            if (!response || !response.ok) {
+                try {
+                    const isSubfolder = window.location.pathname.includes('/agency/');
+                    const rel = isSubfolder ? `../locales/${lang}.json` : `locales/${lang}.json`;
+                    response = await fetch(rel);
+                } catch (e) { }
+            }
+
+            // 3. Fallbacks
+            if (!response || !response.ok) {
+                try { response = await fetch(`locales/${lang}.json`); } catch (e) { }
+            }
+            if (!response || !response.ok) {
+                try { response = await fetch(`../locales/${lang}.json`); } catch (e) { }
+            }
+
+            if (!response || !response.ok) {
+                throw new Error(`Could not load ${lang}.json`);
+            }
 
             const translations = await response.json();
             applyTranslations(translations);
-            document.documentElement.lang = lang; // Update html lang attribute
+            document.documentElement.lang = lang;
         } catch (error) {
             console.error('Error loading language:', error);
         }
@@ -37,18 +62,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const key = el.getAttribute('data-i18n');
             const translation = getNestedTranslation(translations, key);
 
-            if (translation) {
+            if (translation !== undefined && translation !== null) {
                 if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                     el.placeholder = translation;
                 } else {
-                    el.innerHTML = translation; // Allow HTML in translations
+                    el.innerHTML = translation;
                 }
             }
         });
     }
 
     function getNestedTranslation(obj, p) {
-        return p.split('.').reduce((o, k) => (o || {})[k], obj);
+        if (!p || !obj) return undefined;
+        return p.split('.').reduce((o, k) => (o ? o[k] : undefined), obj);
     }
 
     function updateToggleUI(lang) {

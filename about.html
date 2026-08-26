@@ -52,10 +52,16 @@
     <!-- Navigation (Shared) -->
     <nav class="nav">
         <div class="nav-content">
-            <a href="/" class="nav-brand">
-                <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark">
-                <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
-            </a>
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <a href="/" class="nav-brand">
+                    <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark">
+                    <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
+                </a>
+                <div class="universe-switcher" role="tablist" aria-label="Ecosistema">
+                    <a href="agency.html" class="universe-tab" data-mode="agency">Agency</a>
+                    <a href="index.html" class="universe-tab active" data-mode="spaces">Spaces</a>
+                </div>
+            </div>
             <div class="nav-links">
                 <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">

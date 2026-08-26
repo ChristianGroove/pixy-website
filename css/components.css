@@ -1744,3 +1744,70 @@
     font-weight: 700;
     color: #fff;
 }
+
+/* ============================================
+   DUAL MODE SWITCHER (Agency / Spaces)
+   Ultra-clean segmented toggle
+   ============================================ */
+.universe-switcher {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 9999px;
+    padding: 3px;
+    gap: 2px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="light"] .universe-switcher {
+    background: rgba(15, 23, 42, 0.05);
+    border-color: rgba(15, 23, 42, 0.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.universe-tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.universe-tab:hover {
+    color: var(--text-primary);
+}
+
+.universe-tab.active {
+    background: linear-gradient(135deg, var(--brand-pink), var(--brand-purple));
+    border-color: transparent;
+    color: #ffffff !important;
+    box-shadow: 0 2px 14px rgba(242, 5, 226, 0.4);
+}
+
+[data-theme="light"] .universe-tab.active {
+    background: linear-gradient(135deg, var(--brand-pink), var(--brand-purple));
+    color: #ffffff !important;
+    box-shadow: 0 2px 10px rgba(242, 5, 226, 0.25);
+}
+
+@media (max-width: 768px) {
+    .universe-tab {
+        padding: 5px 12px;
+        font-size: 0.78rem;
+    }
+}

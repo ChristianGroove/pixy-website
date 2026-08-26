@@ -52,11 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // handleNavScroll();
     // window.addEventListener('scroll', handleNavScroll);
 
-    // Load Lego Header Effect
-    const headerScript = document.createElement('script');
-    headerScript.src = 'js/header-lego.js';
-    document.body.appendChild(headerScript);
-
     // Intersection Observer for fade-in animations
     initScrollAnimations();
 
@@ -99,10 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(() => loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js'))
         .then(() => loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js'))
         .then(() => {
-            // Load Lego Header (Dependent on GSAP)
-            loadScript('js/header-lego.js');
-            // Load Magnetic Cursor (No deps, but good to group)
-            // loadScript('js/cursor-light.js'); // DISABLED: Heavy performance impact
+            const isSubfolder = window.location.pathname.includes('/agency/');
+            const prefix = isSubfolder ? '../js/' : 'js/';
+            if (!document.querySelector('script[src*="header-lego.js"]')) {
+                loadScript(`${prefix}header-lego.js`);
+            }
+            if (!document.querySelector('script[src*="header-switcher.js"]')) {
+                loadScript(`${prefix}header-switcher.js`);
+            }
         })
         .catch(err => console.error('Error loading scripts:', err));
 

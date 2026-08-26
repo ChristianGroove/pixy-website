@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Pixy Agency</title>
+    <meta name="description"
+        content="Casos de éxito y portafolio de proyectos de desarrollo web, branding y growth ads creados por Pixy Creative Studio.">
+    <link rel="canonical" href="https://pixy.com.co/agency/portfolio.html">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/agency-modern.css">
+    <style>
+        body {
+            background-color: #0F0F1A;
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="agency-mode">
+    <div class="mouse-spotlight"></div>
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <a href="../agency.html" class="nav-brand">
+                    <img src="../assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark">
+                    <img src="../assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
+                </a>
+                <div class="universe-switcher" role="tablist" aria-label="Ecosistema">
+                    <a href="../agency.html" class="universe-tab active" data-mode="agency">Agency</a>
+                    <a href="../index.html" class="universe-tab" data-mode="spaces">Spaces</a>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="../agency.html" class="neon-link" data-i18n="agency_creative.nav_home">Inicio</a>
+                <a href="services.html" class="neon-link" data-i18n="agency_creative.nav_services">Servicios</a>
+                <a href="plans.html" class="neon-link" data-i18n="agency_creative.nav_plans">Planes Dedicados</a>
+                <a href="portfolio.html" class="neon-link active" data-i18n="agency_creative.nav_portfolio">Portafolio</a>
+                <a href="contact.html" class="neon-link" data-i18n="agency_creative.nav_contact">Contacto</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-lang"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 12px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+                <a href="../agency.html#calculator" class="btn-neon" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="agency_creative.nav_quote">Cotizar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="agency-universe" style="padding-top: 140px; padding-bottom: 60px;">
+        <!-- Header Centrado -->
+        <header class="agency-page-header">
+            <div class="badge" data-i18n="agency_creative.portfolio_badge">Casos de Éxito</div>
+            <h1 class="page-title" style="text-align: center; margin: 0 auto 16px;">Portafolio de <span class="gradient-text">Trabajos Recientes</span></h1>
+            <p class="subtitle" style="text-align: center; margin: 0 auto;">Proyectos donde el diseño, la tecnología y el growth marketing se combinan para generar resultados tangibles.</p>
+        </header>
+
+        <!-- Filter Tabs -->
+        <div class="portfolio-filter-tabs" style="margin-bottom: 36px;">
+            <button type="button" class="portfolio-filter-btn active" data-filter="all">Todos</button>
+            <button type="button" class="portfolio-filter-btn" data-filter="web">Web & Apps</button>
+            <button type="button" class="portfolio-filter-btn" data-filter="branding">Branding</button>
+            <button type="button" class="portfolio-filter-btn" data-filter="ads">Growth Ads</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid" style="margin-bottom: 60px;">
+            <!-- Project 1 -->
+            <div class="portfolio-card" data-category="web">
+                <div class="portfolio-thumb">
+                    <img src="../assets/droid.png" alt="AeroTech Landing" style="object-fit: contain; padding: 20px;">
+                    <span class="portfolio-badge-metric">+410% Conversión</span>
+                </div>
+                <div class="portfolio-info" style="text-align: left;">
+                    <span class="portfolio-category">Desarrollo Web & UI/UX</span>
+                    <h4 class="portfolio-title">AeroTech AI Platform</h4>
+                    <p class="portfolio-desc">Plataforma Web SaaS con animaciones interactivas GSAP y optimización de velocidad de carga extrema (0.6s).</p>
+                    <div class="portfolio-tech-row">
+                        <span class="bento-tag">JAMstack</span>
+                        <span class="bento-tag">GSAP</span>
+                        <span class="bento-tag">Tailwind</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="portfolio-card" data-category="branding">
+                <div class="portfolio-thumb">
+                    <img src="../assets/hero-astronaut.png" alt="Nova FinTech" style="object-fit: contain; padding: 20px;">
+                    <span class="portfolio-badge-metric">Identidad 3D Completa</span>
+                </div>
+                <div class="portfolio-info" style="text-align: left;">
+                    <span class="portfolio-category">Branding & 3D</span>
+                    <h4 class="portfolio-title">Nova FinTech Labs</h4>
+                    <p class="portfolio-desc">Rebranding corporativo completo, manual de identidad, tipografía y librería de iconografía 3D.</p>
+                    <div class="portfolio-tech-row">
+                        <span class="bento-tag">Branding</span>
+                        <span class="bento-tag">3D Assets</span>
+                        <span class="bento-tag">Figma</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="portfolio-card" data-category="ads">
+                <div class="portfolio-thumb">
+                    <img src="../assets/astro4.png" alt="HyperCommerce" style="object-fit: contain; padding: 20px;">
+                    <span class="portfolio-badge-metric">9.4x ROAS Promedio</span>
+                </div>
+                <div class="portfolio-info" style="text-align: left;">
+                    <span class="portfolio-category">Growth Ads & Creatives</span>
+                    <h4 class="portfolio-title">HyperCommerce Scale</h4>
+                    <p class="portfolio-desc">Estrategia multicanal de adquisición en Meta Ads y TikTok con creativos de alta frecuencia y funnels dinámicos.</p>
+                    <div class="portfolio-tech-row">
+                        <span class="bento-tag">Meta Ads</span>
+                        <span class="bento-tag">Creative Engine</span>
+                        <span class="bento-tag">ROAS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="portfolio-card" data-category="web">
+                <div class="portfolio-thumb">
+                    <img src="../assets/droid.png" alt="Krypton WebApp" style="object-fit: contain; padding: 20px;">
+                    <span class="portfolio-badge-metric">App Web en Tiempo Real</span>
+                </div>
+                <div class="portfolio-info" style="text-align: left;">
+                    <span class="portfolio-category">Web Development</span>
+                    <h4 class="portfolio-title">Krypton Analytics Portal</h4>
+                    <p class="portfolio-desc">Dashboard analítico interactivo con sincronización instantánea y visualización de datos complejos.</p>
+                    <div class="portfolio-tech-row">
+                        <span class="bento-tag">React</span>
+                        <span class="bento-tag">Chart.js</span>
+                        <span class="bento-tag">Dark Mode</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="portfolio-card" data-category="branding">
+                <div class="portfolio-thumb">
+                    <img src="../assets/hero-astronaut.png" alt="Pulse Energy" style="object-fit: contain; padding: 20px;">
+                    <span class="portfolio-badge-metric">Packaging & Brand</span>
+                </div>
+                <div class="portfolio-info" style="text-align: left;">
+                    <span class="portfolio-category">Branding & Packaging</span>
+                    <h4 class="portfolio-title">Pulse Kinetic Beverages</h4>
+                    <p class="portfolio-desc">Diseño de empaques, dirección de arte fotográfica y estrategia visual omnicanal para marca de bebidas.</p>
+                    <div class="portfolio-tech-row">
+                        <span class="bento-tag">Packaging</span>
+                        <span class="bento-tag">3D Render</span>
+                        <span class="bento-tag">Art Direction</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="portfolio-card" data-category="ads">
+                <div class="portfolio-thumb">
+                    <img src="../assets/astro4.png" alt="SaaS Scale" style="object-fit: contain; padding: 20px;">
+                    <span class="portfolio-badge-metric">+520k Leads Calificados</span>
+                </div>
+                <div class="portfolio-info" style="text-align: left;">
+                    <span class="portfolio-category">Growth Marketing</span>
+                    <h4 class="portfolio-title">OmniCloud Acquisition</h4>
+                    <p class="portfolio-desc">Escalamiento masivo de leads B2B mediante funnels de contenido educativo y Google Search Ads automatizado.</p>
+                    <div class="portfolio-tech-row">
+                        <span class="bento-tag">Google Ads</span>
+                        <span class="bento-tag">B2B Funnels</span>
+                        <span class="bento-tag">CRO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <section class="glass-card" style="text-align: center; padding: 48px 32px; margin-bottom: 32px;">
+            <h2 class="gradient-text" style="font-size: 2.2rem; margin-bottom: 12px;">¿Listo para ser nuestro próximo caso de éxito?</h2>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 24px;">Hablemos sobre tu proyecto y construyamos algo extraordinario juntos.</p>
+            <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                <a href="../agency.html#calculator" class="btn-neon">Cotizar Proyecto</a>
+                <a href="contact.html" class="btn-neon-outline">Contactar al Equipo</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Dedicated Agency Footer -->
+    <footer class="agency-footer">
+        <div class="agency-footer-container">
+            <div class="agency-footer-grid">
+                <div class="agency-footer-brand">
+                    <img src="../assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark" style="height: 30px; margin-bottom: 12px;">
+                    <img src="../assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light" style="height: 30px; margin-bottom: 12px;">
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; max-width: 280px;" data-i18n="agency_creative.footer_desc">
+                        Estudio creativo, desarrollo web de alto rendimiento y departamento de diseño dedicado.
+                    </p>
+                </div>
+                <div class="agency-footer-col">
+                    <h4>Servicios</h4>
+                    <ul class="agency-footer-links">
+                        <li><a href="services.html">Desarrollo Web</a></li>
+                        <li><a href="services.html">Branding & 3D</a></li>
+                        <li><a href="services.html">Growth Ads</a></li>
+                    </ul>
+                </div>
+                <div class="agency-footer-col">
+                    <h4>Planes</h4>
+                    <ul class="agency-footer-links">
+                        <li><a href="plans.html">Starter Creative</a></li>
+                        <li><a href="plans.html">Pro Growth Studio</a></li>
+                        <li><a href="plans.html">Scale Enterprise</a></li>
+                    </ul>
+                </div>
+                <div class="agency-footer-col">
+                    <h4>Portafolio</h4>
+                    <ul class="agency-footer-links">
+                        <li><a href="portfolio.html">Casos de Éxito</a></li>
+                        <li><a href="../about.html">Sobre Pixy</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="agency-footer-col">
+                    <h4>Ecosistema</h4>
+                    <ul class="agency-footer-links">
+                        <li><a href="../index.html">Pixy Spaces (CRM)</a></li>
+                        <li><a href="../privacy.html">Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="agency-footer-bottom">
+                <p data-i18n="agency_creative.footer_copy">© 2026 Pixy Creative Studio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/header-switcher.js"></script>
+    <script src="../js/agency-calculator.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

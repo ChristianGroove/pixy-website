@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency - Pixy Creative Studio & Digital Growth</title>
+    <meta name="description"
+        content="Diseñamos marcas de élite, desarrollo web de alto rendimiento, growth ads y departamento de diseño dedicado para marcas ambiciosas.">
+    <link rel="canonical" href="https://pixy.com.co/agency/">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixy.com.co/agency/">
+    <meta property="og:title" content="Agency - Pixy Creative Studio & Digital Growth">
+    <meta property="og:description"
+        content="Diseñamos marcas de élite, desarrollo web de alto rendimiento, growth ads y departamento de diseño dedicado.">
+    <meta property="og:image" content="https://pixy.com.co/assets/og-image.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- CSS Base & Components -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/agency-modern.css">
+    <style>
+        body {
+            background-color: #0F0F1A;
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="agency-mode">
+    <div class="mouse-spotlight"></div>
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+
+    <!-- Navigation Bar with Segmented Dual Mode Switcher -->
+    <nav class="nav">
+        <div class="nav-content">
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <a href="../agency.html" class="nav-brand">
+                    <img src="../assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark">
+                    <img src="../assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
+                </a>
+
+                <!-- Futuristic Segmented Switcher (Agency / Spaces) -->
+                <div class="universe-switcher" role="tablist" aria-label="Ecosistema">
+                    <a href="../agency.html" class="universe-tab active" data-mode="agency">Agency</a>
+                    <a href="../index.html" class="universe-tab" data-mode="spaces">Spaces</a>
+                </div>
+            </div>
+
+            <!-- Contextual Agency Navigation Links -->
+            <div class="nav-links">
+                <a href="../agency.html" class="neon-link active" data-i18n="agency_creative.nav_home">Inicio</a>
+                <a href="services.html" class="neon-link" data-i18n="agency_creative.nav_services">Servicios</a>
+                <a href="plans.html" class="neon-link" data-i18n="agency_creative.nav_plans">Planes Dedicados</a>
+                <a href="portfolio.html" class="neon-link" data-i18n="agency_creative.nav_portfolio">Portafolio</a>
+                <a href="contact.html" class="neon-link" data-i18n="agency_creative.nav_contact">Contacto</a>
+            </div>
+
+            <div class="nav-actions">
+                <!-- Language Switcher -->
+                <button id="lang-toggle" class="btn-lang"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 12px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+
+                <a href="#calculator" class="btn-neon" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="agency_creative.nav_quote">Cotizar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Agency Universe -->
+    <main class="agency-universe">
+
+        <!-- 1. HERO SECTION (PARALLAX + LEFT ALIGNED) -->
+        <section class="agency-hero-section">
+            <div class="agency-hero-grid">
+                <!-- Left Column: Copy & Value Proposition -->
+                <div class="agency-hero-content">
+                    <h1 class="agency-hero-title" data-i18n="agency_creative.hero_title">
+                        Marcas de Élite & <br>
+                        <span class="gradient-text">Experiencias Digitales</span> <br>
+                        que Aceleran tu Escala
+                    </h1>
+
+                    <p class="agency-hero-subtitle" data-i18n="agency_creative.hero_subtitle">
+                        Fusionamos diseño de alto nivel, desarrollo web ultra-rápido y tu propio
+                        <strong>departamento de diseño dedicado</strong> para transformar marcas audaces en referentes de su industria.
+                    </p>
+
+                    <div class="agency-hero-actions">
+                        <a href="#calculator" class="btn-neon" data-i18n="agency_creative.btn_start">Iniciar Proyecto</a>
+                        <a href="plans.html" class="btn-neon-outline" data-i18n="agency_creative.btn_plans">Ver Planes Dedicados</a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Composition with Parallax Astronaut & Floating Badges -->
+                <div class="agency-hero-visual">
+                    <div class="agency-visual-glow"></div>
+
+                    <!-- Floating Parallax Badge 1 (Lucide Zap) -->
+                    <div class="floating-glass-badge badge-top">
+                        <div class="icon-box-neon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <div class="badge-info">
+                            <strong>+340% Conversión</strong>
+                            <span>Webs de Alto Rendimiento</span>
+                        </div>
+                    </div>
+
+                    <!-- Floating Parallax Badge 2 (Lucide Layers) -->
+                    <div class="floating-glass-badge badge-bottom">
+                        <div class="icon-box-neon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="badge-info">
+                            <strong>Entrega 24-48h</strong>
+                            <span>Depto. Diseño Dedicado</span>
+                        </div>
+                    </div>
+
+                    <img src="../assets/astro4.png" alt="Pixy Creative Astronaut" class="agency-hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. STATS & METRICS BAR -->
+        <section class="agency-stats-bar">
+            <div class="agency-stats-grid">
+                <div class="stat-item">
+                    <h3>+120</h3>
+                    <p data-i18n="agency_creative.stat_projects">Proyectos Lanzados con Éxito</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24-48h</h3>
+                    <p data-i18n="agency_creative.stat_delivery">Tiempo Promedio de Entrega</p>
+                </div>
+                <div class="stat-item">
+                    <h3>8.4x</h3>
+                    <p data-i18n="agency_creative.stat_roas">ROAS Promedio en Growth Ads</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.2%</h3>
+                    <p data-i18n="agency_creative.stat_satisfaction">Satisfacción de Clientes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. BENTO GRID OF HIGH-IMPACT SERVICES -->
+        <section id="services" class="bento-section">
+            <div class="section-header">
+                <div class="badge" data-i18n="agency_creative.services_badge">Capacidades & Servicios</div>
+                <h2 class="section-title" data-i18n="agency_creative.services_title">Todo lo que tu marca necesita para <span class="gradient-text">dominar su mercado</span></h2>
+                <p class="subtitle" data-i18n="agency_creative.services_subtitle">Estrategias integrales sin intermediarios ni silos desconectados. Código limpio, estética premium y foco obsesivo en resultados.</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Bento 1: Desarrollo Web & WebApps -->
+                <div class="bento-card bento-card-col-8">
+                    <div>
+                        <div class="icon-box-neon" style="margin-bottom: 20px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Desarrollo Web & WebApps de Alto Rendimiento</h3>
+                        <p>Construimos sitios web ultra rápidos, tiendas e-commerce de conversión masiva y plataformas interactivas. Arquitectura moderna, cero plantillas lentas y optimización SEO 100/100 para cargar en milisegundos.</p>
+                    </div>
+                    <div class="bento-features-tags">
+                        <span class="bento-tag">JAMstack & Headless</span>
+                        <span class="bento-tag">Animaciones GSAP 60fps</span>
+                        <span class="bento-tag">Integración Nativa CRM</span>
+                        <span class="bento-tag">Core Web Vitals Verdes</span>
+                    </div>
+                </div>
+
+                <!-- Bento 2: Branding & Identidad Visual -->
+                <div class="bento-card bento-card-col-4">
+                    <div>
+                        <div class="icon-box-neon" style="margin-bottom: 20px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Branding & Identidad Visual</h3>
+                        <p>Creamos identidades que dejan huella indeleble. Logotipos icónicos, manuales de marca, tipografías personalizadas y sistemas de diseño escalables.</p>
+                    </div>
+                    <div class="bento-features-tags">
+                        <span class="bento-tag">Sistemas Visuales</span>
+                        <span class="bento-tag">Renders 3D</span>
+                        <span class="bento-tag">Brand Guidelines</span>
+                    </div>
+                </div>
+
+                <!-- Bento 3: Paid Media & Growth Ads -->
+                <div class="bento-card bento-card-col-4">
+                    <div>
+                        <div class="icon-box-neon" style="margin-bottom: 20px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Growth Ads & Paid Media</h3>
+                        <p>Campañas de adquisición en Meta Ads, Google Ads y TikTok con creativos de alto impacto, copywriting persuasivo y optimización continua de ROAS.</p>
+                    </div>
+                    <div class="bento-features-tags">
+                        <span class="bento-tag">Meta & TikTok Ads</span>
+                        <span class="bento-tag">Creative Testing</span>
+                        <span class="bento-tag">Atribución Avanzada</span>
+                    </div>
+                </div>
+
+                <!-- Bento 4: Content Engine & Redes -->
+                <div class="bento-card bento-card-col-4">
+                    <div>
+                        <div class="icon-box-neon" style="margin-bottom: 20px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                                <line x1="7" y1="2" x2="7" y2="22"></line>
+                                <line x1="17" y1="2" x2="17" y2="22"></line>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3>Content Engine & Redes</h3>
+                        <p>Producción visual y audiovisual mensual. Reels, carruseles y creativos de alta frecuencia para construir autoridad de marca y fidelizar audiencias.</p>
+                    </div>
+                    <div class="bento-features-tags">
+                        <span class="bento-tag">Short-form Video</span>
+                        <span class="bento-tag">Estrategia Editorial</span>
+                        <span class="bento-tag">Diseño Social</span>
+                    </div>
+                </div>
+
+                <!-- Bento 5: UI/UX & Conversión CRO -->
+                <div class="bento-card bento-card-col-4">
+                    <div>
+                        <div class="icon-box-neon" style="margin-bottom: 20px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                        </div>
+                        <h3>UI/UX & Optimización CRO</h3>
+                        <p>Auditorías de usabilidad y diseño de interfaces intuitivas enfocadas en eliminar puntos de fricción y disparar la tasa de conversión de tus funnels.</p>
+                    </div>
+                    <div class="bento-features-tags">
+                        <span class="bento-tag">Figma Design Systems</span>
+                        <span class="bento-tag">A/B Testing</span>
+                        <span class="bento-tag">Heatmap Audits</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. DEDICATED DESIGN DEPARTMENT (SUBSCRIPTION MODEL) -->
+        <section id="dedicated-dept" class="design-dept-section" style="padding: 40px 0 60px;">
+            <div class="dept-highlight-banner">
+                <div style="text-align: left;">
+                    <div class="badge" style="background: rgba(242, 5, 226, 0.2); color: var(--brand-pink-light);" data-i18n="agency_creative.dept_badge">Modelo Innovador</div>
+                    <h2 style="font-size: 2.3rem; margin: 14px 0; color: var(--text-primary); text-align: left;" data-i18n="agency_creative.dept_title">
+                        Tu Propio <span class="gradient-text">Departamento de Diseño Dedicado</span>
+                    </h2>
+                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: 1.05rem; text-align: left;" data-i18n="agency_creative.dept_subtitle">
+                        Accede a directores de arte y diseñadores de primer nivel por una tarifa mensual fija.
+                        Sin nóminas pesadas, sin procesos de contratación lentos y con total flexibilidad para pausar o cancelar cuando quieras.
+                    </p>
+
+                    <ul class="dept-perks-list">
+                        <li class="dept-perk-item">
+                            <span class="icon-box-neon" style="width: 28px; height: 28px; border-radius: 8px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>Solicitudes y revisiones ilimitadas</span>
+                        </li>
+                        <li class="dept-perk-item">
+                            <span class="icon-box-neon" style="width: 28px; height: 28px; border-radius: 8px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>Entregas rápidas en 24 a 48 horas</span>
+                        </li>
+                        <li class="dept-perk-item">
+                            <span class="icon-box-neon" style="width: 28px; height: 28px; border-radius: 8px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>Diseñadores Seniors asignados</span>
+                        </li>
+                        <li class="dept-perk-item">
+                            <span class="icon-box-neon" style="width: 28px; height: 28px; border-radius: 8px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>Pausa o cancela en cualquier momento</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="text-align: left; background: rgba(0,0,0,0.3); padding: 32px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.08);">
+                    <span style="font-size: 0.85rem; text-transform: uppercase; color: var(--brand-pink-light); font-weight: 700; letter-spacing: 1px;">Disponibilidad Inmediata</span>
+                    <h3 style="font-size: 2.2rem; color: #fff; margin: 8px 0;">On-Demand</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 24px;">Reemplaza agencias lentas y contrataciones costosas con un flujo creativo continuo.</p>
+                    <a href="plans.html" class="btn-neon" style="width: 100%;">Explorar Todos los Planes</a>
+                </div>
+            </div>
+
+            <!-- Subscription Tiers Grid -->
+            <div id="plans-grid" class="pricing-tiers-grid">
+                <!-- Tier 1: Starter Creative -->
+                <div class="plan-card">
+                    <div class="plan-header" style="text-align: left;">
+                        <h3 class="plan-name">Starter Creative</h3>
+                        <p class="plan-desc">Ideal para startups o proyectos que requieren soporte visual constante y ágil.</p>
+                    </div>
+                    <div class="plan-price-box" style="text-align: left;">
+                        <span class="plan-price">$990</span>
+                        <span class="plan-period">USD / mes</span>
+                    </div>
+                    <ul class="plan-features-list" style="text-align: left;">
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> <strong>1 Solicitud activa</strong> a la vez</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Entregas en 48 horas promedio</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Revisiones ilimitadas</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Creativos para Ads y Redes</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Diseños para Landing Pages</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Pausa o cancela cuando quieras</li>
+                    </ul>
+                    <a href="https://wa.me/573001234567?text=Hola%20Pixy,%20me%20interesa%20el%20plan%20Starter%20Creative" class="btn-neon-outline">Comenzar Plan</a>
+                </div>
+
+                <!-- Tier 2: Pro Growth Studio (Popular) -->
+                <div class="plan-card popular">
+                    <div class="plan-popular-badge">Más Popular</div>
+                    <div class="plan-header" style="text-align: left;">
+                        <h3 class="plan-name">Pro Growth Studio</h3>
+                        <p class="plan-desc">Para empresas en expansión que demandan diseño de élite y entregas diarias.</p>
+                    </div>
+                    <div class="plan-price-box" style="text-align: left;">
+                        <span class="plan-price">$1,490</span>
+                        <span class="plan-period">USD / mes</span>
+                    </div>
+                    <ul class="plan-features-list" style="text-align: left;">
+                        <li class="plan-feature-item highlight"><span class="plan-feature-check">✓</span> <strong>2 Solicitudes activas</strong> en simultáneo</li>
+                        <li class="plan-feature-item highlight"><span class="plan-feature-check">✓</span> Entregas prioritarias en 24-48h</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Diseñador Senior + Director de Arte</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Diseño Web completo en Figma</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Branding y sistemas visuales</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Canal privado en Slack / WhatsApp</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Pausa o cancela cuando quieras</li>
+                    </ul>
+                    <a href="https://wa.me/573001234567?text=Hola%20Pixy,%20me%20interesa%20el%20plan%20Pro%20Growth%20Studio" class="btn-neon">Elegir Pro Studio</a>
+                </div>
+
+                <!-- Tier 3: Scale Enterprise -->
+                <div class="plan-card">
+                    <div class="plan-header" style="text-align: left;">
+                        <h3 class="plan-name">Scale Enterprise</h3>
+                        <p class="plan-desc">Equipo creativo multidisciplinario de máxima capacidad para escalar operaciones.</p>
+                    </div>
+                    <div class="plan-price-box" style="text-align: left;">
+                        <span class="plan-price">$2,490</span>
+                        <span class="plan-period">USD / mes</span>
+                    </div>
+                    <ul class="plan-features-list" style="text-align: left;">
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> <strong>4 Solicitudes activas</strong> concurrentes</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Entregas en el mismo día / 24h</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Equipo de Diseño + Dev Frontend</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Renders 3D y Motion Graphics</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Sesiones semanales de estrategia</li>
+                        <li class="plan-feature-item"><span class="plan-feature-check">✓</span> Gerente de cuenta dedicado</li>
+                    </ul>
+                    <a href="https://wa.me/573001234567?text=Hola%20Pixy,%20me%20interesa%20el%20plan%20Scale%20Enterprise" class="btn-neon-outline">Hablar con Director</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. INTERACTIVE PROJECT SCOPE CALCULATOR -->
+        <section id="calculator" class="calculator-section" style="padding: 40px 0 60px;">
+            <div class="section-header">
+                <div class="badge" data-i18n="agency_creative.calculator_badge">Cotizador Inteligente</div>
+                <h2 class="section-title" data-i18n="agency_creative.calculator_title">Estima tu Proyecto en <span class="gradient-text">Tiempo Real</span></h2>
+                <p class="subtitle" data-i18n="agency_creative.calculator_subtitle">Selecciona los servicios requeridos y calcula al instante el alcance estimado de inversión.</p>
+            </div>
+
+            <div id="agency-calculator" class="calculator-card">
+                <!-- Left: Options Selector -->
+                <div class="calc-inputs-col" style="text-align: left;">
+                    <div class="calc-step-title">
+                        <span>1. Selecciona los Servicios Deseados</span>
+                    </div>
+                    <div class="calc-services-grid">
+                        <button type="button" class="calc-option-btn selected" data-service="web">
+                            <span class="calc-option-title">Desarrollo Web & Landing</span>
+                            <span class="calc-option-subtitle">JAMstack / High-Speed</span>
+                        </button>
+                        <button type="button" class="calc-option-btn selected" data-service="branding">
+                            <span class="calc-option-title">Branding & Identidad</span>
+                            <span class="calc-option-subtitle">Logotipo, Guía y 3D</span>
+                        </button>
+                        <button type="button" class="calc-option-btn" data-service="ads">
+                            <span class="calc-option-title">Growth Ads & Paid Media</span>
+                            <span class="calc-option-subtitle">Meta, Google & TikTok</span>
+                        </button>
+                        <button type="button" class="calc-option-btn" data-service="content">
+                            <span class="calc-option-title">Content & Redes Sociales</span>
+                            <span class="calc-option-subtitle">Reels, Carruseles y Copys</span>
+                        </button>
+                        <button type="button" class="calc-option-btn" data-service="design_dept" style="grid-column: span 2;">
+                            <span class="calc-option-title">Depto. Diseño Dedicado (Suscripción Mensual)</span>
+                            <span class="calc-option-subtitle">Diseñador Senior On-Demand / Ilimitado</span>
+                        </button>
+                    </div>
+
+                    <div class="calc-step-title">
+                        <span>2. Velocidad de Entrega</span>
+                    </div>
+                    <div class="calc-speed-options">
+                        <button type="button" class="calc-speed-btn selected" data-multiplier="1.0">Estándar (Óptimo)</button>
+                        <button type="button" class="calc-speed-btn" data-multiplier="1.2">Sprint Rápido (+20%)</button>
+                        <button type="button" class="calc-speed-btn" data-multiplier="1.35">Lightning Express (+35%)</button>
+                    </div>
+                </div>
+
+                <!-- Right: Live Summary Box -->
+                <div class="calc-summary-box" style="text-align: left;">
+                    <div>
+                        <h4 class="summary-heading" style="text-align: left;">Resumen de Cotización</h4>
+                        <div id="calc-items-list" class="summary-items-list">
+                            <!-- Injected dynamically by JS -->
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="summary-total-box" style="text-align: left;">
+                            <span class="summary-total-label">Inversión Estimada</span>
+                            <div id="calc-total-estimate" class="summary-total-estimate">$2,100 USD</div>
+                        </div>
+
+                        <a id="calc-whatsapp-btn" href="#" target="_blank" class="btn-neon" style="width: 100%; text-align: center;">
+                            Agendar Kickoff por WhatsApp →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. PORTFOLIO & WORK SHOWCASE -->
+        <section id="portfolio" class="portfolio-section" style="padding: 40px 0 60px;">
+            <div class="section-header">
+                <div class="badge" data-i18n="agency_creative.portfolio_badge">Casos de Estudio</div>
+                <h2 class="section-title" data-i18n="agency_creative.portfolio_title">Trabajo de Élite que <span class="gradient-text">Genera Resultados</span></h2>
+                <p class="subtitle" data-i18n="agency_creative.portfolio_subtitle">Una muestra de experiencias digitales, identidades y campañas creadas por nuestro equipo.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="portfolio-filter-tabs">
+                <button type="button" class="portfolio-filter-btn active" data-filter="all">Todos</button>
+                <button type="button" class="portfolio-filter-btn" data-filter="web">Web & Apps</button>
+                <button type="button" class="portfolio-filter-btn" data-filter="branding">Branding</button>
+                <button type="button" class="portfolio-filter-btn" data-filter="ads">Growth Ads</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <!-- Project 1: Web -->
+                <div class="portfolio-card" data-category="web">
+                    <div class="portfolio-thumb">
+                        <img src="../assets/droid.png" alt="AeroTech Landing" style="object-fit: contain; padding: 20px;">
+                        <span class="portfolio-badge-metric">+410% Conversión</span>
+                    </div>
+                    <div class="portfolio-info" style="text-align: left;">
+                        <span class="portfolio-category">Desarrollo Web & UI/UX</span>
+                        <h4 class="portfolio-title">AeroTech AI Platform</h4>
+                        <p class="portfolio-desc">Rediseño completo de plataforma Web con animaciones GSAP y tiempo de carga menor a 0.7 segundos.</p>
+                        <div class="portfolio-tech-row">
+                            <span class="bento-tag">JAMstack</span>
+                            <span class="bento-tag">GSAP</span>
+                            <span class="bento-tag">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Branding -->
+                <div class="portfolio-card" data-category="branding">
+                    <div class="portfolio-thumb">
+                        <img src="../assets/hero-astronaut.png" alt="Nova Space Branding" style="object-fit: contain; padding: 20px;">
+                        <span class="portfolio-badge-metric">Identidad 3D Completa</span>
+                    </div>
+                    <div class="portfolio-info" style="text-align: left;">
+                        <span class="portfolio-category">Branding & 3D</span>
+                        <h4 class="portfolio-title">Nova FinTech Labs</h4>
+                        <p class="portfolio-desc">Sistema de identidad de marca futurista, manual de marca y biblioteca de componentes 3D vectoriales.</p>
+                        <div class="portfolio-tech-row">
+                            <span class="bento-tag">Branding</span>
+                            <span class="bento-tag">3D Assets</span>
+                            <span class="bento-tag">Figma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Ads -->
+                <div class="portfolio-card" data-category="ads">
+                    <div class="portfolio-thumb">
+                        <img src="../assets/astro4.png" alt="Scale Media Growth" style="object-fit: contain; padding: 20px;">
+                        <span class="portfolio-badge-metric">9.4x ROAS Promedio</span>
+                    </div>
+                    <div class="portfolio-info" style="text-align: left;">
+                        <span class="portfolio-category">Growth Ads & Creatives</span>
+                        <h4 class="portfolio-title">HyperCommerce Scale</h4>
+                        <p class="portfolio-desc">Estrategia multicanal de adquisición en Meta Ads y TikTok con creativos de alta frecuencia y funnels dinámicos.</p>
+                        <div class="portfolio-tech-row">
+                            <span class="bento-tag">Meta Ads</span>
+                            <span class="bento-tag">Creative Engine</span>
+                            <span class="bento-tag">ROAS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 32px;">
+                <a href="portfolio.html" class="btn-neon-outline">Ver Todo el Portafolio</a>
+            </div>
+        </section>
+
+        <!-- 7. THE PIXY WORKFLOW (4-STEP PROCESS) -->
+        <section style="margin-bottom: 60px;">
+            <div class="section-header">
+                <div class="badge" data-i18n="agency_creative.workflow_badge">Metodología Ágil</div>
+                <h2 class="section-title" data-i18n="agency_creative.workflow_title">Cómo Trabajamos <span class="gradient-text">Contigo</span></h2>
+                <p class="subtitle">Un proceso sin fricción pensado para avanzar a máxima velocidad sin sacrificar calidad.</p>
+            </div>
+
+            <div class="grid-4" style="gap: 20px;">
+                <div class="glass-card" style="padding: 24px 20px; text-align: left;">
+                    <span style="font-size: 1.8rem; font-weight: 900; color: var(--brand-pink); display: block; margin-bottom: 8px;">01</span>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary);">Kickoff & Briefing</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Definimos objetivos, alcance, requerimientos y estilo visual en una sesión de 20 minutos.</p>
+                </div>
+                <div class="glass-card" style="padding: 24px 20px; text-align: left;">
+                    <span style="font-size: 1.8rem; font-weight: 900; color: var(--brand-pink); display: block; margin-bottom: 8px;">02</span>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary);">Diseño & Creación</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Tu equipo creativo asignado entra en producción con entregas continuas en 24-48 horas.</p>
+                </div>
+                <div class="glass-card" style="padding: 24px 20px; text-align: left;">
+                    <span style="font-size: 1.8rem; font-weight: 900; color: var(--brand-pink); display: block; margin-bottom: 8px;">03</span>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary);">Feedback & Pulido</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Revisiones ágiles en tiempo real a través de tu canal privado de comunicación sin burocracia.</p>
+                </div>
+                <div class="glass-card" style="padding: 24px 20px; text-align: left;">
+                    <span style="font-size: 1.8rem; font-weight: 900; color: var(--brand-pink); display: block; margin-bottom: 8px;">04</span>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary);">Lanzamiento & Escala</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Publicación en producción, entrega de assets finales y optimización constante de rendimiento.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. FREQUENTLY ASKED QUESTIONS (FAQ) -->
+        <section style="margin-bottom: 60px; max-width: 860px; margin-left: auto; margin-right: auto;">
+            <div class="section-header">
+                <div class="badge">FAQ</div>
+                <h2 class="section-title">Preguntas <span class="gradient-text">Frecuentes</span></h2>
+                <p class="subtitle">Todo lo que necesitas saber antes de comenzar a trabajar juntos.</p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>¿Cómo funciona el Departamento de Diseño Dedicado?</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Te suscribes a uno de nuestros planes mensuales y obtienes acceso inmediato a solicitudes ilimitadas. Trabajamos en tus pedidos de forma secuencial y te entregamos los avances en 24 a 48 horas. Puedes pausar tu suscripción cuando no tengas trabajo activo y reanudarla cuando quieras.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>¿Qué diferencia hay entre Agency y Spaces?</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p><strong>Agency</strong> es nuestro estudio creativo y de desarrollo (diseñamos marcas de élite, sitios web ultra rápidos y gestionamos campañas publicitarias). <strong>Spaces</strong> es nuestra plataforma de software CRM y automatización para múltiples industrias.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>¿Puedo contratar un proyecto puntual sin suscripción?</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>¡Sí, absolutamente! Ofrecemos proyectos cerrados de Desarrollo Web, Branding completo o Campañas de Ads con entregas por hitos. Puedes usar nuestro Cotizador Inteligente para estimar tu proyecto.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>¿Cómo nos comunicamos durante el proyecto?</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Asignamos un canal privado exclusivo en Slack o WhatsApp donde tendrás contacto directo con tu diseñador senior y director de arte asignado, garantizando respuestas rápidas sin tickets engorrosos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FINAL CTA BANNER -->
+        <section class="glass-card" style="text-align: center; padding: 48px 32px; margin-bottom: 40px; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 300px; height: 300px; background: radial-gradient(circle, rgba(242, 5, 226, 0.2) 0%, transparent 70%); filter: blur(40px); pointer-events: none;"></div>
+            <h2 class="gradient-text" style="font-size: 2.4rem; margin-bottom: 14px;" data-i18n="agency_creative.cta_title">¿Listo para llevar tu marca al siguiente nivel?</h2>
+            <p style="color: var(--text-secondary); max-width: 620px; margin: 0 auto 28px; font-size: 1rem;" data-i18n="agency_creative.cta_subtitle">
+                Agenda una llamada de 15 minutos o cotiza tu proyecto ahora mismo. Cupos limitados por mes.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                <a href="#calculator" class="btn-neon" style="padding: 12px 32px; font-size: 0.95rem;">Cotizar Proyecto Ahora</a>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 12px 28px; font-size: 0.95rem;">Hablar con el Equipo</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 10. DEDICATED PIXY AGENCY FOOTER (LEFT-ALIGNED & COMPACT) -->
+    <footer class="agency-footer">
+        <div class="agency-footer-container">
+            <div class="agency-footer-grid">
+                <!-- Brand Info -->
+                <div class="agency-footer-brand">
+                    <img src="../assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark" style="height: 30px; margin-bottom: 12px;">
+                    <img src="../assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light" style="height: 30px; margin-bottom: 12px;">
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; max-width: 280px;" data-i18n="agency_creative.footer_desc">
+                        Estudio creativo, desarrollo web de alto rendimiento y departamento de diseño dedicado.
+                    </p>
+                </div>
+
+                <!-- Column 1: Servicios -->
+                <div class="agency-footer-col">
+                    <h4>Servicios</h4>
+                    <ul class="agency-footer-links">
+                        <li><a href="services.html">Desarrollo Web & Apps</a></li>
+                        <li><a href="services.html">Branding & Identidad</a></li>
+                        <li><a href="services.html">Growth Ads & Media</a></li>
+                        <li><a href="services.html">Content Engine</a></li>
+                        <li><a href="services.html">UI/UX Design</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Planes -->
+                <div class="agency-footer-col">
+                    <h4>Planes</h4>
+                    <ul class="agency-footer-links">
+                        <li><a href="plans.html">Diseño Dedicado Starter</a></li>
+                        <li><a href="plans.html">Pro Growth Studio</a></li>
+                        <li><a href="plans.html">Scale Enterprise</a></li>
+                        <li><a href="#calculator">Cotizador de Proyectos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Portafolio & Empresa -->
+                <div class="agency-footer-col">
+                    <h4>Portafolio</h4>
+                    <ul class="agency-footer-links">
+                        <li><a href="portfolio.html">Casos de Éxito</a></li>
+                        <li><a href="../about.html">Sobre Pixy</a></li>
+                        <li><a href="../blog.html">Blog & Insights</a></li>
+                        <li><a href="contact.html">Contacto Directo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Legal & Ecosistema -->
+                <div class="agency-footer-col">
+                    <h4>Ecosistema</h4>
+                    <ul class="agency-footer-links">
+                        <li><a href="../index.html">Pixy Spaces (CRM)</a></li>
+                        <li><a href="../spaces.html">Industrias Spaces</a></li>
+                        <li><a href="../privacy.html">Privacidad</a></li>
+                        <li><a href="../terms.html">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="agency-footer-bottom">
+                <p data-i18n="agency_creative.footer_copy">© 2026 Pixy Creative Studio. Todos los derechos reservados.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="../privacy.html" style="color: var(--text-secondary); text-decoration: none;">Privacidad</a>
+                    <a href="../terms.html" style="color: var(--text-secondary); text-decoration: none;">Términos</a>
+                    <a href="https://linkedin.com/company/pixy" target="_blank" style="color: var(--text-secondary); text-decoration: none;">LinkedIn</a>
+                    <a href="https://instagram.com/pixy" target="_blank" style="color: var(--text-secondary); text-decoration: none;">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../js/i18n.js"></script>
+    <script src="../js/header-switcher.js"></script>
+    <script src="../js/agency-calculator.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
