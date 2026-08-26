@@ -38,8 +38,8 @@
         }
     </style>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/pages.css?v=6">
+    <link rel="stylesheet" href="css/components.css?v=7">
+    <link rel="stylesheet" href="css/pages.css?v=10">
 </head>
 
 <body class="industries-page">
@@ -98,16 +98,55 @@
         <!-- 3D CAROUSEL CONTAINER -->
         <div class="spaces-carousel-wrapper">
             <div class="spaces-carousel">
-                <!-- Card 1: Agency (Active) -->
-                <div class="space-card active" data-space="agency">
-                    <div class="card-floating-iso">
-                        <div class="iso-circle">
-                            <img src="assets/logos/iso.svg" class="card-iso-icon" alt="Pixy Agency">
-                        </div>
+                <!-- Card 1: Retail (Active) -->
+                <div class="space-card active" data-space="retail">
+                    <div class="card-space-visual">
+                        <img src="assets/elementos de spaces/reatil.png" class="space-visual-asset" alt="Pixy Retail">
                     </div>
                     <div class="card-body">
-                        <span class="card-subtitle" data-i18n="industries.card_agency_subtitle">Industry OS</span>
-                        <h2 data-i18n="industries.card_agency_title">Agency</h2>
+                        <h2 class="space-card-title" data-i18n="industries.card_retail_title">Retail</h2>
+                        <ul class="card-features-list">
+                            <li><span class="feature-dot"></span>Pixy Flows</li>
+                            <li><span class="feature-dot"></span>Inventario Omnicanal</li>
+                            <li><span class="feature-dot"></span>Auto-Pilot</li>
+                            <li><span class="feature-dot"></span>POS Inteligente</li>
+                            <li><span class="feature-dot"></span>Cowork AI</li>
+                            <li><span class="feature-dot"></span>Envíos & Tracking</li>
+                        </ul>
+                    </div>
+                    <div class="card-floating-action">
+                        <a href="contact.html" class="btn-card-action" data-i18n="industries.card_retail_btn">Explorar Space</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Resto (Active) -->
+                <div class="space-card next" data-space="resto">
+                    <div class="card-space-visual">
+                        <img src="assets/elementos de spaces/resto.png" class="space-visual-asset" alt="Pixy Resto">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="space-card-title" data-i18n="industries.card_resto_title">Resto</h2>
+                        <ul class="card-features-list">
+                            <li><span class="feature-dot"></span>Pixy Flows</li>
+                            <li><span class="feature-dot"></span>Reservas en Vivo</li>
+                            <li><span class="feature-dot"></span>Auto-Pilot</li>
+                            <li><span class="feature-dot"></span>Menú QR & Mesas</li>
+                            <li><span class="feature-dot"></span>Cowork AI</li>
+                            <li><span class="feature-dot"></span>Pedidos Delivery</li>
+                        </ul>
+                    </div>
+                    <div class="card-floating-action">
+                        <a href="contact.html" class="btn-card-action" data-i18n="industries.card_resto_btn">Explorar Space</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Agency (Active) -->
+                <div class="space-card" data-space="agency">
+                    <div class="card-space-visual">
+                        <img src="assets/elementos de spaces/agency.png" class="space-visual-asset" alt="Pixy Agency">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="space-card-title" data-i18n="industries.card_agency_title">Agency</h2>
                         <ul class="card-features-list">
                             <li><span class="feature-dot"></span>Pixy Flows</li>
                             <li><span class="feature-dot"></span>Marca Blanca</li>
@@ -118,94 +157,121 @@
                         </ul>
                     </div>
                     <div class="card-floating-action">
-                        <a href="space-agency.html" class="btn-card-action" data-i18n="industries.card_agency_btn">Explorar
-                            Space</a>
+                        <a href="space-agency.html" class="btn-card-action" data-i18n="industries.card_agency_btn">Explorar Space</a>
                     </div>
                 </div>
 
-                <!-- Card 2: Resto -->
-                <div class="space-card next" data-space="resto">
-                    <div class="card-floating-iso">
-                        <div class="iso-circle">
-                            <img src="assets/logos/iso.svg" class="card-iso-icon" alt="Pixy Resto">
-                        </div>
+                <!-- Card 4: Real Estate (Active) -->
+                <div class="space-card" data-space="realstate">
+                    <div class="card-space-visual">
+                        <img src="assets/elementos de spaces/real state.png" class="space-visual-asset" alt="Pixy Real Estate">
                     </div>
                     <div class="card-body">
-                        <span class="card-subtitle" data-i18n="industries.card_resto_subtitle">F&B OS</span>
-                        <h2 data-i18n="industries.card_resto_title">Resto</h2>
+                        <h2 class="space-card-title" data-i18n="industries.card_realstate_title">Real Estate</h2>
                         <ul class="card-features-list">
                             <li><span class="feature-dot"></span>Pixy Flows</li>
-                            <li><span class="feature-dot"></span>Reservas</li>
+                            <li><span class="feature-dot"></span>Gestión Inmobiliaria</li>
                             <li><span class="feature-dot"></span>Auto-Pilot</li>
-                            <li><span class="feature-dot"></span>Menú QR</li>
+                            <li><span class="feature-dot"></span>Pipeline Ventas</li>
                             <li><span class="feature-dot"></span>Cowork AI</li>
-                            <li><span class="feature-dot"></span>Pedidos</li>
+                            <li><span class="feature-dot"></span>Portales & Web</li>
                         </ul>
                     </div>
                     <div class="card-floating-action">
-                        <button class="btn-card-action disabled" disabled
-                            data-i18n="industries.card_resto_btn">Próximamente</button>
+                        <a href="contact.html" class="btn-card-action" data-i18n="industries.card_realstate_btn">Explorar Space</a>
                     </div>
                 </div>
 
-                <!-- Card 3: Commerce -->
-                <div class="space-card" data-space="commerce">
-                    <div class="card-floating-iso">
-                        <div class="iso-circle">
-                            <img src="assets/logos/iso.svg" class="card-iso-icon" alt="Pixy Commerce">
-                        </div>
+                <!-- Card 5: SaaS (Active) -->
+                <div class="space-card" data-space="saas">
+                    <div class="card-space-visual">
+                        <img src="assets/elementos de spaces/saas.png" class="space-visual-asset" alt="Pixy SaaS">
                     </div>
                     <div class="card-body">
-                        <span class="card-subtitle" data-i18n="industries.card_commerce_subtitle">Retail OS</span>
-                        <h2 data-i18n="industries.card_commerce_title">Commerce</h2>
+                        <h2 class="space-card-title" data-i18n="industries.card_saas_title">SaaS</h2>
                         <ul class="card-features-list">
                             <li><span class="feature-dot"></span>Pixy Flows</li>
-                            <li><span class="feature-dot"></span>Inventario</li>
+                            <li><span class="feature-dot"></span>Gestión Suscriptores</li>
                             <li><span class="feature-dot"></span>Auto-Pilot</li>
-                            <li><span class="feature-dot"></span>Shopify Sync</li>
+                            <li><span class="feature-dot"></span>Facturación Stripe</li>
                             <li><span class="feature-dot"></span>Cowork AI</li>
-                            <li><span class="feature-dot"></span>Logistic</li>
+                            <li><span class="feature-dot"></span>Métricas Churn</li>
                         </ul>
                     </div>
                     <div class="card-floating-action">
-                        <button class="btn-card-action disabled" disabled>Próximamente</button>
+                        <a href="contact.html" class="btn-card-action" data-i18n="industries.card_saas_btn">Explorar Space</a>
                     </div>
                 </div>
 
-                <!-- Card 4: Services (New) -->
-                <div class="space-card" data-space="services">
-                    <div class="card-floating-iso">
-                        <div class="iso-circle">
-                            <img src="assets/logos/iso.svg" class="card-iso-icon" alt="Pixy Services">
-                        </div>
+                <!-- Card 6: Legal (Próximamente) -->
+                <div class="space-card" data-space="legal">
+                    <div class="card-space-visual">
+                        <img src="assets/elementos de spaces/lawer.png" class="space-visual-asset" alt="Pixy Legal">
                     </div>
                     <div class="card-body">
-                        <span class="card-subtitle" data-i18n="industries.card_services_subtitle">Professional OS</span>
-                        <h2 data-i18n="industries.card_services_title">Services</h2>
+                        <h2 class="space-card-title" data-i18n="industries.card_legal_title">Legal</h2>
                         <ul class="card-features-list">
                             <li><span class="feature-dot"></span>Pixy Flows</li>
-                            <li><span class="feature-dot"></span>Citas</li>
+                            <li><span class="feature-dot"></span>Gestión de Casos</li>
                             <li><span class="feature-dot"></span>Auto-Pilot</li>
-                            <li><span class="feature-dot"></span>CRM</li>
+                            <li><span class="feature-dot"></span>Firma Digital</li>
                             <li><span class="feature-dot"></span>Cowork AI</li>
-                            <li><span class="feature-dot"></span>Pagos</li>
+                            <li><span class="feature-dot"></span>Facturación Horaria</li>
                         </ul>
                     </div>
                     <div class="card-floating-action">
-                        <button class="btn-card-action disabled" disabled
-                            data-i18n="industries.card_services_btn">Próximamente</button>
+                        <button class="btn-card-action disabled" disabled data-i18n="industries.card_legal_btn">Próximamente</button>
                     </div>
                 </div>
 
+                <!-- Card 7: Rent a Car (Próximamente) -->
+                <div class="space-card" data-space="rentcar">
+                    <div class="card-space-visual">
+                        <img src="assets/elementos de spaces/rentcar.png" class="space-visual-asset" alt="Pixy Rent a Car">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="space-card-title" data-i18n="industries.card_rentcar_title">Rent a Car</h2>
+                        <ul class="card-features-list">
+                            <li><span class="feature-dot"></span>Pixy Flows</li>
+                            <li><span class="feature-dot"></span>Flota & Calendario</li>
+                            <li><span class="feature-dot"></span>Auto-Pilot</li>
+                            <li><span class="feature-dot"></span>Contratos Digitales</li>
+                            <li><span class="feature-dot"></span>Cowork AI</li>
+                            <li><span class="feature-dot"></span>GPS & Control</li>
+                        </ul>
+                    </div>
+                    <div class="card-floating-action">
+                        <button class="btn-card-action disabled" disabled data-i18n="industries.card_rentcar_btn">Próximamente</button>
+                    </div>
+                </div>
 
+                <!-- Card 8: Services (Próximamente) -->
+                <div class="space-card prev" data-space="services">
+                    <div class="card-space-visual">
+                        <img src="assets/elementos de spaces/shoping.png" class="space-visual-asset" alt="Pixy Services">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="space-card-title" data-i18n="industries.card_services_title">Services</h2>
+                        <ul class="card-features-list">
+                            <li><span class="feature-dot"></span>Pixy Flows</li>
+                            <li><span class="feature-dot"></span>Agenda & Citas</li>
+                            <li><span class="feature-dot"></span>Auto-Pilot</li>
+                            <li><span class="feature-dot"></span>CRM Especializado</li>
+                            <li><span class="feature-dot"></span>Cowork AI</li>
+                            <li><span class="feature-dot"></span>Enlaces de Pago</li>
+                        </ul>
+                    </div>
+                    <div class="card-floating-action">
+                        <button class="btn-card-action disabled" disabled data-i18n="industries.card_services_btn">Próximamente</button>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Controls -->
-        <div class="carousel-controls">
-            <button class="control-btn prev-btn" onclick="rotateCarousel('prev')">←</button>
-            <button class="control-btn next-btn" onclick="rotateCarousel('next')">→</button>
-        </div>
+            <!-- Controls -->
+            <div class="carousel-controls">
+                <button class="control-btn prev-btn" onclick="rotateCarousel('prev')" aria-label="Anterior">←</button>
+                <button class="control-btn next-btn" onclick="rotateCarousel('next')" aria-label="Siguiente">→</button>
+            </div>
         </div>
 
         <!-- MIGRATED FEATURES CONTENT -->

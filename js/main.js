@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(() => loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js'))
         .then(() => loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js'))
         .then(() => {
+            initGSAPHero();
             const isSubfolder = window.location.pathname.includes('/agency/');
             const prefix = isSubfolder ? '../js/' : 'js/';
             if (!document.querySelector('script[src*="header-lego.js"]')) {
@@ -295,7 +296,6 @@ function initScrollAnimations() {
         article,
         .glass-card, 
         .step-card,
-        .space-card,
         .blog-card,
         .feature-row, 
         .grid-2, 
@@ -563,15 +563,18 @@ function initAccordion() {
    GSAP HERO ANIMATION
    ============================================ */
 function initGSAPHero() {
+    const hero = document.querySelector('.hero-space');
+    if (!hero || hero.dataset.gsapInitialized === 'true') return;
+    hero.dataset.gsapInitialized = 'true';
+
     gsap.registerPlugin(ScrollTrigger);
 
-    const hero = document.querySelector('.hero-space');
     const content = document.querySelector('.hero-space .hero-content-left') || document.querySelector('.hero-content-left');
     const astroWrapper = document.querySelector('.hero-space .agency-hero-astronaut-wrapper') || document.querySelector('.spaces-astro-pos') || document.querySelector('.astronaut-hero');
     const orbWrapper = document.querySelector('.hero-space .hero-hand-orb-wrapper') || document.querySelector('.spaces-orb-pos') || document.querySelector('.hero-hand-orb');
     const glow = document.querySelector('.hero-space .agency-visual-glow');
 
-    if (!hero || !astroWrapper) return;
+    if (!astroWrapper) return;
 
     // 1. TIMELINE: Entrance ("In") Animation
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
@@ -709,18 +712,19 @@ function initSpacesCarousel() {
 
     function updateCarousel() {
         cards.forEach((card, index) => {
-            // Reset classes
-            card.className = 'space-card hidden';
-
             // Determine position
             if (index === currentIndex) {
                 card.className = 'space-card active';
+                card.onclick = null;
             } else if (index === (currentIndex + 1) % cards.length) {
                 card.className = 'space-card next';
                 card.onclick = () => { currentIndex = index; updateCarousel(); };
             } else if (index === (currentIndex - 1 + cards.length) % cards.length) {
                 card.className = 'space-card prev';
                 card.onclick = () => { currentIndex = index; updateCarousel(); };
+            } else {
+                card.className = 'space-card hidden';
+                card.onclick = null;
             }
         });
     }
