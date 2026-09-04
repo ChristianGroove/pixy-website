@@ -34,16 +34,20 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="index.html" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="spaces.html" class="neon-link">Spaces</a>
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="blog.html" class="neon-link active">Blog</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link active" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <button id="lang-toggle" class="btn-lang" style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
@@ -51,78 +55,51 @@
     <header class="article-hero">
         <div class="article-hero-bg"></div>
         <div class="container">
-            <div class="badge" style="margin-bottom: 24px; background: linear-gradient(135deg, #3b82f6, #2563eb);">
-                Automatización</div>
-            <h1>
-                Automatización de Citas: Recupera el 30% de leads que pierdes al agendar
-            </h1>
+            <div class="badge" style="margin-bottom: 24px; background: linear-gradient(135deg, #3b82f6, #2563eb);" data-i18n="art_automation.badge">Automatización</div>
+            <h1 data-i18n="art_automation.title">Automatización de Citas: Recupera el 30% de leads que pierdes al agendar</h1>
             <div class="article-meta">
-                <span>👤 Ana R.</span>
+                <span data-i18n="art_automation.meta_author">👤 Ana R.</span>
                 <span>•</span>
-                <span>📅 Ene 05, 2026</span>
+                <span data-i18n="art_automation.meta_date">📅 Ene 05, 2026</span>
                 <span>•</span>
-                <span>⏱️ 6 min lectura</span>
+                <span data-i18n="art_automation.meta_time">⏱️ 6 min lectura</span>
             </div>
         </div>
     </header>
 
     <main class="container" style="padding-bottom: 80px;">
         <article class="article-content">
-            <p class="lead" style="font-size: 1.3rem; margin-bottom: 40px; color: var(--text-primary);">
-                "¿Puedes el martes a las 3?"... "No, mejor el miércoles a las 11"... "Uy, ya se ocupó esa hora". Este
-                baile de correos y chats es donde mueren tus ventas.
-            </p>
+            <p class="lead" style="font-size: 1.3rem; margin-bottom: 40px; color: var(--text-primary);" data-i18n="art_automation.p1">"¿Puedes el martes a las 3?"... "No, mejor el miércoles a las 11"... "Uy, ya se ocupó esa hora". Este baile de correos y chats es donde mueren tus ventas.</p>
 
-            <p>
-                Eliminar la fricción en el agendamiento es una de las victorias más rápidas que puede tener un negocio
-                de servicios. Ya sea que tengas una clínica dental, un despacho legal o una consultora, <strong>tu
-                    calendario debe estar abierto 24/7</strong>.
-            </p>
+            <p><span data-i18n="art_automation.p2_prefix">Eliminar la fricción en el agendamiento es una de las victorias más rápidas que puede tener un negocio de servicios. Ya sea que tengas una clínica dental, un despacho legal o una consultora,</span> <strong data-i18n="art_automation.p2_bold">tu calendario debe estar abierto 24/7.</strong></p>
 
-            <h2>El Costo Invisible del "Ida y Vuelta"</h2>
-            <p>
-                Cada interacción necesaria para coordinar una hora aumenta la probabilidad de abandono en un 15%. Si te
-                toma 4 mensajes agendar una demo, has perdido casi a la mitad de tus interesados antes de siquiera
-                hablar con ellos.
-            </p>
+            <h2 data-i18n="art_automation.h2_cost">El Costo Invisible del "Ida y Vuelta"</h2>
+            <p data-i18n="art_automation.p_cost">Cada interacción necesaria para coordinar una hora aumenta la probabilidad de abandono en un 15%. Si te toma 4 mensajes agendar una demo, has perdido casi a la mitad de tus interesados antes de siquiera hablar con ellos.</p>
 
-            <div class="neon-quote">
-                "Tu cliente quiere una solución a su problema AHORA. Si tiene que esperar a que 'Sandra' revise la
-                agenda mañana por la mañana, buscará a otro."
-            </div>
+            <div class="neon-quote" data-i18n="art_automation.quote">"Tu cliente quiere una solución a su problema AHORA. Si tiene que esperar a que 'Sandra' revise la agenda mañana por la mañana, buscará a otro."</div>
 
-            <h2>Agenda Inteligente con Pixy</h2>
-            <p>
-                La automatización de citas de Pixy no es solo un formulario. Es un asistente virtual que vive en tu
-                WhatsApp y Web:
-            </p>
+            <h2 data-i18n="art_automation.h2_smart">Agenda Inteligente con Pixy</h2>
+            <p data-i18n="art_automation.p_smart">La automatización de citas de Pixy no es solo un formulario. Es un asistente virtual que vive en tu WhatsApp y Web:</p>
             <ol>
-                <li><strong>Sincronización Real:</strong> Se conecta con Google Calendar y Outlook. Si te pones una cita
-                    personal, Pixy bloquea ese espacio automáticamente para clientes.</li>
-                <li><strong>Recordatorios Anti-No-Show:</strong> Pixy envía recordatorios por WhatsApp 24h y 1h antes de
-                    la cita. Reducimos el ausentismo en un 60%.</li>
-                <li><strong>Reprogramación Autónoma:</strong> Si el cliente no puede asistir, puede reagendar solo, sin
-                    llamar a recepción.</li>
+                <li><strong data-i18n="art_automation.li1_bold">Sincronización Real:</strong> <span data-i18n="art_automation.li1_text">Se conecta con Google Calendar y Outlook. Si te pones una cita personal, Pixy bloquea ese espacio automáticamente para clientes.</span></li>
+                <li><strong data-i18n="art_automation.li2_bold">Recordatorios Anti-No-Show:</strong> <span data-i18n="art_automation.li2_text">Pixy envía recordatorios por WhatsApp 24h y 1h antes de la cita. Reducimos el ausentismo en un 60%.</span></li>
+                <li><strong data-i18n="art_automation.li3_bold">Reprogramación Autónoma:</strong> <span data-i18n="art_automation.li3_text">Si el cliente no puede asistir, puede reagendar solo, sin llamar a recepción.</span></li>
             </ol>
 
             <div class="article-cta-box">
-                <h3 style="margin-top: 0;">Llena tu agenda automáticamente</h3>
-                <p>Deja de jugar al tetris con tus horarios y deja que Pixy lo haga por ti.</p>
-                <a href="contact.html" class="btn-neon">Ver Funcionalidad</a>
+                <h3 style="margin-top: 0;" data-i18n="art_automation.cta_title">Llena tu agenda automáticamente</h3>
+                <p data-i18n="art_automation.cta_desc">Deja de jugar al tetris con tus horarios y deja que Pixy lo haga por ti.</p>
+                <a href="contact.html" class="btn-neon" data-i18n="art_automation.cta_btn">Ver Funcionalidad</a>
             </div>
 
-            <h2>Más allá de la Cita</h2>
-            <p>
-                Lo mejor de integrar esto en Pixy es lo que pasa <em>después</em>. Una vez agendada la cita, se crea el
-                perfil en el CRM, se envía el contrato preliminar y se notifica al especialista asignado. Todo sin que
-                muevas un dedo.
-            </p>
+            <h2 data-i18n="art_automation.h2_beyond">Más allá de la Cita</h2>
+            <p data-i18n="art_automation.p_beyond">Lo mejor de integrar esto en Pixy es lo que pasa después. Una vez agendada la cita, se crea el perfil en el CRM, se envía el contrato preliminar y se notifica al especialista asignado. Todo sin que muevas un dedo.</p>
 
             <div class="author-bio">
                 <div class="author-avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706);">AR</div>
                 <div>
-                    <h4 style="margin: 0 0 8px 0; color: var(--text-primary);">Ana Rodríguez</h4>
-                    <p style="margin: 0; font-size: 0.9rem;">COO en Pixy. Especialista en optimización de procesos.</p>
+                    <h4 style="margin: 0 0 8px 0; color: var(--text-primary);" data-i18n="articles_common.author_ana_name">Ana Rodríguez</h4>
+                    <p style="margin: 0; font-size: 0.9rem;" data-i18n="articles_common.author_ana_bio">COO en Pixy. Especialista en optimización de procesos.</p>
                 </div>
             </div>
 
@@ -130,43 +107,43 @@
 
         <!-- Related Articles -->
         <section class="related-articles">
-            <h3 style="font-size: 2rem; margin-bottom: 40px; text-align: center;">Sigue Aprendiendo</h3>
+            <h3 style="font-size: 2rem; margin-bottom: 40px; text-align: center;" data-i18n="articles_common.keep_learning">Sigue Aprendiendo</h3>
             <div class="blog-grid">
                 <a href="article-whatsapp-crm.html" class="blog-card" style="text-decoration: none;">
                     <div class="blog-image-wrapper">
-                        <span class="blog-category-badge">Estrategia</span>
+                        <span class="blog-category-badge" data-i18n="blog_page.cat_strategy">Estrategia</span>
                         <div class="blog-image-placeholder"></div>
                     </div>
                     <div class="blog-content">
-                        <h3>El Fin del "Visto"</h3>
-                        <p class="blog-excerpt">Por qué integrar WhatsApp a tu CRM es innegociable.</p>
-                        <span class="neon-link">Leer Artículo →</span>
+                        <h3 data-i18n="blog.art_1_title">El Fin del "Visto"</h3>
+                        <p class="blog-excerpt" data-i18n="blog.art_1_desc">Por qué integrar WhatsApp a tu CRM es innegociable.</p>
+                        <span class="neon-link" data-i18n="articles_common.read_article">Leer Artículo →</span>
                     </div>
                 </a>
                 <a href="article-omnichannel.html" class="blog-card" style="text-decoration: none;">
                     <div class="blog-image-wrapper">
                         <span class="blog-category-badge"
-                            style="background: rgba(236, 72, 153, 0.2); color: #f472b6; border-color: rgba(236, 72, 153, 0.4);">Tendencias</span>
+                            style="background: rgba(236, 72, 153, 0.2); color: #f472b6; border-color: rgba(236, 72, 153, 0.4);" data-i18n="blog_page.cat_trends">Tendencias</span>
                         <div class="blog-image-placeholder"
                             style="background: linear-gradient(135deg, #8E2DE2, #4A00E0);"></div>
                     </div>
                     <div class="blog-content">
-                        <h3>El Cliente Híbrido</h3>
-                        <p class="blog-excerpt">Uniendo el mundo físico y digital.</p>
-                        <span class="neon-link">Leer Artículo →</span>
+                        <h3 data-i18n="art_omnichannel.title">El Cliente Híbrido</h3>
+                        <p class="blog-excerpt" data-i18n="art_omnichannel.p2_bold">Uniendo el mundo físico y digital.</p>
+                        <span class="neon-link" data-i18n="articles_common.read_article">Leer Artículo →</span>
                     </div>
                 </a>
                 <a href="article-conversational-commerce.html" class="blog-card" style="text-decoration: none;">
                     <div class="blog-image-wrapper">
                         <span class="blog-category-badge"
-                            style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Ventas</span>
+                            style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4);" data-i18n="blog_page.cat_sales">Ventas</span>
                         <div class="blog-image-placeholder"
                             style="background: linear-gradient(135deg, #1A2980, #26D0CE);"></div>
                     </div>
                     <div class="blog-content">
-                        <h3>Conversational Commerce</h3>
-                        <p class="blog-excerpt">El secreto para duplicar la retención.</p>
-                        <span class="neon-link">Leer Artículo →</span>
+                        <h3 data-i18n="art_commerce.title">Conversational Commerce</h3>
+                        <p class="blog-excerpt" data-i18n="art_commerce.p1">El secreto para duplicar la retención.</p>
+                        <span class="neon-link" data-i18n="articles_common.read_article">Leer Artículo →</span>
                     </div>
                 </a>
             </div>

@@ -27,16 +27,20 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="index.html" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="spaces.html" class="neon-link">Spaces</a>
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="blog.html" class="neon-link active">Blog</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link active" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <button id="lang-toggle" class="btn-lang" style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
@@ -44,76 +48,49 @@
     <header class="article-hero">
         <div class="article-hero-bg"></div>
         <div class="container">
-            <div class="badge" style="margin-bottom: 24px; background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
-                Tecnología</div>
-            <h1>
-                Data-Driven: Por qué necesitas dashboards que sí funcionen
-            </h1>
+            <div class="badge" style="margin-bottom: 24px; background: linear-gradient(135deg, #8b5cf6, #7c3aed);" data-i18n="art_data_extra.badge">Tecnología</div>
+            <h1 data-i18n="art_data_extra.title">Data-Driven: Por qué necesitas dashboards que sí funcionen</h1>
             <div class="article-meta">
-                <span>👤 Carlos M.</span>
+                <span data-i18n="art_data_extra.author">👤 Carlos M.</span>
                 <span>•</span>
-                <span>📅 Dic 28, 2025</span>
+                <span data-i18n="art_data.meta_date">📅 Dic 28, 2025</span>
                 <span>•</span>
-                <span>⏱️ 5 min lectura</span>
+                <span data-i18n="art_data_extra.read_time">⏱️ 5 min lectura</span>
             </div>
         </div>
     </header>
 
     <main class="container" style="padding-bottom: 80px;">
         <article class="article-content">
-            <p class="lead" style="font-size: 1.3rem; margin-bottom: 40px; color: var(--text-primary);">
-                ¿Sigues tomando decisiones basándote en un Excel que tu contador te envía el día 20 del mes siguiente?
-                En el mundo digital, esa información ya está obsoleta.
-            </p>
+            <p class="lead" style="font-size: 1.3rem; margin-bottom: 40px; color: var(--text-primary);" data-i18n="art_data_extra.p1">¿Sigues tomando decisiones basándote en un Excel que tu contador te envía el día 20 del mes siguiente? En el mundo digital, esa información ya está obsoleta.</p>
 
-            <p>
-                Ser "Data-Driven" no significa tener muchos reportes. Significa tener la información correcta en el
-                momento en que ocurre la acción. Si no sabes cuánto vendiste ayer hasta la próxima semana, estás volando
-                a ciegas.
-            </p>
+            <p data-i18n="art_data_extra.p2">Ser "Data-Driven" no significa tener muchos reportes. Significa tener la información correcta en el momento en que ocurre la acción. Si no sabes cuánto vendiste ayer hasta la próxima semana, estás volando a ciegas.</p>
 
-            <h2>Métricas de Vanidad vs. Métricas de Acción</h2>
-            <p>
-                Muchos CRMs te llenan de gráficos bonitos pero inútiles. "10,000 likes en Facebook" no paga la nómina.
-            </p>
-            <p>
-                En Pixy, nos enfocamos en reportes que te dicen qué hacer:
-            </p>
+            <h2 data-i18n="art_data_extra.h2_vanity">Métricas de Vanidad vs. Métricas de Acción</h2>
+            <p data-i18n="art_data_extra.p_vanity">Muchos CRMs te llenan de gráficos bonitos pero inútiles. "10,000 likes en Facebook" no paga la nómina. En Pixy, nos enfocamos en reportes que te dicen qué hacer:</p>
             <ul>
-                <li><strong>Pipeline Velocity:</strong> ¿Qué tan rápido se mueven tus leads? Si se estancan en
-                    "Propuesta Enviada", tienes un problema de cierre.</li>
-                <li><strong>Costo por Adquisición (CAC) por Canal:</strong> ¿WhatsApp te trae clientes más baratos que
-                    Instagram? Reasigna tu presupuesto hoy, no el otro mes.</li>
-                <li><strong>Churn Rate Predictivo:</strong> Pixy te alerta qué clientes tienen un patrón de
-                    comportamiento de riesgo para que intervengas antes de que se vayan.</li>
+                <li><strong data-i18n="art_data_extra.li_velocity_bold">Pipeline Velocity:</strong> <span data-i18n="art_data_extra.li_velocity_desc">¿Qué tan rápido se mueven tus leads? Si se estancan en "Propuesta Enviada", tienes un problema de cierre.</span></li>
+                <li><strong data-i18n="art_data_extra.li_cac_bold">Costo por Adquisición (CAC) por Canal:</strong> <span data-i18n="art_data_extra.li_cac_desc">¿WhatsApp te trae clientes más baratos que Instagram? Reasigna tu presupuesto hoy, no el otro mes.</span></li>
+                <li><strong data-i18n="art_data_extra.li_churn_bold">Churn Rate Predictivo:</strong> <span data-i18n="art_data_extra.li_churn_desc">Pixy te alerta qué clientes tienen un patrón de comportamiento de riesgo para que intervengas antes de que se vayan.</span></li>
             </ul>
 
-            <div class="neon-quote">
-                "Los datos sin contexto son ruido. Los datos con acción son oro. Tu dashboard debe ser tu mapa, no solo
-                tu retrovisor."
-            </div>
+            <div class="neon-quote" data-i18n="art_data_extra.quote">"Los datos sin contexto son ruido. Los datos con acción son oro. Tu dashboard debe ser tu mapa, no solo tu retrovisor."</div>
 
-            <h2>Tu Centro de Mando en Tiempo Real</h2>
-            <p>
-                Los dashboards de Pixy se actualizan al segundo. Si un vendedor cierra un trato en Bogotá, el gerente en
-                México lo ve instantáneamente.
-            </p>
-            <p>
-                Personaliza tus vistas para ver solo lo que importa. El CEO ve ingresos globales; el líder de ventas ve
-                actividades diarias; soporte ve tiempos de respuesta. Cada quien con su brújula calibrada.
-            </p>
+            <h2 data-i18n="art_data_extra.h2_realtime">Tu Centro de Mando en Tiempo Real</h2>
+            <p data-i18n="art_data_extra.p_realtime1">Los dashboards de Pixy se actualizan al segundo. Si un vendedor cierra un trato en Bogotá, el gerente en México lo ve instantáneamente.</p>
+            <p data-i18n="art_data_extra.p_realtime2">Personaliza tus vistas para ver solo lo que importa. El CEO ve ingresos globales; el líder de ventas ve actividades diarias; soporte ve tiempos de respuesta. Cada quien con su brújula calibrada.</p>
 
             <div class="article-cta-box">
-                <h3 style="margin-top: 0;">Deja de adivinar</h3>
-                <p>Toma el control de tus números con dashboards diseñados para la acción, no para la decoración.</p>
-                <a href="contact.html" class="btn-neon">Ver Dashboards</a>
+                <h3 style="margin-top: 0;" data-i18n="art_data_extra.cta_title">Deja de adivinar</h3>
+                <p data-i18n="art_data_extra.cta_desc">Toma el control de tus números con dashboards diseñados para la acción, no para la decoración.</p>
+                <a href="contact.html" class="btn-neon" data-i18n="art_data_extra.cta_btn">Ver Dashboards</a>
             </div>
 
             <div class="author-bio">
                 <div class="author-avatar">CM</div>
                 <div>
-                    <h4 style="margin: 0 0 8px 0; color: var(--text-primary);">Carlos Martínez</h4>
-                    <p style="margin: 0; font-size: 0.9rem;">Head of Growth en Pixy.</p>
+                    <h4 style="margin: 0 0 8px 0; color: var(--text-primary);" data-i18n="articles_common.author_carlos_name">Carlos Martínez</h4>
+                    <p style="margin: 0; font-size: 0.9rem;" data-i18n="articles_common.author_carlos_bio">Head of Growth en Pixy.</p>
                 </div>
             </div>
 
@@ -121,39 +98,39 @@
 
         <!-- Related Articles -->
         <section class="related-articles">
-            <h3 style="font-size: 2rem; margin-bottom: 40px; text-align: center;">Sigue Aprendiendo</h3>
+            <h3 style="font-size: 2rem; margin-bottom: 40px; text-align: center;" data-i18n="articles_common.keep_learning">Sigue Aprendiendo</h3>
             <div class="blog-grid">
                 <a href="article-operational-chaos.html" class="blog-card" style="text-decoration: none;">
                     <div class="blog-image-wrapper">
-                        <span class="blog-category-badge">Gestión</span>
+                        <span class="blog-category-badge" data-i18n="blog_page.cat_management">Gestión</span>
                         <div class="blog-image-placeholder"></div>
                     </div>
                     <div class="blog-content">
-                        <h3>Caos Operativo</h3>
-                        <p class="blog-excerpt">5 señales de alerta en tu agencia.</p>
-                        <span class="neon-link">Leer Artículo →</span>
+                        <h3 data-i18n="art_chaos.title">Caos Operativo</h3>
+                        <p class="blog-excerpt" data-i18n="art_chaos.p1">5 señales de alerta en tu agencia.</p>
+                        <span class="neon-link" data-i18n="articles_common.read_article">Leer Artículo →</span>
                     </div>
                 </a>
                 <a href="article-whatsapp-crm.html" class="blog-card" style="text-decoration: none;">
                     <div class="blog-image-wrapper">
-                        <span class="blog-category-badge">Estrategia</span>
+                        <span class="blog-category-badge" data-i18n="blog_page.cat_strategy">Estrategia</span>
                         <div class="blog-image-placeholder"></div>
                     </div>
                     <div class="blog-content">
-                        <h3>El Fin del "Visto"</h3>
-                        <p class="blog-excerpt">WhatsApp CRM innegociable.</p>
-                        <span class="neon-link">Leer Artículo →</span>
+                        <h3 data-i18n="blog.art_1_title">El Fin del "Visto"</h3>
+                        <p class="blog-excerpt" data-i18n="blog.art_1_desc">WhatsApp CRM innegociable.</p>
+                        <span class="neon-link" data-i18n="articles_common.read_article">Leer Artículo →</span>
                     </div>
                 </a>
                 <a href="article-automation.html" class="blog-card" style="text-decoration: none;">
                     <div class="blog-image-wrapper">
-                        <span class="blog-category-badge">Automatización</span>
+                        <span class="blog-category-badge" data-i18n="blog_page.cat_automation">Automatización</span>
                         <div class="blog-image-placeholder"></div>
                     </div>
                     <div class="blog-content">
-                        <h3>Automatización de Citas</h3>
-                        <p class="blog-excerpt">Recupera leads 24/7.</p>
-                        <span class="neon-link">Leer Artículo →</span>
+                        <h3 data-i18n="art_automation.title">Automatización de Citas</h3>
+                        <p class="blog-excerpt" data-i18n="art_automation.cta_desc">Recupera leads 24/7.</p>
+                        <span class="neon-link" data-i18n="articles_common.read_article">Leer Artículo →</span>
                     </div>
                 </a>
             </div>

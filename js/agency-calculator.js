@@ -7,233 +7,374 @@
 (function () {
     'use strict';
 
-    const blueprintData = {
-        objectives: {
-            web3d: {
-                id: 'web3d',
-                name: 'Web 3D & High-Speed Development',
-                desc: 'Plataforma inmersiva en Next.js, motion a 60fps y velocidad de carga extrema de 0.6s.',
-                archTitle: 'Ecosistema Web Headless & Experiencia 3D',
-                stack: ['Next.js 14', 'GSAP Core', 'Spline 3D', 'TailwindCSS', 'Vercel Edge'],
-                timeline: 'Sprint Ágil: 2 a 3 semanas',
-                match: '98% Precision',
-                deliverables: [
-                    { phase: 'FASE 01', text: 'Arquitectura de información, wireframes interactivos y diseño UI/UX en Figma' },
-                    { phase: 'FASE 02', text: 'Desarrollo frontend headless optimizado a 60fps con Core Web Vitals 100%' },
-                    { phase: 'FASE 03', text: 'Integración de analítica avanzada, SEO técnico y despliegue en CDN global' }
-                ]
-            },
+    // ============================================
+    // INTERACTIVE PERFORMANCE & SPEED BENCHMARK
+    // ============================================
+    // ============================================
+    // INTERACTIVE PERFORMANCE & SPEED BENCHMARK (BILINGUAL ES / EN)
+    // ============================================
+    const benchmarkScenarios = {
+        es: {
             ecommerce: {
                 id: 'ecommerce',
-                name: 'E-Commerce & High-Conversion Funnels',
-                desc: 'Infraestructura de venta digital, arquitectura Shopify Headless y checkout optimizado.',
-                archTitle: 'Arquitectura E-Commerce & Conversión Acelerada',
-                stack: ['Shopify Plus', 'Next.js Commerce', 'Klaviyo API', 'CRO Engine', 'PostgreSQL'],
-                timeline: 'Sprint Ágil: 3 a 4 semanas',
-                match: '96% Precision',
-                deliverables: [
-                    { phase: 'FASE 01', text: 'Auditoría integral de experiencia de compra y diseño de arquitectura de catálogo' },
-                    { phase: 'FASE 02', text: 'Desarrollo de tienda ultrarrápida con filtrado instantáneo y pasarelas de pago' },
-                    { phase: 'FASE 03', text: 'Automatización de flujos de retención y optimización de tasa de conversión' }
-                ]
+                name: 'E-Commerce & Checkout',
+                legacy: {
+                    url: 'tienda-convencional.com/checkout',
+                    loadTime: '4.5s',
+                    lighthouse: '34 / 100',
+                    bounce: '64%',
+                    conversion: '-38%',
+                    fps: '22 FPS',
+                    fpsLabel: 'Tirones & Lag',
+                    status: 'Cargando scripts de checkout y plugins pesados...'
+                },
+                pixy: {
+                    url: 'store.pixy.agency/checkout',
+                    loadTime: '0.5s',
+                    lighthouse: '100 / 100',
+                    bounce: '+92%',
+                    conversion: '+45%',
+                    fps: '60 FPS',
+                    fpsLabel: 'Fluidez Extrema',
+                    status: 'Shopify Headless • Checkout Instantáneo < 0.5s'
+                },
+                conclusion: 'La arquitectura Headless de Pixy reduce el abandono de carritos en un 45% y triplica la velocidad de compra.',
+                waMessage: 'Hola Pixy, quiero auditar el rendimiento y checkout de mi tienda online para migrar a su arquitectura Next-Gen.'
             },
-            branding: {
-                id: 'branding',
-                name: 'Brand Identity & 3D Systems',
-                desc: 'Sistema de marca integral, tipografía, dirección de arte y biblioteca de activos 3D.',
-                archTitle: 'Sistema de Identidad Visual & Modelado 3D',
-                stack: ['Blender 3D', 'Figma Tokens', 'Adobe CC', 'Design Systems'],
-                timeline: 'Sprint Ágil: 2 a 3 semanas',
-                match: '99% Precision',
-                deliverables: [
-                    { phase: 'FASE 01', text: 'Investigación estratégica de mercado, ADN de marca y territorio conceptual' },
-                    { phase: 'FASE 02', text: 'Diseño de logotipo, tipografía, paleta cromática y biblioteca de elementos 3D' },
-                    { phase: 'FASE 03', text: 'Manual de marca interactivo, guías de diseño y aplicaciones multicanal' }
-                ]
+            web3d: {
+                id: 'web3d',
+                name: 'Web 3D & Inmersiva',
+                legacy: {
+                    url: 'sitio-tradicional.com/experiencia',
+                    loadTime: '5.2s',
+                    lighthouse: '29 / 100',
+                    bounce: '71%',
+                    conversion: '-42%',
+                    fps: '18 FPS',
+                    fpsLabel: 'Lag Severo',
+                    status: 'Overhead de render WebGL sin optimizar...'
+                },
+                pixy: {
+                    url: 'experience.pixy.agency',
+                    loadTime: '0.7s',
+                    lighthouse: '98 / 100',
+                    bounce: '+88%',
+                    conversion: '+38%',
+                    fps: '60 FPS',
+                    fpsLabel: '60 FPS Sedoso',
+                    status: 'Next.js 14 + WebGL + GSAP Core optimizado a 60fps'
+                },
+                conclusion: 'Pixy logra experiencias 3D inmersivas a 60fps reales sin sacrificar ni un milisegundo de velocidad de carga.',
+                waMessage: 'Hola Pixy, busco una plataforma web inmersiva en 3D con animaciones a 60fps y carga rápida.'
             },
-            growth: {
-                id: 'growth',
-                name: 'Growth Ads & Performance Media',
-                desc: 'Estrategia de adquisición de alto rendimiento en Meta Ads, Google Ads y TikTok Ads.',
-                archTitle: 'Motor de Adquisición Multicanal & Creative Engine',
-                stack: ['Meta Ads API', 'Google Ads', 'TikTok Ads', 'Creative Engine', 'GA4 Server-Side'],
-                timeline: 'Setup en 7 días + Optimización Continua',
-                match: '95% Precision',
-                deliverables: [
-                    { phase: 'FASE 01', text: 'Auditoría de audiencias, setup de tracking y pixel server-side' },
-                    { phase: 'FASE 02', text: 'Producción de creativos estáticos y motion graphics de alto impacto' },
-                    { phase: 'FASE 03', text: 'Lanzamiento de campañas y optimización algorítmica continua basada en ROAS' }
-                ]
-            },
-            crm: {
-                id: 'crm',
-                name: 'Automation & Intelligent CRM',
-                desc: 'Funnels automatizados por WhatsApp Cloud API y sincronización con Pixy Spaces.',
-                archTitle: 'Infraestructura de Conversión WhatsApp & AI',
-                stack: ['WhatsApp Cloud API', 'Pixy Spaces CRM', 'OpenAI API', 'Webhooks', 'Make / n8n'],
-                timeline: 'Sprint Ágil: 1 a 2 semanas',
-                match: '97% Precision',
-                deliverables: [
-                    { phase: 'FASE 01', text: 'Modelado del árbol de decisiones conversacional y arquitectura de embudo' },
-                    { phase: 'FASE 02', text: 'Conexión oficial de API, configuración de agentes inteligentes y webhooks' },
-                    { phase: 'FASE 03', text: 'Sincronización bidireccional con el panel de control Pixy Spaces' }
-                ]
-            },
-            dept: {
-                id: 'dept',
-                name: 'Dedicated Creative Department',
-                desc: 'Equipo creativo multidisciplinario senior bajo suscripción mensual on-demand.',
-                archTitle: 'Departamento Creativo Senior Dedicado',
-                stack: ['Figma UI/UX', 'After Effects', 'Blender 3D', 'Frontend Dev', 'Sprints 24-48h'],
-                timeline: 'Suscripción Mensual Activa',
-                match: '100% Precision',
-                deliverables: [
-                    { phase: 'FASE 01', text: 'Kickoff estratégico, configuración del entorno de trabajo y asignación del equipo' },
-                    { phase: 'FASE 02', text: 'Dirección de arte senior dedicada y ejecución de requerimientos concurrentes' },
-                    { phase: 'FASE 03', text: 'Ciclo continuo de entregas en 24 a 48 horas con revisiones ilimitadas' }
-                ]
+            landing: {
+                id: 'landing',
+                name: 'Landing & Campañas de Tráfico',
+                legacy: {
+                    url: 'landing-campaña.com',
+                    loadTime: '3.9s',
+                    lighthouse: '42 / 100',
+                    bounce: '55%',
+                    conversion: '-28%',
+                    fps: '26 FPS',
+                    fpsLabel: 'Fricción Móvil',
+                    status: 'Bloqueo de renderizado en dispositivos móviles...'
+                },
+                pixy: {
+                    url: 'growth.pixy.agency/lp',
+                    loadTime: '0.4s',
+                    lighthouse: '100 / 100',
+                    bounce: '+95%',
+                    conversion: '+52%',
+                    fps: '60 FPS',
+                    fpsLabel: 'Respuesta Inmediata',
+                    status: 'Jamstack Edge CDN • Máxima rentabilidad y ROAS'
+                },
+                conclusion: 'Cada 100ms ganados en velocidad aumentan el ROAS publicitario hasta en un 52% al eliminar el rebote.',
+                waMessage: 'Hola Pixy, quiero mejorar la velocidad y conversión de mis landing pages de adquisición publicitaria.'
             }
         },
-        stages: {
-            startup: { id: 'startup', name: 'Startup / Early Stage', tag: 'Fast-Track' },
-            scaleup: { id: 'scaleup', name: 'Scale-Up / Growth', tag: 'High-Scale' },
-            enterprise: { id: 'enterprise', name: 'Corporate / Enterprise', tag: 'Enterprise Grade' }
-        },
-        modules: {
-            renders3d: { id: 'renders3d', name: 'Modelado & Animación 3D', tag: '3D High-End' },
-            gsap: { id: 'gsap', name: 'Animaciones GSAP 60fps', tag: 'Motion 60fps' },
-            whatsapp: { id: 'whatsapp', name: 'Integración WhatsApp API', tag: 'WhatsApp Cloud' },
-            cro: { id: 'cro', name: 'Auditoría & Optimización CRO', tag: 'CRO Funnels' },
-            copy: { id: 'copy', name: 'Copywriting Persuasivo', tag: 'High-Impact Copy' },
-            designsystem: { id: 'designsystem', name: 'Sistema UI Tokens en Figma', tag: 'Figma Tokens' }
+        en: {
+            ecommerce: {
+                id: 'ecommerce',
+                name: 'E-Commerce & Checkout',
+                legacy: {
+                    url: 'traditional-store.com/checkout',
+                    loadTime: '4.5s',
+                    lighthouse: '34 / 100',
+                    bounce: '64%',
+                    conversion: '-38%',
+                    fps: '22 FPS',
+                    fpsLabel: 'Stutter & Lag',
+                    status: 'Loading checkout scripts and heavy plugins...'
+                },
+                pixy: {
+                    url: 'store.pixy.agency/checkout',
+                    loadTime: '0.5s',
+                    lighthouse: '100 / 100',
+                    bounce: '+92%',
+                    conversion: '+45%',
+                    fps: '60 FPS',
+                    fpsLabel: 'Ultra Fluidity',
+                    status: 'Shopify Headless • Instant Checkout < 0.5s'
+                },
+                conclusion: 'Pixy Headless architecture reduces cart abandonment by 45% and triples checkout speed.',
+                waMessage: 'Hello Pixy, I would like to audit the performance and checkout of my online store to migrate to your Next-Gen architecture.'
+            },
+            web3d: {
+                id: 'web3d',
+                name: '3D & Immersive Web',
+                legacy: {
+                    url: 'legacy-website.com/experience',
+                    loadTime: '5.2s',
+                    lighthouse: '29 / 100',
+                    bounce: '71%',
+                    conversion: '-42%',
+                    fps: '18 FPS',
+                    fpsLabel: 'Severe Lag',
+                    status: 'Unoptimized WebGL render overhead...'
+                },
+                pixy: {
+                    url: 'experience.pixy.agency',
+                    loadTime: '0.7s',
+                    lighthouse: '98 / 100',
+                    bounce: '+88%',
+                    conversion: '+38%',
+                    fps: '60 FPS',
+                    fpsLabel: 'Silky 60 FPS',
+                    status: 'Next.js 14 + WebGL + GSAP Core optimized at 60fps'
+                },
+                conclusion: 'Pixy achieves immersive 3D experiences at true 60fps without sacrificing a single millisecond of load speed.',
+                waMessage: 'Hello Pixy, I am looking for an immersive 3D web platform with 60fps motion and lightning-fast load times.'
+            },
+            landing: {
+                id: 'landing',
+                name: 'Landing & Traffic Campaigns',
+                legacy: {
+                    url: 'legacy-landing.com',
+                    loadTime: '3.9s',
+                    lighthouse: '42 / 100',
+                    bounce: '55%',
+                    conversion: '-28%',
+                    fps: '26 FPS',
+                    fpsLabel: 'Mobile Friction',
+                    status: 'Render-blocking JavaScript on mobile devices...'
+                },
+                pixy: {
+                    url: 'growth.pixy.agency/lp',
+                    loadTime: '0.4s',
+                    lighthouse: '100 / 100',
+                    bounce: '+95%',
+                    conversion: '+52%',
+                    fps: '60 FPS',
+                    fpsLabel: 'Instant Response',
+                    status: 'Jamstack Edge CDN • Maximum profitability and ROAS'
+                },
+                conclusion: 'Every 100ms saved in load time boosts ad ROAS by up to 52% by eliminating bounce rates.',
+                waMessage: 'Hello Pixy, I want to improve the speed and conversion rate of my advertising landing pages.'
+            }
         }
     };
 
-    let selectedObjective = 'web3d';
-    let selectedStage = 'scaleup';
-    let selectedModules = new Set(['renders3d', 'gsap', 'whatsapp']);
+    const simStrings = {
+        es: {
+            measuring: 'Midiendo Rendimiento en Vivo...',
+            dnsStart: 'Iniciando handshake DNS & scripts...',
+            edgeStart: 'Global Edge CDN Cache Hit...',
+            pixyDone: '✓ Renderizado en {time} (100% Core Web Vitals)',
+            step1: 'Descargando 48 scripts y plugins pesados...',
+            step2: 'Bloqueo de hilo principal (JavaScript)...',
+            step3: 'Renderizado tardío de fuentes e imágenes...',
+            legacyDone: '⚠️ Carga tardía en {time} con penalización',
+            repeatBtn: '⚡ Repetir Simulación de Carga'
+        },
+        en: {
+            measuring: 'Measuring Live Performance...',
+            dnsStart: 'Initiating DNS handshake & scripts...',
+            edgeStart: 'Global Edge CDN Cache Hit...',
+            pixyDone: '✓ Rendered in {time} (100% Core Web Vitals)',
+            step1: 'Downloading 48 unoptimized scripts and heavy plugins...',
+            step2: 'Main thread blocked (JavaScript execution)...',
+            step3: 'Delayed render of web fonts and images...',
+            legacyDone: '⚠️ Late load at {time} with SEO penalty',
+            repeatBtn: '⚡ Repeat Live Simulation'
+        }
+    };
 
-    function initBlueprintConfigurator() {
-        const container = document.getElementById('agency-blueprint');
-        if (!container) return;
+    let currentScenarioKey = 'ecommerce';
+    let isRunningBenchmark = false;
 
-        const objBtns = container.querySelectorAll('.blueprint-obj-btn');
-        const stageBtns = container.querySelectorAll('.blueprint-stage-btn');
-        const moduleChips = container.querySelectorAll('.blueprint-module-chip');
-
-        // Objective selection
-        objBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                objBtns.forEach(b => b.classList.remove('selected'));
-                btn.classList.add('selected');
-                selectedObjective = btn.getAttribute('data-obj') || 'web3d';
-                updateBlueprintDisplay();
-            });
-        });
-
-        // Stage selection
-        stageBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                stageBtns.forEach(b => b.classList.remove('selected'));
-                btn.classList.add('selected');
-                selectedStage = btn.getAttribute('data-stage') || 'scaleup';
-                updateBlueprintDisplay();
-            });
-        });
-
-        // Modules toggle
-        moduleChips.forEach(chip => {
-            const modKey = chip.getAttribute('data-module');
-            chip.addEventListener('click', () => {
-                if (selectedModules.has(modKey)) {
-                    selectedModules.delete(modKey);
-                    chip.classList.remove('selected');
-                } else {
-                    selectedModules.add(modKey);
-                    chip.classList.add('selected');
-                }
-                updateBlueprintDisplay();
-            });
-        });
-
-        // Initial render
-        updateBlueprintDisplay();
+    function getBenchmarkLang() {
+        return localStorage.getItem('pixy_lang') || 'es';
     }
 
-    function updateBlueprintDisplay() {
-        const archTitleEl = document.getElementById('bp-arch-title');
-        const matchBadgeEl = document.getElementById('bp-match-badge');
-        const timelineBadgeEl = document.getElementById('bp-timeline-badge');
-        const stackTagsEl = document.getElementById('bp-stack-tags');
-        const deliverablesListEl = document.getElementById('bp-deliverables-list');
-        const whatsappBtn = document.getElementById('bp-whatsapp-btn');
+    function initPerformanceBenchmark() {
+        const section = document.getElementById('benchmark');
+        if (!section) return;
 
-        const currentObj = blueprintData.objectives[selectedObjective] || blueprintData.objectives.web3d;
-        const currentStage = blueprintData.stages[selectedStage] || blueprintData.stages.scaleup;
+        const pills = section.querySelectorAll('.archetype-pill');
+        const runBtn = document.getElementById('run-benchmark-btn');
 
-        if (archTitleEl) {
-            archTitleEl.textContent = currentObj.archTitle;
-        }
-
-        if (matchBadgeEl) {
-            matchBadgeEl.textContent = currentObj.match;
-        }
-
-        if (timelineBadgeEl) {
-            timelineBadgeEl.textContent = currentObj.timeline;
-        }
-
-        if (stackTagsEl) {
-            stackTagsEl.innerHTML = '';
-            
-            // Base tech stack tags
-            currentObj.stack.forEach(tech => {
-                const tag = document.createElement('span');
-                tag.className = 'bento-tag';
-                tag.style.borderColor = 'rgba(242, 5, 226, 0.4)';
-                tag.style.background = 'rgba(242, 5, 226, 0.08)';
-                tag.textContent = tech;
-                stackTagsEl.appendChild(tag);
+        // Pill switches
+        pills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                if (isRunningBenchmark) return;
+                pills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                currentScenarioKey = pill.getAttribute('data-scenario') || 'ecommerce';
+                updateBenchmarkView();
             });
+        });
 
-            // Extra modules tags
-            selectedModules.forEach(modKey => {
-                const mod = blueprintData.modules[modKey];
-                if (mod && !currentObj.stack.includes(mod.tag)) {
-                    const tag = document.createElement('span');
-                    tag.className = 'bento-tag';
-                    tag.style.borderColor = 'rgba(147, 51, 234, 0.5)';
-                    tag.style.background = 'rgba(147, 51, 234, 0.12)';
-                    tag.textContent = `+ ${mod.tag}`;
-                    stackTagsEl.appendChild(tag);
-                }
+        // Run Benchmark Simulation
+        if (runBtn) {
+            runBtn.addEventListener('click', () => {
+                if (isRunningBenchmark) return;
+                runBenchmarkSimulation();
             });
         }
 
-        if (deliverablesListEl) {
-            deliverablesListEl.innerHTML = '';
-            currentObj.deliverables.forEach(item => {
-                const li = document.createElement('li');
-                li.className = 'blueprint-deliverable-item';
-                li.innerHTML = `
-                    <span class="blueprint-phase-badge">${item.phase}</span>
-                    <div>${item.text}</div>
-                `;
-                deliverablesListEl.appendChild(li);
-            });
+        // Listen for global language toggle
+        window.addEventListener('pixy:langChange', () => {
+            updateBenchmarkView();
+        });
+
+        // Initial setup
+        updateBenchmarkView();
+    }
+
+    function updateBenchmarkView() {
+        const lang = getBenchmarkLang();
+        const dict = benchmarkScenarios[lang] || benchmarkScenarios.es;
+        const data = dict[currentScenarioKey] || dict.ecommerce;
+
+        // Legacy elements
+        const legacyUrl = document.getElementById('legacy-url');
+        const legacyStatus = document.getElementById('legacy-status-text');
+        const legacyFps = document.getElementById('legacy-fps');
+        const legacyFpsLabel = document.querySelector('.viewport-fps-badge.legacy .fps-label');
+        const legacyLoad = document.getElementById('legacy-load-time');
+        const legacyLight = document.getElementById('legacy-lighthouse');
+        const legacyBounce = document.getElementById('legacy-bounce');
+        const legacyConv = document.getElementById('legacy-conversion');
+        const legacyProgress = document.getElementById('legacy-progress');
+
+        if (legacyUrl) legacyUrl.textContent = data.legacy.url;
+        if (legacyStatus) legacyStatus.textContent = data.legacy.status;
+        if (legacyFps) legacyFps.textContent = data.legacy.fps;
+        if (legacyFpsLabel) legacyFpsLabel.textContent = data.legacy.fpsLabel;
+        if (legacyLoad) legacyLoad.textContent = data.legacy.loadTime;
+        if (legacyLight) legacyLight.textContent = data.legacy.lighthouse;
+        if (legacyBounce) legacyBounce.textContent = data.legacy.bounce;
+        if (legacyConv) legacyConv.textContent = data.legacy.conversion;
+        if (legacyProgress) legacyProgress.style.width = '100%';
+
+        // Pixy elements
+        const pixyUrl = document.getElementById('pixy-url');
+        const pixyStatus = document.getElementById('pixy-status-text');
+        const pixyFps = document.getElementById('pixy-fps');
+        const pixyFpsLabel = document.querySelector('.viewport-fps-badge.pixy .fps-label');
+        const pixyLoad = document.getElementById('pixy-load-time');
+        const pixyLight = document.getElementById('pixy-lighthouse');
+        const pixyBounce = document.getElementById('pixy-bounce');
+        const pixyConv = document.getElementById('pixy-conversion');
+        const pixyProgress = document.getElementById('pixy-progress');
+
+        if (pixyUrl) pixyUrl.textContent = data.pixy.url;
+        if (pixyStatus) pixyStatus.textContent = data.pixy.status;
+        if (pixyFps) pixyFps.textContent = data.pixy.fps;
+        if (pixyFpsLabel) pixyFpsLabel.textContent = data.pixy.fpsLabel;
+        if (pixyLoad) pixyLoad.textContent = data.pixy.loadTime;
+        if (pixyLight) pixyLight.textContent = data.pixy.lighthouse;
+        if (pixyBounce) pixyBounce.textContent = data.pixy.bounce;
+        if (pixyConv) pixyConv.textContent = data.pixy.conversion;
+        if (pixyProgress) pixyProgress.style.width = '100%';
+
+        // Conclusion & WhatsApp CTA
+        const summaryText = document.getElementById('benchmark-summary-text');
+        const waCta = document.getElementById('benchmark-whatsapp-cta');
+        if (summaryText) {
+            summaryText.innerHTML = data.conclusion;
+        }
+        if (waCta) {
+            waCta.href = `https://wa.me/573009292377?text=${encodeURIComponent(data.waMessage)}`;
+        }
+    }
+
+    function runBenchmarkSimulation() {
+        isRunningBenchmark = true;
+        const lang = getBenchmarkLang();
+        const dict = benchmarkScenarios[lang] || benchmarkScenarios.es;
+        const data = dict[currentScenarioKey] || dict.ecommerce;
+        const strings = simStrings[lang] || simStrings.es;
+
+        const runBtn = document.getElementById('run-benchmark-btn');
+        const resultPill = document.getElementById('benchmark-result-pill');
+        const legacyProgress = document.getElementById('legacy-progress');
+        const pixyProgress = document.getElementById('pixy-progress');
+        const legacyStatus = document.getElementById('legacy-status-text');
+        const pixyStatus = document.getElementById('pixy-status-text');
+        const legacyLoad = document.getElementById('legacy-load-time');
+        const pixyLoad = document.getElementById('pixy-load-time');
+
+        if (runBtn) {
+            runBtn.disabled = true;
+            runBtn.style.opacity = '0.7';
+            const btnText = runBtn.querySelector('.btn-text');
+            if (btnText) btnText.textContent = strings.measuring;
+        }
+        if (resultPill) {
+            resultPill.classList.remove('highlight');
         }
 
-        if (whatsappBtn) {
-            const moduleNames = Array.from(selectedModules).map(k => blueprintData.modules[k]?.name).filter(Boolean);
-            const msg = `¡Hola Pixy! He configurado mi Blueprint Digital en Pixy Agency:%0A%0A` +
-                `• *Objetivo:* ${currentObj.name}%0A` +
-                `• *Etapa de Marca:* ${currentStage.name}%0A` +
-                `• *Módulos:* ${moduleNames.length ? moduleNames.join(', ') : 'Estándar'}%0A` +
-                `• *Tiempo Estimado:* ${currentObj.timeline}%0A%0A` +
-                `Quiero coordinar una sesión estratégica de kickoff de 20 minutos.`;
-            
-            whatsappBtn.href = `https://wa.me/573001234567?text=${msg}`;
-        }
+        // Reset bars
+        if (legacyProgress) legacyProgress.style.width = '0%';
+        if (pixyProgress) pixyProgress.style.width = '0%';
+        if (legacyLoad) legacyLoad.textContent = '...';
+        if (pixyLoad) pixyLoad.textContent = '...';
+        if (legacyStatus) legacyStatus.textContent = strings.dnsStart;
+        if (pixyStatus) pixyStatus.textContent = strings.edgeStart;
+
+        // 1. Pixy Finishes Blazing Fast in 450ms
+        setTimeout(() => {
+            if (pixyProgress) pixyProgress.style.width = '100%';
+            if (pixyStatus) pixyStatus.textContent = strings.pixyDone.replace('{time}', data.pixy.loadTime);
+            if (pixyLoad) pixyLoad.textContent = data.pixy.loadTime;
+        }, 450);
+
+        // 2. Legacy Steps (Crawling)
+        setTimeout(() => {
+            if (legacyProgress) legacyProgress.style.width = '25%';
+            if (legacyStatus) legacyStatus.textContent = strings.step1;
+        }, 650);
+
+        setTimeout(() => {
+            if (legacyProgress) legacyProgress.style.width = '55%';
+            if (legacyStatus) legacyStatus.textContent = strings.step2;
+        }, 1300);
+
+        setTimeout(() => {
+            if (legacyProgress) legacyProgress.style.width = '80%';
+            if (legacyStatus) legacyStatus.textContent = strings.step3;
+        }, 1900);
+
+        setTimeout(() => {
+            if (legacyProgress) legacyProgress.style.width = '100%';
+            if (legacyStatus) legacyStatus.textContent = strings.legacyDone.replace('{time}', data.legacy.loadTime);
+            if (legacyLoad) legacyLoad.textContent = data.legacy.loadTime;
+
+            if (resultPill) {
+                resultPill.classList.add('highlight');
+            }
+
+            if (runBtn) {
+                runBtn.disabled = false;
+                runBtn.style.opacity = '1';
+                const btnText = runBtn.querySelector('.btn-text');
+                if (btnText) btnText.textContent = strings.repeatBtn;
+            }
+            isRunningBenchmark = false;
+        }, 2600);
     }
 
     // Initialize 3D Interactive Workflow Slider
@@ -497,14 +638,14 @@
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
             initAgencyHeroEntrance();
-            initBlueprintConfigurator();
+            initPerformanceBenchmark();
             initWorkflowSlider();
             initPortfolioFilters();
             initAgencyParallax();
         });
     } else {
         initAgencyHeroEntrance();
-        initBlueprintConfigurator();
+        initPerformanceBenchmark();
         initWorkflowSlider();
         initPortfolioFilters();
         initAgencyParallax();

@@ -59,16 +59,20 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="index.html" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="spaces.html" class="neon-link">Spaces</a>
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="blog.html" class="neon-link active">Blog</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link active" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <button id="lang-toggle" class="btn-lang" style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
@@ -76,82 +80,52 @@
     <header class="article-hero">
         <div class="article-hero-bg"></div>
         <div class="container">
-            <div class="badge" style="margin-bottom: 24px; background: linear-gradient(135deg, #10b981, #059669);">
-                Ventas</div>
-            <h1>
-                Conversational Commerce: El secreto para duplicar la retención
-            </h1>
+            <div class="badge" style="margin-bottom: 24px; background: linear-gradient(135deg, #10b981, #059669);" data-i18n="art_commerce.badge">Ventas</div>
+            <h1 data-i18n="art_commerce.title">Conversational Commerce: El secreto para duplicar la retención</h1>
             <div class="article-meta">
-                <span>👤 Carlos M.</span>
+                <span data-i18n="art_commerce.meta_author">👤 Carlos M.</span>
                 <span>•</span>
-                <span>📅 Ene 08, 2026</span>
+                <span data-i18n="art_commerce.meta_date">📅 Ene 08, 2026</span>
                 <span>•</span>
-                <span>⏱️ 4 min lectura</span>
+                <span data-i18n="art_commerce.meta_time">⏱️ 4 min lectura</span>
             </div>
         </div>
     </header>
 
     <main class="container" style="padding-bottom: 80px;">
         <article class="article-content">
-            <p class="lead" style="font-size: 1.3rem; margin-bottom: 40px; color: var(--text-primary);">
-                ¿Sabías que es 5 veces más barato retener a un cliente existente que adquirir uno nuevo? Sin embargo, la
-                mayoría de las empresas siguen tratando a sus clientes recurrentes como desconocidos.
-            </p>
+            <p class="lead" style="font-size: 1.3rem; margin-bottom: 40px; color: var(--text-primary);" data-i18n="art_commerce.p1">¿Sabías que es 5 veces más barato retener a un cliente existente que adquirir uno nuevo? Sin embargo, la mayoría de las empresas siguen tratando a sus clientes recurrentes como desconocidos.</p>
 
-            <p>
-                El <strong>Conversational Commerce</strong> (Comercio Conversacional) no es solo vender por chat. Es
-                utilizar el historial de la conversación, el contexto y la data para crear una experiencia de compra
-                hiper-personalizada que un e-commerce tradicional no puede igualar.
-            </p>
+            <p data-i18n="art_commerce.p2_prefix">El Conversational Commerce (Comercio Conversacional) no es solo vender por chat. Es utilizar el historial de la conversación, el contexto y la data para crear una experiencia de compra hiper-personalizada que un e-commerce tradicional no puede igualar.</p>
 
-            <h2>El Poder del "Como Siempre"</h2>
-            <p>
-                Imagina entrar a tu cafetería favorita y que el barista ya esté preparando tu café antes de que hables.
-                Eso es lo que tus clientes esperan en digital.
-            </p>
-            <p>
-                Cuando un cliente escribe a tu WhatsApp y tú (o tu bot) le dices: <em>"¡Hola Andrea! ¿Quieres pedir lo
-                    mismo de la semana pasada (Pack 3 Cremas)?"</em>, la fricción de compra desaparece. Andrea se siente
-                reconocida, valorada y entendida.
-            </p>
+            <h2 data-i18n="art_commerce_extra.h2_like_always">El Poder del "Como Siempre"</h2>
+            <p data-i18n="art_commerce_extra.p_cafe">Imagina entrar a tu cafetería favorita y que el barista ya esté preparando tu café antes de que hables. Eso es lo que tus clientes esperan en digital.</p>
+            <p data-i18n="art_commerce_extra.p_andrea_intro">Cuando un cliente escribe a tu WhatsApp y tú (o tu bot) le dices: "¡Hola Andrea! ¿Quieres pedir lo mismo de la semana pasada (Pack 3 Cremas)?", la fricción de compra desaparece. Andrea se siente reconocida, valorada y entendida.</p>
 
-            <div class="neon-quote">
-                "La venta transaccional está muerta. La venta relacional es el futuro, y el chat es su nuevo hogar."
-            </div>
+            <div class="neon-quote" data-i18n="art_commerce_extra.quote_relational">"La venta transaccional está muerta. La venta relacional es el futuro, y el chat es su nuevo hogar."</div>
 
-            <h2>Cómo Pixy Habilita la Memoria Infinita</h2>
-            <p>
-                Hacer esto manualmente con 100 clientes es posible. Con 1,000 es imposible. A menos que tengas Pixy.
-            </p>
-            <p>
-                Nuestro CRM almacena cada interacción, cada compra y cada preferencia. Al integrar esto con WhatsApp:
-            </p>
+            <h2 data-i18n="art_commerce_extra.h2_infinite_memory">Cómo Pixy Habilita la Memoria Infinita</h2>
+            <p data-i18n="art_commerce_extra.p_mem_intro">Hacer esto manualmente con 100 clientes es posible. Con 1,000 es imposible. A menos que tengas Pixy. Nuestro CRM almacena cada interacción, cada compra y cada preferencia. Al integrar esto con WhatsApp:</p>
             <ul>
-                <li><strong>Recomendaciones Inteligentes:</strong> Sugiere productos basados en compras anteriores.</li>
-                <li><strong>Recordatorios de Recompra:</strong> "Hola Juan, tu suscripción de café termina en 3 días.
-                    ¿Te enviamos la renovación?"</li>
-                <li><strong>Soporte Proactivo:</strong> Detecta si un envío se retrasó y avisa al cliente antes de que
-                    él pregunte.</li>
+                <li><strong data-i18n="art_commerce_extra.li_recom_bold">Recomendaciones Inteligentes:</strong> <span data-i18n="art_commerce_extra.li_recom_desc">Sugiere productos basados en compras anteriores.</span></li>
+                <li><strong data-i18n="art_commerce_extra.li_remind_bold">Recordatorios de Recompra:</strong> <span data-i18n="art_commerce_extra.li_remind_desc">"Hola Juan, tu suscripción de café termina en 3 días. ¿Te enviamos la renovación?"</span></li>
+                <li><strong data-i18n="art_commerce_extra.li_support_bold">Soporte Proactivo:</strong> <span data-i18n="art_commerce_extra.li_support_desc">Detecta si un envío se retrasó y avisa al cliente antes de que él pregunte.</span></li>
             </ul>
 
             <div class="article-cta-box">
-                <h3 style="margin-top: 0;">Empieza a vender con inteligencia</h3>
-                <p>Convierte tu chat en una máquina de fidelización. Prueba Pixy hoy.</p>
-                <a href="contact.html" class="btn-neon">Ver Demo</a>
+                <h3 style="margin-top: 0;" data-i18n="art_commerce_extra.cta_title">Empieza a vender con inteligencia</h3>
+                <p data-i18n="art_commerce_extra.cta_desc">Convierte tu chat en una máquina de fidelización. Prueba Pixy hoy.</p>
+                <a href="contact.html" class="btn-neon" data-i18n="art_commerce_extra.cta_btn">Ver Demo</a>
             </div>
 
-            <h2>El Futuro es Conversacional</h2>
-            <p>
-                En 2026, nadie quiere navegar por una web lenta, llenar formularios de contacto o descargar apps que
-                usarán una vez. Quieren resolver su problema en la app que ya usan todo el día: WhatsApp.
-            </p>
+            <h2 data-i18n="art_commerce_extra.h2_future">El Futuro es Conversacional</h2>
+            <p data-i18n="art_commerce_extra.p_future">En 2026, nadie quiere navegar por una web lenta, llenar formularios de contacto o descargar apps que usarán una vez. Quieren resolver su problema en la app que ya usan todo el día: WhatsApp.</p>
 
             <div class="author-bio">
                 <div class="author-avatar">CM</div>
                 <div>
-                    <h4 style="margin: 0 0 8px 0; color: var(--text-primary);">Carlos Martínez</h4>
-                    <p style="margin: 0; font-size: 0.9rem;">Head of Growth en Pixy. Obsesionado con la automatización y
-                        escalar negocios sin aumentar el caos.</p>
+                    <h4 style="margin: 0 0 8px 0; color: var(--text-primary);" data-i18n="articles_common.author_carlos_name">Carlos Martínez</h4>
+                    <p style="margin: 0; font-size: 0.9rem;" data-i18n="articles_common.author_carlos_bio">Head of Growth en Pixy. Obsesionado con la automatización y escalar negocios sin aumentar el caos.</p>
                 </div>
             </div>
 
@@ -159,43 +133,43 @@
 
         <!-- Related Articles -->
         <section class="related-articles">
-            <h3 style="font-size: 2rem; margin-bottom: 40px; text-align: center;">Sigue Aprendiendo</h3>
+            <h3 style="font-size: 2rem; margin-bottom: 40px; text-align: center;" data-i18n="articles_common.keep_learning">Sigue Aprendiendo</h3>
             <div class="blog-grid">
                 <a href="article-whatsapp-crm.html" class="blog-card" style="text-decoration: none;">
                     <div class="blog-image-wrapper">
-                        <span class="blog-category-badge">Estrategia</span>
+                        <span class="blog-category-badge" data-i18n="blog_page.cat_strategy">Estrategia</span>
                         <div class="blog-image-placeholder"></div>
                     </div>
                     <div class="blog-content">
-                        <h3>El Fin del "Visto"</h3>
-                        <p class="blog-excerpt">Por qué integrar WhatsApp a tu CRM es innegociable.</p>
-                        <span class="neon-link">Leer Artículo →</span>
+                        <h3 data-i18n="blog.art_1_title">El Fin del "Visto"</h3>
+                        <p class="blog-excerpt" data-i18n="blog.art_1_desc">Por qué integrar WhatsApp a tu CRM es innegociable.</p>
+                        <span class="neon-link" data-i18n="articles_common.read_article">Leer Artículo →</span>
                     </div>
                 </a>
                 <a href="article-operational-chaos.html" class="blog-card" style="text-decoration: none;">
                     <div class="blog-image-wrapper">
                         <span class="blog-category-badge"
-                            style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border-color: rgba(245, 158, 11, 0.4);">Gestión</span>
+                            style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border-color: rgba(245, 158, 11, 0.4);" data-i18n="blog_page.cat_management">Gestión</span>
                         <div class="blog-image-placeholder"
                             style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);"></div>
                     </div>
                     <div class="blog-content">
-                        <h3>Caos Operativo</h3>
-                        <p class="blog-excerpt">5 señales de que tu agencia necesita un sistema operativo.</p>
-                        <span class="neon-link">Leer Artículo →</span>
+                        <h3 data-i18n="art_chaos.title">Caos Operativo</h3>
+                        <p class="blog-excerpt" data-i18n="art_chaos.p1">5 señales de que tu agencia necesita un sistema operativo.</p>
+                        <span class="neon-link" data-i18n="articles_common.read_article">Leer Artículo →</span>
                     </div>
                 </a>
                 <a href="article-automation.html" class="blog-card" style="text-decoration: none;">
                     <div class="blog-image-wrapper">
                         <span class="blog-category-badge"
-                            style="background: rgba(59, 130, 246, 0.2); color: #60a5fa; border-color: rgba(59, 130, 246, 0.4);">Automatización</span>
+                            style="background: rgba(59, 130, 246, 0.2); color: #60a5fa; border-color: rgba(59, 130, 246, 0.4);" data-i18n="blog_page.cat_automation">Automatización</span>
                         <div class="blog-image-placeholder"
                             style="background: linear-gradient(135deg, #f12711, #f5af19);"></div>
                     </div>
                     <div class="blog-content">
-                        <h3>Automatización de Citas</h3>
-                        <p class="blog-excerpt">Recupera el 30% de tus leads con agendamiento 24/7.</p>
-                        <span class="neon-link">Leer Artículo →</span>
+                        <h3 data-i18n="art_automation.title">Automatización de Citas</h3>
+                        <p class="blog-excerpt" data-i18n="art_automation.p1">Recupera el 30% de tus leads con agendamiento 24/7.</p>
+                        <span class="neon-link" data-i18n="articles_common.read_article">Leer Artículo →</span>
                     </div>
                 </a>
             </div>

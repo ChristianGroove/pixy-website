@@ -27,16 +27,20 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="index.html" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="spaces.html" class="neon-link">Spaces</a>
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="blog.html" class="neon-link active">Blog</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link active" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <button id="lang-toggle" class="btn-lang" style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
@@ -44,77 +48,50 @@
     <header class="article-hero">
         <div class="article-hero-bg"></div>
         <div class="container">
-            <div class="badge" style="margin-bottom: 24px; background: linear-gradient(135deg, #ec4899, #db2777);">
-                Tendencias</div>
-            <h1>
-                El "Cliente Híbrido": Uniendo el mundo Físico y Digital
-            </h1>
+            <div class="badge" style="margin-bottom: 24px; background: linear-gradient(135deg, #ec4899, #db2777);" data-i18n="art_omnichannel.badge">Tendencias</div>
+            <h1 data-i18n="art_omni_extra.title">El "Cliente Híbrido": Uniendo el mundo Físico y Digital</h1>
             <div class="article-meta">
-                <span>👤 David S.</span>
+                <span data-i18n="art_omnichannel.meta_author">👤 David S.</span>
                 <span>•</span>
-                <span>📅 Ene 02, 2026</span>
+                <span data-i18n="art_omnichannel.meta_date">📅 Ene 02, 2026</span>
                 <span>•</span>
-                <span>⏱️ 8 min lectura</span>
+                <span data-i18n="art_omni_extra.read_time">⏱️ 8 min lectura</span>
             </div>
         </div>
     </header>
 
     <main class="container" style="padding-bottom: 80px;">
         <article class="article-content">
-            <p class="lead" style="font-size: 1.3rem; margin-bottom: 40px; color: var(--text-primary);">
-                Compra en Instagram, paga por transferencia, recoge en la tienda y reclama la garantía por WhatsApp. El
-                viaje del cliente ya no es lineal, es una telaraña. ¿Tu negocio está listo o se rompe en el primer
-                cambio de canal?
-            </p>
+            <p class="lead" style="font-size: 1.3rem; margin-bottom: 40px; color: var(--text-primary);" data-i18n="art_omni_extra.p1">Compra en Instagram, paga por transferencia, recoge en la tienda y reclama la garantía por WhatsApp. El viaje del cliente ya no es lineal, es una telaraña. ¿Tu negocio está listo o se rompe en el primer cambio de canal?</p>
 
-            <p>
-                La "Omnicanalidad" es una palabra de moda que a menudo se malinterpreta como "estar en todas partes". No
-                se trata de tener TikTok, Facebook y Web. Se trata de que todas esas plataformas <strong>se hablen entre
-                    sí</strong>.
-            </p>
+            <p data-i18n="art_omni_extra.p2_prefix">La "Omnicanalidad" es una palabra de moda que a menudo se malinterpreta como "estar en todas partes". No se trata de tener TikTok, Facebook y Web. Se trata de que todas esas plataformas se hablen entre sí.</p>
 
-            <h2>La Pesadilla de la Información Fragmentada</h2>
-            <p>
-                Nada frustra más a un cliente que tener que repetir su historia. <em>"Como le dije a su compañero por
-                    teléfono..."</em>. Si escuchas esa frase, has fallado en la omnicanalidad.
-            </p>
+            <h2 data-i18n="art_omni_extra.h2_nightmare">La Pesadilla de la Información Fragmentada</h2>
+            <p data-i18n="art_omni_extra.p_frustrate">Nada frustra más a un cliente que tener que repetir su historia. "Como le dije a su compañero por teléfono...". Si escuchas esa frase, has fallado en la omnicanalidad.</p>
 
-            <div class="neon-quote">
-                "El cliente no ve 'canales', ve una sola marca. Si tu Instagram no sabe lo que pasó en tu tienda física,
-                para el cliente eres una empresa con amnesia."
-            </div>
+            <div class="neon-quote" data-i18n="art_omni_extra.quote">"El cliente no ve 'canales', ve una sola marca. Si tu Instagram no sabe lo que pasó en tu tienda física, para el cliente eres una empresa con amnesia."</div>
 
-            <h2>Pixy: El Hilo Conductor</h2>
-            <p>
-                Para resolver esto, Pixy actúa como la capa de memoria unificada de tu negocio:
-            </p>
+            <h2 data-i18n="art_omni_extra.h2_thread">Pixy: El Hilo Conductor</h2>
+            <p data-i18n="art_omni_extra.p_thread_intro">Para resolver esto, Pixy actúa como la capa de memoria unificada de tu negocio:</p>
             <ul>
-                <li><strong>Inventario Unificado:</strong> Si vendes el último par de zapatos en la tienda física, se
-                    descuenta automáticamente de tu e-commerce y catálogo de WhatsApp. Adiós a las sobreventas.</li>
-                <li><strong>Historial 360:</strong> Cuando un cliente escanea un QR en tu tienda, el vendedor puede ver
-                    en su tablet (o celular) qué ha comprado online y ofrecerle complementos relevantes.</li>
-                <li><strong>Soporte Continuo:</strong> Inicia el reclamo en web, sube la foto por WhatsApp, recibe el
-                    reembolso en su billetera digital. Sin fricción.</li>
+                <li><strong data-i18n="art_omni_extra.li_inv_bold">Inventario Unificado:</strong> <span data-i18n="art_omni_extra.li_inv_desc">Si vendes el último par de zapatos en la tienda física, se descuenta automáticamente de tu e-commerce y catálogo de WhatsApp. Adiós a las sobreventas.</span></li>
+                <li><strong data-i18n="art_omni_extra.li_360_bold">Historial 360:</strong> <span data-i18n="art_omni_extra.li_360_desc">Cuando un cliente escanea un QR en tu tienda, el vendedor puede ver en su tablet (o celular) qué ha comprado online y ofrecerle complementos relevantes.</span></li>
+                <li><strong data-i18n="art_omni_extra.li_sup_bold">Soporte Continuo:</strong> <span data-i18n="art_omni_extra.li_sup_desc">Inicia el reclamo en web, sube la foto por WhatsApp, recibe el reembolso en su billetera digital. Sin fricción.</span></li>
             </ul>
 
             <div class="article-cta-box">
-                <h3 style="margin-top: 0;">Conecta tus mundos</h3>
-                <p>Deja de operar como si fueras dos empresas distintas. Unifica tu experiencia con Pixy.</p>
-                <a href="contact.html" class="btn-neon">Unificar Canales</a>
+                <h3 style="margin-top: 0;" data-i18n="art_omnichannel.cta_title">Conecta tus mundos</h3>
+                <p data-i18n="art_omnichannel.cta_desc">Deja de operar como si fueras dos empresas distintas. Unifica tu experiencia con Pixy.</p>
+                <a href="contact.html" class="btn-neon" data-i18n="art_omnichannel.cta_btn">Unificar Canales</a>
             </div>
 
-            <p>
-                El cliente híbrido es el cliente más valioso y leal que existe. Gasta un 30% más y recompra con mayor
-                frecuencia. Pero también es el más exigente. Con Pixy, tienes la tecnología para deleitarlo en cada
-                punto de contacto.
-            </p>
+            <p data-i18n="art_omnichannel.p_conclusion">El cliente híbrido es el cliente más valioso y leal que existe. Gasta un 30% más y recompra con mayor frecuencia. Pero también es el más exigente. Con Pixy, tienes la tecnología para deleitarlo en cada punto de contacto.</p>
 
             <div class="author-bio">
                 <div class="author-avatar" style="background: linear-gradient(135deg, #ec4899, #db2777);">DS</div>
                 <div>
-                    <h4 style="margin: 0 0 8px 0; color: var(--text-primary);">David Sánchez</h4>
-                    <p style="margin: 0; font-size: 0.9rem;">CTO en Pixy. Arquitecto de soluciones omnicanales
-                        escalables.</p>
+                    <h4 style="margin: 0 0 8px 0; color: var(--text-primary);" data-i18n="articles_common.author_david_name">David Sánchez</h4>
+                    <p style="margin: 0; font-size: 0.9rem;" data-i18n="articles_common.author_david_bio">CTO en Pixy. Arquitecto de soluciones omnicanales escalables.</p>
                 </div>
             </div>
 
@@ -122,42 +99,42 @@
 
         <!-- Related Articles -->
         <section class="related-articles">
-            <h3 style="font-size: 2rem; margin-bottom: 40px; text-align: center;">Sigue Aprendiendo</h3>
+            <h3 style="font-size: 2rem; margin-bottom: 40px; text-align: center;" data-i18n="articles_common.keep_learning">Sigue Aprendiendo</h3>
             <div class="blog-grid">
                 <a href="article-whatsapp-crm.html" class="blog-card" style="text-decoration: none;">
                     <div class="blog-image-wrapper">
-                        <span class="blog-category-badge">Estrategia</span>
+                        <span class="blog-category-badge" data-i18n="blog_page.cat_strategy">Estrategia</span>
                         <div class="blog-image-placeholder"></div>
                     </div>
                     <div class="blog-content">
-                        <h3>El Fin del "Visto"</h3>
-                        <p class="blog-excerpt">Por qué integrar WhatsApp a tu CRM es innegociable.</p>
-                        <span class="neon-link">Leer Artículo →</span>
+                        <h3 data-i18n="blog.art_1_title">El Fin del "Visto"</h3>
+                        <p class="blog-excerpt" data-i18n="blog.art_1_desc">Por qué integrar WhatsApp a tu CRM es innegociable.</p>
+                        <span class="neon-link" data-i18n="articles_common.read_article">Leer Artículo →</span>
                     </div>
                 </a>
                 <a href="article-data-driven.html" class="blog-card" style="text-decoration: none;">
                     <div class="blog-image-wrapper">
-                        <span class="blog-category-badge">Tecnología</span>
+                        <span class="blog-category-badge" data-i18n="blog_page.cat_tech">Tecnología</span>
                         <div class="blog-image-placeholder"
                             style="background: linear-gradient(135deg, #00c6ff, #0072ff);"></div>
                     </div>
                     <div class="blog-content">
-                        <h3>Data-Driven</h3>
-                        <p class="blog-excerpt">Dashboards que sí funcionan y métricas reales.</p>
-                        <span class="neon-link">Leer Artículo →</span>
+                        <h3 data-i18n="art_data.title">Data-Driven</h3>
+                        <p class="blog-excerpt" data-i18n="art_data.p1">Dashboards que sí funcionan y métricas reales.</p>
+                        <span class="neon-link" data-i18n="articles_common.read_article">Leer Artículo →</span>
                     </div>
                 </a>
                 <a href="article-operational-chaos.html" class="blog-card" style="text-decoration: none;">
                     <div class="blog-image-wrapper">
                         <span class="blog-category-badge"
-                            style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border-color: rgba(245, 158, 11, 0.4);">Gestión</span>
+                            style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border-color: rgba(245, 158, 11, 0.4);" data-i18n="blog_page.cat_management">Gestión</span>
                         <div class="blog-image-placeholder"
                             style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);"></div>
                     </div>
                     <div class="blog-content">
-                        <h3>Caos Operativo</h3>
-                        <p class="blog-excerpt">5 señales de alerta roja en tu agencia.</p>
-                        <span class="neon-link">Leer Artículo →</span>
+                        <h3 data-i18n="art_chaos.title">Caos Operativo</h3>
+                        <p class="blog-excerpt" data-i18n="art_chaos.p1">5 señales de alerta roja en tu agencia.</p>
+                        <span class="neon-link" data-i18n="articles_common.read_article">Leer Artículo →</span>
                     </div>
                 </a>
             </div>

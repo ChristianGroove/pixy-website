@@ -73,14 +73,9 @@
         <div class="grid-2" style="gap: 48px; align-items: start;">
             <!-- Left Info Column -->
             <div style="text-align: left;">
-                <div class="badge" style="margin-bottom: 12px;">Hablemos de tu Proyecto</div>
-                <h1 class="agency-hero-title" style="font-size: clamp(28px, 4vw, 46px); margin-bottom: 16px;">
-                    Inicia tu Próximo <br>
-                    <span class="gradient-text">Salto Digital</span>
-                </h1>
-                <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.6; margin-bottom: 32px;">
-                    Estamos listos para transformar tu visión en una experiencia digital de élite. Cuéntanos sobre tu marca o agenda una sesión de kickoff inmediata por WhatsApp o correo.
-                </p>
+                <div class="badge" style="margin-bottom: 12px;" data-i18n="agency_contact_page.badge">Hablemos de tu Proyecto</div>
+                <h1 class="agency-hero-title" style="font-size: clamp(28px, 4vw, 46px); margin-bottom: 16px;"><span data-i18n="agency_contact_page.title_prefix">Inicia tu Próximo</span> <br><span class="gradient-text" data-i18n="agency_contact_page.title_gradient">Salto Digital</span></h1>
+                <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.6; margin-bottom: 32px;" data-i18n="agency_contact_page.subtitle">Estamos listos para transformar tu visión en una experiencia digital de élite. Cuéntanos sobre tu marca o agenda una sesión de kickoff inmediata por WhatsApp o correo.</p>
 
                 <!-- Contact Channels with High Quality WhatsApp & Email Cards -->
                 <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px;">
@@ -91,8 +86,8 @@
                             </svg>
                         </div>
                         <div>
-                            <strong style="color: var(--text-primary); font-size: 1.05rem; display: block;">WhatsApp Directo</strong>
-                            <span style="color: #25D366; font-size: 0.85rem; font-weight: 600;">● Respuesta promedio en menos de 15 min</span>
+                            <strong style="color: var(--text-primary); font-size: 1.05rem; display: block;" data-i18n="agency_contact_page.whatsapp_channel_title">WhatsApp Directo</strong>
+                            <span style="color: #25D366; font-size: 0.85rem; font-weight: 600;" data-i18n="agency_contact_page.whatsapp_channel_status">● Respuesta promedio en menos de 15 min</span>
                         </div>
                     </a>
 
@@ -101,7 +96,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                         </div>
                         <div>
-                            <strong style="color: var(--text-primary); font-size: 1rem; display: block;">Email Corporativo</strong>
+                            <strong style="color: var(--text-primary); font-size: 1rem; display: block;" data-i18n="agency_contact_page.email_channel_title">Email Corporativo</strong>
                             <span style="color: var(--text-secondary); font-size: 0.85rem;">hola@pixy.com.co</span>
                         </div>
                     </div>
@@ -109,51 +104,49 @@
 
                 <!-- Guarantee Card -->
                 <div class="glass-card" style="padding: 24px; border-radius: 20px; border-color: rgba(242, 5, 226, 0.25);">
-                    <h4 style="color: var(--brand-pink-light); margin-bottom: 8px; font-size: 1rem;">Garantía de Satisfacción Pixy</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.5; margin: 0;">
-                        Todos nuestros servicios y planes dedicados incluyen acompañamiento directo, revisiones ágiles y entregas con estándares de código y diseño de Silicon Valley.
-                    </p>
+                    <h4 style="color: var(--brand-pink-light); margin-bottom: 8px; font-size: 1rem;" data-i18n="agency_contact_page.guarantee_title">Garantía de Satisfacción Pixy</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.5; margin: 0;" data-i18n="agency_contact_page.guarantee_desc">Todos nuestros servicios y planes dedicados incluyen acompañamiento directo, revisiones ágiles y entregas con estándares de código y diseño de Silicon Valley.</p>
                 </div>
             </div>
 
             <!-- Right Form Column -->
             <div class="glass-card" style="padding: 36px; text-align: left; border-radius: 28px;">
-                <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--text-primary);">Formulario de Kickoff de Proyecto</h3>
+                <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--text-primary);" data-i18n="agency_contact_page.form_title">Formulario de Kickoff de Proyecto</h3>
 
                 <form id="agency-contact-form" onsubmit="event.preventDefault(); alert('¡Gracias por contactar a Pixy Agency! Te responderemos de inmediato.');">
                     <div style="margin-bottom: 16px;">
-                        <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;">Nombre Completo *</label>
-                        <input type="text" required placeholder="Tu nombre" style="width: 100%; padding: 12px 14px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); font-family: inherit;">
+                        <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;" data-i18n="agency_contact_page.label_name">Nombre Completo *</label>
+                        <input type="text" required placeholder="Tu nombre" data-i18n-placeholder="common.placeholder_name" style="width: 100%; padding: 12px 14px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); font-family: inherit;">
                     </div>
 
                     <div style="margin-bottom: 16px;">
-                        <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;">Correo Electrónico *</label>
-                        <input type="email" required placeholder="ejemplo@empresa.com" style="width: 100%; padding: 12px 14px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); font-family: inherit;">
+                        <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;" data-i18n="agency_contact_page.label_email">Correo Electrónico *</label>
+                        <input type="email" required placeholder="ejemplo@empresa.com" data-i18n-placeholder="common.placeholder_email" style="width: 100%; padding: 12px 14px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); font-family: inherit;">
                     </div>
 
                     <div style="margin-bottom: 16px;">
-                        <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;">Teléfono / WhatsApp *</label>
-                        <input type="tel" required placeholder="+57 300 000 0000" style="width: 100%; padding: 12px 14px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); font-family: inherit;">
+                        <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;" data-i18n="agency_contact_page.label_phone">Teléfono / WhatsApp *</label>
+                        <input type="tel" required placeholder="+57 300 000 0000" data-i18n-placeholder="common.placeholder_phone" style="width: 100%; padding: 12px 14px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); font-family: inherit;">
                     </div>
 
                     <div style="margin-bottom: 16px;">
-                        <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;">Servicio de Interés Principal</label>
+                        <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;" data-i18n="agency_contact_page.label_service">Servicio de Interés Principal</label>
                         <select style="width: 100%; padding: 12px 14px; border-radius: 12px; background: rgba(15,15,26,0.9); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); font-family: inherit;">
-                            <option value="web">Desarrollo Web & Landing Pages</option>
-                            <option value="dept">Departamento de Diseño Dedicado (Suscripción)</option>
-                            <option value="branding">Branding & Identidad 3D</option>
-                            <option value="ads">Growth Ads & Campañas de Adquisición</option>
-                            <option value="content">Content Engine & Redes Sociales</option>
-                            <option value="crm">Automatizaciones & Conexión CRM</option>
+                            <option value="web" data-i18n="agency_contact_page.opt_web">Desarrollo Web & Landing Pages</option>
+                            <option value="dept" data-i18n="agency_contact_page.opt_dept">Departamento de Diseño Dedicado (Suscripción)</option>
+                            <option value="branding" data-i18n="agency_contact_page.opt_branding">Branding & Identidad 3D</option>
+                            <option value="ads" data-i18n="agency_contact_page.opt_ads">Growth Ads & Campañas de Adquisición</option>
+                            <option value="content" data-i18n="agency_contact_page.opt_content">Content Engine & Redes Sociales</option>
+                            <option value="crm" data-i18n="agency_contact_page.opt_crm">Automatizaciones & Conexión CRM</option>
                         </select>
                     </div>
 
                     <div style="margin-bottom: 24px;">
-                        <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;">Detalles del Proyecto o Metas</label>
-                        <textarea rows="4" placeholder="Cuéntanos sobre tu producto, objetivos o plazos estimados..." style="width: 100%; padding: 12px 14px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); font-family: inherit; resize: vertical;"></textarea>
+                        <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;" data-i18n="agency_contact_page.label_details">Detalles del Proyecto o Metas</label>
+                        <textarea rows="4" placeholder="Cuéntanos sobre tu producto, objetivos o plazos estimados..." data-i18n-placeholder="common.placeholder_project_details" style="width: 100%; padding: 12px 14px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); font-family: inherit; resize: vertical;"></textarea>
                     </div>
 
-                    <button type="submit" class="btn-neon" style="width: 100%; padding: 14px; font-size: 1rem;">Enviar Solicitud de Kickoff</button>
+                    <button type="submit" class="btn-neon" style="width: 100%; padding: 14px; font-size: 1rem;" data-i18n="agency_contact_page.btn_submit">Enviar Solicitud de Kickoff</button>
                 </form>
             </div>
         </div>
@@ -171,36 +164,36 @@
                     </p>
                 </div>
                 <div class="agency-footer-col">
-                    <h4>Servicios</h4>
+                    <h4 data-i18n="agency_creative.footer_col_services">Servicios</h4>
                     <ul class="agency-footer-links">
-                        <li><a href="agency/services.html">Desarrollo Web</a></li>
-                        <li><a href="agency/services.html">Branding & 3D</a></li>
-                        <li><a href="agency/services.html">Growth Ads</a></li>
-                        <li><a href="agency/services.html">Content Engine</a></li>
+                        <li><a href="agency/services.html" data-i18n="agency_creative.footer_link_web">Desarrollo Web</a></li>
+                        <li><a href="agency/services.html" data-i18n="agency_creative.footer_link_branding">Branding & 3D</a></li>
+                        <li><a href="agency/services.html" data-i18n="agency_creative.footer_link_growth">Growth Ads</a></li>
+                        <li><a href="agency/services.html" data-i18n="agency_creative.footer_link_content">Content Engine</a></li>
                     </ul>
                 </div>
                 <div class="agency-footer-col">
-                    <h4>Planes</h4>
+                    <h4 data-i18n="agency_creative.footer_col_plans">Planes</h4>
                     <ul class="agency-footer-links">
-                        <li><a href="agency/plans.html">Diseño Dedicado Starter</a></li>
-                        <li><a href="agency/plans.html">Pro Growth Studio</a></li>
-                        <li><a href="agency/plans.html">Scale Enterprise</a></li>
+                        <li><a href="agency/plans.html" data-i18n="agency_creative.footer_link_plan_starter">Diseño Dedicado Starter</a></li>
+                        <li><a href="agency/plans.html" data-i18n="agency_creative.footer_link_plan_pro">Pro Growth Studio</a></li>
+                        <li><a href="agency/plans.html" data-i18n="agency_creative.footer_link_plan_scale">Scale Enterprise</a></li>
                     </ul>
                 </div>
                 <div class="agency-footer-col">
-                    <h4>Portafolio</h4>
+                    <h4 data-i18n="agency_creative.footer_col_portfolio">Portafolio</h4>
                     <ul class="agency-footer-links">
-                        <li><a href="agency/portfolio.html">Casos de Éxito</a></li>
-                        <li><a href="agency/services.html">Servicios Creativos</a></li>
-                        <li><a href="contact-agency.html">Contacto</a></li>
+                        <li><a href="agency/portfolio.html" data-i18n="agency_creative.footer_link_cases">Casos de Éxito</a></li>
+                        <li><a href="agency/services.html" data-i18n="agency_creative.footer_link_services">Servicios Creativos</a></li>
+                        <li><a href="contact-agency.html" data-i18n="agency_creative.footer_link_contact">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="agency-footer-col">
-                    <h4>Ecosistema</h4>
+                    <h4 data-i18n="agency_creative.footer_col_ecosystem">Ecosistema</h4>
                     <ul class="agency-footer-links">
-                        <li><a href="index.html">Pixy Spaces (CRM)</a></li>
-                        <li><a href="privacy.html">Privacidad</a></li>
-                        <li><a href="terms.html">Términos</a></li>
+                        <li><a href="index.html" data-i18n="agency_creative.footer_link_spaces">Pixy Spaces (CRM)</a></li>
+                        <li><a href="privacy.html" data-i18n="agency_creative.footer_link_privacy">Privacidad</a></li>
+                        <li><a href="terms.html" data-i18n="agency_creative.footer_link_terms">Términos</a></li>
                     </ul>
                 </div>
             </div>

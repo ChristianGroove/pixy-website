@@ -34,16 +34,20 @@
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
             </a>
             <div class="nav-links">
-                <a href="/" class="neon-link">Inicio</a>
+                <a href="index.html" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="spaces.html" class="neon-link">Spaces</a>
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="pricing.html" class="neon-link">Precios</a>
-                <a href="blog.html" class="neon-link">Blog</a>
-                <a href="contact.html" class="neon-link">Contacto</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="nav-actions">
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;">Demo</a>
+                <button id="lang-toggle" class="btn-lang" style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
@@ -51,12 +55,9 @@
     <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
 
         <header style="text-align: center; margin-bottom: 80px;">
-            <span class="neon-badge" style="margin-bottom: 24px;">Pixy Core IA</span>
-            <h1 style="font-size: clamp(28px, 4vw, 46px); line-height: 1.16; margin-bottom: 16px;">El Motor Central de tu Operación</h1>
-            <p class="subtitle" style="max-width: 800px; margin: 0 auto;">
-                Más que herramientas sueltas, Pixy es la infraestructura inteligente que tu negocio necesita para operar
-                con autonomía. CRM, Finanzas, Operaciones, Herramientas e IA unificados en un solo sistema.
-            </p>
+            <span class="neon-badge" style="margin-bottom: 24px;" data-i18n="features_page.badge">Pixy Core IA</span>
+            <h1 style="font-size: clamp(28px, 4vw, 46px); line-height: 1.16; margin-bottom: 16px;" data-i18n="features_page.hero_title">El Motor Central de tu Operación</h1>
+            <p class="subtitle" style="max-width: 800px; margin: 0 auto;" data-i18n="features_page.hero_desc">Más que herramientas sueltas, Pixy es la infraestructura inteligente que tu negocio necesita para operar con autonomía. CRM, Finanzas, Operaciones, Herramientas e IA unificados en un solo sistema.</p>
             <img src="assets/droid.png" class="floating-droid droid-flip"
                 style="top: 0; right: 15%; width: 70px; animation-duration: 4s;" alt="">
         </header>
@@ -64,26 +65,20 @@
         <!-- Section 1: CRM & AI (The Brain) -->
         <section class="detail-grid reversed">
             <div class="detail-content">
-                <span class="neon-badge">El Cerebro</span>
-                <h2 style="font-size: 2.5rem; margin: 16px 0;">CRM Impulsado por IA</h2>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;">
-                    Olvídate de las hojas de cálculo. Pixy centraliza cada cliente, cada interacción y cada venta en una
-                    base de datos viva. La IA te ayuda a priorizar a quién llamar y cuándo.
-                </p>
+                <span class="neon-badge" data-i18n="features_page.s1_badge">El Cerebro</span>
+                <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="features_page.s1_title">CRM Impulsado por IA</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;" data-i18n="features_page.s1_desc">Olvídate de las hojas de cálculo. Pixy centraliza cada cliente, cada interacción y cada venta en una base de datos viva. La IA te ayuda a priorizar a quién llamar y cuándo.</p>
                 <ul class="feature-list">
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong>Base de Datos
-                            Unificada:</strong> Historial 360° de cada cliente.</li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong>Pipelines Visuales:</strong>
-                        Mueve tus ventas de "Prospecto" a "Pagado".</li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong>Etiquetado Automático:</strong>
-                        Segmentación inteligente sin esfuerzo manual.</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s1_f1_bold">Base de Datos Unificada:</strong> <span data-i18n="features_page.s1_f1_text">Historial 360° de cada cliente.</span></li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s1_f2_bold">Pipelines Visuales:</strong> <span data-i18n="features_page.s1_f2_text">Mueve tus ventas de "Prospecto" a "Pagado".</span></li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s1_f3_bold">Etiquetado Automático:</strong> <span data-i18n="features_page.s1_f3_text">Segmentación inteligente sin esfuerzo manual.</span></li>
                 </ul>
             </div>
             <div class="detail-image glass-card"
                 style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
                 <div style="text-align: center; opacity: 0.6;">
                     <span style="font-size: 42px;">🧠</span>
-                    <p>Inteligencia de Negocio</p>
+                    <p data-i18n="features_page.s1_box">Inteligencia de Negocio</p>
                 </div>
             </div>
         </section>
@@ -91,26 +86,20 @@
         <!-- Section 2: Communication (The Voice) -->
         <section class="detail-grid">
             <div class="detail-content">
-                <span class="neon-badge">La Voz</span>
-                <h2 style="font-size: 2.5rem; margin: 16px 0;">Inbox Omnicanal</h2>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;">
-                    Tus clientes están en todas partes. Tú también. Responde WhatsApp, Instagram y Messenger desde una
-                    sola pantalla, con todo tu equipo conectado al mismo tiempo.
-                </p>
+                <span class="neon-badge" data-i18n="features_page.s2_badge">La Voz</span>
+                <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="features_page.s2_title">Inbox Omnicanal</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;" data-i18n="features_page.s2_desc">Tus clientes están en todas partes. Tú también. Responde WhatsApp, Instagram y Messenger desde una sola pantalla, con todo tu equipo conectado al mismo tiempo.</p>
                 <ul class="feature-list">
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong>Multi-Agente:</strong> Tu
-                        equipo colaborando en tiempo real.</li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong>Multimedia Full:</strong>
-                        Audios, fotos y documentos sin restricciones.</li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong>Notas Internas:</strong> Chatea
-                        con tu equipo dentro del chat del cliente.</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s2_f1_bold">Multi-Agente:</strong> <span data-i18n="features_page.s2_f1_text">Tu equipo colaborando en tiempo real.</span></li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s2_f2_bold">Multimedia Full:</strong> <span data-i18n="features_page.s2_f2_text">Audios, fotos y documentos sin restricciones.</span></li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s2_f3_bold">Notas Internas:</strong> <span data-i18n="features_page.s2_f3_text">Chatea con tu equipo dentro del chat del cliente.</span></li>
                 </ul>
             </div>
             <div class="detail-image glass-card"
                 style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
                 <div style="text-align: center; opacity: 0.6;">
                     <span style="font-size: 42px;">💬</span>
-                    <p>Centro de Comando</p>
+                    <p data-i18n="features_page.s2_box">Centro de Comando</p>
                 </div>
             </div>
         </section>
@@ -118,26 +107,20 @@
         <!-- Section 3: Finance (The Engine) -->
         <section class="detail-grid reversed">
             <div class="detail-content">
-                <span class="neon-badge">Lo Financiero</span>
-                <h2 style="font-size: 2.5rem; margin: 16px 0;">Gestión de Cobros Universal</h2>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;">
-                    No necesitas un departamento contable para cobrar profesionalmente. Genera cotizaciones y cuentas de
-                    cobro, envía enlaces de pago y automatiza el recaudo.
-                </p>
+                <span class="neon-badge" data-i18n="features_page.s3_badge">Lo Financiero</span>
+                <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="features_page.s3_title">Gestión de Cobros Universal</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;" data-i18n="features_page.s3_desc">No necesitas un departamento contable para cobrar profesionalmente. Genera cotizaciones y cuentas de cobro, envía enlaces de pago y automatiza el recaudo.</p>
                 <ul class="feature-list">
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong>Recaudo Automático:</strong>
-                        Recordatorios de pago que salen solos.</li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong>Cotizaciones Web:</strong>
-                        Propuestas que se aceptan con un clic.</li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong>Conciliación:</strong> Todo
-                        conectado a tu CRM y flujo de caja.</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s3_f1_bold">Recaudo Automático:</strong> <span data-i18n="features_page.s3_f1_text">Recordatorios de pago que salen solos.</span></li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s3_f2_bold">Cotizaciones Web:</strong> <span data-i18n="features_page.s3_f2_text">Propuestas que se aceptan con un clic.</span></li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s3_f3_bold">Conciliación:</strong> <span data-i18n="features_page.s3_f3_text">Todo conectado a tu CRM y flujo de caja.</span></li>
                 </ul>
             </div>
             <div class="detail-image glass-card"
                 style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
                 <div style="text-align: center; opacity: 0.6;">
                     <span style="font-size: 42px;">💳</span>
-                    <p>Flujo de Caja</p>
+                    <p data-i18n="features_page.s3_box">Flujo de Caja</p>
                 </div>
             </div>
         </section>
@@ -145,20 +128,17 @@
         <!-- Section 4: Automation (The Autopilot) -->
         <section class="detail-grid">
             <div class="detail-content">
-                <span class="neon-badge">El Piloto Automático</span>
-                <h2 style="font-size: 2.5rem; margin: 16px 0;">Automatización 24/7</h2>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;">
-                    Duplica tu capacidad operativa sin contratar más personal. Diseña flujos de trabajo que califican
-                    leads, agendan citas y responden preguntas mientras duermes.
-                </p>
+                <span class="neon-badge" data-i18n="features_page.s4_badge">El Piloto Automático</span>
+                <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="features_page.s4_title">Automatización 24/7</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;" data-i18n="features_page.s4_desc">Duplica tu capacidad operativa sin contratar más personal. Diseña flujos de trabajo que califican leads, agendan citas y responden preguntas mientras duermes.</p>
                 <div class="bento-grid" style="grid-template-columns: 1fr 1fr; gap: 16px;">
                     <div class="glass-card" style="padding: 20px;">
-                        <h4 style="margin-bottom: 8px;">🤖 Chatbots IA</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);">Atención inmediata nivel humano.</p>
+                        <h4 style="margin-bottom: 8px;" data-i18n="features_page.s4_bento_title1">🤖 Chatbots IA</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);" data-i18n="features_page.s4_bento_desc1">Atención inmediata nivel humano.</p>
                     </div>
                     <div class="glass-card" style="padding: 20px;">
-                        <h4 style="margin-bottom: 8px;">🔌 Webhooks</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);">Conecta con +5000 apps.</p>
+                        <h4 style="margin-bottom: 8px;" data-i18n="features_page.s4_bento_title2">🔌 Webhooks</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);" data-i18n="features_page.s4_bento_desc2">Conecta con +5000 apps.</p>
                     </div>
                 </div>
             </div>
@@ -166,7 +146,7 @@
                 style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
                 <div style="text-align: center; opacity: 0.6;">
                     <span style="font-size: 42px;">⚡</span>
-                    <p>Productividad Infinita</p>
+                    <p data-i18n="features_page.s4_box">Productividad Infinita</p>
                 </div>
             </div>
         </section>
@@ -174,35 +154,29 @@
         <!-- Section 5: Industry Modules (Superpowers) -->
         <section class="detail-grid reversed">
             <div class="detail-content">
-                <span class="neon-badge">Tu Superpoder</span>
-                <h2 style="font-size: 2.5rem; margin: 16px 0;">Módulos por Industria</h2>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;">
-                    No entregamos el mismo software a todos. Pixy activa <strong>módulos operativos
-                        especializados</strong> diseñados para la eficacia máxima de tu sector.
-                </p>
+                <span class="neon-badge" data-i18n="features_page.s5_badge">Tu Superpoder</span>
+                <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="features_page.s5_title">Módulos por Industria</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;"><span data-i18n="features_page.s5_desc_1">No entregamos el mismo software a todos. Pixy activa</span> <strong data-i18n="features_page.s5_desc_bold">módulos operativos especializados</strong> <span data-i18n="features_page.s5_desc_2">diseñados para la eficacia máxima de tu sector.</span></p>
                 <ul class="feature-list">
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong>Agencias:</strong> Gestión de
-                        Proyectos White-Label.</li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong>Salud:</strong> Agendamiento
-                        Clínico y Recordatorios.</li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong>Legal:</strong> Gestión de
-                        Expedientes y Tiempos.</li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s5_f1_bold">Agencias:</strong> <span data-i18n="features_page.s5_f1_text">Gestión de Proyectos White-Label.</span></li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s5_f2_bold">Salud:</strong> <span data-i18n="features_page.s5_f2_text">Agendamiento Clínico y Recordatorios.</span></li>
+                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s5_f3_bold">Legal:</strong> <span data-i18n="features_page.s5_f3_text">Gestión de Expedientes y Tiempos.</span></li>
                 </ul>
             </div>
             <div class="detail-image glass-card"
                 style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
                 <div style="text-align: center; opacity: 0.6;">
                     <span style="font-size: 42px;">🧬</span>
-                    <p>ADN Adaptable</p>
+                    <p data-i18n="features_page.s5_box">ADN Adaptable</p>
                 </div>
             </div>
         </section>
 
         <!-- CTA Feature -->
         <section class="glass-card" style="margin-top: 80px; text-align: center; padding: 60px;">
-            <h2>¿Buscas algo específico?</h2>
-            <p style="margin-bottom: 32px;">Agenda una demo técnica para ver si Pixy se adapta a tu caso de uso.</p>
-            <a href="contact.html" class="btn-neon">Hablar con un Experto</a>
+            <h2 data-i18n="features_page.cta_title">¿Buscas algo específico?</h2>
+            <p style="margin-bottom: 32px;" data-i18n="features_page.cta_desc">Agenda una demo técnica para ver si Pixy se adapta a tu caso de uso.</p>
+            <a href="contact.html" class="btn-neon" data-i18n="features_page.cta_btn">Hablar con un Experto</a>
         </section>
 
     </main>

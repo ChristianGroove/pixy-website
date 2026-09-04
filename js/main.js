@@ -207,14 +207,20 @@ async function handleNewsletterSubmit(e) {
     const button = form.querySelector('button');
     const originalText = button.innerHTML;
 
+    const lang = localStorage.getItem('pixy_lang') || 'es';
+    const msgInvalid = lang === 'en' ? 'Please enter a valid email' : 'Por favor ingresa un email válido';
+    const msgSending = lang === 'en' ? 'Sending...' : 'Enviando...';
+    const msgSuccess = lang === 'en' ? 'Thank you! We will notify you when we launch.' : '¡Gracias! Te notificaremos cuando lancemos.';
+    const msgError = lang === 'en' ? 'An error occurred. Please try again.' : 'Hubo un error. Intenta de nuevo.';
+
     // Simple validation
     if (!email || !email.includes('@')) {
-        showToast('Por favor ingresa un email válido', 'error');
+        showToast(msgInvalid, 'error');
         return;
     }
 
     // Show loading state
-    button.innerHTML = '<span class="loading-spinner"></span> Enviando...';
+    button.innerHTML = `<span class="loading-spinner"></span> ${msgSending}`;
     button.disabled = true;
 
     try {
@@ -222,10 +228,10 @@ async function handleNewsletterSubmit(e) {
         await new Promise(resolve => setTimeout(resolve, 1500));
 
         // Success
-        showToast('¡Gracias! Te notificaremos cuando lancemos.', 'success');
+        showToast(msgSuccess, 'success');
         form.reset();
     } catch (error) {
-        showToast('Hubo un error. Intenta de nuevo.', 'error');
+        showToast(msgError, 'error');
     } finally {
         button.innerHTML = originalText;
         button.disabled = false;
