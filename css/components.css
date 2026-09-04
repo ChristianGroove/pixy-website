@@ -1199,6 +1199,14 @@
     overflow: hidden;
 }
 
+.blog-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
 .blog-image-placeholder {
     width: 100%;
     height: 100%;
@@ -1385,6 +1393,23 @@
     margin-bottom: 24px;
     font-size: 0.9rem;
     color: var(--text-secondary);
+}
+
+.article-cover-wrapper {
+    margin-top: 36px;
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.article-cover-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .article-content {

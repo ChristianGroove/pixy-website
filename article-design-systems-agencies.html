@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Systems para Agencias: Prototipado y lanzamientos en 48 horas | Blog Pixy</title>
+    <meta name="description" content="Diseñar cada botón y formulario desde cero en cada proyecto arruina la rentabilidad de una agencia. Descubre cómo los Design Tokens aceleran tus entregas sin perder originalidad.">
+    <link rel="canonical" href="https://pixy.com.co/article-design-systems-agencies.html">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pixy.com.co/article-design-systems-agencies.html">
+    <meta property="og:title" content="Design Systems para Agencias: Prototipado y lanzamientos en 48 horas | Blog Pixy">
+    <meta property="og:description" content="Diseñar cada botón y formulario desde cero en cada proyecto arruina la rentabilidad de una agencia. Descubre cómo los Design Tokens aceleran tus entregas sin perder originalidad.">
+    <meta property="og:image" content="https://pixy.com.co/assets/blog/design-systems-agencies.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Design Systems para Agencias: Prototipado y lanzamientos en 48 horas | Blog Pixy">
+    <meta name="twitter:description" content="Diseñar cada botón y formulario desde cero en cada proyecto arruina la rentabilidad de una agencia. Descubre cómo los Design Tokens aceleran tus entregas sin perder originalidad.">
+    <meta name="twitter:image" content="https://pixy.com.co/assets/blog/design-systems-agencies.jpg">
+
+    <!-- Dependencies -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <style>
+        body {
+            background-color: #0F0F1A;
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="blog-post-page">
+    <div class="mouse-spotlight"></div>
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark">
+                <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="neon-link" data-i18n="nav.home">Inicio</a>
+                <div class="nav-item has-dropdown">
+                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
+                </div>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="blog.html" class="neon-link active" data-i18n="nav.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+            </div>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-lang" style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                    <span id="lang-text">ES</span>
+                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                </button>
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="nav.demo">Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="article-hero">
+        <div class="article-hero-bg"></div>
+        <div class="container">
+            <div class="badge" style="margin-bottom: 24px; background: linear-gradient(135deg, #10b981, #059669);" data-i18n="blog_page.cat_design">Diseño Web</div>
+            <h1 data-i18n="art_designsystem.title">Design Systems para Agencias: Prototipado y lanzamientos en 48 horas</h1>
+            <div class="article-meta">
+                <span data-i18n="articles_common.author_david_name">David Sánchez</span>
+                <span>•</span>
+                <span data-i18n="blog_page.date_jul_23">Jul 23, 2026</span>
+                <span>•</span>
+                <span data-i18n="blog_page.read_time_6">6 min lectura</span>
+            </div>
+            <div class="article-cover-wrapper">
+                <img src="assets/blog/design-systems-agencies.jpg" alt="Design Systems para Agencias: Prototipado y lanzamientos en 48 horas">
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding-bottom: 80px;">
+        <article class="article-content">
+            <p class="lead" style="font-size: 1.3rem; margin-bottom: 40px; color: var(--text-primary);" data-i18n="art_designsystem.lead">¿Por qué tantas agencias tardan semanas en entregar una landing page cuando el 80% de los componentes de interfaz son estructuralmente idénticos?</p>
+
+            <h2 data-i18n="art_designsystem.h2_problem">La Trampa de Reinventar la Rueda</h2>
+            <p data-i18n="art_designsystem.p_problem_1">Cuando los diseñadores en Figma usan estilos que no corresponden con las clases del código frontend, los desarrolladores pasan horas corrigiendo espaciados, colores y tipografías a ojo.</p>
+            <p data-i18n="art_designsystem.p_problem_2">Esta desconexión genera retrasos en las entregas, frustración en el equipo y revisiones infinitas con el cliente.</p>
+
+            <div class="neon-quote" data-i18n="art_designsystem.quote">"Un Design System no coarta la creatividad; elimina las tareas repetitivas para que tu equipo se concentre en lo que realmente hace única a la marca."</div>
+
+            <h2 data-i18n="art_designsystem.h2_solution">El Enfoque de Componentes Modulares de Pixy</h2>
+            <p data-i18n="art_designsystem.p_solution">Conectamos diseño y desarrollo a través de tokens visuales estandarizados:</p>
+            <ol>
+                <li><strong data-i18n="art_designsystem.li1_bold">Design Tokens Unificados:</strong> <span data-i18n="art_designsystem.li1_text">Colores, espaciados y tipografías definidos en variables CSS que se sincronizan con Figma automáticamente.</span></li>
+                <li><strong data-i18n="art_designsystem.li2_bold">Biblioteca de Componentes a 60 FPS:</strong> <span data-i18n="art_designsystem.li2_text">Bloques de bento grids, carruseles y modales listos para producción y testeados en todos los dispositivos.</span></li>
+                <li><strong data-i18n="art_designsystem.li3_bold">Lanzamientos en 48 Horas:</strong> <span data-i18n="art_designsystem.li3_text">Tu equipo puede pasar de concepto aprobado a sitio en producción de alto impacto en tiempo récord.</span></li>
+            </ol>
+
+            <div class="article-cta-box">
+                <h3 style="margin-top: 0;" data-i18n="art_designsystem.cta_title">Acelera tus Entregas de Diseño</h3>
+                <p data-i18n="art_designsystem.cta_desc">Eleva la calidad visual de tus proyectos mientras multiplicas tu margen por entregable.</p>
+                <a href="contact.html" class="btn-neon" data-i18n="art_designsystem.cta_btn">Ver Servicios de Diseño</a>
+            </div>
+
+            <h2 data-i18n="art_designsystem.h2_concl">Calidad y Velocidad Sí Pueden Coexistir</h2>
+            <p data-i18n="art_designsystem.p_concl">Las agencias líderes de 2026 no cobran por horas de trabajo; cobran por la velocidad y la excelencia con la que transforman los objetivos de sus clientes en realidades digitales.</p>
+
+            <div class="author-bio">
+                <div class="author-avatar" style="background: linear-gradient(135deg, #ec4899, #db2777);">DS</div>
+                <div>
+                    <h4 style="margin: 0 0 8px 0; color: var(--text-primary);" data-i18n="articles_common.author_david_name">David Sánchez</h4>
+                    <p style="margin: 0; font-size: 0.9rem;" data-i18n="articles_common.author_david_bio">CTO en Pixy. Arquitecto de soluciones omnicanales escalables.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Related Articles -->
+        <section class="related-articles">
+            <h3 style="font-size: 2rem; margin-bottom: 40px; text-align: center;" data-i18n="articles_common.keep_learning">Sigue Aprendiendo</h3>
+            <div class="blog-grid">
+                <a href="article-retail-sync-case-study.html" class="blog-card" style="text-decoration: none;">
+                    <div class="blog-image-wrapper">
+                        <span class="blog-category-badge" data-i18n="blog_page.cat_retail">Retail</span>
+                        <img src="assets/blog/retail-sync-case-study.jpg" alt="Retail Omnicanal en Acción: Sincronización física y digital en tiempo real" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <h3 data-i18n="art_retailsync.title">Retail Omnicanal en Acción: Sincronización física y digital en tiempo real</h3>
+                        <p class="blog-excerpt" data-i18n="art_retailsync.excerpt">Caso de estudio de cómo una marca de moda con 4 tiendas físicas y canal e-commerce eliminó las cancelaciones por quiebre de stock sincronizando su inventario con cero latencia.</p>
+                        <span class="neon-link" data-i18n="articles_common.read_article">Leer Artículo →</span>
+                    </div>
+                </a>
+
+                <a href="article-human-in-the-loop-support.html" class="blog-card" style="text-decoration: none;">
+                    <div class="blog-image-wrapper">
+                        <span class="blog-category-badge" data-i18n="blog_page.cat_support">Soporte</span>
+                        <img src="assets/blog/human-in-the-loop-support.jpg" alt="Soporte 24/7 Human-in-the-Loop: Atención veloz sin perder empatía" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <h3 data-i18n="art_hitl.title">Soporte 24/7 Human-in-the-Loop: Atención veloz sin perder empatía</h3>
+                        <p class="blog-excerpt" data-i18n="art_hitl.excerpt">Automatizar el 100% de tu soporte suele terminar en clientes enojados con respuestas robóticas. Conoce el modelo híbrido donde la IA asiste al humano para responder en segundos.</p>
+                        <span class="neon-link" data-i18n="articles_common.read_article">Leer Artículo →</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
+                <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
+                <p data-i18n="footer.slogan">Tu negocio, bien diseñado.</p>
+            </div>
+            <nav class="footer-links">
+                <h4 data-i18n="footer.product">Producto</h4>
+                <a href="features.html" class="neon-link" data-i18n="nav.spaces">Características</a>
+                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
+            </nav>
+            <nav class="footer-links">
+                <h4 data-i18n="footer.company">Empresa</h4>
+                <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
+                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+            </nav>
+            <nav class="footer-links">
+                <h4 data-i18n="footer.legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="footer.deletion">Eliminación de Datos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
+                <a href="permissions.html" class="neon-link" data-i18n="footer.permissions">Permisos</a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
