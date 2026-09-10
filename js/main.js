@@ -71,6 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
         initGSAPHero();
     }
 
+    // Initialize Voice Assistant Orb (Cobp/hot-dodo-99)
+    initVoiceAssistantOrb();
+
     // ----------------------------------------------------
     // GLOBAL DEPENDENCY INJECTION (GSAP + Scripts)
     // ----------------------------------------------------
@@ -164,11 +167,16 @@ function initTheme() {
 }
 
 function toggleTheme() {
+    document.documentElement.classList.add('theme-transitioning');
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('pixy-theme', newTheme);
+
+    setTimeout(() => {
+        document.documentElement.classList.remove('theme-transitioning');
+    }, 350);
 
     // Animate the toggle button
     const toggle = document.querySelector('.theme-toggle');
@@ -297,8 +305,8 @@ function initScrollAnimations() {
     // 1. Define elements to animate automatically
     // Exclude hero sections to avoid conflicting with detailed GSAP timelines
     const selector = `
-        section:not(.hero-space):not(#hero),
-        header:not(.hero-space):not(#hero), 
+        section:not(.hero-space):not(#hero):not(.agency-hero-section),
+        header:not(.hero-space):not(#hero):not(.agency-hero-section), 
         article,
         .glass-card, 
         .step-card,
@@ -569,16 +577,25 @@ function initAccordion() {
    GSAP HERO ANIMATION
    ============================================ */
 function initGSAPHero() {
-    const hero = document.querySelector('.hero-space');
+    const hero = document.querySelector('.hero-space') || document.querySelector('.agency-hero-section');
     if (!hero || hero.dataset.gsapInitialized === 'true') return;
     hero.dataset.gsapInitialized = 'true';
 
     gsap.registerPlugin(ScrollTrigger);
 
-    const content = document.querySelector('.hero-space .hero-content-left') || document.querySelector('.hero-content-left');
-    const astroWrapper = document.querySelector('.hero-space .agency-hero-astronaut-wrapper') || document.querySelector('.spaces-astro-pos') || document.querySelector('.astronaut-hero');
-    const orbWrapper = document.querySelector('.hero-space .hero-hand-orb-wrapper') || document.querySelector('.spaces-orb-pos') || document.querySelector('.hero-hand-orb');
-    const glow = document.querySelector('.hero-space .agency-visual-glow');
+    const content = document.querySelector('.hero-space .hero-content-left') || 
+                    document.querySelector('.agency-hero-content') || 
+                    document.querySelector('.hero-content-left');
+    const astroWrapper = document.querySelector('.agency-hero-astronaut-wrapper') || 
+                         document.querySelector('.hero-space .agency-hero-astronaut-wrapper') || 
+                         document.querySelector('.spaces-astro-pos') || 
+                         document.querySelector('.astronaut-hero');
+    const orbWrapper = document.querySelector('.hero-hand-orb-wrapper') || 
+                       document.querySelector('.hero-space .hero-hand-orb-wrapper') || 
+                       document.querySelector('.spaces-orb-pos') || 
+                       document.querySelector('.hero-hand-orb');
+    const glow = document.querySelector('.agency-visual-glow') || 
+                 document.querySelector('.hero-space .agency-visual-glow');
 
     if (!astroWrapper) return;
 
@@ -624,7 +641,7 @@ function initGSAPHero() {
         }, '-=0.9');
     }
 
-    // 2. SCROLL TRIGGER: Parallax (Gradual Zoom + Downward Motion + Soft Fade)
+    // 2. SCROLL TRIGGER: Parallax (Smooth High-Depth Zoom + Controlled Translation)
     if (astroWrapper) {
         gsap.timeline({
             scrollTrigger: {
@@ -635,18 +652,18 @@ function initGSAPHero() {
             }
         })
         .to(astroWrapper, {
-            y: 100,
-            scale: 1.18,
-            opacity: 0.95,
+            y: 80,
+            scale: 1.15,
+            opacity: 0.98,
             duration: 0.55,
             ease: 'none'
         })
         .to(astroWrapper, {
-            y: 190,
-            scale: 1.30,
-            opacity: 0,
+            y: 150,
+            scale: 1.26,
+            opacity: 0.9,
             duration: 0.45,
-            ease: 'power1.inOut'
+            ease: 'power1.out'
         });
     }
 
@@ -655,25 +672,25 @@ function initGSAPHero() {
             scrollTrigger: {
                 trigger: hero,
                 start: 'top top',
-                end: '+=800',
+                end: '+=750',
                 scrub: 1.0
             }
         })
         .to(orbWrapper, {
-            y: 150,
-            x: -50,
-            scale: 1.8,
-            opacity: 0.95,
+            y: 90,
+            x: 25,
+            scale: 1.7,
+            opacity: 0.98,
             duration: 0.55,
             ease: 'none'
         })
         .to(orbWrapper, {
-            y: 280,
-            x: -95,
-            scale: 2.5,
-            opacity: 0,
+            y: 170,
+            x: 50,
+            scale: 2.2,
+            opacity: 0.88,
             duration: 0.45,
-            ease: 'power1.inOut'
+            ease: 'power1.out'
         });
     }
 
@@ -690,6 +707,35 @@ function initGSAPHero() {
             ease: 'power1.inOut'
         });
     }
+}
+
+// Refresh ScrollTrigger when images load
+window.addEventListener('load', () => {
+    if (typeof ScrollTrigger !== 'undefined') {
+        ScrollTrigger.refresh();
+    }
+});
+
+/* ============================================
+   VOICE ASSISTANT ORB (Cobp/hot-dodo-99)
+   ============================================ */
+function initVoiceAssistantOrb() {
+    const orb = document.querySelector('.orb');
+    const input = document.getElementById('v.a.o.') || document.querySelector('.input-orb');
+    if (!orb || !input) return;
+
+    orb.setAttribute('tabindex', '0');
+    orb.setAttribute('role', 'button');
+    orb.setAttribute('aria-label', 'AI Assistant Orb');
+
+    // Accessibility keyboard toggle
+    orb.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            input.checked = !input.checked;
+            input.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+    });
 }
 
 // ============================================

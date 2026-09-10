@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             applyTranslations(translations);
             document.documentElement.lang = lang;
 
-            // Notify dynamic components (Benchmark, Calculators, etc.)
+            // Notify dynamic components (AI Architect, Calculators, etc.)
             window.dispatchEvent(new CustomEvent('pixy:langChange', {
                 detail: { lang, translations }
             }));

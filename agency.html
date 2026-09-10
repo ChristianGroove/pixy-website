@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
+    <script>
+        (function () {
+            try {
+                var s = localStorage.getItem('pixy-theme');
+                var t = s ? s : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agency - Pixy Creative Studio & Digital Growth</title>
     <meta name="description"
         content="Diseñamos marcas de élite, desarrollo web de alto rendimiento, growth ads y departamento de diseño dedicado para marcas ambiciosas.">
     <link rel="canonical" href="https://pixy.com.co/agency.html">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preload" href="assets/logos/logo-light.svg" as="image" type="image/svg+xml">
+    <link rel="preload" href="assets/logos/logo-dark.svg" as="image" type="image/svg+xml">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -29,15 +42,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <!-- CSS Base & Components -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/agency-modern.css">
+    <link rel="stylesheet" href="css/style.css?v=3.1">
+    <link rel="stylesheet" href="css/components.css?v=3.1">
+    <link rel="stylesheet" href="css/pages.css?v=3.1">
+    <link rel="stylesheet" href="css/agency-modern.css?v=3.1">
     <style>
         body {
-            background-color: #0F0F1A;
             visibility: visible;
             opacity: 1;
+        }
+        html[data-theme="dark"] body {
+            background-color: #0F0F1A;
+        }
+        html[data-theme="light"] body {
+            background-color: #ffffff;
         }
     </style>
 </head>
@@ -52,8 +70,8 @@
         <div class="nav-content">
             <div class="nav-left-group" style="display: flex; align-items: center; gap: 32px;">
                 <a href="agency.html" class="nav-brand">
-                    <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark">
-                    <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
+                    <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
+                    <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
                 </a>
 
                 <!-- Futuristic Segmented Switcher (Agency / Spaces) -->
@@ -80,7 +98,7 @@
                     <span style="color:var(--brand-pink); font-size:10px;">▼</span>
                 </button>
 
-                <a href="#benchmark" class="btn-neon" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="agency_creative.nav_benchmark">Benchmark</a>
+                <a href="#calculator" class="btn-neon" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="agency_creative.nav_quote">Cotizar</a>
             </div>
         </div>
     </nav>
@@ -457,177 +475,86 @@
             </div>
         </section>
 
-        <!-- 6. INTERACTIVE PERFORMANCE & SPEED BENCHMARK -->
-        <section id="benchmark" class="benchmark-section">
-            <div class="section-header">
-                <div class="badge" data-i18n="agency_benchmark.badge">Live Performance Benchmark</div>
-                <h2 class="section-title"><span data-i18n="agency_benchmark.title_prefix">Web Tradicional vs. </span><span class="gradient-text" data-i18n="agency_benchmark.title_gradient">Arquitectura Pixy</span></h2>
-                <p class="subtitle" data-i18n="agency_benchmark.subtitle">Compara en tiempo real la velocidad de carga, puntuación Core Web Vitals y fluidez a 60fps de la ingeniería Pixy frente a un sitio web convencional.</p>
-            </div>
+        <!-- 6. VOICE ASSISTANT ORB & AI SOLUTIONS ARCHITECT -->
+        <section id="ai-architect" class="pixy-vao-section">
+            <div class="container-vao" id="pixy-assistant">
+                <input type="checkbox" class="input-orb" id="v.a.o." name="v.a.o." style="display: none;" />
+                <label for="v.a.o." class="orb" id="pixy-orb-trigger" tabindex="0" role="button" aria-label="Abrir Asesor IA" style="pointer-events: auto !important; cursor: pointer !important;">
+                    <div class="icons">
+                        <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g class="close">
+                                <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4"></path>
+                            </g>
+                            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chat-icon">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                <path d="M8 10h.01"></path>
+                                <path d="M12 10h.01"></path>
+                                <path d="M16 10h.01"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="ball">
+                        <div class="container-lines"></div>
+                        <div class="container-rings"></div>
+                    </div>
+                    <svg style="pointer-events: none; position: absolute; width: 0; height: 0;">
+                        <filter id="gooey">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="6"></feGaussianBlur>
+                            <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10"></feColorMatrix>
+                        </filter>
+                    </svg>
+                </label>
 
-            <div class="benchmark-container">
-                <!-- Archetype Selector Tabs -->
-                <div class="benchmark-archetype-bar">
-                    <span class="archetype-label" data-i18n="agency_benchmark.select_label">Selecciona un escenario:</span>
-                    <div class="archetype-pills" role="tablist">
-                        <button type="button" class="archetype-pill active" data-scenario="ecommerce">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                            <span data-i18n="agency_benchmark.tab_ecommerce">E-Commerce & Checkout</span>
+                <!-- Expanded Assistant Window -->
+                <div class="container-chat-ia">
+                    <!-- Title Bar -->
+                    <div class="container-title">
+                        <div class="title-sparkle-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M20.5346 6.34625L20.3501 6.7707C20.3213 6.83981 20.2727 6.89885 20.2103 6.94038C20.148 6.98191 20.0748 7.00407 19.9999 7.00407C19.925 7.00407 19.8518 6.98191 19.7895 6.94038C19.7272 6.89885 19.6785 6.83981 19.6497 6.7707L19.4652 6.34625C19.1409 5.59538 18.5469 4.99334 17.8004 4.65894L17.2312 4.40472C17.1622 4.37296 17.1037 4.32206 17.0627 4.25806C17.0217 4.19406 16.9999 4.11965 16.9999 4.04364C16.9999 3.96763 17.0217 3.89322 17.0627 3.82922C17.1037 3.76522 17.1622 3.71432 17.2312 3.68256L17.7689 3.44334C18.5341 3.09941 19.1383 2.47511 19.457 1.69904L19.6475 1.24084C19.6753 1.16987 19.7239 1.10893 19.7869 1.06598C19.8499 1.02303 19.9244 1.00006 20.0007 1.00006C20.0769 1.00006 20.1514 1.02303 20.2144 1.06598C20.2774 1.10893 20.326 1.16987 20.3539 1.24084L20.5436 1.69829C20.8619 2.47451 21.4658 3.09908 22.2309 3.44334L22.7693 3.68331C22.8382 3.71516 22.8965 3.76605 22.9373 3.82997C22.9782 3.89389 22.9999 3.96816 22.9999 4.04402C22.9999 4.11987 22.9782 4.19414 22.9373 4.25806C22.8965 4.32198 22.8382 4.37287 22.7693 4.40472L22.1994 4.65819C21.4531 4.99293 20.8594 5.59523 20.5353 6.34625" fill="currentColor"></path>
+                            </svg>
+                            <p class="text-title" data-i18n="agency_architect.title">AI Architect</p>
+                        </div>
+                        <div class="header-status-pill">
+                            <span class="status-dot"></span>
+                            <span class="status-text" data-i18n="agency_architect.copilot_status">Online</span>
+                        </div>
+                    </div>
+
+                    <!-- Scrollable Conversation Stream -->
+                    <div class="container-chat" id="pixy-chat-scroll">
+                        <div class="pixy-stream-wrap" id="pixy-chat-stream">
+                            <div class="chat-ia">
+                                <p>
+                                    Hola 👋 Soy el <strong>Arquitecto de Soluciones Pixy</strong>. Selecciona un modelo o describe tu negocio para estructurar tu arquitectura ideal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Chips -->
+                    <div class="pixy-chips-row" id="pixy-chips-container">
+                        <button type="button" class="pixy-chip" data-scenario="ecommerce" data-i18n="agency_architect.chip_ecommerce">E-Commerce</button>
+                        <button type="button" class="pixy-chip" data-scenario="agency" data-i18n="agency_architect.chip_agency">Agencia & Servicios</button>
+                        <button type="button" class="pixy-chip" data-scenario="resto" data-i18n="agency_architect.chip_resto">Restaurantes</button>
+                        <button type="button" class="pixy-chip" data-scenario="realestate" data-i18n="agency_architect.chip_realestate">Real Estate</button>
+                        <button type="button" class="pixy-chip" data-scenario="saas" data-i18n="agency_architect.chip_saas">SaaS Platform</button>
+                        <button type="button" class="pixy-chip" data-scenario="automation" data-i18n="agency_architect.chip_automation">Automatización</button>
+                    </div>
+
+                    <!-- Compact Query Input -->
+                    <div class="pixy-input-row">
+                        <input type="text" id="pixy-chat-input" class="pixy-input-field" placeholder="¿Qué negocio quieres escalar?..." data-i18n-placeholder="agency_architect.placeholder_input" />
+                        <button type="button" id="pixy-chat-send" class="pixy-send-btn" aria-label="Enviar">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
                         </button>
-                        <button type="button" class="archetype-pill" data-scenario="web3d">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                            <span data-i18n="agency_benchmark.tab_web3d">Web 3D & Inmersiva</span>
-                        </button>
-                        <button type="button" class="archetype-pill" data-scenario="landing">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            <span data-i18n="agency_benchmark.tab_landing">Landing & Campañas</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Split Cards Comparison -->
-                <div class="benchmark-grid">
-                    <!-- Card Left: Legacy Traditional Stack -->
-                    <div class="benchmark-card legacy-card">
-                        <div class="benchmark-card-header">
-                            <div class="browser-dots">
-                                <span class="dot red"></span>
-                                <span class="dot yellow"></span>
-                                <span class="dot green"></span>
-                            </div>
-                            <div class="browser-url-bar">
-                                <span class="browser-lock">⚠️</span>
-                                <span class="browser-url" id="legacy-url">tienda-convencional.com/checkout</span>
-                            </div>
-                            <span class="benchmark-status-badge legacy" data-i18n="agency_benchmark.legacy_badge">Stack Lento</span>
-                        </div>
-
-                        <!-- Simulated Viewport -->
-                        <div class="benchmark-viewport legacy-viewport">
-                            <div class="viewport-canvas">
-                                <div class="legacy-loader-box" id="legacy-loader-box">
-                                    <div class="spinner-legacy" id="legacy-spinner"></div>
-                                    <span class="viewport-status-text" id="legacy-status-text" data-i18n="agency_benchmark.legacy_status_initial">Cargando scripts de checkout y plugins pesados...</span>
-                                </div>
-                                <div class="progress-bar-track">
-                                    <div class="progress-bar-fill legacy-fill" id="legacy-progress"></div>
-                                </div>
-                            </div>
-                            <div class="viewport-fps-badge legacy">
-                                <span class="fps-value" id="legacy-fps">22 FPS</span>
-                                <span class="fps-label" data-i18n="agency_benchmark.legacy_fps_label">Tirones & Lag</span>
-                            </div>
-                        </div>
-
-                        <!-- Metrics Grid -->
-                        <div class="benchmark-metrics-grid">
-                            <div class="metric-item">
-                                <span class="metric-label" data-i18n="agency_benchmark.metric_load_time">Tiempo de Carga</span>
-                                <span class="metric-value danger" id="legacy-load-time">4.5s</span>
-                                <span class="metric-desc" data-i18n="agency_benchmark.legacy_loss_desc">Pérdida del 53% de visitas</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label" data-i18n="agency_benchmark.metric_lighthouse">Google Lighthouse</span>
-                                <span class="metric-value danger" id="legacy-lighthouse">34 / 100</span>
-                                <span class="metric-desc" data-i18n="agency_benchmark.legacy_seo_desc">Penalización en Google SEO</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label" data-i18n="agency_benchmark.metric_bounce">Tasa de Rebote</span>
-                                <span class="metric-value danger" id="legacy-bounce">64%</span>
-                                <span class="metric-desc" data-i18n="agency_benchmark.legacy_bounce_desc">Abandono por lentitud</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label" data-i18n="agency_benchmark.metric_conversion_leak">Fuga de Conversión</span>
-                                <span class="metric-value danger" id="legacy-conversion">-38%</span>
-                                <span class="metric-desc" data-i18n="agency_benchmark.legacy_sales_desc">Ventas y carritos perdidos</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card Right: Pixy Next-Gen Stack -->
-                    <div class="benchmark-card pixy-card">
-                        <div class="benchmark-card-header">
-                            <div class="browser-dots">
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                            </div>
-                            <div class="browser-url-bar">
-                                <span class="browser-lock">🔒</span>
-                                <span class="browser-url" id="pixy-url">store.pixy.agency/checkout</span>
-                            </div>
-                            <span class="benchmark-status-badge pixy" data-i18n="agency_benchmark.pixy_badge">⚡ Pixy Next-Gen</span>
-                        </div>
-
-                        <!-- Simulated Viewport -->
-                        <div class="benchmark-viewport pixy-viewport">
-                            <div class="viewport-canvas">
-                                <div class="pixy-loader-box" id="pixy-loader-box">
-                                    <div class="pixy-render-graphic">
-                                        <div class="neon-pulse-ring"></div>
-                                        <span class="pixy-bolt">⚡</span>
-                                    </div>
-                                    <span class="viewport-status-text" id="pixy-status-text" data-i18n="agency_benchmark.pixy_status_initial">Shopify Headless • Checkout Instantáneo < 0.5s</span>
-                                </div>
-                                <div class="progress-bar-track">
-                                    <div class="progress-bar-fill pixy-fill" id="pixy-progress"></div>
-                                </div>
-                            </div>
-                            <div class="viewport-fps-badge pixy">
-                                <span class="fps-value" id="pixy-fps">60 FPS</span>
-                                <span class="fps-label" data-i18n="agency_benchmark.pixy_fps_label">Fluidez Extrema</span>
-                            </div>
-                        </div>
-
-                        <!-- Metrics Grid -->
-                        <div class="benchmark-metrics-grid">
-                            <div class="metric-item">
-                                <span class="metric-label" data-i18n="agency_benchmark.metric_load_time">Tiempo de Carga</span>
-                                <span class="metric-value success" id="pixy-load-time">0.5s</span>
-                                <span class="metric-desc" data-i18n="agency_benchmark.pixy_instant_desc">Carga instantánea < 1s</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label" data-i18n="agency_benchmark.metric_lighthouse">Google Lighthouse</span>
-                                <span class="metric-value success" id="pixy-lighthouse">100 / 100</span>
-                                <span class="metric-desc" data-i18n="agency_benchmark.pixy_seo_desc">Máximo puntaje en Google</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label" data-i18n="agency_benchmark.metric_traffic_retention">Retención de Tráfico</span>
-                                <span class="metric-value success" id="pixy-bounce">+92%</span>
-                                <span class="metric-desc" data-i18n="agency_benchmark.pixy_fluid_desc">Experiencia fluida sin fricción</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label" data-i18n="agency_benchmark.metric_conversion_boost">Aumento en Conversión</span>
-                                <span class="metric-value success" id="pixy-conversion">+45%</span>
-                                <span class="metric-desc" data-i18n="agency_benchmark.pixy_roas_desc">Ventas y ROAS multiplicado</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Central Interactive Benchmark Trigger & Results -->
-                <div class="benchmark-action-panel">
-                    <button type="button" id="run-benchmark-btn" class="benchmark-run-btn">
-                        <span class="btn-icon">⚡</span>
-                        <span class="btn-text" data-i18n="agency_benchmark.btn_simulate">Simular Test de Carga en Vivo</span>
-                        <span class="btn-arrow">→</span>
-                    </button>
-
-                    <div id="benchmark-result-pill" class="benchmark-result-pill">
-                        <span class="result-highlight" data-i18n="agency_benchmark.conclusion_label">🚀 Conclusión:</span>
-                        <span id="benchmark-summary-text" data-i18n="agency_benchmark.summary_initial">La arquitectura Headless de Pixy reduce el abandono de carritos en un 45% y triplica la velocidad de compra.</span>
-                    </div>
-
-                    <div class="benchmark-cta-row">
-                        <a id="benchmark-whatsapp-cta" href="https://wa.me/573009292377?text=Hola%20Pixy%2C%20quiero%20auditar%20el%20rendimiento%20y%20checkout%20de%20mi%20tienda%20online%20para%20migrar%20a%20su%20arquitectura%20Next-Gen." target="_blank" rel="noopener noreferrer" class="btn-neon">
-                            <span data-i18n="agency_benchmark.cta_audit">Solicitar Auditoría de Rendimiento Gratis</span>
-                            <span>→</span>
-                        </a>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- 7. PORTFOLIO & WORK SHOWCASE -->
         <section id="portfolio" class="portfolio-section">
             <div class="section-header">
@@ -804,7 +731,7 @@
                         <li><a href="agency/plans.html"><span data-i18n="agency_creative.footer_link_plan_starter">Diseño Dedicado Starter</span></a></li>
                         <li><a href="agency/plans.html"><span data-i18n="agency_creative.footer_link_plan_pro">Pro Growth Studio</span></a></li>
                         <li><a href="agency/plans.html"><span data-i18n="agency_creative.footer_link_plan_scale">Scale Enterprise</span></a></li>
-                        <li><a href="#benchmark"><span data-i18n="agency_creative.footer_link_benchmark">Live Benchmark</span></a></li>
+                        <li><a href="#ai-architect"><span data-i18n="agency_creative.footer_link_architect">Asesor IA</span></a></li>
                     </ul>
                 </div>
 
@@ -865,10 +792,11 @@
     </button>
 
     <!-- Scripts -->
-    <script src="js/i18n.js"></script>
-    <script src="js/header-switcher.js"></script>
-    <script src="js/agency-calculator.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/i18n.js?v=3.1"></script>
+    <script src="js/header-switcher.js?v=3.1"></script>
+    <script src="js/pixy-agent.js?v=3.1"></script>
+    <script src="js/agency-interactions.js?v=3.1"></script>
+    <script src="js/main.js?v=3.1"></script>
 </body>
 
 </html>

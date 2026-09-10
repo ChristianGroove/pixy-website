@@ -39,6 +39,18 @@
     --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
+/* Light Mode */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f1f5f9;
+    --bg-card: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --border-color: #cbd5e1;
+    --shadow-color: rgba(0, 0, 0, 0.06);
+}
+
 /* Reset */
 *,
 *::before,
@@ -59,7 +71,14 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     overflow-x: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth transition ONLY during interactive user toggling (never during navigation) */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease !important;
 }
 
 [data-theme="light"] body {
@@ -182,6 +201,17 @@ body {
     text-align: center;
 }
 
+@view-transition {
+    navigation: auto;
+}
+
+/* Ensure persistent header stays rock-solid without blinking, cross-fading, or disappearing */
+::view-transition-old(main-header),
+::view-transition-new(main-header) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
 /* Navigation */
 .nav {
     position: fixed;
@@ -194,7 +224,8 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    view-transition-name: main-header;
 }
 
 [data-theme="light"] .nav {
@@ -226,11 +257,19 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
+    width: 149px;
+    min-width: 149px;
+    height: 32px;
+    flex-shrink: 0;
 }
 
 .nav-logo {
     height: 32px;
-    width: auto;
+    width: 149px;
+    min-width: 149px;
+    aspect-ratio: 2510 / 538;
+    flex-shrink: 0;
+    object-fit: contain;
 }
 
 /* Ensure links are vertically centered */
@@ -313,14 +352,21 @@ body {
 }
 
 /* Nav and Footer logos */
-.nav-logo,
-.footer-logo {
+.nav-logo {
     height: 32px;
-    width: auto;
+    width: 149px;
+    min-width: 149px;
+    aspect-ratio: 2510 / 538;
+    flex-shrink: 0;
+    object-fit: contain;
 }
 
 .footer-logo {
     height: 40px;
+    width: 187px;
+    aspect-ratio: 2510 / 538;
+    flex-shrink: 0;
+    object-fit: contain;
     margin-bottom: 16px;
     opacity: 0.9;
 }

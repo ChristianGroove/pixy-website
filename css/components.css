@@ -337,7 +337,7 @@
 /* ============================================
    FLOATING ORBS - Background Decorations
    ============================================ */
-.orb {
+.bg-deco-orb {
     position: absolute;
     border-radius: 50%;
     filter: blur(60px);
@@ -346,10 +346,12 @@
     animation: orbFloat 8s ease-in-out infinite;
 }
 
+.bg-deco-orb-pink,
 .orb-pink {
     background: var(--brand-pink);
 }
 
+.bg-deco-orb-purple,
 .orb-purple {
     background: var(--brand-purple);
 }

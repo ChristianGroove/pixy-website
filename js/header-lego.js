@@ -31,9 +31,22 @@
         let lastScrollY = window.scrollY;
         let isHidden = false;
         let isAnimating = false;
+        let pageReady = false;
+
+        // Grace period on initial load / navigation to prevent premature disassembly
+        setTimeout(() => {
+            pageReady = true;
+            lastScrollY = window.scrollY;
+        }, 450);
 
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
+
+            // Don't animate during page initialization or before user intentionally scrolls
+            if (!pageReady) {
+                lastScrollY = currentScrollY;
+                return;
+            }
 
             // Jitter threshold
             if (Math.abs(currentScrollY - lastScrollY) < 10) return;

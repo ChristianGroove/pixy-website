@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
+    <script>
+        (function () {
+            try {
+                var s = localStorage.getItem('pixy-theme');
+                var t = s ? s : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Pixy Agency</title>
     <meta name="description"
         content="Inicia tu proyecto de diseño, desarrollo web o growth con Pixy Agency. Agenda un kickoff inmediato.">
     <link rel="canonical" href="https://pixy.com.co/contact-agency.html">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preload" href="assets/logos/logo-light.svg" as="image" type="image/svg+xml">
+    <link rel="preload" href="assets/logos/logo-dark.svg" as="image" type="image/svg+xml">
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,9 +36,14 @@
     <link rel="stylesheet" href="css/agency-modern.css">
     <style>
         body {
-            background-color: #0F0F1A;
             visibility: visible;
             opacity: 1;
+        }
+        html[data-theme="dark"] body {
+            background-color: #0F0F1A;
+        }
+        html[data-theme="light"] body {
+            background-color: #ffffff;
         }
     </style>
 </head>
@@ -40,8 +58,8 @@
         <div class="nav-content">
             <div class="nav-left-group" style="display: flex; align-items: center; gap: 32px;">
                 <a href="agency.html" class="nav-brand">
-                    <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark">
-                    <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light">
+                    <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
+                    <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
                 </a>
                 <div class="universe-switcher" role="tablist" aria-label="Ecosistema">
                     <a href="agency.html" class="universe-tab active" data-mode="agency">Agency</a>
