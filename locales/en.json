@@ -2401,18 +2401,34 @@
       "f_msg": "Tell us more",
       "f_send": "Send my casting",
       "f_note": "Sending opens your email app with the message ready."
-    },
-    "nav": {
-      "packages": "Packages",
-      "plans": "Plans",
-      "work": "Work",
-      "pixy": "With Pixy",
-      "casting": "Open your casting"
-    },
-    "footer": {
-      "slogan": "Your brand, on the cover.",
-      "studio": "Studio",
-      "platform": "Platform"
     }
+  },
+  "chrome": {
+    "spaces": "Spaces",
+    "platform": "Platform",
+    "plans": "Plans",
+    "blog": "Blog",
+    "demo": "Book a demo",
+    "menu": "Menu",
+    "packages": "Packages",
+    "work": "Work",
+    "pixy": "With Pixy",
+    "casting": "Open your casting",
+    "slogan_spaces": "The operating system for your business.",
+    "slogan_studio": "Your brand, on the cover.",
+    "col_product": "Product",
+    "col_company": "Pixy",
+    "col_legal": "Legal",
+    "col_studio": "Studio",
+    "partners": "Partners",
+    "contact": "Contact",
+    "studio": "Pixy Studio",
+    "spaces_site": "Pixy Spaces",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies",
+    "deletion": "Data deletion",
+    "permissions": "Permissions",
+    "rights": "© 2026 Pixy. All rights reserved."
   }
 }

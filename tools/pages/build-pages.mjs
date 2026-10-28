@@ -5,6 +5,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { spacesNav } from "./chrome.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const index = readFileSync(join(root, "index.html"), "utf8");
@@ -29,14 +30,10 @@ function t(tag, key, es, en, cls = "", attrs = "") {
 }
 
 // --- Piezas comunes -----------------------------------------------------------------------------
-const NAV = between(index, "    <!-- Navigation -->", "    <!-- 1. Hero");
 const FOOT = index.slice(index.indexOf("    <!-- Footer -->"));
 
 function shell({ file, title, description, navActive, body }) {
-  const nav = NAV.replace('class="neon-link active" data-i18n="nav.home"', 'class="neon-link" data-i18n="nav.home"').replace(
-    `href="${navActive}" class="neon-link"`,
-    `href="${navActive}" class="neon-link active"`,
-  );
+  const nav = spacesNav("", navActive);
   const foot = FOOT.replace(
     /    <!-- Portada de Spaces[\s\S]*?<script src="js\/spaces-ai.js"><\/script>/,
     '    <!-- Páginas de Spaces: catálogo con modelo 3D, planes, listas y formulario -->\n    <script src="js/spaces-pages.js"></script>',
@@ -226,7 +223,7 @@ pages.push({
   file: "spaces.html",
   title: "Spaces | Pixy",
   description: "Un Space para cada industria: restaurantes, agencias, tiendas, inmobiliarias, colegios y software, sobre el mismo núcleo de Pixy.",
-  navActive: "spaces.html",
+  navActive: "spaces",
   body:
     hero(
       t("h1", "h1", "Un Space para cada industria.", "A Space for every industry.", "sh-h1"),
@@ -292,7 +289,7 @@ pages.push({
   file: "pricing.html",
   title: "Planes | Pixy",
   description: "Eliges tu industria, eliges tu ritmo: Esencial, Pro y Total, más complementos. Cada empresa paga en su moneda.",
-  navActive: "pricing.html",
+  navActive: "plans",
   body:
     hero(
       t("h1", "h1", "Eliges tu industria. Eliges tu ritmo.", "Choose your industry. Choose your pace.", "sh-h1"),
@@ -348,7 +345,7 @@ pages.push({
   file: "features.html",
   title: "Plataforma | Pixy",
   description: "Atiende, vende, opera y cobra: bandeja omnicanal, IA, pipeline, tareas, cobros y portal del cliente en una sola plataforma.",
-  navActive: "spaces.html",
+  navActive: "platform",
   body:
     hero(
       t("h1", "h1", "Todo tu negocio, conectado.", "Your whole business, connected.", "sh-h1"),
@@ -395,7 +392,7 @@ pages.push({
   file: "contact.html",
   title: "Contacto | Pixy",
   description: "Agenda tu demo de Pixy: te mostramos tu Space con los flujos de tu industria.",
-  navActive: "contact.html",
+  navActive: "",
   body:
     hero(
       t("h1", "h1", "Hablemos de tu negocio.", "Let's talk about your business.", "sh-h1"),
@@ -431,7 +428,7 @@ pages.push({
   file: "partners.html",
   title: "Plan Partner | Pixy",
   description: "Vende Pixy con tu marca: marca blanca, panel de organizaciones y cobro a tus clientes.",
-  navActive: "pricing.html",
+  navActive: "plans",
   body:
     hero(
       t("h1", "h1", "Vende Pixy con tu marca.", "Sell Pixy under your brand.", "sh-h1"),
@@ -472,7 +469,7 @@ pages.push({
   file: "space-agency.html",
   title: "Space Agencias | Pixy",
   description: "Clientes, proyectos, cobros y resultados, conectados. El Space para agencias y servicios profesionales.",
-  navActive: "spaces.html",
+  navActive: "spaces",
   body: `
     <section class="sh-section sp-hero sp-space-hero" data-no-reveal>
         <div class="container sp-catalog-grid">

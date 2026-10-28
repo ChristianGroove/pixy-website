@@ -279,15 +279,54 @@
 .spaces-face .sh-section > .container:not(.sh-split) { display: block; }
 
 
-/* El menú del sitio no tiene versión móvil y desbordaba la página: en pantallas angostas quedan logo, idioma y Demo */
+/* Encabezado único (tools/pages/chrome.mjs): idioma, CTA y botón de menú */
+.spaces-face .btn-lang {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: none; border: none; cursor: pointer; padding: 6px 4px;
+    font-family: inherit; font-size: 14px; font-weight: 600; color: var(--text-primary);
+}
+.spaces-face .btn-lang-caret { color: var(--brand-pink); font-size: 10px; }
+.spaces-face .nav-cta { padding: 8px 20px; font-size: 0.9rem; white-space: nowrap; }
+.spaces-face .nav-menu-btn, .spaces-face .nav-links .nav-links-cta { display: none; }
+/* Enlace activo sin resplandor */
+.spaces-face .neon-link.active, .spaces-face .neon-link:hover { text-shadow: none; }
+/* Selector Studio/Spaces: color sólido, sin degradado ni resplandor */
+.spaces-face .universe-tab.active, [data-theme="light"] .spaces-face .universe-tab.active { background: var(--brand-pink); box-shadow: none; }
+
+/* Móvil: los enlaces pasan a un panel bajo el encabezado que abre el botón Menú */
 @media (max-width: 900px) {
-    .spaces-face .nav-links { display: none; }
     .spaces-face .nav-left-group { gap: 12px !important; }
-    .spaces-face .nav-content { max-width: 100%; }
+    .spaces-face .nav-content { max-width: 100%; padding: 14px 16px; }
+    .spaces-face .nav-actions { gap: 8px; }
+    .spaces-face .nav-actions .nav-cta { display: none; }
+    .spaces-face .nav-brand, .spaces-face .nav-logo { width: 112px; min-width: 112px; height: 24px; }
+    .spaces-face .universe-tab { padding: 5px 10px; font-size: 0.75rem; }
+    .spaces-face .btn-lang { padding: 6px 2px; }
+    .spaces-face .nav-menu-btn {
+        display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px;
+        width: 36px; height: 36px; padding: 0; flex-shrink: 0;
+        background: none; border: 1px solid var(--border-color); border-radius: 50%; cursor: pointer;
+    }
+    .spaces-face .nav-menu-bar { display: block; width: 14px; height: 1.5px; background: var(--text-primary); transition: transform 0.2s ease; }
+    .spaces-face .nav-menu-btn[aria-expanded="true"] { border-color: var(--text-primary); }
+    .spaces-face .nav-menu-btn[aria-expanded="true"] .nav-menu-bar:first-child { transform: translateY(3.75px) rotate(45deg); }
+    .spaces-face .nav-menu-btn[aria-expanded="true"] .nav-menu-bar:last-child { transform: translateY(-3.75px) rotate(-45deg); }
+    .spaces-face .nav-links {
+        position: absolute; top: 100%; left: 0; right: 0;
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        padding: 8px 16px 24px; background: #0f0f14;
+        border-bottom: 1px solid var(--border-color);
+        opacity: 0; visibility: hidden; transform: translateY(-8px);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    }
+    [data-theme="light"] .spaces-face .nav-links { background: #ffffff; }
+    .spaces-face .nav.is-menu-open .nav-links { opacity: 1; visibility: visible; transform: none; }
+    .spaces-face .nav-links a { padding: 14px 0; font-size: 16px; border-bottom: 1px solid var(--border-color); }
+    .spaces-face .nav-links a.neon-link.active { border-bottom: 1px solid var(--border-color); color: var(--text-primary); font-weight: 700; }
+    .spaces-face .nav-links .nav-links-cta { color: #fff; display: flex; justify-content: center; margin-top: 20px; padding: 14px 0; border-bottom: none; }
 }
 
 @media (max-width: 900px) {
-    .spaces-face .nav-actions .btn-neon-outline { display: none; }
     .spaces-face .agency-hero-visual { overflow: hidden; max-width: 100%; }
     .spaces-face .spaces-hero-astronaut { max-width: 100%; height: auto; }
 }

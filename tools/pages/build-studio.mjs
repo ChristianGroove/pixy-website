@@ -5,6 +5,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { studioNav, studioFooter } from "./chrome.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const EOL = readFileSync(join(root, "index.html"), "utf8").includes("\r\n") ? "\r\n" : "\n";
@@ -118,78 +119,13 @@ const P = [
 ];
 
 // --- Piezas comunes -----------------------------------------------------------------------------------
-function nav(pre, active) {
-  const a = (href, key, es, en) => `<a href="${pre}${href}" class="neon-link${active === href ? " active" : ""}" data-i18n="studio2.nav.${key}">${es}</a>`;
-  set(I18N.es, "nav.packages", "Paquetes"); set(I18N.en, "nav.packages", "Packages");
-  set(I18N.es, "nav.plans", "Planes"); set(I18N.en, "nav.plans", "Plans");
-  set(I18N.es, "nav.work", "Trabajos"); set(I18N.en, "nav.work", "Work");
-  set(I18N.es, "nav.pixy", "Con Pixy"); set(I18N.en, "nav.pixy", "With Pixy");
-  set(I18N.es, "nav.casting", "Abre tu casting"); set(I18N.en, "nav.casting", "Open your casting");
-  return `    <nav class="nav">
-        <div class="nav-content">
-            <div class="nav-left-group" style="display: flex; align-items: center; gap: 32px;">
-                <a href="${pre}agency.html" class="nav-brand">
-                    <img src="${pre}assets/logos/logo-dark.svg" alt="Pixy Studio" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
-                    <img src="${pre}assets/logos/logo-light.svg" alt="Pixy Studio" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
-                </a>
-                <div class="universe-switcher" role="tablist" aria-label="Ecosistema">
-                    <a href="${pre}agency.html" class="universe-tab active" data-mode="agency">Studio</a>
-                    <a href="${pre}index.html" class="universe-tab" data-mode="spaces">Spaces</a>
-                </div>
-            </div>
-            <div class="nav-links">
-                ${a("agency/services.html", "packages", "Paquetes", "Packages")}
-                ${a("agency/plans.html", "plans", "Planes", "Plans")}
-                ${a("agency/portfolio.html", "work", "Trabajos", "Work")}
-                ${a("agency.html#con-pixy", "pixy", "Con Pixy", "With Pixy")}
-            </div>
-            <div class="nav-actions">
-                <button id="lang-toggle" class="btn-lang" style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
-                    <span id="lang-text">ES</span>
-                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
-                </button>
-                <a href="${pre}agency/contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="studio2.nav.casting">Abre tu casting</a>
-            </div>
-        </div>
-    </nav>
-`;
-}
+// Encabezado único de Studio (tools/pages/chrome.mjs); active es la página de la cara
+const ACTIVE = { "agency/services.html": "packages", "agency/plans.html": "plans", "agency/portfolio.html": "work" };
+const nav = (pre, active) => studioNav(pre, ACTIVE[active] || "");
 
 function footer(pre) {
-  set(I18N.es, "footer.slogan", "Tu marca, en portada."); set(I18N.en, "footer.slogan", "Your brand, on the cover.");
-  set(I18N.es, "footer.studio", "Studio"); set(I18N.en, "footer.studio", "Studio");
-  set(I18N.es, "footer.platform", "Plataforma"); set(I18N.en, "footer.platform", "Platform");
   return `
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <img src="${pre}assets/logos/logo-dark.svg" alt="Pixy Studio" class="footer-logo footer-logo-dark">
-                <img src="${pre}assets/logos/logo-light.svg" alt="Pixy Studio" class="footer-logo footer-logo-light">
-                <p data-i18n="studio2.footer.slogan">Tu marca, en portada.</p>
-            </div>
-            <nav class="footer-links">
-                <h4 data-i18n="studio2.footer.studio">Studio</h4>
-                <a href="${pre}agency/services.html" class="neon-link" data-i18n="studio2.nav.packages">Paquetes</a>
-                <a href="${pre}agency/plans.html" class="neon-link" data-i18n="studio2.nav.plans">Planes</a>
-                <a href="${pre}agency/portfolio.html" class="neon-link" data-i18n="studio2.nav.work">Trabajos</a>
-                <a href="${pre}agency/contact.html" class="neon-link" data-i18n="studio2.nav.casting">Abre tu casting</a>
-            </nav>
-            <nav class="footer-links">
-                <h4 data-i18n="studio2.footer.platform">Plataforma</h4>
-                <a href="${pre}index.html" class="neon-link">Pixy Spaces</a>
-                <a href="${pre}blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
-            </nav>
-            <nav class="footer-links">
-                <h4 data-i18n="footer.legal">Legal</h4>
-                <a href="${pre}privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
-                <a href="${pre}terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
-                <a href="${pre}cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
-            </nav>
-        </div>
-        <div class="footer-bottom">
-            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+${studioFooter(pre)}
 
     <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
         <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>

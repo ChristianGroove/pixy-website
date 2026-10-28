@@ -52,29 +52,33 @@
     <!-- Navigation (Shared) -->
     <nav class="nav">
         <div class="nav-content">
-            <a href="/" class="nav-brand">
-                <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
-                <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
-            </a>
-            <div class="nav-links">
-                <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
-                <div class="nav-item has-dropdown">
-                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
+            <div class="nav-left-group">
+                <a href="index.html" class="nav-brand" aria-label="Pixy">
+                    <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
+                    <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
+                </a>
+                <div class="universe-switcher" role="tablist" aria-label="Pixy">
+                    <a href="agency.html" class="universe-tab" data-mode="agency">Studio</a>
+                    <a href="index.html" class="universe-tab active" data-mode="spaces">Spaces</a>
                 </div>
-                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
-                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
-                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="spaces.html" class="neon-link" data-i18n="chrome.spaces">Spaces</a>
+                <a href="features.html" class="neon-link" data-i18n="chrome.platform">Plataforma</a>
+                <a href="pricing.html" class="neon-link" data-i18n="chrome.plans">Planes</a>
+                <a href="blog.html" class="neon-link" data-i18n="chrome.blog">Blog</a>
+                <a href="contact.html" class="btn-neon nav-links-cta" data-i18n="chrome.demo">Agenda tu demo</a>
             </div>
             <div class="nav-actions">
-                <!-- Language Switcher -->
-                <button id="lang-toggle" class="btn-lang"
-                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                <button id="lang-toggle" class="btn-lang" type="button" aria-label="Idioma / Language">
                     <span id="lang-text">ES</span>
-                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                    <span class="btn-lang-caret" aria-hidden="true">▼</span>
                 </button>
-
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;"
-                    data-i18n="nav.demo">Demo</a>
+                <a href="contact.html" class="btn-neon-outline nav-cta" data-i18n="chrome.demo">Agenda tu demo</a>
+                <button class="nav-menu-btn" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Menú" data-i18n-aria="chrome.menu">
+                    <span class="nav-menu-bar" aria-hidden="true"></span>
+                    <span class="nav-menu-bar" aria-hidden="true"></span>
+                </button>
             </div>
         </div>
     </nav>
@@ -223,33 +227,32 @@
             <div class="footer-brand">
                 <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
-                <p data-i18n="footer.slogan">Tu negocio, bien diseñado.</p>
+                <p data-i18n="chrome.slogan_spaces">El sistema operativo de tu negocio.</p>
             </div>
-
-            <nav class="footer-links">
-                <h4 data-i18n="footer.product">Producto</h4>
-                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
-                <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
+            <nav class="footer-links" aria-label="Producto">
+                <h4 data-i18n="chrome.col_product">Producto</h4>
+                <a href="spaces.html" class="neon-link" data-i18n="chrome.spaces">Spaces</a>
+                <a href="features.html" class="neon-link" data-i18n="chrome.platform">Plataforma</a>
+                <a href="pricing.html" class="neon-link" data-i18n="chrome.plans">Planes</a>
+                <a href="partners.html" class="neon-link" data-i18n="chrome.partners">Partners</a>
             </nav>
-
-            <nav class="footer-links">
-                <h4 data-i18n="footer.company">Empresa</h4>
-                <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
-                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
-                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+            <nav class="footer-links" aria-label="Pixy">
+                <h4 data-i18n="chrome.col_company">Pixy</h4>
+                <a href="blog.html" class="neon-link" data-i18n="chrome.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="chrome.contact">Contacto</a>
+                <a href="agency.html" class="neon-link" data-i18n="chrome.studio">Pixy Studio</a>
             </nav>
-
-            <nav class="footer-links">
-                <h4 data-i18n="footer.legal">Legal</h4>
-                <a href="privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
-                <a href="terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
-                <a href="data-deletion.html" class="neon-link" data-i18n="footer.deletion">Eliminación de Datos</a>
-                <a href="cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
-                <a href="permissions.html" class="neon-link" data-i18n="footer.permissions">Permisos</a>
+            <nav class="footer-links" aria-label="Legal">
+                <h4 data-i18n="chrome.col_legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="chrome.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="chrome.terms">Términos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="chrome.cookies">Cookies</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="chrome.deletion">Eliminación de datos</a>
+                <a href="permissions.html" class="neon-link" data-i18n="chrome.permissions">Permisos</a>
             </nav>
         </div>
         <div class="footer-bottom">
-            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
+            <p data-i18n="chrome.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
 

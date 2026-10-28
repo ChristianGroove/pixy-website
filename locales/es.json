@@ -2401,18 +2401,34 @@
       "f_msg": "Cuéntanos más",
       "f_send": "Enviar mi casting",
       "f_note": "Al enviar se abre tu correo con el mensaje listo."
-    },
-    "nav": {
-      "packages": "Paquetes",
-      "plans": "Planes",
-      "work": "Trabajos",
-      "pixy": "Con Pixy",
-      "casting": "Abre tu casting"
-    },
-    "footer": {
-      "slogan": "Tu marca, en portada.",
-      "studio": "Studio",
-      "platform": "Plataforma"
     }
+  },
+  "chrome": {
+    "spaces": "Spaces",
+    "platform": "Plataforma",
+    "plans": "Planes",
+    "blog": "Blog",
+    "demo": "Agenda tu demo",
+    "menu": "Menú",
+    "packages": "Paquetes",
+    "work": "Trabajos",
+    "pixy": "Con Pixy",
+    "casting": "Abre tu casting",
+    "slogan_spaces": "El sistema operativo de tu negocio.",
+    "slogan_studio": "Tu marca, en portada.",
+    "col_product": "Producto",
+    "col_company": "Pixy",
+    "col_legal": "Legal",
+    "col_studio": "Studio",
+    "partners": "Partners",
+    "contact": "Contacto",
+    "studio": "Pixy Studio",
+    "spaces_site": "Pixy Spaces",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "cookies": "Cookies",
+    "deletion": "Eliminación de datos",
+    "permissions": "Permisos",
+    "rights": "© 2026 Pixy. Todos los derechos reservados."
   }
 }

@@ -52,7 +52,7 @@
             if (Math.abs(currentScrollY - lastScrollY) < 10) return;
 
             // SCROLL DOWN -> HIDE
-            if (currentScrollY > lastScrollY && currentScrollY > 100 && !isHidden && !isAnimating) {
+            if (currentScrollY > lastScrollY && currentScrollY > 100 && !isHidden && !isAnimating && !nav.classList.contains('is-menu-open')) {
                 console.log('🧱 Lego Header: Disassembling (Hide)');
                 hideHeader();
             }

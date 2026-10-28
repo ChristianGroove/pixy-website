@@ -64,6 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Spaces Carousel
     initSpacesCarousel();
 
+    // Menú del encabezado en móvil
+    initNavMenu();
+
 
 
     // Initialize GSAP Hero Animations (Only if GSAP exists)
@@ -721,6 +724,23 @@ window.addEventListener('load', () => {
 /* ============================================
    VOICE ASSISTANT ORB (Cobp/hot-dodo-99)
    ============================================ */
+// Menú del encabezado en móvil: el botón Menú abre el panel de enlaces; se cierra al elegir uno,
+// con Escape, al tocar fuera o al volver a escritorio
+function initNavMenu() {
+    const nav = document.querySelector('.nav');
+    const btn = nav && nav.querySelector('.nav-menu-btn');
+    if (!btn) return;
+    const setOpen = (open) => {
+        nav.classList.toggle('is-menu-open', open);
+        btn.setAttribute('aria-expanded', String(open));
+    };
+    btn.addEventListener('click', () => setOpen(!nav.classList.contains('is-menu-open')));
+    nav.querySelectorAll('.nav-links a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+    document.addEventListener('click', (e) => { if (!nav.contains(e.target)) setOpen(false); });
+    window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => { if (e.matches) setOpen(false); });
+}
+
 function initVoiceAssistantOrb() {
     const orb = document.querySelector('.orb');
     const input = document.getElementById('v.a.o.') || document.querySelector('.input-orb');
