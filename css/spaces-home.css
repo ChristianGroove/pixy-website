@@ -432,3 +432,9 @@
 /* El objeto 3D aparece con un fundido cuando su modelo terminó de cargar (js/space-models.js) */
 .sv-model > * { opacity: 0; transform: scale(0.92); transition: opacity 1.1s ease, transform 1.4s cubic-bezier(0.16, 1, 0.3, 1); }
 .sv-model.is-ready > * { opacity: 1; transform: none; }
+
+/* Orbe de la IA junto a la mano del astronauta (reemplaza al droide): flota suave */
+.sh-hero-orb { --orb-size: 72px; width: 72px; height: 72px; animation: sh-orb-float 6s ease-in-out infinite; }
+@keyframes sh-orb-float { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(6px, -12px); } }
+@media (prefers-reduced-motion: reduce) { .sh-hero-orb { animation: none; } }
+
