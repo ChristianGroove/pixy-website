@@ -438,3 +438,75 @@
 @keyframes sh-orb-float { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(6px, -12px); } }
 @media (prefers-reduced-motion: reduce) { .sh-hero-orb { animation: none; } }
 
+
+/* ============================================
+   La IA en cinco actos (adaptada del sitio oscuro). Banda oscura también en modo claro.
+   ============================================ */
+.ai { position: relative; }
+.ai-stage { position: relative; height: 100vh; overflow: hidden; }
+[data-theme="light"] .ai-stage { background: #000; }
+.ai-stage { --text-primary: #f5f5f7; --text-secondary: #a1a1aa; --text-muted: #71717a; }
+.ai-canvas { position: absolute; inset: 0; pointer-events: none; }
+
+/* Canales a la izquierda e intenciones a la derecha: tipografía, sin cajas */
+.ai-srcs, .ai-lanes { position: absolute; top: 50%; display: flex; flex-direction: column; pointer-events: none; }
+.ai-srcs { left: 5vw; transform: translateY(-35%); gap: 3.2vh; }
+.ai-lanes { right: 5vw; transform: translateY(-38%); gap: 1.6vh; align-items: flex-end; }
+.ai-src, .ai-lane {
+    width: fit-content;
+    margin: 0;
+    font-family: var(--sh-font-display);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+.ai-src { font-size: clamp(1.3rem, 2.4vw, 2.4rem); color: rgba(255, 255, 255, 0.7); }
+.ai-lane { font-size: clamp(1.1rem, 2.1vw, 2.1rem); color: rgba(255, 255, 255, 0.25); animation: ai-lane-glow 3.6s ease-in-out infinite; }
+/* Cada intención se enciende por turnos, en neutro (el color es del orbe) */
+@keyframes ai-lane-glow {
+    0%, 40%, 100% { color: rgba(255, 255, 255, 0.25); text-shadow: none; }
+    12% { color: #f5f5f7; text-shadow: 0 0 28px rgba(245, 245, 247, 0.45); }
+}
+
+/* Paredes de palabras: un pasillo en perspectiva cuyo fondo es el orbe */
+.ai-walls { position: absolute; inset: 0; pointer-events: none; visibility: hidden; opacity: 0; perspective: min(60vh, 45vw); perspective-origin: 50% 57%; }
+.ai-wall { position: absolute; top: 57%; margin-top: -10vh; height: 20vh; width: 360vh; overflow: hidden; }
+.ai-wall-l { left: 0; transform-origin: left; transform: rotateY(90deg); -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 45%, transparent 85%); mask-image: linear-gradient(to right, transparent, #000 5%, #000 45%, transparent 85%); }
+.ai-wall-r { right: 0; transform-origin: right; transform: rotateY(-90deg); -webkit-mask-image: linear-gradient(to left, transparent, #000 5%, #000 45%, transparent 85%); mask-image: linear-gradient(to left, transparent, #000 5%, #000 45%, transparent 85%); }
+.ai-wall-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    white-space: nowrap;
+    font-family: var(--sh-font-display);
+    font-size: min(16vh, 22vw);
+    font-weight: 800;
+    line-height: 20vh;
+    letter-spacing: -0.03em;
+}
+.ai-walls-knowledge .ai-wall-text { color: rgba(245, 245, 247, 0.42); }
+.ai-walls-modules .ai-wall-text { color: rgba(157, 245, 255, 0.42); }
+
+/* Orbe central */
+.ai-orb-pos { position: absolute; left: 50%; top: 57%; width: min(40vh, 60vw); height: min(40vh, 60vw); transform: translate(-50%, -50%); pointer-events: none; }
+.ai-orb { width: 100%; height: 100%; display: grid; place-items: center; }
+.ai-orb-el { --orb-size: min(40vh, 60vw); width: 100%; height: 100%; }
+
+/* Actos: título arriba, orbe al centro, texto al pie (nunca encima del orbe) */
+.ai-acts { position: absolute; inset: 0; z-index: 2; pointer-events: none; text-align: center; }
+.ai-act { position: absolute; inset: 0; }
+.ai-act .sh-h2 { max-width: 1000px; margin: 0 auto !important; padding: 12vh 24px 0; text-align: center !important; }
+.ai-act-body { position: absolute; left: 0; right: 0; bottom: 6vh; max-width: 680px; margin: 0 auto !important; padding: 0 24px; text-align: center !important; }
+
+@media (max-width: 767px) {
+    .ai-srcs, .ai-lanes { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .ai-stage { height: auto; padding: 96px 0; }
+    .ai-acts, .ai-act, .ai-act-body { position: relative; }
+    .ai-act { margin-bottom: 48px; }
+    .ai-act .sh-h2 { padding-top: 0; }
+    .ai-orb-pos, .ai-srcs, .ai-lanes, .ai-walls, .ai-canvas { display: none; }
+    .ai-lane { animation: none; }
+}

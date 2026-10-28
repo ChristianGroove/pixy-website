@@ -23,6 +23,8 @@ let lastFrame = 0;
 let sectionBoost = 0;
 let sectionCurrent = 0;
 let lastDrift = 1;
+// Impulso que una sección marca por tramos desde su propia línea de tiempo (la de IA); se suma al de [data-warp]
+let manualBoost = 0;
 
 function siteDriftScale() {
   const now = performance.now();
@@ -30,7 +32,7 @@ function siteDriftScale() {
   lastFrame = now;
   boost += (target - boost) * Math.min(1, dt * 6);
   target *= Math.pow(0.02, dt);
-  sectionCurrent += (sectionBoost - sectionCurrent) * Math.min(1, dt * 2.5);
+  sectionCurrent += (Math.max(sectionBoost, manualBoost) - sectionCurrent) * Math.min(1, dt * 2.5);
   lastDrift = driftScale() + boost + sectionCurrent;
   return lastDrift;
 }
@@ -106,7 +108,13 @@ function mount() {
 
   watchSections();
   // drift: velocidad del último fotograma (1 = crucero); la lee el objeto 3D para girar con el warp
-  (window as unknown as { pixySpace: unknown }).pixySpace = { warp: playWarp, drift: () => lastDrift };
+  (window as unknown as { pixySpace: unknown }).pixySpace = {
+    warp: playWarp,
+    drift: () => lastDrift,
+    boost: (v: number) => {
+      manualBoost = v;
+    },
+  };
 }
 
 if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mount);

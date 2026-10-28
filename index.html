@@ -243,22 +243,60 @@
             </div>
         </div>
     </section>
-    <!-- 4. La IA: el tramo más rápido del viaje (data-warp mantiene el impulso del fondo) -->
-    <section class="sh-section sh-ai-band" data-warp="9">
-        <div class="container">
-            <h2 class="sh-h2 sh-center" data-i18n="home2.ai.title">Una sola IA para todo tu negocio.</h2>
-            <div class="sh-orb-wrap" aria-hidden="true">
-                <span class="ds-orb sh-orb-main" data-activity="flow"><span class="ds-orb-halo"></span><span class="ds-orb-body"><span class="ds-orb-swirl"></span><span class="ds-orb-blob"></span><span class="ds-orb-shine"></span></span></span>
+    <!-- 4. La IA de Pixy en cinco actos con el scroll (adaptada del sitio oscuro, js/spaces-ai.js):
+         nace el orbe → los canales entran → sale clasificado por intención → se alimenta del conocimiento → y de cada módulo.
+         El fondo acelera por tramos: es el tramo más rápido del viaje. -->
+    <section class="ai" id="ia" data-no-reveal aria-label="La IA de Pixy">
+        <div class="ai-stage">
+            <canvas class="ai-canvas" aria-hidden="true"></canvas>
+            <div class="ai-srcs" aria-hidden="true">
+                <p class="ai-src" data-i18n="home2.ai.sources.0">WhatsApp</p>
+                <p class="ai-src" data-i18n="home2.ai.sources.1">Instagram</p>
+                <p class="ai-src" data-i18n="home2.ai.sources.2">Messenger</p>
+                <p class="ai-src" data-i18n="home2.ai.sources.3">Comentarios</p>
             </div>
-            <div class="sh-grid2">
-                <div><h3 class="sh-h3" data-i18n="home2.ai.c1_title">Atiende sola</h3><p class="sh-body" data-i18n="home2.ai.c1_desc">En todos tus canales, con la conexión oficial. Cuando hace falta una persona, pasa la conversación a tu equipo.</p></div>
-                <div><h3 class="sh-h3" data-i18n="home2.ai.c2_title">Entiende y califica</h3><p class="sh-body" data-i18n="home2.ai.c2_desc">Venta, soporte, reserva o cotización, en cualquier industria. Cada cliente queda calificado con la frase que lo demuestra.</p></div>
-                <div><h3 class="sh-h3" data-i18n="home2.ai.c3_title">Aprende tu negocio</h3><p class="sh-body" data-i18n="home2.ai.c3_desc">Servicios, precios, documentos y respuestas de tu equipo. Mientras más la usas, más precisa es.</p></div>
-                <div><h3 class="sh-h3" data-i18n="home2.ai.c4_title">Está en cada módulo</h3><p class="sh-body" data-i18n="home2.ai.c4_desc">La misma IA en la bandeja, el pipeline, el catálogo, las tareas y los cobros.</p></div>
+            <div class="ai-lanes" aria-hidden="true">
+                <p class="ai-lane" style="animation-delay:0s" data-i18n="home2.ai.lanes.0">Venta</p>
+                <p class="ai-lane" style="animation-delay:0.6s" data-i18n="home2.ai.lanes.1">Soporte</p>
+                <p class="ai-lane" style="animation-delay:1.2s" data-i18n="home2.ai.lanes.2">Reserva</p>
+                <p class="ai-lane" style="animation-delay:1.8s" data-i18n="home2.ai.lanes.3">Cotización</p>
+                <p class="ai-lane" style="animation-delay:2.4s" data-i18n="home2.ai.lanes.4">Pago</p>
+                <p class="ai-lane" style="animation-delay:3s" data-i18n="home2.ai.lanes.5">Admisión</p>
+            </div>
+            <div class="ai-walls ai-walls-knowledge" aria-hidden="true">
+                <div class="ai-wall ai-wall-l"><p class="ai-wall-text" data-wall="knowledge-l"></p></div>
+                <div class="ai-wall ai-wall-r"><p class="ai-wall-text" data-wall="knowledge-r"></p></div>
+            </div>
+            <div class="ai-walls ai-walls-modules" aria-hidden="true">
+                <div class="ai-wall ai-wall-l"><p class="ai-wall-text" data-wall="modules-l"></p></div>
+                <div class="ai-wall ai-wall-r"><p class="ai-wall-text" data-wall="modules-r"></p></div>
+            </div>
+            <div class="ai-orb-pos" aria-hidden="true">
+                <div class="ai-orb"><span class="ds-orb ai-orb-el" data-activity="flow"><span class="ds-orb-halo"></span><span class="ds-orb-body"><span class="ds-orb-swirl"></span><span class="ds-orb-blob"></span><span class="ds-orb-shine"></span></span></span></div>
+            </div>
+            <div class="ai-acts">
+                <div class="ai-act">
+                    <h2 class="sh-h2"><span data-i18n="home2.ai.a1_title">Una inteligencia.</span> <span class="sh-accent" data-i18n="home2.ai.a1_accent">Todo tu negocio.</span></h2>
+                </div>
+                <div class="ai-act">
+                    <h2 class="sh-h2"><span data-i18n="home2.ai.a2_title">Atiende sola,</span> <span class="sh-accent" data-i18n="home2.ai.a2_accent">en todos tus canales.</span></h2>
+                    <p class="sh-body ai-act-body" data-i18n="home2.ai.a2_body">WhatsApp, Instagram y Messenger con la conexión oficial, y los comentarios de tus redes. De día y de noche. Cuando hace falta una persona, pasa a tu equipo.</p>
+                </div>
+                <div class="ai-act">
+                    <h2 class="sh-h2"><span data-i18n="home2.ai.a3_title">Entiende cada</span> <span class="sh-accent" data-i18n="home2.ai.a3_accent">conversación.</span></h2>
+                    <p class="sh-body ai-act-body" data-i18n="home2.ai.a3_body">Venta, soporte, reserva, cotización o admisión. Califica a cada cliente con la frase que lo demuestra y lo deja en el lugar correcto de tu pipeline.</p>
+                </div>
+                <div class="ai-act">
+                    <h2 class="sh-h2"><span data-i18n="home2.ai.a4_title">Un conocimiento</span> <span class="sh-accent" data-i18n="home2.ai.a4_accent">que crece contigo.</span></h2>
+                    <p class="sh-body ai-act-body" data-i18n="home2.ai.a4_body">Le enseñas tu negocio una vez y no deja de crecer: cada documento, cada servicio y cada respuesta de tu equipo la hacen más precisa. Para cada respuesta lee solo lo que necesita.</p>
+                </div>
+                <div class="ai-act">
+                    <h2 class="sh-h2"><span data-i18n="home2.ai.a5_title">Te acompaña</span> <span class="sh-accent" data-i18n="home2.ai.a5_accent">en cada módulo.</span></h2>
+                    <p class="sh-body ai-act-body" data-i18n="home2.ai.a5_body">Una sola IA. Todo tu negocio.</p>
+                </div>
             </div>
         </div>
     </section>
-
     <!-- 5. Modo 3D -->
     <section class="sh-section" id="modo-3d">
         <div class="container sh-split">
@@ -392,6 +430,9 @@
 
     <!-- Portada de Spaces: titular cinético, Bandeja en vivo, cinta de la IA, ciudad del Modo 3D y planes -->
     <script src="js/spaces-home.js"></script>
+
+    <!-- Sección de IA en actos -->
+    <script src="js/spaces-ai.js"></script>
 </body>
 
 </html>

@@ -1735,15 +1735,78 @@
       "link": "Explore this Space"
     },
     "ai": {
-      "title": "One AI for your whole business.",
-      "c1_title": "Serves on its own",
-      "c1_desc": "On every channel, through the official connection. When a person is needed, it hands the conversation to your team.",
-      "c2_title": "Understands and qualifies",
-      "c2_desc": "Sales, support, bookings or quotes, in any industry. Every customer is qualified with the sentence that proves it.",
-      "c3_title": "Learns your business",
-      "c3_desc": "Services, prices, documents and your team's answers. The more you use it, the more precise it gets.",
-      "c4_title": "Lives in every module",
-      "c4_desc": "The same AI in the inbox, pipeline, catalog, tasks and billing."
+      "a1_title": "One intelligence.",
+      "a1_accent": "Your whole business.",
+      "a2_title": "Serves on its own,",
+      "a2_accent": "on every channel.",
+      "a2_body": "WhatsApp, Instagram and Messenger through the official connection, plus your social comments. Day and night. When a person is needed, it hands over to your team.",
+      "a3_title": "Understands every",
+      "a3_accent": "conversation.",
+      "a3_body": "Sales, support, bookings, quotes or admissions. It qualifies every customer with the sentence that proves it and places them in the right pipeline stage.",
+      "a4_title": "Knowledge",
+      "a4_accent": "that grows with you.",
+      "a4_body": "Teach it your business once and it keeps growing: every document, service and team answer makes it more precise. For each reply it reads only what it needs.",
+      "a5_title": "By your side",
+      "a5_accent": "in every module.",
+      "a5_body": "One AI. Your whole business.",
+      "sources": [
+        "WhatsApp",
+        "Instagram",
+        "Messenger",
+        "Comments"
+      ],
+      "lanes": [
+        "Sales",
+        "Support",
+        "Booking",
+        "Quote",
+        "Payment",
+        "Admission"
+      ],
+      "know_l": [
+        "Services",
+        "Prices",
+        "Hours",
+        "Policies",
+        "FAQs",
+        "Documents",
+        "Business profile",
+        "Team answers",
+        "Processes"
+      ],
+      "know_r": [
+        "Products",
+        "Promotions",
+        "Warranties",
+        "Payment methods",
+        "Locations",
+        "Brand voice",
+        "Manuals",
+        "Terms",
+        "Business DNA"
+      ],
+      "mods_l": [
+        "Inbox",
+        "Pipeline",
+        "Tasks",
+        "Catalog",
+        "Automations",
+        "Quotes",
+        "Contacts",
+        "Campaigns",
+        "Forms"
+      ],
+      "mods_r": [
+        "Pixy Social",
+        "Projects",
+        "Billing",
+        "Subscriptions",
+        "Client portal",
+        "Attendance",
+        "Knowledge",
+        "Pixy Help",
+        "3D Mode"
+      ]
     },
     "m3d": {
       "title": "See your business alive.",
