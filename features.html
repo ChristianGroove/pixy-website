@@ -15,187 +15,139 @@
         })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Características - Pixy</title>
+    <title>Plataforma | Pixy</title>
+    <meta name="description" content="Atiende, vende, opera y cobra: bandeja omnicanal, IA, pipeline, tareas, cobros y portal del cliente en una sola plataforma.">
     <link rel="canonical" href="https://pixy.com.co/features.html">
-    <!-- Dependencies -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <style>
-        body {
-            visibility: visible;
-            opacity: 1;
-        }
-        html[data-theme="dark"] body {
-            background-color: #0F0F1A;
-        }
-        html[data-theme="light"] body {
-            background-color: #ffffff;
-        }
-    </style>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixy.com.co/features.html">
+    <meta property="og:title" content="Plataforma | Pixy">
+    <meta property="og:description" content="Atiende, vende, opera y cobra: bandeja omnicanal, IA, pipeline, tareas, cobros y portal del cliente en una sola plataforma.">
+    <meta property="og:image" content="https://pixy.com.co/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Plataforma | Pixy">
+    <meta name="twitter:description" content="Atiende, vende, opera y cobra: bandeja omnicanal, IA, pipeline, tareas, cobros y portal del cliente en una sola plataforma.">
+    <meta name="twitter:image" content="https://pixy.com.co/assets/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/agency-modern.css">
     <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/spaces-home.css">
 </head>
 
-<body class="features-page">
-    <div class="mouse-spotlight"></div>
+<body class="landing-page spaces-face">
+    <!-- Generado por tools/pages/build-pages.mjs: editar ahí, no aquí -->
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
-
-    <!-- Navigation (Shared) -->
+    <!-- Navigation -->
     <nav class="nav">
         <div class="nav-content">
-            <a href="/" class="nav-brand">
-                <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
-                <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
-            </a>
+            <div class="nav-left-group" style="display: flex; align-items: center; gap: 32px;">
+                <a href="index.html" class="nav-brand">
+                    <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
+                    <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
+                </a>
+                <div class="universe-switcher" role="tablist" aria-label="Ecosistema">
+                    <a href="agency.html" class="universe-tab" data-mode="agency">Agency</a>
+                    <a href="index.html" class="universe-tab active" data-mode="spaces">Spaces</a>
+                </div>
+            </div>
+
             <div class="nav-links">
                 <a href="index.html" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
-                    <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
+                    <a href="spaces.html" class="neon-link active" data-i18n="nav.spaces">Spaces</a>
                 </div>
                 <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
                 <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
                 <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
+
             <div class="nav-actions">
-                <button id="lang-toggle" class="btn-lang" style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                <!-- Language Switcher -->
+                <button id="lang-toggle" class="btn-lang"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
                     <span id="lang-text">ES</span>
                     <span style="color:var(--brand-pink); font-size:10px;">▼</span>
                 </button>
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="nav.demo">Demo</a>
+
+                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;"
+                    data-i18n="nav.demo">Demo</a>
             </div>
         </div>
     </nav>
 
-    <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
 
-        <header style="text-align: center; margin-bottom: 80px;">
-            <span class="neon-badge" style="margin-bottom: 24px;" data-i18n="features_page.badge">Pixy Core IA</span>
-            <h1 style="font-size: clamp(28px, 4vw, 46px); line-height: 1.16; margin-bottom: 16px;" data-i18n="features_page.hero_title">El Motor Central de tu Operación</h1>
-            <p class="subtitle" style="max-width: 800px; margin: 0 auto;" data-i18n="features_page.hero_desc">Más que herramientas sueltas, Pixy es la infraestructura inteligente que tu negocio necesita para operar con autonomía. CRM, Finanzas, Operaciones, Herramientas e IA unificados en un solo sistema.</p>
-            <img src="assets/droid.png" class="floating-droid droid-flip"
-                style="top: 0; right: 15%; width: 70px; animation-duration: 4s;" alt="">
-        </header>
+    <section class="sh-section sp-hero">
+        <div class="container">
+            <h1 class="sh-h1" data-i18n="pages2.features.h1">Todo tu negocio, conectado.</h1>
+            <p class="sh-body sp-sub" data-i18n="pages2.features.sub">Tus canales, tus ventas, tu operación y tus cobros dejan de vivir en cinco herramientas distintas.</p>
+            <div class="sp-actions"><a class="btn-neon" href="contact.html" data-warp-click="hop" data-i18n="pages2.features.cta">Agenda tu demo</a></div>
+        </div>
+    </section>
 
-        <!-- Section 1: CRM & AI (The Brain) -->
-        <section class="detail-grid reversed">
-            <div class="detail-content">
-                <span class="neon-badge" data-i18n="features_page.s1_badge">El Cerebro</span>
-                <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="features_page.s1_title">CRM Impulsado por IA</h2>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;" data-i18n="features_page.s1_desc">Olvídate de las hojas de cálculo. Pixy centraliza cada cliente, cada interacción y cada venta en una base de datos viva. La IA te ayuda a priorizar a quién llamar y cuándo.</p>
-                <ul class="feature-list">
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s1_f1_bold">Base de Datos Unificada:</strong> <span data-i18n="features_page.s1_f1_text">Historial 360° de cada cliente.</span></li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s1_f2_bold">Pipelines Visuales:</strong> <span data-i18n="features_page.s1_f2_text">Mueve tus ventas de "Prospecto" a "Pagado".</span></li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s1_f3_bold">Etiquetado Automático:</strong> <span data-i18n="features_page.s1_f3_text">Segmentación inteligente sin esfuerzo manual.</span></li>
-                </ul>
+    <section class="sh-section">
+        <div class="container sh-split">
+            <div class="sh-sticky">
+                <h2 class="sh-h2" data-i18n="pages2.features.serve_t">Atiende</h2>
+                <p class="sh-body" data-i18n="pages2.features.serve_i">Ningún mensaje se queda sin respuesta.</p>
             </div>
-            <div class="detail-image glass-card"
-                style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
-                <div style="text-align: center; opacity: 0.6;">
-                    <span style="font-size: 42px;">🧠</span>
-                    <p data-i18n="features_page.s1_box">Inteligencia de Negocio</p>
-                </div>
-            </div>
-        </section>
+            <ol class="sh-list"><li><span class="sh-num">01</span><div><h3 class="sh-h3" data-i18n="pages2.features.serve_0_t">Bandeja omnicanal</h3><p class="sh-body" data-i18n="pages2.features.serve_0_d">WhatsApp con la conexión oficial de Meta, Instagram y Messenger, con asignación por turnos y traspasos con un clic.</p></div></li><li><span class="sh-num">02</span><div><h3 class="sh-h3" data-i18n="pages2.features.serve_1_t">IA que responde</h3><p class="sh-body" data-i18n="pages2.features.serve_1_d">Atiende de día y de noche con lo que cargaste en Conocimiento, escucha notas de voz y entiende imágenes.</p></div></li><li><span class="sh-num">03</span><div><h3 class="sh-h3" data-i18n="pages2.features.serve_2_t">Tú decides cuándo actúa</h3><p class="sh-body" data-i18n="pages2.features.serve_2_d">En todos los chats o solo en los que llegan por anuncios. Si un asesor escribe, la IA se aparta.</p></div></li><li><span class="sh-num">04</span><div><h3 class="sh-h3" data-i18n="pages2.features.serve_3_t">Pixy Social</h3><p class="sh-body" data-i18n="pages2.features.serve_3_d">Quien comenta «precio» recibe respuesta, mensaje directo y link de pago, y ves cuánto vendió cada publicación.</p></div></li></ol>
+        </div>
+    </section>
 
-        <!-- Section 2: Communication (The Voice) -->
-        <section class="detail-grid">
-            <div class="detail-content">
-                <span class="neon-badge" data-i18n="features_page.s2_badge">La Voz</span>
-                <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="features_page.s2_title">Inbox Omnicanal</h2>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;" data-i18n="features_page.s2_desc">Tus clientes están en todas partes. Tú también. Responde WhatsApp, Instagram y Messenger desde una sola pantalla, con todo tu equipo conectado al mismo tiempo.</p>
-                <ul class="feature-list">
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s2_f1_bold">Multi-Agente:</strong> <span data-i18n="features_page.s2_f1_text">Tu equipo colaborando en tiempo real.</span></li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s2_f2_bold">Multimedia Full:</strong> <span data-i18n="features_page.s2_f2_text">Audios, fotos y documentos sin restricciones.</span></li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s2_f3_bold">Notas Internas:</strong> <span data-i18n="features_page.s2_f3_text">Chatea con tu equipo dentro del chat del cliente.</span></li>
-                </ul>
+    <section class="sh-section">
+        <div class="container sh-split">
+            <div class="sh-sticky">
+                <h2 class="sh-h2" data-i18n="pages2.features.sell_t">Vende</h2>
+                <p class="sh-body" data-i18n="pages2.features.sell_i">Sabes a quién llamar hoy.</p>
             </div>
-            <div class="detail-image glass-card"
-                style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
-                <div style="text-align: center; opacity: 0.6;">
-                    <span style="font-size: 42px;">💬</span>
-                    <p data-i18n="features_page.s2_box">Centro de Comando</p>
-                </div>
-            </div>
-        </section>
+            <ol class="sh-list"><li><span class="sh-num">01</span><div><h3 class="sh-h3" data-i18n="pages2.features.sell_0_t">Calificación con IA</h3><p class="sh-body" data-i18n="pages2.features.sell_0_d">Cada conversación queda fría, tibia o caliente, con las frases del cliente como evidencia.</p></div></li><li><span class="sh-num">02</span><div><h3 class="sh-h3" data-i18n="pages2.features.sell_1_t">Pipeline vivo</h3><p class="sh-body" data-i18n="pages2.features.sell_1_d">Cola de hoy, salud de cada trato y tiempo máximo por etapa. La IA sugiere; tu equipo decide.</p></div></li><li><span class="sh-num">03</span><div><h3 class="sh-h3" data-i18n="pages2.features.sell_2_t">Contactos 360</h3><p class="sh-body" data-i18n="pages2.features.sell_2_d">Una ficha por cliente con mensajes, etapas, cotizaciones, facturas e historial.</p></div></li><li><span class="sh-num">04</span><div><h3 class="sh-h3" data-i18n="pages2.features.sell_3_t">Campañas masivas</h3><p class="sh-body" data-i18n="pages2.features.sell_3_d">WhatsApp con plantillas aprobadas y email desde tu dominio verificado, con bajas automáticas.</p></div></li><li><span class="sh-num">05</span><div><h3 class="sh-h3" data-i18n="pages2.features.sell_4_t">Cotizaciones</h3><p class="sh-body" data-i18n="pages2.features.sell_4_d">Se crean desde la conversación y se convierten en venta y factura cuando el cliente acepta.</p></div></li></ol>
+        </div>
+    </section>
 
-        <!-- Section 3: Finance (The Engine) -->
-        <section class="detail-grid reversed">
-            <div class="detail-content">
-                <span class="neon-badge" data-i18n="features_page.s3_badge">Lo Financiero</span>
-                <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="features_page.s3_title">Gestión de Cobros Universal</h2>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;" data-i18n="features_page.s3_desc">No necesitas un departamento contable para cobrar profesionalmente. Genera cotizaciones y cuentas de cobro, envía enlaces de pago y automatiza el recaudo.</p>
-                <ul class="feature-list">
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s3_f1_bold">Recaudo Automático:</strong> <span data-i18n="features_page.s3_f1_text">Recordatorios de pago que salen solos.</span></li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s3_f2_bold">Cotizaciones Web:</strong> <span data-i18n="features_page.s3_f2_text">Propuestas que se aceptan con un clic.</span></li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s3_f3_bold">Conciliación:</strong> <span data-i18n="features_page.s3_f3_text">Todo conectado a tu CRM y flujo de caja.</span></li>
-                </ul>
+    <section class="sh-section">
+        <div class="container sh-split">
+            <div class="sh-sticky">
+                <h2 class="sh-h2" data-i18n="pages2.features.operate_t">Opera</h2>
+                <p class="sh-body" data-i18n="pages2.features.operate_i">Tu operación, sin papeles.</p>
             </div>
-            <div class="detail-image glass-card"
-                style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
-                <div style="text-align: center; opacity: 0.6;">
-                    <span style="font-size: 42px;">💳</span>
-                    <p data-i18n="features_page.s3_box">Flujo de Caja</p>
-                </div>
-            </div>
-        </section>
+            <ol class="sh-list"><li><span class="sh-num">01</span><div><h3 class="sh-h3" data-i18n="pages2.features.operate_0_t">Tareas y proyectos</h3><p class="sh-body" data-i18n="pages2.features.operate_0_d">Tablero, lista y calendario, reuniones y ritmo semanal, con portal para colaboradores externos.</p></div></li><li><span class="sh-num">02</span><div><h3 class="sh-h3" data-i18n="pages2.features.operate_1_t">Formularios y briefings</h3><p class="sh-body" data-i18n="pages2.features.operate_1_d">Constructor con plantillas y un enlace público para que el cliente responda.</p></div></li><li><span class="sh-num">03</span><div><h3 class="sh-h3" data-i18n="pages2.features.operate_2_t">Asistencia y sedes</h3><p class="sh-body" data-i18n="pages2.features.operate_2_d">Marcación con geocerca por sede y foto, con horario y zona horaria por sede.</p></div></li><li><span class="sh-num">04</span><div><h3 class="sh-h3" data-i18n="pages2.features.operate_3_t">Automatizaciones</h3><p class="sh-body" data-i18n="pages2.features.operate_3_d">Flujos visuales sin código con mensajes, condiciones, IA y acciones en el CRM, con simulador.</p></div></li></ol>
+        </div>
+    </section>
 
-        <!-- Section 4: Automation (The Autopilot) -->
-        <section class="detail-grid">
-            <div class="detail-content">
-                <span class="neon-badge" data-i18n="features_page.s4_badge">El Piloto Automático</span>
-                <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="features_page.s4_title">Automatización 24/7</h2>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;" data-i18n="features_page.s4_desc">Duplica tu capacidad operativa sin contratar más personal. Diseña flujos de trabajo que califican leads, agendan citas y responden preguntas mientras duermes.</p>
-                <div class="bento-grid" style="grid-template-columns: 1fr 1fr; gap: 16px;">
-                    <div class="glass-card" style="padding: 20px;">
-                        <h4 style="margin-bottom: 8px;" data-i18n="features_page.s4_bento_title1">🤖 Chatbots IA</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);" data-i18n="features_page.s4_bento_desc1">Atención inmediata nivel humano.</p>
-                    </div>
-                    <div class="glass-card" style="padding: 20px;">
-                        <h4 style="margin-bottom: 8px;" data-i18n="features_page.s4_bento_title2">🔌 Webhooks</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);" data-i18n="features_page.s4_bento_desc2">Conecta con +5000 apps.</p>
-                    </div>
-                </div>
+    <section class="sh-section">
+        <div class="container sh-split">
+            <div class="sh-sticky">
+                <h2 class="sh-h2" data-i18n="pages2.features.bill_t">Cobra</h2>
+                <p class="sh-body" data-i18n="pages2.features.bill_i">Cobras sin perseguir a nadie.</p>
             </div>
-            <div class="detail-image glass-card"
-                style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
-                <div style="text-align: center; opacity: 0.6;">
-                    <span style="font-size: 42px;">⚡</span>
-                    <p data-i18n="features_page.s4_box">Productividad Infinita</p>
-                </div>
-            </div>
-        </section>
+            <ol class="sh-list"><li><span class="sh-num">01</span><div><h3 class="sh-h3" data-i18n="pages2.features.bill_0_t">Facturas y links de pago</h3><p class="sh-body" data-i18n="pages2.features.bill_0_d">Enviados por WhatsApp o email, con cobros recurrentes y recordatorios escalonados.</p></div></li><li><span class="sh-num">02</span><div><h3 class="sh-h3" data-i18n="pages2.features.bill_1_t">Portal del cliente</h3><p class="sh-body" data-i18n="pages2.features.bill_1_d">Tu cliente ve sus servicios, facturas, cotizaciones y briefings, y paga en línea, con tu marca.</p></div></li><li><span class="sh-num">03</span><div><h3 class="sh-h3" data-i18n="pages2.features.bill_2_t">Cada empresa en su moneda</h3><p class="sh-body" data-i18n="pages2.features.bill_2_d">Pixy trabaja en la moneda de tu negocio.</p></div></li></ol>
+        </div>
+    </section>
 
-        <!-- Section 5: Industry Modules (Superpowers) -->
-        <section class="detail-grid reversed">
-            <div class="detail-content">
-                <span class="neon-badge" data-i18n="features_page.s5_badge">Tu Superpoder</span>
-                <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="features_page.s5_title">Módulos por Industria</h2>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;"><span data-i18n="features_page.s5_desc_1">No entregamos el mismo software a todos. Pixy activa</span> <strong data-i18n="features_page.s5_desc_bold">módulos operativos especializados</strong> <span data-i18n="features_page.s5_desc_2">diseñados para la eficacia máxima de tu sector.</span></p>
-                <ul class="feature-list">
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s5_f1_bold">Agencias:</strong> <span data-i18n="features_page.s5_f1_text">Gestión de Proyectos White-Label.</span></li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s5_f2_bold">Salud:</strong> <span data-i18n="features_page.s5_f2_text">Agendamiento Clínico y Recordatorios.</span></li>
-                    <li class="feature-item"><span class="feature-icon">✓</span> <strong data-i18n="features_page.s5_f3_bold">Legal:</strong> <span data-i18n="features_page.s5_f3_text">Gestión de Expedientes y Tiempos.</span></li>
-                </ul>
+    <section class="sh-section">
+        <div class="container sh-split">
+            <div class="sh-sticky">
+                <h2 class="sh-h2" data-i18n="pages2.features.control_t">Inteligencia y control</h2>
+                <p class="sh-body" data-i18n="pages2.features.control_i">Una sola IA y la seguridad de una plataforma empresarial.</p>
             </div>
-            <div class="detail-image glass-card"
-                style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
-                <div style="text-align: center; opacity: 0.6;">
-                    <span style="font-size: 42px;">🧬</span>
-                    <p data-i18n="features_page.s5_box">ADN Adaptable</p>
-                </div>
-            </div>
-        </section>
+            <ol class="sh-list"><li><span class="sh-num">01</span><div><h3 class="sh-h3" data-i18n="pages2.features.control_0_t">Conocimiento</h3><p class="sh-body" data-i18n="pages2.features.control_0_d">Le enseñas tu negocio una vez: perfil, servicios, preguntas frecuentes, horario, documentos y tono de marca.</p></div></li><li><span class="sh-num">02</span><div><h3 class="sh-h3" data-i18n="pages2.features.control_1_t">IA incluida</h3><p class="sh-body" data-i18n="pages2.features.control_1_d">Sin configurar nada y con control de gasto, o con tu propia llave si lo prefieres.</p></div></li><li><span class="sh-num">03</span><div><h3 class="sh-h3" data-i18n="pages2.features.control_2_t">Roles y permisos</h3><p class="sh-body" data-i18n="pages2.features.control_2_d">Cada persona ve solo lo que le toca.</p></div></li><li><span class="sh-num">04</span><div><h3 class="sh-h3" data-i18n="pages2.features.control_3_t">Seguridad</h3><p class="sh-body" data-i18n="pages2.features.control_3_d">Datos aislados por empresa, acceso con passkeys y verificación en dos pasos.</p></div></li><li><span class="sh-num">05</span><div><h3 class="sh-h3" data-i18n="pages2.features.control_4_t">Español e inglés</h3><p class="sh-body" data-i18n="pages2.features.control_4_d">La app y los portales en los dos idiomas.</p></div></li></ol>
+        </div>
+    </section>
 
-        <!-- CTA Feature -->
-        <section class="glass-card" style="margin-top: 80px; text-align: center; padding: 60px;">
-            <h2 data-i18n="features_page.cta_title">¿Buscas algo específico?</h2>
-            <p style="margin-bottom: 32px;" data-i18n="features_page.cta_desc">Agenda una demo técnica para ver si Pixy se adapta a tu caso de uso.</p>
-            <a href="contact.html" class="btn-neon" data-i18n="features_page.cta_btn">Hablar con un Experto</a>
-        </section>
-
-    </main>
+    <section class="sh-section sh-final">
+        <div class="container">
+            <h2 class="sh-h2" data-i18n="pages2.features.close_t">Míralo funcionando con tu negocio.</h2>
+            <p class="sh-body" data-i18n="pages2.features.close_s">Te mostramos la plataforma con los flujos de tu industria.</p>
+            <a class="btn-neon" href="contact.html" data-warp-click="departure" data-i18n="pages2.features.close_b">Agenda tu demo</a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -208,6 +160,7 @@
 
             <nav class="footer-links">
                 <h4 data-i18n="footer.product">Producto</h4>
+
                 <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
                 <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
             </nav>
@@ -233,19 +186,10 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Volver arriba">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="18 15 12 9 6 15"></polyline>
-        </svg>
-    </button>
-    <script src="js/i18n.js"></script>
-    <script src="js/main.js"></script>
-
-    <button class="theme-toggle" onclick="toggleTheme()"><svg class="sun-icon" xmlns="http://www.w3.org/2000/svg"
-            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -255,10 +199,28 @@
             <line x1="21" y1="12" x2="23" y2="12"></line>
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg><svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg></button>
+        </svg>
+    </button>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Fondo espacial (estrellas en viaje, reacciona al scroll) -->
+    <script src="js/space-bg.js"></script>
+
+    <!-- i18n Script -->
+    <script src="js/i18n.js"></script>
+
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+
+    <!-- Páginas de Spaces: catálogo con modelo 3D, planes, listas y formulario -->
+    <script src="js/spaces-pages.js"></script>
 </body>
 
 </html>

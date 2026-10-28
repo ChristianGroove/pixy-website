@@ -15,57 +15,59 @@
         })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partners & Resellers | Pixy</title>
-    <meta name="description"
-        content="Únete al programa de partners de Pixy. Vende nuestra tecnología y crece tu agencia.">
-    <meta name="robots" content="index, follow">
+    <title>Plan Partner | Pixy</title>
+    <meta name="description" content="Vende Pixy con tu marca: marca blanca, panel de organizaciones y cobro a tus clientes.">
     <link rel="canonical" href="https://pixy.com.co/partners.html">
-
-    <!-- Open Graph -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pixy.com.co/partners.html">
-    <meta property="og:title" content="Partners & Resellers | Pixy">
-    <meta property="og:description"
-        content="Únete al programa de partners de Pixy. Vende nuestra tecnología y crece tu agencia.">
+    <meta property="og:title" content="Plan Partner | Pixy">
+    <meta property="og:description" content="Vende Pixy con tu marca: marca blanca, panel de organizaciones y cobro a tus clientes.">
     <meta property="og:image" content="https://pixy.com.co/assets/og-image.png">
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://pixy.com.co/partners.html">
-    <meta name="twitter:title" content="Partners & Resellers | Pixy">
-    <meta name="twitter:description"
-        content="Únete al programa de partners de Pixy. Vende nuestra tecnología y crece tu agencia.">
+    <meta name="twitter:title" content="Plan Partner | Pixy">
+    <meta name="twitter:description" content="Vende Pixy con tu marca: marca blanca, panel de organizaciones y cobro a tus clientes.">
     <meta name="twitter:image" content="https://pixy.com.co/assets/og-image.png">
 
-    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/agency-modern.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/spaces-home.css">
 </head>
 
-<body class="legal-page">
-    <div class="mouse-spotlight"></div>
+<body class="landing-page spaces-face">
+    <!-- Generado por tools/pages/build-pages.mjs: editar ahí, no aquí -->
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
-
-    <!-- Navigation (Shared) -->
+    <!-- Navigation -->
     <nav class="nav">
         <div class="nav-content">
-            <a href="/" class="nav-brand">
-                <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
-                <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
-            </a>
+            <div class="nav-left-group" style="display: flex; align-items: center; gap: 32px;">
+                <a href="index.html" class="nav-brand">
+                    <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
+                    <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
+                </a>
+                <div class="universe-switcher" role="tablist" aria-label="Ecosistema">
+                    <a href="agency.html" class="universe-tab" data-mode="agency">Agency</a>
+                    <a href="index.html" class="universe-tab active" data-mode="spaces">Spaces</a>
+                </div>
+            </div>
+
             <div class="nav-links">
-                <a href="/" class="neon-link" data-i18n="nav.home">Inicio</a>
+                <a href="index.html" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
                     <a href="spaces.html" class="neon-link" data-i18n="nav.spaces">Spaces</a>
                 </div>
-                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
+                <a href="pricing.html" class="neon-link active" data-i18n="nav.pricing">Precios</a>
                 <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
                 <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
+
             <div class="nav-actions">
                 <!-- Language Switcher -->
                 <button id="lang-toggle" class="btn-lang"
@@ -80,129 +82,44 @@
         </div>
     </nav>
 
-    <main class="container" style="padding-top: 140px; text-align: left; align-items: center; max-width: 1200px;">
 
-        <header style="text-align: center; width: 100%; margin-bottom: 80px; max-width: 800px;">
-            <h1 style="font-size: 2.5rem; line-height: 1.1; margin-bottom: 24px;">
-                <span class="gradient-text text-glow" data-i18n="partners_page.title">Programa de Partners</span>
-            </h1>
-            <p class="subtitle"
-                style="font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;"
-                data-i18n="partners_page.subtitle">
-                Lleva la transformación digital a tus clientes con Pixy.
-            </p>
-        </header>
-
-        <div class="grid-3" style="gap: 32px; margin-bottom: 80px;">
-            <div class="glass-card">
-                <div class="feature-icon-small">
-                    <!-- Icon: Trending Up (Upgrade/Growth) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                        <polyline points="17 6 23 6 23 12" />
-                    </svg>
-                </div>
-                <h3 data-i18n="partners_page.card_growth_title">Crecimiento Acelerado</h3>
-                <p data-i18n="partners_page.card_growth_desc">Ofrece una solución SaaS completa sin costos de
-                    desarrollo. Aumenta tu ticket promedio.</p>
-            </div>
-
-            <div class="glass-card">
-                <div class="feature-icon-small">
-                    <!-- Icon: Diamond -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M6 3h12l4 6-10 13L2 9z"></path>
-                    </svg>
-                </div>
-                <h3 data-i18n="partners_page.card_commission_title">Comisiones Recurrentes</h3>
-                <p data-i18n="partners_page.card_commission_desc">Gana un porcentaje de por vida por cada cliente que
-                    traigas a la plataforma.</p>
-            </div>
-
-            <div class="glass-card">
-                <div class="feature-icon-small">
-                    <!-- Icon: Headphones -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
-                        <path
-                            d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z">
-                        </path>
-                    </svg>
-                </div>
-                <h3 data-i18n="partners_page.card_support_title">Soporte Prioritario</h3>
-                <p data-i18n="partners_page.card_support_desc">Acceso directo a nuestro equipo de producto y material de
-                    ventas exclusivo.</p>
-            </div>
+    <section class="sh-section sp-hero">
+        <div class="container">
+            <h1 class="sh-h1" data-i18n="pages2.partners.h1">Vende Pixy con tu marca.</h1>
+            <p class="sh-body sp-sub" data-i18n="pages2.partners.sub">El plan Partner es para agencias que quieren ofrecer Pixy a sus clientes como propio.</p>
+            <div class="sp-actions"><a class="btn-neon" href="#partner-form" data-warp-click="nudge" data-i18n="pages2.partners.cta">Quiero ser partner</a></div>
         </div>
+    </section>
 
-        <section class="glass-card" style="width: 100%; max-width: 800px; margin: 0 auto;">
-            <h2 style="text-align: center; margin-bottom: 32px;" data-i18n="partners_page.form_title">Aplica al Programa
-            </h2>
-            <form id="partner-form" class="newsletter-form" style="display: flex; flex-direction: column; gap: 24px;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-                    <div class="neon-input-wrapper">
-                        <label
-                            style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;"
-                            data-i18n="partners_page.form_name_label">Nombre
-                            Completo</label>
-                        <input type="text" class="neon-input" placeholder="Tu nombre"
-                            data-i18n-placeholder="partners_page.form_name_placeholder" required>
-                    </div>
-                    <div class="neon-input-wrapper">
-                        <label
-                            style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;"
-                            data-i18n="partners_page.form_company_label">Empresa
-                            / Agencia</label>
-                        <input type="text" class="neon-input" placeholder="Nombre de tu empresa"
-                            data-i18n-placeholder="partners_page.form_company_placeholder" required>
-                    </div>
-                </div>
+    <section class="sh-section">
+        <div class="container sh-split">
+            <div class="sh-sticky">
+                <h2 class="sh-h2" data-i18n="pages2.partners.what_t">Lo que incluye</h2>
+                
+            </div>
+            <ol class="sh-list"><li><span class="sh-num">01</span><div><h3 class="sh-h3" data-i18n="pages2.partners.what_0_t">Marca blanca</h3><p class="sh-body" data-i18n="pages2.partners.what_0_d">Tu logo, tus colores y tu dominio en toda la plataforma y los portales.</p></div></li><li><span class="sh-num">02</span><div><h3 class="sh-h3" data-i18n="pages2.partners.what_1_t">Panel de organizaciones</h3><p class="sh-body" data-i18n="pages2.partners.what_1_d">Creas y administras las empresas de tus clientes desde un solo lugar de control.</p></div></li><li><span class="sh-num">03</span><div><h3 class="sh-h3" data-i18n="pages2.partners.what_2_t">Cobro a tus clientes</h3><p class="sh-body" data-i18n="pages2.partners.what_2_d">Cada cliente paga su plan desde tu cuenta.</p></div></li><li><span class="sh-num">04</span><div><h3 class="sh-h3" data-i18n="pages2.partners.what_3_t">Informe de Pixy Social</h3><p class="sh-body" data-i18n="pages2.partners.what_3_d">Muestras a cada cliente cuánto vendieron sus publicaciones.</p></div></li></ol>
+        </div>
+    </section>
 
-                <div class="neon-input-wrapper">
-                    <label style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;"
-                        data-i18n="partners_page.form_email_label">Correo
-                        Electrónico Corporativo</label>
-                    <input type="email" class="neon-input" placeholder="nombre@empresa.com"
-                        data-i18n-placeholder="partners_page.form_email_placeholder" required>
-                </div>
-
-                <div class="neon-input-wrapper">
-                    <label style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;"
-                        data-i18n="partners_page.form_website_label">Sitio
-                        Web / LinkedIn</label>
-                    <input type="url" class="neon-input" placeholder="https://..."
-                        data-i18n-placeholder="partners_page.form_website_placeholder" required>
-                </div>
-
-                <div class="neon-input-wrapper">
-                    <label style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem;"
-                        data-i18n="partners_page.form_strategy_label">¿Cómo
-                        planeas vender Pixy?</label>
-                    <textarea class="neon-input" rows="4" placeholder="Cuéntanos sobre tus clientes y estrategia..."
-                        data-i18n-placeholder="partners_page.form_strategy_placeholder"
-                        style="resize: vertical;"></textarea>
-                </div>
-
-                <div style="text-align: center; margin-top: 16px;">
-                    <button type="submit" class="btn-neon" style="width: 100%; max-width: 300px;"
-                        data-i18n="partners_page.form_button">
-                        Enviar Aplicación
-                    </button>
-                    <p style="margin-top: 16px; font-size: 0.85rem; color: var(--text-muted);">
-                        <span data-i18n="partners_page.form_disclaimer_1">Al enviar este formulario aceptas
-                            nuestra</span> <a href="privacy.html" class="neon-link"
-                            data-i18n="partners_page.form_disclaimer_link">Política de Privacidad</a><span
-                            data-i18n="partners_page.form_disclaimer_2">.</span>
-                    </p>
-                </div>
+    <section class="sh-section" id="partner-form">
+        <div class="container sh-split">
+            <div class="sh-sticky">
+                <h2 class="sh-h2" data-i18n="pages2.partners.form_t">Hablemos de tu agencia.</h2>
+                <p class="sh-body" data-i18n="pages2.partners.form_i">Te contamos cómo funciona y armamos el plan para tu cartera de clientes.</p>
+            </div>
+            <form class="sp-form" data-mailto="hola@pixy.com.co" data-subject-es="Plan Partner de Pixy" data-subject-en="Pixy Partner plan">
+                <label><span data-i18n="pages2.partners.f_name">Nombre</span><input name="name" required autocomplete="name"></label>
+                <label><span data-i18n="pages2.partners.f_company">Agencia</span><input name="company" autocomplete="organization"></label>
+                <label><span data-i18n="pages2.partners.f_email">Email</span><input name="email" type="email" required autocomplete="email"></label>
+                <label><span data-i18n="pages2.partners.f_web">Sitio web</span><input name="website" type="url"></label>
+                <label class="sp-wide"><span data-i18n="pages2.partners.f_msg">¿Cuántos clientes manejas y qué les ofreces?</span><textarea name="message" rows="5"></textarea></label>
+                <button class="btn-neon sp-wide" type="submit" data-i18n="pages2.partners.f_send">Enviar</button>
+                <p class="sh-small sp-wide" data-i18n="pages2.partners.f_note">Al enviar se abre tu correo con el mensaje listo.</p>
             </form>
-        </section>
+        </div>
+    </section>
 
-    </main>
-
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -239,7 +156,7 @@
         </div>
     </footer>
 
-    <!-- Theme Toggle Button -->
+    <!-- Theme Toggle -->
     <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
         <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -259,14 +176,21 @@
         </svg>
     </button>
 
-    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Volver arriba">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="18 15 12 9 6 15"></polyline>
-        </svg>
-    </button>
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Fondo espacial (estrellas en viaje, reacciona al scroll) -->
+    <script src="js/space-bg.js"></script>
+
+    <!-- i18n Script -->
     <script src="js/i18n.js"></script>
+
+    <!-- Main Script -->
     <script src="js/main.js"></script>
+
+    <!-- Páginas de Spaces: catálogo con modelo 3D, planes, listas y formulario -->
+    <script src="js/spaces-pages.js"></script>
 </body>
 
 </html>

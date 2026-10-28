@@ -15,55 +15,36 @@
         })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Precios Pixy - Crece sin Límites</title>
-    <meta name="description"
-        content="Planes diseñados para escalar. Comienza gratis y paga solo cuando tu negocio crezca. Sin comisiones ocultas.">
+    <title>Planes | Pixy</title>
+    <meta name="description" content="Eliges tu industria, eliges tu ritmo: Esencial, Pro y Total, más complementos. Cada empresa paga en su moneda.">
     <link rel="canonical" href="https://pixy.com.co/pricing.html">
     <link rel="icon" type="image/png" href="assets/favicon.png">
-
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pixy.com.co/pricing.html">
-    <meta property="og:title" content="Precios Pixy - Crece sin Límites">
-    <meta property="og:description"
-        content="Planes diseñados para escalar. Comienza gratis y paga solo cuando tu negocio crezca. Sin comisiones ocultas.">
+    <meta property="og:title" content="Planes | Pixy">
+    <meta property="og:description" content="Eliges tu industria, eliges tu ritmo: Esencial, Pro y Total, más complementos. Cada empresa paga en su moneda.">
     <meta property="og:image" content="https://pixy.com.co/assets/og-image.png">
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://pixy.com.co/pricing.html">
-    <meta name="twitter:title" content="Precios Pixy - Crece sin Límites">
-    <meta name="twitter:description"
-        content="Planes diseñados para escalar. Comienza gratis y paga solo cuando tu negocio crezca. Sin comisiones ocultas.">
-
+    <meta name="twitter:title" content="Planes | Pixy">
+    <meta name="twitter:description" content="Eliges tu industria, eliges tu ritmo: Esencial, Pro y Total, más complementos. Cada empresa paga en su moneda.">
     <meta name="twitter:image" content="https://pixy.com.co/assets/og-image.png">
 
-    <!-- Dependencies -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <style>
-        body {
-            visibility: visible;
-            opacity: 1;
-        }
-        html[data-theme="dark"] body {
-            background-color: #0F0F1A;
-        }
-        html[data-theme="light"] body {
-            background-color: #ffffff;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/agency-modern.css">
     <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/spaces-home.css">
 </head>
 
-<body class="pricing-page">
-    <div class="mouse-spotlight"></div>
+<body class="landing-page spaces-face">
+    <!-- Generado por tools/pages/build-pages.mjs: editar ahí, no aquí -->
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
-
-    <!-- Navigation (Shared) -->
+    <!-- Navigation -->
     <nav class="nav">
         <div class="nav-content">
             <div class="nav-left-group" style="display: flex; align-items: center; gap: 32px;">
@@ -76,6 +57,7 @@
                     <a href="index.html" class="universe-tab active" data-mode="spaces">Spaces</a>
                 </div>
             </div>
+
             <div class="nav-links">
                 <a href="index.html" class="neon-link" data-i18n="nav.home">Inicio</a>
                 <div class="nav-item has-dropdown">
@@ -85,6 +67,7 @@
                 <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
                 <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
             </div>
+
             <div class="nav-actions">
                 <!-- Language Switcher -->
                 <button id="lang-toggle" class="btn-lang"
@@ -99,263 +82,89 @@
         </div>
     </nav>
 
-    <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
 
-        <header style="text-align: center; margin-bottom: 60px;">
-            <div class="badge" data-i18n="pricing.badge">Planes Flexibles</div>
-            <h1 style="font-size: clamp(28px, 4vw, 46px); line-height: 1.16; margin: 16px 0;" data-i18n="pricing.title">Escala sin límites</h1>
-            <p class="subtitle" data-i18n="pricing.subtitle">Elige el plan que mejor se adapte a la etapa de tu negocio.
-            </p>
-        </header>
-
-        <!-- Pricing Toggle -->
-        <div class="pricing-toggle">
-            <span style="color: var(--text-muted);" data-i18n="pricing.monthly">Mensual</span>
-            <div class="toggle-switch active" onclick="this.classList.toggle('active')">
-                <div class="toggle-thumb"></div>
-            </div>
-            <span style="color: var(--text-primary); font-weight: 600;" data-i18n="pricing.yearly">Anual <span
-                    style="font-size: 0.8rem; color: var(--brand-pink); margin-left: 4px;">(2 meses
-                    gratis)</span></span>
+    <section class="sh-section sp-hero">
+        <div class="container">
+            <h1 class="sh-h1" data-i18n="pages2.pricing.h1">Eliges tu industria. Eliges tu ritmo.</h1>
+            <p class="sh-body sp-sub" data-i18n="pages2.pricing.sub">Un plan es tu Space, un nivel y solo los complementos que necesitas. Cada empresa paga en su moneda.</p>
+            
         </div>
-        <img src="assets/droid.png" class="floating-droid droid-flip"
-            style="top: 150px; right: 10%; width: 60px; animation-delay: 1s;" alt="">
+    </section>
 
-        <!-- Pricing Cards -->
-        <div class="pricing-grid">
-            <!-- Starter -->
-            <div class="glass-card" style="display: flex; flex-direction: column; height: 100%;">
-                <div>
-                    <h3 style="font-size: 2rem; margin-bottom: 8px;" data-i18n="pricing.startup_title">Startup</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;"
-                        data-i18n="pricing.startup_desc">Para equipos que están
-                        empezando.</p>
-
-                    <ul class="feature-list" style="margin-bottom: 32px;">
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="pricing.features_startup_1">3 Usuarios</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="pricing.features_startup_2">1 Canal de WhatsApp</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="pricing.features_startup_3">CRM Básico</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="pricing.features_startup_4">Facturación Ilimitada</span></li>
-                    </ul>
-                </div>
-
-                <div style="margin-top: auto; text-align: center;">
-                    <div class="price-amount" style="font-size: 1.5rem; margin-bottom: 16px;"
-                        data-i18n="pricing.quote_btn">
-                        Cotizar
-                    </div>
-                    <a href="contact.html" class="btn-neon-outline" style="width: 100%;"
-                        data-i18n="pricing.contact_sales">Contactar Ventas</a>
-                </div>
+    <section class="sh-section sp-levels">
+        <div class="container">
+            <div class="sh-plans" role="tablist" aria-label="Niveles">
+                <button type="button" class="sh-plan is-active" role="tab" aria-selected="true" data-level="0">
+                    <span class="sh-h3l" data-i18n="pages2.pricing.l0">Esencial</span>
+                    <span class="sh-small" data-i18n="pages2.pricing.l0_u">Hasta 3 usuarios</span>
+                    <span class="sh-body" data-i18n="pages2.pricing.l0_p">Todo tu negocio, ordenado.</span>
+                    <span class="sh-small sp-level-for" data-i18n="pages2.pricing.l0_f">Para negocios que arrancan a ordenarse.</span>
+                </button>
+                <button type="button" class="sh-plan" role="tab" aria-selected="false" data-level="1">
+                    <span class="sh-h3l" data-i18n="pages2.pricing.l1">Pro</span>
+                    <span class="sh-small" data-i18n="pages2.pricing.l1_u">Hasta 10 usuarios</span>
+                    <span class="sh-body" data-i18n="pages2.pricing.l1_p">Tu negocio, en piloto automático.</span>
+                    <span class="sh-small sp-level-for" data-i18n="pages2.pricing.l1_f">Para equipos que venden y atienden todos los días.</span>
+                </button>
+                <button type="button" class="sh-plan" role="tab" aria-selected="false" data-level="2">
+                    <span class="sh-h3l" data-i18n="pages2.pricing.l2">Total</span>
+                    <span class="sh-small" data-i18n="pages2.pricing.l2_u">Hasta 20 usuarios</span>
+                    <span class="sh-body" data-i18n="pages2.pricing.l2_p">Tu operación completa, en cada sede.</span>
+                    <span class="sh-small sp-level-for" data-i18n="pages2.pricing.l2_f">Para operaciones con varias sedes o equipos grandes.</span>
+                </button>
             </div>
-
-            <!-- Scale (Popular) -->
-            <div class="glass-card pricing-card-highlight"
-                style="transform: scale(1.05); overflow: visible; z-index: 2; display: flex; flex-direction: column; height: 100%;">
-                <span class="neon-badge"
-                    style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); box-shadow: 0 0 20px rgba(242,5,226,0.5);"
-                    data-i18n="pricing.scale_badge">Más
-                    Popular</span>
-                <div>
-                    <h3 style="font-size: 2rem; margin-bottom: 8px;" data-i18n="pricing.scale_title">Scale</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;"
-                        data-i18n="pricing.scale_desc">Para empresas en
-                        crecimiento.</p>
-
-                    <ul class="feature-list" style="margin-bottom: 32px;">
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="pricing.features_scale_1">10 Usuarios</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="pricing.features_scale_2">3 Canales de WhatsApp</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="pricing.features_scale_3">CRM Avanzado + Automatización</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="pricing.features_scale_4">API Access</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="pricing.features_scale_5">Soporte Prioritario</span></li>
-                    </ul>
-                </div>
-
-                <div style="margin-top: auto; text-align: center;">
-                    <div class="price-amount" style="font-size: 1.5rem; margin-bottom: 16px;"
-                        data-i18n="pricing.quote_btn">
-                        Cotizar
-                    </div>
-                    <a href="contact.html" class="btn-neon" style="width: 100%;"
-                        data-i18n="pricing.contact_sales">Contactar Ventas</a>
-                </div>
-            </div>
-
-            <!-- Enterprise -->
-            <div class="glass-card" style="display: flex; flex-direction: column; height: 100%;">
-                <div>
-                    <h3 style="font-size: 2rem; margin-bottom: 8px;" data-i18n="pricing.enterprise_title">Enterprise
-                    </h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;"
-                        data-i18n="pricing.enterprise_desc">Soluciones a medida y
-                        marca blanca.</p>
-
-                    <ul class="feature-list" style="margin-bottom: 32px;">
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="pricing.features_ent_1">Usuarios Ilimitados</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="pricing.features_ent_2">Canales Ilimitados</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="pricing.features_ent_3">Marca Blanca (White Label)</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="pricing.features_ent_4">Infraestructura Dedicada</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="pricing.features_ent_5">Gerente de Cuenta</span></li>
-                    </ul>
-                </div>
-
-                <div style="margin-top: auto; text-align: center;">
-                    <div class="price-amount" style="font-size: 1.5rem; margin-bottom: 16px;"
-                        data-i18n="pricing.custom_pricing">
-                        A Medida
-                    </div>
-                    <a href="contact.html" class="btn-neon-outline" style="width: 100%;"
-                        data-i18n="pricing.request_consulting">Solicitar Consultoría</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Comparison Table -->
-        <section style="margin: 100px 0;">
-            <h2 style="text-align: center; margin-bottom: 40px;" data-i18n="pricing.comp_title">Comparativa Detallada
-            </h2>
-            <div style="overflow-x: auto;">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 40%;" data-i18n="pricing.comp_th_features">Características</th>
-                            <th style="width: 20%;" data-i18n="pricing.startup_title">Startup</th>
-                            <th style="width: 20%;" data-i18n="pricing.scale_title">Scale</th>
-                            <th style="width: 20%;" data-i18n="pricing.enterprise_title">Enterprise</th>
-                        </tr>
-                    </thead>
+            <div class="sp-table-wrap">
+                <table class="sp-table" data-level="0">
+                    <thead><tr><th></th><th><span data-i18n="pages2.pricing.th0">Esencial</span></th><th><span data-i18n="pages2.pricing.th1">Pro</span></th><th><span data-i18n="pages2.pricing.th2">Total</span></th></tr></thead>
                     <tbody>
-                        <tr>
-                            <td data-i18n="pricing.comp_row_inbox">Inbox Multicanal</td>
-                            <td><span class="comparison-check">✓</span></td>
-                            <td><span class="comparison-check">✓</span></td>
-                            <td><span class="comparison-check">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td data-i18n="pricing.comp_row_bots">Automatización (Bots)</td>
-                            <td><span class="comparison-x">—</span></td>
-                            <td><span class="comparison-check">✓</span></td>
-                            <td><span class="comparison-check">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td data-i18n="pricing.comp_row_proformas">Generación de Proformas</td>
-                            <td><span class="comparison-check">✓</span></td>
-                            <td><span class="comparison-check">✓</span></td>
-                            <td><span class="comparison-check">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td data-i18n="pricing.comp_row_billing">Facturación Electrónica (Próximamente)</td>
-                            <td><span class="comparison-x">—</span></td>
-                            <td><span class="comparison-check">✓</span></td>
-                            <td><span class="comparison-check">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td data-i18n="pricing.comp_row_whitelabel">Marca Blanca</td>
-                            <td><span class="comparison-x">—</span></td>
-                            <td><span class="comparison-x">—</span></td>
-                            <td><span class="comparison-check">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td data-i18n="pricing.comp_row_api">API Access</td>
-                            <td><span class="comparison-x">—</span></td>
-                            <td><span class="comparison-check">✓</span></td>
-                            <td><span class="comparison-check">✓</span></td>
-                        </tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r0">Usuarios</th><td><span data-i18n="pages2.pricing.r0_0">Hasta 3</span></td><td><span data-i18n="pages2.pricing.r0_1">Hasta 10</span></td><td><span data-i18n="pages2.pricing.r0_2">Hasta 20</span></td></tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r1">Bandeja de WhatsApp, Instagram y Messenger</th><td>Sí</td><td>Sí</td><td>Sí</td></tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r2">IA que responde y califica</th><td><span data-i18n="pages2.pricing.r2_0">Uso inicial</span></td><td><span data-i18n="pages2.pricing.r2_1">Uso ampliado</span></td><td><span data-i18n="pages2.pricing.r2_2">Uso alto</span></td></tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r3">Pipeline vivo y contactos</th><td>Sí</td><td>Sí</td><td>Sí</td></tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r4">Los módulos de tu Space</th><td>Sí</td><td>Sí</td><td>Sí</td></tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r5">Cotizaciones, facturas y links de pago</th><td>Sí</td><td>Sí</td><td>Sí</td></tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r6">Portal del cliente</th><td>Sí</td><td>Sí</td><td>Sí</td></tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r7">Tienda, menú o portal generado</th><td>Sí</td><td>Sí</td><td>Sí</td></tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r8">Modo 3D</th><td>Sí</td><td>Sí</td><td>Sí</td></tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r9">Pixy Social</th><td>—</td><td>Sí</td><td>Sí</td></tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r10">Campañas masivas de WhatsApp y email</th><td>—</td><td>Sí</td><td>Sí</td></tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r11">Automatizaciones</th><td><span data-i18n="pages2.pricing.r11_0">Básicas</span></td><td><span data-i18n="pages2.pricing.r11_1">Completas</span></td><td><span data-i18n="pages2.pricing.r11_2">Completas</span></td></tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r12">Varias sedes</th><td>—</td><td><span data-i18n="pages2.pricing.r12_1">Hasta un límite</span></td><td><span data-i18n="pages2.pricing.r12_2">Sin límite</span></td></tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r13">Roles a la medida</th><td>—</td><td>Sí</td><td>Sí</td></tr>
+                        <tr><th scope="row" data-i18n="pages2.pricing.r14">Acompañamiento</th><td><span data-i18n="pages2.pricing.r14_0">Guías y Pixy Help</span></td><td><span data-i18n="pages2.pricing.r14_1">Prioritario</span></td><td><span data-i18n="pages2.pricing.r14_2">Dedicado</span></td></tr>
                     </tbody>
                 </table>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- FAQ -->
-        <section style="max-width: 800px; margin: 0 auto;">
-            <h2 style="text-align: center; margin-bottom: 40px;" data-i18n="pricing.faq_title">Preguntas Frecuentes</h2>
-
-            <div class="glass-card" style="padding: 0 32px;">
-                <!-- Question 1 -->
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span data-i18n="pricing.faq_q1">¿Puedo cambiar de plan en cualquier momento?</span>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content" data-i18n="pricing.faq_a1">
-                        Sí, puedes actualizar o reducir tu plan en cualquier momento. Los cambios se aplicarán en tu
-                        próximo ciclo de facturación.
-                    </div>
-                </div>
-
-                <!-- Question 2 -->
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span data-i18n="pricing.faq_q2">¿Cómo funciona la facturación?</span>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content" data-i18n="pricing.faq_a2">
-                        Actualmente Pixy genera proformas y cuentas de cobro profesionales. La facturación electrónica
-                        directa con la DIAN está en desarrollo y será una actualización gratuita próximamente.
-                    </div>
-                </div>
-
-                <!-- Question 3 -->
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span data-i18n="pricing.faq_q3">¿Qué métodos de pago aceptan?</span>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content" data-i18n="pricing.faq_a3">
-                        Aceptamos tarjetas de crédito (Visa, Mastercard), transferencias PSE y pagos bancarios directos
-                        para planes anuales.
-                    </div>
-                </div>
-
-                <!-- NEW: Question 4 (Security) -->
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span data-i18n="pricing.faq_q4">¿Mis datos están seguros con Pixy?</span>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content" data-i18n="pricing.faq_a4">
-                        Absolutamente. Utilizamos encriptación de grado bancario (AES-256) para todos tus datos y
-                        realizamos copias de seguridad automáticas diarias. Tu información es confidencial y nunca la
-                        compartimos.
-                    </div>
-                </div>
-
-                <!-- NEW: Question 5 (Support) -->
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span data-i18n="pricing.faq_q5">¿Qué tipo de soporte recibo?</span>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content" data-i18n="pricing.faq_a5">Ofrecemos soporte por chat y correo electrónico en todos los planes. Los clientes del plan Scale tienen prioridad, y los clientes Enterprise cuentan con un Gerente de Cuenta dedicado vía WhatsApp.</div>
-                </div>
-
-                <!-- NEW: Question 6 (Onboarding) -->
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span data-i18n="pricing.faq_q6">¿Ayudan con la configuración inicial?</span>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content" data-i18n="pricing.faq_a6">Sí. Nuestro equipo te guiará en la conexión de tus líneas de WhatsApp y la importación de clientes para que quedes operativo en menos de 24 horas.</div>
-                </div>
+    <section class="sh-section">
+        <div class="container sh-split">
+            <div class="sh-sticky">
+                <h2 class="sh-h2" data-i18n="pages2.pricing.addons_t">Suma solo lo que necesitas.</h2>
+                <p class="sh-body" data-i18n="pages2.pricing.addons_i">Te mostramos el valor exacto para tu Space, tu nivel y tu moneda en la demo.</p>
             </div>
+            <ol class="sh-list"><li><span class="sh-num">01</span><div><h3 class="sh-h3" data-i18n="pages2.pricing.addons_0_t">Marca blanca</h3><p class="sh-body" data-i18n="pages2.pricing.addons_0_d">Tu logo, tus colores y tu dominio en toda la plataforma y los portales.</p></div></li><li><span class="sh-num">02</span><div><h3 class="sh-h3" data-i18n="pages2.pricing.addons_1_t">Dominio propio</h3><p class="sh-body" data-i18n="pages2.pricing.addons_1_d">Tu tienda, tu menú o tu portal con tu dirección web.</p></div></li><li><span class="sh-num">03</span><div><h3 class="sh-h3" data-i18n="pages2.pricing.addons_2_t">Paquete de IA</h3><p class="sh-body" data-i18n="pages2.pricing.addons_2_d">Más uso de IA cuando tu nivel se queda corto.</p></div></li><li><span class="sh-num">04</span><div><h3 class="sh-h3" data-i18n="pages2.pricing.addons_3_t">Tu propia llave de IA</h3><p class="sh-body" data-i18n="pages2.pricing.addons_3_d">Conecta tu cuenta de proveedor de IA y paga tu consumo directo.</p></div></li></ol>
+        </div>
+    </section>
 
-        </section>
+    <section class="sh-section">
+        <div class="container sh-split">
+            <div><h2 class="sh-h2" data-i18n="pages2.pricing.partner_t">¿Tienes una agencia? Vende Pixy con tu marca.</h2></div>
+            <div>
+                <p class="sh-body sh-lead" data-i18n="pages2.pricing.partner_d">Marca blanca, un panel para crear y administrar las empresas de tus clientes, y el cobro a cada una desde tu cuenta.</p>
+                <a class="sh-link" href="partners.html" data-i18n="pages2.pricing.partner_l">Conocer el plan Partner</a>
+            </div>
+        </div>
+    </section>
 
-    </main>
+    <section class="sh-section sh-final">
+        <div class="container">
+            <h2 class="sh-h2" data-i18n="pages2.pricing.close_t">Tu plan exacto, en una demo.</h2>
+            <p class="sh-body" data-i18n="pages2.pricing.close_s">Te mostramos tu Space y el nivel que le sirve a tu negocio.</p>
+            <a class="btn-neon" href="contact.html" data-warp-click="departure" data-i18n="pages2.pricing.close_b">Agenda tu demo</a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -394,9 +203,10 @@
         </div>
     </footer>
 
-    <button class="theme-toggle" onclick="toggleTheme()"><svg class="sun-icon" xmlns="http://www.w3.org/2000/svg"
-            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -406,13 +216,28 @@
             <line x1="21" y1="12" x2="23" y2="12"></line>
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg><svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg></button>
+        </svg>
+    </button>
 
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Fondo espacial (estrellas en viaje, reacciona al scroll) -->
+    <script src="js/space-bg.js"></script>
+
+    <!-- i18n Script -->
     <script src="js/i18n.js"></script>
+
+    <!-- Main Script -->
     <script src="js/main.js"></script>
+
+    <!-- Páginas de Spaces: catálogo con modelo 3D, planes, listas y formulario -->
+    <script src="js/spaces-pages.js"></script>
 </body>
 
 </html>
