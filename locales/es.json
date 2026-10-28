@@ -1704,7 +1704,7 @@
       "cta_spaces": "Elige tu Space"
     },
     "platform": {
-      "title": "Todo tu negocio, conectado.",
+      "title": "Todo tu negocio, <span class=\"sh-accent\">conectado.</span>",
       "intro": "Tus canales, tus ventas, tu operación y tus cobros dejan de vivir en cinco herramientas distintas.",
       "p1_title": "Atiende",
       "p1_desc": "WhatsApp, Instagram, Messenger y los comentarios de tus redes en una sola bandeja. La IA responde de día y de noche.",
@@ -1718,7 +1718,7 @@
       "p5_desc": "Tu tienda, tu menú o tu portal, generados con lo que ya tienes en Pixy y con tu marca."
     },
     "spaces": {
-      "title": "Un Space para cada industria.",
+      "title": "Un Space para <span class=\"sh-accent\">cada industria.</span>",
       "intro": "Los módulos, el lenguaje y los flujos de tu negocio, sobre la misma plataforma.",
       "resto": "De la mesa a la cocina y a la caja, sin un papel.",
       "resto_m": "Menú digital · Pedido en mesa por QR · Cocina · Cobro en mesa",
@@ -1809,12 +1809,12 @@
       ]
     },
     "m3d": {
-      "title": "Mira tu negocio vivo.",
+      "title": "Mira tu negocio <span class=\"sh-accent\">vivo.</span>",
       "desc": "El Modo 3D convierte tu sede en una ciudad en miniatura: cada área es un edificio con lo que está pasando ahora, con los datos reales de tu negocio.",
       "link": "Míralo en tu demo"
     },
     "steps": {
-      "title": "Empieza en tres pasos.",
+      "title": "Empieza en <span class=\"sh-accent\">tres pasos.</span>",
       "s1_title": "Elige tu Space",
       "s1_desc": "Restaurante, tienda, inmobiliaria, colegio, agencia o software: tu Space trae los módulos de tu industria.",
       "s2_title": "Conecta tus canales",
@@ -1823,7 +1823,7 @@
       "s3_desc": "Carga tus servicios, precios y documentos una vez. Desde ahí atiende, califica y te acompaña."
     },
     "plans": {
-      "title": "Eliges tu industria. Eliges tu ritmo.",
+      "title": "Eliges tu industria. <span class=\"sh-accent\">Eliges tu ritmo.</span>",
       "intro": "Tu Space, un nivel y solo los complementos que necesitas. Cada empresa paga en su moneda.",
       "l1": "Esencial",
       "l1_users": "Hasta 3 usuarios",
@@ -1837,14 +1837,14 @@
       "cta": "Ver planes"
     },
     "cta": {
-      "title": "Tu negocio nunca se detiene. Pixy tampoco.",
+      "title": "Tu negocio nunca se detiene. <span class=\"sh-accent\">Pixy tampoco.</span>",
       "subtitle": "Te mostramos tu Space en una demo guiada.",
       "button": "Agenda tu demo"
     }
   },
   "pages2": {
     "spaces": {
-      "h1": "Un Space para cada industria.",
+      "h1": "Un Space para <span class=\"sh-accent\">cada industria.</span>",
       "sub": "Cada Space trae los módulos, el lenguaje y los flujos de tu industria, sobre el mismo núcleo de Pixy.",
       "cta": "Agenda tu demo",
       "cta2": "Ver planes",
@@ -1932,12 +1932,12 @@
       "core_4_d": "Tu cliente ve sus servicios, facturas y cotizaciones, y paga, con tu marca.",
       "core_5_t": "Modo 3D",
       "core_5_d": "Tu sede como una ciudad en miniatura con lo que está pasando ahora.",
-      "close_t": "Tu Space, listo para tu negocio.",
+      "close_t": "Tu Space, <span class=\"sh-accent\">listo para tu negocio.</span>",
       "close_s": "Te lo mostramos con los flujos de tu industria en una demo guiada.",
       "close_b": "Agenda tu demo"
     },
     "pricing": {
-      "h1": "Eliges tu industria. Eliges tu ritmo.",
+      "h1": "Eliges tu industria. <span class=\"sh-accent\">Eliges tu ritmo.</span>",
       "sub": "Un plan es tu Space, un nivel y solo los complementos que necesitas. Cada empresa paga en su moneda.",
       "l0": "Esencial",
       "l0_u": "Hasta 3 usuarios",
@@ -1996,12 +1996,12 @@
       "partner_t": "¿Tienes una agencia? Vende Pixy con tu marca.",
       "partner_d": "Marca blanca, un panel para crear y administrar las empresas de tus clientes, y el cobro a cada una desde tu cuenta.",
       "partner_l": "Conocer el plan Partner",
-      "close_t": "Tu plan exacto, en una demo.",
+      "close_t": "Tu plan exacto, <span class=\"sh-accent\">en una demo.</span>",
       "close_s": "Te mostramos tu Space y el nivel que le sirve a tu negocio.",
       "close_b": "Agenda tu demo"
     },
     "features": {
-      "h1": "Todo tu negocio, conectado.",
+      "h1": "Todo tu negocio, <span class=\"sh-accent\">conectado.</span>",
       "sub": "Tus canales, tus ventas, tu operación y tus cobros dejan de vivir en cinco herramientas distintas.",
       "cta": "Agenda tu demo",
       "serve_t": "Atiende",
@@ -2056,12 +2056,12 @@
       "control_3_d": "Datos aislados por empresa, acceso con passkeys y verificación en dos pasos.",
       "control_4_t": "Español e inglés",
       "control_4_d": "La app y los portales en los dos idiomas.",
-      "close_t": "Míralo funcionando con tu negocio.",
+      "close_t": "Míralo <span class=\"sh-accent\">funcionando</span> con tu negocio.",
       "close_s": "Te mostramos la plataforma con los flujos de tu industria.",
       "close_b": "Agenda tu demo"
     },
     "contact": {
-      "h1": "Hablemos de tu negocio.",
+      "h1": "Hablemos de <span class=\"sh-accent\">tu negocio.</span>",
       "sub": "Te mostramos tu Space en una demo guiada y resolvemos tus dudas.",
       "mail_t": "Escríbenos",
       "f_name": "Nombre",
@@ -2074,7 +2074,7 @@
       "f_note": "Al enviar se abre tu correo con el mensaje listo."
     },
     "partners": {
-      "h1": "Vende Pixy con tu marca.",
+      "h1": "Vende Pixy <span class=\"sh-accent\">con tu marca.</span>",
       "sub": "El plan Partner es para agencias que quieren ofrecer Pixy a sus clientes como propio.",
       "cta": "Quiero ser partner",
       "what_t": "Lo que incluye",
@@ -2086,7 +2086,7 @@
       "what_2_d": "Cada cliente paga su plan desde tu cuenta.",
       "what_3_t": "Informe de Pixy Social",
       "what_3_d": "Muestras a cada cliente cuánto vendieron sus publicaciones.",
-      "form_t": "Hablemos de tu agencia.",
+      "form_t": "Hablemos de <span class=\"sh-accent\">tu agencia.</span>",
       "form_i": "Te contamos cómo funciona y armamos el plan para tu cartera de clientes.",
       "f_name": "Nombre",
       "f_company": "Agencia",
@@ -2121,7 +2121,7 @@
       "partner_t": "Y si quieres, con tu marca.",
       "partner_d": "Con el plan Partner vendes Pixy como propio: marca blanca y un panel para administrar las empresas de tus clientes.",
       "partner_l": "Conocer el plan Partner",
-      "close_t": "Tu agencia, en piloto automático.",
+      "close_t": "Tu agencia, <span class=\"sh-accent\">en piloto automático.</span>",
       "close_s": "Te mostramos Space Agencias con los flujos de tu agencia.",
       "close_b": "Agenda tu demo"
     }
@@ -2178,9 +2178,9 @@
       "m3": "notan.",
       "m4": "Nosotros hacemos las segundas.",
       "m5": "Identidad, contenido, webs y pauta con la misma dirección de arte. Un solo equipo. Un solo look.",
-      "col_t": "La colección.",
+      "col_t": "La <em class=\"st-serif\">colección.</em>",
       "modes_l": "Ver planes",
-      "modes_t": "Tres formas de trabajar con Studio.",
+      "modes_t": "Tres formas de trabajar <em class=\"st-serif\">con Studio.</em>",
       "modes_i": "Elige un paquete, suma un equipo dedicado o diseñemos algo a tu medida.",
       "modes_0_t": "Paquetes",
       "modes_0_d": "Proyectos y planes mensuales con nombre propio: sabes qué te llevas, en cuánto tiempo y qué sigue.",
@@ -2198,7 +2198,7 @@
       "steps_2_d": "Avances que comentas y apruebas en tu portal, no en cadenas de correo.",
       "steps_3_t": "Estreno",
       "steps_3_d": "Lanzamos, te entregamos todo editable y medimos.",
-      "pixy_t": "Nosotros lo hacemos brillar. Pixy lo pone a vender.",
+      "pixy_t": "Nosotros lo hacemos brillar. <em class=\"st-serif\">Pixy lo pone a vender.</em>",
       "pixy_d": "Somos parte de Pixy, la plataforma que junta ventas, atención con IA y cobros. Si quieres, te la montamos y la operamos.",
       "pixy_1": "Despegue Pixy",
       "pixy_1d": "Montamos tu Pixy con tu marca, tus datos y tu IA entrenada. Tú solo empiezas a vender.",
@@ -2217,13 +2217,13 @@
       "faq_3_a": "No. Pero si lo usas, lo que creamos queda conectado a tus ventas.",
       "faq_4": "¿Cómo apruebo y sigo el avance?",
       "faq_4_a": "En tu portal de cliente: ves avances, comentas, apruebas y descargas.",
-      "close_t": "¿Lista tu marca para la portada?",
+      "close_t": "¿Lista tu marca <em class=\"st-serif\">para la portada?</em>",
       "close_b": "Abre tu casting",
       "close_n": "¿No sabes por dónde empezar?",
       "close_r": "Pide tus Rayos X"
     },
     "packages": {
-      "h1": "La colección.",
+      "h1": "La <em class=\"st-serif\">colección.</em>",
       "sub": "Paquetes con nombre propio: sabes qué te llevas, en cuánto tiempo y qué sigue.",
       "cta": "Abre tu casting",
       "cta2": "Ver planes",
@@ -2291,13 +2291,13 @@
       "get_7_2": "Evolución mensual con mejoras y nuevas funciones.",
       "time_7": "Por fases · 10 a 14 semanas a la primera versión",
       "want_7": "Lo quiero",
-      "close_t": "¿Cuál es el look de tu marca?",
+      "close_t": "¿Cuál es <em class=\"st-serif\">el look</em> de tu marca?",
       "close_b": "Abre tu casting",
       "close_n": "¿No sabes por dónde empezar?",
       "close_r": "Pide tus Rayos X"
     },
     "plans": {
-      "h1": "Tres formas de trabajar con Studio.",
+      "h1": "Tres formas de trabajar <em class=\"st-serif\">con Studio.</em>",
       "sub": "Elige un paquete cerrado, suma un equipo dedicado o diseñemos algo a tu medida. Te enviamos la propuesta con el valor exacto.",
       "mode_0": "Paquetes",
       "mode_0_d": "Proyectos y planes mensuales con nombre propio: sabes qué te llevas, en cuánto tiempo y qué sigue.",
@@ -2355,7 +2355,7 @@
       "always_2_d": "Cada hito con su fecha, desde el primer día.",
       "always_3_t": "Tu portal de cliente",
       "always_3_d": "Avances, aprobaciones, facturas y descargas en un solo lugar.",
-      "close_t": "Cuéntanos de tu marca.",
+      "close_t": "Cuéntanos de <em class=\"st-serif\">tu marca.</em>",
       "close_b": "Abre tu casting",
       "close_n": "¿No sabes por dónde empezar?",
       "close_r": "Pide tus Rayos X",
@@ -2363,7 +2363,7 @@
       "p0_monthly_d": "Temporada · Ignición · Siempre On"
     },
     "work": {
-      "h1": "En portada.",
+      "h1": "En <em class=\"st-serif\">portada.</em>",
       "sub": "Mostramos el trabajo, no adjetivos. Los casos de clientes llegan con su permiso y sus datos reales.",
       "case_f": "CASO 00",
       "case_d": "La marca, este sitio, el sistema visual y el contenido de lanzamiento de Pixy los hicimos nosotros. Es nuestro trabajo más grande, y lo puedes recorrer ahora mismo.",
@@ -2371,13 +2371,13 @@
       "case_1": "Sitio con scroll de cine",
       "case_2": "Contenido de lanzamiento",
       "case_l": "Recorrer Pixy Spaces",
-      "close_t": "Tu marca puede ser la próxima portada.",
+      "close_t": "Tu marca puede ser <em class=\"st-serif\">la próxima portada.</em>",
       "close_b": "Abre tu casting",
       "close_n": "¿No sabes por dónde empezar?",
       "close_r": "Pide tus Rayos X"
     },
     "casting": {
-      "h1": "Abre tu casting.",
+      "h1": "Abre tu <em class=\"st-serif\">casting.</em>",
       "sub": "Cuéntanos de tu marca y te enviamos una propuesta con el paquete que le queda.",
       "mail_t": "Escríbenos",
       "f_name": "Nombre",

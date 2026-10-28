@@ -1704,7 +1704,7 @@
       "cta_spaces": "Choose your Space"
     },
     "platform": {
-      "title": "Your whole business, connected.",
+      "title": "Your whole business, <span class=\"sh-accent\">connected.</span>",
       "intro": "Your channels, sales, operations and billing stop living in five different tools.",
       "p1_title": "Serve",
       "p1_desc": "WhatsApp, Instagram, Messenger and your social comments in one inbox. The AI replies day and night.",
@@ -1718,7 +1718,7 @@
       "p5_desc": "Your store, menu or portal, generated from what you already have in Pixy and under your brand."
     },
     "spaces": {
-      "title": "A Space for every industry.",
+      "title": "A Space for <span class=\"sh-accent\">every industry.</span>",
       "intro": "The modules, language and workflows of your business, on the same platform.",
       "resto": "From table to kitchen to checkout, paper-free.",
       "resto_m": "Digital menu · QR table ordering · Kitchen · Pay at the table",
@@ -1809,12 +1809,12 @@
       ]
     },
     "m3d": {
-      "title": "See your business alive.",
+      "title": "See your business <span class=\"sh-accent\">alive.</span>",
       "desc": "3D Mode turns your location into a miniature city: every area is a building showing what is happening right now, with your business's real data.",
       "link": "See it in your demo"
     },
     "steps": {
-      "title": "Get started in three steps.",
+      "title": "Get started in <span class=\"sh-accent\">three steps.</span>",
       "s1_title": "Choose your Space",
       "s1_desc": "Restaurant, store, real estate, school, agency or software: your Space brings your industry's modules.",
       "s2_title": "Connect your channels",
@@ -1823,7 +1823,7 @@
       "s3_desc": "Load your services, prices and documents once. From there it serves, qualifies and supports you."
     },
     "plans": {
-      "title": "Choose your industry. Choose your pace.",
+      "title": "Choose your industry. <span class=\"sh-accent\">Choose your pace.</span>",
       "intro": "Your Space, a tier and only the add-ons you need. Every company pays in its own currency.",
       "l1": "Essential",
       "l1_users": "Up to 3 users",
@@ -1837,14 +1837,14 @@
       "cta": "See plans"
     },
     "cta": {
-      "title": "Your business never stops. Neither does Pixy.",
+      "title": "Your business never stops. <span class=\"sh-accent\">Neither does Pixy.</span>",
       "subtitle": "We'll show you your Space in a guided demo.",
       "button": "Book a demo"
     }
   },
   "pages2": {
     "spaces": {
-      "h1": "A Space for every industry.",
+      "h1": "A Space for <span class=\"sh-accent\">every industry.</span>",
       "sub": "Each Space brings your industry's modules, language and workflows, on the same Pixy core.",
       "cta": "Book a demo",
       "cta2": "See plans",
@@ -1932,12 +1932,12 @@
       "core_4_d": "Your customer sees their services, invoices and quotes, and pays, under your brand.",
       "core_5_t": "3D Mode",
       "core_5_d": "Your location as a miniature city showing what is happening right now.",
-      "close_t": "Your Space, ready for your business.",
+      "close_t": "Your Space, <span class=\"sh-accent\">ready for your business.</span>",
       "close_s": "We'll show it to you with your industry's workflows in a guided demo.",
       "close_b": "Book a demo"
     },
     "pricing": {
-      "h1": "Choose your industry. Choose your pace.",
+      "h1": "Choose your industry. <span class=\"sh-accent\">Choose your pace.</span>",
       "sub": "A plan is your Space, a tier and only the add-ons you need. Every company pays in its own currency.",
       "l0": "Essential",
       "l0_u": "Up to 3 users",
@@ -1996,12 +1996,12 @@
       "partner_t": "Run an agency? Sell Pixy under your brand.",
       "partner_d": "White label, a panel to create and manage your clients' companies, and billing each of them from your account.",
       "partner_l": "Explore the Partner plan",
-      "close_t": "Your exact plan, in a demo.",
+      "close_t": "Your exact plan, <span class=\"sh-accent\">in a demo.</span>",
       "close_s": "We'll show you your Space and the tier that fits your business.",
       "close_b": "Book a demo"
     },
     "features": {
-      "h1": "Your whole business, connected.",
+      "h1": "Your whole business, <span class=\"sh-accent\">connected.</span>",
       "sub": "Your channels, sales, operations and billing stop living in five different tools.",
       "cta": "Book a demo",
       "serve_t": "Serve",
@@ -2056,12 +2056,12 @@
       "control_3_d": "Data isolated per company, passkey sign-in and two-step verification.",
       "control_4_t": "Spanish and English",
       "control_4_d": "The app and portals in both languages.",
-      "close_t": "See it working with your business.",
+      "close_t": "See it <span class=\"sh-accent\">working</span> with your business.",
       "close_s": "We'll show you the platform with your industry's workflows.",
       "close_b": "Book a demo"
     },
     "contact": {
-      "h1": "Let's talk about your business.",
+      "h1": "Let's talk about <span class=\"sh-accent\">your business.</span>",
       "sub": "We'll show you your Space in a guided demo and answer your questions.",
       "mail_t": "Write to us",
       "f_name": "Name",
@@ -2074,7 +2074,7 @@
       "f_note": "Sending opens your email app with the message ready."
     },
     "partners": {
-      "h1": "Sell Pixy under your brand.",
+      "h1": "Sell Pixy <span class=\"sh-accent\">under your brand.</span>",
       "sub": "The Partner plan is for agencies that want to offer Pixy to their clients as their own.",
       "cta": "I want to be a partner",
       "what_t": "What's included",
@@ -2086,7 +2086,7 @@
       "what_2_d": "Each client pays for their plan through your account.",
       "what_3_t": "Pixy Social report",
       "what_3_d": "You show each client how much their posts sold.",
-      "form_t": "Let's talk about your agency.",
+      "form_t": "Let's talk about <span class=\"sh-accent\">your agency.</span>",
       "form_i": "We'll walk you through it and shape the plan around your client portfolio.",
       "f_name": "Name",
       "f_company": "Agency",
@@ -2121,7 +2121,7 @@
       "partner_t": "And, if you want, under your brand.",
       "partner_d": "With the Partner plan you sell Pixy as your own: white label and a panel to manage your clients' companies.",
       "partner_l": "Explore the Partner plan",
-      "close_t": "Your agency, on autopilot.",
+      "close_t": "Your agency, <span class=\"sh-accent\">on autopilot.</span>",
       "close_s": "We'll show you Space Agencias with your agency's workflows.",
       "close_b": "Book a demo"
     }
@@ -2178,9 +2178,9 @@
       "m3": "noticed.",
       "m4": "We make the second kind.",
       "m5": "Identity, content, websites and ads with the same art direction. One team. One look.",
-      "col_t": "The collection.",
+      "col_t": "The <em class=\"st-serif\">collection.</em>",
       "modes_l": "See plans",
-      "modes_t": "Three ways to work with Studio.",
+      "modes_t": "Three ways to work <em class=\"st-serif\">with Studio.</em>",
       "modes_i": "Pick a package, add a dedicated team or let's design something custom.",
       "modes_0_t": "Packages",
       "modes_0_d": "Projects and monthly plans with their own name: you know what you get, how long it takes and what comes next.",
@@ -2198,7 +2198,7 @@
       "steps_2_d": "Progress you comment on and approve in your portal, not in email chains.",
       "steps_3_t": "Premiere",
       "steps_3_d": "We launch, hand everything over editable and measure.",
-      "pixy_t": "We make it shine. Pixy makes it sell.",
+      "pixy_t": "We make it shine. <em class=\"st-serif\">Pixy makes it sell.</em>",
       "pixy_d": "We're part of Pixy, the platform that brings together sales, AI-powered service and billing. If you want, we set it up and run it for you.",
       "pixy_1": "Pixy Liftoff",
       "pixy_1d": "We set up your Pixy with your brand, your data and your trained AI. You just start selling.",
@@ -2217,13 +2217,13 @@
       "faq_3_a": "No. But if you do, what we create stays connected to your sales.",
       "faq_4": "How do I approve and follow progress?",
       "faq_4_a": "In your client portal: see progress, comment, approve and download.",
-      "close_t": "Is your brand ready for the cover?",
+      "close_t": "Is your brand ready <em class=\"st-serif\">for the cover?</em>",
       "close_b": "Open your casting",
       "close_n": "Not sure where to start?",
       "close_r": "Ask for your X-Ray"
     },
     "packages": {
-      "h1": "The collection.",
+      "h1": "The <em class=\"st-serif\">collection.</em>",
       "sub": "Packages with their own name: you know what you get, how long it takes and what comes next.",
       "cta": "Open your casting",
       "cta2": "See plans",
@@ -2291,13 +2291,13 @@
       "get_7_2": "Monthly evolution with improvements and new features.",
       "time_7": "In phases · 10 to 14 weeks to the first version",
       "want_7": "I want it",
-      "close_t": "What's your brand's look?",
+      "close_t": "What's your brand's <em class=\"st-serif\">look?</em>",
       "close_b": "Open your casting",
       "close_n": "Not sure where to start?",
       "close_r": "Ask for your X-Ray"
     },
     "plans": {
-      "h1": "Three ways to work with Studio.",
+      "h1": "Three ways to work <em class=\"st-serif\">with Studio.</em>",
       "sub": "Pick a closed package, add a dedicated team or let's design something custom. We'll send you a proposal with the exact price.",
       "mode_0": "Packages",
       "mode_0_d": "Projects and monthly plans with their own name: you know what you get, how long it takes and what comes next.",
@@ -2355,7 +2355,7 @@
       "always_2_d": "Every milestone with its date, from day one.",
       "always_3_t": "Your client portal",
       "always_3_d": "Progress, approvals, invoices and downloads all in one place.",
-      "close_t": "Tell us about your brand.",
+      "close_t": "Tell us about <em class=\"st-serif\">your brand.</em>",
       "close_b": "Open your casting",
       "close_n": "Not sure where to start?",
       "close_r": "Ask for your X-Ray",
@@ -2363,7 +2363,7 @@
       "p0_monthly_d": "Temporada · Ignición · Always On"
     },
     "work": {
-      "h1": "On the cover.",
+      "h1": "On the <em class=\"st-serif\">cover.</em>",
       "sub": "We show the work, not adjectives. Client cases come with their permission and real data.",
       "case_f": "CASE 00",
       "case_d": "Pixy's brand, this website, the visual system and the launch content were made by us. It's our biggest work, and you can explore it right now.",
@@ -2371,13 +2371,13 @@
       "case_1": "Website with cinematic scroll",
       "case_2": "Launch content",
       "case_l": "Explore Pixy Spaces",
-      "close_t": "Your brand could be the next cover.",
+      "close_t": "Your brand could be <em class=\"st-serif\">the next cover.</em>",
       "close_b": "Open your casting",
       "close_n": "Not sure where to start?",
       "close_r": "Ask for your X-Ray"
     },
     "casting": {
-      "h1": "Open your casting.",
+      "h1": "Open your <em class=\"st-serif\">casting.</em>",
       "sub": "Tell us about your brand and we'll send you a proposal with the package that fits.",
       "mail_t": "Write to us",
       "f_name": "Name",

@@ -226,7 +226,7 @@ pages.push({
   navActive: "spaces",
   body:
     hero(
-      t("h1", "h1", "Un Space para cada industria.", "A Space for every industry.", "sh-h1"),
+      t("h1", "h1", "Un Space para <span class=\"sh-accent\">cada industria.</span>", "A Space for <span class=\"sh-accent\">every industry.</span>", "sh-h1"),
       t("p", "sub", "Cada Space trae los módulos, el lenguaje y los flujos de tu industria, sobre el mismo núcleo de Pixy.", "Each Space brings your industry's modules, language and workflows, on the same Pixy core.", "sh-body sp-sub"),
       t("a", "cta", "Agenda tu demo", "Book a demo", "btn-neon", 'href="contact.html" data-warp-click="hop"') +
         t("a", "cta2", "Ver planes", "See plans", "sh-link", 'href="pricing.html"'),
@@ -251,7 +251,7 @@ ${SPACES.map(
     </section>
 ` +
     split("core", "Lo que todos los Spaces comparten.", "What every Space shares.", "Cada Space le cambia las palabras al núcleo y le suma sus módulos propios.", "Each Space adapts the core's language and adds its own modules.", CORE) +
-    close("close", "Tu Space, listo para tu negocio.", "Your Space, ready for your business.", "Te lo mostramos con los flujos de tu industria en una demo guiada.", "We'll show it to you with your industry's workflows in a guided demo."),
+    close("close", "Tu Space, <span class=\"sh-accent\">listo para tu negocio.</span>", "Your Space, <span class=\"sh-accent\">ready for your business.</span>", "Te lo mostramos con los flujos de tu industria en una demo guiada.", "We'll show it to you with your industry's workflows in a guided demo."),
 });
 
 // pricing.html: niveles con selector, comparación, complementos y Partner
@@ -292,7 +292,7 @@ pages.push({
   navActive: "plans",
   body:
     hero(
-      t("h1", "h1", "Eliges tu industria. Eliges tu ritmo.", "Choose your industry. Choose your pace.", "sh-h1"),
+      t("h1", "h1", "Eliges tu industria. <span class=\"sh-accent\">Eliges tu ritmo.</span>", "Choose your industry. <span class=\"sh-accent\">Choose your pace.</span>", "sh-h1"),
       t("p", "sub", "Un plan es tu Space, un nivel y solo los complementos que necesitas. Cada empresa paga en su moneda.", "A plan is your Space, a tier and only the add-ons you need. Every company pays in its own currency.", "sh-body sp-sub"),
     ) +
     `
@@ -336,7 +336,7 @@ ${ROWS.map(
         </div>
     </section>
 ` +
-    close("close", "Tu plan exacto, en una demo.", "Your exact plan, in a demo.", "Te mostramos tu Space y el nivel que le sirve a tu negocio.", "We'll show you your Space and the tier that fits your business."),
+    close("close", "Tu plan exacto, <span class=\"sh-accent\">en una demo.</span>", "Your exact plan, <span class=\"sh-accent\">in a demo.</span>", "Te mostramos tu Space y el nivel que le sirve a tu negocio.", "We'll show you your Space and the tier that fits your business."),
 });
 
 // features.html: la plataforma por pilares (docs/comercial/01-ecosistema/nucleo.md; solo lo disponible)
@@ -348,7 +348,7 @@ pages.push({
   navActive: "platform",
   body:
     hero(
-      t("h1", "h1", "Todo tu negocio, conectado.", "Your whole business, connected.", "sh-h1"),
+      t("h1", "h1", "Todo tu negocio, <span class=\"sh-accent\">conectado.</span>", "Your whole business, <span class=\"sh-accent\">connected.</span>", "sh-h1"),
       t("p", "sub", "Tus canales, tus ventas, tu operación y tus cobros dejan de vivir en cinco herramientas distintas.", "Your channels, sales, operations and billing stop living in five different tools.", "sh-body sp-sub"),
       t("a", "cta", "Agenda tu demo", "Book a demo", "btn-neon", 'href="contact.html" data-warp-click="hop"'),
     ) +
@@ -383,7 +383,7 @@ pages.push({
       ["Seguridad", "Security", "Datos aislados por empresa, acceso con passkeys y verificación en dos pasos.", "Data isolated per company, passkey sign-in and two-step verification."],
       ["Español e inglés", "Spanish and English", "La app y los portales en los dos idiomas.", "The app and portals in both languages."],
     ]) +
-    close("close", "Míralo funcionando con tu negocio.", "See it working with your business.", "Te mostramos la plataforma con los flujos de tu industria.", "We'll show you the platform with your industry's workflows."),
+    close("close", "Míralo <span class=\"sh-accent\">funcionando</span> con tu negocio.", "See it <span class=\"sh-accent\">working</span> with your business.", "Te mostramos la plataforma con los flujos de tu industria.", "We'll show you the platform with your industry's workflows."),
 });
 
 // contact.html: el formulario arma un correo (el sitio no tiene servidor para formularios)
@@ -395,7 +395,7 @@ pages.push({
   navActive: "",
   body:
     hero(
-      t("h1", "h1", "Hablemos de tu negocio.", "Let's talk about your business.", "sh-h1"),
+      t("h1", "h1", "Hablemos de <span class=\"sh-accent\">tu negocio.</span>", "Let's talk about <span class=\"sh-accent\">your business.</span>", "sh-h1"),
       t("p", "sub", "Te mostramos tu Space en una demo guiada y resolvemos tus dudas.", "We'll show you your Space in a guided demo and answer your questions.", "sh-body sp-sub"),
     ) +
     `
@@ -431,7 +431,7 @@ pages.push({
   navActive: "plans",
   body:
     hero(
-      t("h1", "h1", "Vende Pixy con tu marca.", "Sell Pixy under your brand.", "sh-h1"),
+      t("h1", "h1", "Vende Pixy <span class=\"sh-accent\">con tu marca.</span>", "Sell Pixy <span class=\"sh-accent\">under your brand.</span>", "sh-h1"),
       t("p", "sub", "El plan Partner es para agencias que quieren ofrecer Pixy a sus clientes como propio.", "The Partner plan is for agencies that want to offer Pixy to their clients as their own.", "sh-body sp-sub"),
       t("a", "cta", "Quiero ser partner", "I want to be a partner", "btn-neon", 'href="#partner-form" data-warp-click="nudge"'),
     ) +
@@ -445,7 +445,7 @@ pages.push({
     <section class="sh-section" id="partner-form">
         <div class="container sh-split">
             <div class="sh-sticky">
-                ${t("h2", "form_t", "Hablemos de tu agencia.", "Let's talk about your agency.", "sh-h2")}
+                ${t("h2", "form_t", "Hablemos de <span class=\"sh-accent\">tu agencia.</span>", "Let's talk about <span class=\"sh-accent\">your agency.</span>", "sh-h2")}
                 ${t("p", "form_i", "Te contamos cómo funciona y armamos el plan para tu cartera de clientes.", "We'll walk you through it and shape the plan around your client portfolio.", "sh-body")}
             </div>
             <form class="sp-form" data-mailto="hola@pixy.com.co" data-subject-es="Plan Partner de Pixy" data-subject-en="Pixy Partner plan">
@@ -506,7 +506,7 @@ pages.push({
         </div>
     </section>
 ` +
-    close("close", "Tu agencia, en piloto automático.", "Your agency, on autopilot.", "Te mostramos Space Agencias con los flujos de tu agencia.", "We'll show you Space Agencias with your agency's workflows."),
+    close("close", "Tu agencia, <span class=\"sh-accent\">en piloto automático.</span>", "Your agency, <span class=\"sh-accent\">on autopilot.</span>", "Te mostramos Space Agencias con los flujos de tu agencia.", "We'll show you Space Agencias with your agency's workflows."),
 });
 
 // --- Escritura -------------------------------------------------------------------------------------

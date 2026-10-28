@@ -306,7 +306,7 @@ page = "home";
     <section class="st-look" id="coleccion" data-no-reveal data-warp="2">
         <div class="st-look-pin">
             <div class="container st-look-head">
-                ${t("h2", "col_t", "La colección.", "The collection.", "sh-h2")}
+                ${t("h2", "col_t", "La <em class=\"st-serif\">colección.</em>", "The <em class=\"st-serif\">collection.</em>", "sh-h2")}
                 <span class="sv-meter" aria-hidden="true"><span class="sv-count"><b>01</b> / ${String(P.length).padStart(2, "0")}</span><span class="sv-track"><i></i></span></span>
             </div>
             <div class="st-look-track">
@@ -315,14 +315,14 @@ ${looks}
         </div>
     </section>
 ` +
-      split("modes", "Tres formas de trabajar con Studio.", "Three ways to work with Studio.", "Elige un paquete, suma un equipo dedicado o diseñemos algo a tu medida.", "Pick a package, add a dedicated team or let's design something custom.", MODES, t("a", "modes_l", "Ver planes", "See plans", "sh-link", 'href="agency/plans.html"')) +
+      split("modes", "Tres formas de trabajar <em class=\"st-serif\">con Studio.</em>", "Three ways to work <em class=\"st-serif\">with Studio.</em>", "Elige un paquete, suma un equipo dedicado o diseñemos algo a tu medida.", "Pick a package, add a dedicated team or let's design something custom.", MODES, t("a", "modes_l", "Ver planes", "See plans", "sh-link", 'href="agency/plans.html"')) +
       split("steps", "Backstage.", "Backstage.", "Así trabajamos cada proyecto, del primer llamado al estreno.", "This is how we work every project, from the first call to the premiere.", STEPS) +
       `
     <!-- Con Pixy: el único capítulo donde aparece la plataforma -->
     <section class="sh-section" id="con-pixy">
         <div class="container sp-catalog-grid st-pixy">
             <div>
-                ${t("h2", "pixy_t", "Nosotros lo hacemos brillar. Pixy lo pone a vender.", "We make it shine. Pixy makes it sell.", "sh-h2")}
+                ${t("h2", "pixy_t", "Nosotros lo hacemos brillar. <em class=\"st-serif\">Pixy lo pone a vender.</em>", "We make it shine. <em class=\"st-serif\">Pixy makes it sell.</em>", "sh-h2")}
                 ${t("p", "pixy_d", "Somos parte de Pixy, la plataforma que junta ventas, atención con IA y cobros. Si quieres, te la montamos y la operamos.", "We're part of Pixy, the platform that brings together sales, AI-powered service and billing. If you want, we set it up and run it for you.", "sh-body sp-sub")}
                 <dl class="sp-mods">
                     <div>${t("dt", "pixy_1", "Despegue Pixy", "Pixy Liftoff")}${t("dd", "pixy_1d", "Montamos tu Pixy con tu marca, tus datos y tu IA entrenada. Tú solo empiezas a vender.", "We set up your Pixy with your brand, your data and your trained AI. You just start selling.")}</div>
@@ -344,7 +344,7 @@ ${looks}
         </div>
     </section>
 ` +
-      closeSec(pre, "close", "¿Lista tu marca para la portada?", "Is your brand ready for the cover?"),
+      closeSec(pre, "close", "¿Lista tu marca <em class=\"st-serif\">para la portada?</em>", "Is your brand ready <em class=\"st-serif\">for the cover?</em>"),
   });
 }
 
@@ -358,7 +358,7 @@ page = "packages";
     description: "Rayos X, Debut, Portada, Tienda Lista, Temporada, Ignición, Front Row y Laboratorio: paquetes con nombre propio.",
     body:
       hero(
-        `<h1 class="sh-h1">${t("span", "h1", "La colección.", "The collection.")}</h1>`,
+        `<h1 class="sh-h1">${t("span", "h1", "La <em class=\"st-serif\">colección.</em>", "The <em class=\"st-serif\">collection.</em>")}</h1>`,
         t("p", "sub", "Paquetes con nombre propio: sabes qué te llevas, en cuánto tiempo y qué sigue.", "Packages with their own name: you know what you get, how long it takes and what comes next.", "sh-body sp-sub"),
         t("a", "cta", "Abre tu casting", "Open your casting", "btn-neon", 'href="contact.html" data-warp-click="hop"') + t("a", "cta2", "Ver planes", "See plans", "sh-link", 'href="plans.html"'),
       ) +
@@ -384,7 +384,7 @@ ${P.map((p, i) => `                <img src="../assets/studio/${p.img}.webp" alt
         </div>
     </section>
 ` +
-      closeSec(pre, "close", "¿Cuál es el look de tu marca?", "What's your brand's look?"),
+      closeSec(pre, "close", "¿Cuál es <em class=\"st-serif\">el look</em> de tu marca?", "What's your brand's <em class=\"st-serif\">look?</em>"),
   });
 }
 
@@ -402,7 +402,7 @@ page = "plans";
     description: "Paquetes predefinidos, equipo creativo dedicado y proyectos a la medida. Te enviamos la propuesta con el valor exacto.",
     body:
       hero(
-        `<h1 class="sh-h1">${t("span", "h1", "Tres formas de trabajar con Studio.", "Three ways to work with Studio.")}</h1>`,
+        `<h1 class="sh-h1">${t("span", "h1", "Tres formas de trabajar <em class=\"st-serif\">con Studio.</em>", "Three ways to work <em class=\"st-serif\">with Studio.</em>")}</h1>`,
         t("p", "sub", "Elige un paquete cerrado, suma un equipo dedicado o diseñemos algo a tu medida. Te enviamos la propuesta con el valor exacto.", "Pick a closed package, add a dedicated team or let's design something custom. We'll send you a proposal with the exact price.", "sh-body sp-sub"),
       ) +
       `
@@ -476,7 +476,7 @@ ${MODES.map(
         ["Fechas por escrito", "Dates in writing", "Cada hito con su fecha, desde el primer día.", "Every milestone with its date, from day one."],
         ["Tu portal de cliente", "Your client portal", "Avances, aprobaciones, facturas y descargas en un solo lugar.", "Progress, approvals, invoices and downloads all in one place."],
       ]) +
-      closeSec(pre, "close", "Cuéntanos de tu marca.", "Tell us about your brand."),
+      closeSec(pre, "close", "Cuéntanos de <em class=\"st-serif\">tu marca.</em>", "Tell us about <em class=\"st-serif\">your brand.</em>"),
   });
 }
 
@@ -489,7 +489,7 @@ page = "work";
     title: "Trabajos | Pixy Studio",
     description: "En portada: el trabajo de Pixy Studio. Caso 00, Pixy.",
     body:
-      hero(`<h1 class="sh-h1">${t("span", "h1", "En portada.", "On the cover.")}</h1>`, t("p", "sub", "Mostramos el trabajo, no adjetivos. Los casos de clientes llegan con su permiso y sus datos reales.", "We show the work, not adjectives. Client cases come with their permission and real data.", "sh-body sp-sub")) +
+      hero(`<h1 class="sh-h1">${t("span", "h1", "En <em class=\"st-serif\">portada.</em>", "On the <em class=\"st-serif\">cover.</em>")}</h1>`, t("p", "sub", "Mostramos el trabajo, no adjetivos. Los casos de clientes llegan con su permiso y sus datos reales.", "We show the work, not adjectives. Client cases come with their permission and real data.", "sh-body sp-sub")) +
       `
     <section class="sh-section">
         <div class="container sp-catalog-grid st-pixy">
@@ -508,7 +508,7 @@ page = "work";
         </div>
     </section>
 ` +
-      closeSec(pre, "close", "Tu marca puede ser la próxima portada.", "Your brand could be the next cover."),
+      closeSec(pre, "close", "Tu marca puede ser <em class=\"st-serif\">la próxima portada.</em>", "Your brand could be <em class=\"st-serif\">the next cover.</em>"),
   });
 }
 
@@ -522,7 +522,7 @@ page = "casting";
     title: "Abre tu casting | Pixy Studio",
     description: "Cuéntanos de tu marca y te enviamos una propuesta con el paquete que le queda.",
     body:
-      hero(`<h1 class="sh-h1">${t("span", "h1", "Abre tu casting.", "Open your casting.")}</h1>`, t("p", "sub", "Cuéntanos de tu marca y te enviamos una propuesta con el paquete que le queda.", "Tell us about your brand and we'll send you a proposal with the package that fits.", "sh-body sp-sub")) +
+      hero(`<h1 class="sh-h1">${t("span", "h1", "Abre tu <em class=\"st-serif\">casting.</em>", "Open your <em class=\"st-serif\">casting.</em>")}</h1>`, t("p", "sub", "Cuéntanos de tu marca y te enviamos una propuesta con el paquete que le queda.", "Tell us about your brand and we'll send you a proposal with the package that fits.", "sh-body sp-sub")) +
       `
     <section class="sh-section">
         <div class="container sh-split">
