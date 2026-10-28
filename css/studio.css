@@ -128,7 +128,10 @@
 /* --- Con Pixy y trabajos --- */
 .st-pixy { align-items: center !important; }
 .st-pixy-art img { width: 100%; max-height: 72vh; object-fit: contain; }
-.st-mode-link { padding-top: 0 !important; margin-top: calc(var(--sh-section) / -2 + 24px); }
+/* Columna de texto de Con Pixy y Trabajos: bloques apilados con el mismo aire */
+.st-pixy > div:first-child { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.st-pixy > div:first-child > * { margin-top: 0 !important; }
+.st-pixy .sp-actions { margin-top: 12px !important; }
 
 /* --- Preguntas --- */
 .st-faq details { border-top: 1px solid var(--border-color); padding: 22px 0; }

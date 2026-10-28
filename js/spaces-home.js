@@ -111,6 +111,7 @@
                     start: 'top top',
                     end: function () { return '+=' + ((n - 1) * window.innerHeight * 1.2 + window.innerHeight * 0.5); },
                     pin: sv.querySelector('.sv-stage'),
+                    anticipatePin: 1,
                     scrub: 0.7,
                     invalidateOnRefresh: true,
                     onUpdate: function (self) {

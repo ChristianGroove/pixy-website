@@ -199,6 +199,7 @@ function footer(pre) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="${pre}js/space-bg.js"></script>
+    <script src="${pre}js/smooth-scroll.js"></script>
     <script src="${pre}js/i18n.js"></script>
     <script src="${pre}js/main.js"></script>
     <script src="${pre}js/spaces-pages.js"></script>
@@ -282,12 +283,13 @@ const list = (prefix, items) =>
         `<li><span class="sh-num">${String(i + 1).padStart(2, "0")}</span><div>${t("h3", `${prefix}_${i}_t`, es, en, "sh-h3")}${t("p", `${prefix}_${i}_d`, des, den, "sh-body")}</div></li>`,
     )
     .join("")}</ol>`;
-const split = (key, esT, enT, esI, enI, items) => `
+const split = (key, esT, enT, esI, enI, items, extra = "") => `
     <section class="sh-section">
         <div class="container sh-split">
             <div class="sh-sticky">
                 ${t("h2", `${key}_t`, esT, enT, "sh-h2")}
                 ${esI ? t("p", `${key}_i`, esI, enI, "sh-body") : ""}
+                ${extra}
             </div>
             ${list(key, items)}
         </div>
@@ -377,12 +379,7 @@ ${looks}
         </div>
     </section>
 ` +
-      split("modes", "Tres formas de trabajar con Studio.", "Three ways to work with Studio.", "Elige un paquete, suma un equipo dedicado o diseñemos algo a tu medida.", "Pick a package, add a dedicated team or let's design something custom.", MODES) +
-      `
-    <section class="sh-section st-mode-link">
-        <div class="container">${t("a", "modes_l", "Ver planes", "See plans", "sh-link", 'href="agency/plans.html"')}</div>
-    </section>
-` +
+      split("modes", "Tres formas de trabajar con Studio.", "Three ways to work with Studio.", "Elige un paquete, suma un equipo dedicado o diseñemos algo a tu medida.", "Pick a package, add a dedicated team or let's design something custom.", MODES, t("a", "modes_l", "Ver planes", "See plans", "sh-link", 'href="agency/plans.html"')) +
       split("steps", "Backstage.", "Backstage.", "Así trabajamos cada proyecto, del primer llamado al estreno.", "This is how we work every project, from the first call to the premiere.", STEPS) +
       `
     <!-- Con Pixy: el único capítulo donde aparece la plataforma -->

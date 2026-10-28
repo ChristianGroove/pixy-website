@@ -19,7 +19,7 @@
     if (hero && hasGsap && !reduce) {
         gsap.timeline({
             defaults: { ease: 'none' },
-            scrollTrigger: { trigger: hero, start: 'top top', end: '+=80%', scrub: 0.6, pin: hero.querySelector('.st-hero-stage') }
+            scrollTrigger: { trigger: hero, start: 'top top', end: '+=80%', scrub: 0.6, pin: hero.querySelector('.st-hero-stage'), anticipatePin: 1 }
         })
             .to(hero.querySelector('.st-hero-subject'), { scale: 1.14, yPercent: -4 }, 0)
             .to(hero.querySelector('.st-mast'), { scale: 0.9, yPercent: -12, opacity: 0.55 }, 0)
@@ -73,8 +73,10 @@
                 scrollTrigger: {
                     trigger: look,
                     start: 'top top',
-                    end: function () { return '+=' + distance(); },
+                    // El lookbook avanza un poco más rápido que el scroll: el recorrido no se hace eterno
+                    end: function () { return '+=' + distance() * 0.75; },
                     pin: look.querySelector('.st-look-pin'),
+                    anticipatePin: 1,
                     scrub: 0.7,
                     invalidateOnRefresh: true,
                     onUpdate: function (self) {

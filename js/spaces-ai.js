@@ -59,9 +59,10 @@
             scrollTrigger: {
                 trigger: stage,
                 start: 'top top',
-                end: '+=560%',
+                end: '+=480%',
                 scrub: 0.8,
                 pin: true,
+                anticipatePin: 1,
                 invalidateOnRefresh: true,
                 onEnter: function () { warp('departure'); },
                 onEnterBack: function () { warp('hop'); },

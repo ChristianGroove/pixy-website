@@ -616,3 +616,9 @@
     .spaces-face.legal-page .glass-card { padding: 20px !important; }
 }
 
+
+/* Pulido de espaciado: el botón o enlace del cierre respira bajo su título, y el texto antes de una lista también */
+.sh-final .sh-h2 + .btn-neon, .sh-final .sh-h2 + .sh-link { margin-top: 40px; }
+.sh-body + .sp-mods, .sp-sub + .sp-mods { margin-top: 28px; }
+.sh-sticky .sh-link { margin-top: 28px; }
+
