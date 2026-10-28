@@ -15,29 +15,29 @@
         })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixy - Tu Negocio en Piloto Automático</title>
+    <title>Pixy - El sistema operativo de tu negocio</title>
     <meta name="description"
-        content="Centraliza, automatiza y escala. Pixy unifica tus canales y operaciones en una sola plataforma inteligente. Sin configuraciones complejas.">
+        content="Atiende, vende, opera y cobra con una IA que conoce tu negocio. Pixy Spaces: una plataforma hecha para tu industria, para restaurantes, tiendas, inmobiliarias, colegios, agencias y software.">
     <link rel="canonical" href="https://pixy.com.co/">
     <link rel="icon" type="image/png" href="assets/favicon.png">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pixy.com.co/">
-    <meta property="og:title" content="Pixy - Tu Negocio en Piloto Automático">
+    <meta property="og:title" content="Pixy - El sistema operativo de tu negocio">
     <meta property="og:description"
-        content="Centraliza, automatiza y escala. Una plataforma que se adapta a tu industria con Pixy Spaces. Recupera tu tiempo y toma el control.">
+        content="Atiende, vende, opera y cobra con una IA que conoce tu negocio. Un Space hecho para tu industria.">
     <meta property="og:image" content="https://pixy.com.co/assets/og-image.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@pixy_co">
-    <meta name="twitter:title" content="Pixy - Tu Negocio en Piloto Automático">
+    <meta name="twitter:title" content="Pixy - El sistema operativo de tu negocio">
     <meta name="twitter:description"
-        content="Centraliza, automatiza y escala. Una plataforma que se adapta a tu industria con Pixy Spaces. Recupera tu tiempo y toma el control.">
+        content="Atiende, vende, opera y cobra con una IA que conoce tu negocio. Un Space hecho para tu industria.">
     <meta name="twitter:image" content="https://pixy.com.co/assets/og-image.png">
 
-    <!-- Schema.org JSON-LD -->
+    <!-- Schema.org JSON-LD (sin calificaciones ni precios hasta tener datos reales) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -47,35 +47,14 @@
           "@id": "https://pixy.com.co/#organization",
           "name": "Pixy",
           "url": "https://pixy.com.co/",
-          "logo": "https://pixy.com.co/assets/logos/logo-dark.svg",
-          "sameAs": [
-            "https://linkedin.com/company/pixy",
-            "https://instagram.com/pixy"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+57-300-123-4567",
-            "contactType": "sales",
-            "areaServed": "CO",
-            "availableLanguage": "es"
-          }
+          "logo": "https://pixy.com.co/assets/logos/logo-dark.svg"
         },
         {
           "@type": "SoftwareApplication",
-          "name": "Pixy Platform",
+          "name": "Pixy",
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Web",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "COP",
-            "availability": "https://schema.org/InStock"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "120"
-          }
+          "description": "El sistema operativo de tu negocio: bandeja omnicanal, IA que atiende y califica, pipeline, operación y cobros, con un Space para cada industria."
         }
       ]
     }
@@ -104,6 +83,7 @@
         }
     </style>
     <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/spaces-home.css">
 </head>
 
 <body class="landing-page">
@@ -148,61 +128,55 @@
         </div>
     </nav>
 
-    <!-- Hero Section Space (Standardized with Agency) -->
+    <!-- 1. Hero: titular cinético (recorre las industrias) + astronauta -->
     <header class="container hero-space agency-hero-section">
         <div class="agency-hero-grid">
-            <!-- Left Column: Copy & Value Proposition -->
             <div class="hero-content-left agency-hero-content">
-                <h1 class="agency-hero-title" style="font-size: clamp(28px, 4vw, 46px);" data-i18n="hero.title">
-                    Gestiona tu Negocio <br>
-                    desde <span class="gradient-text">tu Space</span>
+                <h1 class="agency-hero-title sh-hero-title">
+                    <span data-i18n="home2.hero.prefix">El sistema operativo de tu</span>
+                    <span class="sh-kinetic gradient-text" data-words="home2.hero.words">negocio</span>
                 </h1>
-                <p class="agency-hero-subtitle" data-i18n="hero.subtitle">
-                    Rompe las barreras de lo tradicional. Pixy centraliza inteligencia, ventas y operaciones en un
-                    <strong>espacio de trabajo</strong> que siente como flotar en el espacio.
+                <p class="agency-hero-subtitle" data-i18n="home2.hero.subtitle">
+                    Atiende, vende, opera y cobra con una IA que conoce tu negocio. Un <strong>Space</strong> hecho para tu industria.
                 </p>
                 <div class="agency-hero-actions">
-                    <a href="https://app.pixy.com.co/login" class="btn-neon" data-i18n="hero.cta_primary">Comenzar Gratis</a>
-                    <a href="contact.html" class="btn-neon-outline" data-i18n="hero.cta_secondary">Solicitar Demo</a>
+                    <a href="contact.html" class="btn-neon" data-warp-click="hop" data-i18n="home2.hero.cta_demo">Agenda tu demo</a>
+                    <a href="#spaces" class="btn-neon-outline" data-warp-click="nudge" data-i18n="home2.hero.cta_spaces">Elige tu Space</a>
                 </div>
             </div>
 
-            <!-- Right Column: Visual Composition identical to Agency -->
             <div class="agency-hero-visual">
                 <div class="agency-visual-glow"></div>
-
-                <!-- Droid Orb Parallax Wrapper (Positioned further left in front of raised hand) -->
                 <div class="hero-hand-orb-wrapper" style="top: 18%; left: -8%;">
-                    <img src="assets/droid.png" alt="Pixy Droid Orb" class="hero-hand-orb" style="width: 76px;">
+                    <img src="assets/droid.png" alt="" class="hero-hand-orb" style="width: 76px;">
                 </div>
-
-                <!-- Astronaut Parallax Wrapper -->
                 <div class="agency-hero-astronaut-wrapper">
-                    <img src="assets/hero-astronaut.png" alt="Pixy Spaces Astronaut" class="spaces-hero-astronaut">
+                    <img src="assets/hero-astronaut.png" alt="Astronauta de Pixy Spaces" class="spaces-hero-astronaut">
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Logo Strip -->
-    <div class="logo-strip">
+    <!-- Cinta de capacidades (reemplaza los logos de ejemplo) -->
+    <div class="logo-strip" aria-label="Canales y módulos">
         <div class="logo-track">
-            <!-- Placeholders for client logos -->
-            <div class="logo-item">ACME Corp</div>
-            <div class="logo-item">GlobalTech</div>
-            <div class="logo-item">Nexus</div>
-            <div class="logo-item">Starlight</div>
-            <div class="logo-item">Umbrella</div>
-            <div class="logo-item">Cyberdyne</div>
-            <div class="logo-item">Massive</div>
-            <!-- Duplicate for infinite scroll -->
-            <div class="logo-item">ACME Corp</div>
-            <div class="logo-item">GlobalTech</div>
-            <div class="logo-item">Nexus</div>
-            <div class="logo-item">Starlight</div>
-            <div class="logo-item">Umbrella</div>
-            <div class="logo-item">Cyberdyne</div>
-            <div class="logo-item">Massive</div>
+            <div class="logo-item" data-i18n="home2.strip.0">WhatsApp</div>
+            <div class="logo-item" data-i18n="home2.strip.1">Instagram</div>
+            <div class="logo-item" data-i18n="home2.strip.2">Messenger</div>
+            <div class="logo-item" data-i18n="home2.strip.3">Comentarios</div>
+            <div class="logo-item" data-i18n="home2.strip.4">Campañas</div>
+            <div class="logo-item" data-i18n="home2.strip.5">Links de pago</div>
+            <div class="logo-item" data-i18n="home2.strip.6">Portal del cliente</div>
+            <div class="logo-item" data-i18n="home2.strip.7">Modo 3D</div>
+            <!-- Duplicado para el desplazamiento infinito -->
+            <div class="logo-item" data-i18n="home2.strip.0" aria-hidden="true">WhatsApp</div>
+            <div class="logo-item" data-i18n="home2.strip.1" aria-hidden="true">Instagram</div>
+            <div class="logo-item" data-i18n="home2.strip.2" aria-hidden="true">Messenger</div>
+            <div class="logo-item" data-i18n="home2.strip.3" aria-hidden="true">Comentarios</div>
+            <div class="logo-item" data-i18n="home2.strip.4" aria-hidden="true">Campañas</div>
+            <div class="logo-item" data-i18n="home2.strip.5" aria-hidden="true">Links de pago</div>
+            <div class="logo-item" data-i18n="home2.strip.6" aria-hidden="true">Portal del cliente</div>
+            <div class="logo-item" data-i18n="home2.strip.7" aria-hidden="true">Modo 3D</div>
         </div>
     </div>
     <img src="assets/droid.png" class="floating-droid droid-flip"
@@ -210,7 +184,7 @@
 
     <main class="container" style="padding-top: 80px;">
 
-        <!-- 2. The Problem -->
+        <!-- 2. El problema -->
         <section style="margin-bottom: 120px; text-align: center;">
             <h2 class="section-title"><span data-i18n="problem.title_prefix">El problema real:</span> <span class="gradient-text" data-i18n="problem.title_gradient">Caos Operativo</span></h2>
             <p class="subtitle" style="margin-bottom: 60px;" data-i18n="problem.subtitle">Tener tus herramientas dispersas te está costando clientes.</p>
@@ -218,7 +192,6 @@
             <div class="grid-3">
                 <div class="glass-card">
                     <div class="glass-card-icon">
-                        <!-- Icon: Message Scatter / Disconnected -->
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
@@ -231,7 +204,6 @@
                 </div>
                 <div class="glass-card">
                     <div class="glass-card-icon">
-                        <!-- Icon: User Check (Manual Follow-up / CRM) -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -244,7 +216,6 @@
                 </div>
                 <div class="glass-card">
                     <div class="glass-card-icon">
-                        <!-- Icon: Workflow Broken / Alert -->
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10"></circle>
@@ -258,283 +229,264 @@
             </div>
         </section>
 
-        <!-- 3. The Solution -->
-        <section style="margin-bottom: 120px;">
-            <section id="features" class="container" style="margin-bottom: 120px;">
-                <div class="grid-2">
-                    <div style="text-align: left;">
-                        <h2 class="section-title" style="text-align: left; margin-bottom: 24px;"
-                            data-i18n="home.solution_title">La Solución: <br><span class="gradient-text">Sistema
-                                Operativo Comercial</span></h2>
-                        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 32px;"
-                            data-i18n="home.solution_subtitle">
-                            Pixy no es solo un CRM. Es el motor que centraliza toda tu operación comercial en un solo
-                            flujo
-                            lógico.
-                        </p>
+        <!-- 3. La solución: la Bandeja en vivo (la IA atiende, califica y mueve al cliente) -->
+        <section id="features" style="margin-bottom: 140px;">
+            <div class="grid-2 sh-solution">
+                <div style="text-align: left;">
+                    <h2 class="section-title sh-left" data-i18n="home2.solution.title">La solución: <br><span class="gradient-text">un sistema operativo para tu negocio</span></h2>
+                    <p class="sh-lead" data-i18n="home2.solution.subtitle">Pixy no es solo un CRM. Conecta tus canales, tus ventas, tu operación y tus cobros, con una IA que trabaja en todos ellos.</p>
 
-                        <div class="feature-row" style="margin-bottom: 24px;">
-                            <div class="feature-icon-small">
-                                <!-- Icon: Message Circle / Inbox -->
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 data-i18n="features.inbox_title">Inbox Unificado</h4>
-                                <p style="font-size: 0.9rem; color: var(--text-muted);" data-i18n="features.inbox_desc">
-                                    WhatsApp, Instagram y Messenger en
-                                    una sola bandeja compartida con tu equipo.</p>
-                            </div>
-                        </div>
-                        <div class="feature-row" style="margin-bottom: 24px;">
-                            <div class="feature-icon-small">
-                                <!-- Icon: Zap / Automation -->
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 data-i18n="features.automation_title">Automatización Real</h4>
-                                <p style="font-size: 0.9rem; color: var(--text-muted);"
-                                    data-i18n="features.automation_desc">Respuestas automáticas, asignación
-                                    de leads y recordatorios sin intervención humana.</p>
-                            </div>
-                        </div>
-                        <div class="feature-row">
-                            <div class="feature-icon-small">
-                                <!-- Icon: Bar Chart / CRM -->
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="12" y1="20" x2="12" y2="10"></line>
-                                    <line x1="18" y1="20" x2="18" y2="4"></line>
-                                    <line x1="6" y1="20" x2="6" y2="16"></line>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 data-i18n="features.crm_title">CRM Conversacional</h4>
-                                <p style="font-size: 0.9rem; color: var(--text-muted);" data-i18n="features.crm_desc">
-                                    Gestiona tu pipeline de ventas
-                                    directamente desde la conversación.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="glass-card"
-                        style="min-height: 400px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.02);">
-                        <!-- Abstract Interface Visual -->
-                        <div style="text-align: center;">
-                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--brand-pink)"
-                                stroke-width="1.5" style="opacity: 0.8; margin-bottom: 16px;">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                <line x1="8" y1="21" x2="16" y2="21"></line>
-                                <line x1="12" y1="17" x2="12" y2="21"></line>
-                            </svg>
-                            <p style="color: var(--text-secondary);" data-i18n="home.ui_label">Interfaz Unificada Pixy
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 4. Pixy Spaces (The Core) -->
-            <section id="features" style="margin-bottom: 120px;">
-                <div style="text-align: center; margin-bottom: 56px;">
-                    <h2 class="section-title" style="max-width: 900px; margin: 0 auto; margin-bottom: 24px;"
-                        data-i18n="spaces.title">
-                        Una plataforma. <span class="gradient-text">Múltiples espacios de trabajo.</span>
-                    </h2>
-                    <p class="subtitle"
-                        style="margin: 0 auto; max-width: 700px; font-size: 1.1rem; color: var(--text-secondary);"
-                        data-i18n="spaces.subtitle">
-                        Creemos que el software debe adaptarse al negocio, no al revés. Por eso creamos <strong>Pixy
-                            Spaces</strong>.
-                    </p>
-                </div>
-
-                <div class="grid-2" style="gap: 24px;">
-                    <!-- Space 1: Agency -->
-                    <a href="space-agency.html" class="glass-card space-card-simple"
-                        style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; border: 1px solid rgba(147, 51, 234, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                        <span class="status-badge active" style="margin-bottom: 16px;"
-                            data-i18n="common.available">Disponible</span>
-                        <h3 style="margin-bottom: 12px; font-size: 1.5rem; color: var(--text-primary);" data-i18n="spaces.agency_title">Pixy Agency</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;"
-                            data-i18n="spaces.agency_desc">
-                            Para agencias de marketing y desarrollo. Gestiona múltiples clientes (Multi-tenant) con
-                            marca
-                            blanca.
-                        </p>
-                    </a>
-
-                    <!-- Space 2: Resto -->
-                    <a href="spaces.html" class="glass-card space-card-simple"
-                        style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                        <span class="status-badge soon" style="margin-bottom: 16px;"
-                            data-i18n="common.soon">Próximamente</span>
-                        <h3 style="margin-bottom: 12px; font-size: 1.5rem; color: var(--text-primary);" data-i18n="spaces.resto_title">Pixy Resto</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;"
-                            data-i18n="spaces.resto_desc">
-                            Para restaurantes y dark kitchens. Centraliza pedidos de WhatsApp y gestiona reservas.
-                        </p>
-                    </a>
-
-                    <!-- Space 3: Commerce -->
-                    <a href="spaces.html" class="glass-card space-card-simple"
-                        style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                        <span class="status-badge soon" style="margin-bottom: 16px;"
-                            data-i18n="common.soon">Próximamente</span>
-                        <h3 style="margin-bottom: 12px; font-size: 1.5rem; color: var(--text-primary);" data-i18n="spaces.commerce_title">Pixy Commerce</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;"
-                            data-i18n="spaces.commerce_desc">
-                            Para e-commerce y tiendas. Recupera carritos abandonados y gestiona soporte post-venta.
-                        </p>
-                    </a>
-
-                    <!-- Space 4: Services -->
-                    <a href="spaces.html" class="glass-card space-card-simple"
-                        style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                        <span class="status-badge soon" style="margin-bottom: 16px;"
-                            data-i18n="common.soon">Próximamente</span>
-                        <h3 style="margin-bottom: 12px; font-size: 1.5rem; color: var(--text-primary);" data-i18n="spaces.services_title">Pixy Services</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;"
-                            data-i18n="spaces.services_desc">
-                            Para clínicas, spas y servicios a domicilio. Agendamiento y recordatorios automáticos.
-                        </p>
-                    </a>
-                </div>
-            </section>
-
-            <!-- 5. How It Works -->
-            <section id="como-funciona" style="margin-bottom: 120px;">
-                <!-- "The Pixy Flow" Section -->
-                <h2 class="section-title" style="text-align: center; margin-bottom: 16px;" data-i18n="steps.main_title">
-                    Cómo empezar</h2>
-                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 48px; font-size: 1.1rem;"
-                    data-i18n="steps.main_subtitle">
-                    Tres pasos simples para transformar tu operación.
-                </p>
-
-                <div class="steps-flow-container">
-                    <!-- Step 01 -->
-                    <div class="step-card" data-step="01">
-                        <div class="step-icon-wrapper">
-                            <!-- Icon: Layout/Grid -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="3" y1="9" x2="21" y2="9"></line>
-                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                    <div class="feature-row" style="margin-bottom: 24px;">
+                        <div class="feature-icon-small">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                             </svg>
                         </div>
-                        <h3 class="step-title" data-i18n="steps.step1_title">Elige tu Space</h3>
-                        <p class="step-desc" data-i18n="steps.step1_desc">
-                            Selecciona la industria que define tu negocio (Agencia, Resto, Comercio) para cargar
-                            automáticamente los flujos y métricas óptimas.
-                        </p>
+                        <div>
+                            <h4 data-i18n="home2.solution.f1_title">Bandeja omnicanal</h4>
+                            <p class="sh-muted" data-i18n="home2.solution.f1_desc">WhatsApp con la conexión oficial, Instagram, Messenger y los comentarios de tus redes en una sola bandeja para tu equipo.</p>
+                        </div>
                     </div>
-
-                    <!-- Step 02 -->
-                    <div class="step-card" data-step="02">
-                        <div class="step-icon-wrapper">
-                            <!-- Icon: Link/Connect -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    <div class="feature-row" style="margin-bottom: 24px;">
+                        <div class="feature-icon-small">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                             </svg>
                         </div>
-                        <h3 class="step-title" data-i18n="steps.step2_title">Conecta tus Canales</h3>
-                        <p class="step-desc" data-i18n="steps.step2_desc">
-                            Vincula WhatsApp, Instagram, Facebook y tu sitio web en segundos escaneando un código QR.
-                            Centraliza todo el caos.
-                        </p>
+                        <div>
+                            <h4 data-i18n="home2.solution.f2_title">IA que atiende y califica</h4>
+                            <p class="sh-muted" data-i18n="home2.solution.f2_desc">Responde de día y de noche con la información real de tu negocio y califica a cada cliente con la frase que lo demuestra.</p>
+                        </div>
                     </div>
-
-                    <!-- Step 03 -->
-                    <div class="step-card" data-step="03">
-                        <div class="step-icon-wrapper">
-                            <!-- Icon: Rocket/Automate -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path
-                                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
-                                </path>
-                                <path
-                                    d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
-                                </path>
-                                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                    <div class="feature-row">
+                        <div class="feature-icon-small">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="20" x2="12" y2="10"></line>
+                                <line x1="18" y1="20" x2="18" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="16"></line>
                             </svg>
                         </div>
-                        <h3 class="step-title" data-i18n="steps.step3_title">Automatiza y Escala</h3>
-                        <p class="step-desc" data-i18n="steps.step3_desc">
-                            Activa los "Pilotos Automáticos" predefinidos. Recupera carritos, confirma citas y responde
-                            preguntas frecuentes 24/7.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 6. Final CTA -->
-            <section style="text-align: center; margin-bottom: 80px;">
-                <h2 class="gradient-text" style="font-size: clamp(24px, 3.2vw, 36px); margin-bottom: 24px;" data-i18n="cta.title">Deja de
-                    perder clientes hoy.
-                </h2>
-                <p class="subtitle" style="margin-bottom: 40px;" data-i18n="cta.subtitle">Configura tu Pixy Space en
-                    minutos. Sin tarjetas de
-                    crédito
-                    para probar.</p>
-                <a href="https://app.pixy.com.co/signup" class="btn-neon" style="font-size: 1.2rem; padding: 16px 48px;"
-                    data-i18n="cta.button">Comenzar Ahora</a>
-            </section>
-
-            <!-- Testimonials Section (Custom Slider) -->
-            <!-- Testimonials Section (Custom Slider) -->
-            <section class="testimonials-slider-section" id="testimonials"
-                style="margin-top: 40px; margin-bottom: 40px;">
-                <div class="testimonial-slider-container">
-
-                    <!-- Rotating Images Area -->
-                    <div class="testimonial-images-wrapper">
-                        <div class="testimonial-halo"></div>
-                        <div class="testimonial-images-track">
-                            <!-- Images injected by JS -->
+                        <div>
+                            <h4 data-i18n="home2.solution.f3_title">Pipeline vivo</h4>
+                            <p class="sh-muted" data-i18n="home2.solution.f3_desc">Cada cliente queda en su etapa y la IA sugiere el siguiente paso. Tú decides.</p>
                         </div>
                     </div>
-
-                    <!-- Text Area -->
-                    <div class="testimonial-content-wrapper">
-                        <!-- Text injected by JS -->
-                        <div class="testimonial-quote-container">
-                            <p class="testimonial-quote"></p>
-                        </div>
-                    </div>
-
-                    <!-- Navigation Buttons -->
-                    <div class="testimonial-controls">
-                        <!-- Buttons injected by JS -->
-                    </div>
-
                 </div>
-            </section>
 
-            <!-- CTA Banner (MATCHING SPACES STYLE) -->
-            <section class="glass-card"
-                style="text-align: center; padding: 60px; background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);">
-                <h2 style="font-size: 2rem; margin-bottom: 16px;" data-i18n="cta.ready_title">¿Listo para escalar?</h2>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 32px;"
-                    data-i18n="cta.ready_subtitle">
-                    Únete a las empresas que están automatizando su futuro hoy mismo.
-                </p>
-                <a href="contact.html" class="btn-neon-outline" data-i18n="cta.talk_sales">Hablar con Ventas</a>
-            </section>
+                <!-- Ventana de la Bandeja (datos ficticios) -->
+                <div class="sh-window sh-inbox" data-inbox>
+                    <div class="sh-window-bar">
+                        <span><strong data-i18n="home2.inbox.title">Bandeja</strong> <span class="sh-dim">/</span> <span class="sh-dim" data-i18n="home2.inbox.all">Todos los canales</span></span>
+                        <span class="sh-mono"><span class="ds-orb sh-orb-xs" data-activity="think"><span class="ds-orb-halo"></span><span class="ds-orb-body"><span class="ds-orb-swirl"></span><span class="ds-orb-blob"></span><span class="ds-orb-shine"></span></span></span> <span data-i18n="home2.inbox.ai_on">IA atendiendo</span></span>
+                    </div>
+                    <div class="sh-inbox-body">
+                        <div class="sh-chat">
+                            <p class="sh-mono sh-center">Instagram · 9:41</p>
+                            <div class="sh-bubble ib-step" data-step="1" data-i18n="home2.inbox.m1">Hola, vi su publicación. ¿Tienen el modelo en negro y hacen envíos?</div>
+                            <div class="sh-bubble sh-bot ib-step" data-step="2" data-i18n="home2.inbox.m2">¡Hola, Laura! Sí, lo tenemos en negro en tallas M y L. Enviamos a todo el país en 2 a 4 días. ¿Te paso el link de pago?</div>
+                            <div class="sh-bubble ib-step" data-step="3" data-i18n="home2.inbox.m3">Sí, talla M porfa</div>
+                            <div class="sh-ai-group ib-step" data-step="4">
+                                <div class="sh-bubble sh-bot" data-i18n="home2.inbox.m4">Listo. Aquí tienes tu link de pago:</div>
+                                <div class="sh-paycard"><span class="sh-dim" data-i18n="home2.inbox.pay">Link de pago · Chaqueta negra, talla M</span><strong>$ 89,00</strong></div>
+                            </div>
+                            <div class="sh-typing" aria-hidden="true"><span></span><span></span><span></span></div>
+                        </div>
+                        <aside class="sh-client">
+                            <p class="sh-mono" data-i18n="home2.inbox.client">Cliente</p>
+                            <p class="sh-client-name">Laura Méndez</p>
+                            <p class="sh-dim sh-small" data-i18n="home2.inbox.first">Instagram · primera compra</p>
+                            <p class="sh-mono sh-gap" data-i18n="home2.inbox.score">Calificación de la IA</p>
+                            <p class="sh-temp"><span class="sh-dot sh-warm"></span><span class="ib-temp" data-i18n="home2.inbox.warm">Tibia</span></p>
+                            <p class="sh-dim sh-small"><span data-i18n="home2.inbox.evidence">Evidencia:</span> <span class="sh-fg">«<span data-i18n="home2.inbox.m3">Sí, talla M porfa</span>»</span></p>
+                            <p class="sh-mono sh-gap" data-i18n="home2.inbox.pipeline">Pipeline</p>
+                            <p class="sh-stage"><span class="ib-stage" data-i18n="home2.inbox.stage1">Interesado</span></p>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Spaces: los seis activos en la plataforma -->
+        <section id="spaces" style="margin-bottom: 140px; scroll-margin-top: 90px;">
+            <div style="text-align: center; margin-bottom: 56px;">
+                <h2 class="section-title" style="max-width: 900px;" data-i18n="home2.spaces.title">Un Space para cada industria. <span class="gradient-text">Una sola plataforma.</span></h2>
+                <p class="subtitle" data-i18n="home2.spaces.subtitle">Cada Space trae los módulos, el lenguaje y los flujos de tu industria, sobre el mismo núcleo de Pixy.</p>
+            </div>
+
+            <div class="sh-spaces">
+                <a href="spaces.html" class="glass-card sh-space" style="--sp:#FF6A2B">
+                    <img src="assets/elementos de spaces/resto.png" alt="" class="sh-space-img" loading="lazy">
+                    <span class="status-badge active" data-i18n="common.available">Disponible</span>
+                    <h3>Space Resto</h3>
+                    <p data-i18n="home2.spaces.resto">De la mesa a la cocina y a la caja, sin un papel.</p>
+                </a>
+                <a href="space-agency.html" class="glass-card sh-space" style="--sp:#8B5CF6">
+                    <img src="assets/elementos de spaces/agency.png" alt="" class="sh-space-img" loading="lazy">
+                    <span class="status-badge active" data-i18n="common.available">Disponible</span>
+                    <h3>Space Agencias</h3>
+                    <p data-i18n="home2.spaces.agency">Clientes, proyectos, cobros y resultados, conectados.</p>
+                </a>
+                <a href="spaces.html" class="glass-card sh-space" style="--sp:#2E7BFF">
+                    <img src="assets/elementos de spaces/reatil.png" alt="" class="sh-space-img" loading="lazy">
+                    <span class="status-badge active" data-i18n="common.available">Disponible</span>
+                    <h3>Space Tiendas</h3>
+                    <p data-i18n="home2.spaces.retail">Tu tienda en línea lista hoy y cada comentario convertido en venta.</p>
+                </a>
+                <a href="spaces.html" class="glass-card sh-space" style="--sp:#10D9A0">
+                    <img src="assets/elementos de spaces/real state.png" alt="" class="sh-space-img" loading="lazy">
+                    <span class="status-badge active" data-i18n="common.available">Disponible</span>
+                    <h3>Space Inmobiliaria</h3>
+                    <p data-i18n="home2.spaces.realestate">Tu inventario publicado con tu marca y tus arriendos liquidados en un clic.</p>
+                </a>
+                <a href="spaces.html" class="glass-card sh-space" style="--sp:#FFC233">
+                    <span class="sh-space-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/><path d="M22 10v6"/></svg>
+                    </span>
+                    <span class="status-badge active" data-i18n="common.available">Disponible</span>
+                    <h3>Pixy Edu</h3>
+                    <p data-i18n="home2.spaces.edu">El colegio entero en una plataforma: académico, familias, convivencia y pensiones.</p>
+                </a>
+                <a href="spaces.html" class="glass-card sh-space" style="--sp:#00E0FF">
+                    <img src="assets/elementos de spaces/saas.png" alt="" class="sh-space-img" loading="lazy">
+                    <span class="status-badge active" data-i18n="common.available">Disponible</span>
+                    <h3>Space SaaS</h3>
+                    <p data-i18n="home2.spaces.saas">Usuarios, planes, cobro recurrente y soporte, conectados.</p>
+                </a>
+            </div>
+            <p style="text-align: center; margin-top: 40px;">
+                <a href="spaces.html" class="btn-neon-outline" data-warp-click="nudge" data-i18n="home2.spaces.all">Ver todos los Spaces</a>
+            </p>
+        </section>
+
+    </main>
+
+    <!-- 5. La IA de Pixy: el tramo más rápido del viaje (data-warp acelera el fondo mientras se recorre) -->
+    <section class="sh-ai" data-warp="9" aria-labelledby="sh-ai-title">
+        <div class="container">
+            <div style="text-align: center;">
+                <p class="sh-kicker" data-i18n="home2.ai.kicker">La IA de Pixy</p>
+                <h2 id="sh-ai-title" class="section-title sh-ai-title" data-i18n="home2.ai.title">Una sola IA. <span class="gradient-text">Todo tu negocio.</span></h2>
+            </div>
+
+            <div class="sh-orbit" aria-hidden="true">
+                <span class="sh-ring" style="--s:1; --t:46s"><i></i></span>
+                <span class="sh-ring sh-rev" style="--s:.76; --t:34s"><i></i></span>
+                <span class="sh-ring" style="--s:.54; --t:26s"><i></i></span>
+                <span class="ds-orb sh-orb-main" data-activity="flow"><span class="ds-orb-halo"></span><span class="ds-orb-body"><span class="ds-orb-swirl"></span><span class="ds-orb-blob"></span><span class="ds-orb-shine"></span></span></span>
+            </div>
+
+            <div class="sh-caps">
+                <div class="sh-cap"><span class="sh-mono">01</span><h3 data-i18n="home2.ai.c1_title">Atiende sola, en todos tus canales.</h3><p data-i18n="home2.ai.c1_desc">WhatsApp, Instagram y Messenger con la conexión oficial, y los comentarios de tus redes. De día y de noche; cuando hace falta una persona, pasa a tu equipo.</p></div>
+                <div class="sh-cap"><span class="sh-mono">02</span><h3 data-i18n="home2.ai.c2_title">Entiende cada conversación.</h3><p data-i18n="home2.ai.c2_desc">Venta, soporte, reserva, cotización o admisión, en cualquier industria. Califica a cada cliente con la frase que lo demuestra.</p></div>
+                <div class="sh-cap"><span class="sh-mono">03</span><h3 data-i18n="home2.ai.c3_title">Aprende tu negocio.</h3><p data-i18n="home2.ai.c3_desc">Documentos, servicios y respuestas de tu equipo la hacen más precisa. Para cada respuesta lee solo lo que necesita.</p></div>
+                <div class="sh-cap"><span class="sh-mono">04</span><h3 data-i18n="home2.ai.c4_title">Te acompaña en cada módulo.</h3><p data-i18n="home2.ai.c4_desc">La misma IA en la bandeja, el pipeline, el catálogo, las tareas y los cobros.</p></div>
+            </div>
+        </div>
+
+        <!-- Cinta del conocimiento: la llena js/spaces-home.js con el idioma activo -->
+        <div class="sh-marquee" aria-hidden="true"><div class="sh-marquee-track" data-marquee="home2.ai.words"></div></div>
+        <p class="sh-mono sh-center" style="margin-top: 20px;" data-i18n="home2.ai.foot">Mientras más la usas, más sabe de tu negocio</p>
+    </section>
+
+    <main class="container">
+
+        <!-- 6. Modo 3D -->
+        <section id="modo-3d" style="margin: 140px 0;">
+            <div class="grid-2 sh-m3d-head">
+                <div>
+                    <p class="sh-kicker" data-i18n="home2.m3d.kicker">Modo 3D</p>
+                    <h2 class="section-title sh-left" data-i18n="home2.m3d.title">Mira tu negocio <span class="gradient-text">vivo.</span></h2>
+                </div>
+                <p class="sh-lead" data-i18n="home2.m3d.desc">Tu sede como una ciudad en miniatura: cada área es un edificio con lo que está pasando ahora, con los datos reales de tu negocio.</p>
+            </div>
+            <div class="sh-m3d" data-iso-city>
+                <p class="sh-mono sh-m3d-note" data-i18n="home2.m3d.note">Vista provisional · grabación pendiente</p>
+                <div class="sh-spot" style="left:20%;top:30%"><b data-i18n="home2.m3d.h1">Atención</b><span data-i18n="home2.m3d.h1d">3 asesores · IA atendiendo</span></div>
+                <div class="sh-spot" style="left:48%;top:17%"><b data-i18n="home2.m3d.h2">Ventas</b><span data-i18n="home2.m3d.h2d">14 tratos · 3 calientes</span></div>
+                <div class="sh-spot" style="left:78%;top:30%"><b data-i18n="home2.m3d.h3">Cobros</b><span data-i18n="home2.m3d.h3d">2 facturas por vencer</span></div>
+                <div class="sh-spot" style="left:25%;top:72%"><b data-i18n="home2.m3d.h4">Catálogo</b><span data-i18n="home2.m3d.h4d">12 pedidos hoy</span></div>
+                <div class="sh-spot" style="left:55%;top:82%"><b data-i18n="home2.m3d.h5">Tareas</b><span data-i18n="home2.m3d.h5d">8 en curso · 2 para hoy</span></div>
+                <div class="sh-spot" style="left:82%;top:66%"><b data-i18n="home2.m3d.h6">Social</b><span data-i18n="home2.m3d.h6d">5 comentarios convertidos</span></div>
+            </div>
+        </section>
+
+        <!-- 7. Cómo empezar -->
+        <section id="como-funciona" style="margin-bottom: 140px;">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 16px;" data-i18n="steps.main_title">Cómo empezar</h2>
+            <p class="subtitle" style="margin-bottom: 48px;" data-i18n="steps.main_subtitle">Tres pasos simples para transformar tu operación.</p>
+
+            <div class="steps-flow-container">
+                <div class="step-card" data-step="01">
+                    <div class="step-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                    </div>
+                    <h3 class="step-title" data-i18n="home2.steps.s1_title">Elige tu Space</h3>
+                    <p class="step-desc" data-i18n="home2.steps.s1_desc">Restaurante, tienda, inmobiliaria, colegio, agencia o software: tu Space trae los módulos y flujos de tu industria.</p>
+                </div>
+                <div class="step-card" data-step="02">
+                    <div class="step-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                    </div>
+                    <h3 class="step-title" data-i18n="home2.steps.s2_title">Conecta tus canales</h3>
+                    <p class="step-desc" data-i18n="home2.steps.s2_desc">WhatsApp con la conexión oficial de Meta, Instagram y Messenger, en minutos y acompañado por nuestro equipo.</p>
+                </div>
+                <div class="step-card" data-step="03">
+                    <div class="step-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="step-title" data-i18n="home2.steps.s3_title">Enséñale tu negocio a la IA</h3>
+                    <p class="step-desc" data-i18n="home2.steps.s3_desc">Carga tus servicios, precios y documentos una vez. La IA atiende, califica y te acompaña en cada módulo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Planes (resumen; el detalle está en pricing.html) -->
+        <section id="planes" style="margin-bottom: 140px;">
+            <div style="text-align: center;">
+                <p class="sh-kicker" data-i18n="home2.plans.kicker">Planes</p>
+                <h2 class="section-title" data-i18n="home2.plans.title">Eliges tu industria. <span class="gradient-text">Eliges tu ritmo.</span></h2>
+                <p class="subtitle" data-i18n="home2.plans.subtitle">Tu Space, un nivel y solo los complementos que necesitas. Cada empresa paga en su moneda.</p>
+            </div>
+            <div class="sh-plans" role="tablist" aria-label="Niveles">
+                <button type="button" class="glass-card sh-plan is-active" role="tab" aria-selected="true">
+                    <span class="sh-plan-name" data-i18n="home2.plans.l1">Esencial</span>
+                    <span class="sh-plan-users" data-i18n="home2.plans.l1_users">Hasta 3 usuarios</span>
+                    <span class="sh-plan-phrase" data-i18n="home2.plans.l1_phrase">Todo tu negocio, ordenado.</span>
+                </button>
+                <button type="button" class="glass-card sh-plan" role="tab" aria-selected="false">
+                    <span class="sh-plan-name" data-i18n="home2.plans.l2">Pro</span>
+                    <span class="sh-plan-users" data-i18n="home2.plans.l2_users">Hasta 10 usuarios</span>
+                    <span class="sh-plan-phrase" data-i18n="home2.plans.l2_phrase">Tu negocio, en piloto automático.</span>
+                </button>
+                <button type="button" class="glass-card sh-plan" role="tab" aria-selected="false">
+                    <span class="sh-plan-name" data-i18n="home2.plans.l3">Total</span>
+                    <span class="sh-plan-users" data-i18n="home2.plans.l3_users">Hasta 20 usuarios</span>
+                    <span class="sh-plan-phrase" data-i18n="home2.plans.l3_phrase">Tu operación completa, en cada sede.</span>
+                </button>
+            </div>
+            <p style="text-align: center; margin-top: 36px;">
+                <a href="pricing.html" class="btn-neon-outline" data-warp-click="nudge" data-i18n="home2.plans.cta">Ver planes</a>
+            </p>
+        </section>
+
+        <!-- 9. Cierre -->
+        <section class="glass-card sh-final" style="margin-bottom: 80px;">
+            <h2 data-i18n="home2.cta.title">Tu negocio nunca se detiene. <span class="gradient-text">Pixy tampoco.</span></h2>
+            <p data-i18n="home2.cta.subtitle">Te mostramos tu Space con los flujos de tu industria en una demo guiada.</p>
+            <a href="contact.html" class="btn-neon" data-warp-click="departure" data-i18n="home2.cta.button">Agenda tu demo</a>
+        </section>
 
     </main>
 
@@ -599,11 +551,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
+    <!-- Fondo espacial (estrellas en viaje, reacciona al scroll) -->
+    <script src="js/space-bg.js"></script>
+
     <!-- i18n Script -->
     <script src="js/i18n.js"></script>
 
     <!-- Main Script -->
     <script src="js/main.js"></script>
+
+    <!-- Portada de Spaces: titular cinético, Bandeja en vivo, cinta de la IA, ciudad del Modo 3D y planes -->
+    <script src="js/spaces-home.js"></script>
 </body>
 
 </html>

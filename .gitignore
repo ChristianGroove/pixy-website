@@ -1,2 +1,4 @@
 .vercel
 .env*.local
+
+tools/space-bg/node_modules/

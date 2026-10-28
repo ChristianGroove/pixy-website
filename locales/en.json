@@ -1686,5 +1686,148 @@
     "brand_pixy": "pixy",
     "terminal_tag": "NEURAL STREAM // 60 FPS",
     "orb_hint": "Tap the orb to start"
+  },
+  "home2": {
+    "hero": {
+      "prefix": "The operating system for your",
+      "words": [
+        "business",
+        "restaurant",
+        "store",
+        "real estate firm",
+        "school",
+        "agency",
+        "startup"
+      ],
+      "subtitle": "Serve, sell, operate and get paid with an AI that knows your business. A <strong>Space</strong> built for your industry.",
+      "cta_demo": "Book a demo",
+      "cta_spaces": "Choose your Space"
+    },
+    "strip": [
+      "WhatsApp",
+      "Instagram",
+      "Messenger",
+      "Comments",
+      "Campaigns",
+      "Payment links",
+      "Client portal",
+      "3D Mode"
+    ],
+    "solution": {
+      "title": "The solution: <br><span class=\"gradient-text\">an operating system for your business</span>",
+      "subtitle": "Pixy is not just a CRM. It connects your channels, sales, operations and billing, with an AI that works across all of them.",
+      "f1_title": "Omnichannel inbox",
+      "f1_desc": "WhatsApp through the official connection, Instagram, Messenger and your social comments in one inbox for your team.",
+      "f2_title": "AI that serves and qualifies",
+      "f2_desc": "Replies day and night with your business's real information and qualifies every customer with the sentence that proves it.",
+      "f3_title": "Live pipeline",
+      "f3_desc": "Every customer sits in the right stage and the AI suggests the next step. You decide."
+    },
+    "inbox": {
+      "title": "Inbox",
+      "all": "All channels",
+      "ai_on": "AI on duty",
+      "m1": "Hi, I saw your post. Do you have this model in black, and do you ship?",
+      "m2": "Hi Laura! Yes, we have it in black in sizes M and L. We ship nationwide in 2 to 4 days. Shall I send you the payment link?",
+      "m3": "Yes, size M please",
+      "m4": "Done. Here is your payment link:",
+      "pay": "Payment link · Black jacket, size M",
+      "client": "Customer",
+      "first": "Instagram · first purchase",
+      "score": "AI qualification",
+      "warm": "Warm",
+      "hot": "Hot",
+      "evidence": "Evidence:",
+      "pipeline": "Pipeline",
+      "stage1": "Interested",
+      "stage2": "Ready to pay"
+    },
+    "spaces": {
+      "title": "A Space for every industry. <span class=\"gradient-text\">One platform.</span>",
+      "subtitle": "Each Space brings the modules, language and workflows of your industry, on the same Pixy core.",
+      "resto": "From table to kitchen to checkout, paper-free.",
+      "agency": "Clients, projects, billing and results, connected.",
+      "retail": "Your online store ready today and every comment turned into a sale.",
+      "realestate": "Your listings published under your brand and your rentals settled in one click.",
+      "edu": "The whole school on one platform: academics, families, conduct and tuition.",
+      "saas": "Users, plans, recurring billing and support, connected.",
+      "explore": "See Space",
+      "all": "See all Spaces"
+    },
+    "ai": {
+      "kicker": "Pixy AI",
+      "title": "One AI. <span class=\"gradient-text\">Your whole business.</span>",
+      "c1_title": "Serves on its own, on every channel.",
+      "c1_desc": "WhatsApp, Instagram and Messenger through the official connection, plus your social comments. Day and night; when a person is needed, it hands over to your team.",
+      "c2_title": "Understands every conversation.",
+      "c2_desc": "Sales, support, bookings, quotes or admissions, in any industry. Qualifies every customer with the sentence that proves it.",
+      "c3_title": "Learns your business.",
+      "c3_desc": "Documents, services and your team's answers make it more precise. For each reply it reads only what it needs.",
+      "c4_title": "By your side in every module.",
+      "c4_desc": "The same AI in the inbox, pipeline, catalog, tasks and billing.",
+      "words": [
+        "Services",
+        "Prices",
+        "Hours",
+        "Policies",
+        "FAQs",
+        "Documents",
+        "Business profile",
+        "Team answers",
+        "Products",
+        "Promotions",
+        "Warranties",
+        "Payment methods",
+        "Locations",
+        "Brand voice"
+      ],
+      "foot": "The more you use it, the more it knows your business"
+    },
+    "m3d": {
+      "kicker": "3D Mode",
+      "title": "See your business <span class=\"gradient-text\">alive.</span>",
+      "desc": "Your location as a miniature city: every area is a building showing what is happening right now, with your business's real data.",
+      "note": "Preview · recording pending",
+      "h1": "Service",
+      "h1d": "3 agents · AI on duty",
+      "h2": "Sales",
+      "h2d": "14 deals · 3 hot",
+      "h3": "Billing",
+      "h3d": "2 invoices due soon",
+      "h4": "Catalog",
+      "h4d": "12 orders today",
+      "h5": "Tasks",
+      "h5d": "8 in progress · 2 due today",
+      "h6": "Social",
+      "h6d": "5 comments converted"
+    },
+    "steps": {
+      "s1_title": "Choose your Space",
+      "s1_desc": "Restaurant, store, real estate, school, agency or software: your Space brings your industry's modules and workflows.",
+      "s2_title": "Connect your channels",
+      "s2_desc": "WhatsApp through Meta's official connection, Instagram and Messenger, in minutes and with our team by your side.",
+      "s3_title": "Teach the AI your business",
+      "s3_desc": "Load your services, prices and documents once. The AI serves, qualifies and supports you in every module."
+    },
+    "plans": {
+      "kicker": "Plans",
+      "title": "Choose your industry. <span class=\"gradient-text\">Choose your pace.</span>",
+      "subtitle": "Your Space, a tier and only the add-ons you need. Every company pays in its own currency.",
+      "l1": "Essential",
+      "l1_users": "Up to 3 users",
+      "l1_phrase": "Your whole business, organized.",
+      "l2": "Pro",
+      "l2_users": "Up to 10 users",
+      "l2_phrase": "Your business, on autopilot.",
+      "l3": "Total",
+      "l3_users": "Up to 20 users",
+      "l3_phrase": "Your full operation, at every location.",
+      "cta": "See plans"
+    },
+    "cta": {
+      "title": "Your business never stops. <span class=\"gradient-text\">Neither does Pixy.</span>",
+      "subtitle": "We'll show you your Space with your industry's workflows in a guided demo.",
+      "button": "Book a demo"
+    }
   }
 }
