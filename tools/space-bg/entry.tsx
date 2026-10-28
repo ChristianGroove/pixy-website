@@ -117,5 +117,7 @@ function mount() {
   };
 }
 
-if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mount);
-else mount();
+// El script va al final del <body>: se monta en el acto para que las estrellas estén en el primer
+// pintado (la página llega armada en la transición entre páginas)
+if (document.body) mount();
+else document.addEventListener("DOMContentLoaded", mount);

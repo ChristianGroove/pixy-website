@@ -5,7 +5,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { spacesNav } from "./chrome.mjs";
+import { spacesNav, withPageEnd } from "./chrome.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const index = readFileSync(join(root, "index.html"), "utf8");
@@ -511,7 +511,7 @@ pages.push({
 
 // --- Escritura -------------------------------------------------------------------------------------
 for (const p of pages) {
-  writeFileSync(join(root, p.file), shell(p), "utf8");
+  writeFileSync(join(root, p.file), withPageEnd(shell(p)), "utf8");
   console.log(`página: ${p.file}`);
 }
 for (const lang of ["es", "en"]) {

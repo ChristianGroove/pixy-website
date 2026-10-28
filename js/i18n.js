@@ -3,15 +3,29 @@
  * Client-side language switcher with nested key lookup,
  * input placeholder translation, and real-time custom event dispatching.
  */
-document.addEventListener('DOMContentLoaded', () => {
+(function () {
     const langToggle = document.getElementById('lang-toggle');
     const langText = document.getElementById('lang-text');
     let currentLang = localStorage.getItem('pixy_lang') || 'es';
     let currentTranslations = {};
 
-    // Initial Load
-    loadLanguage(currentLang);
+    // El script va al final del <body>: con el diccionario guardado de la visita anterior los textos
+    // quedan traducidos antes del primer pintado (sin destello del español al navegar en inglés).
+    // Después se descarga el actual y se avisa a los componentes como siempre.
+    const cacheKey = (lang) => `pixy_i18n_${lang}`;
+    try {
+        const cached = JSON.parse(localStorage.getItem(cacheKey(currentLang)) || 'null');
+        if (cached) {
+            currentTranslations = cached;
+            applyTranslations(cached);
+            document.documentElement.lang = currentLang;
+        }
+    } catch (e) { }
     updateToggleUI(currentLang);
+
+    // Initial Load (los scripts de la página escuchan pixy:langChange; se registran antes de DOMContentLoaded)
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => loadLanguage(currentLang));
+    else loadLanguage(currentLang);
 
     // Toggle Event
     if (langToggle) {
@@ -54,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const translations = await response.json();
+            try { localStorage.setItem(cacheKey(lang), JSON.stringify(translations)); } catch (e) { }
             currentTranslations = translations;
             applyTranslations(translations);
             document.documentElement.lang = lang;
@@ -140,4 +155,4 @@ document.addEventListener('DOMContentLoaded', () => {
             updateToggleUI(lang);
         }
     };
-});
+})();

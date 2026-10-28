@@ -211,16 +211,7 @@ html.theme-transitioning *::after {
     text-align: center;
 }
 
-@view-transition {
-    navigation: auto;
-}
-
-/* Ensure persistent header stays rock-solid without blinking, cross-fading, or disappearing */
-::view-transition-old(main-header),
-::view-transition-new(main-header) {
-    animation: none;
-    mix-blend-mode: normal;
-}
+/* Transición entre páginas: ver «Transición entre páginas» en css/spaces-home.css */
 
 /* Navigation */
 .nav {

@@ -5,7 +5,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { studioNav, studioFooter } from "./chrome.mjs";
+import { studioNav, studioFooter, withPageEnd } from "./chrome.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const EOL = readFileSync(join(root, "index.html"), "utf8").includes("\r\n") ? "\r\n" : "\n";
@@ -566,7 +566,7 @@ page = "casting";
 // --- Escritura ---------------------------------------------------------------------------------------------
 mkdirSync(join(root, "agency"), { recursive: true });
 for (const p of pages) {
-  writeFileSync(join(root, p.file), shell(p), "utf8");
+  writeFileSync(join(root, p.file), withPageEnd(shell(p)), "utf8");
   console.log(`página: ${p.file}`);
 }
 // Direcciones anteriores que siguen enlazadas: llevan a la página nueva

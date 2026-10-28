@@ -158,3 +158,15 @@ export function writeChromeI18n(readFileSync, writeFileSync, join, root) {
     writeFileSync(file, JSON.stringify(data, null, 2).replace(/\n/g, eol) + (raw.endsWith("\n") ? eol : ""), "utf8");
   }
 }
+
+/**
+ * Transición entre páginas: el navegador no pinta la página hasta leer #pixy-end, que va después
+ * de los scripts. Así llega armada (fondo con estrellas, textos traducidos, secciones visibles)
+ * en vez de por partes. Idempotente.
+ */
+export function withPageEnd(html) {
+  const eol = html.includes("\r\n") ? "\r\n" : "\n";
+  if (!html.includes('rel="expect"')) html = html.replace(/(\r?\n)<\/head>/, `${eol}    <link rel="expect" href="#pixy-end" blocking="render">$1</head>`);
+  if (!html.includes('id="pixy-end"')) html = html.replace(/(\r?\n)<\/body>/, `${eol}    <div id="pixy-end" hidden></div>$1</body>`);
+  return html;
+}

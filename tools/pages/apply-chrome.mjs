@@ -5,7 +5,7 @@
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { spacesNav, spacesFooter, writeChromeI18n } from "./chrome.mjs";
+import { spacesNav, spacesFooter, writeChromeI18n, withPageEnd } from "./chrome.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const LEGAL = ["privacy.html", "terms.html", "cookies.html", "data-deletion.html", "permissions.html"];
@@ -20,6 +20,7 @@ for (const f of files) {
   const before = c;
   c = c.replace(/ {4}<nav class="nav">[\s\S]*?<\/nav>\r?\n/, spacesNav("", active).replace(/\n/g, eol));
   c = c.replace(/ *<footer[\s\S]*?<\/footer>/, spacesFooter("").replace(/\n/g, eol));
+  c = withPageEnd(c);
   if (c !== before) {
     writeFileSync(p, c, "utf8");
     n++;

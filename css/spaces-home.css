@@ -661,3 +661,33 @@
 .sh-body + .sp-mods, .sp-sub + .sp-mods { margin-top: 28px; }
 .sh-sticky .sh-link { margin-top: 28px; }
 
+
+/* ============================================
+   Transición entre páginas (View Transitions entre documentos)
+   La página nueva llega ya armada (link rel="expect" en el <head> bloquea el pintado hasta
+   #pixy-end, después de los scripts): fondo con estrellas, textos traducidos y secciones visibles.
+   La anterior se apaga rápido y la nueva entra en un solo fundido; el encabezado y el botón de
+   tema no se mueven, y las estrellas aceleran un instante al llegar (js/main.js).
+   ============================================ */
+@view-transition { navigation: auto; }
+
+/* Mismo color que el fondo espacial desde el primer pintado (antes: azul marino y luego negro) */
+html[data-theme="dark"], html[data-theme="dark"] body.spaces-face { background-color: #000; }
+html[data-theme="light"], html[data-theme="light"] body.spaces-face { background-color: #edf0f4; }
+.spaces-face .bg-gradient, .spaces-face .bg-grid { display: none; }
+
+.spaces-face .theme-toggle { view-transition-name: theme-toggle; }
+
+@keyframes pixy-page-out { to { opacity: 0; } }
+@keyframes pixy-page-in { from { opacity: 0; } }
+
+::view-transition-old(root) { animation: pixy-page-out 180ms cubic-bezier(0.4, 0, 1, 1) both; mix-blend-mode: normal; }
+::view-transition-new(root) { animation: pixy-page-in 420ms cubic-bezier(0.2, 0.8, 0.2, 1) 60ms both; mix-blend-mode: normal; }
+
+/* Encabezado y botón de tema quietos; si el encabezado venía escondido por el scroll, aparece con un fundido */
+::view-transition-old(main-header), ::view-transition-old(theme-toggle), ::view-transition-new(theme-toggle) { animation: none; }
+::view-transition-new(main-header) { animation: pixy-page-in 260ms ease-out both; mix-blend-mode: normal; }
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}

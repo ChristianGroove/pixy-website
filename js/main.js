@@ -3,7 +3,9 @@
 // Theme Toggle, Animations, Newsletter
 // ============================================
 
-document.addEventListener('DOMContentLoaded', () => {
+// main.js va al final del <body>: arranca en cuanto se ejecuta (ver pixyBoot() al final del archivo),
+// antes del primer pintado, para que la página llegue armada en la transición entre páginas.
+const pixyBoot = () => {
     // Mouse Spotlight Effect (Enhanced logic & performance)
     const spotlight = document.querySelector('.mouse-spotlight');
     if (spotlight) {
@@ -143,7 +145,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Console easter egg
     console.log('%c🚀 Pixy', 'font-size: 24px; font-weight: bold; color: #f205e2;');
     console.log('%cBuilding the future of business management', 'color: #9ca3af;');
-});
+
+    // Llegada a la página y precarga de la siguiente
+    initPageArrival();
+    initPrerender();
+};
 
 // ============================================
 // THEME MANAGEMENT
@@ -345,7 +351,9 @@ function initScrollAnimations() {
             !el.classList.contains('hero-content-left') &&
             !el.closest('.nav') &&
             // Secciones con su propia animación de scroll (pines de GSAP): un transform aquí rompe el pin
-            !el.closest('[data-no-reveal]')) {
+            !el.closest('[data-no-reveal]') &&
+            // Lo que ya está en pantalla al llegar entra con la transición de página, no se esconde y vuelve
+            el.getBoundingClientRect().top > window.innerHeight) {
 
             el.classList.add('fade-in-hidden');
             observer.observe(el);
@@ -354,6 +362,7 @@ function initScrollAnimations() {
 
     // Keep support for manual .animate-on-scroll class just in case
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        if (el.getBoundingClientRect().top <= window.innerHeight) return;
         el.classList.add('fade-in-hidden');
         observer.observe(el);
     });
@@ -604,47 +613,16 @@ function initGSAPHero() {
 
     if (!astroWrapper) return;
 
-    // 1. TIMELINE: Entrance ("In") Animation
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-
-    if (content) {
-        tl.from(content.children, {
-            y: 40,
-            opacity: 0,
-            duration: 1.1,
-            stagger: 0.12
-        });
-    }
-
-    if (glow) {
-        tl.from(glow, {
-            scale: 0.3,
-            opacity: 0,
-            duration: 1.6,
-            ease: 'power2.out'
-        }, '<');
-    }
-
-    if (astroWrapper) {
-        tl.from(astroWrapper, {
-            y: 60,
-            scale: 0.8,
-            opacity: 0,
-            duration: 1.4,
-            ease: 'power2.out'
-        }, '-=0.9');
-    }
-
-    if (orbWrapper) {
-        tl.from(orbWrapper, {
-            x: -50,
-            y: 35,
-            scale: 0.4,
-            opacity: 0,
-            duration: 1.2,
-            ease: 'back.out(1.6)'
-        }, '-=0.9');
-    }
+    // 1. Entrada: un solo movimiento corto (texto y visual a la vez). Solo en la primera carga:
+    // al llegar desde otra página del sitio la transición entre páginas ya hace la entrada.
+    whenPageRevealed((viaTransition) => {
+        if (viaTransition || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 0.8 } });
+        if (content) tl.from(content.children, { y: 24, opacity: 0, stagger: 0.06 }, 0);
+        if (glow) tl.from(glow, { opacity: 0 }, 0);
+        if (astroWrapper) tl.from(astroWrapper, { y: 32, opacity: 0, duration: 0.9 }, 0.05);
+        if (orbWrapper) tl.from(orbWrapper, { scale: 0.7, opacity: 0, duration: 0.9 }, 0.1);
+    });
 
     // 2. SCROLL TRIGGER: Parallax (Smooth High-Depth Zoom + Controlled Translation)
     if (astroWrapper) {
@@ -741,6 +719,36 @@ function initNavMenu() {
     window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => { if (e.matches) setOpen(false); });
 }
 
+// Llama a fn(viaTransition) en el primer pintado de la página. viaTransition: se llegó con la
+// transición entre páginas del sitio. Sin soporte de pagereveal, se llama de inmediato como primera carga.
+function whenPageRevealed(fn) {
+    if (!('onpagereveal' in window)) return fn(false);
+    window.addEventListener('pagereveal', (e) => fn(!!e.viewTransition), { once: true });
+}
+
+// Al llegar desde otra página las estrellas aceleran un instante, como al moverse entre páginas
+// de la plataforma (perfil "nudge" de warp-controller)
+function initPageArrival() {
+    whenPageRevealed((viaTransition) => {
+        if (viaTransition && window.pixySpace) window.pixySpace.warp('nudge');
+    });
+}
+
+// Precarga la página de un enlace interno al pasar el cursor (o al tocarlo en móvil): al hacer clic
+// ya está lista y la transición es inmediata. Solo en navegadores con Speculation Rules.
+function initPrerender() {
+    if (!(HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules'))) return;
+    const rules = document.createElement('script');
+    rules.type = 'speculationrules';
+    rules.textContent = JSON.stringify({
+        prerender: [{
+            where: { and: [{ href_matches: '/*' }, { not: { selector_matches: '[target], [download], [href^="mailto:"]' } }] },
+            eagerness: 'moderate'
+        }]
+    });
+    document.head.appendChild(rules);
+}
+
 function initVoiceAssistantOrb() {
     const orb = document.querySelector('.orb');
     const input = document.getElementById('v.a.o.') || document.querySelector('.input-orb');
@@ -833,3 +841,4 @@ function initSpacesCarousel() {
     }
 }
 
+pixyBoot();
