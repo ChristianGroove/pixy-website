@@ -2,7 +2,7 @@
  * Fondo espacial de la cara Spaces: EL MISMO del login de la plataforma.
  * particles.tsx, warp-controller.ts y space-background.config.ts se copian tal cual de
  * agency-manager (src/components/ui/backgrounds/); el montaje replica space-backdrop.tsx:
- * fondo negro (#edf0f4 en claro), resplandor de marca desde el borde superior y partículas encima.
+ * fondo negro (#edf0f4 en claro) y partículas encima. Sin el resplandor de marca: el sitio no usa degradados.
  * Se compila a js/space-bg.js con `node tools/space-bg/build.mjs`.
  *
  * Lo propio del sitio:
@@ -69,11 +69,6 @@ function watchSections() {
 // --- Montaje (réplica de space-backdrop.tsx) --------------------------------------------------
 const isLight = () => document.documentElement.getAttribute("data-theme") === "light";
 
-function glow(light: boolean) {
-  const [a, b] = light ? [11, 4] : [19, 6];
-  return `radial-gradient(ellipse 70% 55% at 50% -12%, color-mix(in srgb, #f205e2 ${a}%, transparent) 0%, color-mix(in srgb, #f205e2 ${b}%, transparent) 45%, transparent 75%)`;
-}
-
 // particles.tsx usa clases de Tailwind para medir el lienzo; el sitio no tiene Tailwind, así que se definen aquí.
 const UTILITIES =
   ".space-bg .relative{position:relative}.space-bg .absolute{position:absolute}.space-bg .inset-0{inset:0}" +
@@ -100,7 +95,8 @@ function mount() {
   const render = () => {
     const light = isLight();
     host.style.backgroundColor = light ? "#edf0f4" : "#000000";
-    brandGlow.style.background = glow(light);
+    // El sitio no lleva degradados (decisión del dueño): sin el resplandor de marca del login
+    brandGlow.style.background = "none";
     root.render(<Particles {...SPACE_PARTICLES_PRESET} lightMode={light} driftScale={siteDriftScale} />);
   };
   render();

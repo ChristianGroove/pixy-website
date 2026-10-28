@@ -86,8 +86,7 @@
     <link rel="stylesheet" href="css/spaces-home.css">
 </head>
 
-<body class="landing-page">
-    <div class="mouse-spotlight"></div>
+<body class="landing-page spaces-face">
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
     <!-- Navigation -->
@@ -132,13 +131,11 @@
     <header class="container hero-space agency-hero-section">
         <div class="agency-hero-grid">
             <div class="hero-content-left agency-hero-content">
-                <h1 class="agency-hero-title sh-hero-title">
+                <h1 class="agency-hero-title sh-h1">
                     <span data-i18n="home2.hero.prefix">El sistema operativo de tu</span>
-                    <span class="sh-kinetic gradient-text" data-words="home2.hero.words">negocio</span>
+                    <span class="sh-kinetic sh-accent">negocio</span>
                 </h1>
-                <p class="agency-hero-subtitle" data-i18n="home2.hero.subtitle">
-                    Atiende, vende, opera y cobra con una IA que conoce tu negocio. Un <strong>Space</strong> hecho para tu industria.
-                </p>
+                <p class="sh-body sh-hero-sub" data-i18n="home2.hero.subtitle">Atiende, vende, opera y cobra con una IA que conoce tu negocio.</p>
                 <div class="agency-hero-actions">
                     <a href="contact.html" class="btn-neon" data-warp-click="hop" data-i18n="home2.hero.cta_demo">Agenda tu demo</a>
                     <a href="#spaces" class="btn-neon-outline" data-warp-click="nudge" data-i18n="home2.hero.cta_spaces">Elige tu Space</a>
@@ -146,7 +143,6 @@
             </div>
 
             <div class="agency-hero-visual">
-                <div class="agency-visual-glow"></div>
                 <div class="hero-hand-orb-wrapper" style="top: 18%; left: -8%;">
                     <img src="assets/droid.png" alt="" class="hero-hand-orb" style="width: 76px;">
                 </div>
@@ -157,339 +153,159 @@
         </div>
     </header>
 
-    <!-- Cinta de capacidades (reemplaza los logos de ejemplo) -->
-    <div class="logo-strip" aria-label="Canales y módulos">
-        <div class="logo-track">
-            <div class="logo-item" data-i18n="home2.strip.0">WhatsApp</div>
-            <div class="logo-item" data-i18n="home2.strip.1">Instagram</div>
-            <div class="logo-item" data-i18n="home2.strip.2">Messenger</div>
-            <div class="logo-item" data-i18n="home2.strip.3">Comentarios</div>
-            <div class="logo-item" data-i18n="home2.strip.4">Campañas</div>
-            <div class="logo-item" data-i18n="home2.strip.5">Links de pago</div>
-            <div class="logo-item" data-i18n="home2.strip.6">Portal del cliente</div>
-            <div class="logo-item" data-i18n="home2.strip.7">Modo 3D</div>
-            <!-- Duplicado para el desplazamiento infinito -->
-            <div class="logo-item" data-i18n="home2.strip.0" aria-hidden="true">WhatsApp</div>
-            <div class="logo-item" data-i18n="home2.strip.1" aria-hidden="true">Instagram</div>
-            <div class="logo-item" data-i18n="home2.strip.2" aria-hidden="true">Messenger</div>
-            <div class="logo-item" data-i18n="home2.strip.3" aria-hidden="true">Comentarios</div>
-            <div class="logo-item" data-i18n="home2.strip.4" aria-hidden="true">Campañas</div>
-            <div class="logo-item" data-i18n="home2.strip.5" aria-hidden="true">Links de pago</div>
-            <div class="logo-item" data-i18n="home2.strip.6" aria-hidden="true">Portal del cliente</div>
-            <div class="logo-item" data-i18n="home2.strip.7" aria-hidden="true">Modo 3D</div>
+    <!-- 2. Plataforma: el título queda fijo mientras pasan los cinco pilares -->
+    <section class="sh-section" id="plataforma">
+        <div class="container sh-split">
+            <div class="sh-sticky">
+                <h2 class="sh-h2" data-i18n="home2.platform.title">Todo tu negocio, conectado.</h2>
+                <p class="sh-body" data-i18n="home2.platform.intro">Tus canales, tus ventas, tu operación y tus cobros dejan de vivir en cinco herramientas distintas.</p>
+            </div>
+            <ol class="sh-list">
+                <li><span class="sh-num">01</span><div><h3 class="sh-h3" data-i18n="home2.platform.p1_title">Atiende</h3><p class="sh-body" data-i18n="home2.platform.p1_desc">WhatsApp, Instagram, Messenger y los comentarios de tus redes en una sola bandeja. La IA responde de día y de noche.</p></div></li>
+                <li><span class="sh-num">02</span><div><h3 class="sh-h3" data-i18n="home2.platform.p2_title">Vende</h3><p class="sh-body" data-i18n="home2.platform.p2_desc">Cada cliente queda calificado con la frase que lo demuestra y en su etapa del pipeline.</p></div></li>
+                <li><span class="sh-num">03</span><div><h3 class="sh-h3" data-i18n="home2.platform.p3_title">Opera</h3><p class="sh-body" data-i18n="home2.platform.p3_desc">Pedidos, tareas, turnos y sedes en el mismo lugar que tus ventas.</p></div></li>
+                <li><span class="sh-num">04</span><div><h3 class="sh-h3" data-i18n="home2.platform.p4_title">Cobra</h3><p class="sh-body" data-i18n="home2.platform.p4_desc">Cotizaciones, facturas y links de pago por WhatsApp. Tu cliente paga desde su portal.</p></div></li>
+                <li><span class="sh-num">05</span><div><h3 class="sh-h3" data-i18n="home2.platform.p5_title">Brilla</h3><p class="sh-body" data-i18n="home2.platform.p5_desc">Tu tienda, tu menú o tu portal, generados con lo que ya tienes en Pixy y con tu marca.</p></div></li>
+            </ol>
         </div>
-    </div>
-    <img src="assets/droid.png" class="floating-droid droid-flip"
-        style="top: 850px; right: 5%; width: 85px; animation-duration: 7s; opacity: 0.8; position: absolute;" alt="">
-
-    <main class="container" style="padding-top: 80px;">
-
-        <!-- 2. El problema -->
-        <section style="margin-bottom: 120px; text-align: center;">
-            <h2 class="section-title"><span data-i18n="problem.title_prefix">El problema real:</span> <span class="gradient-text" data-i18n="problem.title_gradient">Caos Operativo</span></h2>
-            <p class="subtitle" style="margin-bottom: 60px;" data-i18n="problem.subtitle">Tener tus herramientas dispersas te está costando clientes.</p>
-
-            <div class="grid-3">
-                <div class="glass-card">
-                    <div class="glass-card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                            <path d="M13 8l-4 4"></path>
-                            <path d="M13 12l-4-4"></path>
-                        </svg>
-                    </div>
-                    <h3 data-i18n="problem.card1_title">Canales Dispersos</h3>
-                    <p data-i18n="problem.card1_desc">WhatsApp en el celular, email en la web, Instagram en la app. Responder tarde es perder la venta.</p>
-                </div>
-                <div class="glass-card">
-                    <div class="glass-card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                            <circle cx="8.5" cy="7" r="4" />
-                            <polyline points="17 11 19 13 23 9" />
-                        </svg>
-                    </div>
-                    <h3 data-i18n="problem.card2_title">Seguimiento Manual</h3>
-                    <p data-i18n="problem.card2_desc">Depender de la memoria o de hojas de cálculo para saber en qué quedó cada cliente genera olvidos costosos.</p>
-                </div>
-                <div class="glass-card">
-                    <div class="glass-card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="12" y1="8" x2="12" y2="12"></line>
-                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                        </svg>
-                    </div>
-                    <h3 data-i18n="problem.card3_title">Procesos Rotos</h3>
-                    <p data-i18n="problem.card3_desc">Sin automatización, cada tarea depende de ti. Tu negocio no escala, solo te ocupas más.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. La solución: la Bandeja en vivo (la IA atiende, califica y mueve al cliente) -->
-        <section id="features" style="margin-bottom: 140px;">
-            <div class="grid-2 sh-solution">
-                <div style="text-align: left;">
-                    <h2 class="section-title sh-left" data-i18n="home2.solution.title">La solución: <br><span class="gradient-text">un sistema operativo para tu negocio</span></h2>
-                    <p class="sh-lead" data-i18n="home2.solution.subtitle">Pixy no es solo un CRM. Conecta tus canales, tus ventas, tu operación y tus cobros, con una IA que trabaja en todos ellos.</p>
-
-                    <div class="feature-row" style="margin-bottom: 24px;">
-                        <div class="feature-icon-small">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 data-i18n="home2.solution.f1_title">Bandeja omnicanal</h4>
-                            <p class="sh-muted" data-i18n="home2.solution.f1_desc">WhatsApp con la conexión oficial, Instagram, Messenger y los comentarios de tus redes en una sola bandeja para tu equipo.</p>
-                        </div>
-                    </div>
-                    <div class="feature-row" style="margin-bottom: 24px;">
-                        <div class="feature-icon-small">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 data-i18n="home2.solution.f2_title">IA que atiende y califica</h4>
-                            <p class="sh-muted" data-i18n="home2.solution.f2_desc">Responde de día y de noche con la información real de tu negocio y califica a cada cliente con la frase que lo demuestra.</p>
-                        </div>
-                    </div>
-                    <div class="feature-row">
-                        <div class="feature-icon-small">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="12" y1="20" x2="12" y2="10"></line>
-                                <line x1="18" y1="20" x2="18" y2="4"></line>
-                                <line x1="6" y1="20" x2="6" y2="16"></line>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 data-i18n="home2.solution.f3_title">Pipeline vivo</h4>
-                            <p class="sh-muted" data-i18n="home2.solution.f3_desc">Cada cliente queda en su etapa y la IA sugiere el siguiente paso. Tú decides.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ventana de la Bandeja (datos ficticios) -->
-                <div class="sh-window sh-inbox" data-inbox>
-                    <div class="sh-window-bar">
-                        <span><strong data-i18n="home2.inbox.title">Bandeja</strong> <span class="sh-dim">/</span> <span class="sh-dim" data-i18n="home2.inbox.all">Todos los canales</span></span>
-                        <span class="sh-mono"><span class="ds-orb sh-orb-xs" data-activity="think"><span class="ds-orb-halo"></span><span class="ds-orb-body"><span class="ds-orb-swirl"></span><span class="ds-orb-blob"></span><span class="ds-orb-shine"></span></span></span> <span data-i18n="home2.inbox.ai_on">IA atendiendo</span></span>
-                    </div>
-                    <div class="sh-inbox-body">
-                        <div class="sh-chat">
-                            <p class="sh-mono sh-center">Instagram · 9:41</p>
-                            <div class="sh-bubble ib-step" data-step="1" data-i18n="home2.inbox.m1">Hola, vi su publicación. ¿Tienen el modelo en negro y hacen envíos?</div>
-                            <div class="sh-bubble sh-bot ib-step" data-step="2" data-i18n="home2.inbox.m2">¡Hola, Laura! Sí, lo tenemos en negro en tallas M y L. Enviamos a todo el país en 2 a 4 días. ¿Te paso el link de pago?</div>
-                            <div class="sh-bubble ib-step" data-step="3" data-i18n="home2.inbox.m3">Sí, talla M porfa</div>
-                            <div class="sh-ai-group ib-step" data-step="4">
-                                <div class="sh-bubble sh-bot" data-i18n="home2.inbox.m4">Listo. Aquí tienes tu link de pago:</div>
-                                <div class="sh-paycard"><span class="sh-dim" data-i18n="home2.inbox.pay">Link de pago · Chaqueta negra, talla M</span><strong>$ 89,00</strong></div>
-                            </div>
-                            <div class="sh-typing" aria-hidden="true"><span></span><span></span><span></span></div>
-                        </div>
-                        <aside class="sh-client">
-                            <p class="sh-mono" data-i18n="home2.inbox.client">Cliente</p>
-                            <p class="sh-client-name">Laura Méndez</p>
-                            <p class="sh-dim sh-small" data-i18n="home2.inbox.first">Instagram · primera compra</p>
-                            <p class="sh-mono sh-gap" data-i18n="home2.inbox.score">Calificación de la IA</p>
-                            <p class="sh-temp"><span class="sh-dot sh-warm"></span><span class="ib-temp" data-i18n="home2.inbox.warm">Tibia</span></p>
-                            <p class="sh-dim sh-small"><span data-i18n="home2.inbox.evidence">Evidencia:</span> <span class="sh-fg">«<span data-i18n="home2.inbox.m3">Sí, talla M porfa</span>»</span></p>
-                            <p class="sh-mono sh-gap" data-i18n="home2.inbox.pipeline">Pipeline</p>
-                            <p class="sh-stage"><span class="ib-stage" data-i18n="home2.inbox.stage1">Interesado</span></p>
-                        </aside>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. Spaces: los seis activos en la plataforma -->
-        <section id="spaces" style="margin-bottom: 140px; scroll-margin-top: 90px;">
-            <div style="text-align: center; margin-bottom: 56px;">
-                <h2 class="section-title" style="max-width: 900px;" data-i18n="home2.spaces.title">Un Space para cada industria. <span class="gradient-text">Una sola plataforma.</span></h2>
-                <p class="subtitle" data-i18n="home2.spaces.subtitle">Cada Space trae los módulos, el lenguaje y los flujos de tu industria, sobre el mismo núcleo de Pixy.</p>
-            </div>
-
-            <div class="sh-spaces">
-                <a href="spaces.html" class="glass-card sh-space" style="--sp:#FF6A2B">
-                    <img src="assets/elementos de spaces/resto.png" alt="" class="sh-space-img" loading="lazy">
-                    <span class="status-badge active" data-i18n="common.available">Disponible</span>
-                    <h3>Space Resto</h3>
-                    <p data-i18n="home2.spaces.resto">De la mesa a la cocina y a la caja, sin un papel.</p>
-                </a>
-                <a href="space-agency.html" class="glass-card sh-space" style="--sp:#8B5CF6">
-                    <img src="assets/elementos de spaces/agency.png" alt="" class="sh-space-img" loading="lazy">
-                    <span class="status-badge active" data-i18n="common.available">Disponible</span>
-                    <h3>Space Agencias</h3>
-                    <p data-i18n="home2.spaces.agency">Clientes, proyectos, cobros y resultados, conectados.</p>
-                </a>
-                <a href="spaces.html" class="glass-card sh-space" style="--sp:#2E7BFF">
-                    <img src="assets/elementos de spaces/reatil.png" alt="" class="sh-space-img" loading="lazy">
-                    <span class="status-badge active" data-i18n="common.available">Disponible</span>
-                    <h3>Space Tiendas</h3>
-                    <p data-i18n="home2.spaces.retail">Tu tienda en línea lista hoy y cada comentario convertido en venta.</p>
-                </a>
-                <a href="spaces.html" class="glass-card sh-space" style="--sp:#10D9A0">
-                    <img src="assets/elementos de spaces/real state.png" alt="" class="sh-space-img" loading="lazy">
-                    <span class="status-badge active" data-i18n="common.available">Disponible</span>
-                    <h3>Space Inmobiliaria</h3>
-                    <p data-i18n="home2.spaces.realestate">Tu inventario publicado con tu marca y tus arriendos liquidados en un clic.</p>
-                </a>
-                <a href="spaces.html" class="glass-card sh-space" style="--sp:#FFC233">
-                    <span class="sh-space-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/><path d="M22 10v6"/></svg>
-                    </span>
-                    <span class="status-badge active" data-i18n="common.available">Disponible</span>
-                    <h3>Pixy Edu</h3>
-                    <p data-i18n="home2.spaces.edu">El colegio entero en una plataforma: académico, familias, convivencia y pensiones.</p>
-                </a>
-                <a href="spaces.html" class="glass-card sh-space" style="--sp:#00E0FF">
-                    <img src="assets/elementos de spaces/saas.png" alt="" class="sh-space-img" loading="lazy">
-                    <span class="status-badge active" data-i18n="common.available">Disponible</span>
-                    <h3>Space SaaS</h3>
-                    <p data-i18n="home2.spaces.saas">Usuarios, planes, cobro recurrente y soporte, conectados.</p>
-                </a>
-            </div>
-            <p style="text-align: center; margin-top: 40px;">
-                <a href="spaces.html" class="btn-neon-outline" data-warp-click="nudge" data-i18n="home2.spaces.all">Ver todos los Spaces</a>
-            </p>
-        </section>
-
-    </main>
-
-    <!-- 5. La IA de Pixy: el tramo más rápido del viaje (data-warp acelera el fondo mientras se recorre) -->
-    <section class="sh-ai" data-warp="9" aria-labelledby="sh-ai-title">
-        <div class="container">
-            <div style="text-align: center;">
-                <p class="sh-kicker" data-i18n="home2.ai.kicker">La IA de Pixy</p>
-                <h2 id="sh-ai-title" class="section-title sh-ai-title" data-i18n="home2.ai.title">Una sola IA. <span class="gradient-text">Todo tu negocio.</span></h2>
-            </div>
-
-            <div class="sh-orbit" aria-hidden="true">
-                <span class="sh-ring" style="--s:1; --t:46s"><i></i></span>
-                <span class="sh-ring sh-rev" style="--s:.76; --t:34s"><i></i></span>
-                <span class="sh-ring" style="--s:.54; --t:26s"><i></i></span>
-                <span class="ds-orb sh-orb-main" data-activity="flow"><span class="ds-orb-halo"></span><span class="ds-orb-body"><span class="ds-orb-swirl"></span><span class="ds-orb-blob"></span><span class="ds-orb-shine"></span></span></span>
-            </div>
-
-            <div class="sh-caps">
-                <div class="sh-cap"><span class="sh-mono">01</span><h3 data-i18n="home2.ai.c1_title">Atiende sola, en todos tus canales.</h3><p data-i18n="home2.ai.c1_desc">WhatsApp, Instagram y Messenger con la conexión oficial, y los comentarios de tus redes. De día y de noche; cuando hace falta una persona, pasa a tu equipo.</p></div>
-                <div class="sh-cap"><span class="sh-mono">02</span><h3 data-i18n="home2.ai.c2_title">Entiende cada conversación.</h3><p data-i18n="home2.ai.c2_desc">Venta, soporte, reserva, cotización o admisión, en cualquier industria. Califica a cada cliente con la frase que lo demuestra.</p></div>
-                <div class="sh-cap"><span class="sh-mono">03</span><h3 data-i18n="home2.ai.c3_title">Aprende tu negocio.</h3><p data-i18n="home2.ai.c3_desc">Documentos, servicios y respuestas de tu equipo la hacen más precisa. Para cada respuesta lee solo lo que necesita.</p></div>
-                <div class="sh-cap"><span class="sh-mono">04</span><h3 data-i18n="home2.ai.c4_title">Te acompaña en cada módulo.</h3><p data-i18n="home2.ai.c4_desc">La misma IA en la bandeja, el pipeline, el catálogo, las tareas y los cobros.</p></div>
-            </div>
-        </div>
-
-        <!-- Cinta del conocimiento: la llena js/spaces-home.js con el idioma activo -->
-        <div class="sh-marquee" aria-hidden="true"><div class="sh-marquee-track" data-marquee="home2.ai.words"></div></div>
-        <p class="sh-mono sh-center" style="margin-top: 20px;" data-i18n="home2.ai.foot">Mientras más la usas, más sabe de tu negocio</p>
     </section>
 
-    <main class="container">
-
-        <!-- 6. Modo 3D -->
-        <section id="modo-3d" style="margin: 140px 0;">
-            <div class="grid-2 sh-m3d-head">
-                <div>
-                    <p class="sh-kicker" data-i18n="home2.m3d.kicker">Modo 3D</p>
-                    <h2 class="section-title sh-left" data-i18n="home2.m3d.title">Mira tu negocio <span class="gradient-text">vivo.</span></h2>
-                </div>
-                <p class="sh-lead" data-i18n="home2.m3d.desc">Tu sede como una ciudad en miniatura: cada área es un edificio con lo que está pasando ahora, con los datos reales de tu negocio.</p>
-            </div>
-            <div class="sh-m3d" data-iso-city>
-                <p class="sh-mono sh-m3d-note" data-i18n="home2.m3d.note">Vista provisional · grabación pendiente</p>
-                <div class="sh-spot" style="left:20%;top:30%"><b data-i18n="home2.m3d.h1">Atención</b><span data-i18n="home2.m3d.h1d">3 asesores · IA atendiendo</span></div>
-                <div class="sh-spot" style="left:48%;top:17%"><b data-i18n="home2.m3d.h2">Ventas</b><span data-i18n="home2.m3d.h2d">14 tratos · 3 calientes</span></div>
-                <div class="sh-spot" style="left:78%;top:30%"><b data-i18n="home2.m3d.h3">Cobros</b><span data-i18n="home2.m3d.h3d">2 facturas por vencer</span></div>
-                <div class="sh-spot" style="left:25%;top:72%"><b data-i18n="home2.m3d.h4">Catálogo</b><span data-i18n="home2.m3d.h4d">12 pedidos hoy</span></div>
-                <div class="sh-spot" style="left:55%;top:82%"><b data-i18n="home2.m3d.h5">Tareas</b><span data-i18n="home2.m3d.h5d">8 en curso · 2 para hoy</span></div>
-                <div class="sh-spot" style="left:82%;top:66%"><b data-i18n="home2.m3d.h6">Social</b><span data-i18n="home2.m3d.h6d">5 comentarios convertidos</span></div>
-            </div>
-        </section>
-
-        <!-- 7. Cómo empezar -->
-        <section id="como-funciona" style="margin-bottom: 140px;">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 16px;" data-i18n="steps.main_title">Cómo empezar</h2>
-            <p class="subtitle" style="margin-bottom: 48px;" data-i18n="steps.main_subtitle">Tres pasos simples para transformar tu operación.</p>
-
-            <div class="steps-flow-container">
-                <div class="step-card" data-step="01">
-                    <div class="step-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="3" y1="9" x2="21" y2="9"></line>
-                            <line x1="9" y1="21" x2="9" y2="9"></line>
-                        </svg>
+    <!-- 3. Spaces: viaje en profundidad, un destino por tramo de scroll (js/spaces-home.js) -->
+    <section class="sh-journey" id="spaces" data-warp="2" data-no-reveal>
+        <div class="sh-journey-pin">
+            <div class="container sh-journey-grid">
+                <div class="sh-journey-head">
+                    <h2 class="sh-h2" data-i18n="home2.spaces.title">Un Space para cada industria.</h2>
+                    <p class="sh-body" data-i18n="home2.spaces.intro">Los módulos, el lenguaje y los flujos de tu negocio, sobre la misma plataforma.</p>
+                    <div class="sh-journey-meter" aria-hidden="true">
+                        <span class="sh-journey-count"><b>01</b> / 06</span>
+                        <span class="sh-journey-track"><i></i></span>
                     </div>
-                    <h3 class="step-title" data-i18n="home2.steps.s1_title">Elige tu Space</h3>
-                    <p class="step-desc" data-i18n="home2.steps.s1_desc">Restaurante, tienda, inmobiliaria, colegio, agencia o software: tu Space trae los módulos y flujos de tu industria.</p>
                 </div>
-                <div class="step-card" data-step="02">
-                    <div class="step-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-                        </svg>
-                    </div>
-                    <h3 class="step-title" data-i18n="home2.steps.s2_title">Conecta tus canales</h3>
-                    <p class="step-desc" data-i18n="home2.steps.s2_desc">WhatsApp con la conexión oficial de Meta, Instagram y Messenger, en minutos y acompañado por nuestro equipo.</p>
-                </div>
-                <div class="step-card" data-step="03">
-                    <div class="step-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
-                            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
-                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-                        </svg>
-                    </div>
-                    <h3 class="step-title" data-i18n="home2.steps.s3_title">Enséñale tu negocio a la IA</h3>
-                    <p class="step-desc" data-i18n="home2.steps.s3_desc">Carga tus servicios, precios y documentos una vez. La IA atiende, califica y te acompaña en cada módulo.</p>
+                <div class="sh-stage">
+                    <article class="sh-dest">
+                        <img src="assets/elementos de spaces/resto.png" alt="" loading="lazy">
+                        <h3 class="sh-h3l">Space Resto</h3>
+                        <p class="sh-body" data-i18n="home2.spaces.resto">De la mesa a la cocina y a la caja, sin un papel.</p>
+                        <p class="sh-small" data-i18n="home2.spaces.resto_m">Menú digital · Pedido en mesa por QR · Cocina · Cobro en mesa</p>
+                        <a href="spaces.html" class="sh-link" data-i18n="home2.spaces.link">Conocer este Space</a>
+                    </article>
+                    <article class="sh-dest">
+                        <img src="assets/elementos de spaces/agency.png" alt="" loading="lazy">
+                        <h3 class="sh-h3l">Space Agencias</h3>
+                        <p class="sh-body" data-i18n="home2.spaces.agency">Clientes, proyectos, cobros y resultados, conectados.</p>
+                        <p class="sh-small" data-i18n="home2.spaces.agency_m">Proyectos y tareas · Portal del cliente · Cobros recurrentes · Marca blanca</p>
+                        <a href="space-agency.html" class="sh-link" data-i18n="home2.spaces.link">Conocer este Space</a>
+                    </article>
+                    <article class="sh-dest">
+                        <img src="assets/elementos de spaces/reatil.png" alt="" loading="lazy">
+                        <h3 class="sh-h3l">Space Tiendas</h3>
+                        <p class="sh-body" data-i18n="home2.spaces.retail">Tu tienda en línea lista hoy y cada comentario convertido en venta.</p>
+                        <p class="sh-small" data-i18n="home2.spaces.retail_m">Tienda generada · Pago en línea o por WhatsApp · Comentarios que venden · Dominio propio</p>
+                        <a href="spaces.html" class="sh-link" data-i18n="home2.spaces.link">Conocer este Space</a>
+                    </article>
+                    <article class="sh-dest">
+                        <img src="assets/elementos de spaces/real state.png" alt="" loading="lazy">
+                        <h3 class="sh-h3l">Space Inmobiliaria</h3>
+                        <p class="sh-body" data-i18n="home2.spaces.realestate">Tu inventario publicado con tu marca y tus arriendos liquidados en un clic.</p>
+                        <p class="sh-small" data-i18n="home2.spaces.realestate_m">Portal inmobiliario · Inventario · Contratos y recaudo · Liquidación al propietario</p>
+                        <a href="spaces.html" class="sh-link" data-i18n="home2.spaces.link">Conocer este Space</a>
+                    </article>
+                    <article class="sh-dest">
+                        <h3 class="sh-h3l">Pixy Edu</h3>
+                        <p class="sh-body" data-i18n="home2.spaces.edu">El colegio entero en una plataforma: académico, familias, convivencia y pensiones.</p>
+                        <p class="sh-small" data-i18n="home2.spaces.edu_m">Notas y periodos · Boletines y carnets QR · Portal de familias · Pensiones en línea</p>
+                        <a href="spaces.html" class="sh-link" data-i18n="home2.spaces.link">Conocer este Space</a>
+                    </article>
+                    <article class="sh-dest">
+                        <img src="assets/elementos de spaces/saas.png" alt="" loading="lazy">
+                        <h3 class="sh-h3l">Space SaaS</h3>
+                        <p class="sh-body" data-i18n="home2.spaces.saas">Usuarios, planes, cobro recurrente y soporte, conectados.</p>
+                        <p class="sh-small" data-i18n="home2.spaces.saas_m">Usuarios y planes · Suscripciones · Tickets de soporte · Sprints y tareas</p>
+                        <a href="spaces.html" class="sh-link" data-i18n="home2.spaces.link">Conocer este Space</a>
+                    </article>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 8. Planes (resumen; el detalle está en pricing.html) -->
-        <section id="planes" style="margin-bottom: 140px;">
-            <div style="text-align: center;">
-                <p class="sh-kicker" data-i18n="home2.plans.kicker">Planes</p>
-                <h2 class="section-title" data-i18n="home2.plans.title">Eliges tu industria. <span class="gradient-text">Eliges tu ritmo.</span></h2>
-                <p class="subtitle" data-i18n="home2.plans.subtitle">Tu Space, un nivel y solo los complementos que necesitas. Cada empresa paga en su moneda.</p>
+    <!-- 4. La IA: el tramo más rápido del viaje (data-warp mantiene el impulso del fondo) -->
+    <section class="sh-section sh-ai-band" data-warp="9">
+        <div class="container">
+            <h2 class="sh-h2 sh-center" data-i18n="home2.ai.title">Una sola IA para todo tu negocio.</h2>
+            <div class="sh-orb-wrap" aria-hidden="true">
+                <span class="ds-orb sh-orb-main" data-activity="flow"><span class="ds-orb-halo"></span><span class="ds-orb-body"><span class="ds-orb-swirl"></span><span class="ds-orb-blob"></span><span class="ds-orb-shine"></span></span></span>
+            </div>
+            <div class="sh-grid2">
+                <div><h3 class="sh-h3" data-i18n="home2.ai.c1_title">Atiende sola</h3><p class="sh-body" data-i18n="home2.ai.c1_desc">En todos tus canales, con la conexión oficial. Cuando hace falta una persona, pasa la conversación a tu equipo.</p></div>
+                <div><h3 class="sh-h3" data-i18n="home2.ai.c2_title">Entiende y califica</h3><p class="sh-body" data-i18n="home2.ai.c2_desc">Venta, soporte, reserva o cotización, en cualquier industria. Cada cliente queda calificado con la frase que lo demuestra.</p></div>
+                <div><h3 class="sh-h3" data-i18n="home2.ai.c3_title">Aprende tu negocio</h3><p class="sh-body" data-i18n="home2.ai.c3_desc">Servicios, precios, documentos y respuestas de tu equipo. Mientras más la usas, más precisa es.</p></div>
+                <div><h3 class="sh-h3" data-i18n="home2.ai.c4_title">Está en cada módulo</h3><p class="sh-body" data-i18n="home2.ai.c4_desc">La misma IA en la bandeja, el pipeline, el catálogo, las tareas y los cobros.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Modo 3D -->
+    <section class="sh-section" id="modo-3d">
+        <div class="container sh-split">
+            <h2 class="sh-h2" data-i18n="home2.m3d.title">Mira tu negocio vivo.</h2>
+            <div>
+                <p class="sh-body sh-lead" data-i18n="home2.m3d.desc">El Modo 3D convierte tu sede en una ciudad en miniatura: cada área es un edificio con lo que está pasando ahora, con los datos reales de tu negocio.</p>
+                <a href="contact.html" class="sh-link" data-warp-click="hop" data-i18n="home2.m3d.link">Míralo en tu demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Cómo empezar -->
+    <section class="sh-section">
+        <div class="container sh-split">
+            <div class="sh-sticky">
+                <h2 class="sh-h2" data-i18n="home2.steps.title">Empieza en tres pasos.</h2>
+            </div>
+            <ol class="sh-list">
+                <li><span class="sh-num">01</span><div><h3 class="sh-h3" data-i18n="home2.steps.s1_title">Elige tu Space</h3><p class="sh-body" data-i18n="home2.steps.s1_desc">Restaurante, tienda, inmobiliaria, colegio, agencia o software: tu Space trae los módulos de tu industria.</p></div></li>
+                <li><span class="sh-num">02</span><div><h3 class="sh-h3" data-i18n="home2.steps.s2_title">Conecta tus canales</h3><p class="sh-body" data-i18n="home2.steps.s2_desc">WhatsApp con la conexión oficial de Meta, Instagram y Messenger, en minutos y con nuestro equipo a tu lado.</p></div></li>
+                <li><span class="sh-num">03</span><div><h3 class="sh-h3" data-i18n="home2.steps.s3_title">Enséñale tu negocio a la IA</h3><p class="sh-body" data-i18n="home2.steps.s3_desc">Carga tus servicios, precios y documentos una vez. Desde ahí atiende, califica y te acompaña.</p></div></li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- 7. Planes (resumen; el detalle está en pricing.html) -->
+    <section class="sh-section" id="planes">
+        <div class="container">
+            <div class="sh-head">
+                <h2 class="sh-h2" data-i18n="home2.plans.title">Eliges tu industria. Eliges tu ritmo.</h2>
+                <p class="sh-body" data-i18n="home2.plans.intro">Tu Space, un nivel y solo los complementos que necesitas. Cada empresa paga en su moneda.</p>
             </div>
             <div class="sh-plans" role="tablist" aria-label="Niveles">
-                <button type="button" class="glass-card sh-plan is-active" role="tab" aria-selected="true">
-                    <span class="sh-plan-name" data-i18n="home2.plans.l1">Esencial</span>
-                    <span class="sh-plan-users" data-i18n="home2.plans.l1_users">Hasta 3 usuarios</span>
-                    <span class="sh-plan-phrase" data-i18n="home2.plans.l1_phrase">Todo tu negocio, ordenado.</span>
+                <button type="button" class="sh-plan is-active" role="tab" aria-selected="true">
+                    <span class="sh-h3l" data-i18n="home2.plans.l1">Esencial</span>
+                    <span class="sh-small" data-i18n="home2.plans.l1_users">Hasta 3 usuarios</span>
+                    <span class="sh-body" data-i18n="home2.plans.l1_phrase">Todo tu negocio, ordenado.</span>
                 </button>
-                <button type="button" class="glass-card sh-plan" role="tab" aria-selected="false">
-                    <span class="sh-plan-name" data-i18n="home2.plans.l2">Pro</span>
-                    <span class="sh-plan-users" data-i18n="home2.plans.l2_users">Hasta 10 usuarios</span>
-                    <span class="sh-plan-phrase" data-i18n="home2.plans.l2_phrase">Tu negocio, en piloto automático.</span>
+                <button type="button" class="sh-plan" role="tab" aria-selected="false">
+                    <span class="sh-h3l" data-i18n="home2.plans.l2">Pro</span>
+                    <span class="sh-small" data-i18n="home2.plans.l2_users">Hasta 10 usuarios</span>
+                    <span class="sh-body" data-i18n="home2.plans.l2_phrase">Tu negocio, en piloto automático.</span>
                 </button>
-                <button type="button" class="glass-card sh-plan" role="tab" aria-selected="false">
-                    <span class="sh-plan-name" data-i18n="home2.plans.l3">Total</span>
-                    <span class="sh-plan-users" data-i18n="home2.plans.l3_users">Hasta 20 usuarios</span>
-                    <span class="sh-plan-phrase" data-i18n="home2.plans.l3_phrase">Tu operación completa, en cada sede.</span>
+                <button type="button" class="sh-plan" role="tab" aria-selected="false">
+                    <span class="sh-h3l" data-i18n="home2.plans.l3">Total</span>
+                    <span class="sh-small" data-i18n="home2.plans.l3_users">Hasta 20 usuarios</span>
+                    <span class="sh-body" data-i18n="home2.plans.l3_phrase">Tu operación completa, en cada sede.</span>
                 </button>
             </div>
-            <p style="text-align: center; margin-top: 36px;">
-                <a href="pricing.html" class="btn-neon-outline" data-warp-click="nudge" data-i18n="home2.plans.cta">Ver planes</a>
-            </p>
-        </section>
+            <a href="pricing.html" class="sh-link" data-warp-click="nudge" data-i18n="home2.plans.cta">Ver planes</a>
+        </div>
+    </section>
 
-        <!-- 9. Cierre -->
-        <section class="glass-card sh-final" style="margin-bottom: 80px;">
-            <h2 data-i18n="home2.cta.title">Tu negocio nunca se detiene. <span class="gradient-text">Pixy tampoco.</span></h2>
-            <p data-i18n="home2.cta.subtitle">Te mostramos tu Space con los flujos de tu industria en una demo guiada.</p>
+    <!-- 8. Cierre -->
+    <section class="sh-section sh-final">
+        <div class="container">
+            <h2 class="sh-h2" data-i18n="home2.cta.title">Tu negocio nunca se detiene. Pixy tampoco.</h2>
+            <p class="sh-body" data-i18n="home2.cta.subtitle">Te mostramos tu Space en una demo guiada.</p>
             <a href="contact.html" class="btn-neon" data-warp-click="departure" data-i18n="home2.cta.button">Agenda tu demo</a>
-        </section>
-
-    </main>
-
+        </div>
+    </section>
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">

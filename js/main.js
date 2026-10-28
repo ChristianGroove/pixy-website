@@ -340,7 +340,9 @@ function initScrollAnimations() {
         // Also skip the main nav to avoid hiding it
         if (!el.classList.contains('fade-in-visible') &&
             !el.classList.contains('hero-content-left') &&
-            !el.closest('.nav')) {
+            !el.closest('.nav') &&
+            // Secciones con su propia animación de scroll (pines de GSAP): un transform aquí rompe el pin
+            !el.closest('[data-no-reveal]')) {
 
             el.classList.add('fade-in-hidden');
             observer.observe(el);
