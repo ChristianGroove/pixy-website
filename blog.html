@@ -39,7 +39,7 @@
     <meta name="twitter:image" content="https://pixy.com.co/assets/og-image.png">
 
     <!-- Dependencies -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap"
         rel="stylesheet">
     <style>
         body {
@@ -56,9 +56,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/spaces-home.css">
 </head>
 
-<body class="blog-page">
+<body class="blog-page spaces-face">
     <div class="mouse-spotlight"></div>
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
@@ -114,11 +115,8 @@
         <!-- Newsletter CTA -->
         <div class="glass-card"
             style="margin-bottom: 80px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; padding: 40px;">
-            <h3 style="font-size: 1.5rem; margin-bottom: 12px;" data-i18n="blog.newsletter_title">Únete a +2,000 líderes
-            </h3>
-            <p style="margin: 0 0 24px; color: var(--text-secondary);" data-i18n="blog.newsletter_desc">Recibe
-                estrategias de automatización
-                semanalmente.</p>
+            <h3 style="font-size: 1.5rem; margin-bottom: 12px;" data-i18n="blog.newsletter_title">Ideas para hacer crecer tu negocio</h3>
+            <p style="margin: 0 0 24px; color: var(--text-secondary);" data-i18n="blog.newsletter_desc">Estrategias de atención, ventas y automatización, en tu correo.</p>
             <form id="newsletter-form" style="display: flex; gap: 12px;">
                 <div class="neon-input-wrapper" style="flex: 1;">
                     <input type="email" placeholder="tu@email.com" data-i18n-placeholder="common.placeholder_email" class="neon-input" style="padding: 12px 16px;">
@@ -633,6 +631,8 @@
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
+    <!-- Fondo espacial (el del login de la plataforma) -->
+    <script src="js/space-bg.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>

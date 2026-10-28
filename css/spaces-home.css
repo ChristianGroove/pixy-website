@@ -573,3 +573,46 @@
     .sp-mods > div { grid-template-columns: 1fr; gap: 4px; }
     .sp-form { grid-template-columns: 1fr; }
 }
+
+/* ============================================
+   Blog, artículos y legales con el sistema de la cara Spaces
+   ============================================ */
+.spaces-face.blog-page h1, .spaces-face.blog-page h2, .spaces-face.blog-page h3,
+.spaces-face.blog-post-page h1, .spaces-face.blog-post-page h2,
+.spaces-face.legal-page h1, .spaces-face.legal-page h2 {
+    font-family: var(--sh-font-display);
+    letter-spacing: -0.025em;
+    font-weight: 700;
+}
+.spaces-face.blog-post-page h1, .spaces-face.blog-page h1, .spaces-face.legal-page h1 { line-height: 1.1 !important; }
+/* Lectura cómoda en artículos y legales: texto en Inter con buen interlineado */
+.spaces-face.blog-post-page p, .spaces-face.blog-post-page li,
+.spaces-face.legal-page p, .spaces-face.legal-page li { line-height: 1.75; }
+/* Sin la línea degradada de las tarjetas de cristal */
+.spaces-face .glass-card::before { display: none; }
+
+/* Sin insignias: la etiqueta suelta del encabezado se oculta y la categoría de cada artículo queda como texto */
+.spaces-face .badge { display: none !important; }
+.spaces-face .blog-category-badge { background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; color: var(--brand-pink) !important; font-size: 13px; font-weight: 600; letter-spacing: 0; text-transform: none; }
+
+.spaces-face.blog-page h3 { font-size: 19px !important; line-height: 1.3 !important; text-align: left !important; font-weight: 600; }
+.spaces-face.blog-page .blog-card p, .spaces-face.blog-page .blog-card { text-align: left; }
+
+/* Sin degradados decorativos en artículos */
+.spaces-face .article-hero-bg { display: none !important; }
+
+/* Legales: encabezado compacto (el .container del sitio trae min-height de pantalla) y tarjetas planas */
+.spaces-face.legal-page > div.container { min-height: 0 !important; padding-top: 160px !important; padding-bottom: 48px !important; }
+.spaces-face.legal-page .glass-card { background: var(--bg-card) !important; }
+
+/* El índice de los legales ya trae el número en el texto */
+.spaces-face.legal-page .glass-card ol { list-style: none; padding-left: 0; }
+
+/* Móvil: palabras largas, correos y tablas no desbordan */
+.spaces-face.blog-post-page, .spaces-face.legal-page, .spaces-face.blog-page { overflow-wrap: anywhere; }
+.spaces-face.legal-page table { display: block; max-width: 100%; overflow-x: auto; }
+@media (max-width: 600px) {
+    .spaces-face.blog-post-page h1, .spaces-face.legal-page h1 { font-size: 28px !important; hyphens: auto; }
+    .spaces-face.legal-page .glass-card { padding: 20px !important; }
+}
+
