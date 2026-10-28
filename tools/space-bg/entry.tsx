@@ -22,6 +22,7 @@ let target = 0;
 let lastFrame = 0;
 let sectionBoost = 0;
 let sectionCurrent = 0;
+let lastDrift = 1;
 
 function siteDriftScale() {
   const now = performance.now();
@@ -30,7 +31,8 @@ function siteDriftScale() {
   boost += (target - boost) * Math.min(1, dt * 6);
   target *= Math.pow(0.02, dt);
   sectionCurrent += (sectionBoost - sectionCurrent) * Math.min(1, dt * 2.5);
-  return driftScale() + boost + sectionCurrent;
+  lastDrift = driftScale() + boost + sectionCurrent;
+  return lastDrift;
 }
 
 let lastY = window.scrollY;
@@ -103,7 +105,8 @@ function mount() {
   new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 
   watchSections();
-  (window as unknown as { pixySpace: unknown }).pixySpace = { warp: playWarp };
+  // drift: velocidad del último fotograma (1 = crucero); la lee el objeto 3D para girar con el warp
+  (window as unknown as { pixySpace: unknown }).pixySpace = { warp: playWarp, drift: () => lastDrift };
 }
 
 if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mount);

@@ -63,7 +63,7 @@
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap"
         rel="stylesheet">
 
     <!-- CSS -->
@@ -170,65 +170,79 @@
         </div>
     </section>
 
-    <!-- 3. Spaces: viaje en profundidad, un destino por tramo de scroll (js/spaces-home.js) -->
-    <section class="sh-journey" id="spaces" data-warp="2" data-no-reveal>
-        <div class="sh-journey-pin">
-            <div class="container sh-journey-grid">
-                <div class="sh-journey-head">
-                    <h2 class="sh-h2" data-i18n="home2.spaces.title">Un Space para cada industria.</h2>
-                    <p class="sh-body" data-i18n="home2.spaces.intro">Los módulos, el lenguaje y los flujos de tu negocio, sobre la misma plataforma.</p>
-                    <div class="sh-journey-meter" aria-hidden="true">
-                        <span class="sh-journey-count"><b>01</b> / 06</span>
-                        <span class="sh-journey-track"><i></i></span>
-                    </div>
+    <!-- 3. Spaces: viaje en tres capas de profundidad (adaptado del sitio oscuro, js/spaces-home.js):
+         nombre gigante al fondo que corre de derecha a izquierda, ilustración en medio y texto al frente. -->
+    <section class="sv" id="spaces" data-warp="2" data-no-reveal>
+        <div class="sv-stage">
+            <div class="sv-words">
+            <p class="sv-word" aria-hidden="true"><span class="sv-word-entry"><span class="sv-word-track" style="color:#FF6A2B">Resto</span></span></p>
+            <p class="sv-word" aria-hidden="true"><span class="sv-word-entry"><span class="sv-word-track" style="color:#8B5CF6">Agencias</span></span></p>
+            <p class="sv-word" aria-hidden="true"><span class="sv-word-entry"><span class="sv-word-track" style="color:#2E7BFF">Tiendas</span></span></p>
+            <p class="sv-word" aria-hidden="true"><span class="sv-word-entry"><span class="sv-word-track" style="color:#10D9A0">Inmobiliaria</span></span></p>
+            <p class="sv-word" aria-hidden="true"><span class="sv-word-entry"><span class="sv-word-track" style="color:#FFC233">Edu</span></span></p>
+            <p class="sv-word" aria-hidden="true"><span class="sv-word-entry"><span class="sv-word-track" style="color:#00E0FF">SaaS</span></span></p>
+            </div>
+            <!-- Objeto 3D en cromo (js/space-models.js, solo escritorio) -->
+            <div class="sv-model" aria-hidden="true"></div>
+            <div class="container sv-top">
+                <h2 class="sv-title" data-i18n="home2.spaces.title">Un Space para cada industria.</h2>
+                <div class="sv-meter" aria-hidden="true">
+                    <span class="sv-count"><b>01</b> / 06</span>
+                    <span class="sv-track"><i></i></span>
                 </div>
-                <div class="sh-stage">
-                    <article class="sh-dest">
-                        <img src="assets/elementos de spaces/resto.png" alt="" loading="lazy">
-                        <h3 class="sh-h3l">Space Resto</h3>
-                        <p class="sh-body" data-i18n="home2.spaces.resto">De la mesa a la cocina y a la caja, sin un papel.</p>
+            </div>
+            <div class="container sv-stations">
+                <article class="sv-station" style="--a:#FF6A2B" aria-label="Space Resto">
+                    <div class="sv-station-entry">
+                        <h3 class="sh-display">Space Resto</h3>
+                        <p class="sh-body sv-promise" data-i18n="home2.spaces.resto">De la mesa a la cocina y a la caja, sin un papel.</p>
                         <p class="sh-small" data-i18n="home2.spaces.resto_m">Menú digital · Pedido en mesa por QR · Cocina · Cobro en mesa</p>
-                        <a href="spaces.html" class="sh-link" data-i18n="home2.spaces.link">Conocer este Space</a>
-                    </article>
-                    <article class="sh-dest">
-                        <img src="assets/elementos de spaces/agency.png" alt="" loading="lazy">
-                        <h3 class="sh-h3l">Space Agencias</h3>
-                        <p class="sh-body" data-i18n="home2.spaces.agency">Clientes, proyectos, cobros y resultados, conectados.</p>
+                        <a href="spaces.html" class="sh-link" data-warp-click="hop" data-i18n="home2.spaces.link">Conocer este Space</a>
+                    </div>
+                </article>
+                <article class="sv-station" style="--a:#8B5CF6" aria-label="Space Agencias">
+                    <div class="sv-station-entry">
+                        <h3 class="sh-display">Space Agencias</h3>
+                        <p class="sh-body sv-promise" data-i18n="home2.spaces.agency">Clientes, proyectos, cobros y resultados, conectados.</p>
                         <p class="sh-small" data-i18n="home2.spaces.agency_m">Proyectos y tareas · Portal del cliente · Cobros recurrentes · Marca blanca</p>
-                        <a href="space-agency.html" class="sh-link" data-i18n="home2.spaces.link">Conocer este Space</a>
-                    </article>
-                    <article class="sh-dest">
-                        <img src="assets/elementos de spaces/reatil.png" alt="" loading="lazy">
-                        <h3 class="sh-h3l">Space Tiendas</h3>
-                        <p class="sh-body" data-i18n="home2.spaces.retail">Tu tienda en línea lista hoy y cada comentario convertido en venta.</p>
+                        <a href="space-agency.html" class="sh-link" data-warp-click="hop" data-i18n="home2.spaces.link">Conocer este Space</a>
+                    </div>
+                </article>
+                <article class="sv-station" style="--a:#2E7BFF" aria-label="Space Tiendas">
+                    <div class="sv-station-entry">
+                        <h3 class="sh-display">Space Tiendas</h3>
+                        <p class="sh-body sv-promise" data-i18n="home2.spaces.retail">Tu tienda en línea lista hoy y cada comentario convertido en venta.</p>
                         <p class="sh-small" data-i18n="home2.spaces.retail_m">Tienda generada · Pago en línea o por WhatsApp · Comentarios que venden · Dominio propio</p>
-                        <a href="spaces.html" class="sh-link" data-i18n="home2.spaces.link">Conocer este Space</a>
-                    </article>
-                    <article class="sh-dest">
-                        <img src="assets/elementos de spaces/real state.png" alt="" loading="lazy">
-                        <h3 class="sh-h3l">Space Inmobiliaria</h3>
-                        <p class="sh-body" data-i18n="home2.spaces.realestate">Tu inventario publicado con tu marca y tus arriendos liquidados en un clic.</p>
+                        <a href="spaces.html" class="sh-link" data-warp-click="hop" data-i18n="home2.spaces.link">Conocer este Space</a>
+                    </div>
+                </article>
+                <article class="sv-station" style="--a:#10D9A0" aria-label="Space Inmobiliaria">
+                    <div class="sv-station-entry">
+                        <h3 class="sh-display">Space Inmobiliaria</h3>
+                        <p class="sh-body sv-promise" data-i18n="home2.spaces.realestate">Tu inventario publicado con tu marca y tus arriendos liquidados en un clic.</p>
                         <p class="sh-small" data-i18n="home2.spaces.realestate_m">Portal inmobiliario · Inventario · Contratos y recaudo · Liquidación al propietario</p>
-                        <a href="spaces.html" class="sh-link" data-i18n="home2.spaces.link">Conocer este Space</a>
-                    </article>
-                    <article class="sh-dest">
-                        <h3 class="sh-h3l">Pixy Edu</h3>
-                        <p class="sh-body" data-i18n="home2.spaces.edu">El colegio entero en una plataforma: académico, familias, convivencia y pensiones.</p>
+                        <a href="spaces.html" class="sh-link" data-warp-click="hop" data-i18n="home2.spaces.link">Conocer este Space</a>
+                    </div>
+                </article>
+                <article class="sv-station" style="--a:#FFC233" aria-label="Pixy Edu">
+                    <div class="sv-station-entry">
+                        <h3 class="sh-display">Pixy Edu</h3>
+                        <p class="sh-body sv-promise" data-i18n="home2.spaces.edu">El colegio entero en una plataforma: académico, familias, convivencia y pensiones.</p>
                         <p class="sh-small" data-i18n="home2.spaces.edu_m">Notas y periodos · Boletines y carnets QR · Portal de familias · Pensiones en línea</p>
-                        <a href="spaces.html" class="sh-link" data-i18n="home2.spaces.link">Conocer este Space</a>
-                    </article>
-                    <article class="sh-dest">
-                        <img src="assets/elementos de spaces/saas.png" alt="" loading="lazy">
-                        <h3 class="sh-h3l">Space SaaS</h3>
-                        <p class="sh-body" data-i18n="home2.spaces.saas">Usuarios, planes, cobro recurrente y soporte, conectados.</p>
+                        <a href="spaces.html" class="sh-link" data-warp-click="hop" data-i18n="home2.spaces.link">Conocer este Space</a>
+                    </div>
+                </article>
+                <article class="sv-station" style="--a:#00E0FF" aria-label="Space SaaS">
+                    <div class="sv-station-entry">
+                        <h3 class="sh-display">Space SaaS</h3>
+                        <p class="sh-body sv-promise" data-i18n="home2.spaces.saas">Usuarios, planes, cobro recurrente y soporte, conectados.</p>
                         <p class="sh-small" data-i18n="home2.spaces.saas_m">Usuarios y planes · Suscripciones · Tickets de soporte · Sprints y tareas</p>
-                        <a href="spaces.html" class="sh-link" data-i18n="home2.spaces.link">Conocer este Space</a>
-                    </article>
-                </div>
+                        <a href="spaces.html" class="sh-link" data-warp-click="hop" data-i18n="home2.spaces.link">Conocer este Space</a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
-
     <!-- 4. La IA: el tramo más rápido del viaje (data-warp mantiene el impulso del fondo) -->
     <section class="sh-section sh-ai-band" data-warp="9">
         <div class="container">

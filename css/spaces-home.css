@@ -291,3 +291,119 @@
     .spaces-face .agency-hero-visual { overflow: hidden; max-width: 100%; }
     .spaces-face .spaces-hero-astronaut { max-width: 100%; height: auto; }
 }
+
+/* ============================================
+   Tipografía del sitio oscuro (Unbounded) y títulos más prominentes
+   ============================================ */
+.spaces-face {
+    --sh-font-display: 'Unbounded', 'Inter', sans-serif;
+    --sh-h1: clamp(36px, 4.6vw, 64px);
+    --sh-h2: clamp(30px, 3.4vw, 48px);
+    --sh-display: clamp(34px, 4.2vw, 58px);
+    --sh-h3l: clamp(22px, 2vw, 28px);
+    --sh-h3: 19px;
+}
+.spaces-face .sh-h1,
+.spaces-face .sh-h2,
+.spaces-face .sh-h3l,
+.spaces-face .sh-h3,
+.spaces-face .sh-display,
+.spaces-face .sv-title {
+    font-family: var(--sh-font-display);
+    letter-spacing: -0.03em;
+}
+.spaces-face .sh-h1 { font-weight: 800; line-height: 1.05 !important; }
+.spaces-face .sh-h2 { font-weight: 700; line-height: 1.08 !important; }
+.spaces-face .sh-h3l, .spaces-face .sh-h3 { font-weight: 600; letter-spacing: -0.02em; }
+.spaces-face .sh-display {
+    font-size: var(--sh-display) !important;
+    line-height: 1 !important;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* ============================================
+   Spaces: viaje en tres capas de profundidad (adaptado del sitio oscuro)
+   ============================================ */
+.sv { position: relative; }
+.sv-stage { position: relative; height: 100vh; overflow: hidden; perspective: 1100px; }
+
+/* Capa 1: nombre gigante al fondo, corre de derecha a izquierda (color plano, muy tenue) */
+.sv-words { position: absolute; inset: 0; transform-style: preserve-3d; pointer-events: none; }
+.sv-word {
+    position: absolute;
+    left: -20vw;
+    right: -20vw;
+    bottom: 2vh;
+    margin: 0;
+    white-space: nowrap;
+    transform-style: preserve-3d;
+    user-select: none;
+}
+.sv-word-entry { display: inline-block; }
+.sv-word-track {
+    display: inline-block;
+    font-family: var(--sh-font-display);
+    font-size: 16vw;
+    font-weight: 800;
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    opacity: 0.13;
+}
+
+/* Capa 2: objeto 3D en cromo */
+.sv-model { position: absolute; right: 3vw; top: 12vh; width: 46vw; height: 72vh; pointer-events: none; }
+
+/* Indicador de destinos */
+.sv-top {
+    position: absolute;
+    top: 104px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-end !important;
+    justify-content: space-between !important;
+}
+.spaces-face .sv-title { font-size: clamp(18px, 1.6vw, 22px) !important; font-weight: 600; color: var(--text-primary); margin: 0; }
+.sv-meter { display: flex; align-items: center; gap: 16px; }
+.sv-count { font-size: var(--sh-small); color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.sv-count b { color: var(--text-primary); font-weight: 700; }
+.sv-track { position: relative; width: 140px; height: 2px; background: var(--border-color); }
+.sv-track i { position: absolute; inset: 0 auto 0 0; width: 16.66%; background: var(--sv-accent, var(--brand-pink)); transition: width 300ms ease, background-color 300ms ease; }
+
+/* Capa 3: texto de cada destino */
+.sv-stations { position: absolute !important; inset: 0; z-index: 2; transform-style: preserve-3d; display: block !important; }
+.sv-station { position: absolute; inset: 0; transform-style: preserve-3d; }
+.sv-station-entry {
+    position: relative;
+    height: 100%;
+    max-width: min(520px, 42vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+    text-align: left;
+}
+.spaces-face .sv-promise { font-size: clamp(18px, 1.5vw, 22px); line-height: 1.45; color: var(--text-primary); }
+.sv-station .sh-link { border-bottom-color: var(--a); align-self: flex-start; margin-top: 8px; }
+
+@media (max-width: 900px) {
+    .sv-stage { height: auto; overflow: visible; perspective: none; padding: calc(var(--sh-section) / 2) 0; }
+    .sv-words, .sv-model, .sv-meter { display: none !important; }
+    .sv-top { position: static; margin-bottom: 24px; }
+    .sv-stations { position: static !important; }
+    .sv-station { position: static; padding: 32px 0; border-top: 1px solid var(--border-color); }
+    .sv-station-entry { max-width: none; }
+}
+.sv-top { height: auto !important; min-height: 0 !important; }
+
+
+/* .container del sitio trae padding 120px arriba y min-height 100vh: en las secciones nuevas solo el margen lateral */
+.spaces-face .sh-section > .container, .spaces-face .sv .container { padding: 0 24px; min-height: 0; }
+.sv-station { padding: 0 24px; }
+
+@media (max-width: 900px) { .sv-station { padding: 40px 0; } .sv-station-entry { gap: 14px; } }
+

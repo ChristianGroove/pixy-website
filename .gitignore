@@ -2,3 +2,4 @@
 .env*.local
 
 tools/space-bg/node_modules/
+assets/models/
