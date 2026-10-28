@@ -28,9 +28,9 @@ const POSE: Record<ModelSlug, { rotation: [number, number, number]; scale?: numb
 // Puntero global normalizado (-1..1): el objeto mira hacia el cursor.
 const pointer = { x: 0, y: 0 };
 
-type Props = { base: string; slug: ModelSlug; accent: string; drift: () => number };
+type Props = { base: string; slug: ModelSlug; accent: string; drift: () => number; /** Se llama una vez, cuando el primer modelo ya está en escena. */ onReady?: () => void };
 
-export function ChromeObject({ base, slug, accent, drift, distance = 6.5 }: Props & { distance?: number }) {
+export function ChromeObject({ base, slug, accent, drift, onReady, distance = 6.5 }: Props & { distance?: number }) {
   const wrap = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(true);
 
@@ -56,17 +56,19 @@ export function ChromeObject({ base, slug, accent, drift, distance = 6.5 }: Prop
         camera={{ position: [0, 0, distance], fov: 32 }}
         gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       >
-        <Scene base={base} slug={slug} accent={accent} drift={drift} />
+        <Scene base={base} slug={slug} accent={accent} drift={drift} onReady={onReady} />
       </Canvas>
     </div>
   );
 }
 
-function Scene({ base, slug, accent, drift }: Props) {
+function Scene({ base, slug, accent, drift, onReady }: Props) {
   const group = useRef<THREE.Group>(null);
   const [shown, setShown] = useState(slug);
   const spin = useRef(0);
   const scale = useRef(0);
+  // La primera aparición crece despacio; los cambios de destino son rápidos
+  const appeared = useRef(false);
 
   // Todos los modelos se descargan al montar: los cambios de destino son instantáneos.
   useEffect(() => SLUGS.forEach((s) => useGLTF.preload(modelUrl(base, s))), [base]);
@@ -75,7 +77,8 @@ function Scene({ base, slug, accent, drift }: Props) {
     const g = group.current;
     if (!g) return;
     const swapping = shown !== slug;
-    scale.current = THREE.MathUtils.damp(scale.current, swapping ? 0 : 1, swapping ? 14 : 6, delta);
+    scale.current = THREE.MathUtils.damp(scale.current, swapping ? 0 : 1, swapping ? 14 : appeared.current ? 6 : 1.8, delta);
+    if (scale.current > 0.98) appeared.current = true;
     if (swapping && scale.current < 0.04) setShown(slug);
     g.scale.setScalar(Math.max(0.001, scale.current));
 
@@ -92,7 +95,7 @@ function Scene({ base, slug, accent, drift }: Props) {
       <Float speed={1.6} rotationIntensity={0.25} floatIntensity={0.6}>
         <group ref={group}>
           <Suspense fallback={null}>
-            <Model base={base} slug={shown} />
+            <Model base={base} slug={shown} onReady={onReady} />
           </Suspense>
         </group>
       </Float>
@@ -110,8 +113,10 @@ function Scene({ base, slug, accent, drift }: Props) {
 const CHROME = new THREE.MeshStandardMaterial({ color: "#e8e8ee", metalness: 1, roughness: 0.12 });
 
 /** Cada GLB trae hasta cuatro mallas (glass, chrome, accent, pearl): aquí todas van en cromo. */
-function Model({ base, slug }: { base: string; slug: ModelSlug }) {
+function Model({ base, slug, onReady }: { base: string; slug: ModelSlug; onReady?: () => void }) {
   const { nodes } = useGLTF(modelUrl(base, slug));
+  // Al montar, el GLB ya cargó (Suspense): avisa para que el lienzo aparezca con un fundido
+  useEffect(() => onReady?.(), [onReady]);
   const pose = POSE[slug];
   return (
     <group rotation={pose.rotation} scale={pose.scale ?? 1}>

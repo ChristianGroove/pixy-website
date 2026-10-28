@@ -407,3 +407,28 @@
 
 @media (max-width: 900px) { .sv-station { padding: 40px 0; } .sv-station-entry { gap: 14px; } }
 
+
+/* Horizonte (como en el sitio oscuro): la palabra se llena con el color del Space desde abajo y se apaga
+   hacia arriba, y entra difuminada por la izquierda: nunca se ve completa. */
+.sv-word {
+    -webkit-mask-image: linear-gradient(to right, transparent 18%, #000 46%);
+    mask-image: linear-gradient(to right, transparent 18%, #000 46%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    bottom: 1vh;
+}
+.sv-word-track {
+    font-size: 20vw;
+    opacity: 1;
+    color: transparent;
+    background-image: linear-gradient(to top,
+        color-mix(in srgb, var(--w) 34%, transparent) 0%,
+        color-mix(in srgb, var(--w) 8%, transparent) 55%,
+        transparent 85%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* El objeto 3D aparece con un fundido cuando su modelo terminó de cargar (js/space-models.js) */
+.sv-model > * { opacity: 0; transform: scale(0.92); transition: opacity 1.1s ease, transform 1.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.sv-model.is-ready > * { opacity: 1; transform: none; }
