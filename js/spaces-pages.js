@@ -73,10 +73,12 @@
 
     // --- Formularios: abren el correo con el mensaje armado ------------------------------------------
     document.querySelectorAll('.sp-form').forEach(function (form) {
-        // ?space=resto preselecciona la industria
+        // Un parámetro de la URL con el nombre de un campo lo preselecciona (?space=resto, ?paquete=debut)
         var params = new URLSearchParams(location.search);
-        var sel = form.querySelector('select[name="space"]');
-        if (sel && params.get('space')) sel.value = params.get('space');
+        form.querySelectorAll('select[name]').forEach(function (sel) {
+            var v = params.get(sel.name);
+            if (v && sel.querySelector('option[value="' + v + '"]')) sel.value = v;
+        });
 
         form.addEventListener('submit', function (e) {
             e.preventDefault();

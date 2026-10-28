@@ -12,7 +12,8 @@
 
         const currentPath = window.location.pathname.toLowerCase();
         // Las páginas de la cara Spaces (body.spaces-face) son Spaces aunque su URL diga «agency» (space-agency.html)
-        const isAgency = !document.body.classList.contains('spaces-face') && (
+        // Las de Studio (body.studio-face) son la cara de la agencia
+        const isAgency = document.body.classList.contains('studio-face') || !document.body.classList.contains('spaces-face') && (
             currentPath.includes('agency') ||
             currentPath.includes('services') ||
             currentPath.includes('plans') ||

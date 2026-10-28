@@ -1,0 +1,162 @@
+/* ============================================
+   PIXY STUDIO · la cara de la agencia creativa
+   Hereda el sistema de la cara Spaces (spaces-home.css): misma escala, mismo ritmo, colores planos.
+   Lo propio: acento en serif itálica, cabecera gigante detrás del sujeto, manifiesto en contorno,
+   lookbook horizontal y sujetos fijos en el catálogo.
+   ============================================ */
+
+.studio-face { --st-serif: 'Instrument Serif', Georgia, serif; }
+.st-serif { font-family: var(--st-serif); font-style: italic; font-weight: 400; letter-spacing: -0.01em; color: var(--brand-pink); }
+.st-folio {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* --- Portada --- */
+.st-hero-stage { position: relative; height: 100vh; overflow: hidden; }
+.st-mast {
+    position: absolute;
+    left: 50%;
+    top: 14vh;
+    transform: translateX(-50%);
+    margin: 0;
+    font-family: var(--sh-font-display);
+    font-weight: 800;
+    font-size: 24vw;
+    line-height: 0.8;
+    letter-spacing: -0.06em;
+    color: var(--text-primary);
+    opacity: 0.08;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+}
+.st-hero-subject {
+    position: absolute;
+    right: 4vw;
+    bottom: 0;
+    height: 88vh;
+    width: auto;
+    max-width: 52vw;
+    object-fit: contain;
+    object-position: bottom right;
+    transform-origin: 70% 100%;
+}
+.st-hero-copy { position: absolute !important; left: 0; right: 0; bottom: 14vh; z-index: 2; display: block !important; min-height: 0 !important; padding: 0 24px !important; text-align: left; }
+.st-hero-copy .sh-h1 { max-width: 640px; text-align: left !important; }
+.st-hero-sub { max-width: 480px; margin-top: 18px !important; text-align: left; }
+.studio-face .st-hero-copy .sp-actions { margin-top: 32px; }
+
+/* --- Manifiesto: contorno que se rellena --- */
+.st-manifesto { padding: calc(var(--sh-section) / 2) 0; }
+.st-manifesto .container { display: block !important; min-height: 0 !important; padding: 0 24px !important; text-align: left !important; }
+.st-fill {
+    margin: 0;
+    font-family: var(--sh-font-display);
+    font-weight: 800;
+    font-size: clamp(34px, 5.4vw, 76px);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    text-align: left;
+}
+.st-fill .st-serif { font-size: 1.12em; }
+.st-w { color: transparent; -webkit-text-stroke: 1px var(--border-color); transition: color 250ms ease, -webkit-text-stroke-color 250ms ease; }
+[data-theme="dark"] .st-w { -webkit-text-stroke-color: rgba(255, 255, 255, 0.28); }
+[data-theme="light"] .st-w { -webkit-text-stroke-color: rgba(15, 23, 42, 0.3); }
+.st-w.is-filled { color: var(--text-primary); -webkit-text-stroke-color: transparent; }
+.st-serif .st-w.is-filled { color: var(--brand-pink); }
+.st-manifesto-sub { max-width: 560px; margin-top: 40px !important; }
+
+/* --- La colección: lookbook horizontal --- */
+.st-look-pin { height: 100vh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+.st-look-head { display: flex !important; flex-direction: row !important; align-items: flex-end !important; justify-content: space-between !important; min-height: 0 !important; padding: 0 24px !important; margin-bottom: 24px; width: 100%; }
+.st-look-track { display: flex; width: max-content; will-change: transform; }
+.st-look-page {
+    position: relative;
+    width: 82vw;
+    max-width: 1200px;
+    height: 72vh;
+    margin-left: 6vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    opacity: 0.35;
+    transition: opacity 500ms ease;
+}
+.st-look-page:last-child { margin-right: 9vw; }
+.st-look-page.is-on { opacity: 1; }
+.st-look-name {
+    position: absolute;
+    right: 0;
+    top: 6%;
+    margin: 0;
+    font-family: var(--sh-font-display);
+    font-weight: 800;
+    font-size: clamp(64px, 10vw, 160px);
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    color: var(--text-primary);
+    opacity: 0.07;
+    white-space: nowrap;
+    pointer-events: none;
+}
+.st-look-img { grid-column: 2; grid-row: 1; justify-self: center; height: 68vh; width: auto; max-width: 100%; object-fit: contain; position: relative; z-index: 1; }
+.st-look-copy { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; gap: 16px; max-width: 460px; position: relative; z-index: 2; }
+.st-look-links { display: flex; gap: 28px; flex-wrap: wrap; }
+.st-look-links .sh-link { margin-top: 0; }
+
+/* --- Planes: paneles de las tres formas de trabajar --- */
+.st-levels .sh-plans { margin-bottom: 64px; }
+.st-mode-panel { display: none; }
+.st-mode-panel.is-on { display: block; animation: st-in 500ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes st-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.st-size { margin-top: 72px; }
+.st-size .sh-h3l { margin-bottom: 24px !important; }
+.st-plan-list > div { grid-template-columns: 180px 1fr; }
+
+/* --- Catálogo de paquetes: entregables y sujetos fijos --- */
+.st-gets { list-style: none; margin: 4px 0 0; padding: 0; }
+.st-gets li { padding: 12px 0; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 16px; line-height: 1.5; }
+.st-subjects { position: sticky; top: 10vh; height: 80vh; }
+.st-subjects img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transform: scale(0.96); transition: opacity 600ms ease, transform 800ms cubic-bezier(0.16, 1, 0.3, 1); }
+.st-subjects img.is-on { opacity: 1; transform: none; }
+
+/* --- Con Pixy y trabajos --- */
+.st-pixy { align-items: center !important; }
+.st-pixy-art img { width: 100%; max-height: 72vh; object-fit: contain; }
+.st-mode-link { padding-top: 0 !important; margin-top: calc(var(--sh-section) / -2 + 24px); }
+
+/* --- Preguntas --- */
+.st-faq details { border-top: 1px solid var(--border-color); padding: 22px 0; }
+.st-faq details:last-child { border-bottom: 1px solid var(--border-color); }
+.st-faq summary { cursor: pointer; list-style: none; font-family: var(--sh-font-display); font-weight: 600; font-size: 19px; color: var(--text-primary); display: flex; justify-content: space-between; gap: 16px; }
+.st-faq summary::-webkit-details-marker { display: none; }
+.st-faq summary::after { content: '+'; color: var(--brand-pink); transition: transform 200ms ease; }
+.st-faq details[open] summary::after { transform: rotate(45deg); }
+.st-faq details p { margin-top: 12px !important; }
+.st-close-note { margin-top: 28px !important; display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; }
+.st-close-note .sh-link { margin-top: 0; }
+
+/* --- Móvil --- */
+@media (max-width: 900px) {
+    .st-mast { font-size: 30vw; top: 16vh; }
+    .st-hero-subject { right: -18vw; height: 58vh; max-width: 90vw; opacity: 0.55; }
+    .st-hero-copy { bottom: 6vh; }
+    .st-look-pin { height: auto; padding: calc(var(--sh-section) / 2) 0; }
+    .st-look-track { width: auto; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 16px; }
+    .st-look-page { flex: 0 0 86vw; width: 86vw; height: auto; margin-left: 7vw; grid-template-columns: 1fr; gap: 16px; opacity: 1; scroll-snap-align: center; }
+    .st-look-img, .st-look-copy { grid-column: 1; grid-row: auto; }
+    .st-look-img { height: 46vh; }
+    .st-look-head .sv-meter { display: none; }
+    .st-subjects { display: none; }
+    .st-plan-list > div { grid-template-columns: 1fr; }
+    .st-pixy-art { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .st-w { color: var(--text-primary); -webkit-text-stroke-color: transparent; }
+    .st-look-page { opacity: 1; }
+}

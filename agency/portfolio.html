@@ -15,296 +15,133 @@
         })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Pixy Agency</title>
-    <meta name="description"
-        content="Casos de estudio y proyectos de desarrollo web, branding 3D, growth ads y sistemas digitales desarrollados por Pixy Agency.">
+    <title>Trabajos | Pixy Studio</title>
+    <meta name="description" content="En portada: el trabajo de Pixy Studio. Caso 00, Pixy.">
     <link rel="canonical" href="https://pixy.com.co/agency/portfolio.html">
     <link rel="icon" type="image/png" href="../assets/favicon.png">
-    <link rel="preload" href="../assets/logos/logo-light.svg" as="image" type="image/svg+xml">
-    <link rel="preload" href="../assets/logos/logo-dark.svg" as="image" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixy.com.co/agency/portfolio.html">
+    <meta property="og:title" content="Trabajos | Pixy Studio">
+    <meta property="og:description" content="En portada: el trabajo de Pixy Studio. Caso 00, Pixy.">
+    <meta property="og:image" content="https://pixy.com.co/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/pages.css">
     <link rel="stylesheet" href="../css/agency-modern.css">
-    <style>
-        body {
-            visibility: visible;
-            opacity: 1;
-        }
-        html[data-theme="dark"] body {
-            background-color: #0F0F1A;
-        }
-        html[data-theme="light"] body {
-            background-color: #ffffff;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/spaces-home.css">
+    <link rel="stylesheet" href="../css/studio.css">
 </head>
 
-<body class="agency-mode">
-    <div class="mouse-spotlight"></div>
+<body class="landing-page spaces-face studio-face">
+    <!-- Generado por tools/pages/build-studio.mjs: editar ahí, no aquí -->
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
-
-    <!-- Navigation -->
     <nav class="nav">
         <div class="nav-content">
             <div class="nav-left-group" style="display: flex; align-items: center; gap: 32px;">
                 <a href="../agency.html" class="nav-brand">
-                    <img src="../assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
-                    <img src="../assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
+                    <img src="../assets/logos/logo-dark.svg" alt="Pixy Studio" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
+                    <img src="../assets/logos/logo-light.svg" alt="Pixy Studio" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
                 </a>
                 <div class="universe-switcher" role="tablist" aria-label="Ecosistema">
-                    <a href="../agency.html" class="universe-tab active" data-mode="agency">Agency</a>
+                    <a href="../agency.html" class="universe-tab active" data-mode="agency">Studio</a>
                     <a href="../index.html" class="universe-tab" data-mode="spaces">Spaces</a>
                 </div>
             </div>
-
             <div class="nav-links">
-                <a href="../agency.html" class="neon-link" data-i18n="agency_creative.nav_home">Inicio</a>
-                <a href="services.html" class="neon-link" data-i18n="agency_creative.nav_services">Servicios</a>
-                <a href="plans.html" class="neon-link" data-i18n="agency_creative.nav_plans">Planes</a>
-                <a href="portfolio.html" class="neon-link active" data-i18n="agency_creative.nav_portfolio">Portafolio</a>
-                <a href="contact.html" class="neon-link" data-i18n="agency_creative.nav_contact">Contacto</a>
+                <a href="../agency/services.html" class="neon-link" data-i18n="studio2.nav.packages">Paquetes</a>
+                <a href="../agency/plans.html" class="neon-link" data-i18n="studio2.nav.plans">Planes</a>
+                <a href="../agency/portfolio.html" class="neon-link active" data-i18n="studio2.nav.work">Trabajos</a>
+                <a href="../agency.html#con-pixy" class="neon-link" data-i18n="studio2.nav.pixy">Con Pixy</a>
             </div>
-
             <div class="nav-actions">
-                <button id="lang-toggle" class="btn-lang"
-                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 12px;">
+                <button id="lang-toggle" class="btn-lang" style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
                     <span id="lang-text">ES</span>
                     <span style="color:var(--brand-pink); font-size:10px;">▼</span>
                 </button>
-                <a href="../agency.html#calculator" class="btn-neon" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="agency_creative.nav_quote">Cotizar</a>
+                <a href="../agency/contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;" data-i18n="studio2.nav.casting">Abre tu casting</a>
             </div>
         </div>
     </nav>
 
-    <!-- Content -->
-    <main class="agency-universe" style="padding-top: 140px; padding-bottom: 60px;">
-        <!-- Header Centrado -->
-        <header class="agency-page-header">
-            <div class="badge" data-i18n="agency_creative.portfolio_badge">Casos de Éxito</div>
-            <h1 class="page-title" style="text-align: center; margin: 0 auto 16px;"><span data-i18n="agency_portfolio_page.page_title_prefix">Portafolio de</span> <span class="gradient-text" data-i18n="agency_portfolio_page.page_title_gradient">Trabajos Recientes</span></h1>
-            <p class="subtitle" style="text-align: center; margin: 0 auto;" data-i18n="agency_portfolio_page.page_subtitle">Proyectos donde el diseño, la tecnología y el growth marketing se combinan para generar resultados tangibles.</p>
-        </header>
-
-        <!-- Filter Tabs -->
-        <div class="portfolio-filter-tabs">
-            <button type="button" class="portfolio-filter-btn active" data-filter="all" data-i18n="agency_portfolio_page.filter_all">Todos</button>
-            <button type="button" class="portfolio-filter-btn" data-filter="web" data-i18n="agency_portfolio_page.filter_web">Desarrollo Web</button>
-            <button type="button" class="portfolio-filter-btn" data-filter="branding" data-i18n="agency_portfolio_page.filter_branding">Branding & 3D</button>
-            <button type="button" class="portfolio-filter-btn" data-filter="ads" data-i18n="agency_portfolio_page.filter_ads">Growth Ads</button>
-            <button type="button" class="portfolio-filter-btn" data-filter="content" data-i18n="agency_portfolio_page.filter_content">Contenido</button>
+    <section class="sh-section sp-hero">
+        <div class="container">
+            <h1 class="sh-h1"><span data-i18n="studio2.work.h1">En portada.</span></h1>
+            <p class="sh-body sp-sub" data-i18n="studio2.work.sub">Mostramos el trabajo, no adjetivos. Los casos de clientes llegan con su permiso y sus datos reales.</p>
+            
         </div>
+    </section>
 
-        <!-- Portfolio Grid -->
-        <div class="portfolio-grid" style="margin-bottom: 60px;">
-            <!-- Project 1: Web -->
-            <div class="portfolio-card" data-category="web">
-                <div class="portfolio-thumb">
-                    <img src="../assets/elementos de servicios/desarrollo.png" alt="AeroTech AI Platform">
-                    <span class="portfolio-badge-metric" data-i18n="agency_portfolio_page.item_1_badge">+410% Conversión</span>
-                </div>
-                <div class="portfolio-info" style="text-align: left;">
-                    <span class="portfolio-category" data-i18n="agency_creative.portfolio_item_1_cat">Desarrollo Web & UI/UX</span>
-                    <h4 class="portfolio-title">AeroTech AI Platform</h4>
-                    <p class="portfolio-desc" data-i18n="agency_creative.portfolio_item_1_desc">Plataforma Web SaaS con animaciones GSAP, arquitectura JAMstack y velocidad de carga extrema de 0.6s.</p>
-                    <div class="portfolio-tech-row">
-                        <span class="bento-tag">JAMstack</span>
-                        <span class="bento-tag">GSAP</span>
-                        <span class="bento-tag">Tailwind</span>
-                    </div>
-                </div>
+    <section class="sh-section">
+        <div class="container sp-catalog-grid st-pixy">
+            <div>
+                <p class="st-folio"><span data-i18n="studio2.work.case_f">CASO 00</span></p>
+                <h2 class="sh-display">Pixy</h2>
+                <p class="sh-body sv-promise" data-i18n="studio2.work.case_d">La marca, este sitio, el sistema visual y el contenido de lanzamiento de Pixy los hicimos nosotros. Es nuestro trabajo más grande, y lo puedes recorrer ahora mismo.</p>
+                <ul class="st-gets"><li data-i18n="studio2.work.case_0">Identidad y renders de marca</li><li data-i18n="studio2.work.case_1">Sitio con scroll de cine</li><li data-i18n="studio2.work.case_2">Contenido de lanzamiento</li></ul>
+                <a class="sh-link" href="../index.html" data-warp-click="departure" data-i18n="studio2.work.case_l">Recorrer Pixy Spaces</a>
             </div>
-
-            <!-- Project 2: Branding -->
-            <div class="portfolio-card" data-category="branding">
-                <div class="portfolio-thumb">
-                    <img src="../assets/elementos de servicios/branding concept.png" alt="Nova Space Branding">
-                    <span class="portfolio-badge-metric" data-i18n="agency_creative.portfolio_item_2_badge">Identidad 3D Completa</span>
-                </div>
-                <div class="portfolio-info" style="text-align: left;">
-                    <span class="portfolio-category" data-i18n="agency_creative.portfolio_item_2_cat">Branding & 3D</span>
-                    <h4 class="portfolio-title">Nova FinTech Labs</h4>
-                    <p class="portfolio-desc" data-i18n="agency_creative.portfolio_item_2_desc">Sistema de identidad de marca futurista, manual de marca, tipografías y biblioteca de componentes 3D.</p>
-                    <div class="portfolio-tech-row">
-                        <span class="bento-tag">Branding</span>
-                        <span class="bento-tag">3D Assets</span>
-                        <span class="bento-tag">Figma</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3: Ads -->
-            <div class="portfolio-card" data-category="ads">
-                <div class="portfolio-thumb">
-                    <img src="../assets/elementos de servicios/marketing digital.png" alt="HyperCommerce Scale">
-                    <span class="portfolio-badge-metric" data-i18n="agency_creative.portfolio_item_3_badge">9.4x ROAS Promedio</span>
-                </div>
-                <div class="portfolio-info" style="text-align: left;">
-                    <span class="portfolio-category" data-i18n="agency_creative.portfolio_item_3_cat">Growth Ads & Creatives</span>
-                    <h4 class="portfolio-title">HyperCommerce Scale</h4>
-                    <p class="portfolio-desc" data-i18n="agency_creative.portfolio_item_3_desc">Estrategia multicanal de adquisición en Meta Ads y TikTok con creativos de alta frecuencia y funnels dinámicos.</p>
-                    <div class="portfolio-tech-row">
-                        <span class="bento-tag">Meta Ads</span>
-                        <span class="bento-tag">Creative Engine</span>
-                        <span class="bento-tag">ROAS</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4: E-Commerce Web -->
-            <div class="portfolio-card" data-category="web">
-                <div class="portfolio-thumb">
-                    <img src="../assets/elementos de servicios/ecommerce.png" alt="Krypton E-Commerce">
-                    <span class="portfolio-badge-metric" data-i18n="agency_portfolio_page.item_4_badge">Checkout Ultra Rápido</span>
-                </div>
-                <div class="portfolio-info" style="text-align: left;">
-                    <span class="portfolio-category" data-i18n="agency_portfolio_page.item_4_cat">E-Commerce & CRO</span>
-                    <h4 class="portfolio-title">Krypton Gear Store</h4>
-                    <p class="portfolio-desc" data-i18n="agency_portfolio_page.item_4_desc">Tienda e-commerce de alto rendimiento con sincronización en tiempo real e integración con pasarelas globales.</p>
-                    <div class="portfolio-tech-row">
-                        <span class="bento-tag">Shopify Headless</span>
-                        <span class="bento-tag">Next.js</span>
-                        <span class="bento-tag">Stripe</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 5: Content Engine -->
-            <div class="portfolio-card" data-category="content">
-                <div class="portfolio-thumb">
-                    <img src="../assets/elementos de servicios/contenido redes.png" alt="Pulse Content">
-                    <span class="portfolio-badge-metric" data-i18n="agency_portfolio_page.item_5_badge">+2.4M Vistas Orgánicas</span>
-                </div>
-                <div class="portfolio-info" style="text-align: left;">
-                    <span class="portfolio-category" data-i18n="agency_portfolio_page.item_5_cat">Content Engine & Video</span>
-                    <h4 class="portfolio-title">Pulse Kinetic Social Media</h4>
-                    <p class="portfolio-desc" data-i18n="agency_portfolio_page.item_5_desc">Producción audiovisual mensual, reels de alto enganche y estrategia de storytelling para marca de consumo.</p>
-                    <div class="portfolio-tech-row">
-                        <span class="bento-tag">Reels / TikTok</span>
-                        <span class="bento-tag">Motion Graphics</span>
-                        <span class="bento-tag">Storytelling</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 6: Automations & CRM -->
-            <div class="portfolio-card" data-category="web">
-                <div class="portfolio-thumb">
-                    <img src="../assets/elementos de servicios/crm.png" alt="SaaS Scale CRM">
-                    <span class="portfolio-badge-metric" data-i18n="agency_portfolio_page.item_6_badge">+520k Leads Calificados</span>
-                </div>
-                <div class="portfolio-info" style="text-align: left;">
-                    <span class="portfolio-category" data-i18n="agency_portfolio_page.item_6_cat">Automatizaciones & CRM</span>
-                    <h4 class="portfolio-title">OmniChannel Lead Flow</h4>
-                    <p class="portfolio-desc" data-i18n="agency_portfolio_page.item_6_desc">Arquitectura automatizada de captura y calificación de leads conectada directamente a Pixy Spaces y WhatsApp.</p>
-                    <div class="portfolio-tech-row">
-                        <span class="bento-tag">Pixy Spaces</span>
-                        <span class="bento-tag">WhatsApp Bot</span>
-                        <span class="bento-tag">Webhooks</span>
-                    </div>
-                </div>
-            </div>
+            <div class="st-pixy-art" aria-hidden="true"><img src="../assets/studio/hero.webp" alt="" loading="lazy" decoding="async"></div>
         </div>
+    </section>
 
-        <!-- CTA Section -->
-        <section class="glass-card" style="text-align: center; padding: 48px 32px; margin-bottom: 32px;">
-            <h2 class="gradient-text" style="font-size: clamp(1.8rem, 3.5vw, 36px); margin-bottom: 12px;" data-i18n="agency_creative.cta_title">¿Quieres resultados como estos para tu marca?</h2>
-            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 24px;" data-i18n="agency_creative.cta_subtitle">Hablemos de tus metas comerciales y diseñemos la estrategia adecuada.</p>
-            <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-                <a href="../agency.html#calculator" class="btn-neon" data-i18n="agency_creative.cta_quote_btn">Cotizar Proyecto</a>
-                <a href="contact.html" class="btn-neon-outline" data-i18n="agency_creative.cta_talk_btn">Hablar con un Asesor</a>
-            </div>
-        </section>
-    </main>
+    <section class="sh-section sh-final">
+        <div class="container">
+            <h2 class="sh-h2" data-i18n="studio2.work.close_t">Tu marca puede ser la próxima portada.</h2>
+            <a class="btn-neon" href="../agency/contact.html" data-warp-click="departure" data-i18n="studio2.work.close_b">Abre tu casting</a>
+            <p class="sh-small st-close-note"><span data-i18n="studio2.work.close_n">¿No sabes por dónde empezar?</span> <a class="sh-link" href="../agency/contact.html?paquete=rayos-x"><span data-i18n="studio2.work.close_r">Pide tus Rayos X</span></a></p>
+        </div>
+    </section>
 
-    <!-- Dedicated Agency Footer -->
-    <footer class="agency-footer">
-        <div class="agency-footer-container">
-            <div class="agency-footer-grid">
-                <div class="agency-footer-brand">
-                    <img src="../assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark" style="height: 30px; margin-bottom: 12px;">
-                    <img src="../assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light" style="height: 30px; margin-bottom: 12px;">
-                    <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; max-width: 280px;" data-i18n="agency_creative.footer_desc">
-                        Estudio creativo, desarrollo web de alto rendimiento y departamento de diseño dedicado.
-                    </p>
-                </div>
-                <div class="agency-footer-col">
-                    <h4 data-i18n="agency_creative.footer_col_services">Servicios</h4>
-                    <ul class="agency-footer-links">
-                        <li><a href="services.html" data-i18n="agency_creative.footer_link_web">Desarrollo Web</a></li>
-                        <li><a href="services.html" data-i18n="agency_creative.footer_link_branding">Branding & 3D</a></li>
-                        <li><a href="services.html" data-i18n="agency_creative.footer_link_growth">Growth Ads</a></li>
-                        <li><a href="services.html" data-i18n="agency_creative.footer_link_content">Content Engine</a></li>
-                    </ul>
-                </div>
-                <div class="agency-footer-col">
-                    <h4 data-i18n="agency_creative.footer_col_plans">Planes</h4>
-                    <ul class="agency-footer-links">
-                        <li><a href="plans.html" data-i18n="agency_creative.footer_link_plan_starter">Diseño Dedicado Starter</a></li>
-                        <li><a href="plans.html" data-i18n="agency_creative.footer_link_plan_pro">Pro Growth Studio</a></li>
-                        <li><a href="plans.html" data-i18n="agency_creative.footer_link_plan_scale">Scale Enterprise</a></li>
-                    </ul>
-                </div>
-                <div class="agency-footer-col">
-                    <h4 data-i18n="agency_creative.footer_col_portfolio">Portafolio</h4>
-                    <ul class="agency-footer-links">
-                        <li><a href="portfolio.html" data-i18n="agency_creative.footer_link_cases">Casos de Éxito</a></li>
-                        <li><a href="services.html" data-i18n="agency_creative.footer_link_services">Servicios Creativos</a></li>
-                        <li><a href="contact.html" data-i18n="agency_creative.footer_link_contact">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="agency-footer-col">
-                    <h4 data-i18n="agency_creative.footer_col_ecosystem">Ecosistema</h4>
-                    <ul class="agency-footer-links">
-                        <li><a href="../index.html" data-i18n="agency_creative.footer_link_spaces">Pixy Spaces (CRM)</a></li>
-                        <li><a href="../privacy.html" data-i18n="agency_creative.footer_link_privacy">Privacidad</a></li>
-                        <li><a href="../terms.html" data-i18n="agency_creative.footer_link_terms">Términos</a></li>
-                    </ul>
-                </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="../assets/logos/logo-dark.svg" alt="Pixy Studio" class="footer-logo footer-logo-dark">
+                <img src="../assets/logos/logo-light.svg" alt="Pixy Studio" class="footer-logo footer-logo-light">
+                <p data-i18n="studio2.footer.slogan">Tu marca, en portada.</p>
             </div>
-            <div class="agency-footer-bottom">
-                <p data-i18n="agency_creative.footer_copy">© 2026 Pixy Creative Studio. Todos los derechos reservados.</p>
-            </div>
+            <nav class="footer-links">
+                <h4 data-i18n="studio2.footer.studio">Studio</h4>
+                <a href="../agency/services.html" class="neon-link" data-i18n="studio2.nav.packages">Paquetes</a>
+                <a href="../agency/plans.html" class="neon-link" data-i18n="studio2.nav.plans">Planes</a>
+                <a href="../agency/portfolio.html" class="neon-link" data-i18n="studio2.nav.work">Trabajos</a>
+                <a href="../agency/contact.html" class="neon-link" data-i18n="studio2.nav.casting">Abre tu casting</a>
+            </nav>
+            <nav class="footer-links">
+                <h4 data-i18n="studio2.footer.platform">Plataforma</h4>
+                <a href="../index.html" class="neon-link">Pixy Spaces</a>
+                <a href="../blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+            </nav>
+            <nav class="footer-links">
+                <h4 data-i18n="footer.legal">Legal</h4>
+                <a href="../privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
+                <a href="../terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
+                <a href="../cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Theme Toggle -->
     <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
-        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
     </button>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="../js/space-bg.js"></script>
     <script src="../js/i18n.js"></script>
-    <script src="../js/header-switcher.js"></script>
     <script src="../js/main.js"></script>
-    <script>
-        // Interactive Portfolio Filter
-        document.querySelectorAll('.portfolio-filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.portfolio-filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const filter = btn.getAttribute('data-filter');
-                document.querySelectorAll('.portfolio-card').forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="../js/spaces-pages.js"></script>
+    <script src="../js/studio.js"></script>
 </body>
 
 </html>
