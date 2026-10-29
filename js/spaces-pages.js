@@ -166,14 +166,16 @@
         if (auth) auth.addEventListener('change', syncSend);
         syncSend();
 
-        // Envío: la solicitud llega directo al correo del equipo por FormSubmit (el sitio no tiene servidor) y la
-        // persona ve la confirmación en la página. Si el envío falla, puede mandarla desde su correo con un clic.
+        // Envío: la solicitud entra directo al CRM de Pixy (api/public/site-lead de la plataforma) con la constancia
+        // de autorización, y la persona ve la confirmación en la página. Si falla, puede mandarla desde su correo.
         var T = function (k, fallback) { return (window.pixyI18n && window.pixyI18n.t('chrome.' + k)) || fallback; };
         // Trampa para robots: un campo que una persona no ve ni llena
         var trap = document.createElement('input');
         trap.type = 'text'; trap.name = '_honey'; trap.tabIndex = -1; trap.autocomplete = 'off';
         trap.className = 'sp-trap'; trap.setAttribute('aria-hidden', 'true');
         form.appendChild(trap);
+        // Desde cuándo está el formulario en pantalla: un envío en menos de 3 s es de un robot
+        var shownAt = Date.now();
 
         var build = function () {
             var en = lang() === 'en';
@@ -227,18 +229,21 @@
             if (trap.value) return done();
 
             if (send) { send.disabled = true; send.textContent = T('f_sending', 'Enviando…'); }
-            var payload = Object.assign({}, m.fields, {
-                _subject: m.subject,
-                _template: 'table',
-                _captcha: 'false',
-                _replyto: m.fields.email || '',
-                'Constancia': m.proof
-            });
-            fetch('https://formsubmit.co/ajax/' + form.dataset.mailto, {
+            var payload = {
+                fields: m.fields,
+                consent: !!(auth && auth.checked),
+                news: !!(news && news.checked),
+                form: form.dataset.formEs,
+                page: location.origin + location.pathname,
+                lang: lang(),
+                trap: trap.value,
+                elapsed_ms: Date.now() - shownAt
+            };
+            fetch(window.pixyLeadsUrl || 'https://app.pixy.com.co/api/public/site-lead', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
-            }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return r.ok && String(j.success) === 'true'; }); })
+            }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return r.ok && j.ok === true; }); })
                 .catch(function () { return false; })
                 .then(function (ok) {
                     if (ok) return done();
