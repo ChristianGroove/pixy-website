@@ -224,8 +224,8 @@
             var yes = news && news.checked;
             var today = new Date().toISOString().slice(0, 10);
             var proof = [
-                en ? 'Personal data authorization: Yes (Personal Data Policy, version 1.0)'
-                    : 'Autorización de tratamiento de datos: Sí (Política de tratamiento de datos personales, versión 1.0)',
+                en ? 'Personal data authorization: Yes (Personal Data Policy, version 1.1)'
+                    : 'Autorización de tratamiento de datos: Sí (Política de tratamiento de datos personales, versión 1.1)',
                 en ? 'News and offers by email' + (wa ? ' and WhatsApp' : '') + ': ' + (yes ? 'Yes' : 'No')
                     : 'Novedades y ofertas por correo' + (wa ? ' y WhatsApp' : '') + ': ' + (yes ? 'Sí' : 'No'),
                 (en ? 'Form: ' : 'Formulario: ') + form.dataset[en ? 'formEn' : 'formEs'] + ' · ' + today
@@ -237,6 +237,21 @@
             location.href = 'mailto:' + form.dataset.mailto + '?subject=' + encodeURIComponent(m.subject) + '&body=' + encodeURIComponent(m.lines.join('\n'));
             warp('departure');
         };
+        // Mensaje prellenado para WhatsApp: quién es, su empresa, su Space y lo que contó, más la referencia que lee
+        // el Inbox. Es el primer mensaje del cliente, así que la IA lo usa como cualquier cosa que él dijo
+        var waText = function (f, ref) {
+            var en = lang() === 'en';
+            var space = form.querySelector('select[name="space"]');
+            var spaceName = space && space.value && space.value !== 'otra' ? space.options[space.selectedIndex].text : '';
+            var msg = (f.message || '').replace(/\s+/g, ' ').trim();
+            if (msg.length > 160) msg = msg.slice(0, 157) + '…';
+            var parts = en
+                ? ['Hi, I am ' + (f.name || f.nombre || '') + (f.company ? ' from ' + f.company : '') + '. I just requested access to Pixy' + (spaceName ? ' for ' + spaceName : '') + '.']
+                : ['Hola, soy ' + (f.name || f.nombre || '') + (f.company ? ' de ' + f.company : '') + '. Acabo de solicitar acceso a Pixy' + (spaceName ? ' para ' + spaceName : '') + '.'];
+            if (msg) parts.push((en ? 'About us: ' : 'Les cuento: ') + msg);
+            parts.push('(ref ' + ref + ')');
+            return parts.join(' ');
+        };
         var label = send ? send.textContent : '';
         var error = null;
 
@@ -245,16 +260,31 @@
             if (!form.reportValidity() || (auth && !auth.checked)) return;
             if (error) { error.remove(); error = null; }
             var m = build();
-            var done = function () {
-                // Confirmación en el lugar del formulario
+            var done = function (ref) {
+                // Confirmación en el lugar del formulario. Con referencia, la acción principal es seguir por WhatsApp:
+                // la persona escribe primero, el Inbox une el chat a su solicitud y la IA la atiende con este contexto
                 var ok = document.createElement('div');
                 ok.className = 'sp-sent';
                 ok.setAttribute('role', 'status');
                 ok.tabIndex = -1;
-                ok.innerHTML = '<h3 class="sh-h3l"></h3><p class="sh-body"></p><a class="sh-link" target="_blank" rel="noopener" href="https://wa.me/573504076800"></a>';
+                ok.innerHTML = '<h3 class="sh-h3l"></h3><p class="sh-body"></p><a target="_blank" rel="noopener"></a>';
                 ok.children[0].textContent = T('f_ok_t', 'Listo, recibimos tu solicitud.');
-                ok.children[1].textContent = T('f_ok_d', 'Te escribimos a {email} muy pronto.').replace('{email}', m.fields.email || '');
-                ok.children[2].textContent = T('f_ok_wa', '¿Prefieres hablar ya? Escríbenos por WhatsApp');
+                var email = m.fields.email || '';
+                if (ref) {
+                    ok.children[1].textContent = T('f_ok_ref', 'Te enviamos la confirmación a {email}. Si quieres empezar ya, sigue por WhatsApp: nuestra IA conoce tu solicitud y te atiende al instante.').replace('{email}', email);
+                    ok.children[2].className = 'btn-neon';
+                    ok.children[2].href = 'https://wa.me/573504076800?text=' + encodeURIComponent(waText(m.fields, ref));
+                    ok.children[2].textContent = T('f_follow', 'Seguir por WhatsApp');
+                    var refLine = document.createElement('p');
+                    refLine.className = 'sh-small';
+                    refLine.textContent = T('f_ref', 'Tu referencia') + ': ' + ref;
+                    ok.appendChild(refLine);
+                } else {
+                    ok.children[1].textContent = T('f_ok_d', 'Te escribimos a {email} muy pronto.').replace('{email}', email);
+                    ok.children[2].className = 'sh-link';
+                    ok.children[2].href = 'https://wa.me/573504076800';
+                    ok.children[2].textContent = T('f_ok_wa', '¿Prefieres hablar ya? Escríbenos por WhatsApp');
+                }
                 // Ocupa el mismo lugar del formulario en la cuadrícula
                 form.replaceWith(ok);
                 ok.focus({ preventScroll: true });
@@ -279,10 +309,10 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
-            }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.ok === true, reason: j.reason }; }); })
+            }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.ok === true, reason: j.reason, ref: /^PX-[A-Z0-9]{6}$/.test(j.ref || '') ? j.ref : null }; }); })
                 .catch(function () { return { ok: false }; })
                 .then(function (res) {
-                    if (res.ok) return done();
+                    if (res.ok) return done(res.ref);
                     // El token de Turnstile sirve una sola vez: uno nuevo para el próximo intento
                     if (ts && widget !== null) ts.reset(widget);
                     if (send) { send.disabled = false; send.textContent = label; }
