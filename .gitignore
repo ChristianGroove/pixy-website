@@ -3,3 +3,6 @@
 
 tools/space-bg/node_modules/
 assets/models/
+
+# Originales de las portadas del blog (pesados); se publican las versiones de assets/blog
+tools/blog/covers-raw/

@@ -63,11 +63,11 @@ function shell({ file, title, description, navActive, body }) {
     <meta property="og:url" content="https://pixy.com.co/${file}">
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${description}">
-    <meta property="og:image" content="https://pixy.com.co/assets/og-image.png">
+    <meta property="og:image" content="https://pixy.com.co/assets/og/pixy.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${title}">
     <meta name="twitter:description" content="${description}">
-    <meta name="twitter:image" content="https://pixy.com.co/assets/og-image.png">
+    <meta name="twitter:image" content="https://pixy.com.co/assets/og/pixy.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -404,9 +404,10 @@ pages.push({
         <div class="container sh-split">
             <div class="sh-sticky">
                 ${t("h2", "mail_t", "Escríbenos", "Write to us", "sh-h3l")}
-                <p class="sh-body"><a class="sh-link" href="mailto:hola@pixy.com.co">hola@pixy.com.co</a></p>
+                <p class="sh-body"><a class="sh-link" href="mailto:contact@pixy.com.co">contact@pixy.com.co</a></p>
+                <p class="sh-body"><a class="sh-link" href="https://wa.me/573504076800?text=Hola%2C%20quiero%20conocer%20Pixy" target="_blank" rel="noopener">WhatsApp +57 350 407 6800</a></p>
             </div>
-            <form class="sp-form" data-mailto="hola@pixy.com.co" data-subject-es="Demo de Pixy" data-subject-en="Pixy demo">
+            <form class="sp-form" data-mailto="contact@pixy.com.co" data-subject-es="Demo de Pixy" data-subject-en="Pixy demo">
                 <label>${t("span", "f_name", "Nombre", "Name")}<input name="name" required autocomplete="name"></label>
                 <label>${t("span", "f_company", "Empresa", "Company")}<input name="company" autocomplete="organization"></label>
                 <label>${t("span", "f_email", "Email", "Email")}<input name="email" type="email" required autocomplete="email"></label>
@@ -449,7 +450,7 @@ pages.push({
                 ${t("h2", "form_t", "Hablemos de <span class=\"sh-accent\">tu agencia.</span>", "Let's talk about <span class=\"sh-accent\">your agency.</span>", "sh-h2")}
                 ${t("p", "form_i", "Te contamos cómo funciona y armamos el plan para tu cartera de clientes.", "We'll walk you through it and shape the plan around your client portfolio.", "sh-body")}
             </div>
-            <form class="sp-form" data-mailto="hola@pixy.com.co" data-subject-es="Plan Partner de Pixy" data-subject-en="Pixy Partner plan">
+            <form class="sp-form" data-mailto="contact@pixy.com.co" data-subject-es="Plan Partner de Pixy" data-subject-en="Pixy Partner plan">
                 <label>${t("span", "f_name", "Nombre", "Name")}<input name="name" required autocomplete="name"></label>
                 <label>${t("span", "f_company", "Agencia", "Agency")}<input name="company" autocomplete="organization"></label>
                 <label>${t("span", "f_email", "Email", "Email")}<input name="email" type="email" required autocomplete="email"></label>

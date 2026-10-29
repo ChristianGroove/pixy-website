@@ -172,7 +172,7 @@ function shell({ file, pre, title, description, active, body }) {
     <meta property="og:url" content="https://pixy.com.co/${file}">
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${description}">
-    <meta property="og:image" content="https://pixy.com.co/assets/og-image.png">
+    <meta property="og:image" content="https://pixy.com.co/assets/og/studio.png">
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -528,9 +528,10 @@ page = "casting";
         <div class="container sh-split">
             <div class="sh-sticky">
                 ${t("h2", "mail_t", "Escríbenos", "Write to us", "sh-h3l")}
-                <p class="sh-body"><a class="sh-link" href="mailto:hola@pixy.com.co">hola@pixy.com.co</a></p>
+                <p class="sh-body"><a class="sh-link" href="mailto:contact@pixy.com.co">contact@pixy.com.co</a></p>
+                <p class="sh-body"><a class="sh-link" href="https://wa.me/573504076800?text=Hola%2C%20quiero%20hablar%20con%20Pixy%20Studio" target="_blank" rel="noopener">WhatsApp +57 350 407 6800</a></p>
             </div>
-            <form class="sp-form" data-mailto="hola@pixy.com.co" data-subject-es="Casting de Pixy Studio" data-subject-en="Pixy Studio casting">
+            <form class="sp-form" data-mailto="contact@pixy.com.co" data-subject-es="Casting de Pixy Studio" data-subject-en="Pixy Studio casting">
                 <label>${t("span", "f_name", "Nombre", "Name")}<input name="nombre" required autocomplete="name"></label>
                 <label>${t("span", "f_brand", "Tu marca", "Your brand")}<input name="marca" required autocomplete="organization"></label>
                 <label>${t("span", "f_email", "Email", "Email")}<input name="email" type="email" required autocomplete="email"></label>

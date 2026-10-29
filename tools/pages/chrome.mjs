@@ -11,7 +11,7 @@ export const CHROME_I18N = {
     partners: "Partners", contact: "Contacto", studio: "Pixy Studio", spaces_site: "Pixy Spaces",
     privacy: "Privacidad", terms: "Términos", cookies: "Cookies", deletion: "Eliminación de datos", permissions: "Permisos",
     rights: "© 2026 Pixy. Todos los derechos reservados.",
-    meta_tp: "Pixy es Tech Provider de Meta.",
+    meta_tp: "Pixy es Tech Provider de Meta.", whatsapp: "WhatsApp",
   },
   en: {
     spaces: "Spaces", platform: "Platform", plans: "Plans", blog: "Blog", demo: "Book a demo", menu: "Menu",
@@ -21,7 +21,7 @@ export const CHROME_I18N = {
     partners: "Partners", contact: "Contact", studio: "Pixy Studio", spaces_site: "Pixy Spaces",
     privacy: "Privacy", terms: "Terms", cookies: "Cookies", deletion: "Data deletion", permissions: "Permissions",
     rights: "© 2026 Pixy. All rights reserved.",
-    meta_tp: "Pixy is a Meta Tech Provider.",
+    meta_tp: "Pixy is a Meta Tech Provider.", whatsapp: "WhatsApp",
   },
 };
 const es = CHROME_I18N.es;
@@ -99,6 +99,10 @@ export function studioNav(pre = "", active = "") {
 
 const flink = (pre, href, key) => `                <a href="${pre}${href}" class="neon-link" ${i(key)}>${es[key]}</a>`;
 
+// Único WhatsApp de contacto de Pixy (y único correo: contact@pixy.com.co)
+export const WHATSAPP = "https://wa.me/573504076800";
+const waLink = `                <a href="${WHATSAPP}" class="neon-link" target="_blank" rel="noopener" ${i("whatsapp")}>${es.whatsapp}</a>`;
+
 function legalCol(pre) {
   return `            <nav class="footer-links" aria-label="Legal">
                 <h4 ${i("col_legal")}>${es.col_legal}</h4>
@@ -134,6 +138,7 @@ ${[["spaces.html", "spaces"], ["features.html", "platform"], ["pricing.html", "p
             <nav class="footer-links" aria-label="Pixy">
                 <h4 ${i("col_company")}>${es.col_company}</h4>
 ${[["blog.html", "blog"], ["contact.html", "contact"], ["agency.html", "studio"]].map(([h, k]) => flink(pre, h, k)).join("\n")}
+${waLink}
             </nav>`;
   return footShell(pre, "Pixy", "slogan_spaces", cols);
 }
@@ -146,6 +151,7 @@ ${[["agency/services.html", "packages"], ["agency/plans.html", "plans"], ["agenc
             <nav class="footer-links" aria-label="Pixy">
                 <h4 ${i("col_company")}>${es.col_company}</h4>
 ${[["index.html", "spaces_site"], ["blog.html", "blog"]].map(([h, k]) => flink(pre, h, k)).join("\n")}
+${waLink}
             </nav>`;
   return footShell(pre, "Pixy Studio", "slogan_studio", cols);
 }

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        (function () {
+            try {
+                var s = localStorage.getItem('pixy-theme');
+                var t = s ? s : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un pipeline que te dice qué hacer hoy | Blog Pixy</title>
+    <meta name="description" content="La cola «Hoy», la salud de cada trato, el tiempo máximo por etapa y una IA que propone mover tratos citando al cliente, sin marcar nunca una venta como ganada.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://pixy.com.co/blog/pipeline-que-te-dice-que-hacer-hoy.html">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="alternate" type="application/rss+xml" title="Blog de Pixy" href="https://pixy.com.co/blog/feed.xml">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:site_name" content="Pixy">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pixy.com.co/blog/pipeline-que-te-dice-que-hacer-hoy.html">
+    <meta property="og:title" content="Un pipeline que te dice qué hacer hoy | Blog Pixy">
+    <meta property="og:description" content="La cola «Hoy», la salud de cada trato, el tiempo máximo por etapa y una IA que propone mover tratos citando al cliente, sin marcar nunca una venta como ganada.">
+    <meta property="og:image" content="https://pixy.com.co/assets/blog/pipeline-que-te-dice-que-hacer-hoy-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Un pipeline que te dice qué hacer hoy">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Un pipeline que te dice qué hacer hoy | Blog Pixy">
+    <meta name="twitter:description" content="La cola «Hoy», la salud de cada trato, el tiempo máximo por etapa y una IA que propone mover tratos citando al cliente, sin marcar nunca una venta como ganada.">
+    <meta name="twitter:image" content="https://pixy.com.co/assets/blog/pipeline-que-te-dice-que-hacer-hoy-og.jpg">
+    <meta property="article:published_time" content="2026-10-28">
+    <meta property="article:modified_time" content="2026-10-28">
+    <meta property="article:section" content="Ventas">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://pixy.com.co/blog/pipeline-que-te-dice-que-hacer-hoy.html#post","headline":"Un pipeline que te dice qué hacer hoy","description":"La cola «Hoy», la salud de cada trato, el tiempo máximo por etapa y una IA que propone mover tratos citando al cliente, sin marcar nunca una venta como ganada.","image":["https://pixy.com.co/assets/blog/pipeline-que-te-dice-que-hacer-hoy-og.jpg","https://pixy.com.co/assets/blog/pipeline-que-te-dice-que-hacer-hoy.webp"],"datePublished":"2026-10-28","dateModified":"2026-10-28","inLanguage":"es","articleSection":"Ventas","keywords":"pipeline de ventas, embudo de ventas, CRM con IA, seguimiento de tratos, gestión comercial","wordCount":439,"author":{"@id":"https://pixy.com.co/#org"},"publisher":{"@id":"https://pixy.com.co/#org"},"mainEntityOfPage":"https://pixy.com.co/blog/pipeline-que-te-dice-que-hacer-hoy.html"},{"@type":"Organization","@id":"https://pixy.com.co/#org","name":"Pixy","url":"https://pixy.com.co/","logo":{"@type":"ImageObject","url":"https://pixy.com.co/assets/favicon.png"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://pixy.com.co/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://pixy.com.co/blog.html"},{"@type":"ListItem","position":3,"name":"Un pipeline que te dice qué hacer hoy","item":"https://pixy.com.co/blog/pipeline-que-te-dice-que-hacer-hoy.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es la cola «Hoy»?","acceptedAnswer":{"@type":"Answer","text":"Es la lista que ordena el día del asesor, con a quién responder primero y qué trato se está enfriando."}},{"@type":"Question","name":"¿La IA mueve los tratos sola?","acceptedAnswer":{"@type":"Answer","text":"No. Propone el cambio de etapa citando lo que dijo el cliente y el asesor lo aplica con un toque. Nunca marca una venta como ganada por su cuenta."}},{"@type":"Question","name":"¿Puedo usarlo desde el celular?","acceptedAnswer":{"@type":"Answer","text":"Sí. El pipeline funciona en el celular, para asesores que venden en la calle o entre reuniones."}}]}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="../assets/blog/pipeline-que-te-dice-que-hacer-hoy.webp" fetchpriority="high">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/spaces-home.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="expect" href="#pixy-end" blocking="render">
+</head>
+<body class="blog-post-page spaces-face bp-page" style="--acc:#38bdf8">
+    <div class="bp-progress" aria-hidden="true"><i></i></div>
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="nav-left-group">
+                <a href="../index.html" class="nav-brand" aria-label="Pixy">
+                    <img src="../assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
+                    <img src="../assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
+                </a>
+                <div class="universe-switcher" role="tablist" aria-label="Pixy">
+                    <a href="../agency.html" class="universe-tab" data-mode="agency">Studio</a>
+                    <a href="../index.html" class="universe-tab active" data-mode="spaces">Spaces</a>
+                </div>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="../spaces.html" class="neon-link" data-i18n="chrome.spaces">Spaces</a>
+                <a href="../features.html" class="neon-link" data-i18n="chrome.platform">Plataforma</a>
+                <a href="../pricing.html" class="neon-link" data-i18n="chrome.plans">Planes</a>
+                <a href="../blog.html" class="neon-link active" data-i18n="chrome.blog">Blog</a>
+                <a href="../contact.html" class="btn-neon nav-links-cta" data-i18n="chrome.demo">Agenda tu demo</a>
+            </div>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-lang" type="button" aria-label="Idioma / Language">
+                    <span id="lang-text">ES</span>
+                    <span class="btn-lang-caret" aria-hidden="true">▼</span>
+                </button>
+                <a href="../contact.html" class="btn-neon-outline nav-cta" data-i18n="chrome.demo">Agenda tu demo</a>
+                <button class="nav-menu-btn" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Menú" data-i18n-aria="chrome.menu">
+                    <span class="nav-menu-bar" aria-hidden="true"></span>
+                    <span class="nav-menu-bar" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="bp-article" data-no-reveal>
+        <header class="bp-hero container">
+            <nav class="bp-crumbs" aria-label="Ruta"><a href="../index.html" data-i18n="blog2.breadcrumb">Inicio</a><span>/</span><a href="../blog.html">Blog</a></nav>
+            <span class="bp-cat" data-i18n="blog2.cat_ventas">Ventas</span>
+            <h1 class="bp-title">Un pipeline que te dice qué hacer hoy</h1>
+            <p class="bp-dek">La mayoría de los embudos de ventas son un archivo histórico: columnas con tarjetas que alguien movió hace dos semanas. Muestran dónde estaba cada trato, no qué hay que hacer con él. Un pipeline útil responde otra pregunta: <strong>¿qué hago hoy?</strong></p>
+            <p class="bp-meta"><span data-i18n="blog2.by">Equipo Pixy</span> · <time datetime="2026-10-28">28 de octubre de 2026</time> · 2 <span data-i18n="blog2.read">min de lectura</span></p>
+            <p class="bp-lang-note" data-i18n="blog2.lang_note"></p>
+        </header>
+        <figure class="bp-cover container">
+            <img src="../assets/blog/pipeline-que-te-dice-que-hacer-hoy.webp" alt="Un pipeline que te dice qué hacer hoy" width="1376" height="768" fetchpriority="high" decoding="async">
+        </figure>
+        <div class="bp-layout container">
+            <aside class="bp-rail" aria-label="Compartir">
+                <div class="bp-share bp-share-rail" data-share data-url="https://pixy.com.co/blog/pipeline-que-te-dice-que-hacer-hoy.html" data-title="Un pipeline que te dice qué hacer hoy">
+                <a class="bp-share-btn" data-net="whatsapp" href="https://wa.me/?text=Un%20pipeline%20que%20te%20dice%20qu%C3%A9%20hacer%20hoy%20https%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" target="_blank" rel="noopener" aria-label="WhatsApp"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41z"/></svg></span><span class="bp-share-tip">WhatsApp</span></a>
+                <a class="bp-share-btn" data-net="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span><span class="bp-share-tip">LinkedIn</span></a>
+                <a class="bp-share-btn" data-net="x" href="https://twitter.com/intent/tweet?text=Un%20pipeline%20que%20te%20dice%20qu%C3%A9%20hacer%20hoy&url=https%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" target="_blank" rel="noopener" aria-label="X"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.59-6.64 7.59H.47l8.6-9.83L0 1.15h7.59l5.24 6.93zM17.61 20.64h2.04L6.49 3.24H4.3z"/></svg></span><span class="bp-share-tip">X</span></a>
+                <a class="bp-share-btn" data-net="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" target="_blank" rel="noopener" aria-label="Facebook"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M9.1 23.69v-7.98H6.63v-3.67H9.1v-1.58c0-4.09 1.85-5.98 5.86-5.98.4 0 .96.04 1.47.1.38.04.76.11 1.14.2v3.32c-.22-.02-.43-.03-.65-.04-.25 0-.49-.01-.74-.01-.7 0-1.26.1-1.67.31-.29.15-.52.36-.68.62-.26.42-.38 1-.38 1.75v1.3h3.92l-.39 2.1-.28 1.57h-3.25v8.24C19.4 23.24 24 18.18 24 12.04 24 5.42 18.63.04 12 .04S0 5.42 0 12.04c0 5.63 3.87 10.35 9.1 11.65z"/></svg></span><span class="bp-share-tip">Facebook</span></a>
+                <a class="bp-share-btn" data-net="mail" href="mailto:?subject=Un%20pipeline%20que%20te%20dice%20qu%C3%A9%20hacer%20hoy&body=Un%20pipeline%20que%20te%20dice%20qu%C3%A9%20hacer%20hoy%0A%0Ahttps%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" aria-label="Email"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5.5h18v13H3zM3.5 6l8.5 7 8.5-7"/></svg></span><span class="bp-share-tip">Email</span></a>
+                <button class="bp-share-btn" type="button" data-copy aria-label="Copiar enlace"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M10 14a4.5 4.5 0 0 0 6.36 0l3.18-3.18a4.5 4.5 0 0 0-6.36-6.36L11.6 6.04M14 10a4.5 4.5 0 0 0-6.36 0l-3.18 3.18a4.5 4.5 0 0 0 6.36 6.36l1.58-1.58"/></svg><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.5l5 5 10-11"/></svg></span><span class="bp-share-tip" data-i18n="blog2.copy" data-copied-label>Copiar enlace</span></button>
+                <button class="bp-share-btn bp-share-native" type="button" data-native aria-label="Compartir"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 12v7.5h14V12"/></svg></span><span class="bp-share-tip" data-i18n="blog2.share">Compartir</span></button>
+            </div>
+            </aside>
+            <article class="bp-body">
+<h2 id="la-cola-hoy">La cola «Hoy»</h2>
+<p>Cuando el asesor abre Pixy, no empieza por el tablero completo. Empieza por la <strong>cola «Hoy»</strong>: a quién responder primero y qué tratos se están enfriando. Es una lista corta y ordenada, pensada para trabajar, no para mirar.</p>
+<p>Esa cola se alimenta de lo que pasa en las conversaciones. Si un cliente caliente escribió y nadie le ha respondido, sube. Si un trato lleva demasiado tiempo quieto, aparece antes de que se pierda.</p>
+<h2 id="salud-y-tiempo-por-etapa">Salud y tiempo por etapa</h2>
+<p>Cada trato tiene una <strong>salud</strong> que se ve de un vistazo, y cada etapa tiene un <strong>tiempo máximo</strong>. Si una cotización debería resolverse en pocos días y lleva más, el trato lo muestra. No hace falta que el gerente revise tarjeta por tarjeta para encontrar lo que está estancado.</p>
+<h2 id="la-ia-propone-el-asesor-decide">La IA propone, el asesor decide</h2>
+<p>Mover tarjetas a mano es la tarea que todos olvidan. Por eso la IA lee las conversaciones y <strong>propone mover un trato de etapa citando lo que dijo el cliente</strong>. Por ejemplo, propone pasar a negociación porque el cliente escribió «¿me haces un descuento si pago de contado?».</p>
+<p>El asesor ve la propuesta con su evidencia y la <strong>aplica con un toque</strong>. Y hay una regla fija: la IA <strong>nunca marca una venta como ganada por su cuenta</strong>. Ganar o perder es una decisión de tu equipo.</p>
+<h2 id="por-que-se-gana-y-por-que-se-pierde">Por qué se gana y por qué se pierde</h2>
+<p>Cuando un trato se cierra, ganado o perdido, se registra el <strong>motivo</strong>. Con el tiempo, eso se vuelve un informe de por qué se gana y por qué se pierde, con datos de tus propios clientes: precio, tiempos de entrega, competencia, falta de seguimiento. Es la información que permite ajustar la oferta en vez de adivinar.</p>
+<h2 id="en-el-celular">En el celular</h2>
+<p>Muchos asesores venden fuera de la oficina: en visitas, en ferias, entre reuniones. El pipeline <strong>funciona en el celular</strong>, con la misma cola «Hoy» y las mismas propuestas de la IA.</p>
+<h2 id="como-encaja-con-el-resto">Cómo encaja con el resto</h2>
+<p>El pipeline no es un módulo aislado. Cada trato está unido a la <strong>conversación</strong>, a la <strong>ficha del cliente</strong> con todo su historial y a las <strong>cotizaciones</strong>, que se crean desde el chat y se convierten en venta y factura cuando el cliente acepta. <a href="/blog/calificar-clientes-con-evidencia.html">Así se califica a cada cliente</a>.</p>
+<p>Si tu equipo vende por WhatsApp y quieres verlo con tus etapas, <a href="/contact.html">agenda una demo</a>.</p>
+
+            <section class="bp-faq" aria-labelledby="faq">
+                <h2 id="faq" data-i18n="blog2.faq">Preguntas frecuentes</h2>
+                <details><summary>¿Qué es la cola «Hoy»?</summary><p>Es la lista que ordena el día del asesor, con a quién responder primero y qué trato se está enfriando.</p></details>
+                <details><summary>¿La IA mueve los tratos sola?</summary><p>No. Propone el cambio de etapa citando lo que dijo el cliente y el asesor lo aplica con un toque. Nunca marca una venta como ganada por su cuenta.</p></details>
+                <details><summary>¿Puedo usarlo desde el celular?</summary><p>Sí. El pipeline funciona en el celular, para asesores que venden en la calle o entre reuniones.</p></details>
+            </section>
+                <div class="bp-endshare">
+                    <p data-i18n="blog2.share_title">Comparte este artículo</p>
+                    <div class="bp-share bp-share-row" data-share data-url="https://pixy.com.co/blog/pipeline-que-te-dice-que-hacer-hoy.html" data-title="Un pipeline que te dice qué hacer hoy">
+                <a class="bp-share-btn" data-net="whatsapp" href="https://wa.me/?text=Un%20pipeline%20que%20te%20dice%20qu%C3%A9%20hacer%20hoy%20https%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" target="_blank" rel="noopener" aria-label="WhatsApp"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41z"/></svg></span><span class="bp-share-tip">WhatsApp</span></a>
+                <a class="bp-share-btn" data-net="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span><span class="bp-share-tip">LinkedIn</span></a>
+                <a class="bp-share-btn" data-net="x" href="https://twitter.com/intent/tweet?text=Un%20pipeline%20que%20te%20dice%20qu%C3%A9%20hacer%20hoy&url=https%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" target="_blank" rel="noopener" aria-label="X"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.59-6.64 7.59H.47l8.6-9.83L0 1.15h7.59l5.24 6.93zM17.61 20.64h2.04L6.49 3.24H4.3z"/></svg></span><span class="bp-share-tip">X</span></a>
+                <a class="bp-share-btn" data-net="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" target="_blank" rel="noopener" aria-label="Facebook"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M9.1 23.69v-7.98H6.63v-3.67H9.1v-1.58c0-4.09 1.85-5.98 5.86-5.98.4 0 .96.04 1.47.1.38.04.76.11 1.14.2v3.32c-.22-.02-.43-.03-.65-.04-.25 0-.49-.01-.74-.01-.7 0-1.26.1-1.67.31-.29.15-.52.36-.68.62-.26.42-.38 1-.38 1.75v1.3h3.92l-.39 2.1-.28 1.57h-3.25v8.24C19.4 23.24 24 18.18 24 12.04 24 5.42 18.63.04 12 .04S0 5.42 0 12.04c0 5.63 3.87 10.35 9.1 11.65z"/></svg></span><span class="bp-share-tip">Facebook</span></a>
+                <a class="bp-share-btn" data-net="mail" href="mailto:?subject=Un%20pipeline%20que%20te%20dice%20qu%C3%A9%20hacer%20hoy&body=Un%20pipeline%20que%20te%20dice%20qu%C3%A9%20hacer%20hoy%0A%0Ahttps%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" aria-label="Email"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5.5h18v13H3zM3.5 6l8.5 7 8.5-7"/></svg></span><span class="bp-share-tip">Email</span></a>
+                <button class="bp-share-btn" type="button" data-copy aria-label="Copiar enlace"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M10 14a4.5 4.5 0 0 0 6.36 0l3.18-3.18a4.5 4.5 0 0 0-6.36-6.36L11.6 6.04M14 10a4.5 4.5 0 0 0-6.36 0l-3.18 3.18a4.5 4.5 0 0 0 6.36 6.36l1.58-1.58"/></svg><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.5l5 5 10-11"/></svg></span><span class="bp-share-tip" data-i18n="blog2.copy" data-copied-label>Copiar enlace</span></button>
+                <button class="bp-share-btn bp-share-native" type="button" data-native aria-label="Compartir"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 12v7.5h14V12"/></svg></span><span class="bp-share-tip" data-i18n="blog2.share">Compartir</span></button>
+            </div>
+                </div>
+            </article>
+        </div>
+        <section class="bp-cta container">
+            <div class="bp-cta-inner">
+                <h2 data-i18n="blog2.cta_t">Míralo con tu negocio.</h2>
+                <p data-i18n="blog2.cta_b">Te mostramos Pixy con tu caso en una demo guiada.</p>
+                <div class="bp-cta-actions">
+                    <a class="btn-neon" href="../contact.html" data-warp-click="hop" data-i18n="blog2.cta_btn">Agenda tu demo</a>
+                    <a class="sh-link" href="../features.html" data-i18n="blog2.cta_more">Conoce la plataforma</a>
+                </div>
+            </div>
+        </section>
+        <section class="bp-related container" aria-labelledby="rel">
+            <h2 id="rel" class="bp-section-title" data-i18n="blog2.related">Sigue leyendo</h2>
+            <div class="bp-grid">
+            <a class="bp-card" href="../blog/comentarios-que-venden.html" data-cat="ventas" style="--acc:#38bdf8">
+                <span class="bp-card-media"><img src="../assets/blog/comentarios-que-venden.webp" alt="" width="1376" height="768" loading="lazy" decoding="async"></span>
+                <span class="bp-card-body">
+                    <span class="bp-cat" data-i18n="blog2.cat_ventas">Ventas</span>
+                    <span class="bp-card-title">Alguien comentó «precio». Ahora conviértelo en una venta</span>
+                    <span class="bp-card-dek">Cómo responder en público y por mensaje directo a quien comenta en Instagram o Facebook, enviarle la cotización o el link de pago y saber cuánto vendió cada publicación.</span>
+                    <span class="bp-meta"><time datetime="2026-10-28">28 de octubre de 2026</time> · 2 <span data-i18n="blog2.read">min de lectura</span></span>
+                </span>
+            </a>
+            <a class="bp-card" href="../blog/calificar-clientes-con-evidencia.html" data-cat="ventas" style="--acc:#38bdf8">
+                <span class="bp-card-media"><img src="../assets/blog/calificar-clientes-con-evidencia.webp" alt="" width="1376" height="768" loading="lazy" decoding="async"></span>
+                <span class="bp-card-body">
+                    <span class="bp-cat" data-i18n="blog2.cat_ventas">Ventas</span>
+                    <span class="bp-card-title">Frío, tibio o caliente, con la frase que lo demuestra</span>
+                    <span class="bp-card-dek">Cómo calificar a cada cliente a partir de lo que dijo en la conversación, por qué la evidencia importa más que el puntaje y cómo decide tu equipo.</span>
+                    <span class="bp-meta"><time datetime="2026-10-28">28 de octubre de 2026</time> · 2 <span data-i18n="blog2.read">min de lectura</span></span>
+                </span>
+            </a>
+            <a class="bp-card" href="../blog/ia-que-atiende-whatsapp.html" data-cat="atencion" style="--acc:#f205e2">
+                <span class="bp-card-media"><img src="../assets/blog/ia-que-atiende-whatsapp.webp" alt="" width="1376" height="768" loading="lazy" decoding="async"></span>
+                <span class="bp-card-body">
+                    <span class="bp-cat" data-i18n="blog2.cat_atencion">Atención</span>
+                    <span class="bp-card-title">La IA que atiende tu WhatsApp sin inventar nada</span>
+                    <span class="bp-card-dek">Cómo responde una IA con la información real de tu negocio, cuándo le pasa la conversación a una persona y por qué tú decides en qué chats actúa.</span>
+                    <span class="bp-meta"><time datetime="2026-10-28">28 de octubre de 2026</time> · 3 <span data-i18n="blog2.read">min de lectura</span></span>
+                </span>
+            </a>
+            </div>
+        </section>
+    </main>
+    <div class="bp-dock" aria-hidden="true"><div class="bp-share bp-share-dock" data-share data-url="https://pixy.com.co/blog/pipeline-que-te-dice-que-hacer-hoy.html" data-title="Un pipeline que te dice qué hacer hoy">
+                <a class="bp-share-btn" data-net="whatsapp" href="https://wa.me/?text=Un%20pipeline%20que%20te%20dice%20qu%C3%A9%20hacer%20hoy%20https%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" target="_blank" rel="noopener" aria-label="WhatsApp"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41z"/></svg></span><span class="bp-share-tip">WhatsApp</span></a>
+                <a class="bp-share-btn" data-net="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span><span class="bp-share-tip">LinkedIn</span></a>
+                <a class="bp-share-btn" data-net="x" href="https://twitter.com/intent/tweet?text=Un%20pipeline%20que%20te%20dice%20qu%C3%A9%20hacer%20hoy&url=https%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" target="_blank" rel="noopener" aria-label="X"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.59-6.64 7.59H.47l8.6-9.83L0 1.15h7.59l5.24 6.93zM17.61 20.64h2.04L6.49 3.24H4.3z"/></svg></span><span class="bp-share-tip">X</span></a>
+                <a class="bp-share-btn" data-net="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" target="_blank" rel="noopener" aria-label="Facebook"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M9.1 23.69v-7.98H6.63v-3.67H9.1v-1.58c0-4.09 1.85-5.98 5.86-5.98.4 0 .96.04 1.47.1.38.04.76.11 1.14.2v3.32c-.22-.02-.43-.03-.65-.04-.25 0-.49-.01-.74-.01-.7 0-1.26.1-1.67.31-.29.15-.52.36-.68.62-.26.42-.38 1-.38 1.75v1.3h3.92l-.39 2.1-.28 1.57h-3.25v8.24C19.4 23.24 24 18.18 24 12.04 24 5.42 18.63.04 12 .04S0 5.42 0 12.04c0 5.63 3.87 10.35 9.1 11.65z"/></svg></span><span class="bp-share-tip">Facebook</span></a>
+                <a class="bp-share-btn" data-net="mail" href="mailto:?subject=Un%20pipeline%20que%20te%20dice%20qu%C3%A9%20hacer%20hoy&body=Un%20pipeline%20que%20te%20dice%20qu%C3%A9%20hacer%20hoy%0A%0Ahttps%3A%2F%2Fpixy.com.co%2Fblog%2Fpipeline-que-te-dice-que-hacer-hoy.html" aria-label="Email"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5.5h18v13H3zM3.5 6l8.5 7 8.5-7"/></svg></span><span class="bp-share-tip">Email</span></a>
+                <button class="bp-share-btn" type="button" data-copy aria-label="Copiar enlace"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M10 14a4.5 4.5 0 0 0 6.36 0l3.18-3.18a4.5 4.5 0 0 0-6.36-6.36L11.6 6.04M14 10a4.5 4.5 0 0 0-6.36 0l-3.18 3.18a4.5 4.5 0 0 0 6.36 6.36l1.58-1.58"/></svg><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.5l5 5 10-11"/></svg></span><span class="bp-share-tip" data-i18n="blog2.copy" data-copied-label>Copiar enlace</span></button>
+                <button class="bp-share-btn bp-share-native" type="button" data-native aria-label="Compartir"><span class="bp-share-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 12v7.5h14V12"/></svg></span><span class="bp-share-tip" data-i18n="blog2.share">Compartir</span></button>
+            </div></div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="../assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
+                <img src="../assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
+                <p data-i18n="chrome.slogan_spaces">El sistema operativo de tu negocio.</p>
+                <p class="footer-meta" data-i18n="chrome.meta_tp">Pixy es Tech Provider de Meta.</p>
+            </div>
+            <nav class="footer-links" aria-label="Producto">
+                <h4 data-i18n="chrome.col_product">Producto</h4>
+                <a href="../spaces.html" class="neon-link" data-i18n="chrome.spaces">Spaces</a>
+                <a href="../features.html" class="neon-link" data-i18n="chrome.platform">Plataforma</a>
+                <a href="../pricing.html" class="neon-link" data-i18n="chrome.plans">Planes</a>
+                <a href="../partners.html" class="neon-link" data-i18n="chrome.partners">Partners</a>
+            </nav>
+            <nav class="footer-links" aria-label="Pixy">
+                <h4 data-i18n="chrome.col_company">Pixy</h4>
+                <a href="../blog.html" class="neon-link" data-i18n="chrome.blog">Blog</a>
+                <a href="../contact.html" class="neon-link" data-i18n="chrome.contact">Contacto</a>
+                <a href="../agency.html" class="neon-link" data-i18n="chrome.studio">Pixy Studio</a>
+                <a href="https://wa.me/573504076800" class="neon-link" target="_blank" rel="noopener" data-i18n="chrome.whatsapp">WhatsApp</a>
+            </nav>
+            <nav class="footer-links" aria-label="Legal">
+                <h4 data-i18n="chrome.col_legal">Legal</h4>
+                <a href="../privacy.html" class="neon-link" data-i18n="chrome.privacy">Privacidad</a>
+                <a href="../terms.html" class="neon-link" data-i18n="chrome.terms">Términos</a>
+                <a href="../cookies.html" class="neon-link" data-i18n="chrome.cookies">Cookies</a>
+                <a href="../data-deletion.html" class="neon-link" data-i18n="chrome.deletion">Eliminación de datos</a>
+                <a href="../permissions.html" class="neon-link" data-i18n="chrome.permissions">Permisos</a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="chrome.rights">© 2026 Pixy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema" aria-label="Cambiar tema">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+
+    <!-- Fondo espacial (el del login de la plataforma) -->
+    <script src="../js/space-bg.js"></script>
+    <script src="../js/smooth-scroll.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/blog.js"></script>
+    <div id="pixy-end" hidden></div>
+</body>
+
+</html>

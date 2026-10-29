@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /tools/
+Disallow: /content/
 
 Sitemap: https://pixy.com.co/sitemap.xml

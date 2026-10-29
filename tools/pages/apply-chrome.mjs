@@ -9,14 +9,15 @@ import { spacesNav, spacesFooter, writeChromeI18n, withPageEnd } from "./chrome.
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const LEGAL = ["privacy.html", "terms.html", "cookies.html", "data-deletion.html", "permissions.html"];
-const files = ["index.html", "blog.html", ...readdirSync(root).filter((f) => /^article-.*\.html$/.test(f)), ...LEGAL];
+// blog.html y los artículos los genera tools/blog/build-blog.mjs
+const files = ["index.html", ...LEGAL];
 
 let n = 0;
 for (const f of files) {
   const p = join(root, f);
   let c = readFileSync(p, "utf8");
   const eol = c.includes("\r\n") ? "\r\n" : "\n";
-  const active = f === "blog.html" || f.startsWith("article-") ? "blog" : "";
+  const active = "";
   const before = c;
   c = c.replace(/ {4}<nav class="nav">[\s\S]*?<\/nav>\r?\n/, spacesNav("", active).replace(/\n/g, eol));
   c = c.replace(/ *<footer[\s\S]*?<\/footer>/, spacesFooter("").replace(/\n/g, eol));
