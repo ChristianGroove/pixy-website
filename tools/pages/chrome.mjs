@@ -9,7 +9,7 @@ export const CHROME_I18N = {
     slogan_spaces: "El sistema operativo de tu negocio.", slogan_studio: "Tu marca, en portada.",
     col_product: "Producto", col_company: "Pixy", col_legal: "Legal", col_studio: "Studio",
     partners: "Partners", contact: "Contacto", studio: "Pixy Studio", spaces_site: "Pixy Spaces",
-    privacy: "Privacidad", terms: "Términos", cookies: "Cookies", deletion: "Eliminación de datos", permissions: "Permisos",
+    privacy: "Privacidad", terms: "Términos", cookies: "Cookies", deletion: "Eliminación de datos", permissions: "Permisos", acceptable: "Uso aceptable", legal_all: "Todos los documentos",
     rights: "© 2026 Pixy. Todos los derechos reservados.",
     meta_tp: "Pixy es Tech Provider de Meta.", whatsapp: "WhatsApp",
   },
@@ -19,7 +19,7 @@ export const CHROME_I18N = {
     slogan_spaces: "The operating system for your business.", slogan_studio: "Your brand, on the cover.",
     col_product: "Product", col_company: "Pixy", col_legal: "Legal", col_studio: "Studio",
     partners: "Partners", contact: "Contact", studio: "Pixy Studio", spaces_site: "Pixy Spaces",
-    privacy: "Privacy", terms: "Terms", cookies: "Cookies", deletion: "Data deletion", permissions: "Permissions",
+    privacy: "Privacy", terms: "Terms", cookies: "Cookies", deletion: "Data deletion", permissions: "Permissions", acceptable: "Acceptable use", legal_all: "All legal documents",
     rights: "© 2026 Pixy. All rights reserved.",
     meta_tp: "Pixy is a Meta Tech Provider.", whatsapp: "WhatsApp",
   },
@@ -121,7 +121,7 @@ ${SOCIAL.map((s) => `                    <a href="${s.url}" target="_blank" rel=
 function legalCol(pre) {
   return `            <nav class="footer-links" aria-label="Legal">
                 <h4 ${i("col_legal")}>${es.col_legal}</h4>
-${["privacy|privacy.html", "terms|terms.html", "cookies|cookies.html", "deletion|data-deletion.html", "permissions|permissions.html"]
+${["privacy|privacy.html", "terms|terms.html", "cookies|cookies.html", "deletion|data-deletion.html", "acceptable|legal/uso-aceptable.html", "legal_all|legal/index.html"]
   .map((s) => flink(pre, s.split("|")[1], s.split("|")[0]))
   .join("\n")}
             </nav>`;
@@ -193,9 +193,11 @@ export function writeChromeI18n(readFileSync, writeFileSync, join, root) {
 export function consentBlock(t, { pre = "", purposeEs, purposeEn, dataEs, dataEn, studio = false }) {
   const policyEs = `<a href="${pre}privacy.html">Política de tratamiento de datos personales</a>`;
   const policyEn = `<a href="${pre}privacy.html">Personal Data Policy</a> (in Spanish)`;
+  const studioTermsEs = studio ? ` y en los <a href="${pre}legal/terminos-pixy-studio.html">Términos de Pixy Studio</a>` : "";
+  const studioTermsEn = studio ? ` and the <a href="${pre}legal/terminos-pixy-studio.html">Pixy Studio Terms</a>` : "";
   const who = studio ? ["Pixy Studio, el servicio de agencia de Pixy,", "Pixy Studio, Pixy's agency service,"] : ["Pixy", "Pixy"];
-  const noticeEs = `${who[0]} usará ${dataEs} para ${purposeEs}. Tus datos se guardan en nuestros proveedores de correo y nube, que pueden estar fuera de Colombia. Puedes conocer, actualizar, rectificar o suprimir tus datos y revocar tu autorización escribiendo a <a href="mailto:contact@pixy.com.co">contact@pixy.com.co</a>. Más información en la ${policyEs}. No incluyas datos sensibles${studio ? " ni datos de menores de edad" : ""} en el mensaje.`;
-  const noticeEn = `${who[1]} will use ${dataEn} to ${purposeEn}. Your data is stored with our email and cloud providers, which may be located outside Colombia. You can access, update, correct or delete your data and withdraw your consent by writing to <a href="mailto:contact@pixy.com.co">contact@pixy.com.co</a>. Learn more in our ${policyEn}. Please don't include sensitive data${studio ? " or data about minors" : ""} in your message.`;
+  const noticeEs = `${who[0]} usará ${dataEs} para ${purposeEs}. Tus datos se guardan en nuestros proveedores de correo y nube, que pueden estar fuera de Colombia. Puedes conocer, actualizar, rectificar o suprimir tus datos y revocar tu autorización escribiendo a <a href="mailto:contact@pixy.com.co">contact@pixy.com.co</a>. Más información en la ${policyEs}${studioTermsEs}. No incluyas datos sensibles${studio ? " ni datos de menores de edad" : ""} en el mensaje.`;
+  const noticeEn = `${who[1]} will use ${dataEn} to ${purposeEn}. Your data is stored with our email and cloud providers, which may be located outside Colombia. You can access, update, correct or delete your data and withdraw your consent by writing to <a href="mailto:contact@pixy.com.co">contact@pixy.com.co</a>. Learn more in our ${policyEn}${studioTermsEn}. Please don't include sensitive data${studio ? " or data about minors" : ""} in your message.`;
   const authEs = `Autorizo a Pixy a tratar mis datos personales para ${studio ? "preparar mi propuesta" : "atender esta solicitud"}, según la Política de tratamiento de datos personales.`;
   const authEn = `I authorize Pixy to process my personal data to ${studio ? "prepare my proposal" : "handle this request"}, as described in the Personal Data Policy.`;
   const newsEs = studio ? "Quiero recibir novedades y ofertas de Pixy y Pixy Studio por correo y WhatsApp. Puedo darme de baja cuando quiera." : "Quiero recibir novedades y ofertas de Pixy por correo. Puedo darme de baja cuando quiera.";

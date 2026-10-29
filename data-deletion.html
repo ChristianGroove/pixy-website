@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <script>
@@ -36,23 +35,20 @@
     <meta name="twitter:image" content="https://pixy.com.co/assets/og/pixy.png">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://pixy.com.co/#org","name":"Pixy","url":"https://pixy.com.co/","logo":{"@type":"ImageObject","url":"https://pixy.com.co/assets/favicon.png"},"email":"contact@pixy.com.co","contactPoint":[{"@type":"ContactPoint","contactType":"sales","email":"contact@pixy.com.co","telephone":"+57 350 407 6800","availableLanguage":["es","en"]}],"sameAs":["https://www.instagram.com/pixyspaces/","https://www.facebook.com/pixyspaces"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://pixy.com.co/"},{"@type":"ListItem","position":2,"name":"Eliminación de datos","item":"https://pixy.com.co/data-deletion.html"}]},{"@type":"WebPage","@id":"https://pixy.com.co/data-deletion.html#page","url":"https://pixy.com.co/data-deletion.html","name":"Eliminación de datos | Pixy","description":"Cómo solicitar la eliminación de tus datos en Pixy, incluidos los recibidos de Facebook, Instagram y WhatsApp, y en qué plazos respondemos.","inLanguage":"es","isPartOf":{"@id":"https://pixy.com.co/#site"},"publisher":{"@id":"https://pixy.com.co/#org"}}]}</script>
     <!-- /seo -->
-
-
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="alternate" type="application/rss+xml" title="Blog de Pixy" href="https://pixy.com.co/blog/feed.xml">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/spaces-home.css">
+    <link rel="stylesheet" href="css/blog.css">
     <link rel="expect" href="#pixy-end" blocking="render">
 </head>
-
-<body class="legal-page spaces-face">
-    <div class="bg-gradient"></div>
-    <div class="bg-grid"></div>
-
-    <!-- Navigation (Shared) -->
+<body class="legal-page spaces-face bp-page lg-page">
+    <div class="bp-progress" aria-hidden="true"><i></i></div>
     <nav class="nav">
         <div class="nav-content">
             <div class="nav-left-group">
@@ -86,209 +82,65 @@
         </div>
     </nav>
 
-    <div class="container" style="padding-top: 140px; margin-bottom: 40px; text-align: center;">
-        <h1 class="gradient-text" data-i18n="legal.deletion.title">Instrucciones de Eliminación de Datos</h1>
-        <p class="updated" style="color: var(--text-secondary);" data-i18n="legal.common.updated">Última actualización:
-            15 de enero de 2026</p>
-    </div>
-
-    <main class="legal-content">
-        <nav class="legal-toc">
-            <h4 data-i18n="legal.common.toc_title">Contenido</h4>
-            <ol>
-                <li><a href="#introduccion" data-i18n="legal.deletion.toc_1">1. Introducción</a></li>
-                <li><a href="#como-solicitar" data-i18n="legal.deletion.toc_2">2. Eliminación</a></li>
-                <!-- Simplified ToC for i18n -->
-            </ol>
-        </nav>
-
-        <h2 id="introduccion" data-i18n="legal.deletion.intro_title">1. Introducción</h2>
-        <p data-i18n="legal.deletion.intro_text_1">
-            En <strong>Pixy</strong> respetamos tu derecho a controlar tus datos personales. Esta página
-            explica cómo puedes solicitar la eliminación de tu información de nuestra plataforma, incluyendo
-            datos obtenidos a través de integraciones con Meta (Facebook, Instagram, WhatsApp Business).
-        </p>
-        <p data-i18n="legal.deletion.intro_text_2">
-            De conformidad con la Ley 1581 de 2012 de Colombia, el Reglamento General de Protección de Datos
-            (RGPD) de la Unión Europea y las políticas de Meta Platforms, Inc., procesaremos tu solicitud
-            de eliminación de manera oportuna y completa.
-        </p>
-
-        <h2 id="como-solicitar" data-i18n="legal.deletion.how_title">2. Cómo Solicitar la Eliminación de tus Datos</h2>
-
-        <h3 data-i18n="legal.deletion.option_1_title">Opción 1: Desde la Plataforma (Recomendado)</h3>
-        <div data-i18n="legal.deletion.option_1_steps">
-            <ol>
-                <li>Inicia sesión en tu cuenta en <a href="https://app.pixy.com.co" target="_blank">app.pixy.com.co</a>
-                </li>
-                <li>Ve a <strong>Configuración → Cuenta → Privacidad</strong></li>
-                <li>Haz clic en <strong>"Eliminar mi cuenta y datos"</strong></li>
-                <li>Confirma tu identidad con tu contraseña</li>
-                <li>Recibirás un código de confirmación por correo electrónico</li>
-            </ol>
+    <main class="bp-article" data-no-reveal>
+        <header class="bp-hero container lg-hero">
+            <nav class="bp-crumbs" aria-label="Ruta"><a href="index.html">Inicio</a><span>/</span><a href="legal/index.html" data-i18n="legal2.index_t">Documentos legales</a></nav>
+            <h1 class="bp-title lg-title">Procedimiento de eliminación de datos</h1>
+            <p class="bp-meta"><span data-i18n="legal2.version">Versión</span> 1.0 · <span data-i18n="legal2.since">Vigente desde el</span> <time datetime="2026-10-28">28 de octubre de 2026</time></p>
+            <p class="bp-lang-note lg-note" data-i18n="legal2.note"></p>
+        </header>
+        <div class="bp-layout container lg-layout">
+            <aside class="bp-rail lg-toc" aria-label="Contenido">
+                <p class="lg-toc-title" data-i18n="legal2.contents">Contenido</p>
+                <ol>
+                    <li><a href="#1-elige-tu-caso">Elige tu caso</a></li>
+                    <li><a href="#2-que-pasa-despues-de-tu-solicitud">Qué pasa después de tu solicitud</a></li>
+                    <li><a href="#3-que-se-elimina">Qué se elimina</a></li>
+                    <li><a href="#4-que-podemos-conservar">Qué podemos conservar</a></li>
+                    <li><a href="#5-eliminaciones-automaticas">Eliminaciones automáticas</a></li>
+                    <li><a href="#6-contacto">Contacto</a></li>
+                </ol>
+            </aside>
+            <article class="bp-body lg-body">
+                <div class="lg-summary" data-i18n="legal2.summary_data_deletion_html"></div>
+<p>Puedes pedir que eliminemos tus datos personales en cualquier momento, salvo cuando la ley nos obligue a conservarlos. Este procedimiento aplica a los datos que Pixy trata como responsable y explica qué hacer con los datos que una empresa trata a través de Pixy. También sirve como instrucciones de eliminación de datos para las aplicaciones de Pixy en Meta (Facebook, Instagram y WhatsApp).</p>
+<h2 id="1-elige-tu-caso">1. Elige tu caso</h2>
+<h3 id="caso-a-tienes-una-cuenta-en-pixy-eres-usuario-o-administrador-de-una-empresa">Caso A. Tienes una cuenta en Pixy (eres usuario o administrador de una empresa)</h3>
+<ol><li>Escribe a <strong>contact@pixy.com.co</strong> desde el correo con el que entras a Pixy, con el asunto <strong>«Eliminación de datos»</strong>.</li><li>Indica si quieres eliminar <strong>solo tu usuario</strong> o <strong>toda la cuenta de la empresa</strong> (esto último solo lo puede pedir un administrador de la empresa).</li><li>Si vas a eliminar la cuenta de la empresa, <strong>exporta antes la información</strong> que necesites conservar. Si lo pides, te entregamos una exportación en formatos estándar antes de borrar.</li><li>Verificaremos tu identidad (podemos pedirte confirmar desde tu cuenta o responder un código enviado a tu correo).</li></ol>
+<h3 id="caso-b-escribiste-o-compraste-a-una-empresa-que-usa-pixy">Caso B. Escribiste o compraste a una empresa que usa Pixy</h3>
+<p>Si tus datos están en Pixy porque le escribiste por WhatsApp, Instagram, Messenger o correo a una empresa, compraste en su tienda, hiciste un pedido en su menú o eres estudiante o acudiente de un colegio, <strong>esa empresa es la responsable de tus datos</strong> y Pixy los procesa por su cuenta.</p>
+<ol><li>Pide la eliminación directamente a la empresa, por el canal que te indique su política de datos.</li><li>Si no sabes cómo contactarla o no te responde, escríbenos a <strong>contact@pixy.com.co</strong> con el nombre de la empresa, tu número o correo y lo que quieres eliminar. Trasladaremos tu solicitud a la empresa dentro de los <strong>dos (2) días hábiles</strong> siguientes y le haremos seguimiento. Si la empresa ya no usa Pixy, eliminaremos tus datos directamente.</li></ol>
+<h3 id="caso-c-conectaste-facebook-instagram-o-whatsapp-a-pixy">Caso C. Conectaste Facebook, Instagram o WhatsApp a Pixy</h3>
+<ol><li><strong>Para cortar el acceso de inmediato</strong>: un administrador puede desconectar el canal desde la configuración de canales de Pixy, o puedes quitar la aplicación de Pixy en Facebook, en <strong>Configuración y privacidad → Configuración → Integraciones comerciales</strong> (o <strong>Apps y sitios web</strong>). Meta revoca así el permiso de Pixy para leer o enviar mensajes en tu nombre.</li><li><strong>Para que también borremos los datos recibidos de Meta</strong> (identificadores de tus páginas y cuentas, tokens de acceso, mensajes y comentarios sincronizados), escríbenos a <strong>contact@pixy.com.co</strong> con el asunto <strong>«Eliminación de datos de Meta»</strong>, indicando la página, la cuenta de Instagram o el número de WhatsApp.</li></ol>
+<h2 id="2-que-pasa-despues-de-tu-solicitud">2. Qué pasa después de tu solicitud</h2>
+<ol><li><strong>Acuse de recibo</strong> con un número de solicitud, dentro de los <strong>dos (2) días hábiles</strong> siguientes.</li><li><strong>Respuesta y eliminación</strong> dentro de los <strong>quince (15) días hábiles</strong> siguientes al recibo, como lo exige la Ley 1581 de 2012 para los reclamos. Si no es posible en ese plazo, te diremos por qué y la nueva fecha, que no superará ocho (8) días hábiles adicionales.</li><li><strong>Confirmación</strong> por el mismo medio, con el número de solicitud y lo que se eliminó o lo que debió conservarse y por qué.</li></ol>
+<h2 id="3-que-se-elimina">3. Qué se elimina</h2>
+<p>Según tu caso: tu perfil de usuario y credenciales; los datos de la empresa (contactos, conversaciones, cotizaciones, facturas emitidas a sus clientes, archivos, configuraciones); los tokens y datos recibidos de integraciones; y los datos tuyos que una empresa tenga en Pixy, cuando ella lo instruya.</p>
+<p>La eliminación se hace en los sistemas activos. Las copias de seguridad se sobrescriben en su ciclo normal de rotación y, mientras tanto, no se usan para ningún fin distinto de recuperar el servicio ante un desastre.</p>
+<h2 id="4-que-podemos-conservar">4. Qué podemos conservar</h2>
+<ul><li><strong>Registros contables y facturas</strong> de la relación entre Pixy y su Cliente: diez (10) años, por obligación legal.</li><li><strong>Prueba de autorizaciones y de bajas</strong>: el registro de que una persona pidió no recibir más mensajes se conserva para poder respetar esa decisión.</li><li><strong>Registros de seguridad y auditoría</strong>: doce (12) meses, para investigar fraudes o incidentes.</li><li><strong>Información requerida por una autoridad</strong> o necesaria para atender una reclamación o un proceso judicial, mientras dure.</li><li><strong>Datos anonimizados</strong> que ya no permiten identificar a nadie.</li></ul>
+<h2 id="5-eliminaciones-automaticas">5. Eliminaciones automáticas</h2>
+<p>Aunque no lo pidas, la Plataforma elimina automáticamente:</p>
+<ul><li>Los elementos enviados a la papelera, a los treinta (30) días.</li><li>Las fotos de marcación de asistencia, a los treinta y dos (32) días; el registro de la marcación se conserva.</li><li>Los datos técnicos completos recibidos de las redes sociales para Pixy Social, a los noventa (90) días.</li><li>Las cuentas suspendidas por falta de pago, según lo previsto en los <a href="terms.html">Términos y condiciones</a>.</li></ul>
+<h2 id="6-contacto">6. Contacto</h2>
+<p>Correo: <strong>contact@pixy.com.co</strong> · Responsable: Cristian Camilo Gomez Penagos (Pixy), Ibagué, Colombia. Si no quedas conforme con nuestra respuesta, puedes acudir a la Superintendencia de Industria y Comercio (www.sic.gov.co).</p>
+            </article>
         </div>
-
-        <h3 data-i18n="legal.deletion.option_2_title">Opción 2: Por Correo Electrónico</h3>
-        <div data-i18n="legal.deletion.option_2_text">
-            <p>
-                Envía un correo a <strong>contact@pixy.com.co</strong> con el asunto
-                <em>"DATA DELETION"</em> (obligatorio para procesamiento automático).
-            </p>
-            <ul>
-                <li>Descripción de los datos que deseas eliminar (o "todos mis datos")</li>
+        <section class="bp-related container lg-others" aria-labelledby="otros">
+            <h2 id="otros" class="bp-section-title" data-i18n="legal2.all">Todos los documentos legales</h2>
+            <ul class="lg-list">
+                <li><a href="privacy.html">Política de tratamiento de datos personales</a></li>
+                <li><a href="terms.html">Términos y condiciones de Pixy Spaces</a></li>
+                <li><a href="cookies.html">Política de cookies</a></li>
+                <li><a href="legal/uso-aceptable.html">Política de uso aceptable y de mensajería</a></li>
+                <li><a href="legal/encargo-de-tratamiento.html">Acuerdo de encargo de tratamiento de datos personales (DPA)</a></li>
+                <li><a href="legal/subencargados.html">Anexo de subencargados y proveedores tecnológicos</a></li>
+                <li><a href="legal/terminos-pixy-studio.html">Términos y condiciones de Pixy Studio</a></li>
+                <li><a href="legal/tiendas-y-menus.html">Condiciones para tiendas, menús y portales generados con Pixy</a></li>
+                <li><a href="legal/menores-pixy-edu.html">Anexo de tratamiento de datos de niños, niñas y adolescentes (Pixy Edu)</a></li>
             </ul>
-        </div>
-
-        <h3 data-i18n="legal.deletion.option_3_title">Opción 3: Para Usuarios de Facebook/Instagram</h3>
-        <p data-i18n="legal.deletion.option_3_desc">
-            Si vinculaste tu cuenta de Facebook o Instagram con Pixy y deseas eliminar únicamente los datos
-            obtenidos de estas plataformas:
-        </p>
-        <div data-i18n="legal.deletion.option_3_steps">
-            <ol>
-                <li>Ve a la <a href="https://www.facebook.com/settings?tab=applications" target="_blank" rel="noopener">
-                        configuración de aplicaciones de Facebook</a></li>
-                <li>Encuentra "Pixy" en la lista de aplicaciones conectadas</li>
-                <li>Haz clic en "Eliminar" y confirma</li>
-                <li>Esto enviará automáticamente una solicitud de eliminación a nuestro sistema</li>
-            </ol>
-        </div>
-
-        <h2 id="que-se-elimina" data-i18n="legal.deletion.sec_3_title">3. Qué Datos se Eliminan</h2>
-        <p data-i18n="legal.deletion.sec_3_intro">Cuando solicitas la eliminación de tu cuenta, eliminaremos:</p>
-
-        <h3 data-i18n="legal.deletion.sec_3_list_1_title">Datos de Cuenta</h3>
-        <div data-i18n="legal.deletion.sec_3_list_1">
-            <ul>
-                <li>Tu perfil de usuario (nombre, correo, teléfono)</li>
-                <li>Credenciales de acceso</li>
-                <li>Preferencias y configuraciones</li>
-            </ul>
-        </div>
-
-        <h3 data-i18n="legal.deletion.sec_3_list_2_title">Datos de Negocio</h3>
-        <div data-i18n="legal.deletion.sec_3_list_2">
-            <ul>
-                <li>Contactos y clientes (CRM)</li>
-                <li>Comunicaciones almacenadas</li>
-                <li>Cotizaciones y facturas generadas</li>
-                <li>Archivos adjuntos subidos</li>
-                <li>Historial de actividad</li>
-            </ul>
-        </div>
-
-        <h3 data-i18n="legal.deletion.sec_3_list_3_title">Datos de Integraciones</h3>
-        <div data-i18n="legal.deletion.sec_3_list_3">
-            <ul>
-                <li>Tokens de acceso a Facebook/Instagram/WhatsApp</li>
-                <li>Mensajes sincronizados de estas plataformas</li>
-                <li>Información de páginas y cuentas conectadas</li>
-            </ul>
-        </div>
-
-        <h2 id="excepciones" data-i18n="legal.deletion.sec_4_title">4. Datos que Debemos Conservar</h2>
-        <p data-i18n="legal.deletion.sec_4_intro">
-            Por obligaciones legales, algunos datos pueden conservarse incluso después de tu solicitud
-            de eliminación:
-        </p>
-        <div data-i18n="legal.deletion.sec_4_list">
-            <ul>
-                <li><strong>Registros de facturación:</strong> 5 años (obligación tributaria colombiana)</li>
-                <li><strong>Logs de seguridad:</strong> 12 meses (detección de fraude)</li>
-                <li><strong>Datos requeridos por orden judicial:</strong> Según lo ordenado</li>
-                <li><strong>Datos anonimizados:</strong> Para estadísticas (no identificables)</li>
-            </ul>
-        </div>
-        <p data-i18n="legal.deletion.sec_4_footer">
-            Te informaremos si alguno de tus datos cae en estas categorías y debe ser retenido temporalmente.
-        </p>
-
-        <h2 id="plazos" data-i18n="legal.deletion.sec_5_title">5. Plazos de Eliminación</h2>
-        <div data-i18n="legal.deletion.sec_5_table">
-            <!-- Table injected via i18n -->
-        </div>
-
-        <h2 id="facebook" data-i18n="legal.deletion.sec_6_title">6. Datos de Facebook/Instagram/WhatsApp</h2>
-        <p data-i18n="legal.deletion.sec_6_intro">
-            Si utilizaste Pixy para conectar tu cuenta de Facebook, Instagram o WhatsApp Business,
-            tomamos medidas especiales para estos datos:
-        </p>
-
-        <h3 data-i18n="legal.deletion.sec_6_1_title">6.1 Callback de Eliminación de Meta</h3>
-        <p data-i18n="legal.deletion.sec_6_1_text">
-            Hemos implementado el "Data Deletion Request Callback" requerido por Meta. Cuando eliminas
-            la aplicación Pixy desde tu configuración de Facebook:
-        </p>
-        <div data-i18n="legal.deletion.sec_6_1_list">
-            <ol>
-                <li>Facebook nos envía automáticamente una notificación</li>
-                <li>Eliminamos todos los datos obtenidos a través de la integración de Meta</li>
-                <li>Te proporcionamos un código de confirmación</li>
-                <li>Puedes verificar el estado en la URL proporcionada</li>
-            </ol>
-        </div>
-
-        <h3 data-i18n="legal.deletion.sec_6_2_title">6.2 URL de Verificación de Estado</h3>
-        <div data-i18n="legal.deletion.sec_6_2_text">
-            <p>
-                Después de solicitar la eliminación, recibirás un enlace para verificar el estado.
-                El formato es:
-            </p>
-            <p>
-                <code>https://app.pixy.com.co/data-deletion-status?code=TU_CODIGO</code>
-            </p>
-            <p>
-                Este enlace estará activo por 90 días después del procesamiento de tu solicitud.
-            </p>
-        </div>
-
-        <h3 data-i18n="legal.deletion.sec_6_3_title">6.3 Datos Específicos de Meta que Eliminamos</h3>
-        <div data-i18n="legal.deletion.sec_6_3_list">
-            <ul>
-                <li>ID de usuario de Facebook/Instagram</li>
-                <li>Tokens de acceso y refresh tokens</li>
-                <li>Información de páginas conectadas</li>
-                <li>Mensajes de Messenger e Instagram Direct almacenados</li>
-                <li>Historial de interacciones sincronizadas</li>
-                <li>Datos de WhatsApp Business (números, conversaciones)</li>
-            </ul>
-        </div>
-
-        <h2 id="confirmacion" data-i18n="legal.deletion.sec_7_title">7. Confirmación del Proceso</h2>
-        <p data-i18n="legal.deletion.sec_7_intro">Una vez completada la eliminación, recibirás:</p>
-        <div data-i18n="legal.deletion.sec_7_list">
-            <ul>
-                <li><strong>Correo de confirmación</strong> indicando que tus datos han sido eliminados</li>
-                <li><strong>Código de referencia</strong> para futuras consultas</li>
-                <li><strong>URL de verificación</strong> (para solicitudes relacionadas con Meta)</li>
-            </ul>
-        </div>
-        <p data-i18n="legal.deletion.sec_7_footer">
-            Te recomendamos guardar el correo de confirmación para tus registros.
-        </p>
-
-        <h2 id="contacto" data-i18n="legal.deletion.sec_8_title">8. Contacto</h2>
-        <p data-i18n="legal.deletion.sec_8_intro">Si tienes preguntas sobre el proceso de eliminación de datos:</p>
-        <div data-i18n="legal.deletion.sec_8_list">
-            <ul>
-                <li><strong>Email:</strong> contact@pixy.com.co</li>
-                <li><strong>Asunto sugerido:</strong> "Consulta sobre Eliminación de Datos"</li>
-                <li><strong>Tiempo de respuesta:</strong> Máximo 5 días hábiles</li>
-            </ul>
-        </div>
-
-        <div
-            style="margin-top: 40px; padding: 20px; background: rgba(242, 5, 226, 0.1); border-radius: 12px; border-left: 4px solid #f205e2;">
-            <strong data-i18n="legal.deletion.cta_ready_title">📧 ¿Listo para solicitar la eliminación?</strong><br>
-            <span data-i18n="legal.deletion.cta_ready_text">
-                Envía un correo a <a
-                    href="mailto:contact@pixy.com.co?subject=Solicitud%20de%20Eliminación%20de%20Datos">contact@pixy.com.co</a>
-                o accede a tu cuenta y ve a Configuración → Cuenta → Privacidad.
-            </span>
-        </div>
+        </section>
     </main>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -321,45 +173,25 @@
                 <a href="terms.html" class="neon-link" data-i18n="chrome.terms">Términos</a>
                 <a href="cookies.html" class="neon-link" data-i18n="chrome.cookies">Cookies</a>
                 <a href="data-deletion.html" class="neon-link" data-i18n="chrome.deletion">Eliminación de datos</a>
-                <a href="permissions.html" class="neon-link" data-i18n="chrome.permissions">Permisos</a>
+                <a href="legal/uso-aceptable.html" class="neon-link" data-i18n="chrome.acceptable">Uso aceptable</a>
+                <a href="legal/index.html" class="neon-link" data-i18n="chrome.legal_all">Todos los documentos</a>
             </nav>
         </div>
         <div class="footer-bottom">
             <p data-i18n="chrome.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
-
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
-        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema" aria-label="Cambiar tema">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
     </button>
 
-    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Volver arriba">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="18 15 12 9 6 15"></polyline>
-        </svg>
-    </button>
     <!-- Fondo espacial (el del login de la plataforma) -->
     <script src="js/space-bg.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
     <div id="pixy-end" hidden></div>
 </body>
 

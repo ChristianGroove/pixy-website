@@ -54,7 +54,7 @@ const es = I18N.es;
 const i = (k) => `data-i18n="blog2.${k}"`;
 
 // --- Lectura de los artículos ---------------------------------------------------------------------------
-const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+export const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 /** Encabezado YAML simple: clave: valor, y faq como lista de q/a. */
 function frontMatter(src) {
@@ -74,7 +74,7 @@ function frontMatter(src) {
 }
 
 /** Markdown mínimo: ## y ###, párrafos, listas, citas, **negrita**, *cursiva* y [enlaces](url). */
-function inline(s) {
+export function inline(s) {
   return esc(s)
     .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
     .replace(/(^|[^*])\*([^*]+)\*/g, "$1<em>$2</em>")
@@ -82,8 +82,9 @@ function inline(s) {
 }
 export function markdown(md) {
   const out = [], toc = [];
-  let list = null, para = [];
+  let list = null, para = [], quote = null;
   const flush = () => {
+    if (quote) { out.push(`<blockquote>${quote.filter((q) => q.trim()).map((q) => `<p>${inline(q)}</p>`).join("")}</blockquote>`); quote = null; }
     if (para.length) { out.push(`<p>${inline(para.join(" "))}</p>`); para = []; }
     if (list) { out.push(`<${list.tag}>${list.items.map((x) => `<li>${inline(x)}</li>`).join("")}</${list.tag}>`); list = null; }
   };
@@ -95,7 +96,7 @@ export function markdown(md) {
     const bq = /^>\s?(.*)$/.exec(line);
     if (h) { flush(); const id = slug(h[2]); if (h[1].length === 2) toc.push({ id, t: h[2] }); out.push(`<h${h[1].length} id="${id}">${inline(h[2])}</h${h[1].length}>`); }
     else if (ul || ol) { if (para.length) flush(); const tag = ul ? "ul" : "ol"; if (list && list.tag !== tag) flush(); list = list || { tag, items: [] }; list.items.push((ul || ol)[1]); }
-    else if (bq) { flush(); out.push(`<blockquote><p>${inline(bq[1])}</p></blockquote>`); }
+    else if (bq) { if (!quote) flush(); quote = quote || []; quote.push(bq[1]); }
     else if (!line.trim()) flush();
     else { if (list) flush(); para.push(line.trim()); }
   }
@@ -151,7 +152,7 @@ const THEME_BTN = `    <button class="theme-toggle" onclick="toggleTheme()" titl
         <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
     </button>`;
 
-function head(pre, { title, description, canonical, image, imageAlt, type = "website", extra = "", preload = "" }) {
+export function head(pre, { title, description, canonical, image, imageAlt, type = "website", extra = "", preload = "" }) {
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -201,7 +202,7 @@ ${preload}    <link rel="stylesheet" href="${pre}css/style.css">
 `;
 }
 
-function tail(pre) {
+export function tail(pre) {
   return `${spacesFooter(pre)}
 ${THEME_BTN}
 

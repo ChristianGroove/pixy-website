@@ -164,3 +164,35 @@
     .bp-endshare { flex-direction: column; align-items: flex-start; }
     .bp-cta-inner { padding: 56px 0; }
 }
+
+/* ============================================
+   PÁGINAS LEGALES (tools/legal/build-legal.mjs): misma lectura que el blog, con índice de secciones
+   ============================================ */
+.lg-hero { gap: 14px; }
+.lg-title { font-size: clamp(30px, 3.8vw, 50px) !important; }
+.lg-note { max-width: 640px; color: var(--text-secondary); }
+.lg-note a { color: var(--brand-pink); }
+.lg-layout { margin-top: 56px; }
+.lg-toc { width: 220px; }
+.lg-toc-title { margin: 0 0 12px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+.lg-toc ol { list-style: none; margin: 0; padding: 0; counter-reset: lg; max-height: calc(100vh - 200px); overflow-y: auto; scrollbar-width: none; }
+.lg-toc li { counter-increment: lg; }
+.lg-toc a { display: flex; gap: 10px; padding: 7px 0; font-size: 13px; line-height: 1.4; color: var(--text-muted); text-decoration: none; transition: color 200ms ease; }
+.lg-toc a::before { content: counter(lg, decimal-leading-zero); font-variant-numeric: tabular-nums; color: var(--border-color); }
+.lg-toc a:hover, .lg-toc a.is-current { color: var(--text-primary); }
+.lg-toc a.is-current::before { color: var(--brand-pink); }
+.lg-body { font-size: 17px; }
+.lg-body h2 { font-size: clamp(21px, 2vw, 26px) !important; margin-top: 56px; }
+.lg-body h3 { font-size: 18px !important; }
+.lg-summary:empty { display: none; }
+.lg-summary { margin-bottom: 48px !important; padding: 24px 28px; border: 1px solid var(--border-color); border-radius: 18px; font-size: 16px; }
+.lg-summary p { margin: 0 0 12px; }
+.lg-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 32px; }
+.lg-list a { display: block; padding: 16px 0; border-bottom: 1px solid var(--border-color); color: var(--text-secondary); text-decoration: none; transition: color 200ms ease; }
+.lg-list a:hover { color: var(--brand-pink); }
+.lg-cards { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.lg-card { display: flex; flex-direction: column; gap: 10px; padding: 28px; border: 1px solid var(--border-color); border-radius: 20px; text-decoration: none; transition: border-color 250ms ease, transform 300ms cubic-bezier(0.16, 1, 0.3, 1); }
+.lg-card:hover { border-color: var(--brand-pink); transform: translateY(-2px); }
+.lg-card-title { font-family: var(--sh-font-display); font-size: 19px; font-weight: 700; line-height: 1.25; color: var(--text-primary); }
+@media (max-width: 1100px) { .lg-toc { display: none; } }
+@media (max-width: 700px) { .lg-list, .lg-cards { grid-template-columns: 1fr; } }

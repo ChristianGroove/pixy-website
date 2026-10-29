@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        (function () {
+            try {
+                var s = localStorage.getItem('pixy-theme');
+                var t = s ? s : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- seo: tools/seo/seo.mjs -->
+    <title>Acuerdo de encargo de tratamiento (DPA) | Pixy</title>
+    <meta name="description" content="Cómo trata Pixy, como encargado, los datos personales que tus clientes y contactos dejan en tu Space: instrucciones, seguridad, subencargados e incidentes.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://pixy.com.co/legal/encargo-de-tratamiento.html">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:site_name" content="Pixy">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixy.com.co/legal/encargo-de-tratamiento.html">
+    <meta property="og:title" content="Acuerdo de encargo de tratamiento (DPA) | Pixy">
+    <meta property="og:description" content="Cómo trata Pixy, como encargado, los datos personales que tus clientes y contactos dejan en tu Space: instrucciones, seguridad, subencargados e incidentes.">
+    <meta property="og:image" content="https://pixy.com.co/assets/og/pixy.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Acuerdo de encargo de tratamiento (DPA) | Pixy">
+    <meta name="twitter:description" content="Cómo trata Pixy, como encargado, los datos personales que tus clientes y contactos dejan en tu Space: instrucciones, seguridad, subencargados e incidentes.">
+    <meta name="twitter:image" content="https://pixy.com.co/assets/og/pixy.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://pixy.com.co/#org","name":"Pixy","url":"https://pixy.com.co/","logo":{"@type":"ImageObject","url":"https://pixy.com.co/assets/favicon.png"},"email":"contact@pixy.com.co","contactPoint":[{"@type":"ContactPoint","contactType":"sales","email":"contact@pixy.com.co","telephone":"+57 350 407 6800","availableLanguage":["es","en"]}],"sameAs":["https://www.instagram.com/pixyspaces/","https://www.facebook.com/pixyspaces"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://pixy.com.co/"},{"@type":"ListItem","position":2,"name":"Encargo de tratamiento","item":"https://pixy.com.co/legal/encargo-de-tratamiento.html"}]},{"@type":"WebPage","@id":"https://pixy.com.co/legal/encargo-de-tratamiento.html#page","url":"https://pixy.com.co/legal/encargo-de-tratamiento.html","name":"Acuerdo de encargo de tratamiento (DPA) | Pixy","description":"Cómo trata Pixy, como encargado, los datos personales que tus clientes y contactos dejan en tu Space: instrucciones, seguridad, subencargados e incidentes.","inLanguage":"es","isPartOf":{"@id":"https://pixy.com.co/#site"},"publisher":{"@id":"https://pixy.com.co/#org"}}]}</script>
+    <!-- /seo -->
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="alternate" type="application/rss+xml" title="Blog de Pixy" href="https://pixy.com.co/blog/feed.xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/spaces-home.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="expect" href="#pixy-end" blocking="render">
+</head>
+<body class="legal-page spaces-face bp-page lg-page">
+    <div class="bp-progress" aria-hidden="true"><i></i></div>
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="nav-left-group">
+                <a href="../index.html" class="nav-brand" aria-label="Pixy">
+                    <img src="../assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
+                    <img src="../assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
+                </a>
+                <div class="universe-switcher" role="tablist" aria-label="Pixy">
+                    <a href="../agency.html" class="universe-tab" data-mode="agency">Studio</a>
+                    <a href="../index.html" class="universe-tab active" data-mode="spaces">Spaces</a>
+                </div>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="../spaces.html" class="neon-link" data-i18n="chrome.spaces">Spaces</a>
+                <a href="../features.html" class="neon-link" data-i18n="chrome.platform">Plataforma</a>
+                <a href="../pricing.html" class="neon-link" data-i18n="chrome.plans">Planes</a>
+                <a href="../blog.html" class="neon-link" data-i18n="chrome.blog">Blog</a>
+                <a href="../contact.html" class="btn-neon nav-links-cta" data-i18n="chrome.demo">Agenda tu demo</a>
+            </div>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-lang" type="button" aria-label="Idioma / Language">
+                    <span id="lang-text">ES</span>
+                    <span class="btn-lang-caret" aria-hidden="true">▼</span>
+                </button>
+                <a href="../contact.html" class="btn-neon-outline nav-cta" data-i18n="chrome.demo">Agenda tu demo</a>
+                <button class="nav-menu-btn" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Menú" data-i18n-aria="chrome.menu">
+                    <span class="nav-menu-bar" aria-hidden="true"></span>
+                    <span class="nav-menu-bar" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="bp-article" data-no-reveal>
+        <header class="bp-hero container lg-hero">
+            <nav class="bp-crumbs" aria-label="Ruta"><a href="../index.html">Inicio</a><span>/</span><a href="../legal/index.html" data-i18n="legal2.index_t">Documentos legales</a></nav>
+            <h1 class="bp-title lg-title">Acuerdo de encargo de tratamiento de datos personales (DPA)</h1>
+            <p class="bp-meta"><span data-i18n="legal2.version">Versión</span> 1.0 · <span data-i18n="legal2.since">Vigente desde el</span> <time datetime="2026-10-28">28 de octubre de 2026</time></p>
+            <p class="bp-lang-note lg-note" data-i18n="legal2.note"></p>
+        </header>
+        <div class="bp-layout container lg-layout">
+            <aside class="bp-rail lg-toc" aria-label="Contenido">
+                <p class="lg-toc-title" data-i18n="legal2.contents">Contenido</p>
+                <ol>
+                    <li><a href="#1-objeto-naturaleza-y-duracion">Objeto, naturaleza y duración</a></li>
+                    <li><a href="#2-datos-y-titulares">Datos y titulares</a></li>
+                    <li><a href="#3-obligaciones-del-cliente-responsable">Obligaciones del Cliente (Responsable)</a></li>
+                    <li><a href="#4-obligaciones-de-pixy-encargado">Obligaciones de Pixy (Encargado)</a></li>
+                    <li><a href="#5-inteligencia-artificial">Inteligencia artificial</a></li>
+                    <li><a href="#6-medidas-de-seguridad">Medidas de seguridad</a></li>
+                    <li><a href="#7-subencargados-y-transferencias-internacionales">Subencargados y transferencias internacionales</a></li>
+                    <li><a href="#8-derechos-de-los-titulares">Derechos de los titulares</a></li>
+                    <li><a href="#9-incidentes-de-seguridad">Incidentes de seguridad</a></li>
+                    <li><a href="#10-terminacion-devolucion-y-supresion">Terminación: devolución y supresión</a></li>
+                    <li><a href="#11-auditoria">Auditoría</a></li>
+                    <li><a href="#12-responsabilidad">Responsabilidad</a></li>
+                    <li><a href="#13-prevalencia">Prevalencia</a></li>
+                </ol>
+            </aside>
+            <article class="bp-body lg-body">
+
+<p>Este acuerdo («el Acuerdo») hace parte de los <a href="../terms.html">Términos y condiciones</a> de Pixy Spaces y del contrato con Pixy Studio cuando este maneje datos del Cliente. Se celebra entre:</p>
+<ul><li><strong>El Cliente</strong>, la empresa u organización que contrata Pixy, que actúa como <strong>Responsable del Tratamiento</strong> de los datos personales de sus propios clientes, prospectos, estudiantes, acudientes, empleados, proveedores y demás personas que registra o que le escriben a través de Pixy («Datos del Cliente»).</li><li><strong>Cristian Camilo Gomez Penagos</strong>, persona natural que opera bajo la marca Pixy, cuyo número de identificación figura en las facturas y en el contrato firmado, con domicilio en Ibagué, Colombia («Pixy»), que actúa como <strong>Encargado del Tratamiento</strong> de los Datos del Cliente.</li></ul>
+<p>Se rige por la Ley 1581 de 2012, el Decreto 1074 de 2015 (que compila el Decreto 1377 de 2013), las instrucciones de la Superintendencia de Industria y Comercio (SIC) y, cuando corresponda por la ubicación de los titulares, por el Reglamento General de Protección de Datos de la Unión Europea (RGPD) u otras normas equivalentes. Para efectos del artículo 2.2.2.25.5.2 del Decreto 1074 de 2015, este Acuerdo es el <strong>contrato de transmisión</strong> de datos personales entre el Responsable y el Encargado.</p>
+<p>Se acepta electrónicamente al aceptar los Términos y condiciones. Si el Cliente necesita una versión firmada, puede solicitarla a contact@pixy.com.co.</p>
+<h2 id="1-objeto-naturaleza-y-duracion">1. Objeto, naturaleza y duración</h2>
+<ol><li>Pixy trata los Datos del Cliente <strong>solo para prestar el servicio contratado</strong>: almacenarlos, mostrarlos, organizarlos, enviar y recibir mensajes por los canales que el Cliente conecte, generar documentos, procesar pagos con las pasarelas del Cliente, operar los portales y Sitios generados, y ejecutar las funciones de inteligencia artificial que el Cliente active.</li><li>El tratamiento dura mientras esté vigente la suscripción y durante el periodo de devolución y supresión de la sección 10.</li></ol>
+<h2 id="2-datos-y-titulares">2. Datos y titulares</h2>
+<ul><li><strong>Clientes, prospectos y contactos del Cliente</strong>: identificación, contacto, historial de conversaciones (texto, notas de voz, imágenes), comentarios en redes, compras, cotizaciones, facturas, etiquetas y calificación comercial.</li><li><strong>Usuarios de portales y Sitios generados</strong>: identificación, contacto, pedidos, pagos (sin datos completos de tarjeta) y respuestas a formularios.</li><li><strong>Empleados y colaboradores del Cliente</strong>: identificación, contacto, rol, tareas y registros de asistencia con ubicación de la marcación, distancia a la sede, datos del dispositivo y fotografía. La Plataforma no hace reconocimiento facial y elimina las fotos de marcación a los treinta y dos (32) días.</li><li><strong>Estudiantes y acudientes (Pixy Edu)</strong>: ver el <a href="../legal/menores-pixy-edu.html">Anexo de menores</a>.</li><li><strong>Interesados en inmuebles, propietarios y arrendatarios</strong>: identificación, contacto, datos del inmueble y del contrato, pagos.</li></ul>
+<p>El Cliente decide qué datos carga. <strong>Datos sensibles</strong> (salud, discapacidad, biométricos, origen, creencias, orientación, datos de menores): el Cliente solo debe cargarlos cuando sean necesarios, con autorización explícita del titular o de su representante y con la finalidad informada. Los campos de Pixy para PIAR, convivencia, observador y asistencia con foto se tratan como información de <strong>acceso restringido</strong>.</p>
+<h2 id="3-obligaciones-del-cliente-responsable">3. Obligaciones del Cliente (Responsable)</h2>
+<ol><li>Contar con una <strong>política de tratamiento</strong> propia y con la <strong>autorización previa, expresa e informada</strong> de los titulares, conservando prueba de ella.</li><li>Informar a los titulares que sus datos se procesan en una plataforma tecnológica con proveedores de nube e IA ubicados en el exterior (sección 7).</li><li>Dar a Pixy instrucciones lícitas. Las instrucciones son las configuraciones que el Cliente hace en la plataforma y las solicitudes escritas a soporte.</li><li>Atender las consultas y reclamos de sus titulares dentro de los plazos legales.</li><li>Registrar sus bases de datos en el Registro Nacional de Bases de Datos cuando esté obligado.</li><li>Administrar los accesos de sus usuarios y revocar los de quienes ya no deban tenerlos.</li></ol>
+<h2 id="4-obligaciones-de-pixy-encargado">4. Obligaciones de Pixy (Encargado)</h2>
+<p>Pixy se obliga a:</p>
+<ol><li>Tratar los Datos del Cliente <strong>solo según sus instrucciones</strong> y para las finalidades del servicio. Si una instrucción le parece contraria a la ley, lo informará al Cliente.</li><li><strong>No usar los Datos del Cliente para fines propios</strong>: no los vende, no los alquila, no los cruza entre empresas, no los usa para publicidad propia y <strong>no los usa para entrenar modelos de inteligencia artificial</strong> propios ni permite que sus proveedores lo hagan, según las condiciones contractuales de esos proveedores.</li><li>Garantizar la confidencialidad: el personal de Pixy con acceso a Datos del Cliente está obligado a reserva y accede solo cuando es necesario para soporte, seguridad u operación.</li><li>Aplicar las medidas de seguridad de la sección 6.</li><li>Ayudar al Cliente a responder solicitudes de titulares (sección 8).</li><li>Notificar incidentes de seguridad (sección 9).</li><li>Facilitar al Cliente la información necesaria para demostrar el cumplimiento de este Acuerdo (sección 11).</li><li>Cumplir los deberes del artículo 18 de la Ley 1581 de 2012.</li></ol>
+<h2 id="5-inteligencia-artificial">5. Inteligencia artificial</h2>
+<ol><li>Las funciones de IA (respuestas en la bandeja, calificación de clientes, Pixy Social, sugerencias en el pipeline, asistencia de textos e imágenes, Pixy Help) envían a los proveedores de IA <strong>solo la información necesaria para cada tarea</strong>: el mensaje o comentario, el contexto de la conversación y el Conocimiento que el Cliente cargó.</li><li>Las funciones de IA son <strong>de apoyo</strong>. Cuando el Cliente activa la respuesta automática, la IA contesta mensajes a nombre del Cliente y pasa la conversación a una persona cuando hace falta. Las sugerencias que afectan a una persona (mover un trato, calificar un prospecto, redactar una anotación) quedan sujetas a revisión del equipo del Cliente: la IA no mueve tratos ni reemplaza la calificación de un asesor. Pixy no configura la IA para tomar por sí sola decisiones con efectos jurídicos o significativos sobre los titulares.</li><li>El Cliente puede desactivar la IA por canal o usar su propia llave de proveedor (BYOK). Con BYOK, la relación con el proveedor de IA es directa entre el Cliente y ese proveedor.</li></ol>
+<h2 id="6-medidas-de-seguridad">6. Medidas de seguridad</h2>
+<p>Pixy mantiene, como mínimo:</p>
+<ul><li>Aislamiento lógico de los datos de cada empresa en la base de datos mediante políticas de seguridad a nivel de fila.</li><li>Cifrado en tránsito (HTTPS/TLS) y cifrado en reposo provisto por la infraestructura de nube.</li><li>Almacenamiento cifrado de credenciales y tokens de integraciones.</li><li>Autenticación con <em>passkeys</em> y verificación en dos pasos disponibles; control de acceso por roles y permisos.</li><li>Protección perimetral contra ataques mediante Cloudflare.</li><li>Copias de respaldo de la base de datos según la política del proveedor de nube.</li><li>Registros de actividad para investigar incidentes.</li><li>Principio de mínimo privilegio para el personal de Pixy. El acceso de soporte a la cuenta de un Cliente es temporal, exige registrar un motivo y el Cliente puede verlo y revocarlo.</li><li>Archivos sensibles (por ejemplo, fotos de marcación de asistencia) en almacenamiento privado, accesibles solo con enlaces temporales.</li></ul>
+<p>Pixy puede actualizar estas medidas siempre que no disminuya el nivel de protección.</p>
+<h2 id="7-subencargados-y-transferencias-internacionales">7. Subencargados y transferencias internacionales</h2>
+<ol><li>El Cliente <strong>autoriza de forma general</strong> a Pixy a usar los subencargados listados en el <a href="../legal/subencargados.html">Anexo de subencargados</a>. Pixy exige a cada uno obligaciones de protección equivalentes a las de este Acuerdo, mediante sus términos contractuales o acuerdos de tratamiento.</li><li>Pixy avisará los cambios relevantes en ese anexo con <strong>quince (15) días calendario</strong> de anticipación. Si el Cliente se opone por razones fundadas de protección de datos, puede terminar la suscripción sin penalidad antes de que el cambio entre en vigor.</li><li>Varios subencargados procesan datos fuera de Colombia, principalmente en Estados Unidos y la Unión Europea, países que la SIC reconoce con nivel adecuado de protección. Cuando un subencargado procese datos en un país distinto, Pixy se apoyará en las garantías contractuales o en las excepciones del artículo 26 de la Ley 1581 de 2012, y obtendrá la declaración de conformidad de la SIC cuando sea exigible. Para titulares en la Unión Europea, Pixy se apoyará en las cláusulas contractuales tipo de la Comisión Europea o en el mecanismo de adecuación aplicable.</li><li>Las plataformas que el Cliente conecta por su cuenta (Meta, TikTok, Google, Wompi, Stripe) tratan los datos según sus propios términos con el Cliente; no son subencargados de Pixy en lo que hacen por fuera de la integración.</li></ol>
+<h2 id="8-derechos-de-los-titulares">8. Derechos de los titulares</h2>
+<p>Si un titular le escribe a Pixy para ejercer sus derechos sobre Datos del Cliente, Pixy lo remitirá al Cliente en un plazo máximo de <strong>dos (2) días hábiles</strong>, salvo que el Cliente haya autorizado a Pixy a responder. La plataforma permite al Cliente consultar, corregir, exportar y eliminar los registros de sus contactos. Si el Cliente necesita ayuda técnica adicional, Pixy la prestará en tiempos que le permitan cumplir los plazos legales (diez días hábiles para consultas y quince días hábiles para reclamos).</p>
+<h2 id="9-incidentes-de-seguridad">9. Incidentes de seguridad</h2>
+<ol><li>Pixy notificará al Cliente <strong>sin demora injustificada y a más tardar dentro de las setenta y dos (72) horas</strong> siguientes a confirmar un incidente que afecte Datos del Cliente, por correo al administrador de la cuenta y por aviso en la plataforma.</li><li>La notificación incluirá, en la medida en que se conozca: qué pasó, qué datos y cuántos titulares pueden estar afectados, las medidas tomadas y las recomendadas, y un contacto.</li><li>El Cliente, como responsable, reporta el incidente a la SIC dentro de los <strong>quince (15) días hábiles</strong> siguientes a conocerlo y, si corresponde, informa a los titulares. Pixy colaborará con la información a su alcance. Pixy reportará por su cuenta los incidentes que afecten las bases de datos de las que es responsable.</li></ol>
+<h2 id="10-terminacion-devolucion-y-supresion">10. Terminación: devolución y supresión</h2>
+<ol><li><strong>Antes de cancelar</strong>, el Cliente debe exportar los datos que necesite con las herramientas de exportación de la Plataforma. Durante los <strong>treinta (30) días calendario</strong> siguientes a la terminación, puede pedir por escrito a soporte una exportación en formatos estructurados de uso común (CSV o Excel), que Pixy entregará dentro de los diez (10) días hábiles siguientes.</li><li>Vencido ese plazo, Pixy <strong>suprimirá</strong> los Datos del Cliente de sus sistemas activos dentro de los <strong>noventa (90) días calendario</strong> siguientes, y de las copias de respaldo cuando estas roten según su ciclo, salvo que la ley obligue a conservarlos o el Cliente pida por escrito una supresión anticipada.</li><li>Si la terminación se origina en una suspensión por falta de pago, se aplican los plazos de conservación y eliminación de la sección 6 de los Términos y condiciones.</li><li>Pixy puede conservar datos agregados o anonimizados que no permitan identificar a ningún titular, y los registros de facturación de la relación con el Cliente que exija la ley.</li></ol>
+<h2 id="11-auditoria">11. Auditoría</h2>
+<p>Pixy responderá cuestionarios razonables de seguridad y protección de datos del Cliente una vez al año sin costo. Las auditorías presenciales o técnicas adicionales se acuerdan por escrito, con aviso de <strong>treinta (30) días</strong>, confidencialidad, sin afectar a otros clientes y a costo del Cliente.</p>
+<h2 id="12-responsabilidad">12. Responsabilidad</h2>
+<p>La responsabilidad de cada parte bajo este Acuerdo se rige por los límites de los Términos y condiciones, salvo dolo o culpa grave. Cada parte responde por las sanciones que una autoridad le imponga por su propio incumplimiento.</p>
+<h2 id="13-prevalencia">13. Prevalencia</h2>
+<p>En materia de protección de datos, este Acuerdo prevalece sobre cualquier otro documento entre las partes, salvo un acuerdo firmado posterior que lo modifique de forma expresa.</p>
+            </article>
+        </div>
+        <section class="bp-related container lg-others" aria-labelledby="otros">
+            <h2 id="otros" class="bp-section-title" data-i18n="legal2.all">Todos los documentos legales</h2>
+            <ul class="lg-list">
+                <li><a href="../privacy.html">Política de tratamiento de datos personales</a></li>
+                <li><a href="../terms.html">Términos y condiciones de Pixy Spaces</a></li>
+                <li><a href="../cookies.html">Política de cookies</a></li>
+                <li><a href="../data-deletion.html">Procedimiento de eliminación de datos</a></li>
+                <li><a href="../legal/uso-aceptable.html">Política de uso aceptable y de mensajería</a></li>
+                <li><a href="../legal/subencargados.html">Anexo de subencargados y proveedores tecnológicos</a></li>
+                <li><a href="../legal/terminos-pixy-studio.html">Términos y condiciones de Pixy Studio</a></li>
+                <li><a href="../legal/tiendas-y-menus.html">Condiciones para tiendas, menús y portales generados con Pixy</a></li>
+                <li><a href="../legal/menores-pixy-edu.html">Anexo de tratamiento de datos de niños, niñas y adolescentes (Pixy Edu)</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="../assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
+                <img src="../assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
+                <p data-i18n="chrome.slogan_spaces">El sistema operativo de tu negocio.</p>
+                <p class="footer-meta" data-i18n="chrome.meta_tp">Pixy es Tech Provider de Meta.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/pixyspaces/" target="_blank" rel="noopener me" aria-label="Pixy en Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg></a>
+                    <a href="https://www.facebook.com/pixyspaces" target="_blank" rel="noopener me" aria-label="Pixy en Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9.1 23.69v-7.98H6.63v-3.67H9.1v-1.58c0-4.09 1.85-5.98 5.86-5.98.4 0 .96.04 1.47.1.38.04.76.11 1.14.2v3.32c-.22-.02-.43-.03-.65-.04-.25 0-.49-.01-.74-.01-.7 0-1.26.1-1.67.31-.29.15-.52.36-.68.62-.26.42-.38 1-.38 1.75v1.3h3.92l-.39 2.1-.28 1.57h-3.25v8.24C19.4 23.24 24 18.18 24 12.04 24 5.42 18.63.04 12 .04S0 5.42 0 12.04c0 5.63 3.87 10.35 9.1 11.65z"/></svg></a>
+                </div>
+            </div>
+            <nav class="footer-links" aria-label="Producto">
+                <h4 data-i18n="chrome.col_product">Producto</h4>
+                <a href="../spaces.html" class="neon-link" data-i18n="chrome.spaces">Spaces</a>
+                <a href="../features.html" class="neon-link" data-i18n="chrome.platform">Plataforma</a>
+                <a href="../pricing.html" class="neon-link" data-i18n="chrome.plans">Planes</a>
+                <a href="../partners.html" class="neon-link" data-i18n="chrome.partners">Partners</a>
+            </nav>
+            <nav class="footer-links" aria-label="Pixy">
+                <h4 data-i18n="chrome.col_company">Pixy</h4>
+                <a href="../blog.html" class="neon-link" data-i18n="chrome.blog">Blog</a>
+                <a href="../contact.html" class="neon-link" data-i18n="chrome.contact">Contacto</a>
+                <a href="../agency.html" class="neon-link" data-i18n="chrome.studio">Pixy Studio</a>
+                <a href="https://wa.me/573504076800" class="neon-link" target="_blank" rel="noopener" data-i18n="chrome.whatsapp">WhatsApp</a>
+            </nav>
+            <nav class="footer-links" aria-label="Legal">
+                <h4 data-i18n="chrome.col_legal">Legal</h4>
+                <a href="../privacy.html" class="neon-link" data-i18n="chrome.privacy">Privacidad</a>
+                <a href="../terms.html" class="neon-link" data-i18n="chrome.terms">Términos</a>
+                <a href="../cookies.html" class="neon-link" data-i18n="chrome.cookies">Cookies</a>
+                <a href="../data-deletion.html" class="neon-link" data-i18n="chrome.deletion">Eliminación de datos</a>
+                <a href="../legal/uso-aceptable.html" class="neon-link" data-i18n="chrome.acceptable">Uso aceptable</a>
+                <a href="../legal/index.html" class="neon-link" data-i18n="chrome.legal_all">Todos los documentos</a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="chrome.rights">© 2026 Pixy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema" aria-label="Cambiar tema">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+
+    <!-- Fondo espacial (el del login de la plataforma) -->
+    <script src="../js/space-bg.js"></script>
+    <script src="../js/smooth-scroll.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/blog.js"></script>
+    <div id="pixy-end" hidden></div>
+</body>
+
+</html>

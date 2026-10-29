@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <script>
@@ -36,24 +35,20 @@
     <meta name="twitter:image" content="https://pixy.com.co/assets/og/pixy.png">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://pixy.com.co/#org","name":"Pixy","url":"https://pixy.com.co/","logo":{"@type":"ImageObject","url":"https://pixy.com.co/assets/favicon.png"},"email":"contact@pixy.com.co","contactPoint":[{"@type":"ContactPoint","contactType":"sales","email":"contact@pixy.com.co","telephone":"+57 350 407 6800","availableLanguage":["es","en"]}],"sameAs":["https://www.instagram.com/pixyspaces/","https://www.facebook.com/pixyspaces"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://pixy.com.co/"},{"@type":"ListItem","position":2,"name":"Cookies","item":"https://pixy.com.co/cookies.html"}]},{"@type":"WebPage","@id":"https://pixy.com.co/cookies.html#page","url":"https://pixy.com.co/cookies.html","name":"Política de cookies | Pixy","description":"Qué guarda el sitio y la plataforma de Pixy en tu navegador, para qué lo usamos y cómo puedes gestionarlo o eliminarlo desde tu navegador.","inLanguage":"es","isPartOf":{"@id":"https://pixy.com.co/#site"},"publisher":{"@id":"https://pixy.com.co/#org"}}]}</script>
     <!-- /seo -->
-
-
-
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="alternate" type="application/rss+xml" title="Blog de Pixy" href="https://pixy.com.co/blog/feed.xml">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/spaces-home.css">
+    <link rel="stylesheet" href="css/blog.css">
     <link rel="expect" href="#pixy-end" blocking="render">
 </head>
-
-<body class="legal-page spaces-face">
-    <div class="bg-gradient"></div>
-    <div class="bg-grid"></div>
-
-    <!-- Navigation (Shared) -->
+<body class="legal-page spaces-face bp-page lg-page">
+    <div class="bp-progress" aria-hidden="true"><i></i></div>
     <nav class="nav">
         <div class="nav-content">
             <div class="nav-left-group">
@@ -87,145 +82,66 @@
         </div>
     </nav>
 
-    <div class="container" style="padding-top: 140px; margin-bottom: 40px; text-align: center;">
-        <h1 class="gradient-text" data-i18n="legal.cookies.title">Política de Cookies</h1>
-        <p class="updated" style="color: var(--text-secondary);" data-i18n="legal.common.updated">Última actualización:
-            15 de enero de 2026</p>
-    </div>
+    <main class="bp-article" data-no-reveal>
+        <header class="bp-hero container lg-hero">
+            <nav class="bp-crumbs" aria-label="Ruta"><a href="index.html">Inicio</a><span>/</span><a href="legal/index.html" data-i18n="legal2.index_t">Documentos legales</a></nav>
+            <h1 class="bp-title lg-title">Política de cookies</h1>
+            <p class="bp-meta"><span data-i18n="legal2.version">Versión</span> 1.0 · <span data-i18n="legal2.since">Vigente desde el</span> <time datetime="2026-10-28">28 de octubre de 2026</time></p>
+            <p class="bp-lang-note lg-note" data-i18n="legal2.note"></p>
+        </header>
+        <div class="bp-layout container lg-layout">
+            <aside class="bp-rail lg-toc" aria-label="Contenido">
+                <p class="lg-toc-title" data-i18n="legal2.contents">Contenido</p>
+                <ol>
+                    <li><a href="#1-resumen">Resumen</a></li>
+                    <li><a href="#2-cookies-necesarias">Cookies necesarias</a></li>
+                    <li><a href="#3-preferencias-guardadas-en-tu-navegador">Preferencias guardadas en tu navegador</a></li>
+                    <li><a href="#4-cookies-de-terceros">Cookies de terceros</a></li>
+                    <li><a href="#5-sitio-comercial-pixy-com-co">Sitio comercial pixy.com.co</a></li>
+                    <li><a href="#6-como-controlarlas">Cómo controlarlas</a></li>
+                    <li><a href="#7-contacto">Contacto</a></li>
+                </ol>
+            </aside>
+            <article class="bp-body lg-body">
 
-    <main class="legal-content">
-        <nav class="legal-toc">
-            <h4 data-i18n="legal.common.toc_title">Contenido</h4>
-            <ol>
-                <li><a href="#what-are" data-i18n="legal_nav.cookies_s1">1. ¿Qué son?</a></li>
-                <li><a href="#why-use" data-i18n="legal_nav.cookies_s2">2. ¿Por qué usamos?</a></li>
-                <li><a href="#types" data-i18n="legal_nav.cookies_s3">3. Tipos</a></li>
-                <li><a href="#third-party" data-i18n="legal_nav.cookies_s4">4. Terceros</a></li>
-                <li><a href="#manage" data-i18n="legal_nav.cookies_s5">5. Gestionar</a></li>
-            </ol>
-        </nav>
-
-        <h2 id="what-are" data-i18n="legal.cookies.sec_1_title">1. ¿Qué son las Cookies?</h2>
-        <p data-i18n="legal.cookies.sec_1_text">
-            Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo (ordenador, tablet,
-            móvil) cuando visitas un sitio web. Permiten que el sitio recuerde tus acciones y preferencias
-            durante un período de tiempo.
-        </p>
-
-        <h2 id="why-use" data-i18n="legal.cookies.sec_2_title">2. ¿Por qué Usamos Cookies?</h2>
-        <div data-i18n="legal.cookies.sec_2_list">
-            <p>Utilizamos cookies para:</p>
-            <ul>
-                <li><strong>Mantener tu sesión activa:</strong> Para que no tengas que iniciar sesión repetidamente</li>
-                <li><strong>Recordar preferencias:</strong> Como idioma, tema (claro/oscuro) y configuraciones</li>
-                <li><strong>Seguridad:</strong> Para proteger tu cuenta y prevenir fraudes</li>
-                <li><strong>Análisis:</strong> Para entender cómo se usa la plataforma y mejorarla</li>
+<p>Esta política explica qué cookies y tecnologías similares (almacenamiento local del navegador) usa Pixy en la aplicación (app.pixy.com.co y los subdominios y dominios de marca blanca), en los portales y en los Sitios generados, y en la sección 5 lo que usa el sitio comercial pixy.com.co.</p>
+<h2 id="1-resumen">1. Resumen</h2>
+<ul><li>Pixy <strong>solo usa cookies necesarias</strong> para iniciar sesión, mantener la seguridad y recordar tus preferencias.</li><li><strong>No usamos cookies de analítica ni de publicidad</strong>, ni píxeles de seguimiento de terceros, en la aplicación, los portales o los Sitios generados.</li><li>Algunos terceros (pasarelas de pago, Cloudflare, Meta al conectar una cuenta) pueden poner sus propias cookies cuando usas sus servicios.</li></ul>
+<p>Si en el futuro agregamos cookies de analítica o publicidad, o permitimos que los Clientes agreguen sus propios píxeles a sus tiendas, te pediremos autorización antes de activarlas y actualizaremos esta política.</p>
+<h2 id="2-cookies-necesarias">2. Cookies necesarias</h2>
+<p>Sin ellas la plataforma no funciona. No requieren tu autorización porque son indispensables para prestar el servicio que pides.</p>
+<ul><li><strong>Sesión de usuario</strong> (cookies `sb-…` de Supabase): mantienen tu sesión iniciada de forma segura. Duran lo que dura la sesión y se renuevan mientras la uses.</li><li><strong>Empresa activa</strong> (`pixy_org_id`): recuerda con qué empresa estás trabajando si perteneces a varias.</li><li><strong>Acceso a portales con PIN</strong> (`pixy_portal_pin_…`): recuerda que ya ingresaste el PIN de un portal. Dura doce (12) horas, o treinta (30) días si eliges «recordar este dispositivo». No es accesible desde código de la página.</li><li><strong>Conexión con Meta</strong> (`pixy-meta-oauth`): protege el proceso de conexión de tus cuentas de Facebook, Instagram o WhatsApp. Se borra al terminar ese proceso.</li><li><strong>Modo revisión</strong> (`reviewer_mode`): solo para las cuentas de prueba que usan los revisores de plataformas como Meta.</li><li><strong>Seguridad de Cloudflare</strong>: Cloudflare puede poner cookies técnicas para distinguir tráfico legítimo de ataques y para la verificación anti-robots (Turnstile) en el registro.</li></ul>
+<h2 id="3-preferencias-guardadas-en-tu-navegador">3. Preferencias guardadas en tu navegador</h2>
+<p>La aplicación guarda en el almacenamiento local de tu navegador (no son cookies y no se envían a nuestros servidores en cada visita) preferencias como el idioma, el tema claro u oscuro, el estado del menú lateral, el correo para recordar el inicio de sesión (solo si lo eliges) y el estado de lectura de algunos avisos. También guardamos de forma temporal, mientras la pestaña está abierta, datos como el carrito de una tienda de demostración.</p>
+<h2 id="4-cookies-de-terceros">4. Cookies de terceros</h2>
+<ul><li><strong>Wompi y Stripe</strong>: cuando pagas, la pasarela puede poner sus propias cookies para procesar el pago y prevenir fraude.</li><li><strong>Meta</strong>: cuando conectas una cuenta de Facebook, Instagram o WhatsApp, el componente de Meta puede poner cookies según su política.</li><li><strong>Mapas</strong> (OpenStreetMap y Carto): al mostrar un mapa, tu navegador descarga imágenes de esos servicios, que reciben tu dirección IP.</li></ul>
+<p>Estas cookies se rigen por las políticas de cada tercero.</p>
+<h2 id="5-sitio-comercial-pixy-com-co">5. Sitio comercial pixy.com.co</h2>
+<p>El sitio comercial <strong>no usa cookies propias, analítica ni píxeles de publicidad</strong>. Guarda en el almacenamiento local de tu navegador solo:</p>
+<ul><li>`pixy_lang`: el idioma que eliges.</li><li>`pixy-theme`: el tema claro u oscuro.</li><li>`pixy_i18n_es` y `pixy_i18n_en`: una copia de los textos del sitio, para que cargue más rápido.</li></ul>
+<p>Para mostrar tipografías y algunas librerías, tu navegador descarga archivos de Google Fonts y de cdnjs (Cloudflare), que reciben tu dirección IP y datos técnicos del navegador según sus propias políticas. El sitio está alojado en nuestro proveedor de alojamiento web, que registra datos técnicos de las visitas (dirección IP, navegador y página visitada) para servirlo y protegerlo.</p>
+<p>Los formularios del sitio no envían datos a nuestros servidores: abren tu aplicación de correo con el mensaje listo, y solo recibimos lo que tú envías.</p>
+<h2 id="6-como-controlarlas">6. Cómo controlarlas</h2>
+<p>Puedes ver y borrar las cookies y el almacenamiento local desde la configuración de tu navegador. Si bloqueas las cookies necesarias, no podrás iniciar sesión ni usar los portales.</p>
+<h2 id="7-contacto">7. Contacto</h2>
+<p>Escríbenos a <strong>contact@pixy.com.co</strong>. Para saber cómo tratamos los datos personales, consulta la <a href="privacy.html">Política de tratamiento de datos personales</a>.</p>
+            </article>
+        </div>
+        <section class="bp-related container lg-others" aria-labelledby="otros">
+            <h2 id="otros" class="bp-section-title" data-i18n="legal2.all">Todos los documentos legales</h2>
+            <ul class="lg-list">
+                <li><a href="privacy.html">Política de tratamiento de datos personales</a></li>
+                <li><a href="terms.html">Términos y condiciones de Pixy Spaces</a></li>
+                <li><a href="data-deletion.html">Procedimiento de eliminación de datos</a></li>
+                <li><a href="legal/uso-aceptable.html">Política de uso aceptable y de mensajería</a></li>
+                <li><a href="legal/encargo-de-tratamiento.html">Acuerdo de encargo de tratamiento de datos personales (DPA)</a></li>
+                <li><a href="legal/subencargados.html">Anexo de subencargados y proveedores tecnológicos</a></li>
+                <li><a href="legal/terminos-pixy-studio.html">Términos y condiciones de Pixy Studio</a></li>
+                <li><a href="legal/tiendas-y-menus.html">Condiciones para tiendas, menús y portales generados con Pixy</a></li>
+                <li><a href="legal/menores-pixy-edu.html">Anexo de tratamiento de datos de niños, niñas y adolescentes (Pixy Edu)</a></li>
             </ul>
-        </div>
-
-        <h2 id="types" data-i18n="legal.cookies.sec_3_title">3. Tipos de Cookies que Utilizamos</h2>
-
-        <h3 data-i18n="legal.cookies.sec_3_1_title">3.1 Cookies Esenciales (Necesarias)</h3>
-        <p data-i18n="legal.cookies.sec_3_1_desc">Son imprescindibles para el funcionamiento de la plataforma. Sin
-            ellas, no podrías iniciar sesión ni usar el
-            servicio.</p>
-        <div data-i18n="legal.cookies.sec_3_1_table">
-            <!-- Table injected via i18n -->
-        </div>
-
-        <h3 data-i18n="legal.cookies.sec_3_2_title">3.2 Cookies de Preferencias</h3>
-        <p data-i18n="legal.cookies.sec_3_2_desc">Guardan tus preferencias para personalizar la experiencia.</p>
-        <div data-i18n="legal.cookies.sec_3_2_table">
-            <!-- Table injected via i18n -->
-        </div>
-
-        <h3 data-i18n="legal.cookies.sec_3_3_title">3.3 Cookies de Análisis</h3>
-        <p data-i18n="legal.cookies.sec_3_3_desc">Nos ayudan a entender cómo usas la plataforma para mejorarla.</p>
-        <div data-i18n="legal.cookies.sec_3_3_table">
-            <!-- Table injected via i18n -->
-        </div>
-
-        <h3 data-i18n="legal.cookies.sec_3_4_title">3.4 Cookies de Atribución y Publicidad (Meta)</h3>
-        <p data-i18n="legal.cookies.sec_3_4_desc">Utilizamos identificadores técnicos vinculados a la API de WhatsApp
-            para medir la efectividad de los anuncios
-            y flujos.</p>
-        <div data-i18n="legal.cookies.sec_3_4_table">
-            <!-- Table injected via i18n -->
-        </div>
-
-        <h2 id="third-party" data-i18n="legal.cookies.sec_4_title">4. Cookies de Terceros</h2>
-        <p data-i18n="legal.cookies.sec_4_intro">Cuando utilizas integraciones, pueden establecerse cookies de terceros:
-        </p>
-        <div data-i18n="legal.cookies.sec_4_list">
-            <ul>
-                <li><strong>Meta (Facebook):</strong> Cuando conectas tu cuenta de Facebook/Instagram</li>
-                <li><strong>Stripe:</strong> Durante el proceso de pago</li>
-            </ul>
-        </div>
-        <p data-i18n="legal.cookies.sec_4_footer">Estas cookies están sujetas a las políticas de privacidad de cada
-            proveedor.</p>
-
-        <h2 id="manage" data-i18n="legal.cookies.sec_5_title">5. Cómo Gestionar las Cookies</h2>
-        <p data-i18n="legal.cookies.sec_5_intro">Puedes controlar y/o eliminar las cookies de varias formas:</p>
-
-        <h3 data-i18n="legal.cookies.sec_5_1_title">5.1 Configuración del Navegador</h3>
-        <p data-i18n="legal.cookies.sec_5_1_intro">La mayoría de navegadores permiten:</p>
-        <div data-i18n="legal.cookies.sec_5_1_list">
-            <ul>
-                <li>Ver qué cookies tienes instaladas</li>
-                <li>Eliminar cookies específicas o todas las cookies</li>
-                <li>Bloquear cookies de terceros</li>
-                <li>Bloquear todas las cookies (pero esto afectará el funcionamiento)</li>
-            </ul>
-        </div>
-        <div data-i18n="legal.cookies.sec_5_1_footer">
-            <p>Consulta la ayuda de tu navegador:</p>
-            <ul>
-                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google
-                        Chrome</a></li>
-                <li><a href="https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en-"
-                        target="_blank" rel="noopener">Mozilla Firefox</a></li>
-                <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank"
-                        rel="noopener">Safari</a></li>
-                <li><a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-cookies-en-microsoft-edge"
-                        target="_blank" rel="noopener">Microsoft Edge</a></li>
-            </ul>
-        </div>
-
-        <h3 data-i18n="legal.cookies.sec_5_2_title">5.2 En Nuestra Plataforma</h3>
-        <div data-i18n="legal.cookies.sec_5_2_text">
-            <p>
-                Para cookies no esenciales, puedes ajustar tus preferencias en
-                <strong>Configuración → Cuenta → Privacidad</strong>.
-            </p>
-        </div>
-
-        <h2 data-i18n="legal.cookies.sec_6_title">6. Impacto de Deshabilitar Cookies</h2>
-        <p data-i18n="legal.cookies.sec_6_intro">Si deshabilitas las cookies esenciales:</p>
-        <div data-i18n="legal.cookies.sec_6_list">
-            <ul>
-                <li>No podrás mantener tu sesión activa</li>
-                <li>Deberás iniciar sesión cada vez que visites la plataforma</li>
-                <li>Algunas funcionalidades pueden no funcionar correctamente</li>
-            </ul>
-        </div>
-
-        <h2 data-i18n="legal.cookies.sec_7_title">7. Actualizaciones</h2>
-        <p data-i18n="legal.cookies.sec_7_text">
-            Esta política puede actualizarse. Te notificaremos sobre cambios significativos a través de
-            la plataforma o por correo electrónico.
-        </p>
-
-        <h2 data-i18n="legal.cookies.sec_8_title">8. Contacto</h2>
-        <p data-i18n="legal.cookies.sec_8_intro">Si tienes preguntas sobre nuestra política de cookies:</p>
-        <div data-i18n="legal.cookies.sec_8_list">
-            <ul>
-                <li><strong>Email:</strong> contact@pixy.com.co</li>
-            </ul>
-        </div>
+        </section>
     </main>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -258,45 +174,25 @@
                 <a href="terms.html" class="neon-link" data-i18n="chrome.terms">Términos</a>
                 <a href="cookies.html" class="neon-link" data-i18n="chrome.cookies">Cookies</a>
                 <a href="data-deletion.html" class="neon-link" data-i18n="chrome.deletion">Eliminación de datos</a>
-                <a href="permissions.html" class="neon-link" data-i18n="chrome.permissions">Permisos</a>
+                <a href="legal/uso-aceptable.html" class="neon-link" data-i18n="chrome.acceptable">Uso aceptable</a>
+                <a href="legal/index.html" class="neon-link" data-i18n="chrome.legal_all">Todos los documentos</a>
             </nav>
         </div>
         <div class="footer-bottom">
             <p data-i18n="chrome.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
-
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
-        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema" aria-label="Cambiar tema">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
     </button>
 
-    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Volver arriba">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="18 15 12 9 6 15"></polyline>
-        </svg>
-    </button>
     <!-- Fondo espacial (el del login de la plataforma) -->
     <script src="js/space-bg.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
     <div id="pixy-end" hidden></div>
 </body>
 

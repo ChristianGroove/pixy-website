@@ -73,6 +73,22 @@
         if (endshare) new IntersectionObserver(function (en) { atEnd = en[0].isIntersecting || en[0].boundingClientRect.top < 0; sync(); }).observe(endshare);
     }
 
+    // --- Legales: el índice de secciones marca la que se está leyendo -----------------------------------
+    var tocLinks = document.querySelectorAll('.lg-toc a');
+    if (tocLinks.length && 'IntersectionObserver' in window) {
+        var byId = {};
+        tocLinks.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+                if (!en.isIntersecting) return;
+                tocLinks.forEach(function (a) { a.classList.remove('is-current'); });
+                var a = byId[en.target.id];
+                if (a) a.classList.add('is-current');
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+        Object.keys(byId).forEach(function (id) { var h = document.getElementById(id); if (h) io.observe(h); });
+    }
+
     // --- Índice: filtro por tema ------------------------------------------------------------------------
     var filters = document.querySelectorAll('.bp-filter');
     if (filters.length) {

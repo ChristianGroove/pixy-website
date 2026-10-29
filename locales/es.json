@@ -970,7 +970,7 @@
       "f_when_sin-fecha": "Sin fecha",
       "f_link": "Instagram o web (opcional)",
       "f_msg": "Cuéntanos más",
-      "c_notice": "Pixy Studio, el servicio de agencia de Pixy, usará tu nombre, correo, WhatsApp, marca, enlaces y mensaje para preparar tu propuesta, responderte y hacerle seguimiento. Tus datos se guardan en nuestros proveedores de correo y nube, que pueden estar fuera de Colombia. Puedes conocer, actualizar, rectificar o suprimir tus datos y revocar tu autorización escribiendo a <a href=\"mailto:contact@pixy.com.co\">contact@pixy.com.co</a>. Más información en la <a href=\"../privacy.html\">Política de tratamiento de datos personales</a>. No incluyas datos sensibles ni datos de menores de edad en el mensaje.",
+      "c_notice": "Pixy Studio, el servicio de agencia de Pixy, usará tu nombre, correo, WhatsApp, marca, enlaces y mensaje para preparar tu propuesta, responderte y hacerle seguimiento. Tus datos se guardan en nuestros proveedores de correo y nube, que pueden estar fuera de Colombia. Puedes conocer, actualizar, rectificar o suprimir tus datos y revocar tu autorización escribiendo a <a href=\"mailto:contact@pixy.com.co\">contact@pixy.com.co</a>. Más información en la <a href=\"../privacy.html\">Política de tratamiento de datos personales</a> y en los <a href=\"../legal/terminos-pixy-studio.html\">Términos de Pixy Studio</a>. No incluyas datos sensibles ni datos de menores de edad en el mensaje.",
       "c_auth": "Autorizo a Pixy a tratar mis datos personales para preparar mi propuesta, según la Política de tratamiento de datos personales.",
       "c_news": "Quiero recibir novedades y ofertas de Pixy y Pixy Studio por correo y WhatsApp. Puedo darme de baja cuando quiera.",
       "f_send": "Enviar mi casting",
@@ -1003,6 +1003,8 @@
     "cookies": "Cookies",
     "deletion": "Eliminación de datos",
     "permissions": "Permisos",
+    "acceptable": "Uso aceptable",
+    "legal_all": "Todos los documentos",
     "rights": "© 2026 Pixy. Todos los derechos reservados.",
     "meta_tp": "Pixy es Tech Provider de Meta.",
     "whatsapp": "WhatsApp"
@@ -1036,5 +1038,17 @@
     "cat_inmobiliaria": "Inmobiliarias",
     "cat_tiendas": "Tiendas",
     "cat_agencias": "Agencias"
+  },
+  "legal2": {
+    "version": "Versión",
+    "since": "Vigente desde el",
+    "contents": "Contenido",
+    "all": "Todos los documentos legales",
+    "note": "",
+    "summary": "",
+    "index_t": "Documentos legales",
+    "index_s": "Las reglas con las que Pixy trabaja: datos personales, términos, cookies y uso aceptable. El texto en español es el que rige.",
+    "summary_privacy_html": "",
+    "summary_data_deletion_html": ""
   }
 }
