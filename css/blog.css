@@ -196,3 +196,8 @@
 .lg-card-title { font-family: var(--sh-font-display); font-size: 19px; font-weight: 700; line-height: 1.25; color: var(--text-primary); }
 @media (max-width: 1100px) { .lg-toc { display: none; } }
 @media (max-width: 700px) { .lg-list, .lg-cards { grid-template-columns: 1fr; } }
+
+/* Página 404 */
+.nf-inner { min-height: 60vh !important; display: flex !important; flex-direction: column; justify-content: center; }
+.nf-code { margin: 0 0 8px; font-family: var(--sh-font-display); font-size: clamp(80px, 14vw, 180px); font-weight: 800; line-height: 1; letter-spacing: -0.05em; color: var(--brand-pink); }
+.nf-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; }

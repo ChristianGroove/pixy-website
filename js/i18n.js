@@ -4,6 +4,9 @@
  * input placeholder translation, and real-time custom event dispatching.
  */
 (function () {
+    // Versión de las traducciones (la pone tools/pages/version-assets.mjs en la etiqueta del script)
+    const localesV = (document.currentScript && document.currentScript.dataset.locales) || '';
+    const withV = (url) => (localesV ? `${url}?v=${localesV}` : url);
     const langToggle = document.getElementById('lang-toggle');
     const langText = document.getElementById('lang-text');
     let currentLang = localStorage.getItem('pixy_lang') || 'es';
@@ -46,7 +49,7 @@
             let response = null;
             // 1. Try root-relative
             try {
-                response = await fetch(`/locales/${lang}.json`);
+                response = await fetch(withV(`/locales/${lang}.json`));
             } catch (e) { }
 
             // 2. Try relative based on path
@@ -54,16 +57,16 @@
                 try {
                     const isSubfolder = window.location.pathname.includes('/agency/');
                     const rel = isSubfolder ? `../locales/${lang}.json` : `locales/${lang}.json`;
-                    response = await fetch(rel);
+                    response = await fetch(withV(rel));
                 } catch (e) { }
             }
 
             // 3. Fallbacks
             if (!response || !response.ok) {
-                try { response = await fetch(`locales/${lang}.json`); } catch (e) { }
+                try { response = await fetch(withV(`locales/${lang}.json`)); } catch (e) { }
             }
             if (!response || !response.ok) {
-                try { response = await fetch(`../locales/${lang}.json`); } catch (e) { }
+                try { response = await fetch(withV(`../locales/${lang}.json`)); } catch (e) { }
             }
 
             if (!response || !response.ok) {

@@ -1050,5 +1050,12 @@
     "index_s": "Las reglas con las que Pixy trabaja: datos personales, términos, cookies y uso aceptable. El texto en español es el que rige.",
     "summary_privacy_html": "",
     "summary_data_deletion_html": ""
+  },
+  "nf": {
+    "title": "Esta página se perdió en el espacio.",
+    "sub": "La dirección no existe o cambió. Sigue por aquí:",
+    "home": "Ir al inicio",
+    "blog": "Leer el blog",
+    "contact": "Escríbenos"
   }
 }

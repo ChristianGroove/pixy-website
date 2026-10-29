@@ -16,5 +16,10 @@ const { buildBlog } = await import("./blog/build-blog.mjs");
 const posts = await buildBlog();
 const { buildLegal } = await import("./legal/build-legal.mjs");
 await buildLegal();
+const { build404 } = await import("./pages/build-404.mjs");
+build404();
 const { buildSeo } = await import("./seo/seo.mjs");
 await buildSeo(posts);
+// Al final: versión de CSS, JS y traducciones en todas las páginas ya generadas
+const { versionAssets } = await import("./pages/version-assets.mjs");
+versionAssets();
