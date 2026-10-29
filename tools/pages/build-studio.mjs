@@ -5,7 +5,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { studioNav, studioFooter, withPageEnd, consentBlock, MAILTO_NOTE } from "./chrome.mjs";
+import { studioNav, studioFooter, withPageEnd, consentBlock, FORM_NOTE } from "./chrome.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const EOL = readFileSync(join(root, "index.html"), "utf8").includes("\r\n") ? "\r\n" : "\n";
@@ -557,7 +557,7 @@ page = "casting";
                 <label class="sp-wide">${t("span", "f_msg", "Cuéntanos más", "Tell us more")}<textarea name="mensaje" rows="5"></textarea></label>
                 ${consentBlock(t, { pre: "../", studio: true, purposeEs: "preparar tu propuesta, responderte y hacerle seguimiento", purposeEn: "prepare your proposal, reply to you and follow up", dataEs: "tu nombre, correo, WhatsApp, marca, enlaces y mensaje", dataEn: "your name, email, WhatsApp number, brand, links and message" })}
                 ${t("button", "f_send", "Enviar mi casting", "Send my casting", "btn-neon sp-wide", 'type="submit"')}
-                ${t("p", "f_note", MAILTO_NOTE[0], MAILTO_NOTE[1], "sh-small sp-wide")}
+                ${t("p", "f_note", FORM_NOTE[0], FORM_NOTE[1], "sh-small sp-wide")}
             </form>
         </div>
     </section>

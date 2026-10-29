@@ -3,7 +3,8 @@
  * - Catálogo: un modelo 3D en cromo, fijo a la derecha, que cambia al Space que se está leyendo.
  * - Precios: Space, pago mensual o anual, columna del nivel en la comparación y calculadora de Edu.
  * - Listas numeradas: el punto que cruza el centro se enciende (como en la portada).
- * - Formularios: el sitio no tiene servidor, así que se abre el correo con el mensaje listo.
+ * - Formularios: la solicitud llega al correo del equipo (FormSubmit) y se confirma en la página;
+ *   si el envío falla, se puede mandar desde el correo de la persona con un clic.
  */
 (function () {
     'use strict';
@@ -147,7 +148,23 @@
         render();
     }
 
-    // --- Formularios: abren el correo con el mensaje armado ------------------------------------------
+    // --- Formularios: envían la solicitud y confirman en la página --------------------------------------
+    // Verificación de Cloudflare Turnstile (widget «pixy-sitio-y-demo»): la entrada de leads rechaza sin su token.
+    // La clave de sitio es pública; la secreta vive solo en la plataforma. Solo carga en páginas con formulario.
+    var TURNSTILE_KEY = window.pixyTurnstileKey || '0x4AAAAAAFrbwsCNF2t_ZQeS';
+    var turnstileReady = null;
+    var loadTurnstile = function () {
+        if (!turnstileReady) turnstileReady = new Promise(function (resolve, reject) {
+            window.pixyTurnstileLoaded = function () { resolve(window.turnstile); };
+            var s = document.createElement('script');
+            s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=pixyTurnstileLoaded';
+            s.async = true;
+            s.onerror = reject;
+            document.head.appendChild(s);
+        });
+        return turnstileReady;
+    };
+
     document.querySelectorAll('.sp-form').forEach(function (form) {
         // Un parámetro de la URL con el nombre de un campo lo preselecciona (?space=resto, ?paquete=debut)
         var params = new URLSearchParams(location.search);
@@ -165,29 +182,128 @@
         if (auth) auth.addEventListener('change', syncSend);
         syncSend();
 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            if (!form.reportValidity() || (auth && !auth.checked)) return;
+        // Envío: la solicitud entra directo al CRM de Pixy (api/public/site-lead de la plataforma) con la constancia
+        // de autorización, y la persona ve la confirmación en la página. Si falla, puede mandarla desde su correo.
+        var T = function (k, fallback) { return (window.pixyI18n && window.pixyI18n.t('chrome.' + k)) || fallback; };
+        // Trampa para robots: un campo que una persona no ve ni llena
+        var trap = document.createElement('input');
+        trap.type = 'text'; trap.name = '_honey'; trap.tabIndex = -1; trap.autocomplete = 'off';
+        trap.className = 'sp-trap'; trap.setAttribute('aria-hidden', 'true');
+        form.appendChild(trap);
+        // Desde cuándo está el formulario en pantalla: un envío en menos de 3 s es de un robot
+        var shownAt = Date.now();
+        // Turnstile antes del botón: invisible salvo que Cloudflare necesite que la persona lo toque
+        var ts = null;
+        var widget = null;
+        var box = document.createElement('div');
+        box.className = 'sp-turnstile sp-wide';
+        if (send) send.parentNode.insertBefore(box, send);
+        loadTurnstile().then(function (api) {
+            ts = api;
+            widget = api.render(box, {
+                sitekey: TURNSTILE_KEY,
+                action: 'site-lead',
+                'response-field': false,
+                appearance: 'interaction-only',
+                size: 'flexible',
+                language: lang(),
+                theme: document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark'
+            });
+        }).catch(function () {});
+        var token = function () { return ts && widget !== null ? ts.getResponse(widget) || '' : ''; };
+
+        var build = function () {
             var en = lang() === 'en';
             var d = new FormData(form);
+            var fields = {};
             var lines = [];
-            // Los campos que empiezan con _ son las casillas: van en la constancia, no en el mensaje
-            d.forEach(function (v, k) { if (k.charAt(0) !== '_' && String(v).trim()) lines.push(k + ': ' + v); });
-            // Constancia de la autorización al final del correo: es la prueba (no hay servidor que la guarde)
+            // Los campos que empiezan con _ son las casillas y la trampa: van en la constancia, no en el mensaje
+            d.forEach(function (v, k) { if (k.charAt(0) !== '_' && String(v).trim()) { fields[k] = String(v); lines.push(k + ': ' + v); } });
+            // Constancia de la autorización: viaja con la solicitud y queda en el correo del equipo
             var wa = form.hasAttribute('data-news-wa');
             var yes = news && news.checked;
             var today = new Date().toISOString().slice(0, 10);
-            lines.push('', '—');
-            lines.push(en
-                ? 'Personal data authorization: Yes (Personal Data Policy, version 1.0)'
-                : 'Autorización de tratamiento de datos: Sí (Política de tratamiento de datos personales, versión 1.0)');
-            lines.push(en
-                ? 'News and offers by email' + (wa ? ' and WhatsApp' : '') + ': ' + (yes ? 'Yes' : 'No')
-                : 'Novedades y ofertas por correo' + (wa ? ' y WhatsApp' : '') + ': ' + (yes ? 'Sí' : 'No'));
-            lines.push((en ? 'Form: ' : 'Formulario: ') + form.dataset[en ? 'formEn' : 'formEs'] + ' · ' + today);
-            var subject = form.dataset[en ? 'subjectEn' : 'subjectEs'];
-            location.href = 'mailto:' + form.dataset.mailto + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+            var proof = [
+                en ? 'Personal data authorization: Yes (Personal Data Policy, version 1.0)'
+                    : 'Autorización de tratamiento de datos: Sí (Política de tratamiento de datos personales, versión 1.0)',
+                en ? 'News and offers by email' + (wa ? ' and WhatsApp' : '') + ': ' + (yes ? 'Yes' : 'No')
+                    : 'Novedades y ofertas por correo' + (wa ? ' y WhatsApp' : '') + ': ' + (yes ? 'Sí' : 'No'),
+                (en ? 'Form: ' : 'Formulario: ') + form.dataset[en ? 'formEn' : 'formEs'] + ' · ' + today
+            ];
+            return { fields: fields, lines: lines.concat(['', '—'], proof), proof: proof.join(' | '), subject: form.dataset[en ? 'subjectEn' : 'subjectEs'] };
+        };
+        var byMail = function () {
+            var m = build();
+            location.href = 'mailto:' + form.dataset.mailto + '?subject=' + encodeURIComponent(m.subject) + '&body=' + encodeURIComponent(m.lines.join('\n'));
             warp('departure');
+        };
+        var label = send ? send.textContent : '';
+        var error = null;
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!form.reportValidity() || (auth && !auth.checked)) return;
+            if (error) { error.remove(); error = null; }
+            var m = build();
+            var done = function () {
+                // Confirmación en el lugar del formulario
+                var ok = document.createElement('div');
+                ok.className = 'sp-sent';
+                ok.setAttribute('role', 'status');
+                ok.tabIndex = -1;
+                ok.innerHTML = '<h3 class="sh-h3l"></h3><p class="sh-body"></p><a class="sh-link" target="_blank" rel="noopener" href="https://wa.me/573504076800"></a>';
+                ok.children[0].textContent = T('f_ok_t', 'Listo, recibimos tu solicitud.');
+                ok.children[1].textContent = T('f_ok_d', 'Te escribimos a {email} muy pronto.').replace('{email}', m.fields.email || '');
+                ok.children[2].textContent = T('f_ok_wa', '¿Prefieres hablar ya? Escríbenos por WhatsApp');
+                // Ocupa el mismo lugar del formulario en la cuadrícula
+                form.replaceWith(ok);
+                ok.focus({ preventScroll: true });
+                warp('departure');
+            };
+            // Un robot llenó la trampa: se le muestra la confirmación y no se envía nada
+            if (trap.value) return done();
+
+            if (send) { send.disabled = true; send.textContent = T('f_sending', 'Enviando…'); }
+            var payload = {
+                fields: m.fields,
+                consent: !!(auth && auth.checked),
+                news: !!(news && news.checked),
+                form: form.dataset.formEs,
+                page: location.origin + location.pathname,
+                lang: lang(),
+                trap: trap.value,
+                elapsed_ms: Date.now() - shownAt,
+                turnstile_token: token()
+            };
+            fetch(window.pixyLeadsUrl || 'https://app.pixy.com.co/api/public/site-lead', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.ok === true, reason: j.reason }; }); })
+                .catch(function () { return { ok: false }; })
+                .then(function (res) {
+                    if (res.ok) return done();
+                    // El token de Turnstile sirve una sola vez: uno nuevo para el próximo intento
+                    if (ts && widget !== null) ts.reset(widget);
+                    if (send) { send.disabled = false; send.textContent = label; }
+                    // Cloudflare aún no termina de verificar: basta con volver a enviar
+                    if (res.reason === 'challenge') {
+                        error = document.createElement('p');
+                        error.className = 'sp-form-error sp-wide';
+                        error.setAttribute('role', 'alert');
+                        error.textContent = T('f_wait', 'Estamos verificando que no eres un robot. Vuelve a enviarlo en unos segundos.');
+                        return send.parentNode.insertBefore(error, send.nextSibling);
+                    }
+                    // No llegó: mismo mensaje listo para enviarlo desde el correo de la persona
+                    error = document.createElement('p');
+                    error.className = 'sp-form-error sp-wide';
+                    error.setAttribute('role', 'alert');
+                    error.innerHTML = '<span></span> <button type="button" class="sh-link"></button>';
+                    error.firstChild.textContent = T('f_err', 'No pudimos enviarlo. Puedes enviarlo desde tu correo con un clic.');
+                    error.lastChild.textContent = T('f_err_b', 'Enviar desde mi correo');
+                    error.lastChild.addEventListener('click', byMail);
+                    send.parentNode.insertBefore(error, send.nextSibling);
+                });
         });
     });
 
