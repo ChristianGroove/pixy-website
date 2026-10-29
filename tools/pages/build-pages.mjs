@@ -615,14 +615,15 @@ pages.push({
                 <label>${t("span", "f_name", "Nombre", "Name")}<input name="name" required autocomplete="name"></label>
                 <label>${t("span", "f_company", "Empresa", "Company")}<input name="company" autocomplete="organization"></label>
                 <label>${t("span", "f_email", "Email", "Email")}<input name="email" type="email" required autocomplete="email"></label>
+                <label>${t("span", "f_wa", "WhatsApp (opcional)", "WhatsApp (optional)")}<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="+57 300 000 0000"></label>
                 <label>${t("span", "f_space", "Tu industria", "Your industry")}<select name="space">
                     ${SPACES.map((s) => `<option value="${s.id}">${s.name}</option>`).join("")}
                     ${t("option", "f_other", "Otra", "Other", "", 'value="otra"')}
                 </select></label>
                 <input type="hidden" name="plan">
                 <label class="sp-wide">${t("span", "f_msg", "Cuéntanos de tu negocio", "Tell us about your business")}<textarea name="message" rows="5"></textarea></label>
-                ${consentBlock(t, { purposeEs: "responder tu solicitud, agendar la demo y hacerle seguimiento", purposeEn: "answer your request, schedule the demo and follow up", dataEs: "tu nombre, correo, empresa y mensaje", dataEn: "your name, email, company and message" })}
-                ${t("button", "f_send", "Agendar mi demo", "Book my demo", "btn-neon sp-wide", 'type="submit"')}
+                ${consentBlock(t, { purposeEs: "responder tu solicitud, agendar la demo y hacerle seguimiento, por correo o, si nos escribes, por WhatsApp con nuestro asistente de IA", purposeEn: "answer your request, schedule the demo and follow up, by email or, if you write to us, on WhatsApp with our AI assistant", dataEs: "tu nombre, correo, WhatsApp si lo dejas, empresa y mensaje", dataEn: "your name, email, WhatsApp if you leave it, company and message" })}
+                ${t("button", "f_send", "Solicitar acceso", "Request access", "btn-neon sp-wide", 'type="submit"')}
                 ${t("p", "f_note", FORM_NOTE[0], FORM_NOTE[1], "sh-small sp-wide")}
             </form>
         </div>
