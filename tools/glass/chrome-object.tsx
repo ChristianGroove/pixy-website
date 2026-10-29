@@ -2,7 +2,7 @@
  * Objeto 3D de cada Space, solo en cromo (decisión del dueño: nada de vidrio).
  * Basado en glass-object.tsx del sitio oscuro (pixy-web): mismas poses, mismo cambio de modelo
  * (se encoge, cambia y vuelve) y el giro que se acelera con el warp del fondo. Sin halos de color.
- * El cromo refleja un estudio del color del tema (claro u oscuro): sin él se veía casi negro.
+ * Cromo oscuro en los dos temas: refleja un estudio gris muy oscuro (con el estudio claro se veía casi transparente).
  * Los GLB salen de pixy-web (scripts/models) y viven en assets/models/ (incluidos en el repositorio por decisión del dueño, que asume la licencia de Envato).
  */
 import { Suspense, useEffect, useRef, useState } from "react";
@@ -26,23 +26,8 @@ const POSE: Record<ModelSlug, { rotation: [number, number, number]; scale?: numb
   agencias: { rotation: [0.1, -0.7, 0.1] },
 };
 
-/** Tema del sitio (atributo data-theme de <html>); cambia en vivo con el botón de tema. */
-function useLightTheme() {
-  const read = () => document.documentElement.getAttribute("data-theme") === "light";
-  const [light, setLight] = useState(read);
-  useEffect(() => {
-    const mo = new MutationObserver(() => setLight(read()));
-    mo.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
-    return () => mo.disconnect();
-  }, []);
-  return light;
-}
-
-// Estudio que refleja el cromo en cada tema y acabado del metal
-const STUDIO = {
-  light: { backdrop: "#f3f5f9", color: "#f6f7fa", roughness: 0.18 },
-  dark: { backdrop: "#2a2e37", color: "#e8e8ee", roughness: 0.12 },
-};
+// Estudio gris muy oscuro que refleja el cromo (decisión del dueño: cromo oscuro también en tema claro)
+const BACKDROP = "#2a2e37";
 
 // Puntero global normalizado (-1..1): el objeto mira hacia el cursor.
 const pointer = { x: 0, y: 0 };
@@ -88,11 +73,6 @@ function Scene({ base, slug, accent, drift, onReady }: Props) {
   const scale = useRef(0);
   // La primera aparición crece despacio; los cambios de destino son rápidos
   const appeared = useRef(false);
-  const studio = STUDIO[useLightTheme() ? "light" : "dark"];
-  useEffect(() => {
-    CHROME.color.set(studio.color);
-    CHROME.roughness = studio.roughness;
-  }, [studio]);
 
   // Todos los modelos se descargan al montar: los cambios de destino son instantáneos.
   useEffect(() => SLUGS.forEach((s) => useGLTF.preload(modelUrl(base, s))), [base]);
@@ -123,11 +103,11 @@ function Scene({ base, slug, accent, drift, onReady }: Props) {
           </Suspense>
         </group>
       </Float>
-      {/* El cromo refleja el estudio: fondo del color del tema, luz blanca y dos paneles con el color del Space */}
+      {/* El cromo refleja el estudio: fondo gris oscuro, luz blanca y dos paneles con el color del Space */}
       <Environment resolution={256}>
         <mesh scale={40}>
           <sphereGeometry args={[1, 32, 16]} />
-          <meshBasicMaterial color={studio.backdrop} side={THREE.BackSide} toneMapped={false} />
+          <meshBasicMaterial color={BACKDROP} side={THREE.BackSide} toneMapped={false} />
         </mesh>
         <Lightformer form="ring" intensity={3} position={[0, 4, 3]} scale={3} color="#ffffff" />
         <Lightformer form="rect" intensity={4} position={[-5, 1, 1]} scale={[3, 6, 1]} color={accent} />
