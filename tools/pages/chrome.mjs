@@ -7,6 +7,8 @@ export const CHROME_I18N = {
     spaces: "Spaces", platform: "Plataforma", plans: "Planes", blog: "Blog", demo: "Agenda tu demo", menu: "Menú",
     packages: "Paquetes", work: "Trabajos", pixy: "Con Pixy", casting: "Abre tu casting",
     slogan_spaces: "El sistema operativo de tu negocio.", slogan_studio: "Tu marca, en portada.",
+    f_sending: "Enviando…", f_ok_t: "Listo, recibimos tu solicitud.", f_ok_d: "Te escribimos a {email} muy pronto.", f_ok_wa: "¿Prefieres hablar ya? Escríbenos por WhatsApp",
+    f_err: "No pudimos enviarlo. Puedes enviarlo desde tu correo con un clic.", f_err_b: "Enviar desde mi correo",
     col_product: "Producto", col_company: "Pixy", col_legal: "Legal", col_studio: "Studio",
     partners: "Partners", contact: "Contacto", studio: "Pixy Studio", spaces_site: "Pixy Spaces",
     privacy: "Privacidad", terms: "Términos", cookies: "Cookies", deletion: "Eliminación de datos", permissions: "Permisos", acceptable: "Uso aceptable", legal_all: "Todos los documentos",
@@ -17,6 +19,8 @@ export const CHROME_I18N = {
     spaces: "Spaces", platform: "Platform", plans: "Plans", blog: "Blog", demo: "Book a demo", menu: "Menu",
     packages: "Packages", work: "Work", pixy: "With Pixy", casting: "Open your casting",
     slogan_spaces: "The operating system for your business.", slogan_studio: "Your brand, on the cover.",
+    f_sending: "Sending…", f_ok_t: "Done, we got your request.", f_ok_d: "We will write to {email} very soon.", f_ok_wa: "Rather talk now? Message us on WhatsApp",
+    f_err: "We couldn't send it. You can send it from your email in one click.", f_err_b: "Send from my email",
     col_product: "Product", col_company: "Pixy", col_legal: "Legal", col_studio: "Studio",
     partners: "Partners", contact: "Contact", studio: "Pixy Studio", spaces_site: "Pixy Spaces",
     privacy: "Privacy", terms: "Terms", cookies: "Cookies", deletion: "Data deletion", permissions: "Permissions", acceptable: "Acceptable use", legal_all: "All legal documents",
@@ -209,10 +213,10 @@ export function consentBlock(t, { pre = "", purposeEs, purposeEn, dataEs, dataEn
                 </div>`;
 }
 
-/** Nota bajo el botón de los formularios con mailto (dictamen legal §4.5). */
-export const MAILTO_NOTE = [
-  "Este botón abre tu aplicación de correo con el mensaje listo. Tu solicitud nos llega solo cuando envías ese correo.",
-  "This button opens your email app with the message ready. We only receive your request once you send that email.",
+/** Nota bajo el botón de los formularios: la solicitud llega directo al equipo (js/spaces-pages.js). */
+export const FORM_NOTE = [
+  "Tu solicitud llega directo a nuestro equipo y te respondemos a tu correo.",
+  "Your request goes straight to our team and we reply to your email.",
 ];
 
 /**

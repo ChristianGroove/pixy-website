@@ -880,7 +880,7 @@
       "c_auth": "Autorizo a Pixy a tratar mis datos personales para atender esta solicitud, según la Política de tratamiento de datos personales.",
       "c_news": "Quiero recibir novedades y ofertas de Pixy por correo. Puedo darme de baja cuando quiera.",
       "f_send": "Agendar mi demo",
-      "f_note": "Este botón abre tu aplicación de correo con el mensaje listo. Tu solicitud nos llega solo cuando envías ese correo."
+      "f_note": "Tu solicitud llega directo a nuestro equipo y te respondemos a tu correo."
     },
     "partners": {
       "h1": "Vende IA para atender clientes <span class=\"sh-accent\">con tu marca.</span>",
@@ -920,7 +920,7 @@
       "c_auth": "Autorizo a Pixy a tratar mis datos personales para atender esta solicitud, según la Política de tratamiento de datos personales.",
       "c_news": "Quiero recibir novedades y ofertas de Pixy por correo. Puedo darme de baja cuando quiera.",
       "f_send": "Quiero ser partner",
-      "f_note": "Este botón abre tu aplicación de correo con el mensaje listo. Tu solicitud nos llega solo cuando envías ese correo."
+      "f_note": "Tu solicitud llega directo a nuestro equipo y te respondemos a tu correo."
     },
     "space_resto": {
       "sub": "De la mesa a la cocina y a la caja, sin un papel.",
@@ -1333,7 +1333,7 @@
       "c_auth": "Autorizo a Pixy a tratar mis datos personales para preparar mi propuesta, según la Política de tratamiento de datos personales.",
       "c_news": "Quiero recibir novedades y ofertas de Pixy y Pixy Studio por correo y WhatsApp. Puedo darme de baja cuando quiera.",
       "f_send": "Enviar mi casting",
-      "f_note": "Este botón abre tu aplicación de correo con el mensaje listo. Tu solicitud nos llega solo cuando envías ese correo."
+      "f_note": "Tu solicitud llega directo a nuestro equipo y te respondemos a tu correo."
     }
   },
   "chrome": {
@@ -1349,6 +1349,12 @@
     "casting": "Abre tu casting",
     "slogan_spaces": "El sistema operativo de tu negocio.",
     "slogan_studio": "Tu marca, en portada.",
+    "f_sending": "Enviando…",
+    "f_ok_t": "Listo, recibimos tu solicitud.",
+    "f_ok_d": "Te escribimos a {email} muy pronto.",
+    "f_ok_wa": "¿Prefieres hablar ya? Escríbenos por WhatsApp",
+    "f_err": "No pudimos enviarlo. Puedes enviarlo desde tu correo con un clic.",
+    "f_err_b": "Enviar desde mi correo",
     "col_product": "Producto",
     "col_company": "Pixy",
     "col_legal": "Legal",

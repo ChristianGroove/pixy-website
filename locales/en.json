@@ -880,7 +880,7 @@
       "c_auth": "I authorize Pixy to process my personal data to handle this request, as described in the Personal Data Policy.",
       "c_news": "I'd like to receive Pixy news and offers by email. I can unsubscribe at any time.",
       "f_send": "Book my demo",
-      "f_note": "This button opens your email app with the message ready. We only receive your request once you send that email."
+      "f_note": "Your request goes straight to our team and we reply to your email."
     },
     "partners": {
       "h1": "Sell AI that serves customers <span class=\"sh-accent\">under your brand.</span>",
@@ -920,7 +920,7 @@
       "c_auth": "I authorize Pixy to process my personal data to handle this request, as described in the Personal Data Policy.",
       "c_news": "I'd like to receive Pixy news and offers by email. I can unsubscribe at any time.",
       "f_send": "I want to be a partner",
-      "f_note": "This button opens your email app with the message ready. We only receive your request once you send that email."
+      "f_note": "Your request goes straight to our team and we reply to your email."
     },
     "space_resto": {
       "sub": "From table to kitchen to checkout, paper-free.",
@@ -1333,7 +1333,7 @@
       "c_auth": "I authorize Pixy to process my personal data to prepare my proposal, as described in the Personal Data Policy.",
       "c_news": "I'd like to receive Pixy and Pixy Studio news and offers by email and WhatsApp. I can unsubscribe at any time.",
       "f_send": "Send my casting",
-      "f_note": "This button opens your email app with the message ready. We only receive your request once you send that email."
+      "f_note": "Your request goes straight to our team and we reply to your email."
     }
   },
   "chrome": {
@@ -1349,6 +1349,12 @@
     "casting": "Open your casting",
     "slogan_spaces": "The operating system for your business.",
     "slogan_studio": "Your brand, on the cover.",
+    "f_sending": "Sending…",
+    "f_ok_t": "Done, we got your request.",
+    "f_ok_d": "We will write to {email} very soon.",
+    "f_ok_wa": "Rather talk now? Message us on WhatsApp",
+    "f_err": "We couldn't send it. You can send it from your email in one click.",
+    "f_err_b": "Send from my email",
     "col_product": "Product",
     "col_company": "Pixy",
     "col_legal": "Legal",

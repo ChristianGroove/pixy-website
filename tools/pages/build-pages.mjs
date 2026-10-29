@@ -5,7 +5,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { spacesNav, withPageEnd, consentBlock, MAILTO_NOTE } from "./chrome.mjs";
+import { spacesNav, withPageEnd, consentBlock, FORM_NOTE } from "./chrome.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const index = readFileSync(join(root, "index.html"), "utf8");
@@ -619,7 +619,7 @@ pages.push({
                 <label class="sp-wide">${t("span", "f_msg", "Cuéntanos de tu negocio", "Tell us about your business")}<textarea name="message" rows="5"></textarea></label>
                 ${consentBlock(t, { purposeEs: "responder tu solicitud, agendar la demo y hacerle seguimiento", purposeEn: "answer your request, schedule the demo and follow up", dataEs: "tu nombre, correo, empresa y mensaje", dataEn: "your name, email, company and message" })}
                 ${t("button", "f_send", "Agendar mi demo", "Book my demo", "btn-neon sp-wide", 'type="submit"')}
-                ${t("p", "f_note", MAILTO_NOTE[0], MAILTO_NOTE[1], "sh-small sp-wide")}
+                ${t("p", "f_note", FORM_NOTE[0], FORM_NOTE[1], "sh-small sp-wide")}
             </form>
         </div>
     </section>
@@ -670,7 +670,7 @@ pages.push({
                 <label>${t("span", "f_web", "Sitio web", "Website")}<input name="website" type="url" placeholder="https://"></label>
                 ${consentBlock(t, { purposeEs: "evaluar tu solicitud al programa de partners, responderte y hacerle seguimiento", purposeEn: "review your partner program application, reply to you and follow up", dataEs: "tu nombre, correo, empresa, país, número de clientes y sitio web", dataEn: "your name, email, company, country, number of clients and website" })}
                 ${t("button", "f_send", "Quiero ser partner", "I want to be a partner", "btn-neon sp-wide", 'type="submit"')}
-                ${t("p", "f_note", MAILTO_NOTE[0], MAILTO_NOTE[1], "sh-small sp-wide")}
+                ${t("p", "f_note", FORM_NOTE[0], FORM_NOTE[1], "sh-small sp-wide")}
             </form>
         </div>
     </section>
