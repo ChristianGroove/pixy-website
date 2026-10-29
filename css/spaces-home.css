@@ -706,7 +706,7 @@
 .pr-inc-list li { padding: 12px 0; border-top: 1px solid var(--border-color); color: var(--text-secondary); }
 .pr-calc { display: grid; grid-template-columns: minmax(0, 380px) 1fr; align-items: end; gap: 24px 48px; margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--border-color); }
 .pr-calc label { display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: var(--text-muted); }
-.pr-calc input { width: 100%; padding: 8px 0; font: inherit; font-size: 32px; font-weight: 700; color: var(--text-primary); background: none; border: 0; border-bottom: 1px solid var(--border-color); border-radius: 0; font-variant-numeric: tabular-nums; }
+.pr-calc input { width: 100%; padding: 8px 0; font: inherit; font-size: 32px; font-weight: 700; color: var(--text-primary); background: none; border: 0; border-bottom: 1px solid var(--field-line); border-radius: 0; font-variant-numeric: tabular-nums; }
 .pr-calc input:focus { outline: none; border-bottom-color: var(--brand-pink); }
 .pr-calc-out { margin: 6px 0; font-size: var(--sh-h3); font-weight: 600; color: var(--text-primary); }
 .pr-scope[data-fixed] .sp-actions { margin-top: 56px; }
@@ -743,6 +743,9 @@
 }
 
 /* Formulario */
+/* Campos y casillas con contraste propio en cada tema (el borde general casi no se ve sobre el fondo claro) */
+:root { --field-line: rgba(255, 255, 255, 0.38); --field-box: rgba(255, 255, 255, 0.62); --field-box-bg: rgba(255, 255, 255, 0.06); --field-hint: rgba(255, 255, 255, 0.45); --field-pop: #121318; --field-pop-hover: rgba(255, 255, 255, 0.07); }
+[data-theme="light"] { --field-line: rgba(15, 23, 42, 0.3); --field-box: rgba(15, 23, 42, 0.42); --field-box-bg: #ffffff; --field-hint: rgba(15, 23, 42, 0.42); --field-pop: #ffffff; --field-pop-hover: rgba(15, 23, 42, 0.05); }
 .sp-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .sp-form label { display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: var(--text-muted); }
 .sp-form input, .sp-form select, .sp-form textarea {
@@ -751,12 +754,36 @@
     color: var(--text-primary);
     background: transparent;
     border: 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--field-line);
     padding: 10px 0;
     outline: none;
     transition: border-color 200ms ease;
 }
-.sp-form select option { color: #0f172a; }
+/* Selector: misma línea que los campos, flecha propia y lista del tema (la nativa salía blanca en oscuro) */
+.sp-form select {
+    appearance: none; -webkit-appearance: none; cursor: pointer; padding-right: 28px; color-scheme: dark;
+    background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+    background-position: calc(100% - 11px) 52%, calc(100% - 6px) 52%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat;
+}
+[data-theme="light"] .sp-form select { color-scheme: light; }
+.sp-form select option { background: var(--field-pop); color: var(--text-primary); }
+/* Donde el navegador lo permite, la lista desplegable también lleva el estilo del sitio */
+@supports (appearance: base-select) {
+    .sp-form select, .sp-form select::picker(select) { appearance: base-select; }
+    .sp-form select { background-image: none; }
+    .sp-form select:open { border-bottom-color: var(--brand-pink); }
+    .sp-form select::picker-icon { content: ""; width: 7px; height: 7px; margin-right: 4px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; color: var(--text-muted); rotate: 45deg; translate: 0 -2px; transition: rotate 300ms cubic-bezier(0.16, 1, 0.3, 1), translate 300ms cubic-bezier(0.16, 1, 0.3, 1), color 200ms ease; }
+    .sp-form select:open::picker-icon { rotate: 225deg; translate: 0 2px; color: var(--brand-pink); }
+    .sp-form select::picker(select) { margin-block: 8px; padding: 6px; border: 1px solid var(--field-line); border-radius: 14px; background: var(--field-pop); color: var(--text-primary); box-shadow: none; scrollbar-width: thin; scrollbar-color: var(--field-line) transparent; opacity: 0; translate: 0 -6px; transition: opacity 200ms ease, translate 300ms cubic-bezier(0.16, 1, 0.3, 1), display 300ms allow-discrete, overlay 300ms allow-discrete; }
+    .sp-form select:open::picker(select) { opacity: 1; translate: 0 0; }
+    @starting-style { .sp-form select:open::picker(select) { opacity: 0; translate: 0 -6px; } }
+    .sp-form select option { padding: 10px 12px; border-radius: 8px; font-size: 15px; background: transparent; }
+    .sp-form select option:hover, .sp-form select option:focus-visible { background: var(--field-pop-hover); outline: none; }
+    .sp-form select option { transition: background-color 150ms ease, color 150ms ease; }
+    .sp-form select option:checked { color: var(--brand-pink); font-weight: 600; }
+    .sp-form select option::checkmark { display: none; }
+}
+.sp-form input::placeholder, .sp-form textarea::placeholder { color: var(--field-hint); }
 .sp-form input:focus, .sp-form select:focus, .sp-form textarea:focus { border-bottom-color: var(--brand-pink); }
 .sp-form .sp-wide { grid-column: 1 / -1; }
 .sp-form .btn-neon { justify-self: start; }
@@ -902,7 +929,7 @@ html[data-theme="light"], html[data-theme="light"] body.spaces-face { background
 .sp-consent-notice { margin: 0; font-size: 13px; line-height: 1.6; color: var(--text-muted); text-align: left; }
 .sp-consent-notice a { color: var(--text-secondary); text-decoration: underline; text-underline-offset: 3px; }
 .sp-form .sp-check { flex-direction: row; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.5; color: var(--text-secondary); cursor: pointer; }
-.sp-form .sp-check input { appearance: none; -webkit-appearance: none; flex: none; width: 20px; height: 20px; margin: 1px 0 0; padding: 0; border: 1.5px solid var(--border-color); border-radius: 6px; background: transparent; display: grid; place-items: center; cursor: pointer; transition: background 200ms ease, border-color 200ms ease; }
+.sp-form .sp-check input { appearance: none; -webkit-appearance: none; flex: none; width: 20px; height: 20px; margin: 1px 0 0; padding: 0; border: 1.5px solid var(--field-box); border-radius: 6px; background: var(--field-box-bg); display: grid; place-items: center; cursor: pointer; transition: background 200ms ease, border-color 200ms ease; }
 .sp-form .sp-check input::after { content: ''; width: 10px; height: 6px; border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: translateY(-1px) rotate(-45deg) scale(0); transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1); }
 .sp-form .sp-check input:checked { background: var(--brand-pink); border-color: var(--brand-pink); }
 .sp-form .sp-check input:checked::after { transform: translateY(-1px) rotate(-45deg) scale(1); }
