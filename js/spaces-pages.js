@@ -309,7 +309,7 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
-            }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.ok === true, reason: j.reason, ref: /^PX-[A-Z0-9]{5}$/.test(j.ref || '') ? j.ref : null }; }); })
+            }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.ok === true, reason: j.reason, ref: /^PX-[A-Z0-9]{6}$/.test(j.ref || '') ? j.ref : null }; }); })
                 .catch(function () { return { ok: false }; })
                 .then(function (res) {
                     if (res.ok) return done(res.ref);
