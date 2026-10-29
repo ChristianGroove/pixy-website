@@ -451,7 +451,7 @@
         },
         "ai": {
           "name": "Paquete de IA",
-          "sign": "IA",
+          "sign": "PAQUETE IA",
           "line": "{used} de {total} Respuestas de IA usadas este mes"
         }
       }

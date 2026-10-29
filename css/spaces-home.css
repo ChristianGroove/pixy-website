@@ -274,7 +274,18 @@
 .isl-sign { font: 700 8.5px/1 Inter, system-ui, sans-serif; letter-spacing: 0.08em; fill: var(--isl-sign); }
 .isl-sign-line { stroke: var(--c); stroke-width: 2; stroke-linecap: round; }
 .isl-plate { fill: var(--c); opacity: 0.85; }
-.isl-level { fill: var(--c); opacity: 0.32; transition: d 600ms ease; }
+/* Tanque de cristal del Paquete de IA: el líquido es el uso del mes; el orbe viajero lo llena con su color */
+.isla-stage { --orb-liquid: #38b6e8; --charge: 0; }
+.isl-glass-back { fill: var(--isl-right); opacity: 0.55; stroke: var(--isl-edge); stroke-width: 1; }
+.isl-liquid { fill: color-mix(in srgb, var(--c) calc((1 - var(--charge)) * 100%), var(--orb-liquid)); opacity: calc(0.42 + var(--charge) * 0.3); }
+.isl-liquid-top { fill: color-mix(in srgb, var(--c) calc((1 - var(--charge)) * 100%), var(--orb-liquid)); opacity: calc(0.6 + var(--charge) * 0.35); }
+.isl-liquid-glow { fill: var(--orb-liquid); opacity: calc(var(--charge) * 0.55); filter: blur(10px); }
+.isl-glass { fill: rgba(255, 255, 255, 0.04); stroke: var(--isl-sign); stroke-opacity: 0.35; stroke-width: 1.2; }
+.isl-glass-rim { fill: none; stroke: var(--isl-sign); stroke-opacity: 0.5; stroke-width: 1.4; }
+.isl-glass-ring { fill: none; stroke: var(--isl-sign); stroke-opacity: 0.18; stroke-width: 1; }
+/* Con el tanque lleno, la energía sale por todos los tubos */
+.is-charged .isl-tube { stroke: var(--orb-liquid); opacity: 0.8; animation: isl-flow 700ms linear infinite; }
+.isl-pad[data-pad="ai"] { fill: color-mix(in srgb, var(--isl-pad) 90%, #38b6e8); }
 .isl-alert { fill: #e5484d; }
 .isl-alert-ring { fill: none; stroke: #e5484d; stroke-width: 1.5; opacity: 0.45; transform-box: fill-box; transform-origin: center; }
 .is-live .isl-alert-ring { animation: isl-ring 2.4s ease-out infinite; }
@@ -875,7 +886,6 @@ html[data-theme="light"], html[data-theme="light"] body.spaces-face { background
 .orb-traveler.is-powered .ds-orb-body { animation: orb-power-pulse 1.8s ease-in-out infinite; }
 @keyframes orb-power-halo { 0%, 100% { opacity: 0.65; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }
 @keyframes orb-power-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
-=======
 .spaces-face .ai-act-note { display: block; margin-top: 12px; font-size: var(--sh-small); color: var(--text-muted); }
 
 /* Rendimiento: sin desenfoque de fondo. Detrás hay estrellas animadas y cada desenfoque se recalculaba en

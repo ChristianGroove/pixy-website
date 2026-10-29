@@ -30,7 +30,7 @@
         { id: 'tasks', x: -B, z: -B, w: 5.6, d: 4.4, f: 2, color: '#7c5cff', ac: true },
         { id: 'crm', x: 0, z: -B, w: 6, d: 4.4, f: 2, color: '#e0599b', ac: true },
         { id: 'catalog', x: B, z: -B, w: 5, d: 4.2, f: 1, color: '#8b5cf6' },
-        { id: 'ai', x: -B, z: 0, w: 5.4, d: 5, f: 3, color: '#38b6e8', tank: true },
+        { id: 'ai', x: -B, z: 0, w: 6, d: 5.6, f: 3, color: '#38b6e8', tank: true },
         { id: 'hq', x: 0, z: 0, w: 6, d: 6, f: 3, color: '#f205e2', hq: true },
         { id: 'billing', x: B, z: 0, w: 5, d: 4.4, f: 2, color: '#d9a21b', alert: true },
         { id: 'social', x: -B, z: B, w: 4.8, d: 4, f: 1, color: '#f06aa6' },
@@ -48,7 +48,7 @@
     var lang = function () { return (window.pixyI18n && window.pixyI18n.getCurrentLang()) || 'es'; };
     var fmt = function (n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, lang() === 'en' ? ',' : '.'); };
     var fill = function (s) { return s.replace(/\{(\w+)\}/g, function (_, k) { return fmt(st[k]); }); };
-    var roof = function (l) { return P(l.x, l.z, l.h + (l.tank ? 1.6 : 0)); };
+    var roof = function (l) { return P(l.x, l.z, l.h + (l.tank ? TANK_H : 0)); };
 
     // --- Piezas -----------------------------------------------------------------------------------------------------
     var el = function (tag, attrs, parent) {
@@ -67,25 +67,43 @@
         poly('isl-t ' + (cls || ''), [[a, c, y1], [b, c, y1], [b, e, y1], [a, e, y1]], g);
     }
 
-    /** Cilindro (tanque del Paquete de IA): cuerpo, nivel de uso y tapa. */
+    /** Tanque de cristal del Paquete de IA, abierto arriba: pared del fondo, líquido (uso del mes), brillo y cristal. */
+    var TANK_R = 1.9, TANK_H = 2.6;
     function tank(g, l) {
-        var r = 1.35, h = 1.6, y0 = l.h, base = P(l.x, l.z, y0), top = P(l.x, l.z, y0 + h);
-        var rx = r * S * 1.2247, ry = r * S * 0.7071;
-        var body = function (cls, from, to) {
-            return el('path', { 'class': cls, d: 'M' + (base[0] - rx) + ',' + from + ' L' + (base[0] - rx) + ',' + to + ' A' + rx + ',' + ry + ' 0 0 0 ' + (base[0] + rx) + ',' + to + ' L' + (base[0] + rx) + ',' + from + ' A' + rx + ',' + ry + ' 0 0 1 ' + (base[0] - rx) + ',' + from + ' Z' }, g);
-        };
-        body('isl-l', top[1], base[1]);
-        var level = body('isl-level', top[1], base[1]);
-        level.setAttribute('data-level', '');
-        el('ellipse', { 'class': 'isl-t', cx: top[0], cy: top[1], rx: rx, ry: ry }, g);
+        var y0 = l.h, base = P(l.x, l.z, y0), top = P(l.x, l.z, y0 + TANK_H);
+        var rx = TANK_R * S * 1.2247, ry = TANK_R * S * 0.7071;
         l.tankGeo = { x: base[0], rx: rx, ry: ry, top: top[1], base: base[1] };
+        // Pared del fondo (mitad superior de las elipses) y piso del tanque
+        el('path', { 'class': 'isl-glass-back', d: 'M' + (base[0] - rx) + ',' + base[1] + ' L' + (base[0] - rx) + ',' + top[1] + ' A' + rx + ',' + ry + ' 0 0 1 ' + (base[0] + rx) + ',' + top[1] + ' L' + (base[0] + rx) + ',' + base[1] + ' A' + rx + ',' + ry + ' 0 0 0 ' + (base[0] - rx) + ',' + base[1] + ' Z' }, g);
+        el('path', { 'class': 'isl-liquid-glow', 'data-glow': '' }, g);
+        el('path', { 'class': 'isl-liquid', 'data-level': '' }, g);
+        el('ellipse', { 'class': 'isl-liquid-top', 'data-surface': '', rx: rx, ry: ry, cx: base[0] }, g);
+        // Cristal del frente y borde de la boca
+        el('path', { 'class': 'isl-glass', d: 'M' + (base[0] - rx) + ',' + top[1] + ' L' + (base[0] - rx) + ',' + base[1] + ' A' + rx + ',' + ry + ' 0 0 0 ' + (base[0] + rx) + ',' + base[1] + ' L' + (base[0] + rx) + ',' + top[1] }, g);
+        el('ellipse', { 'class': 'isl-glass-rim', cx: top[0], cy: top[1], rx: rx, ry: ry }, g);
+        // Aros del tanque
+        [0.33, 0.66].forEach(function (k) {
+            var y = base[1] - (base[1] - top[1]) * k;
+            el('path', { 'class': 'isl-glass-ring', d: 'M' + (base[0] - rx) + ',' + y + ' A' + rx + ',' + ry + ' 0 0 0 ' + (base[0] + rx) + ',' + y }, g);
+        });
     }
 
+    // Carga del orbe viajero (0 a 1): llena el tanque con su color y enciende los tubos (js/orb-route.js)
+    var charge = 0, chargeRgb = null;
     function setLevel() {
-        var l = byId.ai, g = l.tankGeo, n = stage.querySelector('[data-level]');
-        if (!g || !n) return;
-        var y = g.base - (g.base - g.top) * Math.min(1, st.used / st.total);
-        n.setAttribute('d', 'M' + (g.x - g.rx) + ',' + y + ' L' + (g.x - g.rx) + ',' + g.base + ' A' + g.rx + ',' + g.ry + ' 0 0 0 ' + (g.x + g.rx) + ',' + g.base + ' L' + (g.x + g.rx) + ',' + y + ' A' + g.rx + ',' + g.ry + ' 0 0 1 ' + (g.x - g.rx) + ',' + y + ' Z');
+        var g = byId.ai.tankGeo;
+        var liquid = stage.querySelector('[data-level]'), glow = stage.querySelector('[data-glow]'), surface = stage.querySelector('[data-surface]');
+        if (!g || !liquid) return;
+        var used = Math.min(1, st.used / st.total);
+        var k = used + (1 - used) * charge * 0.94;
+        var y = g.base - (g.base - g.top) * k;
+        var d = 'M' + (g.x - g.rx) + ',' + y + ' L' + (g.x - g.rx) + ',' + g.base + ' A' + g.rx + ',' + g.ry + ' 0 0 0 ' + (g.x + g.rx) + ',' + g.base + ' L' + (g.x + g.rx) + ',' + y + ' A' + g.rx + ',' + g.ry + ' 0 0 0 ' + (g.x - g.rx) + ',' + y + ' Z';
+        liquid.setAttribute('d', d);
+        glow.setAttribute('d', d);
+        surface.setAttribute('cy', y.toFixed(1));
+        stage.style.setProperty('--charge', charge.toFixed(3));
+        if (chargeRgb) stage.style.setProperty('--orb-liquid', 'rgb(' + chargeRgb.map(Math.round).join(',') + ')');
+        stage.classList.toggle('is-charged', charge > 0.5);
     }
 
     function building(parent, l) {
@@ -103,7 +121,7 @@
                     poly('isl-door', [[a - 0.1, e, 0], [a + 0.74, e, 0], [a + 0.74, e, 1.15], [a - 0.1, e, 1.15]], b);
                     continue;
                 }
-                poly('isl-win' + (Math.random() < 0.14 ? ' is-lit' : ''), [[a, e, y0], [a + 0.64, e, y0], [a + 0.64, e, y1], [a, e, y1]], b);
+                poly('isl-win' + (Math.random() < (l.tank ? 0.4 : 0.14) ? ' is-lit' : ''), [[a, e, y0], [a + 0.64, e, y0], [a + 0.64, e, y1], [a, e, y1]], b);
             }
             for (var j = 0; j < nz; j++) {
                 var c = l.z - l.d / 2 + (j + 0.5) * (l.d / nz) - 0.32;
@@ -131,7 +149,7 @@
             el('circle', { 'class': 'isl-alert', cx: r[0], cy: r[1], r: 3.5 }, b);
         }
         // Zona sensible: la silueta completa del edificio (techo y caras), un poco más amplia
-        var a2 = l.x - l.w / 2, b2 = l.x + l.w / 2, c2 = l.z - l.d / 2, e2 = l.z + l.d / 2, top = l.h + (l.tank ? 1.6 : l.hq ? 0.9 : 0.45);
+        var a2 = l.x - l.w / 2, b2 = l.x + l.w / 2, c2 = l.z - l.d / 2, e2 = l.z + l.d / 2, top = l.h + (l.tank ? TANK_H : l.hq ? 0.9 : 0.45);
         poly('isl-hit', [[a2, c2, top], [b2, c2, top], [b2, c2, 0], [b2, e2, 0], [a2, e2, 0], [a2, e2, top]], g);
     }
 
@@ -358,6 +376,21 @@
         clearTimeout(timer);
         if (v && !reduce) timer = setTimeout(tick, 900);
     }
+
+    // Para el orbe viajero: dónde está la boca del tanque en la ventana y cuánto lo llena
+    window.pixyIsla = {
+        tank: function () {
+            var g = byId.ai.tankGeo;
+            if (!g || !base) return null;
+            var r = base.getBoundingClientRect(), k = r.width / W;
+            return { x: r.left + g.x * k, top: r.top + g.top * k, mid: r.top + (g.top + g.base) / 2 * k, d: g.rx * 2 * k };
+        },
+        setCharge: function (c, rgb) {
+            charge = Math.max(0, Math.min(1, c));
+            chargeRgb = rgb || chargeRgb;
+            setLevel();
+        }
+    };
 
     render();
     if ('IntersectionObserver' in window) {

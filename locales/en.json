@@ -451,7 +451,7 @@
         },
         "ai": {
           "name": "AI pack",
-          "sign": "AI",
+          "sign": "AI PACK",
           "line": "{used} of {total} AI replies used this month"
         }
       }
