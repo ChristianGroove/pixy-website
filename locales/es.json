@@ -265,6 +265,7 @@
       ],
       "subtitle": "Atiende, vende, opera y cobra con una IA que conoce tu negocio.",
       "cta_demo": "Agenda tu demo",
+      "cta_access": "Solicitar acceso",
       "cta_spaces": "Elige tu Space"
     },
     "platform": {
@@ -388,7 +389,7 @@
     },
     "plans": {
       "title": "Eliges tu industria. <span class=\"sh-accent\">Eliges tu ritmo.</span>",
-      "intro": "Tu Space, un nivel y solo los complementos que necesitas. Prueba 14 días gratis, sin tarjeta.",
+      "intro": "Tu Space, un nivel y solo los complementos que necesitas. Abrimos por invitación: solicita acceso.",
       "l1": "Esencial",
       "l1_users": "Hasta 3 usuarios",
       "l1_phrase": "Todo tu negocio, ordenado.",
@@ -561,7 +562,7 @@
       "h1": "Atender con IA no debería costar lo mismo que <span class=\"sh-accent\">contratar a otra persona.</span>",
       "from": "Pixy desde",
       "from_u": "USD al mes.",
-      "trial_l": "Prueba Pixy 14 días gratis, sin tarjeta. Conecta tu WhatsApp y mira a la IA atender a tus clientes desde el primer día.",
+      "access_l": "Abrimos Pixy por invitación. Solicita acceso y te acompañamos a configurar tu Space.",
       "s_agencias": "Agencias",
       "s_tiendas": "Tiendas",
       "s_inmobiliaria": "Inmobiliaria",
@@ -702,8 +703,8 @@
       "faq_a0": "Cada vez que la IA responde o redacta algo cuenta 1. Un audio cuenta 1 por minuto, una imagen creada cuenta 5 y un contrato completo cuenta 3. La ayuda de Pixy no cuenta, y cuando la IA decide que un mensaje no necesita respuesta, tampoco.",
       "faq_q1": "¿Qué pasa si se acaba mi bolsa?",
       "faq_a1": "Te avisamos al 80 % y al 100 %. Puedes sumar un paquete de Respuestas de IA o subir de nivel cuando quieras. Si se acaba la bolsa de IA, lo último que se apaga es el agente que atiende a tus clientes.",
-      "faq_q2": "¿Cómo funciona la prueba gratis?",
-      "faq_a2": "Son 14 días gratis, sin tarjeta, con todo el nivel Pro. Para que la IA responda a tus clientes reales te pedimos una tarjeta, sin cobrar nada hasta el día 15. Si conectas tu WhatsApp y cargas la información de tu negocio, ganas 7 días más.",
+      "faq_q2": "¿Cómo empiezo?",
+      "faq_a2": "Solicitas acceso, te mostramos Pixy con tu negocio y te acompañamos a configurarlo. Abrimos por invitación para atender bien a cada empresa.",
       "faq_q3": "¿Puedo cambiar de nivel?",
       "faq_a3": "Sí. Subes o bajas de nivel con un clic desde tu cuenta, cuando lo necesites.",
       "faq_q4": "¿Cómo funciona el pago anual?",
@@ -714,9 +715,8 @@
       "partner_d": "Con el programa de partners ofreces Pixy a tus clientes con tu marca, a tu precio y con tu implementación.",
       "partner_l": "Conocer el programa de partners",
       "close_t": "Empieza hoy. <span class=\"sh-accent\">La IA atiende desde el primer día.</span>",
-      "close_s": "14 días gratis, sin tarjeta.",
-      "trial": "Prueba 14 días gratis",
-      "close_demo": "Agenda tu demo"
+      "close_s": "Solicita acceso y te acompañamos desde el primer día.",
+      "access": "Solicitar acceso"
     },
     "plans": {
       "b_m": "Mensual",
@@ -735,7 +735,7 @@
       "k_wa0": "1.000 mensajes de WhatsApp de plantilla al mes",
       "k_social0": "300 acciones automáticas en redes al mes",
       "k_support_help": "Centro de ayuda",
-      "trial": "Prueba 14 días gratis",
+      "access": "Solicitar acceso",
       "l1": "Pro",
       "l1_p": "Para equipos que venden y atienden todos los días.",
       "k_users1": "10 usuarios del panel",
@@ -801,7 +801,7 @@
       "inc_edu_0": "Gestión académica",
       "inc_edu_1": "Asistencia",
       "inc_edu_2": "Cobros a familias",
-      "trial_l": "Prueba Pixy 14 días gratis, sin tarjeta. Conecta tu WhatsApp y mira a la IA atender a tus clientes desde el primer día.",
+      "access_l": "Abrimos Pixy por invitación. Solicita acceso y te acompañamos a configurar tu Space.",
       "compare": "Comparar niveles y complementos",
       "e_more": "¿Varias sedes y mucho volumen? Plan Empresa"
     },
@@ -924,7 +924,7 @@
     },
     "space_resto": {
       "sub": "De la mesa a la cocina y a la caja, sin un papel.",
-      "cta": "Quiero ver este Space",
+      "access": "Solicitar acceso",
       "cta2": "Ver planes",
       "mods_t": "Tu restaurante, de la mesa a la caja.",
       "mods_i": "Además del núcleo de Pixy: bandeja, IA, pipeline y cobros.",
@@ -945,7 +945,7 @@
     },
     "agency": {
       "sub": "Clientes, proyectos, cobros y resultados, conectados.",
-      "cta": "Quiero ver este Space",
+      "access": "Solicitar acceso",
       "cta2": "Ver planes",
       "mods_t": "Todo lo de tu agencia, en un Space.",
       "mods_i": "Además del núcleo de Pixy: bandeja, IA, pipeline y cobros.",
@@ -975,7 +975,7 @@
     },
     "space_tiendas": {
       "sub": "Tu tienda en línea lista hoy y cada comentario convertido en venta.",
-      "cta": "Quiero ver este Space",
+      "access": "Solicitar acceso",
       "cta2": "Ver planes",
       "mods_t": "Tu tienda, del comentario al pago.",
       "mods_i": "Además del núcleo de Pixy: bandeja, IA, pipeline y cobros.",
@@ -996,7 +996,7 @@
     },
     "space_inmobiliaria": {
       "sub": "Tu inventario publicado con tu marca y tus arriendos liquidados en un clic.",
-      "cta": "Quiero ver este Space",
+      "access": "Solicitar acceso",
       "cta2": "Ver planes",
       "mods_t": "Tu inmobiliaria, del inventario a la liquidación.",
       "mods_i": "Además del núcleo de Pixy: bandeja, IA, pipeline y cobros.",
@@ -1015,7 +1015,7 @@
     },
     "space_edu": {
       "sub": "El colegio entero en una plataforma: académico, familias, convivencia y pensiones.",
-      "cta": "Quiero ver este Space",
+      "access": "Solicitar acceso",
       "cta2": "Ver planes",
       "mods_t": "Tu colegio, de la matrícula al boletín.",
       "mods_i": "Además del núcleo de Pixy: bandeja, IA, pipeline y cobros.",
@@ -1036,7 +1036,7 @@
     },
     "space_saas": {
       "sub": "Usuarios, planes, cobro recurrente y soporte, conectados.",
-      "cta": "Quiero ver este Space",
+      "access": "Solicitar acceso",
       "cta2": "Ver planes",
       "mods_t": "Tu software, del registro a la renovación.",
       "mods_i": "Además del núcleo de Pixy: bandeja, IA, pipeline y cobros.",
@@ -1353,9 +1353,13 @@
     "f_ok_t": "Listo, recibimos tu solicitud.",
     "f_ok_d": "Te escribimos a {email} muy pronto.",
     "f_ok_wa": "¿Prefieres hablar ya? Escríbenos por WhatsApp",
-    "f_err": "No pudimos enviarlo. Puedes enviarlo desde tu correo con un clic.",
+    "f_err": "No pudimos enviarlo ahora. Escríbenos a contact@pixy.com.co o por WhatsApp.",
     "f_err_b": "Enviar desde mi correo",
     "f_wait": "Estamos verificando que no eres un robot. Vuelve a enviarlo en unos segundos.",
+    "f_consent": "Marca la autorización de datos para poder enviar tu solicitud.",
+    "f_invalid": "Revisa tu nombre y tu correo e inténtalo de nuevo.",
+    "f_err_wa": "WhatsApp",
+    "demo_try": "Prueba y enamórate",
     "col_product": "Producto",
     "col_company": "Pixy",
     "col_legal": "Legal",

@@ -307,12 +307,16 @@ const INCLUDES = {
   resto: [["Menú digital", "Digital menu"], ["Pedidos", "Orders"], ["Mesas y salones", "Tables and floors"], ["Marketing, facturación y pagos (opcionales)", "Marketing, invoicing and payments (optional)"]],
   edu: [["Gestión académica", "Academic management"], ["Asistencia", "Attendance"], ["Cobros a familias", "Family billing"]],
 };
-const TRIAL = [`Prueba ${PR.trialDays} días gratis`, `Try it free for ${PR.trialDays} days`];
-const TRIAL_LINE = [
-  `Prueba Pixy ${PR.trialDays} días gratis, sin tarjeta. Conecta tu WhatsApp y mira a la IA atender a tus clientes desde el primer día.`,
-  `Try Pixy free for ${PR.trialDays} days, no card needed. Connect your WhatsApp and watch the AI serve your customers from day one.`,
+// Piloto por invitación: ninguna llamada ofrece prueba gratis ni lleva al registro; la acción es «Solicitar acceso»
+// (formulario Demo de contact.html). docs/comercial/prompt-sitio-demo-y-leads.md §3 de la plataforma.
+const ACCESS = ["Solicitar acceso", "Request access"];
+const ACCESS_LINE = [
+  "Abrimos Pixy por invitación. Solicita acceso y te acompañamos a configurar tu Space.",
+  "We're opening Pixy by invitation. Request access and we'll help you set up your Space.",
 ];
-const trialLink = (cls) => t("a", "trial", TRIAL[0], TRIAL[1], cls, `href="${PR.trialUrl}" rel="noopener"`);
+const accessLink = (cls, query = "") => t("a", "access", ACCESS[0], ACCESS[1], cls, `href="contact.html${query}" data-warp-click="hop"`);
+// Id de cada Space en el bloque demo de content/pixy/catalogo.json (lo lee js/main.js para el botón del demo)
+const DEMO_ID = { resto: "restaurantes", saas: "startups" };
 
 /** Datos que lee js/spaces-pages.js para cambiar de Space, de forma de pago y la calculadora de Edu. */
 const pricingData = () => `
@@ -351,7 +355,7 @@ function priceCard(i, sp) {
                     <p class="pr-price"><span class="pr-amount" data-amount="${i}">${num(s.prices[i])}</span><span class="pr-unit">${t("span", "u_m", "USD al mes", "USD a month", "pr-noedu")}${t("span", "u_site", "USD al mes por sede", "USD a month per campus", "pr-edu")}</span></p>
                     <p class="sh-small pr-bill">${t("span", "bill_m", "Pago mensual", "Billed monthly", "pr-m")}<span class="pr-y"><span data-total="${i}">${num(s.prices[i] * PR.annualMonths)}</span> ${t("span", "bill_y", "USD al año: dos meses gratis", "USD a year: two months free")}</span></p>
                     <ul class="pr-keys">${keys.map(([k, es, en, cls = ""]) => t("li", k, es, en, cls)).join("")}</ul>
-                    ${trialLink(i === 1 ? "btn-neon" : "sh-link")}
+                    ${accessLink(i === 1 ? "btn-neon" : "sh-link")}
                 </article>`);
 }
 
@@ -421,7 +425,7 @@ ADDON_NAMES.panelUser = ["Usuario adicional del panel", "Extra panel user"];
 const FAQ = [
   ["¿Qué es una Respuesta de IA?", "What is an AI reply?", "Cada vez que la IA responde o redacta algo cuenta 1. Un audio cuenta 1 por minuto, una imagen creada cuenta 5 y un contrato completo cuenta 3. La ayuda de Pixy no cuenta, y cuando la IA decide que un mensaje no necesita respuesta, tampoco.", "Every time the AI replies or drafts something counts as 1. Audio counts 1 per minute, a generated image counts 5 and a full contract counts 3. Pixy's help doesn't count, and neither does a message the AI decides needs no reply."],
   ["¿Qué pasa si se acaba mi bolsa?", "What happens if I run out?", "Te avisamos al 80 % y al 100 %. Puedes sumar un paquete de Respuestas de IA o subir de nivel cuando quieras. Si se acaba la bolsa de IA, lo último que se apaga es el agente que atiende a tus clientes.", "We let you know at 80% and at 100%. You can add an AI reply pack or move up a tier whenever you want. If your AI allowance runs out, the agent that serves your customers is the last thing to switch off."],
-  ["¿Cómo funciona la prueba gratis?", "How does the free trial work?", `Son ${PR.trialDays} días gratis, sin tarjeta, con todo el nivel Pro. Para que la IA responda a tus clientes reales te pedimos una tarjeta, sin cobrar nada hasta el día ${PR.trialDays + 1}. Si conectas tu WhatsApp y cargas la información de tu negocio, ganas 7 días más.`, `It's ${PR.trialDays} days free, no card needed, with the full Pro tier. For the AI to reply to your real customers we ask for a card, with no charge until day ${PR.trialDays + 1}. If you connect your WhatsApp and load your business information, you get 7 more days.`],
+  ["¿Cómo empiezo?", "How do I get started?", "Solicitas acceso, te mostramos Pixy con tu negocio y te acompañamos a configurarlo. Abrimos por invitación para atender bien a cada empresa.", "You request access, we show you Pixy with your business and help you set it up. We're opening by invitation so we can serve each company well."],
   ["¿Puedo cambiar de nivel?", "Can I change tiers?", "Sí. Subes o bajas de nivel con un clic desde tu cuenta, cuando lo necesites.", "Yes. Move up or down a tier in one click from your account, whenever you need to."],
   ["¿Cómo funciona el pago anual?", "How does annual billing work?", `Pagas ${PR.annualMonths} meses y usas 12: dos meses gratis.`, `You pay for ${PR.annualMonths} months and use 12: two months free.`],
   ["¿WhatsApp cobra aparte?", "Does WhatsApp charge separately?", "Sí. WhatsApp cobra aparte su tarifa por conversación. En tu plan solo cuentan los mensajes de plantilla que tu negocio inicia, como campañas y recordatorios; responder a un cliente que te escribió no cuenta.", "Yes. WhatsApp charges its own per-conversation fee. Your plan only counts the template messages your business starts, such as campaigns and reminders; replying to a customer who wrote to you doesn't count."],
@@ -432,14 +436,14 @@ page = "pricing";
 pages.push({
   file: "pricing.html",
   title: "Planes | Pixy",
-  description: "Esencial, Pro y Total para cada Space, con IA incluida y 14 días gratis.",
+  description: "Esencial, Pro y Total para cada Space, con IA incluida.",
   navActive: "plans",
   body:
     `
     <div class="pr-scope" data-space="agencias" data-billing="m">` +
     hero(
       t("h1", "h1", "Atender con IA no debería costar lo mismo que <span class=\"sh-accent\">contratar a otra persona.</span>", "Serving with AI shouldn't cost the same as <span class=\"sh-accent\">hiring another person.</span>", "sh-h1"),
-      `<p class="sh-body sp-sub">${t("span", "from", "Pixy desde", "Pixy from")} <span data-amount="0">${num(PR.spaces.agencias.prices[0])}</span> ${t("span", "from_u", "USD al mes.", "USD a month.")} ${t("span", "trial_l", TRIAL_LINE[0], TRIAL_LINE[1])}</p>`,
+      `<p class="sh-body sp-sub">${t("span", "from", "Pixy desde", "Pixy from")} <span data-amount="0">${num(PR.spaces.agencias.prices[0])}</span> ${t("span", "from_u", "USD al mes.", "USD a month.")} ${t("span", "access_l", ACCESS_LINE[0], ACCESS_LINE[1])}</p>`,
     ) +
     `
     <section class="sh-section pr-levels" data-no-reveal>
@@ -532,8 +536,8 @@ ${COMPARE.map(
     <section class="sh-section sh-final">
         <div class="container">
             ${t("h2", "close_t", "Empieza hoy. <span class=\"sh-accent\">La IA atiende desde el primer día.</span>", "Start today. <span class=\"sh-accent\">The AI serves from day one.</span>", "sh-h2")}
-            ${t("p", "close_s", `${PR.trialDays} días gratis, sin tarjeta.`, `${PR.trialDays} days free, no card needed.`, "sh-body")}
-            <div class="sp-actions pr-final-actions">${trialLink("btn-neon")}${t("a", "close_demo", "Agenda tu demo", "Book a demo", "sh-link", 'href="contact.html" data-warp-click="departure"')}</div>
+            ${t("p", "close_s", "Solicita acceso y te acompañamos desde el primer día.", "Request access and we'll be with you from day one.", "sh-body")}
+            <div class="sp-actions pr-final-actions">${accessLink("btn-neon")}</div>
         </div>
     </section>
     </div>` +
@@ -737,7 +741,7 @@ for (const s of SPACES) {
                 <h1 class="sh-h1">${s.name}</h1>
                 ${t("p", "sub", s.p[0], s.p[1], "sh-body sp-sub")}
                 <div class="sp-actions">
-                    ${t("a", "cta", "Quiero ver este Space", "I want to see this Space", "btn-neon", `href="contact.html?space=${s.id}" data-warp-click="hop"`)}
+                    ${t("a", "access", ACCESS[0], ACCESS[1], "btn-neon", `href="contact.html?space=${s.id}" data-warp-click="hop" data-demo-cta="${DEMO_ID[s.id] ?? s.id}"`)}
                     ${t("a", "cta2", "Ver planes", "See plans", "sh-link", 'href="#planes"')}
                 </div>
             </div>
@@ -752,7 +756,7 @@ for (const s of SPACES) {
             <div class="pr-head">
                 <div>
                     ${t("h2", "plans_t", `Planes de ${s.name}`, `${s.name} plans`, "sh-h2")}
-                    ${shared(() => t("p", "trial_l", TRIAL_LINE[0], TRIAL_LINE[1], "sh-body"))}
+                    ${shared(() => t("p", "access_l", ACCESS_LINE[0], ACCESS_LINE[1], "sh-body"))}
                 </div>
                 ${billingToggle()}
             </div>

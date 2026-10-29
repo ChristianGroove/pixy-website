@@ -33,7 +33,7 @@
             if (window.pixyModels) return start();
             window.addEventListener('pixy:models-ready', start, { once: true });
             var s = document.createElement('script');
-            s.src = 'js/space-models.js?v=ceb04de921';
+            s.src = 'js/space-models.js?v=7e2a41c2ce';
             s.async = true;
             document.body.appendChild(s);
         };
@@ -286,22 +286,23 @@
                     // El token de Turnstile sirve una sola vez: uno nuevo para el próximo intento
                     if (ts && widget !== null) ts.reset(widget);
                     if (send) { send.disabled = false; send.textContent = label; }
-                    // Cloudflare aún no termina de verificar: basta con volver a enviar
-                    if (res.reason === 'challenge') {
-                        error = document.createElement('p');
-                        error.className = 'sp-form-error sp-wide';
-                        error.setAttribute('role', 'alert');
-                        error.textContent = T('f_wait', 'Estamos verificando que no eres un robot. Vuelve a enviarlo en unos segundos.');
-                        return send.parentNode.insertBefore(error, send.nextSibling);
-                    }
-                    // No llegó: mismo mensaje listo para enviarlo desde el correo de la persona
+                    // Lo que la persona puede corregir: verificación pendiente, autorización o nombre y correo
+                    var fix = { challenge: ['f_wait', 'Estamos verificando que no eres un robot. Vuelve a enviarlo en unos segundos.'],
+                        no_consent: ['f_consent', 'Marca la autorización de datos para poder enviar tu solicitud.'],
+                        invalid: ['f_invalid', 'Revisa tu nombre y tu correo e inténtalo de nuevo.'] }[res.reason];
                     error = document.createElement('p');
                     error.className = 'sp-form-error sp-wide';
                     error.setAttribute('role', 'alert');
-                    error.innerHTML = '<span></span> <button type="button" class="sh-link"></button>';
-                    error.firstChild.textContent = T('f_err', 'No pudimos enviarlo. Puedes enviarlo desde tu correo con un clic.');
-                    error.lastChild.textContent = T('f_err_b', 'Enviar desde mi correo');
-                    error.lastChild.addEventListener('click', byMail);
+                    if (fix) {
+                        error.textContent = T(fix[0], fix[1]);
+                        return send.parentNode.insertBefore(error, send.nextSibling);
+                    }
+                    // No llegó (límite, plataforma caída o sin red): correo con el mensaje listo, o WhatsApp
+                    error.innerHTML = '<span></span> <button type="button" class="sh-link"></button> <a class="sh-link" target="_blank" rel="noopener" href="https://wa.me/573504076800"></a>';
+                    error.children[0].textContent = T('f_err', 'No pudimos enviarlo ahora. Escríbenos a contact@pixy.com.co o por WhatsApp.');
+                    error.children[1].textContent = T('f_err_b', 'Enviar desde mi correo');
+                    error.children[2].textContent = T('f_err_wa', 'WhatsApp');
+                    error.children[1].addEventListener('click', byMail);
                     send.parentNode.insertBefore(error, send.nextSibling);
                 });
         });

@@ -265,6 +265,7 @@
       ],
       "subtitle": "Serve, sell, operate and get paid with an AI that knows your business.",
       "cta_demo": "Book a demo",
+      "cta_access": "Request access",
       "cta_spaces": "Choose your Space"
     },
     "platform": {
@@ -388,7 +389,7 @@
     },
     "plans": {
       "title": "Choose your industry. <span class=\"sh-accent\">Choose your pace.</span>",
-      "intro": "Your Space, a tier and only the add-ons you need. Try it free for 14 days, no card needed.",
+      "intro": "Your Space, a tier and only the add-ons you need. We're opening by invitation: request access.",
       "l1": "Essential",
       "l1_users": "Up to 3 users",
       "l1_phrase": "Your whole business, organized.",
@@ -561,7 +562,7 @@
       "h1": "Serving with AI shouldn't cost the same as <span class=\"sh-accent\">hiring another person.</span>",
       "from": "Pixy from",
       "from_u": "USD a month.",
-      "trial_l": "Try Pixy free for 14 days, no card needed. Connect your WhatsApp and watch the AI serve your customers from day one.",
+      "access_l": "We're opening Pixy by invitation. Request access and we'll help you set up your Space.",
       "s_agencias": "Agencies",
       "s_tiendas": "Stores",
       "s_inmobiliaria": "Real estate",
@@ -702,8 +703,8 @@
       "faq_a0": "Every time the AI replies or drafts something counts as 1. Audio counts 1 per minute, a generated image counts 5 and a full contract counts 3. Pixy's help doesn't count, and neither does a message the AI decides needs no reply.",
       "faq_q1": "What happens if I run out?",
       "faq_a1": "We let you know at 80% and at 100%. You can add an AI reply pack or move up a tier whenever you want. If your AI allowance runs out, the agent that serves your customers is the last thing to switch off.",
-      "faq_q2": "How does the free trial work?",
-      "faq_a2": "It's 14 days free, no card needed, with the full Pro tier. For the AI to reply to your real customers we ask for a card, with no charge until day 15. If you connect your WhatsApp and load your business information, you get 7 more days.",
+      "faq_q2": "How do I get started?",
+      "faq_a2": "You request access, we show you Pixy with your business and help you set it up. We're opening by invitation so we can serve each company well.",
       "faq_q3": "Can I change tiers?",
       "faq_a3": "Yes. Move up or down a tier in one click from your account, whenever you need to.",
       "faq_q4": "How does annual billing work?",
@@ -714,9 +715,8 @@
       "partner_d": "With the partner program you offer Pixy to your clients under your brand, at your price and with your own setup.",
       "partner_l": "Explore the partner program",
       "close_t": "Start today. <span class=\"sh-accent\">The AI serves from day one.</span>",
-      "close_s": "14 days free, no card needed.",
-      "trial": "Try it free for 14 days",
-      "close_demo": "Book a demo"
+      "close_s": "Request access and we'll be with you from day one.",
+      "access": "Request access"
     },
     "plans": {
       "b_m": "Monthly",
@@ -735,7 +735,7 @@
       "k_wa0": "1,000 WhatsApp template messages a month",
       "k_social0": "300 automatic social actions a month",
       "k_support_help": "Help center",
-      "trial": "Try it free for 14 days",
+      "access": "Request access",
       "l1": "Pro",
       "l1_p": "For teams that sell and serve every day.",
       "k_users1": "10 panel users",
@@ -801,7 +801,7 @@
       "inc_edu_0": "Academic management",
       "inc_edu_1": "Attendance",
       "inc_edu_2": "Family billing",
-      "trial_l": "Try Pixy free for 14 days, no card needed. Connect your WhatsApp and watch the AI serve your customers from day one.",
+      "access_l": "We're opening Pixy by invitation. Request access and we'll help you set up your Space.",
       "compare": "Compare tiers and add-ons",
       "e_more": "Several locations and high volume? Enterprise plan"
     },
@@ -924,7 +924,7 @@
     },
     "space_resto": {
       "sub": "From table to kitchen to checkout, paper-free.",
-      "cta": "I want to see this Space",
+      "access": "Request access",
       "cta2": "See plans",
       "mods_t": "Your restaurant, from table to checkout.",
       "mods_i": "On top of the Pixy core: inbox, AI, pipeline and billing.",
@@ -945,7 +945,7 @@
     },
     "agency": {
       "sub": "Clients, projects, billing and results, connected.",
-      "cta": "I want to see this Space",
+      "access": "Request access",
       "cta2": "See plans",
       "mods_t": "Everything your agency runs, in one Space.",
       "mods_i": "On top of the Pixy core: inbox, AI, pipeline and billing.",
@@ -975,7 +975,7 @@
     },
     "space_tiendas": {
       "sub": "Your online store ready today and every comment turned into a sale.",
-      "cta": "I want to see this Space",
+      "access": "Request access",
       "cta2": "See plans",
       "mods_t": "Your store, from comment to payment.",
       "mods_i": "On top of the Pixy core: inbox, AI, pipeline and billing.",
@@ -996,7 +996,7 @@
     },
     "space_inmobiliaria": {
       "sub": "Your listings published under your brand and your rentals settled in one click.",
-      "cta": "I want to see this Space",
+      "access": "Request access",
       "cta2": "See plans",
       "mods_t": "Your brokerage, from listings to settlements.",
       "mods_i": "On top of the Pixy core: inbox, AI, pipeline and billing.",
@@ -1015,7 +1015,7 @@
     },
     "space_edu": {
       "sub": "The whole school on one platform: academics, families, conduct and tuition.",
-      "cta": "I want to see this Space",
+      "access": "Request access",
       "cta2": "See plans",
       "mods_t": "Your school, from enrollment to report card.",
       "mods_i": "On top of the Pixy core: inbox, AI, pipeline and billing.",
@@ -1036,7 +1036,7 @@
     },
     "space_saas": {
       "sub": "Users, plans, recurring billing and support, connected.",
-      "cta": "I want to see this Space",
+      "access": "Request access",
       "cta2": "See plans",
       "mods_t": "Your software, from sign-up to renewal.",
       "mods_i": "On top of the Pixy core: inbox, AI, pipeline and billing.",
@@ -1353,9 +1353,13 @@
     "f_ok_t": "Done, we got your request.",
     "f_ok_d": "We will write to {email} very soon.",
     "f_ok_wa": "Rather talk now? Message us on WhatsApp",
-    "f_err": "We couldn't send it. You can send it from your email in one click.",
+    "f_err": "We couldn't send it right now. Write to us at contact@pixy.com.co or on WhatsApp.",
     "f_err_b": "Send from my email",
     "f_wait": "We are checking that you are not a robot. Send it again in a few seconds.",
+    "f_consent": "Check the data authorization to send your request.",
+    "f_invalid": "Check your name and email and try again.",
+    "f_err_wa": "WhatsApp",
+    "demo_try": "Try it and fall in love",
     "col_product": "Product",
     "col_company": "Pixy",
     "col_legal": "Legal",

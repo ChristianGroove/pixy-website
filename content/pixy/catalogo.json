@@ -1,0 +1,16 @@
+{
+  "demo": {
+    "nombre": "Prueba y enamórate",
+    "descripcion": "Recorre tu Space con datos de ejemplo, ponle tu marca y mira a la IA atender. Sin cuenta y sin tarjeta.",
+    "activo": false,
+    "url": "https://demo.pixy.com.co/prueba",
+    "spaces": { "agencias": false, "tiendas": false, "inmobiliaria": false, "startups": false, "restaurantes": false, "edu": false },
+    "respaldo": "Si el demo no está disponible, muestra la vitrina del Space y el formulario de acceso."
+  },
+  "formularios": {
+    "url": "https://app.pixy.com.co/api/public/site-lead",
+    "politica": "1.0",
+    "tipos": ["Demo", "Demo vivo", "Partners", "Pixy Studio", "Contacto"],
+    "respaldo": { "correo": "contact@pixy.com.co", "whatsapp": "+573504076800" }
+  }
+}

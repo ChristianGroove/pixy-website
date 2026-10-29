@@ -847,3 +847,27 @@ function initSpacesCarousel() {
 }
 
 pixyBoot();
+
+// Botón del demo «Prueba y enamórate» (bloque demo de content/pixy/catalogo.json, que llega por PR desde la
+// plataforma). El HTML trae «Solicitar acceso», lo correcto con el demo apagado; solo si demo.activo y el Space
+// (data-demo-cta; vacío en la portada) están en true pasa a ser un enlace normal al demo. Nada de iframes.
+document.addEventListener('DOMContentLoaded', () => {
+    const ctas = document.querySelectorAll('[data-demo-cta]');
+    if (!ctas.length) return;
+    const main = document.querySelector('script[src*="js/main.js"]');
+    const base = main ? main.getAttribute('src').replace(/js\/main\.js.*$/, '') : '';
+    fetch(base + 'content/pixy/catalogo.json', { cache: 'no-cache' })
+        .then((r) => (r.ok ? r.json() : null))
+        .then((catalog) => {
+            const demo = catalog && catalog.demo;
+            if (!demo || demo.activo !== true || !/^https:\/\/demo\.pixy\.com\.co\//.test(demo.url || '')) return;
+            ctas.forEach((a) => {
+                const id = a.getAttribute('data-demo-cta');
+                if (id && !(demo.spaces && demo.spaces[id] === true)) return;
+                a.href = demo.url + (id ? '?space=' + encodeURIComponent(id) : '');
+                a.setAttribute('data-i18n', 'chrome.demo_try');
+                a.textContent = (window.pixyI18n && window.pixyI18n.t('chrome.demo_try')) || demo.nombre;
+            });
+        })
+        .catch(() => {});
+});
