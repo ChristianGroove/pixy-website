@@ -35,7 +35,8 @@ const FOOT = index.slice(index.indexOf("    <!-- Footer -->"));
 function shell({ file, title, description, navActive, body }) {
   const nav = spacesNav("", navActive);
   const foot = FOOT.replace(
-    /    <!-- Portada de Spaces[\s\S]*?<script src="js\/spaces-ai.js"><\/script>/,
+    // Los scripts propios de la portada (spaces-home, spaces-ai y el orbe viajero) se cambian por el de estas páginas
+    /    <!-- Portada de Spaces[\s\S]*?<script src="js\/(spaces-ai|orb-route).js"><\/script>(?![\s\S]*<script src="js\/orb-route.js">)/,
     '    <!-- Páginas de Spaces: catálogo con modelo 3D, planes, listas y formulario -->\n    <script src="js/spaces-pages.js"></script>',
   );
   const head = `<!DOCTYPE html>
