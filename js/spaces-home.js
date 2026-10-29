@@ -78,7 +78,7 @@
             if (window.pixyModels) return start();
             window.addEventListener('pixy:models-ready', start, { once: true });
             var s = document.createElement('script');
-            s.src = 'js/space-models.js';
+            s.src = 'js/space-models.js?v=754bbf80db';
             s.async = true;
             document.body.appendChild(s);
         };

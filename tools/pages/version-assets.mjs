@@ -19,6 +19,15 @@ function pages(dir = root) {
 }
 
 export function versionAssets() {
+  // Primero, los paquetes que se cargan desde JavaScript (el objeto 3D): su versión va dentro del script que
+  // los carga, y luego ese script recibe su propia versión en las páginas
+  const models = hash(readFileSync(join(root, "js", "space-models.js")));
+  for (const loader of ["spaces-home.js", "spaces-pages.js"]) {
+    const file = join(root, "js", loader);
+    const src = readFileSync(file, "utf8");
+    const out = src.replace(/(['"])js\/space-models\.js(?:\?v=\w+)?\1/g, `$1js/space-models.js?v=${models}$1`);
+    if (out !== src) writeFileSync(file, out, "utf8");
+  }
   const cache = {};
   const v = (file) => (cache[file] ??= existsSync(file) ? hash(readFileSync(file)) : null);
   const locales = hash(Buffer.concat(["es", "en"].map((l) => readFileSync(join(root, "locales", `${l}.json`)))));
