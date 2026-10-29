@@ -1355,6 +1355,7 @@
     "f_ok_wa": "Rather talk now? Message us on WhatsApp",
     "f_err": "We couldn't send it. You can send it from your email in one click.",
     "f_err_b": "Send from my email",
+    "f_wait": "We are checking that you are not a robot. Send it again in a few seconds.",
     "col_product": "Product",
     "col_company": "Pixy",
     "col_legal": "Legal",

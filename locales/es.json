@@ -1355,6 +1355,7 @@
     "f_ok_wa": "¿Prefieres hablar ya? Escríbenos por WhatsApp",
     "f_err": "No pudimos enviarlo. Puedes enviarlo desde tu correo con un clic.",
     "f_err_b": "Enviar desde mi correo",
+    "f_wait": "Estamos verificando que no eres un robot. Vuelve a enviarlo en unos segundos.",
     "col_product": "Producto",
     "col_company": "Pixy",
     "col_legal": "Legal",

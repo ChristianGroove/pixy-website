@@ -149,6 +149,22 @@
     }
 
     // --- Formularios: envían la solicitud y confirman en la página --------------------------------------
+    // Verificación de Cloudflare Turnstile (widget «pixy-sitio-y-demo»): la entrada de leads rechaza sin su token.
+    // La clave de sitio es pública; la secreta vive solo en la plataforma. Solo carga en páginas con formulario.
+    var TURNSTILE_KEY = window.pixyTurnstileKey || '0x4AAAAAAFrbwsCNF2t_ZQeS';
+    var turnstileReady = null;
+    var loadTurnstile = function () {
+        if (!turnstileReady) turnstileReady = new Promise(function (resolve, reject) {
+            window.pixyTurnstileLoaded = function () { resolve(window.turnstile); };
+            var s = document.createElement('script');
+            s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=pixyTurnstileLoaded';
+            s.async = true;
+            s.onerror = reject;
+            document.head.appendChild(s);
+        });
+        return turnstileReady;
+    };
+
     document.querySelectorAll('.sp-form').forEach(function (form) {
         // Un parámetro de la URL con el nombre de un campo lo preselecciona (?space=resto, ?paquete=debut)
         var params = new URLSearchParams(location.search);
@@ -176,6 +192,25 @@
         form.appendChild(trap);
         // Desde cuándo está el formulario en pantalla: un envío en menos de 3 s es de un robot
         var shownAt = Date.now();
+        // Turnstile antes del botón: invisible salvo que Cloudflare necesite que la persona lo toque
+        var ts = null;
+        var widget = null;
+        var box = document.createElement('div');
+        box.className = 'sp-turnstile sp-wide';
+        if (send) send.parentNode.insertBefore(box, send);
+        loadTurnstile().then(function (api) {
+            ts = api;
+            widget = api.render(box, {
+                sitekey: TURNSTILE_KEY,
+                action: 'site-lead',
+                'response-field': false,
+                appearance: 'interaction-only',
+                size: 'flexible',
+                language: lang(),
+                theme: document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark'
+            });
+        }).catch(function () {});
+        var token = function () { return ts && widget !== null ? ts.getResponse(widget) || '' : ''; };
 
         var build = function () {
             var en = lang() === 'en';
@@ -237,18 +272,29 @@
                 page: location.origin + location.pathname,
                 lang: lang(),
                 trap: trap.value,
-                elapsed_ms: Date.now() - shownAt
+                elapsed_ms: Date.now() - shownAt,
+                turnstile_token: token()
             };
             fetch(window.pixyLeadsUrl || 'https://app.pixy.com.co/api/public/site-lead', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
-            }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return r.ok && j.ok === true; }); })
-                .catch(function () { return false; })
-                .then(function (ok) {
-                    if (ok) return done();
-                    // No llegó: mismo mensaje listo para enviarlo desde el correo de la persona
+            }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.ok === true, reason: j.reason }; }); })
+                .catch(function () { return { ok: false }; })
+                .then(function (res) {
+                    if (res.ok) return done();
+                    // El token de Turnstile sirve una sola vez: uno nuevo para el próximo intento
+                    if (ts && widget !== null) ts.reset(widget);
                     if (send) { send.disabled = false; send.textContent = label; }
+                    // Cloudflare aún no termina de verificar: basta con volver a enviar
+                    if (res.reason === 'challenge') {
+                        error = document.createElement('p');
+                        error.className = 'sp-form-error sp-wide';
+                        error.setAttribute('role', 'alert');
+                        error.textContent = T('f_wait', 'Estamos verificando que no eres un robot. Vuelve a enviarlo en unos segundos.');
+                        return send.parentNode.insertBefore(error, send.nextSibling);
+                    }
+                    // No llegó: mismo mensaje listo para enviarlo desde el correo de la persona
                     error = document.createElement('p');
                     error.className = 'sp-form-error sp-wide';
                     error.setAttribute('role', 'alert');
