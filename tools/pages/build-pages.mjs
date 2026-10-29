@@ -5,7 +5,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { spacesNav, withPageEnd } from "./chrome.mjs";
+import { spacesNav, withPageEnd, consentBlock, MAILTO_NOTE } from "./chrome.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const index = readFileSync(join(root, "index.html"), "utf8");
@@ -407,7 +407,7 @@ pages.push({
                 <p class="sh-body"><a class="sh-link" href="mailto:contact@pixy.com.co">contact@pixy.com.co</a></p>
                 <p class="sh-body"><a class="sh-link" href="https://wa.me/573504076800?text=Hola%2C%20quiero%20conocer%20Pixy" target="_blank" rel="noopener">WhatsApp +57 350 407 6800</a></p>
             </div>
-            <form class="sp-form" data-mailto="contact@pixy.com.co" data-subject-es="Demo de Pixy" data-subject-en="Pixy demo">
+            <form class="sp-form" data-mailto="contact@pixy.com.co" data-subject-es="Demo de Pixy" data-subject-en="Pixy demo" data-form-es="Demo" data-form-en="Demo">
                 <label>${t("span", "f_name", "Nombre", "Name")}<input name="name" required autocomplete="name"></label>
                 <label>${t("span", "f_company", "Empresa", "Company")}<input name="company" autocomplete="organization"></label>
                 <label>${t("span", "f_email", "Email", "Email")}<input name="email" type="email" required autocomplete="email"></label>
@@ -416,8 +416,9 @@ pages.push({
                     ${t("option", "f_other", "Otra", "Other", "", 'value="otra"')}
                 </select></label>
                 <label class="sp-wide">${t("span", "f_msg", "Cuéntanos de tu negocio", "Tell us about your business")}<textarea name="message" rows="5"></textarea></label>
+                ${consentBlock(t, { purposeEs: "responder tu solicitud, agendar la demo y hacerle seguimiento", purposeEn: "answer your request, schedule the demo and follow up", dataEs: "tu nombre, correo, empresa y mensaje", dataEn: "your name, email, company and message" })}
                 ${t("button", "f_send", "Agendar mi demo", "Book my demo", "btn-neon sp-wide", 'type="submit"')}
-                ${t("p", "f_note", "Al enviar se abre tu correo con el mensaje listo.", "Sending opens your email app with the message ready.", "sh-small sp-wide")}
+                ${t("p", "f_note", MAILTO_NOTE[0], MAILTO_NOTE[1], "sh-small sp-wide")}
             </form>
         </div>
     </section>
@@ -450,14 +451,15 @@ pages.push({
                 ${t("h2", "form_t", "Hablemos de <span class=\"sh-accent\">tu agencia.</span>", "Let's talk about <span class=\"sh-accent\">your agency.</span>", "sh-h2")}
                 ${t("p", "form_i", "Te contamos cómo funciona y armamos el plan para tu cartera de clientes.", "We'll walk you through it and shape the plan around your client portfolio.", "sh-body")}
             </div>
-            <form class="sp-form" data-mailto="contact@pixy.com.co" data-subject-es="Plan Partner de Pixy" data-subject-en="Pixy Partner plan">
+            <form class="sp-form" data-mailto="contact@pixy.com.co" data-subject-es="Plan Partner de Pixy" data-subject-en="Pixy Partner plan" data-form-es="Aliados" data-form-en="Partners">
                 <label>${t("span", "f_name", "Nombre", "Name")}<input name="name" required autocomplete="name"></label>
                 <label>${t("span", "f_company", "Agencia", "Agency")}<input name="company" autocomplete="organization"></label>
                 <label>${t("span", "f_email", "Email", "Email")}<input name="email" type="email" required autocomplete="email"></label>
                 <label>${t("span", "f_web", "Sitio web", "Website")}<input name="website" type="url"></label>
                 <label class="sp-wide">${t("span", "f_msg", "¿Cuántos clientes manejas y qué les ofreces?", "How many clients do you manage and what do you offer them?")}<textarea name="message" rows="5"></textarea></label>
+                ${consentBlock(t, { purposeEs: "evaluar tu propuesta de alianza, responderte y hacerle seguimiento", purposeEn: "review your partnership proposal, reply to you and follow up", dataEs: "tu nombre, correo, empresa, sitio web y mensaje", dataEn: "your name, email, company, website and message" })}
                 ${t("button", "f_send", "Enviar", "Send", "btn-neon sp-wide", 'type="submit"')}
-                ${t("p", "f_note", "Al enviar se abre tu correo con el mensaje listo.", "Sending opens your email app with the message ready.", "sh-small sp-wide")}
+                ${t("p", "f_note", MAILTO_NOTE[0], MAILTO_NOTE[1], "sh-small sp-wide")}
             </form>
         </div>
     </section>

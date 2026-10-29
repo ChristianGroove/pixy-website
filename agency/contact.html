@@ -103,7 +103,7 @@
                 <p class="sh-body"><a class="sh-link" href="mailto:contact@pixy.com.co">contact@pixy.com.co</a></p>
                 <p class="sh-body"><a class="sh-link" href="https://wa.me/573504076800?text=Hola%2C%20quiero%20hablar%20con%20Pixy%20Studio" target="_blank" rel="noopener">WhatsApp +57 350 407 6800</a></p>
             </div>
-            <form class="sp-form" data-mailto="contact@pixy.com.co" data-subject-es="Casting de Pixy Studio" data-subject-en="Pixy Studio casting">
+            <form class="sp-form" data-mailto="contact@pixy.com.co" data-subject-es="Casting de Pixy Studio" data-subject-en="Pixy Studio casting" data-form-es="Pixy Studio" data-form-en="Pixy Studio" data-news-wa>
                 <label><span data-i18n="studio2.casting.f_name">Nombre</span><input name="nombre" required autocomplete="name"></label>
                 <label><span data-i18n="studio2.casting.f_brand">Tu marca</span><input name="marca" required autocomplete="organization"></label>
                 <label><span data-i18n="studio2.casting.f_email">Email</span><input name="email" type="email" required autocomplete="email"></label>
@@ -118,8 +118,13 @@
                 <label><span data-i18n="studio2.casting.f_when">¿Cuándo quieres el estreno?</span><select name="estreno"><option value="mes" data-i18n="studio2.casting.f_when_mes">Este mes</option><option value="trimestre" data-i18n="studio2.casting.f_when_trimestre">En 1 a 3 meses</option><option value="sin-fecha" data-i18n="studio2.casting.f_when_sin-fecha">Sin fecha</option></select></label>
                 <label><span data-i18n="studio2.casting.f_link">Instagram o web (opcional)</span><input name="enlace" type="url"></label>
                 <label class="sp-wide"><span data-i18n="studio2.casting.f_msg">Cuéntanos más</span><textarea name="mensaje" rows="5"></textarea></label>
+                <div class="sp-consent sp-wide">
+                    <p class="sp-consent-notice" data-i18n="studio2.casting.c_notice">Pixy Studio, el servicio de agencia de Pixy, usará tu nombre, correo, WhatsApp, marca, enlaces y mensaje para preparar tu propuesta, responderte y hacerle seguimiento. Tus datos se guardan en nuestros proveedores de correo y nube, que pueden estar fuera de Colombia. Puedes conocer, actualizar, rectificar o suprimir tus datos y revocar tu autorización escribiendo a <a href="mailto:contact@pixy.com.co">contact@pixy.com.co</a>. Más información en la <a href="../privacy.html">Política de tratamiento de datos personales</a>. No incluyas datos sensibles ni datos de menores de edad en el mensaje.</p>
+                    <label class="sp-check"><input type="checkbox" name="_auth" required data-consent="auth"><span data-i18n="studio2.casting.c_auth">Autorizo a Pixy a tratar mis datos personales para preparar mi propuesta, según la Política de tratamiento de datos personales.</span></label>
+                    <label class="sp-check"><input type="checkbox" name="_news" data-consent="news"><span data-i18n="studio2.casting.c_news">Quiero recibir novedades y ofertas de Pixy y Pixy Studio por correo y WhatsApp. Puedo darme de baja cuando quiera.</span></label>
+                </div>
                 <button class="btn-neon sp-wide" type="submit" data-i18n="studio2.casting.f_send">Enviar mi casting</button>
-                <p class="sh-small sp-wide" data-i18n="studio2.casting.f_note">Al enviar se abre tu correo con el mensaje listo.</p>
+                <p class="sh-small sp-wide" data-i18n="studio2.casting.f_note">Este botón abre tu aplicación de correo con el mensaje listo. Tu solicitud nos llega solo cuando envías ese correo.</p>
             </form>
         </div>
     </section>

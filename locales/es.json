@@ -635,8 +635,11 @@
       "f_space": "Tu industria",
       "f_other": "Otra",
       "f_msg": "Cuéntanos de tu negocio",
+      "c_notice": "Pixy usará tu nombre, correo, empresa y mensaje para responder tu solicitud, agendar la demo y hacerle seguimiento. Tus datos se guardan en nuestros proveedores de correo y nube, que pueden estar fuera de Colombia. Puedes conocer, actualizar, rectificar o suprimir tus datos y revocar tu autorización escribiendo a <a href=\"mailto:contact@pixy.com.co\">contact@pixy.com.co</a>. Más información en la <a href=\"privacy.html\">Política de tratamiento de datos personales</a>. No incluyas datos sensibles en el mensaje.",
+      "c_auth": "Autorizo a Pixy a tratar mis datos personales para atender esta solicitud, según la Política de tratamiento de datos personales.",
+      "c_news": "Quiero recibir novedades y ofertas de Pixy por correo. Puedo darme de baja cuando quiera.",
       "f_send": "Agendar mi demo",
-      "f_note": "Al enviar se abre tu correo con el mensaje listo."
+      "f_note": "Este botón abre tu aplicación de correo con el mensaje listo. Tu solicitud nos llega solo cuando envías ese correo."
     },
     "partners": {
       "h1": "Vende Pixy <span class=\"sh-accent\">con tu marca.</span>",
@@ -658,8 +661,11 @@
       "f_email": "Email",
       "f_web": "Sitio web",
       "f_msg": "¿Cuántos clientes manejas y qué les ofreces?",
+      "c_notice": "Pixy usará tu nombre, correo, empresa, sitio web y mensaje para evaluar tu propuesta de alianza, responderte y hacerle seguimiento. Tus datos se guardan en nuestros proveedores de correo y nube, que pueden estar fuera de Colombia. Puedes conocer, actualizar, rectificar o suprimir tus datos y revocar tu autorización escribiendo a <a href=\"mailto:contact@pixy.com.co\">contact@pixy.com.co</a>. Más información en la <a href=\"privacy.html\">Política de tratamiento de datos personales</a>. No incluyas datos sensibles en el mensaje.",
+      "c_auth": "Autorizo a Pixy a tratar mis datos personales para atender esta solicitud, según la Política de tratamiento de datos personales.",
+      "c_news": "Quiero recibir novedades y ofertas de Pixy por correo. Puedo darme de baja cuando quiera.",
       "f_send": "Enviar",
-      "f_note": "Al enviar se abre tu correo con el mensaje listo."
+      "f_note": "Este botón abre tu aplicación de correo con el mensaje listo. Tu solicitud nos llega solo cuando envías ese correo."
     },
     "agency": {
       "sub": "Clientes, proyectos, cobros y resultados, conectados.",
@@ -964,8 +970,11 @@
       "f_when_sin-fecha": "Sin fecha",
       "f_link": "Instagram o web (opcional)",
       "f_msg": "Cuéntanos más",
+      "c_notice": "Pixy Studio, el servicio de agencia de Pixy, usará tu nombre, correo, WhatsApp, marca, enlaces y mensaje para preparar tu propuesta, responderte y hacerle seguimiento. Tus datos se guardan en nuestros proveedores de correo y nube, que pueden estar fuera de Colombia. Puedes conocer, actualizar, rectificar o suprimir tus datos y revocar tu autorización escribiendo a <a href=\"mailto:contact@pixy.com.co\">contact@pixy.com.co</a>. Más información en la <a href=\"../privacy.html\">Política de tratamiento de datos personales</a>. No incluyas datos sensibles ni datos de menores de edad en el mensaje.",
+      "c_auth": "Autorizo a Pixy a tratar mis datos personales para preparar mi propuesta, según la Política de tratamiento de datos personales.",
+      "c_news": "Quiero recibir novedades y ofertas de Pixy y Pixy Studio por correo y WhatsApp. Puedo darme de baja cuando quiera.",
       "f_send": "Enviar mi casting",
-      "f_note": "Al enviar se abre tu correo con el mensaje listo."
+      "f_note": "Este botón abre tu aplicación de correo con el mensaje listo. Tu solicitud nos llega solo cuando envías ese correo."
     }
   },
   "chrome": {

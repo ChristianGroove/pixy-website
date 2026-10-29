@@ -112,14 +112,19 @@
                 <h2 class="sh-h2" data-i18n="pages2.partners.form_t">Hablemos de <span class="sh-accent">tu agencia.</span></h2>
                 <p class="sh-body" data-i18n="pages2.partners.form_i">Te contamos cómo funciona y armamos el plan para tu cartera de clientes.</p>
             </div>
-            <form class="sp-form" data-mailto="contact@pixy.com.co" data-subject-es="Plan Partner de Pixy" data-subject-en="Pixy Partner plan">
+            <form class="sp-form" data-mailto="contact@pixy.com.co" data-subject-es="Plan Partner de Pixy" data-subject-en="Pixy Partner plan" data-form-es="Aliados" data-form-en="Partners">
                 <label><span data-i18n="pages2.partners.f_name">Nombre</span><input name="name" required autocomplete="name"></label>
                 <label><span data-i18n="pages2.partners.f_company">Agencia</span><input name="company" autocomplete="organization"></label>
                 <label><span data-i18n="pages2.partners.f_email">Email</span><input name="email" type="email" required autocomplete="email"></label>
                 <label><span data-i18n="pages2.partners.f_web">Sitio web</span><input name="website" type="url"></label>
                 <label class="sp-wide"><span data-i18n="pages2.partners.f_msg">¿Cuántos clientes manejas y qué les ofreces?</span><textarea name="message" rows="5"></textarea></label>
+                <div class="sp-consent sp-wide">
+                    <p class="sp-consent-notice" data-i18n="pages2.partners.c_notice">Pixy usará tu nombre, correo, empresa, sitio web y mensaje para evaluar tu propuesta de alianza, responderte y hacerle seguimiento. Tus datos se guardan en nuestros proveedores de correo y nube, que pueden estar fuera de Colombia. Puedes conocer, actualizar, rectificar o suprimir tus datos y revocar tu autorización escribiendo a <a href="mailto:contact@pixy.com.co">contact@pixy.com.co</a>. Más información en la <a href="privacy.html">Política de tratamiento de datos personales</a>. No incluyas datos sensibles en el mensaje.</p>
+                    <label class="sp-check"><input type="checkbox" name="_auth" required data-consent="auth"><span data-i18n="pages2.partners.c_auth">Autorizo a Pixy a tratar mis datos personales para atender esta solicitud, según la Política de tratamiento de datos personales.</span></label>
+                    <label class="sp-check"><input type="checkbox" name="_news" data-consent="news"><span data-i18n="pages2.partners.c_news">Quiero recibir novedades y ofertas de Pixy por correo. Puedo darme de baja cuando quiera.</span></label>
+                </div>
                 <button class="btn-neon sp-wide" type="submit" data-i18n="pages2.partners.f_send">Enviar</button>
-                <p class="sh-small sp-wide" data-i18n="pages2.partners.f_note">Al enviar se abre tu correo con el mensaje listo.</p>
+                <p class="sh-small sp-wide" data-i18n="pages2.partners.f_note">Este botón abre tu aplicación de correo con el mensaje listo. Tu solicitud nos llega solo cuando envías ese correo.</p>
             </form>
         </div>
     </section>

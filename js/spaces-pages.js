@@ -80,13 +80,35 @@
             if (v && sel.querySelector('option[value="' + v + '"]')) sel.value = v;
         });
 
+        // Consentimiento: el botón queda deshabilitado hasta marcar la autorización (dictamen legal §4)
+        var auth = form.querySelector('[data-consent="auth"]');
+        var news = form.querySelector('[data-consent="news"]');
+        var send = form.querySelector('[type="submit"]');
+        var syncSend = function () { if (auth && send) send.disabled = !auth.checked; };
+        if (auth) auth.addEventListener('change', syncSend);
+        syncSend();
+
         form.addEventListener('submit', function (e) {
             e.preventDefault();
-            if (!form.reportValidity()) return;
+            if (!form.reportValidity() || (auth && !auth.checked)) return;
+            var en = lang() === 'en';
             var d = new FormData(form);
             var lines = [];
-            d.forEach(function (v, k) { if (String(v).trim()) lines.push(k + ': ' + v); });
-            var subject = form.dataset[lang() === 'en' ? 'subjectEn' : 'subjectEs'];
+            // Los campos que empiezan con _ son las casillas: van en la constancia, no en el mensaje
+            d.forEach(function (v, k) { if (k.charAt(0) !== '_' && String(v).trim()) lines.push(k + ': ' + v); });
+            // Constancia de la autorización al final del correo: es la prueba (no hay servidor que la guarde)
+            var wa = form.hasAttribute('data-news-wa');
+            var yes = news && news.checked;
+            var today = new Date().toISOString().slice(0, 10);
+            lines.push('', '—');
+            lines.push(en
+                ? 'Personal data authorization: Yes (Personal Data Policy, version 1.0)'
+                : 'Autorización de tratamiento de datos: Sí (Política de tratamiento de datos personales, versión 1.0)');
+            lines.push(en
+                ? 'News and offers by email' + (wa ? ' and WhatsApp' : '') + ': ' + (yes ? 'Yes' : 'No')
+                : 'Novedades y ofertas por correo' + (wa ? ' y WhatsApp' : '') + ': ' + (yes ? 'Sí' : 'No'));
+            lines.push((en ? 'Form: ' : 'Formulario: ') + form.dataset[en ? 'formEn' : 'formEs'] + ' · ' + today);
+            var subject = form.dataset[en ? 'subjectEn' : 'subjectEs'];
             location.href = 'mailto:' + form.dataset.mailto + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
             warp('departure');
         });

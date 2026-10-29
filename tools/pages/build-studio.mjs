@@ -5,7 +5,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { studioNav, studioFooter, withPageEnd } from "./chrome.mjs";
+import { studioNav, studioFooter, withPageEnd, consentBlock, MAILTO_NOTE } from "./chrome.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const EOL = readFileSync(join(root, "index.html"), "utf8").includes("\r\n") ? "\r\n" : "\n";
@@ -531,7 +531,7 @@ page = "casting";
                 <p class="sh-body"><a class="sh-link" href="mailto:contact@pixy.com.co">contact@pixy.com.co</a></p>
                 <p class="sh-body"><a class="sh-link" href="https://wa.me/573504076800?text=Hola%2C%20quiero%20hablar%20con%20Pixy%20Studio" target="_blank" rel="noopener">WhatsApp +57 350 407 6800</a></p>
             </div>
-            <form class="sp-form" data-mailto="contact@pixy.com.co" data-subject-es="Casting de Pixy Studio" data-subject-en="Pixy Studio casting">
+            <form class="sp-form" data-mailto="contact@pixy.com.co" data-subject-es="Casting de Pixy Studio" data-subject-en="Pixy Studio casting" data-form-es="Pixy Studio" data-form-en="Pixy Studio" data-news-wa>
                 <label>${t("span", "f_name", "Nombre", "Name")}<input name="nombre" required autocomplete="name"></label>
                 <label>${t("span", "f_brand", "Tu marca", "Your brand")}<input name="marca" required autocomplete="organization"></label>
                 <label>${t("span", "f_email", "Email", "Email")}<input name="email" type="email" required autocomplete="email"></label>
@@ -555,8 +555,9 @@ page = "casting";
                 ])}</select></label>
                 <label>${t("span", "f_link", "Instagram o web (opcional)", "Instagram or website (optional)")}<input name="enlace" type="url"></label>
                 <label class="sp-wide">${t("span", "f_msg", "Cuéntanos más", "Tell us more")}<textarea name="mensaje" rows="5"></textarea></label>
+                ${consentBlock(t, { pre: "../", studio: true, purposeEs: "preparar tu propuesta, responderte y hacerle seguimiento", purposeEn: "prepare your proposal, reply to you and follow up", dataEs: "tu nombre, correo, WhatsApp, marca, enlaces y mensaje", dataEn: "your name, email, WhatsApp number, brand, links and message" })}
                 ${t("button", "f_send", "Enviar mi casting", "Send my casting", "btn-neon sp-wide", 'type="submit"')}
-                ${t("p", "f_note", "Al enviar se abre tu correo con el mensaje listo.", "Sending opens your email app with the message ready.", "sh-small sp-wide")}
+                ${t("p", "f_note", MAILTO_NOTE[0], MAILTO_NOTE[1], "sh-small sp-wide")}
             </form>
         </div>
     </section>

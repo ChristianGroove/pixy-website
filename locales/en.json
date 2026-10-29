@@ -635,8 +635,11 @@
       "f_space": "Your industry",
       "f_other": "Other",
       "f_msg": "Tell us about your business",
+      "c_notice": "Pixy will use your name, email, company and message to answer your request, schedule the demo and follow up. Your data is stored with our email and cloud providers, which may be located outside Colombia. You can access, update, correct or delete your data and withdraw your consent by writing to <a href=\"mailto:contact@pixy.com.co\">contact@pixy.com.co</a>. Learn more in our <a href=\"privacy.html\">Personal Data Policy</a> (in Spanish). Please don't include sensitive data in your message.",
+      "c_auth": "I authorize Pixy to process my personal data to handle this request, as described in the Personal Data Policy.",
+      "c_news": "I'd like to receive Pixy news and offers by email. I can unsubscribe at any time.",
       "f_send": "Book my demo",
-      "f_note": "Sending opens your email app with the message ready."
+      "f_note": "This button opens your email app with the message ready. We only receive your request once you send that email."
     },
     "partners": {
       "h1": "Sell Pixy <span class=\"sh-accent\">under your brand.</span>",
@@ -658,8 +661,11 @@
       "f_email": "Email",
       "f_web": "Website",
       "f_msg": "How many clients do you manage and what do you offer them?",
+      "c_notice": "Pixy will use your name, email, company, website and message to review your partnership proposal, reply to you and follow up. Your data is stored with our email and cloud providers, which may be located outside Colombia. You can access, update, correct or delete your data and withdraw your consent by writing to <a href=\"mailto:contact@pixy.com.co\">contact@pixy.com.co</a>. Learn more in our <a href=\"privacy.html\">Personal Data Policy</a> (in Spanish). Please don't include sensitive data in your message.",
+      "c_auth": "I authorize Pixy to process my personal data to handle this request, as described in the Personal Data Policy.",
+      "c_news": "I'd like to receive Pixy news and offers by email. I can unsubscribe at any time.",
       "f_send": "Send",
-      "f_note": "Sending opens your email app with the message ready."
+      "f_note": "This button opens your email app with the message ready. We only receive your request once you send that email."
     },
     "agency": {
       "sub": "Clients, projects, billing and results, connected.",
@@ -964,8 +970,11 @@
       "f_when_sin-fecha": "No date yet",
       "f_link": "Instagram or website (optional)",
       "f_msg": "Tell us more",
+      "c_notice": "Pixy Studio, Pixy's agency service, will use your name, email, WhatsApp number, brand, links and message to prepare your proposal, reply to you and follow up. Your data is stored with our email and cloud providers, which may be located outside Colombia. You can access, update, correct or delete your data and withdraw your consent by writing to <a href=\"mailto:contact@pixy.com.co\">contact@pixy.com.co</a>. Learn more in our <a href=\"../privacy.html\">Personal Data Policy</a> (in Spanish). Please don't include sensitive data or data about minors in your message.",
+      "c_auth": "I authorize Pixy to process my personal data to prepare my proposal, as described in the Personal Data Policy.",
+      "c_news": "I'd like to receive Pixy and Pixy Studio news and offers by email and WhatsApp. I can unsubscribe at any time.",
       "f_send": "Send my casting",
-      "f_note": "Sending opens your email app with the message ready."
+      "f_note": "This button opens your email app with the message ready. We only receive your request once you send that email."
     }
   },
   "chrome": {
