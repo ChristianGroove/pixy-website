@@ -68,7 +68,7 @@
     <link rel="expect" href="#pixy-end" blocking="render">
 </head>
 
-<body class="landing-page spaces-face">
+<body class="landing-page spaces-face" data-orb-route>
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
     <!-- Navigation -->
@@ -137,6 +137,7 @@
             <div class="sh-sticky">
                 <h2 class="sh-h2" data-i18n="home2.platform.title">Todo tu negocio, <span class="sh-accent">conectado.</span></h2>
                 <p class="sh-body" data-i18n="home2.platform.intro">Tus canales, tus ventas, tu operación y tus cobros dejan de vivir en cinco herramientas distintas.</p>
+                <span class="orb-dock" data-dock="plataforma" aria-hidden="true"></span>
             </div>
             <ol class="sh-list">
                 <li><span class="sh-num">01</span><div><h3 class="sh-h3" data-i18n="home2.platform.p1_title">Atiende</h3><p class="sh-body" data-i18n="home2.platform.p1_desc">WhatsApp, Instagram, Messenger y los comentarios de tus redes en una sola bandeja. La IA responde de día y de noche.</p></div></li>
@@ -167,6 +168,7 @@
                 <div class="sv-meter" aria-hidden="true">
                     <span class="sv-count"><b>01</b> / 06</span>
                     <span class="sv-track"><i></i></span>
+                    <span class="orb-dock orb-dock-sm" data-dock="spaces" aria-hidden="true"></span>
                 </div>
             </div>
             <div class="container sv-stations">
@@ -258,15 +260,15 @@
                 </div>
                 <div class="ai-act">
                     <h2 class="sh-h2"><span data-i18n="home2.ai.a2_title">Atiende sola,</span> <span class="sh-accent" data-i18n="home2.ai.a2_accent">en todos tus canales.</span></h2>
-                    <p class="sh-body ai-act-body" data-i18n="home2.ai.a2_body">WhatsApp, Instagram y Messenger con la conexión oficial de Meta, y los comentarios de tus redes. De día y de noche. Cuando hace falta una persona, pasa a tu equipo.<span class="ai-act-note">Pixy es Tech Provider de Meta.</span></p>
+                    <p class="sh-body ai-act-body" data-i18n="home2.ai.a2_body">Todos tus chats y comentarios, día y noche. Si hace falta, pasa a tu equipo.<span class="ai-act-note">Conexión oficial: Pixy es Tech Provider de Meta.</span></p>
                 </div>
                 <div class="ai-act">
                     <h2 class="sh-h2"><span data-i18n="home2.ai.a3_title">Entiende cada</span> <span class="sh-accent" data-i18n="home2.ai.a3_accent">conversación.</span></h2>
-                    <p class="sh-body ai-act-body" data-i18n="home2.ai.a3_body">Venta, soporte, reserva, cotización o admisión. Califica a cada cliente con la frase que lo demuestra y lo deja en el lugar correcto de tu pipeline.</p>
+                    <p class="sh-body ai-act-body" data-i18n="home2.ai.a3_body">Detecta qué quiere cada cliente, lo califica y lo ubica en tu pipeline.</p>
                 </div>
                 <div class="ai-act">
                     <h2 class="sh-h2"><span data-i18n="home2.ai.a4_title">Un conocimiento</span> <span class="sh-accent" data-i18n="home2.ai.a4_accent">que crece contigo.</span></h2>
-                    <p class="sh-body ai-act-body" data-i18n="home2.ai.a4_body">Le enseñas tu negocio una vez y no deja de crecer: cada documento, cada servicio y cada respuesta de tu equipo la hacen más precisa. Para cada respuesta lee solo lo que necesita.</p>
+                    <p class="sh-body ai-act-body" data-i18n="home2.ai.a4_body">Le enseñas tu negocio una vez y cada respuesta de tu equipo la hace más precisa.</p>
                 </div>
                 <div class="ai-act">
                     <h2 class="sh-h2"><span data-i18n="home2.ai.a5_title">Te acompaña</span> <span class="sh-accent" data-i18n="home2.ai.a5_accent">en cada módulo.</span></h2>
@@ -278,7 +280,10 @@
     <!-- 5. Modo 3D -->
     <section class="sh-section" id="modo-3d">
         <div class="container sh-split">
-            <h2 class="sh-h2" data-i18n="home2.m3d.title">Mira tu negocio <span class="sh-accent">vivo.</span></h2>
+            <div>
+                <h2 class="sh-h2" data-i18n="home2.m3d.title">Mira tu negocio <span class="sh-accent">vivo.</span></h2>
+                <span class="orb-dock" data-dock="modo-3d" aria-hidden="true"></span>
+            </div>
             <div>
                 <p class="sh-body sh-lead" data-i18n="home2.m3d.desc">El Modo 3D convierte tu sede en una ciudad en miniatura: cada área es un edificio con lo que está pasando ahora, con los datos reales de tu negocio.</p>
                 <a href="contact.html" class="sh-link" data-warp-click="hop" data-i18n="home2.m3d.link">Míralo en tu demo</a>
@@ -287,10 +292,11 @@
     </section>
 
     <!-- 6. Cómo empezar -->
-    <section class="sh-section">
+    <section class="sh-section" id="pasos">
         <div class="container sh-split">
             <div class="sh-sticky">
                 <h2 class="sh-h2" data-i18n="home2.steps.title">Empieza en <span class="sh-accent">tres pasos.</span></h2>
+                <span class="orb-dock" data-dock="pasos" aria-hidden="true"></span>
             </div>
             <ol class="sh-list">
                 <li><span class="sh-num">01</span><div><h3 class="sh-h3" data-i18n="home2.steps.s1_title">Elige tu Space</h3><p class="sh-body" data-i18n="home2.steps.s1_desc">Restaurante, tienda, inmobiliaria, colegio, agencia o software: tu Space trae los módulos de tu industria.</p></div></li>
@@ -331,6 +337,7 @@
     <!-- 8. Cierre -->
     <section class="sh-section sh-final">
         <div class="container">
+            <span class="orb-dock orb-dock-lg" data-dock="cierre" aria-hidden="true"></span>
             <h2 class="sh-h2" data-i18n="home2.cta.title">Tu negocio nunca se detiene. <span class="sh-accent">Pixy tampoco.</span></h2>
             <p class="sh-body" data-i18n="home2.cta.subtitle">Te mostramos tu Space en una demo guiada.</p>
             <a href="contact.html" class="btn-neon" data-warp-click="departure" data-i18n="home2.cta.button">Agenda tu demo</a>
@@ -416,6 +423,9 @@
 
     <!-- Sección de IA en actos -->
     <script src="js/spaces-ai.js"></script>
+
+    <!-- Experimento: el orbe de la IA recorre la portada con el scroll -->
+    <script src="js/orb-route.js"></script>
     <div id="pixy-end" hidden></div>
 </body>
 

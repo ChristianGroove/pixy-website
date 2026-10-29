@@ -5,6 +5,10 @@
 
 // main.js va al final del <body>: arranca en cuanto se ejecuta (ver pixyBoot() al final del archivo),
 // antes del primer pintado, para que la página llegue armada en la transición entre páginas.
+// Orbe viajero de la portada (js/orb-route.js): solo escritorio y sin «reducir movimiento»
+window.pixyOrbTravel = !!document.querySelector('[data-orb-route]') &&
+    window.matchMedia('(min-width: 1024px) and (prefers-reduced-motion: no-preference)').matches;
+
 const pixyBoot = () => {
     // Mouse Spotlight Effect (Enhanced logic & performance)
     const spotlight = document.querySelector('.mouse-spotlight');
@@ -651,7 +655,7 @@ function initGSAPHero() {
         });
     }
 
-    if (orbWrapper) {
+    if (orbWrapper && !window.pixyOrbTravel) {
         gsap.timeline({
             scrollTrigger: {
                 trigger: hero,

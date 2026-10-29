@@ -88,7 +88,8 @@
         var orb = section.querySelector('.ai-orb-el');
 
         // 1 · Nace el orbe
-        tl.fromTo(orbEl, { scale: 0.04 }, { scale: 1, duration: 1.4, ease: 'power3.out' }, 0)
+        // Con el orbe viajero (js/orb-route.js) el orbe no nace aquí: llega desde la sección anterior
+        tl.fromTo(orbEl, { scale: window.pixyOrbTravel ? 1 : 0.04 }, { scale: 1, duration: 1.4, ease: 'power3.out' }, 0)
             .fromTo(acts[0], { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 0.6 }, 0.5);
 
         // 2 · Los canales entran al orbe
