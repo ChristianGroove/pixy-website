@@ -232,6 +232,92 @@
 .sh-plan .sh-body { margin-top: 8px; }
 #planes .sh-link { margin-top: var(--sh-head-gap); }
 
+/* --- Isla de la Sede Viva (sección Modo 3D, js/sede-isla.js) --- */
+/* Estilo arcilla: monocromo por tema; el color de cada módulo solo en su letrero, sus puntos y al pasar el cursor */
+.spaces-face {
+    --isl-ground: #15171c; --isl-rim: #0e1013; --isl-under: #0a0b0e; --isl-strata: rgba(255, 255, 255, 0.04);
+    --isl-road: #1c1f25; --isl-dash: rgba(255, 255, 255, 0.07); --isl-pad: #1a1d23; --isl-plaza: #1e2128;
+    --isl-top: #2b2f37; --isl-left: #20232a; --isl-right: #17191e; --isl-edge: rgba(255, 255, 255, 0.07);
+    --isl-win: #2d313a; --isl-sign: #9aa0ab; --isl-tree: #1d2a25; --isl-trunk: #2a2d33; --isl-tip-bg: rgba(20, 22, 27, 0.92);
+}
+[data-theme="light"] .spaces-face, [data-theme="light"].spaces-face, [data-theme="light"] body.spaces-face {
+    --isl-ground: #f7f8fa; --isl-rim: #dde2e8; --isl-under: #ccd3dc; --isl-strata: rgba(15, 23, 42, 0.06);
+    --isl-road: #e8ebf0; --isl-dash: rgba(15, 23, 42, 0.1); --isl-pad: #eff1f5; --isl-plaza: #e9ecf1;
+    --isl-top: #ffffff; --isl-left: #edf0f4; --isl-right: #dfe4ea; --isl-edge: rgba(15, 23, 42, 0.09);
+    --isl-win: #d5dbe3; --isl-sign: #4b5563; --isl-tree: #d3e4da; --isl-trunk: #c2c9d2; --isl-tip-bg: rgba(255, 255, 255, 0.96);
+}
+.isla-wrap { margin-top: var(--sh-head-gap); }
+.isla-stage { position: relative; max-width: 980px; margin: 0 auto; aspect-ratio: 1000 / 700; perspective: 1400px; touch-action: pan-y; }
+.isla-tilt { position: absolute; inset: 0; transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transform-style: preserve-3d; transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1); will-change: transform; }
+.isla-float { position: absolute; inset: 0; }
+.isla-stage.is-live .isla-float { animation: isla-float 8s ease-in-out infinite alternate; }
+@keyframes isla-float { from { transform: translateY(0); } to { transform: translateY(-8px); } }
+.isla-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.isla-fx { pointer-events: none; }
+.isla-svg polygon, .isla-svg path, .isla-svg ellipse { stroke-linejoin: round; }
+.isl-under { fill: var(--isl-under); }
+.isl-strata { fill: none; stroke: var(--isl-strata); stroke-width: 1.5; }
+.isl-rim { fill: var(--isl-rim); }
+.isl-ground { fill: var(--isl-ground); stroke: var(--isl-edge); stroke-width: 1; }
+.isl-road { fill: var(--isl-road); }
+.isl-dash { stroke: var(--isl-dash); stroke-width: 1; stroke-dasharray: 6 8; }
+.isl-pad, .isl-plaza { fill: var(--isl-pad); stroke: var(--isl-edge); stroke-width: 1; transition: fill 300ms ease; }
+.isl-plaza { fill: var(--isl-plaza); }
+.isl-pad.is-hover { fill: color-mix(in srgb, var(--isl-pad) 82%, var(--c, #888)); }
+.isl-t { fill: var(--isl-top); stroke: var(--isl-edge); stroke-width: 1; }
+.isl-l { fill: var(--isl-left); stroke: var(--isl-edge); stroke-width: 1; }
+.isl-r { fill: var(--isl-right); stroke: var(--isl-edge); stroke-width: 1; }
+.isl-win { fill: var(--isl-win); }
+.isl-win-r { opacity: 0.8; }
+.isl-win.is-lit { fill: color-mix(in srgb, var(--isl-win) 72%, var(--c)); }
+.isl-door { fill: var(--isl-right); }
+.isl-sign { font: 700 8.5px/1 Inter, system-ui, sans-serif; letter-spacing: 0.08em; fill: var(--isl-sign); }
+.isl-sign-line { stroke: var(--c); stroke-width: 2; stroke-linecap: round; }
+.isl-plate { fill: var(--c); opacity: 0.85; }
+/* Tanque de cristal del Paquete de IA: el líquido es el uso del mes; el orbe viajero lo llena con su color */
+.isla-stage { --orb-liquid: #38b6e8; --charge: 0; }
+.isl-glass-back { fill: var(--isl-right); opacity: 0.55; stroke: var(--isl-edge); stroke-width: 1; }
+.isl-liquid { fill: color-mix(in srgb, var(--c) calc((1 - var(--charge)) * 100%), var(--orb-liquid)); opacity: calc(0.42 + var(--charge) * 0.3); }
+.isl-liquid-top { fill: color-mix(in srgb, var(--c) calc((1 - var(--charge)) * 100%), var(--orb-liquid)); opacity: calc(0.6 + var(--charge) * 0.35); }
+.isl-liquid-glow { fill: var(--orb-liquid); opacity: calc(var(--charge) * 0.55); filter: blur(10px); }
+.isl-glass { fill: rgba(255, 255, 255, 0.04); stroke: var(--isl-sign); stroke-opacity: 0.35; stroke-width: 1.2; }
+.isl-glass-rim { fill: none; stroke: var(--isl-sign); stroke-opacity: 0.5; stroke-width: 1.4; }
+.isl-glass-ring { fill: none; stroke: var(--isl-sign); stroke-opacity: 0.18; stroke-width: 1; }
+/* Con el tanque lleno, la energía sale por todos los tubos */
+.is-charged .isl-tube { stroke: var(--orb-liquid); opacity: 0.8; animation: isl-flow 700ms linear infinite; }
+.isl-pad[data-pad="ai"] { fill: color-mix(in srgb, var(--isl-pad) 90%, #38b6e8); }
+.isl-alert { fill: #e5484d; }
+.isl-alert-ring { fill: none; stroke: #e5484d; stroke-width: 1.5; opacity: 0.45; transform-box: fill-box; transform-origin: center; }
+.is-live .isl-alert-ring { animation: isl-ring 2.4s ease-out infinite; }
+@keyframes isl-ring { from { transform: scale(0.6); opacity: 0.55; } to { transform: scale(1.8); opacity: 0; } }
+.isl-tree ellipse { fill: var(--isl-tree); }
+.isl-tree line { stroke: var(--isl-trunk); stroke-width: 2.5; }
+.isl-tube { fill: none; stroke: var(--isl-edge); stroke-width: 1.5; stroke-dasharray: 2 5; transition: stroke 300ms ease, opacity 300ms ease; }
+.isl-tube.is-on, .isl-tube.is-flow { stroke: #38b6e8; opacity: 0.7; }
+.isl-tube.is-flow { animation: isl-flow 900ms linear infinite; }
+@keyframes isl-flow { to { stroke-dashoffset: -14; } }
+.isl-hit { fill: transparent; }
+/* Al pasar el cursor: el edificio sube, los demás se apagan un poco */
+.isl-b { cursor: default; }
+.isl-bld { transition: transform 450ms cubic-bezier(0.16, 1, 0.3, 1), opacity 300ms ease; }
+.isl-b.is-hover .isl-bld { transform: translateY(-8px); }
+.is-focus .isl-b:not(.is-hover) .isl-bld { opacity: 0.55; }
+.isl-dot { fill: var(--c); stroke: var(--isl-ground); stroke-width: 1.5; }
+.isl-pop { font: 700 13px/1 Inter, system-ui, sans-serif; fill: var(--c); text-anchor: middle; animation: isl-pop 1.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+@keyframes isl-pop { 0% { opacity: 0; transform: translateY(6px); } 20% { opacity: 1; } 100% { opacity: 0; transform: translateY(-26px); } }
+.isla-tip { position: absolute; z-index: 2; display: flex; flex-direction: column; gap: 4px; width: max-content; max-width: 320px; padding: 10px 14px; border: 1px solid var(--border-color); border-left: 2px solid var(--c); border-radius: 10px; background: var(--isl-tip-bg); color: var(--text-secondary); font-size: 13px; line-height: 1.4; pointer-events: none; opacity: 0; transform: translate(-50%, calc(-100% + 6px)); transition: opacity 200ms ease, transform 300ms cubic-bezier(0.16, 1, 0.3, 1); }
+.isla-tip.is-on { opacity: 1; transform: translate(-50%, -100%); }
+.isla-tip strong { color: var(--text-primary); font-size: 14px; }
+.isla-note { text-align: center; margin-top: 8px !important; }
+@media (prefers-reduced-motion: reduce) {
+    .isla-tilt, .isl-bld { transition: none; }
+    .isla-stage.is-live .isla-float, .is-live .isl-alert-ring, .isl-tube.is-flow { animation: none; }
+}
+@media (max-width: 700px) {
+    .isla-stage { margin: 0 -12px; }
+    .isla-tip { max-width: 200px; font-size: 12px; }
+}
+
 /* --- Cierre --- */
 .sh-final { text-align: center; }
 .sh-final .sh-h2 { max-width: 760px; margin: 0 auto; }
@@ -800,7 +886,6 @@ html[data-theme="light"], html[data-theme="light"] body.spaces-face { background
 .orb-traveler.is-powered .ds-orb-body { animation: orb-power-pulse 1.8s ease-in-out infinite; }
 @keyframes orb-power-halo { 0%, 100% { opacity: 0.65; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }
 @keyframes orb-power-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
-=======
 .spaces-face .ai-act-note { display: block; margin-top: 12px; font-size: var(--sh-small); color: var(--text-muted); }
 
 /* Rendimiento: sin desenfoque de fondo. Detrás hay estrellas animadas y cada desenfoque se recalculaba en

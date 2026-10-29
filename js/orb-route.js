@@ -2,7 +2,8 @@
  * ORBE VIAJERO de la portada Spaces
  * Un solo orbe de IA recorre la portada al ritmo del scroll: nace en la mano del astronauta, se acopla en
  * cada sección en un punto fijo (.orb-dock o un elemento propio), toma el acento de la sección, en la
- * sección de IA ocupa el lugar y el tamaño del orbe central con más resplandor, y al final baja y se
+ * sección de IA ocupa el lugar y el tamaño del orbe central con más resplandor, en Modo 3D entra al tanque del
+ * Paquete de IA de la isla (js/sede-isla.js), se vuelve su líquido y vuelve a salir, y al final baja y se
  * esconde detrás del pie.
  *
  * Cómo se mueve: cada parada tiene un tramo de scroll [desde, hasta] (ScrollTriggers sin animación, así
@@ -45,6 +46,7 @@
     var plans = $('.sh-plans');
     var footer = $('.footer');
     var dock = function (name) { return $('.orb-dock[data-dock="' + name + '"]'); };
+    var isla = window.pixyIsla && window.pixyIsla.tank() && $('[data-isla]');
     if (!heroOrb || !aiOrb || !footer) return;
 
     // Color del orbe de IA: lo cambia su línea de tiempo (rosa → celeste «IA pensando»)
@@ -62,7 +64,17 @@
         { name: 'plataforma', el: dock('plataforma'), trig: ['#plataforma', 'top 35%', 'bottom 75%'] },
         sv && svPin && { name: 'spaces', el: dock('spaces'), color: svColor, pinST: svPin },
         aiPin && { name: 'ia', at: onEl(aiOrb), color: aiColor, pinST: aiPin, powered: true },
-        { name: 'modo-3d', el: dock('modo-3d'), trig: ['#modo-3d', 'top 55%', 'bottom 45%'] },
+        isla ? {
+            name: 'modo-3d',
+            tank: true,
+            // La boca del tanque; el tramo va de cuando el tanque está al 85 % de la pantalla a cuando llega al 12 %
+            at: function () { var t = window.pixyIsla.tank(); return { x: t.x, y: t.top, s: t.d * 0.82 }; },
+            range: function () {
+                var y = window.pixyIsla.tank().top + window.scrollY, h = window.innerHeight;
+                return [y - h * 0.85, y - h * 0.12];
+            }
+        }
+        : { name: 'modo-3d', el: dock('modo-3d'), trig: ['#modo-3d', 'top 55%', 'bottom 45%'] },
         { name: 'pasos', el: dock('pasos'), trig: ['#pasos', 'top 40%', 'bottom 70%'] },
         plans && {
             name: 'planes',
@@ -141,8 +153,9 @@
             if (y <= ranges[k][1] || k === stops.length - 1) {
                 var s = stops[k];
                 if (y >= ranges[k][0] || k === 0) {
+                    if (s.tank) return inTank(s, (y - ranges[k][0]) / Math.max(1, ranges[k][1] - ranges[k][0]));
                     var p = s.at();
-                    return { x: p.x, y: p.y, s: p.s, c: s.color(), powered: !!s.powered };
+                    return { x: p.x, y: p.y, s: p.s, c: s.color(), powered: !!s.powered, o: 1, q: 0 };
                 }
                 // Viaje entre la parada anterior y esta
                 var from = stops[k - 1];
@@ -159,11 +172,26 @@
                     y: A.y + (B.y - A.y) * e,
                     s: size,
                     c: mix(from.color(), s.color(), e),
-                    powered: (from.powered && t < 0.15) || (s.powered && t > 0.85)
+                    powered: (from.powered && t < 0.15) || (s.powered && t > 0.85),
+                    o: 1,
+                    q: 0
                 };
             }
         }
     };
+
+    // Dentro del tanque: baja por la boca y se apaga mientras el líquido toma su color (q = carga del tanque);
+    // en el último tramo hace lo contrario y sale para seguir su ruta
+    var clamp = function (v) { return Math.min(1, Math.max(0, v)); };
+    var inTank = function (s, p) {
+        var d = ease(clamp(p < 0.35 ? p / 0.35 : p > 0.65 ? (1 - p) / 0.35 : 1));
+        var t = window.pixyIsla.tank();
+        return {
+            x: t.x, y: t.top + (t.mid - t.top) * d * 1.15, s: t.d * 0.82 * (1 - 0.6 * d), c: s.color(),
+            powered: false, o: 1 - ease(clamp((d - 0.25) / 0.65)), q: ease(clamp((d - 0.1) / 0.8))
+        };
+    };
+    var lastQ = -1;
 
     var frame = function (now) {
         var dt = lastT ? Math.min(0.05, (now - lastT) / 1000) : 1 / 60;
@@ -171,11 +199,12 @@
         var g = target();
         // Suavizado corto: absorbe saltos de ancla (cambio de plan, pegado del título) sin retrasar el scroll
         var k = cur ? 1 - Math.exp(-dt * 20) : 1;
-        if (!cur) cur = { x: g.x, y: g.y, s: g.s, c: g.c.slice() };
+        if (!cur) cur = { x: g.x, y: g.y, s: g.s, c: g.c.slice(), o: g.o };
         cur.x += (g.x - cur.x) * k;
         cur.y += (g.y - cur.y) * k;
         cur.s += (g.s - cur.s) * k;
         cur.c = mix(cur.c, g.c, k);
+        cur.o += (g.o - cur.o) * k;
         power += ((g.powered ? 1 : 0) - power) * (1 - Math.exp(-dt * 6));
 
         // Rendimiento: cada valor se escribe solo si cambió. La posición solo mueve la capa (barato), pero
@@ -187,6 +216,8 @@
         set('--orb-accent', css(mix(cur.c, [255, 255, 255], 0.35), 0.36));
         set('--orb-glow', css(cur.c, (0.55 * power).toFixed(2)));
         set('--orb-power', power.toFixed(2));
+        set('opacity', cur.o.toFixed(3));
+        if (isla && Math.abs(g.q - lastQ) > 0.003) { lastQ = g.q; window.pixyIsla.setCharge(g.q, cur.c); }
         var powered = power > 0.5;
         if (powered !== wasPowered) { orb.classList.toggle('is-powered', powered); wasPowered = powered; }
 

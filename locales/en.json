@@ -404,6 +404,57 @@
       "title": "Your business never stops. <span class=\"sh-accent\">Neither does Pixy.</span>",
       "subtitle": "We'll show you your Space in a guided demo.",
       "button": "Book a demo"
+    },
+    "isla": {
+      "alt": "Example Live HQ island: the headquarters in the middle and one building per module",
+      "note": "Prototype with sample data. Hover over or tap each building.",
+      "b": {
+        "hq": {
+          "name": "Your headquarters",
+          "sign": "HQ",
+          "line": "{online} team members online"
+        },
+        "inbox": {
+          "name": "Customer service",
+          "sign": "INBOX",
+          "line": "{open} open conversations · {fresh} new today"
+        },
+        "crm": {
+          "name": "Customers and sales",
+          "sign": "SALES",
+          "line": "{deals} deals in the pipeline · {hot} hot"
+        },
+        "billing": {
+          "name": "Billing",
+          "sign": "BILLING",
+          "line": "{paid} payments this month · {overdue} overdue invoices"
+        },
+        "tasks": {
+          "name": "Tasks",
+          "sign": "TASKS",
+          "line": "{tasks} open tasks · {done} done today"
+        },
+        "social": {
+          "name": "Social",
+          "sign": "SOCIAL",
+          "line": "{social} comments answered automatically this week"
+        },
+        "catalog": {
+          "name": "Catalog",
+          "sign": "CATALOG",
+          "line": "{catalog} active products"
+        },
+        "automation": {
+          "name": "Automations",
+          "sign": "FLOWS",
+          "line": "{flows} flows working on their own"
+        },
+        "ai": {
+          "name": "AI pack",
+          "sign": "AI PACK",
+          "line": "{used} of {total} AI replies used this month"
+        }
+      }
     }
   },
   "pages2": {
