@@ -577,8 +577,6 @@
 .sp-space-hero .sp-model-col { position: relative; top: 0; height: 60vh; }
 
 /* Planes: comparación con la columna del nivel elegido resaltada */
-.sp-levels .sh-plans { margin-bottom: 56px; }
-.sp-level-for { margin-top: 4px; }
 .sp-table-wrap { overflow-x: auto; }
 .sp-table { width: 100%; border-collapse: collapse; font-size: 15px; }
 .sp-table th, .sp-table td { padding: 14px 16px; border-top: 1px solid var(--border-color); text-align: left; vertical-align: top; }
@@ -588,6 +586,75 @@
 .sp-table[data-level="0"] tr > :nth-child(2),
 .sp-table[data-level="1"] tr > :nth-child(3),
 .sp-table[data-level="2"] tr > :nth-child(4) { color: var(--text-primary); background: rgba(242, 5, 226, 0.06); }
+
+/* Precios (pricing.html y planes de cada Space): cifras en content/pricing.json */
+.pr-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; margin-bottom: 56px; }
+.pr-seg { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border: 1px solid var(--border-color); border-radius: 12px; }
+.pr-seg button { font: inherit; font-size: 14px; font-weight: 600; padding: 10px 16px; border: 0; border-radius: 9px; background: none; color: var(--text-secondary); cursor: pointer; transition: background-color 200ms ease, color 200ms ease; }
+.pr-seg button:hover { color: var(--text-primary); }
+.pr-seg button[aria-pressed="true"] { background: var(--text-primary); color: var(--bg-primary); }
+.pr-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px 48px; margin-bottom: 56px; }
+.pr-head .sh-body { max-width: 560px; margin-top: 16px; }
+.pr-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+.pr-cards-3 { grid-template-columns: repeat(3, 1fr); }
+.pr-card { display: flex; flex-direction: column; gap: 10px; padding-top: 32px; border-top: 2px solid var(--border-color); }
+.pr-levels .pr-card { cursor: pointer; }
+.pr-card.is-featured { border-top-color: var(--brand-pink); }
+.pr-price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 16px 0 0; }
+.pr-amount { font-size: clamp(40px, 4vw, 56px); font-weight: 800; line-height: 1; letter-spacing: -0.03em; color: var(--text-primary); font-variant-numeric: tabular-nums; }
+.pr-talk { font-size: clamp(30px, 2.8vw, 40px); }
+.pr-unit { font-size: 14px; color: var(--text-muted); }
+.pr-bill { min-height: 1.5em; }
+.pr-keys { flex: 1; list-style: none; margin: 16px 0 0; padding: 0; font-size: 15px; line-height: 1.45; color: var(--text-secondary); }
+.pr-keys li { padding: 10px 0; border-top: 1px solid var(--border-color); }
+.pr-card .btn-neon, .pr-card .sh-link { align-self: flex-start; margin-top: 20px; }
+.sp-hero .sp-sub [data-amount] { color: var(--text-primary); font-weight: 600; }
+/* Variantes: Edu (precio por sede, estudiantes y docentes) y pago mensual o anual */
+.pr-scope:not([data-space="edu"]) .pr-edu,
+.pr-scope[data-space="edu"] .pr-noedu,
+.pr-scope[data-billing="m"] .pr-y,
+.pr-scope[data-billing="y"] .pr-m { display: none !important; }
+.pr-inc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 80px; }
+.pr-inc-grid [hidden] { display: none; }
+.pr-inc-list { list-style: none; margin: 16px 0 0; padding: 0; }
+.pr-inc-list li { padding: 12px 0; border-top: 1px solid var(--border-color); color: var(--text-secondary); }
+.pr-calc { display: grid; grid-template-columns: minmax(0, 380px) 1fr; align-items: end; gap: 24px 48px; margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--border-color); }
+.pr-calc label { display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: var(--text-muted); }
+.pr-calc input { width: 100%; padding: 8px 0; font: inherit; font-size: 32px; font-weight: 700; color: var(--text-primary); background: none; border: 0; border-bottom: 1px solid var(--border-color); border-radius: 0; font-variant-numeric: tabular-nums; }
+.pr-calc input:focus { outline: none; border-bottom-color: var(--brand-pink); }
+.pr-calc-out { margin: 6px 0; font-size: var(--sh-h3); font-weight: 600; color: var(--text-primary); }
+.pr-scope[data-fixed] .sp-actions { margin-top: 56px; }
+.pr-table[data-level="3"] tr > :nth-child(5) { color: var(--text-primary); background: rgba(242, 5, 226, 0.06); }
+.pr-table-tabs { display: none; margin-bottom: 16px; }
+.pr-addons { display: grid; margin: 0; }
+.pr-addons > div { display: flex; justify-content: space-between; gap: 24px; padding: 16px 0; border-top: 1px solid var(--border-color); }
+.pr-addons dt { font-weight: 500; color: var(--text-primary); }
+.pr-addons dd { margin: 0; white-space: nowrap; color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+.pr-faq details { border-bottom: 1px solid var(--border-color); }
+.pr-faq details:first-child { border-top: 1px solid var(--border-color); }
+.pr-faq summary { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 22px 0; list-style: none; cursor: pointer; font-size: 18px; font-weight: 600; color: var(--text-primary); }
+.pr-faq summary::-webkit-details-marker { display: none; }
+.pr-faq summary::after { content: '+'; font-size: 24px; font-weight: 400; color: var(--brand-pink); transition: transform 300ms ease; }
+.pr-faq details[open] summary::after { transform: rotate(45deg); }
+.pr-faq details p { margin: 0 0 22px; }
+.pr-final-actions { justify-content: center; margin-top: 0; }
+@media (max-width: 1100px) {
+    .pr-cards { grid-template-columns: repeat(2, 1fr); gap: 48px 32px; }
+}
+@media (max-width: 700px) {
+    .pr-cards, .pr-cards-3, .pr-inc-grid, .pr-calc { grid-template-columns: 1fr; }
+    .pr-inc-grid { gap: 40px; margin-top: 56px; }
+    .pr-seg { width: 100%; }
+    .pr-seg button { flex: 1 1 auto; padding: 10px 12px; }
+    .pr-table-tabs { display: flex; }
+    .pr-table th:not(:first-child), .pr-table td { display: none; }
+    .pr-table[data-level="0"] tr > :nth-child(2),
+    .pr-table[data-level="1"] tr > :nth-child(3),
+    .pr-table[data-level="2"] tr > :nth-child(4),
+    .pr-table[data-level="3"] tr > :nth-child(5) { display: table-cell; }
+    .pr-table tbody th { width: 55%; }
+    .pr-addons > div { flex-direction: column; gap: 4px; }
+}
 
 /* Formulario */
 .sp-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }

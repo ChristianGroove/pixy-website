@@ -1,0 +1,42 @@
+{
+  "_nota": "Fuente única de precios y cupos del sitio (USD). La leen tools/pages/build-pages.mjs y, embebida en cada página, js/spaces-pages.js. Si cambia un precio, se cambia solo aquí y se corre node tools/build-all.mjs. Aquí solo va lo que se publica en el sitio.",
+  "currency": "USD",
+  "annualMonths": 10,
+  "trialDays": 14,
+  "trialUrl": "https://app.pixy.com.co/register",
+  "levels": ["esencial", "pro", "total"],
+  "limits": {
+    "panelUsers": [3, 10, 20],
+    "portalStaff": [10, 50, 200],
+    "aiReplies": [1000, 5000, 15000],
+    "waTemplates": [1000, 5000, 15000],
+    "socialActions": [300, 1500, 5000],
+    "brand": [false, true, true],
+    "mode3d": [false, true, true],
+    "support": ["help", "chat", "priority"]
+  },
+  "extraPanelUser": 9,
+  "extraPortal10": 5,
+  "spaces": {
+    "agencias": { "prices": [49, 99, 199] },
+    "tiendas": { "prices": [49, 99, 199] },
+    "inmobiliaria": { "prices": [49, 99, 199] },
+    "saas": { "prices": [49, 99, 199] },
+    "resto": { "prices": [29, 59, 99] },
+    "edu": { "prices": [79, 149, 299], "perSite": true, "students": [200, 600, 1500], "extraStudents100": 15 }
+  },
+  "implementation": [199, 349, 499],
+  "addons": [
+    { "id": "portal10", "price": 5 },
+    { "id": "students100", "price": 15 },
+    { "id": "ai1000", "price": 9.99 },
+    { "id": "ai5000", "price": 39 },
+    { "id": "wa1000", "price": 12.99 },
+    { "id": "social500", "price": 14.99 },
+    { "id": "contracts", "price": 29.99 },
+    { "id": "imei", "price": 19.99 },
+    { "id": "adsMonitor", "price": 49 },
+    { "id": "email", "price": 9.99 },
+    { "id": "whitelabel", "price": 99 }
+  ]
+}

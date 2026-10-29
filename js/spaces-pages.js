@@ -1,7 +1,7 @@
 /**
  * PÁGINAS DE SPACES (generadas por tools/pages/build-pages.mjs)
  * - Catálogo: un modelo 3D en cromo, fijo a la derecha, que cambia al Space que se está leyendo.
- * - Planes: el nivel elegido resalta su columna en la comparación.
+ * - Precios: Space, pago mensual o anual, columna del nivel en la comparación y calculadora de Edu.
  * - Listas numeradas: el punto que cruza el centro se enciende (como en la portada).
  * - Formularios: el sitio no tiene servidor, así que se abre el correo con el mensaje listo.
  */
@@ -60,16 +60,92 @@
         }
     }
 
-    // --- Planes: el nivel elegido resalta su columna ------------------------------------------------
-    var levels = document.querySelectorAll('.sp-levels .sh-plan');
-    var table = document.querySelector('.sp-table');
-    levels.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            levels.forEach(function (o) { o.classList.toggle('is-active', o === btn); o.setAttribute('aria-selected', o === btn ? 'true' : 'false'); });
-            if (table) table.dataset.level = btn.dataset.level;
+    // --- Precios: Space, pago mensual o anual, nivel en la comparación y calculadora de Edu ------------
+    // Las cifras vienen de content/pricing.json, embebidas en #pixy-pricing por el generador
+    var dataEl = document.getElementById('pixy-pricing');
+    if (dataEl) {
+        var P = JSON.parse(dataEl.textContent);
+        var q = new URLSearchParams(location.search);
+        var state = { space: P.spaces[q.get('space')] ? q.get('space') : null, billing: q.get('billing') === 'annual' ? 'y' : 'm' };
+        var fmt = function (n) {
+            var en = lang() === 'en';
+            var parts = String(n).split('.');
+            var int = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, en ? ',' : '.');
+            return parts[1] ? int + (en ? '.' : ',') + (parts[1] + '0').slice(0, 2) : int;
+        };
+        var yearly = function (p) { return Math.round(p * P.annualMonths / 12); };
+        var scopes = document.querySelectorAll('.pr-scope');
+        var pressed = function (list, fn) { list.forEach(function (b) { b.setAttribute('aria-pressed', fn(b) ? 'true' : 'false'); }); };
+
+        var calc = function (sc) {
+            var box = sc.querySelector('[data-calc]');
+            if (!box) return;
+            var edu = P.spaces.edu;
+            var n = Math.max(1, Math.round(+box.querySelector('input').value || 1));
+            var i = 0;
+            while (i < edu.students.length - 1 && edu.students[i] < n) i++;
+            var extra = Math.max(0, Math.ceil((n - edu.students[i]) / 100));
+            var base = state.billing === 'y' ? yearly(edu.prices[i]) : edu.prices[i];
+            var t = P.calc[lang() === 'en' ? 'en' : 'es'];
+            box.querySelector('[data-calc-level]').textContent = P.names[lang() === 'en' ? 'en' : 'es'][i];
+            box.querySelector('[data-calc-price]').textContent = fmt(base + extra * edu.extraStudents100);
+            box.querySelector('[data-calc-note]').textContent = (extra ? t.extra : t.inc)
+                .replace('{n}', fmt(edu.students[i])).replace('{k}', extra).replace('{x}', fmt(extra * edu.extraStudents100));
+        };
+
+        var render = function () {
+            scopes.forEach(function (sc) {
+                var sp = sc.hasAttribute('data-fixed') ? sc.dataset.space : (state.space || sc.dataset.space);
+                var prices = P.spaces[sp].prices;
+                sc.dataset.space = sp;
+                sc.dataset.billing = state.billing;
+                sc.querySelectorAll('[data-amount]').forEach(function (el) {
+                    var p = prices[+el.dataset.amount];
+                    el.textContent = fmt(state.billing === 'y' ? yearly(p) : p);
+                });
+                sc.querySelectorAll('[data-total]').forEach(function (el) { el.textContent = fmt(prices[+el.dataset.total] * P.annualMonths); });
+                sc.querySelectorAll('[data-includes]').forEach(function (el) { el.hidden = el.dataset.includes !== sp; });
+                pressed(sc.querySelectorAll('[data-space-set]'), function (b) { return b.dataset.spaceSet === sp; });
+                pressed(sc.querySelectorAll('[data-billing-set]'), function (b) { return b.dataset.billingSet === state.billing; });
+                calc(sc);
+            });
+        };
+
+        document.addEventListener('click', function (e) {
+            var b = e.target.closest('[data-space-set], [data-billing-set], [data-level-set]');
+            if (!b) return;
+            if (b.dataset.spaceSet) state.space = b.dataset.spaceSet;
+            if (b.dataset.billingSet) state.billing = b.dataset.billingSet;
+            if (b.dataset.levelSet) {
+                var tab = document.querySelector('.pr-table');
+                if (tab) tab.dataset.level = b.dataset.levelSet;
+                pressed(document.querySelectorAll('[data-level-set]'), function (o) { return o === b; });
+                return;
+            }
+            render();
             warp('nudge');
+            // La dirección guarda la elección para compartirla (?space=tiendas&billing=annual)
+            if (document.querySelector('[data-space-set]')) {
+                var u = new URLSearchParams(location.search);
+                if (state.space) u.set('space', state.space);
+                if (state.billing === 'y') u.set('billing', 'annual'); else u.delete('billing');
+                history.replaceState(null, '', location.pathname + '?' + u.toString() + location.hash);
+            }
         });
-    });
+        document.querySelectorAll('[data-calc] input').forEach(function (inp) {
+            inp.addEventListener('input', function () { calc(inp.closest('.pr-scope')); });
+        });
+        // Al elegir un nivel en las tarjetas de precios, la comparación resalta su columna
+        document.querySelectorAll('.pr-levels .pr-card').forEach(function (card) {
+            card.addEventListener('click', function (e) {
+                if (e.target.closest('a')) return;
+                var btn = document.querySelector('[data-level-set="' + card.dataset.level + '"]');
+                if (btn) btn.click();
+            });
+        });
+        window.addEventListener('pixy:langChange', render);
+        render();
+    }
 
     // --- Formularios: abren el correo con el mensaje armado ------------------------------------------
     document.querySelectorAll('.sp-form').forEach(function (form) {
@@ -79,6 +155,7 @@
             var v = params.get(sel.name);
             if (v && sel.querySelector('option[value="' + v + '"]')) sel.value = v;
         });
+        form.querySelectorAll('input[type="hidden"][name]').forEach(function (inp) { if (params.get(inp.name)) inp.value = params.get(inp.name); });
 
         // Consentimiento: el botón queda deshabilitado hasta marcar la autorización (dictamen legal §4)
         var auth = form.querySelector('[data-consent="auth"]');

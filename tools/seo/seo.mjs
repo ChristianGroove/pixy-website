@@ -19,10 +19,15 @@ const PAGES = {
   "index.html": { path: "", title: "Pixy: el sistema operativo de tu negocio, con IA", description: "Atiende por WhatsApp con IA, vende con un pipeline que te dice qué hacer hoy, opera tu industria y cobra sin perseguir a nadie. Elige el Space de tu negocio.", og: SPACES, priority: "1.0", home: true },
   "spaces.html": { title: "Pixy Spaces: software hecho para tu industria", description: "Restaurantes, tiendas, inmobiliarias, colegios, agencias y software: cada Space trae los módulos, las palabras y los portales de tu industria, con IA incluida.", og: SPACES, priority: "0.9", crumb: "Spaces" },
   "features.html": { title: "Plataforma Pixy: WhatsApp con IA, CRM, tareas y cobros", description: "Bandeja omnicanal con IA, calificación de clientes, pipeline vivo, campañas, tareas, formularios, facturas y links de pago, conectados entre sí.", og: SPACES, priority: "0.9", crumb: "Plataforma" },
-  "pricing.html": { title: "Planes de Pixy: Esencial, Pro y Total", description: "Elige tu Space y un nivel según tu equipo: hasta 3, 10 o 20 usuarios. Suma solo los complementos que necesitas y paga en la moneda de tu empresa.", og: SPACES, priority: "0.9", crumb: "Planes" },
+  "pricing.html": { title: "Precios de Pixy: IA que atiende desde 29 USD al mes", description: "Esencial, Pro y Total para cada Space, en USD, con Respuestas de IA, WhatsApp y Pixy Social incluidos. Pago anual con dos meses gratis y 14 días de prueba.", og: SPACES, priority: "0.9", crumb: "Precios", faq: true, offers: true },
   "contact.html": { title: "Agenda una demo de Pixy con tu negocio", description: "Cuéntanos de tu negocio y te mostramos Pixy con tu caso en una demo guiada. Escríbenos a contact@pixy.com.co o por WhatsApp al +57 350 407 6800.", og: SPACES, priority: "0.8", crumb: "Contacto", type: "ContactPage" },
-  "partners.html": { title: "Plan Partner: revende Pixy con tu marca", description: "Para agencias: marca blanca con tu logo, tus colores y tu dominio, y un panel para crear y administrar las empresas de tus clientes.", og: SPACES, priority: "0.7", crumb: "Partners" },
+  "partners.html": { title: "Partners de Pixy: vende IA con tu marca", description: "Programa de partners para agencias y consultores: Pixy con tu marca y tu dominio, panel para tus clientes, cuentas de demostración y soporte prioritario.", og: SPACES, priority: "0.7", crumb: "Partners" },
   "space-agency.html": { title: "Software para agencias: Space Agencias de Pixy", description: "Proyectos, freelancers con PIN, briefings, cobros recurrentes, portal del cliente e informes de redes para tu agencia, con marca blanca para revender.", og: SPACES, priority: "0.8", crumb: "Space Agencias" },
+  "space-restaurant.html": { title: "Software para restaurantes: Space Resto de Pixy", description: "Menú digital, pedidos desde la mesa con QR, cocina, caja y equipo con PIN, con IA que atiende por WhatsApp. Precios en USD y 14 días gratis.", og: SPACES, priority: "0.8", crumb: "Space Resto" },
+  "space-stores.html": { title: "Software para tiendas: Space Tiendas de Pixy", description: "Tienda en línea desde tu catálogo, pedidos, varias sedes y comentarios que venden con Pixy Social, con IA que atiende. Precios en USD y 14 días gratis.", og: SPACES, priority: "0.8", crumb: "Space Tiendas" },
+  "space-real-estate.html": { title: "Software inmobiliario: Space Inmobiliaria de Pixy", description: "Propiedades publicadas con tu marca, cotizaciones, arriendos y liquidaciones a propietarios, con IA que atiende por WhatsApp. Precios en USD.", og: SPACES, priority: "0.8", crumb: "Space Inmobiliaria" },
+  "space-edu.html": { title: "Software para colegios: Pixy Edu", description: "Académico, asistencia, portal de familias y docentes, y cobro de pensiones para tu colegio. Precio por sede según estudiantes activos, con calculadora.", og: SPACES, priority: "0.8", crumb: "Pixy Edu" },
+  "space-saas.html": { title: "Software para startups SaaS: Space SaaS de Pixy", description: "Tu software con bandeja de WhatsApp e IA, CRM, tareas y proyectos, hosting y monitor de anuncios de Meta, conectados. Precios en USD y 14 días gratis.", og: SPACES, priority: "0.8", crumb: "Space SaaS" },
   "agency.html": { title: "Pixy Studio: marca, contenido, webs y pauta", description: "Marca, contenido, webs, tiendas y pauta con dirección de arte de revista, conectados a un sistema que vende. Paquetes, equipo dedicado o a la medida.", og: STUDIO, priority: "0.9", crumb: "Pixy Studio", studio: true },
   "agency/services.html": { title: "Paquetes de Pixy Studio: la colección", description: "Paquetes de marca, contenido, web, tienda, temporada y lanzamiento con dirección de arte y entregas claras, listos para empezar cuando tu marca lo necesite.", og: STUDIO, priority: "0.8", crumb: "Paquetes", studio: true },
   "agency/plans.html": { title: "Cómo trabajar con Pixy Studio: tres formas", description: "Paquetes con inicio y fin, Front Row como tu equipo creativo dedicado, o un proyecto a la medida. Elige la forma de trabajar que le sirve a tu marca.", og: STUDIO, priority: "0.8", crumb: "Planes", studio: true },
@@ -51,7 +56,9 @@ const ORG = {
   ...(SOCIAL.length ? { sameAs: SOCIAL } : {}),
 };
 
-function block(file, p) {
+const strip = (h) => h.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+
+function block(file, p, html = "") {
   const url = `${SITE}/${p.path ?? file}`;
   const graph = [ORG];
   if (p.home) {
@@ -63,6 +70,16 @@ function block(file, p) {
     graph.push({ "@type": "BreadcrumbList", itemListElement: items.map((x, n) => ({ "@type": "ListItem", position: n + 1, ...x })) });
   }
   graph.push({ "@type": p.type || "WebPage", "@id": `${url}#page`, url, name: p.title, description: p.description, inLanguage: "es", isPartOf: { "@id": `${SITE}/#site` }, publisher: { "@id": `${SITE}/#org` } });
+  if (p.faq) {
+    const qa = [...html.matchAll(/<details class="pr-faq-item"><summary[^>]*>([\s\S]*?)<\/summary><p[^>]*>([\s\S]*?)<\/p><\/details>/g)];
+    if (qa.length) graph.push({ "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: qa.map(([, q, a]) => ({ "@type": "Question", name: strip(q), acceptedAnswer: { "@type": "Answer", text: strip(a) } })) });
+  }
+  if (p.offers) {
+    // Rango de precios de los Spaces (USD al mes), desde content/pricing.json
+    const pr = JSON.parse(readFileSync(join(root, "content", "pricing.json"), "utf8"));
+    const all = Object.values(pr.spaces).flatMap((x) => x.prices);
+    graph.push({ "@type": "Product", name: "Pixy Spaces", description: p.description, brand: { "@id": `${SITE}/#org` }, url, offers: { "@type": "AggregateOffer", priceCurrency: pr.currency, lowPrice: Math.min(...all), highPrice: Math.max(...all), offerCount: all.length } });
+  }
   if (p.studio && file === "agency.html") graph.push({ "@type": "Service", name: "Pixy Studio", serviceType: "Marca, contenido, webs, tiendas y pauta", provider: { "@id": `${SITE}/#org` }, areaServed: "Worldwide", url });
   return `    <!-- seo: tools/seo/seo.mjs -->
     <title>${esc(p.title)}</title>
@@ -110,7 +127,7 @@ export async function buildSeo(posts = []) {
     if (!existsSync(f)) continue;
     const html = readFileSync(f, "utf8");
     if (/http-equiv="refresh"/.test(html)) continue;
-    writeFileSync(f, apply(html, block(file, p)), "utf8");
+    writeFileSync(f, apply(html, block(file, p, html)), "utf8");
     if (!p.noindex) urls.push({ loc: `${SITE}/${p.path ?? file}`, lastmod: today, priority: p.priority || "0.5" });
   }
   urls.push({ loc: `${SITE}/blog.html`, lastmod: posts[0]?.updated || today, priority: "0.8" });
