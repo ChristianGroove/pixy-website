@@ -709,6 +709,8 @@ html[data-theme="light"], html[data-theme="light"] body.spaces-face { background
 
 /* Los orbes de la portada quedan como anclas: el que se ve es el viajero */
 .orb-travel .sh-hero-orb, .orb-travel .ai-orb-el { opacity: 0; }
+/* Ocultos: sin animaciones internas (giros y halo) que se seguían calculando */
+.orb-travel .sh-hero-orb > span, .orb-travel .sh-hero-orb .ds-orb-body > span, .orb-travel .ai-orb-el > span, .orb-travel .ai-orb-el .ds-orb-body > span { animation: none !important; }
 
 .orb-traveler {
     --orb-size: 400px;

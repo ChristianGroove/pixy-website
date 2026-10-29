@@ -178,21 +178,31 @@
         cur.c = mix(cur.c, g.c, k);
         power += ((g.powered ? 1 : 0) - power) * (1 - Math.exp(-dt * 6));
 
+        // Rendimiento: cada valor se escribe solo si cambió. La posición solo mueve la capa (barato), pero
+        // el color, el resplandor y el recorte obligan a repintar el orbe con sus desenfoques
         var sc = cur.s / BASE;
-        orb.style.transform = 'translate3d(' + (cur.x - BASE / 2) + 'px,' + (cur.y - BASE / 2) + 'px,0) scale(' + sc + ')';
-        orb.style.setProperty('--orb-deep', css(cur.c));
-        orb.style.setProperty('--orb-core', css(mix(cur.c, [255, 255, 255], 0.3)));
-        orb.style.setProperty('--orb-accent', css(mix(cur.c, [255, 255, 255], 0.35), 0.36));
-        orb.style.setProperty('--orb-glow', css(cur.c, 0.55 * power));
-        orb.style.setProperty('--orb-power', power.toFixed(3));
-        orb.classList.toggle('is-powered', power > 0.5);
+        set('transform', 'translate3d(' + (cur.x - BASE / 2).toFixed(1) + 'px,' + (cur.y - BASE / 2).toFixed(1) + 'px,0) scale(' + sc.toFixed(4) + ')');
+        set('--orb-deep', css(cur.c));
+        set('--orb-core', css(mix(cur.c, [255, 255, 255], 0.3)));
+        set('--orb-accent', css(mix(cur.c, [255, 255, 255], 0.35), 0.36));
+        set('--orb-glow', css(cur.c, (0.55 * power).toFixed(2)));
+        set('--orb-power', power.toFixed(2));
+        var powered = power > 0.5;
+        if (powered !== wasPowered) { orb.classList.toggle('is-powered', powered); wasPowered = powered; }
 
         // Se esconde detrás del pie: recorta lo que queda por debajo de su borde superior
         var ft = footer.getBoundingClientRect().top;
         var bottom = cur.y + cur.s / 2;
         var cut = Math.max((bottom - ft) / sc, -BASE * 0.6);
-        orb.style.clipPath = 'inset(-60% -60% ' + cut.toFixed(1) + 'px -60%)';
+        set('clip-path', 'inset(-60% -60% ' + Math.round(cut) + 'px -60%)');
         requestAnimationFrame(frame);
+    };
+    var written = {};
+    var wasPowered = false;
+    var set = function (prop, value) {
+        if (written[prop] === value) return;
+        written[prop] = value;
+        orb.style.setProperty(prop, value);
     };
     requestAnimationFrame(frame);
     // Para revisar el recorrido desde la consola
