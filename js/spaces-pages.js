@@ -224,8 +224,8 @@
             var yes = news && news.checked;
             var today = new Date().toISOString().slice(0, 10);
             var proof = [
-                en ? 'Personal data authorization: Yes (Personal Data Policy, version 1.0)'
-                    : 'Autorización de tratamiento de datos: Sí (Política de tratamiento de datos personales, versión 1.0)',
+                en ? 'Personal data authorization: Yes (Personal Data Policy, version 1.1)'
+                    : 'Autorización de tratamiento de datos: Sí (Política de tratamiento de datos personales, versión 1.1)',
                 en ? 'News and offers by email' + (wa ? ' and WhatsApp' : '') + ': ' + (yes ? 'Yes' : 'No')
                     : 'Novedades y ofertas por correo' + (wa ? ' y WhatsApp' : '') + ': ' + (yes ? 'Sí' : 'No'),
                 (en ? 'Form: ' : 'Formulario: ') + form.dataset[en ? 'formEn' : 'formEs'] + ' · ' + today
