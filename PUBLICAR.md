@@ -10,17 +10,9 @@ El sitio es estático. Coolify publica la rama `main` de este repositorio y Clou
 
 ## Una sola vez (primera publicación del sitio renovado)
 
-### Modelos 3D (fuera del repositorio por la licencia de Envato)
+### Modelos 3D
 
-Los 8 archivos de `assets/models/` (`agencias.glb`, `edu.glb`, `inmobiliaria.glb`, `pixy.glb`, `resto.glb`, `saas.glb`, `servicios.glb`, `tiendas.glb`, unos 1,4 MB) no están en git. Se suben una vez al servidor y Coolify los monta en el sitio:
-
-1. Copia la carpeta al servidor, por ejemplo a `/data/pixy-website/models` (SFTP o `scp`).
-2. En Coolify, en la aplicación del sitio: **Configuration → Persistent Storage → Add** (directorio del servidor):
-   - Origen: `/data/pixy-website/models`
-   - Destino: la carpeta raíz que sirve nginx en el contenedor más `/assets/models`. Con el paquete estático de Coolify suele ser `/usr/share/nginx/html/assets/models`; confírmalo en la pestaña de configuración del build.
-3. Vuelve a desplegar y comprueba que `https://pixy.com.co/assets/models/resto.glb` responde 200.
-
-Si faltan, el sitio funciona igual: el viaje de Spaces y el catálogo se ven sin los objetos en cromo.
+Los 8 archivos de `assets/models/` van en el repositorio por decisión del dueño, que asume la licencia de Envato, y se publican con el resto del sitio. Si faltaran, el sitio funciona igual, solo sin los objetos en cromo.
 
 ### Cloudflare
 

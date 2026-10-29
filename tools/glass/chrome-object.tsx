@@ -2,7 +2,7 @@
  * Objeto 3D de cada Space, solo en cromo (decisión del dueño: nada de vidrio).
  * Basado en glass-object.tsx del sitio oscuro (pixy-web): mismas poses, mismo cambio de modelo
  * (se encoge, cambia y vuelve) y el giro que se acelera con el warp del fondo. Sin halos de color.
- * Los GLB salen de pixy-web (scripts/models) y viven en assets/models/, fuera de git (licencia Envato).
+ * Los GLB salen de pixy-web (scripts/models) y viven en assets/models/ (incluidos en el repositorio por decisión del dueño, que asume la licencia de Envato).
  */
 import { Suspense, useEffect, useRef, useState } from "react";
 import * as THREE from "three";
