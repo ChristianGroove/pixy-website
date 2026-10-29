@@ -13,9 +13,12 @@
     // quedan traducidos antes del primer pintado (sin destello del español al navegar en inglés).
     // Después se descarga el actual y se avisa a los componentes como siempre.
     const cacheKey = (lang) => `pixy_i18n_${lang}`;
+    let appliedRaw = '';
     try {
-        const cached = JSON.parse(localStorage.getItem(cacheKey(currentLang)) || 'null');
+        const raw = localStorage.getItem(cacheKey(currentLang));
+        const cached = JSON.parse(raw || 'null');
         if (cached) {
+            appliedRaw = raw;
             currentTranslations = cached;
             applyTranslations(cached);
             document.documentElement.lang = currentLang;
@@ -67,10 +70,14 @@
                 throw new Error(`Could not load ${lang}.json`);
             }
 
-            const translations = await response.json();
-            try { localStorage.setItem(cacheKey(lang), JSON.stringify(translations)); } catch (e) { }
+            const raw = await response.text();
+            const translations = JSON.parse(raw);
+            try { localStorage.setItem(cacheKey(lang), raw); } catch (e) { }
             currentTranslations = translations;
-            applyTranslations(translations);
+            // Si es lo mismo que ya se aplicó desde la copia guardada, no se reescriben los textos (evita
+            // un segundo repintado de toda la página en cada visita)
+            if (raw !== appliedRaw) applyTranslations(translations);
+            appliedRaw = raw;
             document.documentElement.lang = lang;
 
             // Notify dynamic components (AI Architect, Calculators, etc.)

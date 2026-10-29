@@ -96,12 +96,23 @@ function mount() {
   document.querySelectorAll<HTMLElement>(".bg-gradient, .bg-grid").forEach((el) => (el.style.display = "none"));
 
   const root = createRoot(stage);
+  const narrow = window.matchMedia("(max-width: 900px)").matches;
   const render = () => {
     const light = isLight();
     host.style.backgroundColor = light ? "#edf0f4" : "#000000";
     // El sitio no lleva degradados (decisión del dueño): sin el resplandor de marca del login
     brandGlow.style.background = "none";
-    root.render(<Particles {...SPACE_PARTICLES_PRESET} lightMode={light} driftScale={siteDriftScale} />);
+    root.render(
+      <Particles
+        {...SPACE_PARTICLES_PRESET}
+        // Rendimiento: el lienzo a 1,5x como máximo (en retina pintaba 4 veces los píxeles) y la mitad
+        // de partículas en pantallas angostas, como hace la plataforma dentro de la app
+        pixelRatio={Math.min(window.devicePixelRatio || 1, 1.5)}
+        particleCount={narrow ? 800 : SPACE_PARTICLES_PRESET.particleCount}
+        lightMode={light}
+        driftScale={siteDriftScale}
+      />,
+    );
   };
   render();
   new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
