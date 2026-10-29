@@ -698,7 +698,7 @@ html[data-theme="light"], html[data-theme="light"] body.spaces-face { background
 /* Tech Provider de Meta: dato en texto (sin logo de Meta hasta tener su aprobación) */
 .spaces-face .footer-brand .footer-meta { margin-top: 12px; font-size: 13px; color: var(--text-muted); }
 .spaces-face .sp-note { margin-top: 20px; max-width: 420px; }
-.spaces-face .ai-act-note { display: block; margin-top: 12px; font-size: var(--sh-small); color: var(--text-muted); }
+.spaces-face .ai-act-note { display: block; margin-top: 4px; font-size: var(--sh-small); color: var(--text-muted); }
 
 /* ============================================
    Experimento: orbe viajero de la portada (js/orb-route.js)
