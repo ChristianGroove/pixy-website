@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        (function () {
+            try {
+                var s = localStorage.getItem('pixy-theme');
+                var t = s ? s : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- seo: tools/seo/seo.mjs -->
+    <title>Software para tiendas: Space Tiendas de Pixy</title>
+    <meta name="description" content="Tienda en línea desde tu catálogo, pedidos, varias sedes y comentarios que venden con Pixy Social, con IA que atiende. Precios en USD y 14 días gratis.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://pixy.com.co/space-stores.html">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:site_name" content="Pixy">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixy.com.co/space-stores.html">
+    <meta property="og:title" content="Software para tiendas: Space Tiendas de Pixy">
+    <meta property="og:description" content="Tienda en línea desde tu catálogo, pedidos, varias sedes y comentarios que venden con Pixy Social, con IA que atiende. Precios en USD y 14 días gratis.">
+    <meta property="og:image" content="https://pixy.com.co/assets/og/pixy.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Software para tiendas: Space Tiendas de Pixy">
+    <meta name="twitter:description" content="Tienda en línea desde tu catálogo, pedidos, varias sedes y comentarios que venden con Pixy Social, con IA que atiende. Precios en USD y 14 días gratis.">
+    <meta name="twitter:image" content="https://pixy.com.co/assets/og/pixy.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://pixy.com.co/#org","name":"Pixy","url":"https://pixy.com.co/","logo":{"@type":"ImageObject","url":"https://pixy.com.co/assets/favicon.png"},"email":"contact@pixy.com.co","contactPoint":[{"@type":"ContactPoint","contactType":"sales","email":"contact@pixy.com.co","telephone":"+57 350 407 6800","availableLanguage":["es","en"]}],"sameAs":["https://www.instagram.com/pixyspaces/","https://www.facebook.com/pixyspaces"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://pixy.com.co/"},{"@type":"ListItem","position":2,"name":"Space Tiendas","item":"https://pixy.com.co/space-stores.html"}]},{"@type":"WebPage","@id":"https://pixy.com.co/space-stores.html#page","url":"https://pixy.com.co/space-stores.html","name":"Software para tiendas: Space Tiendas de Pixy","description":"Tienda en línea desde tu catálogo, pedidos, varias sedes y comentarios que venden con Pixy Social, con IA que atiende. Precios en USD y 14 días gratis.","inLanguage":"es","isPartOf":{"@id":"https://pixy.com.co/#site"},"publisher":{"@id":"https://pixy.com.co/#org"}}]}</script>
+    <!-- /seo -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css?v=1ecea70862">
+    <link rel="stylesheet" href="css/components.css?v=3f57890380">
+    <link rel="stylesheet" href="css/agency-modern.css?v=00d53ae6f1">
+    <link rel="stylesheet" href="css/pages.css?v=0adab6f63c">
+    <link rel="stylesheet" href="css/spaces-home.css?v=272bd35327">
+    <link rel="expect" href="#pixy-end" blocking="render">
+</head>
+
+<body class="landing-page spaces-face">
+    <!-- Generado por tools/pages/build-pages.mjs: editar ahí, no aquí -->
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="nav-left-group">
+                <a href="index.html" class="nav-brand" aria-label="Pixy">
+                    <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
+                    <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
+                </a>
+                <div class="universe-switcher" role="tablist" aria-label="Pixy">
+                    <a href="agency.html" class="universe-tab" data-mode="agency">Studio</a>
+                    <a href="index.html" class="universe-tab active" data-mode="spaces">Spaces</a>
+                </div>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="spaces.html" class="neon-link active" data-i18n="chrome.spaces">Spaces</a>
+                <a href="features.html" class="neon-link" data-i18n="chrome.platform">Plataforma</a>
+                <a href="pricing.html" class="neon-link" data-i18n="chrome.plans">Planes</a>
+                <a href="blog.html" class="neon-link" data-i18n="chrome.blog">Blog</a>
+                <a href="contact.html" class="btn-neon nav-links-cta" data-i18n="chrome.demo">Agenda tu demo</a>
+            </div>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-lang" type="button" aria-label="Idioma / Language">
+                    <span id="lang-text">ES</span>
+                    <span class="btn-lang-caret" aria-hidden="true">▼</span>
+                </button>
+                <a href="contact.html" class="btn-neon-outline nav-cta" data-i18n="chrome.demo">Agenda tu demo</a>
+                <button class="nav-menu-btn" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Menú" data-i18n-aria="chrome.menu">
+                    <span class="nav-menu-bar" aria-hidden="true"></span>
+                    <span class="nav-menu-bar" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="sh-section sp-hero sp-space-hero" data-no-reveal>
+        <div class="container sp-catalog-grid">
+            <div>
+                <h1 class="sh-h1">Space Tiendas</h1>
+                <p class="sh-body sp-sub" data-i18n="pages2.space_tiendas.sub">Tu tienda en línea lista hoy y cada comentario convertido en venta.</p>
+                <div class="sp-actions">
+                    <a class="btn-neon" href="contact.html?space=tiendas" data-warp-click="hop" data-i18n="pages2.space_tiendas.cta">Quiero ver este Space</a>
+                    <a class="sh-link" href="#planes" data-i18n="pages2.space_tiendas.cta2">Ver planes</a>
+                </div>
+            </div>
+            <div class="sp-model-col" aria-hidden="true"><div class="sp-model" data-model="tiendas" data-accent="#2E7BFF"></div></div>
+        </div>
+    </section>
+
+    <section class="sh-section">
+        <div class="container sh-split">
+            <div class="sh-sticky">
+                <h2 class="sh-h2" data-i18n="pages2.space_tiendas.mods_t">Tu tienda, del comentario al pago.</h2>
+                <p class="sh-body" data-i18n="pages2.space_tiendas.mods_i">Además del núcleo de Pixy: bandeja, IA, pipeline y cobros.</p>
+                
+            </div>
+            <ol class="sh-list"><li><span class="sh-num">01</span><div><h3 class="sh-h3" data-i18n="pages2.space_tiendas.mods_0_t">Catálogo</h3><p class="sh-body" data-i18n="pages2.space_tiendas.mods_0_d">Productos, variantes, colecciones y servicios, con textos e imágenes asistidos por IA.</p></div></li><li><span class="sh-num">02</span><div><h3 class="sh-h3" data-i18n="pages2.space_tiendas.mods_1_t">Tienda generada</h3><p class="sh-body" data-i18n="pages2.space_tiendas.mods_1_d">Siete estilos, carrito, pago por pasos, cupones y envío.</p></div></li><li><span class="sh-num">03</span><div><h3 class="sh-h3" data-i18n="pages2.space_tiendas.mods_2_t">Tres formas de comprar</h3><p class="sh-body" data-i18n="pages2.space_tiendas.mods_2_d">Pago en línea, pedido por WhatsApp o solicitud de cotización.</p></div></li><li><span class="sh-num">04</span><div><h3 class="sh-h3" data-i18n="pages2.space_tiendas.mods_3_t">Comentarios que venden</h3><p class="sh-body" data-i18n="pages2.space_tiendas.mods_3_d">Pixy Social responde a quien comenta y le envía el link de pago.</p></div></li><li><span class="sh-num">05</span><div><h3 class="sh-h3" data-i18n="pages2.space_tiendas.mods_4_t">Dominio propio</h3><p class="sh-body" data-i18n="pages2.space_tiendas.mods_4_d">Tu tienda con tu dirección web.</p></div></li></ol>
+        </div>
+    </section>
+
+    <section class="sh-section pr-scope" id="planes" data-space="tiendas" data-billing="m" data-fixed>
+        <div class="container">
+            <div class="pr-head">
+                <div>
+                    <h2 class="sh-h2" data-i18n="pages2.space_tiendas.plans_t">Planes de Space Tiendas</h2>
+                    <p class="sh-body" data-i18n="pages2.plans.trial_l">Prueba Pixy 14 días gratis, sin tarjeta. Conecta tu WhatsApp y mira a la IA atender a tus clientes desde el primer día.</p>
+                </div>
+                <div class="pr-seg" role="group" aria-label="Forma de pago"><button type="button" data-billing-set="m" aria-pressed="true" data-i18n="pages2.plans.b_m">Mensual</button><button type="button" data-billing-set="y" aria-pressed="false" data-i18n="pages2.plans.b_y">Anual: dos meses gratis</button></div>
+            </div>
+            <div class="pr-cards pr-cards-3">
+                <article class="pr-card" data-level="0">
+                    <h3 class="sh-h3l" data-i18n="pages2.plans.l0">Esencial</h3>
+                    <p class="sh-small" data-i18n="pages2.plans.l0_p">Para negocios que arrancan a atender con IA.</p>
+                    <p class="pr-price"><span class="pr-amount" data-amount="0">49</span><span class="pr-unit"><span class="pr-noedu" data-i18n="pages2.plans.u_m">USD al mes</span><span class="pr-edu" data-i18n="pages2.plans.u_site">USD al mes por sede</span></span></p>
+                    <p class="sh-small pr-bill"><span class="pr-m" data-i18n="pages2.plans.bill_m">Pago mensual</span><span class="pr-y"><span data-total="0">490</span> <span data-i18n="pages2.plans.bill_y">USD al año: dos meses gratis</span></span></p>
+                    <ul class="pr-keys"><li data-i18n="pages2.plans.k_users0">3 usuarios del panel</li><li class="pr-noedu" data-i18n="pages2.plans.k_staff0">10 personas del equipo en portales</li><li class="pr-edu" data-i18n="pages2.plans.k_teach0">10 docentes en el portal docente</li><li class="pr-edu" data-i18n="pages2.plans.k_students0">200 estudiantes activos</li><li data-i18n="pages2.plans.k_ai0">1.000 Respuestas de IA al mes</li><li data-i18n="pages2.plans.k_wa0">1.000 mensajes de WhatsApp de plantilla al mes</li><li data-i18n="pages2.plans.k_social0">300 acciones automáticas en redes al mes</li><li data-i18n="pages2.plans.k_support_help">Centro de ayuda</li></ul>
+                    <a class="sh-link" href="https://app.pixy.com.co/register" rel="noopener" data-i18n="pages2.plans.trial">Prueba 14 días gratis</a>
+                </article>
+                <article class="pr-card is-featured" data-level="1">
+                    <h3 class="sh-h3l" data-i18n="pages2.plans.l1">Pro</h3>
+                    <p class="sh-small" data-i18n="pages2.plans.l1_p">Para equipos que venden y atienden todos los días.</p>
+                    <p class="pr-price"><span class="pr-amount" data-amount="1">99</span><span class="pr-unit"><span class="pr-noedu" data-i18n="pages2.plans.u_m">USD al mes</span><span class="pr-edu" data-i18n="pages2.plans.u_site">USD al mes por sede</span></span></p>
+                    <p class="sh-small pr-bill"><span class="pr-m" data-i18n="pages2.plans.bill_m">Pago mensual</span><span class="pr-y"><span data-total="1">990</span> <span data-i18n="pages2.plans.bill_y">USD al año: dos meses gratis</span></span></p>
+                    <ul class="pr-keys"><li data-i18n="pages2.plans.k_users1">10 usuarios del panel</li><li class="pr-noedu" data-i18n="pages2.plans.k_staff1">50 personas del equipo en portales</li><li class="pr-edu" data-i18n="pages2.plans.k_teach1">50 docentes en el portal docente</li><li class="pr-edu" data-i18n="pages2.plans.k_students1">600 estudiantes activos</li><li data-i18n="pages2.plans.k_ai1">5.000 Respuestas de IA al mes</li><li data-i18n="pages2.plans.k_wa1">5.000 mensajes de WhatsApp de plantilla al mes</li><li data-i18n="pages2.plans.k_social1">1.500 acciones automáticas en redes al mes</li><li data-i18n="pages2.plans.k_brand">Tu marca, sin «Pixy» para tus clientes</li><li data-i18n="pages2.plans.k_3d">Modo 3D: tu negocio como una ciudad viva</li><li data-i18n="pages2.plans.k_support_chat">Soporte por chat</li></ul>
+                    <a class="btn-neon" href="https://app.pixy.com.co/register" rel="noopener" data-i18n="pages2.plans.trial">Prueba 14 días gratis</a>
+                </article>
+                <article class="pr-card" data-level="2">
+                    <h3 class="sh-h3l" data-i18n="pages2.plans.l2">Total</h3>
+                    <p class="sh-small" data-i18n="pages2.plans.l2_p">Para operaciones con varias sedes o equipos grandes.</p>
+                    <p class="pr-price"><span class="pr-amount" data-amount="2">199</span><span class="pr-unit"><span class="pr-noedu" data-i18n="pages2.plans.u_m">USD al mes</span><span class="pr-edu" data-i18n="pages2.plans.u_site">USD al mes por sede</span></span></p>
+                    <p class="sh-small pr-bill"><span class="pr-m" data-i18n="pages2.plans.bill_m">Pago mensual</span><span class="pr-y"><span data-total="2">1.990</span> <span data-i18n="pages2.plans.bill_y">USD al año: dos meses gratis</span></span></p>
+                    <ul class="pr-keys"><li data-i18n="pages2.plans.k_users2">20 usuarios del panel</li><li class="pr-noedu" data-i18n="pages2.plans.k_staff2">200 personas del equipo en portales</li><li class="pr-edu" data-i18n="pages2.plans.k_teach2">200 docentes en el portal docente</li><li class="pr-edu" data-i18n="pages2.plans.k_students2">1.500 estudiantes activos</li><li data-i18n="pages2.plans.k_ai2">15.000 Respuestas de IA al mes</li><li data-i18n="pages2.plans.k_wa2">15.000 mensajes de WhatsApp de plantilla al mes</li><li data-i18n="pages2.plans.k_social2">5.000 acciones automáticas en redes al mes</li><li data-i18n="pages2.plans.k_brand">Tu marca, sin «Pixy» para tus clientes</li><li data-i18n="pages2.plans.k_3d">Modo 3D: tu negocio como una ciudad viva</li><li data-i18n="pages2.plans.k_support_priority">Soporte prioritario</li></ul>
+                    <a class="sh-link" href="https://app.pixy.com.co/register" rel="noopener" data-i18n="pages2.plans.trial">Prueba 14 días gratis</a>
+                </article>
+            </div>
+
+
+            <div class="pr-inc-grid">
+                <div>
+                    <h3 class="sh-h3" data-i18n="pages2.plans.inc_all">Todos los Spaces traen</h3>
+                    <ul class="pr-inc-list"><li data-i18n="pages2.plans.inc_all_0">Bandeja de WhatsApp, Instagram y Messenger con agente de IA</li><li data-i18n="pages2.plans.inc_all_1">CRM con embudo de ventas</li><li data-i18n="pages2.plans.inc_all_2">Pixy Social: responde comentarios y mensajes en redes solo</li><li data-i18n="pages2.plans.inc_all_3">Automatizaciones</li><li data-i18n="pages2.plans.inc_all_4">Centro de ayuda</li></ul>
+                </div>
+                <div data-includes="tiendas">
+                    <h3 class="sh-h3" data-i18n="pages2.plans.inc_tiendas_t">Además, en Tiendas</h3>
+                    <ul class="pr-inc-list"><li data-i18n="pages2.plans.inc_tiendas_0">Catálogo y pedidos de la tienda</li><li data-i18n="pages2.plans.inc_tiendas_1">Varias sedes</li><li data-i18n="pages2.plans.inc_tiendas_2">Control de asistencia del equipo</li><li data-i18n="pages2.plans.inc_tiendas_3">Cartera</li><li data-i18n="pages2.plans.inc_tiendas_4">Informes del CRM</li><li data-i18n="pages2.plans.inc_tiendas_5">Monitor de anuncios de Meta</li><li data-i18n="pages2.plans.inc_tiendas_6">Manifiestos IMEI (opcional)</li></ul>
+                </div>
+            </div>
+            <div class="sp-actions">
+                <a class="sh-link" href="pricing.html?space=tiendas" data-i18n="pages2.plans.compare">Comparar niveles y complementos</a>
+                <a class="sh-link" href="contact.html?plan=empresa" data-i18n="pages2.plans.e_more">¿Varias sedes y mucho volumen? Plan Empresa</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="sh-section sh-final">
+        <div class="container">
+            <h2 class="sh-h2" data-i18n="pages2.space_tiendas.close_t">Tu tienda, <span class="sh-accent">vendiendo mientras duermes.</span></h2>
+            <p class="sh-body" data-i18n="pages2.space_tiendas.close_s">Te mostramos Space Tiendas con los flujos de tu negocio.</p>
+            <a class="btn-neon" href="contact.html" data-warp-click="departure" data-i18n="pages2.space_tiendas.close_b">Agenda tu demo</a>
+        </div>
+    </section>
+
+    <script type="application/json" id="pixy-pricing">{"annualMonths":10,"spaces":{"agencias":{"prices":[49,99,199]},"tiendas":{"prices":[49,99,199]},"inmobiliaria":{"prices":[49,99,199]},"saas":{"prices":[49,99,199]},"resto":{"prices":[29,59,99]},"edu":{"prices":[79,149,299],"perSite":true,"students":[200,600,1500],"extraStudents100":15}},"names":{"es":["Esencial","Pro","Total"],"en":["Essential","Pro","Total"]},"calc":{"es":{"inc":"Incluye {n} estudiantes activos.","extra":"Incluye {n} estudiantes activos y {k} × 100 estudiantes más ({x} USD al mes)."},"en":{"inc":"Includes {n} active students.","extra":"Includes {n} active students and {k} × 100 more students ({x} USD a month)."}}}</script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
+                <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
+                <p data-i18n="chrome.slogan_spaces">El sistema operativo de tu negocio.</p>
+                <p class="footer-meta" data-i18n="chrome.meta_tp">Pixy es Tech Provider de Meta.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/pixyspaces/" target="_blank" rel="noopener me" aria-label="Pixy en Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg></a>
+                    <a href="https://www.facebook.com/pixyspaces" target="_blank" rel="noopener me" aria-label="Pixy en Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9.1 23.69v-7.98H6.63v-3.67H9.1v-1.58c0-4.09 1.85-5.98 5.86-5.98.4 0 .96.04 1.47.1.38.04.76.11 1.14.2v3.32c-.22-.02-.43-.03-.65-.04-.25 0-.49-.01-.74-.01-.7 0-1.26.1-1.67.31-.29.15-.52.36-.68.62-.26.42-.38 1-.38 1.75v1.3h3.92l-.39 2.1-.28 1.57h-3.25v8.24C19.4 23.24 24 18.18 24 12.04 24 5.42 18.63.04 12 .04S0 5.42 0 12.04c0 5.63 3.87 10.35 9.1 11.65z"/></svg></a>
+                </div>
+            </div>
+            <nav class="footer-links" aria-label="Producto">
+                <h4 data-i18n="chrome.col_product">Producto</h4>
+                <a href="spaces.html" class="neon-link" data-i18n="chrome.spaces">Spaces</a>
+                <a href="features.html" class="neon-link" data-i18n="chrome.platform">Plataforma</a>
+                <a href="pricing.html" class="neon-link" data-i18n="chrome.plans">Planes</a>
+                <a href="partners.html" class="neon-link" data-i18n="chrome.partners">Partners</a>
+            </nav>
+            <nav class="footer-links" aria-label="Pixy">
+                <h4 data-i18n="chrome.col_company">Pixy</h4>
+                <a href="blog.html" class="neon-link" data-i18n="chrome.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="chrome.contact">Contacto</a>
+                <a href="agency.html" class="neon-link" data-i18n="chrome.studio">Pixy Studio</a>
+                <a href="https://wa.me/573504076800" class="neon-link" target="_blank" rel="noopener" data-i18n="chrome.whatsapp">WhatsApp</a>
+            </nav>
+            <nav class="footer-links" aria-label="Legal">
+                <h4 data-i18n="chrome.col_legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="chrome.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="chrome.terms">Términos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="chrome.cookies">Cookies</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="chrome.deletion">Eliminación de datos</a>
+                <a href="legal/uso-aceptable.html" class="neon-link" data-i18n="chrome.acceptable">Uso aceptable</a>
+                <a href="legal/index.html" class="neon-link" data-i18n="chrome.legal_all">Todos los documentos</a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="chrome.rights">© 2026 Pixy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Fondo espacial (estrellas en viaje, reacciona al scroll) -->
+    <script src="js/space-bg.js?v=c747942c56"></script>
+    <script src="js/smooth-scroll.js?v=9b99cab1f0"></script>
+
+    <!-- i18n Script -->
+    <script src="js/i18n.js?v=5a387474c3" data-locales="4554ef8645"></script>
+
+    <!-- Main Script -->
+    <script src="js/main.js?v=9907957753"></script>
+
+    <!-- Páginas de Spaces: catálogo con modelo 3D, planes, listas y formulario -->
+    <script src="js/spaces-pages.js?v=269c672763"></script>
+    <div id="pixy-end" hidden></div>
+</body>
+
+</html>
