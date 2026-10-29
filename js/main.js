@@ -12,7 +12,8 @@ window.pixyOrbTravel = !!document.querySelector('[data-orb-route]') &&
 const pixyBoot = () => {
     // Mouse Spotlight Effect (Enhanced logic & performance)
     const spotlight = document.querySelector('.mouse-spotlight');
-    if (spotlight) {
+    // Oculto en el sitio renovado: sin bucle por cuadro si no se ve
+    if (spotlight && getComputedStyle(spotlight).display !== 'none') {
         let mouseX = 0, mouseY = 0;
         let spotlightX = 0, spotlightY = 0;
 

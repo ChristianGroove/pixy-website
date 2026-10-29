@@ -6,7 +6,6 @@
 
 // Self-executing to keep scope clean
 (function () {
-    console.log('🧱 Lego Header: Script Initialized');
 
     // Polling for GSAP availability
     const waitForGSAP = setInterval(() => {
@@ -17,7 +16,6 @@
     }, 100);
 
     function initLegoHeader() {
-        console.log('🧱 Lego Header: GSAP Found, staring logic');
         const nav = document.querySelector('.nav');
         if (!nav) {
             console.error('🧱 Lego Header: .nav not found');
@@ -53,12 +51,10 @@
 
             // SCROLL DOWN -> HIDE
             if (currentScrollY > lastScrollY && currentScrollY > 100 && !isHidden && !isAnimating && !nav.classList.contains('is-menu-open')) {
-                console.log('🧱 Lego Header: Disassembling (Hide)');
                 hideHeader();
             }
             // SCROLL UP -> SHOW
             else if (currentScrollY < lastScrollY && isHidden && !isAnimating) {
-                console.log('🧱 Lego Header: Assembling (Show)');
                 showHeader();
             }
 

@@ -700,8 +700,7 @@ html[data-theme="light"], html[data-theme="light"] body.spaces-face { background
 .spaces-face .sp-note { margin-top: 20px; max-width: 420px; }
 .spaces-face .ai-act-note { display: block; margin-top: 4px; font-size: var(--sh-small); color: var(--text-muted); }
 
-/* ============================================
-   Experimento: orbe viajero de la portada (js/orb-route.js)
+/* =====================================   Experimento: orbe viajero de la portada (js/orb-route.js)
    ============================================ */
 .orb-dock { display: none; }
 .orb-travel .orb-dock { display: block; width: 56px; height: 56px; margin-top: 40px; pointer-events: none; }
@@ -732,3 +731,9 @@ html[data-theme="light"], html[data-theme="light"] body.spaces-face { background
 .orb-traveler.is-powered .ds-orb-body { animation: orb-power-pulse 1.8s ease-in-out infinite; }
 @keyframes orb-power-halo { 0%, 100% { opacity: 0.65; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }
 @keyframes orb-power-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
+=======
+.spaces-face .ai-act-note { display: block; margin-top: 12px; font-size: var(--sh-small); color: var(--text-muted); }
+
+/* Rendimiento: sin desenfoque de fondo. Detrás hay estrellas animadas y cada desenfoque se recalculaba en
+   cada cuadro (la plataforma advierte lo mismo); el encabezado ya es casi opaco y el estilo no usa vidrio */
+.spaces-face *, .spaces-face *::before, .spaces-face *::after { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
