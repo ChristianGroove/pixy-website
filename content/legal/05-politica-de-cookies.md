@@ -1,7 +1,7 @@
 ---
 titulo: Política de cookies
-version: 1.0
-vigencia: 2026-10-28
+version: 1.1
+vigencia: 2026-10-29
 estado: Vigente
 ---
 
@@ -50,7 +50,7 @@ El sitio comercial **no usa cookies propias, analítica ni píxeles de publicida
 
 Para mostrar tipografías y algunas librerías, tu navegador descarga archivos de Google Fonts y de cdnjs (Cloudflare), que reciben tu dirección IP y datos técnicos del navegador según sus propias políticas. El sitio está alojado en nuestro proveedor de alojamiento web, que registra datos técnicos de las visitas (dirección IP, navegador y página visitada) para servirlo y protegerlo.
 
-Los formularios del sitio no envían datos a nuestros servidores: abren tu aplicación de correo con el mensaje listo, y solo recibimos lo que tú envías.
+Los formularios del sitio envían tu solicitud directamente a Pixy. Antes de enviarla, Cloudflare Turnstile verifica que no eres un robot; para eso procesa datos técnicos de tu navegador y de tu dispositivo, según su política. El uso que damos a los datos del formulario está en la [Política de tratamiento de datos personales](02-politica-tratamiento-datos.md).
 
 ## 6. Cómo controlarlas
 
