@@ -60,8 +60,11 @@
     padding: 0;
 }
 
+/* Sin scroll-behavior: smooth. El scroll suave lo hace Lenis (js/smooth-scroll.js); con smooth en el CSS,
+   ScrollTrigger lo restaura en línea tras cada recálculo y el scroll del navegador pelea con Lenis: la página
+   se traba y los pines (viaje de Spaces, IA) quedan medidos fuera de lugar */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
 }
 
 body {

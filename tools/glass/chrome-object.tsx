@@ -2,6 +2,7 @@
  * Objeto 3D de cada Space, solo en cromo (decisión del dueño: nada de vidrio).
  * Basado en glass-object.tsx del sitio oscuro (pixy-web): mismas poses, mismo cambio de modelo
  * (se encoge, cambia y vuelve) y el giro que se acelera con el warp del fondo. Sin halos de color.
+ * Cromo oscuro en los dos temas: refleja un estudio gris muy oscuro (con el estudio claro se veía casi transparente).
  * Los GLB salen de pixy-web (scripts/models) y viven en assets/models/ (incluidos en el repositorio por decisión del dueño, que asume la licencia de Envato).
  */
 import { Suspense, useEffect, useRef, useState } from "react";
@@ -24,6 +25,9 @@ const POSE: Record<ModelSlug, { rotation: [number, number, number]; scale?: numb
   edu: { rotation: [0.12, -0.25, 0], scale: 1.6 },
   agencias: { rotation: [0.1, -0.7, 0.1] },
 };
+
+// Estudio gris muy oscuro que refleja el cromo (decisión del dueño: cromo oscuro también en tema claro)
+const BACKDROP = "#2a2e37";
 
 // Puntero global normalizado (-1..1): el objeto mira hacia el cursor.
 const pointer = { x: 0, y: 0 };
@@ -99,8 +103,12 @@ function Scene({ base, slug, accent, drift, onReady }: Props) {
           </Suspense>
         </group>
       </Float>
-      {/* El cromo refleja el estudio: luz blanca y dos paneles con el color del Space */}
+      {/* El cromo refleja el estudio: fondo gris oscuro, luz blanca y dos paneles con el color del Space */}
       <Environment resolution={256}>
+        <mesh scale={40}>
+          <sphereGeometry args={[1, 32, 16]} />
+          <meshBasicMaterial color={BACKDROP} side={THREE.BackSide} toneMapped={false} />
+        </mesh>
         <Lightformer form="ring" intensity={3} position={[0, 4, 3]} scale={3} color="#ffffff" />
         <Lightformer form="rect" intensity={4} position={[-5, 1, 1]} scale={[3, 6, 1]} color={accent} />
         <Lightformer form="rect" intensity={2.5} position={[5, -1, 1]} scale={[3, 6, 1]} color="#ffffff" />
