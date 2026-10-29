@@ -699,3 +699,36 @@ html[data-theme="light"], html[data-theme="light"] body.spaces-face { background
 .spaces-face .footer-brand .footer-meta { margin-top: 12px; font-size: 13px; color: var(--text-muted); }
 .spaces-face .sp-note { margin-top: 20px; max-width: 420px; }
 .spaces-face .ai-act-note { display: block; margin-top: 12px; font-size: var(--sh-small); color: var(--text-muted); }
+
+/* ============================================
+   Experimento: orbe viajero de la portada (js/orb-route.js)
+   ============================================ */
+.orb-dock { display: none; }
+.orb-travel .orb-dock { display: block; width: 56px; height: 56px; margin-top: 40px; pointer-events: none; }
+.orb-travel .orb-dock-sm { display: inline-block; width: 22px; height: 22px; margin: 0; }
+.orb-travel .orb-dock-lg { width: 72px; height: 72px; margin: 0 auto 36px; }
+
+/* Los orbes de la portada quedan como anclas: el que se ve es el viajero */
+.orb-travel .sh-hero-orb, .orb-travel .ai-orb-el { opacity: 0; }
+
+.orb-traveler {
+    --orb-size: 400px;
+    position: fixed; top: 0; left: 0; z-index: 5;
+    width: 400px; height: 400px;
+    pointer-events: none;
+    transform-origin: 50% 50%;
+    will-change: transform, clip-path;
+}
+/* Resplandor que crece con la potencia (sección de IA) */
+.orb-traveler::after {
+    content: ''; position: absolute; inset: -18%; border-radius: 50%; z-index: -1;
+    background: radial-gradient(circle, var(--orb-glow, transparent) 0%, transparent 68%);
+    opacity: var(--orb-power, 0);
+    filter: blur(24px);
+}
+.orb-traveler.is-powered .ds-orb-swirl { animation-duration: 3.2s; }
+.orb-traveler.is-powered .ds-orb-blob { animation-duration: 2s; }
+.orb-traveler.is-powered .ds-orb-halo { animation: orb-power-halo 1.8s ease-in-out infinite; }
+.orb-traveler.is-powered .ds-orb-body { animation: orb-power-pulse 1.8s ease-in-out infinite; }
+@keyframes orb-power-halo { 0%, 100% { opacity: 0.65; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }
+@keyframes orb-power-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
