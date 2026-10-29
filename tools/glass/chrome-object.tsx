@@ -8,7 +8,7 @@
 import { Suspense, useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, Float, Lightformer, useGLTF } from "@react-three/drei";
+import { Environment, Lightformer, useGLTF } from "@react-three/drei";
 
 export type ModelSlug = "pixy" | "resto" | "tiendas" | "inmobiliaria" | "edu" | "agencias" | "saas";
 
@@ -68,18 +68,33 @@ export function ChromeObject({ base, slug, accent, drift, onReady, distance = 6.
 
 function Scene({ base, slug, accent, drift, onReady }: Props) {
   const group = useRef<THREE.Group>(null);
+  const floater = useRef<THREE.Group>(null);
+  // Reloj propio de la flotación: el lienzo deja de dibujar fuera de pantalla y, al volver, el reloj de la
+  // escena trae todo el tiempo pausado (el modelo daba un brinco al entrar el primer destino)
+  const floatT = useRef(0);
   const [shown, setShown] = useState(slug);
   const spin = useRef(0);
-  const scale = useRef(0);
-  // La primera aparición crece despacio; los cambios de destino son rápidos
-  const appeared = useRef(false);
+  // Empieza a tamaño completo: la entrada del viaje ya lo escala con el scroll (js/spaces-home.js) y el lienzo
+  // aparece con un fundido; crecer aquí además lo hacía brincar al entrar el primer destino
+  const scale = useRef(1);
+  const appeared = useRef(true);
 
   // Todos los modelos se descargan al montar: los cambios de destino son instantáneos.
   useEffect(() => SLUGS.forEach((s) => useGLTF.preload(modelUrl(base, s))), [base]);
 
-  useFrame((_, delta) => {
+  useFrame((_, rawDelta) => {
     const g = group.current;
     if (!g) return;
+    // Nunca más de dos cuadros de tiempo por cuadro: sin saltos al reanudar
+    const delta = Math.min(rawDelta, 1 / 30);
+    const f = floater.current;
+    if (f) {
+      // La misma flotación suave de drei (Float speed 1.6, giro 0.25, altura 0.6)
+      floatT.current += delta;
+      const t = (floatT.current / 4) * 1.6;
+      f.rotation.set((Math.cos(t) / 8) * 0.25, (Math.sin(t) / 8) * 0.25, (Math.sin(t) / 20) * 0.25);
+      f.position.y = (Math.sin(t) / 10) * 0.6;
+    }
     const swapping = shown !== slug;
     scale.current = THREE.MathUtils.damp(scale.current, swapping ? 0 : 1, swapping ? 14 : appeared.current ? 6 : 1.8, delta);
     if (scale.current > 0.98) appeared.current = true;
@@ -96,13 +111,13 @@ function Scene({ base, slug, accent, drift, onReady }: Props) {
     <>
       <ambientLight intensity={0.3} />
       <directionalLight position={[3, 4, 5]} intensity={1.4} />
-      <Float speed={1.6} rotationIntensity={0.25} floatIntensity={0.6}>
+      <group ref={floater}>
         <group ref={group}>
           <Suspense fallback={null}>
             <Model base={base} slug={shown} onReady={onReady} />
           </Suspense>
         </group>
-      </Float>
+      </group>
       {/* El cromo refleja el estudio: fondo gris oscuro, luz blanca y dos paneles con el color del Space */}
       <Environment resolution={256}>
         <mesh scale={40}>
