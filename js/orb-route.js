@@ -1,5 +1,5 @@
 /**
- * ORBE VIAJERO (experimento de la portada Spaces)
+ * ORBE VIAJERO de la portada Spaces
  * Un solo orbe de IA recorre la portada al ritmo del scroll: nace en la mano del astronauta, se acopla en
  * cada sección en un punto fijo (.orb-dock o un elemento propio), toma el acento de la sección, en la
  * sección de IA ocupa el lugar y el tamaño del orbe central con más resplandor, y al final baja y se

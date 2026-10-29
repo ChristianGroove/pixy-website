@@ -700,7 +700,7 @@ html[data-theme="light"], html[data-theme="light"] body.spaces-face { background
 .spaces-face .sp-note { margin-top: 20px; max-width: 420px; }
 .spaces-face .ai-act-note { display: block; margin-top: 4px; font-size: var(--sh-small); color: var(--text-muted); }
 
-/* =====================================   Experimento: orbe viajero de la portada (js/orb-route.js)
+/* =====================================   Orbe viajero de la portada (js/orb-route.js)
    ============================================ */
 .orb-dock { display: none; }
 .orb-travel .orb-dock { display: block; width: 56px; height: 56px; margin-top: 40px; pointer-events: none; }
