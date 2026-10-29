@@ -1,7 +1,7 @@
 ---
 titulo: Anexo de subencargados y proveedores tecnológicos
-version: 1.0
-vigencia: 2026-10-28
+version: 1.1
+vigencia: 2026-10-29
 estado: Vigente
 ---
 
@@ -40,6 +40,16 @@ Este anexo hace parte del [Acuerdo de encargo de tratamiento](04-acuerdo-encargo
 ## Mapas
 
 - **OpenStreetMap (Nominatim) y Carto**, para buscar direcciones y mostrar mapas (sedes, geocercas, inmuebles). Unión Europea y Estados Unidos. Reciben la dirección buscada y la dirección IP de quien ve el mapa.
+
+## Datos de los que Pixy es responsable
+
+Para atender a sus propios prospectos, usuarios y clientes (solicitudes del sitio, correos de la cuenta y el WhatsApp de Pixy), Pixy usa estos mismos proveedores como encargados:
+
+- **Supabase** y **Hostinger**: guardan y procesan las solicitudes y la cuenta.
+- **Cloudflare**: protege el sitio y verifica los formularios con Turnstile.
+- **Resend**: envía el acuse de recibo y los correos de la cuenta.
+- **Meta Platforms**: presta la API de WhatsApp Business del número de Pixy.
+- **Anthropic** y **Google**: generan las respuestas del asistente de IA en ese WhatsApp.
 
 ## Servicios que contrata el Cliente
 

@@ -1,7 +1,7 @@
 ---
 titulo: Política de tratamiento de datos personales
-version: 1.0
-vigencia: 2026-10-28
+version: 1.1
+vigencia: 2026-10-29
 estado: Vigente
 ---
 
@@ -36,6 +36,7 @@ Esta política regula ese tratamiento.
 - **Uso del servicio**: funciones usadas, configuraciones, consumo de IA y de mensajería, errores, para operar, facturar el consumo y mejorar el producto.
 - **Comunicaciones**: mensajes que nos envías por nuestros canales, incluidas notas de voz, y grabaciones de reuniones de demo o soporte cuando te lo informemos antes.
 - **Integraciones**: cuando conectas Meta (Facebook, Instagram, WhatsApp), TikTok u otros servicios, recibimos los identificadores de tus cuentas y páginas, los tokens de acceso y la información que autorizas en la pantalla de permisos de esa plataforma.
+- **Solicitudes**: lo que nos cuentas al pedir una demo, acceso o información (empresa, Space de interés, mensaje) y la constancia de la autorización que diste en el formulario (fecha, versión de esta política y texto aceptado).
 - **Candidatos**: hoja de vida y datos de la postulación.
 
 Las cookies y el almacenamiento del navegador se explican en la [Política de cookies](05-politica-de-cookies.md). No pedimos datos sensibles para estas finalidades. Si alguno llegara a ser necesario, te pediremos autorización explícita y te diremos que no estás obligado a darla.
@@ -46,20 +47,22 @@ Las cookies y el almacenamiento del navegador se explican en la [Política de co
 2. Prestar el servicio contratado, incluidas las integraciones que conectes.
 3. Facturar, cobrar, gestionar la suscripción y cumplir obligaciones contables y tributarias.
 4. Dar soporte y enviarte avisos sobre el servicio: cambios, incidentes, mantenimientos, vencimientos de pago.
-5. Enviarte información comercial de Pixy y Pixy Studio (novedades, ofertas, eventos, encuestas) por correo, WhatsApp u otros canales, **solo si lo autorizaste**, y siempre con opción de darte de baja.
-6. Analizar el uso agregado de la plataforma para mejorarla. Cuando sea posible usamos datos agregados o seudonimizados.
-7. Gestionar la relación con revendedores, aliados, proveedores y candidatos.
-8. Atender requerimientos de autoridades y defender los derechos de Pixy.
+5. Atender las solicitudes de demo, acceso o información que haces en nuestro sitio, en una demostración o por nuestros canales: registrarlas, enviarte un acuse de recibo, responderte, agendar la demo, decidir y gestionar tu acceso, y hacer el seguimiento comercial de esa solicitud por correo o, si nos escribes, por WhatsApp. Esto no incluye enviarte publicidad, que solo hacemos con la autorización de la finalidad 6.
+6. Enviarte información comercial de Pixy y Pixy Studio (novedades, ofertas, eventos, encuestas) por correo, WhatsApp u otros canales, **solo si lo autorizaste**, y siempre con opción de darte de baja.
+7. Analizar el uso agregado de la plataforma para mejorarla. Cuando sea posible usamos datos agregados o seudonimizados.
+8. Gestionar la relación con revendedores, aliados, proveedores y candidatos.
+9. Atender requerimientos de autoridades y defender los derechos de Pixy.
 
 Pixy **no vende** datos personales.
 
 ## 5. Inteligencia artificial
 
-Pixy usa modelos de inteligencia artificial de terceros (principalmente Anthropic Claude y Google Gemini, y OpenAI para búsquedas sobre el Conocimiento; la lista completa está en el [Anexo de subencargados](anexo-subencargados.md)) para funciones como respuestas automáticas y sugeridas, ayuda dentro de la app (Pixy Help), clasificación de conversaciones, transcripción de notas de voz y asistencia de textos e imágenes. Al hacerlo:
+Pixy usa modelos de inteligencia artificial de terceros (principalmente Anthropic Claude y Google Gemini, y OpenAI para búsquedas sobre el Conocimiento; la lista completa está en el [Anexo de subencargados](anexo-subencargados.md)) para funciones como respuestas automáticas y sugeridas, el asistente que atiende nuestro WhatsApp, ayuda dentro de la app (Pixy Help), clasificación de conversaciones, transcripción de notas de voz y asistencia de textos e imágenes. Al hacerlo:
 
 - Enviamos solo la información necesaria para la tarea.
 - Usamos los servicios de API comerciales de esos proveedores, cuyas condiciones establecen que los datos enviados **no se usan para entrenar sus modelos**. Pixy tampoco usa los datos de sus clientes para entrenar modelos propios.
-- La IA **apoya, no decide**: sus resultados son sugerencias que revisa una persona cuando afectan a alguien.
+- **En la atención por chat, la IA puede responder sola.** Cuando escribes al WhatsApp de Pixy, un asistente de IA puede contestarte de forma automática. Usa solo lo que escribes en esa conversación y nuestra base de conocimiento. Te lo informamos en el aviso del formulario del sitio, y el asistente te confirma que es una IA si se lo preguntas. Puedes pedir hablar con una persona en cualquier momento, y una persona del equipo puede tomar la conversación.
+- **La IA no decide sobre ti.** No aprueba ni niega el acceso a Pixy, no fija precios ni condiciones y no toma decisiones con efectos jurídicos o que te afecten de forma similar: eso lo decide una persona. En las demás funciones, sus resultados son sugerencias que revisa una persona cuando afectan a alguien.
 - Aplicamos los principios de la Circular Externa 002 de 2024 de la SIC sobre tratamiento de datos personales en sistemas de IA: idoneidad, necesidad, razonabilidad, proporcionalidad, minimización y responsabilidad demostrada.
 
 ### Datos de Google
@@ -119,4 +122,4 @@ Conservamos los datos mientras exista la relación y durante el tiempo necesario
 
 ## 13. Vigencia y cambios
 
-Esta política rige desde el **28 de octubre de 2026**. Las bases de datos estarán vigentes mientras Pixy desarrolle su actividad. Si hacemos cambios sustanciales (por ejemplo, en la identidad del responsable o en las finalidades), te avisaremos antes de que entren en vigor y, cuando la ley lo exija, pediremos una nueva autorización.
+La versión 1.0 rigió desde el **28 de octubre de 2026**. Esta versión 1.1 rige desde el **29 de octubre de 2026**. Precisa la atención de solicitudes de demo y acceso (finalidad 5) y el asistente de IA que responde por WhatsApp (sección 5). No cambia la identidad del responsable ni agrega finalidades distintas de las informadas en el formulario donde dejaste tus datos. Las bases de datos estarán vigentes mientras Pixy desarrolle su actividad. Si hacemos cambios sustanciales (por ejemplo, en la identidad del responsable o en las finalidades), te avisaremos antes de que entren en vigor y, cuando la ley lo exija, pediremos una nueva autorización.
