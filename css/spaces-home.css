@@ -288,6 +288,9 @@
 .spaces-face .btn-lang-caret { color: var(--brand-pink); font-size: 10px; }
 .spaces-face .nav-cta { padding: 8px 20px; font-size: 0.9rem; white-space: nowrap; }
 .spaces-face .nav-menu-btn, .spaces-face .nav-links .nav-links-cta { display: none; }
+/* Astronautas sin sombra: en modo claro la sombra negra se veía como una mancha */
+.spaces-face .spaces-hero-astronaut, .spaces-face .agency-hero-astronaut, .spaces-face .hero-space .spaces-hero-astronaut { filter: none; }
+
 /* Enlace activo sin resplandor */
 .spaces-face .neon-link.active, .spaces-face .neon-link:hover { text-shadow: none; }
 /* Selector Studio/Spaces: color sólido, sin degradado ni resplandor */
