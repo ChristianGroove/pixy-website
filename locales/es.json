@@ -404,6 +404,57 @@
       "title": "Tu negocio nunca se detiene. <span class=\"sh-accent\">Pixy tampoco.</span>",
       "subtitle": "Te mostramos tu Space en una demo guiada.",
       "button": "Agenda tu demo"
+    },
+    "isla": {
+      "alt": "Isla de ejemplo de la Sede Viva: la sede al centro y un edificio por módulo",
+      "note": "Prototipo con datos de muestra. Pasa el cursor o toca cada edificio.",
+      "b": {
+        "hq": {
+          "name": "Tu sede",
+          "sign": "SEDE",
+          "line": "{online} personas del equipo conectadas"
+        },
+        "inbox": {
+          "name": "Atención",
+          "sign": "ATENCIÓN",
+          "line": "{open} conversaciones abiertas · {fresh} nuevas hoy"
+        },
+        "crm": {
+          "name": "Clientes y ventas",
+          "sign": "VENTAS",
+          "line": "{deals} tratos en el embudo · {hot} calientes"
+        },
+        "billing": {
+          "name": "Cobros",
+          "sign": "COBROS",
+          "line": "{paid} pagos este mes · {overdue} facturas vencidas"
+        },
+        "tasks": {
+          "name": "Tareas",
+          "sign": "TAREAS",
+          "line": "{tasks} tareas abiertas · {done} terminadas hoy"
+        },
+        "social": {
+          "name": "Social",
+          "sign": "SOCIAL",
+          "line": "{social} comentarios respondidos solos esta semana"
+        },
+        "catalog": {
+          "name": "Catálogo",
+          "sign": "CATÁLOGO",
+          "line": "{catalog} productos activos"
+        },
+        "automation": {
+          "name": "Automatizaciones",
+          "sign": "FLUJOS",
+          "line": "{flows} flujos trabajando solos"
+        },
+        "ai": {
+          "name": "Paquete de IA",
+          "sign": "IA",
+          "line": "{used} de {total} Respuestas de IA usadas este mes"
+        }
+      }
     }
   },
   "pages2": {
