@@ -124,12 +124,13 @@ const list = (prefix, items) =>
     .join("")}</ol>`;
 
 /** Sección con título fijo a la izquierda y lista a la derecha. */
-const split = (key, esT, enT, esI, enI, items) => `
+const split = (key, esT, enT, esI, enI, items, note) => `
     <section class="sh-section">
         <div class="container sh-split">
             <div class="sh-sticky">
                 ${t("h2", `${key}_t`, esT, enT, "sh-h2")}
                 ${esI ? t("p", `${key}_i`, esI, enI, "sh-body") : ""}
+                ${note ? t("p", `${key}_note`, note[0], note[1], "sh-small sp-note") : ""}
             </div>
             ${list(key, items)}
         </div>
@@ -357,7 +358,7 @@ pages.push({
       ["IA que responde", "AI that replies", "Atiende de día y de noche con lo que cargaste en Conocimiento, escucha notas de voz y entiende imágenes.", "Serves day and night with what you loaded into Knowledge, listens to voice notes and understands images."],
       ["Tú decides cuándo actúa", "You decide when it acts", "En todos los chats o solo en los que llegan por anuncios. Si un asesor escribe, la IA se aparta.", "On every chat or only those coming from ads. If an agent writes, the AI steps aside."],
       ["Pixy Social", "Pixy Social", "Quien comenta «precio» recibe respuesta, mensaje directo y link de pago, y ves cuánto vendió cada publicación.", "Whoever comments \"price\" gets a reply, a direct message and a payment link, and you see how much each post sold."],
-    ]) +
+    ], ["Pixy es Tech Provider de Meta: conecta WhatsApp Business con la API oficial de Meta.", "Pixy is a Meta Tech Provider: it connects WhatsApp Business through Meta's official API."]) +
     split("sell", "Vende", "Sell", "Sabes a quién llamar hoy.", "You know who to call today.", [
       ["Calificación con IA", "AI qualification", "Cada conversación queda fría, tibia o caliente, con las frases del cliente como evidencia.", "Every conversation is marked cold, warm or hot, with the customer's own words as evidence."],
       ["Pipeline vivo", "Live pipeline", "Cola de hoy, salud de cada trato y tiempo máximo por etapa. La IA sugiere; tu equipo decide.", "Today's queue, deal health and maximum time per stage. The AI suggests; your team decides."],

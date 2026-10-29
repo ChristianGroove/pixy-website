@@ -11,6 +11,7 @@ export const CHROME_I18N = {
     partners: "Partners", contact: "Contacto", studio: "Pixy Studio", spaces_site: "Pixy Spaces",
     privacy: "Privacidad", terms: "Términos", cookies: "Cookies", deletion: "Eliminación de datos", permissions: "Permisos",
     rights: "© 2026 Pixy. Todos los derechos reservados.",
+    meta_tp: "Pixy es Tech Provider de Meta.",
   },
   en: {
     spaces: "Spaces", platform: "Platform", plans: "Plans", blog: "Blog", demo: "Book a demo", menu: "Menu",
@@ -20,6 +21,7 @@ export const CHROME_I18N = {
     partners: "Partners", contact: "Contact", studio: "Pixy Studio", spaces_site: "Pixy Spaces",
     privacy: "Privacy", terms: "Terms", cookies: "Cookies", deletion: "Data deletion", permissions: "Permissions",
     rights: "© 2026 Pixy. All rights reserved.",
+    meta_tp: "Pixy is a Meta Tech Provider.",
   },
 };
 const es = CHROME_I18N.es;
@@ -113,6 +115,7 @@ function footShell(pre, alt, sloganKey, cols) {
                 <img src="${pre}assets/logos/logo-dark.svg" alt="${alt}" class="footer-logo footer-logo-dark">
                 <img src="${pre}assets/logos/logo-light.svg" alt="${alt}" class="footer-logo footer-logo-light">
                 <p ${i(sloganKey)}>${es[sloganKey]}</p>
+                <p class="footer-meta" ${i("meta_tp")}>${es.meta_tp}</p>
             </div>
 ${cols}
 ${legalCol(pre)}
