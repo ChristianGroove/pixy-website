@@ -6,12 +6,13 @@
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { SOCIAL as PROFILES } from "../pages/chrome.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const SITE = "https://pixy.com.co";
 export const CONTACT = { email: "contact@pixy.com.co", phone: "+57 350 407 6800", whatsapp: "https://wa.me/573504076800" };
-// Perfiles oficiales en redes (Organization.sameAs). Vacío hasta tener las URL reales.
-export const SOCIAL = [];
+// Perfiles oficiales en redes (Organization.sameAs): se definen en tools/pages/chrome.mjs
+const SOCIAL = PROFILES.map((s) => s.url);
 
 const SPACES = "assets/og/pixy.png", STUDIO = "assets/og/studio.png";
 const PAGES = {

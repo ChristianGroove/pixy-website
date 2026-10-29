@@ -103,6 +103,21 @@ const flink = (pre, href, key) => `                <a href="${pre}${href}" class
 export const WHATSAPP = "https://wa.me/573504076800";
 const waLink = `                <a href="${WHATSAPP}" class="neon-link" target="_blank" rel="noopener" ${i("whatsapp")}>${es.whatsapp}</a>`;
 
+// Perfiles oficiales de Pixy en redes: pie de todas las páginas y Organization.sameAs (tools/seo, tools/blog).
+// Para sumar uno (LinkedIn, TikTok, YouTube…) se agrega aquí con su ícono y se corre tools/build-all.mjs.
+export const SOCIAL = [
+  { net: "instagram", label: "Instagram", url: "https://www.instagram.com/pixyspaces/",
+    icon: '<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/>' },
+  { net: "facebook", label: "Facebook", url: "https://www.facebook.com/pixyspaces",
+    icon: '<path fill="currentColor" d="M9.1 23.69v-7.98H6.63v-3.67H9.1v-1.58c0-4.09 1.85-5.98 5.86-5.98.4 0 .96.04 1.47.1.38.04.76.11 1.14.2v3.32c-.22-.02-.43-.03-.65-.04-.25 0-.49-.01-.74-.01-.7 0-1.26.1-1.67.31-.29.15-.52.36-.68.62-.26.42-.38 1-.38 1.75v1.3h3.92l-.39 2.1-.28 1.57h-3.25v8.24C19.4 23.24 24 18.18 24 12.04 24 5.42 18.63.04 12 .04S0 5.42 0 12.04c0 5.63 3.87 10.35 9.1 11.65z"/>' },
+];
+const socialRow = SOCIAL.length
+  ? `                <div class="footer-social">
+${SOCIAL.map((s) => `                    <a href="${s.url}" target="_blank" rel="noopener me" aria-label="Pixy en ${s.label}" title="${s.label}"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">${s.icon}</svg></a>`).join("\n")}
+                </div>
+`
+  : "";
+
 function legalCol(pre) {
   return `            <nav class="footer-links" aria-label="Legal">
                 <h4 ${i("col_legal")}>${es.col_legal}</h4>
@@ -120,7 +135,7 @@ function footShell(pre, alt, sloganKey, cols) {
                 <img src="${pre}assets/logos/logo-light.svg" alt="${alt}" class="footer-logo footer-logo-light">
                 <p ${i(sloganKey)}>${es[sloganKey]}</p>
                 <p class="footer-meta" ${i("meta_tp")}>${es.meta_tp}</p>
-            </div>
+${socialRow}            </div>
 ${cols}
 ${legalCol(pre)}
         </div>

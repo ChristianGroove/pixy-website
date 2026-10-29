@@ -10,7 +10,7 @@ import { createRequire } from "node:module";
 import { readFileSync, writeFileSync, readdirSync, existsSync, statSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { spacesNav, spacesFooter, withPageEnd } from "../pages/chrome.mjs";
+import { spacesNav, spacesFooter, withPageEnd, SOCIAL } from "../pages/chrome.mjs";
 
 const require = createRequire(import.meta.url);
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
@@ -144,7 +144,7 @@ const fmtDate = (d) => {
   return `${day} de ${M[m - 1]} de ${y}`;
 };
 const ld = (obj) => `    <script type="application/ld+json">${JSON.stringify(obj)}</script>`;
-const ORG = { "@type": "Organization", "@id": `${SITE}/#org`, name: "Pixy", url: `${SITE}/`, logo: { "@type": "ImageObject", url: `${SITE}/assets/favicon.png` } };
+const ORG = { "@type": "Organization", "@id": `${SITE}/#org`, name: "Pixy", url: `${SITE}/`, logo: { "@type": "ImageObject", url: `${SITE}/assets/favicon.png` }, ...(SOCIAL.length ? { sameAs: SOCIAL.map((s) => s.url) } : {}) };
 
 const THEME_BTN = `    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema" aria-label="Cambiar tema">
         <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
@@ -236,8 +236,7 @@ function shareButtons(p, variant) {
   const u = encodeURIComponent(p.url), t = encodeURIComponent(p.title);
   const nets = [
     ["whatsapp", "WhatsApp", `https://wa.me/?text=${t}%20${u}`],
-    ["linkedin", "LinkedIn", `https://www.linkedin.com/sharing/share-offsite/?url=${u}`],
-    ["x", "X", `https://twitter.com/intent/tweet?text=${t}&url=${u}`],
+    // LinkedIn y X ocultos por decisión del dueño (Pixy no tiene perfil ahí); se reactivan agregándolos aquí
     ["facebook", "Facebook", `https://www.facebook.com/sharer/sharer.php?u=${u}`],
     ["mail", "Email", `mailto:?subject=${t}&body=${t}%0A%0A${u}`],
   ];

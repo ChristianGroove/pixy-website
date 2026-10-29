@@ -703,3 +703,8 @@ html[data-theme="light"], html[data-theme="light"] body.spaces-face { background
 /* Rendimiento: sin desenfoque de fondo. Detrás hay estrellas animadas y cada desenfoque se recalculaba en
    cada cuadro (la plataforma advierte lo mismo); el encabezado ya es casi opaco y el estilo no usa vidrio */
 .spaces-face *, .spaces-face *::before, .spaces-face *::after { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+
+/* Perfiles de Pixy en redes (pie) */
+.spaces-face .footer-social { display: flex; gap: 10px; margin-top: 20px; }
+.spaces-face .footer-social a { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; color: var(--text-secondary); border: 1px solid var(--border-color); transition: color 200ms ease, border-color 200ms ease, background 200ms ease, transform 250ms cubic-bezier(0.16, 1, 0.3, 1); }
+.spaces-face .footer-social a:hover, .spaces-face .footer-social a:focus-visible { color: #fff; background: var(--brand-pink); border-color: var(--brand-pink); transform: translateY(-2px); outline: none; }
