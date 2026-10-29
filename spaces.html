@@ -15,439 +15,148 @@
         })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixy Spaces - Industria por Industria</title>
-    <meta name="description"
-        content="Descubre el Space diseñado para tu negocio. Flujos y automatizaciones nativas para Agencias, Restaurantes, Comercios y Servicios.">
+    <!-- seo: tools/seo/seo.mjs -->
+    <title>Pixy Spaces: software hecho para tu industria</title>
+    <meta name="description" content="Restaurantes, tiendas, inmobiliarias, colegios, agencias y software: cada Space trae los módulos, las palabras y los portales de tu industria, con IA incluida.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://pixy.com.co/spaces.html">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-
-    <!-- Open Graph -->
+    <meta name="theme-color" content="#000000">
+    <meta property="og:site_name" content="Pixy">
+    <meta property="og:locale" content="es_ES">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pixy.com.co/spaces.html">
-    <meta property="og:title" content="Pixy Spaces - Industria por Industria">
-    <meta property="og:description"
-        content="Descubre el Space diseñado para tu negocio. Flujos y automatizaciones nativas para Agencias, Restaurantes, Comercios y Servicios.">
-    <meta property="og:image" content="https://pixy.com.co/assets/og-image.png">
-
-    <!-- Twitter -->
+    <meta property="og:title" content="Pixy Spaces: software hecho para tu industria">
+    <meta property="og:description" content="Restaurantes, tiendas, inmobiliarias, colegios, agencias y software: cada Space trae los módulos, las palabras y los portales de tu industria, con IA incluida.">
+    <meta property="og:image" content="https://pixy.com.co/assets/og/pixy.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://pixy.com.co/spaces.html">
-    <meta name="twitter:title" content="Pixy Spaces - Industria por Industria">
-    <meta name="twitter:description"
-        content="Descubre el Space diseñado para tu negocio. Flujos y automatizaciones nativas para Agencias, Restaurantes, Comercios y Servicios.">
+    <meta name="twitter:title" content="Pixy Spaces: software hecho para tu industria">
+    <meta name="twitter:description" content="Restaurantes, tiendas, inmobiliarias, colegios, agencias y software: cada Space trae los módulos, las palabras y los portales de tu industria, con IA incluida.">
+    <meta name="twitter:image" content="https://pixy.com.co/assets/og/pixy.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://pixy.com.co/#org","name":"Pixy","url":"https://pixy.com.co/","logo":{"@type":"ImageObject","url":"https://pixy.com.co/assets/favicon.png"},"email":"contact@pixy.com.co","contactPoint":[{"@type":"ContactPoint","contactType":"sales","email":"contact@pixy.com.co","telephone":"+57 350 407 6800","availableLanguage":["es","en"]}],"sameAs":["https://www.instagram.com/pixyspaces/","https://www.facebook.com/pixyspaces"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://pixy.com.co/"},{"@type":"ListItem","position":2,"name":"Spaces","item":"https://pixy.com.co/spaces.html"}]},{"@type":"WebPage","@id":"https://pixy.com.co/spaces.html#page","url":"https://pixy.com.co/spaces.html","name":"Pixy Spaces: software hecho para tu industria","description":"Restaurantes, tiendas, inmobiliarias, colegios, agencias y software: cada Space trae los módulos, las palabras y los portales de tu industria, con IA incluida.","inLanguage":"es","isPartOf":{"@id":"https://pixy.com.co/#site"},"publisher":{"@id":"https://pixy.com.co/#org"}}]}</script>
+    <!-- /seo -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 
-    <meta name="twitter:image" content="https://pixy.com.co/assets/og-image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
 
-    <!-- Dependencies -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <style>
-        body {
-            visibility: visible;
-            opacity: 1;
-        }
-        html[data-theme="dark"] body {
-            background-color: #0F0F1A;
-        }
-        html[data-theme="light"] body {
-            background-color: #ffffff;
-        }
-    </style>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css?v=7">
-    <link rel="stylesheet" href="css/pages.css?v=10">
+    <link rel="stylesheet" href="css/style.css?v=1ecea70862">
+    <link rel="stylesheet" href="css/components.css?v=3f57890380">
+    <link rel="stylesheet" href="css/agency-modern.css?v=00d53ae6f1">
+    <link rel="stylesheet" href="css/pages.css?v=0adab6f63c">
+    <link rel="stylesheet" href="css/spaces-home.css?v=a81f982b84">
+    <link rel="expect" href="#pixy-end" blocking="render">
 </head>
 
-<body class="industries-page">
-    <div class="mouse-spotlight"></div>
+<body class="landing-page spaces-face">
+    <!-- Generado por tools/pages/build-pages.mjs: editar ahí, no aquí -->
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
-
-    <!-- Navigation (Shared) -->
     <nav class="nav">
         <div class="nav-content">
-            <div class="nav-left-group" style="display: flex; align-items: center; gap: 32px;">
-                <a href="index.html" class="nav-brand">
+            <div class="nav-left-group">
+                <a href="index.html" class="nav-brand" aria-label="Pixy">
                     <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
                     <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
                 </a>
-                <div class="universe-switcher" role="tablist" aria-label="Ecosistema">
-                    <a href="agency.html" class="universe-tab" data-mode="agency">Agency</a>
+                <div class="universe-switcher" role="tablist" aria-label="Pixy">
+                    <a href="agency.html" class="universe-tab" data-mode="agency">Studio</a>
                     <a href="index.html" class="universe-tab active" data-mode="spaces">Spaces</a>
                 </div>
             </div>
-            <div class="nav-links">
-                <a href="index.html" class="neon-link" data-i18n="nav.home">Inicio</a>
-                <div class="nav-item has-dropdown">
-                    <a href="spaces.html" class="neon-link active" data-i18n="nav.spaces">Spaces</a>
-                </div>
-                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
-                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
-                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+            <div class="nav-links" id="nav-links">
+                <a href="spaces.html" class="neon-link active" data-i18n="chrome.spaces">Spaces</a>
+                <a href="features.html" class="neon-link" data-i18n="chrome.platform">Plataforma</a>
+                <a href="pricing.html" class="neon-link" data-i18n="chrome.plans">Planes</a>
+                <a href="blog.html" class="neon-link" data-i18n="chrome.blog">Blog</a>
+                <a href="contact.html" class="btn-neon nav-links-cta" data-i18n="chrome.demo">Agenda tu demo</a>
             </div>
             <div class="nav-actions">
-                <!-- Language Switcher -->
-                <button id="lang-toggle" class="btn-lang"
-                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                <button id="lang-toggle" class="btn-lang" type="button" aria-label="Idioma / Language">
                     <span id="lang-text">ES</span>
-                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                    <span class="btn-lang-caret" aria-hidden="true">▼</span>
                 </button>
-
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;"
-                    data-i18n="nav.demo">Demo</a>
+                <a href="contact.html" class="btn-neon-outline nav-cta" data-i18n="chrome.demo">Agenda tu demo</a>
+                <button class="nav-menu-btn" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Menú" data-i18n-aria="chrome.menu">
+                    <span class="nav-menu-bar" aria-hidden="true"></span>
+                    <span class="nav-menu-bar" aria-hidden="true"></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
-
-        <header style="text-align: center; margin-bottom: 60px;">
-            <div class="badge" data-i18n="industries.badge">Pixy Spaces</div>
-            <h1 style="font-size: clamp(28px, 4vw, 46px); line-height: 1.16; margin-bottom: 16px;" data-i18n="industries.title">Una plataforma. <span
-                    class="gradient-text">Múltiples
-                    espacios.</span></h1>
-            <p class="subtitle" style="max-width: 800px; margin: 0 auto;" data-i18n="industries.subtitle">
-                Desliza para explorar el Space diseñado para tu industria.
-            </p>
-        </header>
-
-        <!-- 3D CAROUSEL CONTAINER -->
-        <div class="spaces-carousel-wrapper">
-            <div class="spaces-carousel">
-                <!-- Card 1: Retail (Active) -->
-                <div class="space-card active" data-space="retail">
-                    <div class="card-space-visual">
-                        <img src="assets/elementos de spaces/reatil.png" class="space-visual-asset" alt="Pixy Retail">
-                    </div>
-                    <div class="card-body">
-                        <h2 class="space-card-title" data-i18n="industries.card_retail_title">Retail</h2>
-                        <ul class="card-features-list">
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.flow">Pixy Flows</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.retail_f1">Inventario Omnicanal</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.autopilot">Auto-Pilot</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.retail_f2">POS Inteligente</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.cowork">Cowork AI</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.retail_f3">Envíos & Tracking</span></li>
-                        </ul>
-                    </div>
-                    <div class="card-floating-action">
-                        <a href="contact.html" class="btn-card-action" data-i18n="industries.card_retail_btn">Explorar Space</a>
-                    </div>
-                </div>
-
-                <!-- Card 2: Resto (Active) -->
-                <div class="space-card next" data-space="resto">
-                    <div class="card-space-visual">
-                        <img src="assets/elementos de spaces/resto.png" class="space-visual-asset" alt="Pixy Resto">
-                    </div>
-                    <div class="card-body">
-                        <h2 class="space-card-title" data-i18n="industries.card_resto_title">Resto</h2>
-                        <ul class="card-features-list">
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.flow">Pixy Flows</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.resto_f1">Reservas en Vivo</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.autopilot">Auto-Pilot</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.resto_f2">Menú QR & Mesas</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.cowork">Cowork AI</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.resto_f3">Pedidos Delivery</span></li>
-                        </ul>
-                    </div>
-                    <div class="card-floating-action">
-                        <a href="contact.html" class="btn-card-action" data-i18n="industries.card_resto_btn">Explorar Space</a>
-                    </div>
-                </div>
-
-                <!-- Card 3: Agency (Active) -->
-                <div class="space-card" data-space="agency">
-                    <div class="card-space-visual">
-                        <img src="assets/elementos de spaces/agency.png" class="space-visual-asset" alt="Pixy Agency">
-                    </div>
-                    <div class="card-body">
-                        <h2 class="space-card-title" data-i18n="industries.card_agency_title">Agency</h2>
-                        <ul class="card-features-list">
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.flow">Pixy Flows</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.agency_f1">Marca Blanca</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.autopilot">Auto-Pilot</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.agency_f2">Suscripciones</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.cowork">Cowork AI</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.agency_f3">Portal Clientes</span></li>
-                        </ul>
-                    </div>
-                    <div class="card-floating-action">
-                        <a href="space-agency.html" class="btn-card-action" data-i18n="industries.card_agency_btn">Explorar Space</a>
-                    </div>
-                </div>
-
-                <!-- Card 4: Real Estate (Active) -->
-                <div class="space-card" data-space="realstate">
-                    <div class="card-space-visual">
-                        <img src="assets/elementos de spaces/real state.png" class="space-visual-asset" alt="Pixy Real Estate">
-                    </div>
-                    <div class="card-body">
-                        <h2 class="space-card-title" data-i18n="industries.card_realstate_title">Real Estate</h2>
-                        <ul class="card-features-list">
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.flow">Pixy Flows</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.realestate_f1">Gestión Inmobiliaria</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.autopilot">Auto-Pilot</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.realestate_f2">Pipeline Ventas</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.cowork">Cowork AI</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.realestate_f3">Portales & Web</span></li>
-                        </ul>
-                    </div>
-                    <div class="card-floating-action">
-                        <a href="contact.html" class="btn-card-action" data-i18n="industries.card_realstate_btn">Explorar Space</a>
-                    </div>
-                </div>
-
-                <!-- Card 5: SaaS (Active) -->
-                <div class="space-card" data-space="saas">
-                    <div class="card-space-visual">
-                        <img src="assets/elementos de spaces/saas.png" class="space-visual-asset" alt="Pixy SaaS">
-                    </div>
-                    <div class="card-body">
-                        <h2 class="space-card-title" data-i18n="industries.card_saas_title">SaaS</h2>
-                        <ul class="card-features-list">
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.flow">Pixy Flows</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.saas_f1">Gestión Suscriptores</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.autopilot">Auto-Pilot</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.saas_f2">Facturación Stripe</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.cowork">Cowork AI</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.saas_f3">Métricas Churn</span></li>
-                        </ul>
-                    </div>
-                    <div class="card-floating-action">
-                        <a href="contact.html" class="btn-card-action" data-i18n="industries.card_saas_btn">Explorar Space</a>
-                    </div>
-                </div>
-
-                <!-- Card 6: Legal (Próximamente) -->
-                <div class="space-card" data-space="legal">
-                    <div class="card-space-visual">
-                        <img src="assets/elementos de spaces/lawer.png" class="space-visual-asset" alt="Pixy Legal">
-                    </div>
-                    <div class="card-body">
-                        <h2 class="space-card-title" data-i18n="industries.card_legal_title">Legal</h2>
-                        <ul class="card-features-list">
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.flow">Pixy Flows</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.legal_f1">Gestión de Casos</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.autopilot">Auto-Pilot</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.legal_f2">Firma Digital</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.cowork">Cowork AI</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.legal_f3">Facturación Horaria</span></li>
-                        </ul>
-                    </div>
-                    <div class="card-floating-action">
-                        <button class="btn-card-action disabled" disabled data-i18n="industries.card_legal_btn">Próximamente</button>
-                    </div>
-                </div>
-
-                <!-- Card 7: Rent a Car (Próximamente) -->
-                <div class="space-card" data-space="rentcar">
-                    <div class="card-space-visual">
-                        <img src="assets/elementos de spaces/rentcar.png" class="space-visual-asset" alt="Pixy Rent a Car">
-                    </div>
-                    <div class="card-body">
-                        <h2 class="space-card-title" data-i18n="industries.card_rentcar_title">Rent a Car</h2>
-                        <ul class="card-features-list">
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.flow">Pixy Flows</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.renting_f1">Flota & Calendario</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.autopilot">Auto-Pilot</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.renting_f2">Contratos Digitales</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.cowork">Cowork AI</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.renting_f3">GPS & Control</span></li>
-                        </ul>
-                    </div>
-                    <div class="card-floating-action">
-                        <button class="btn-card-action disabled" disabled data-i18n="industries.card_rentcar_btn">Próximamente</button>
-                    </div>
-                </div>
-
-                <!-- Card 8: Services (Próximamente) -->
-                <div class="space-card prev" data-space="services">
-                    <div class="card-space-visual">
-                        <img src="assets/elementos de spaces/shoping.png" class="space-visual-asset" alt="Pixy Services">
-                    </div>
-                    <div class="card-body">
-                        <h2 class="space-card-title" data-i18n="industries.card_services_title">Services</h2>
-                        <ul class="card-features-list">
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.flow">Pixy Flows</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.health_f1">Agenda & Citas</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.autopilot">Auto-Pilot</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.health_f2">CRM Especializado</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.cowork">Cowork AI</span></li>
-                            <li><span class="feature-dot"></span><span data-i18n="spaces_catalog.health_f3">Enlaces de Pago</span></li>
-                        </ul>
-                    </div>
-                    <div class="card-floating-action">
-                        <button class="btn-card-action disabled" disabled data-i18n="industries.card_services_btn">Próximamente</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Controls -->
-            <div class="carousel-controls">
-                <button class="control-btn prev-btn" onclick="rotateCarousel('prev')" aria-label="Anterior">←</button>
-                <button class="control-btn next-btn" onclick="rotateCarousel('next')" aria-label="Siguiente">→</button>
-            </div>
+    <section class="sh-section sp-hero">
+        <div class="container">
+            <h1 class="sh-h1" data-i18n="pages2.spaces.h1">Un Space para <span class="sh-accent">cada industria.</span></h1>
+            <p class="sh-body sp-sub" data-i18n="pages2.spaces.sub">Cada Space trae los módulos, el lenguaje y los flujos de tu industria, sobre el mismo núcleo de Pixy.</p>
+            <div class="sp-actions"><a class="btn-neon" href="contact.html" data-warp-click="hop" data-i18n="pages2.spaces.cta">Agenda tu demo</a><a class="sh-link" href="pricing.html" data-i18n="pages2.spaces.cta2">Ver planes</a></div>
         </div>
+    </section>
 
-        <!-- MIGRATED FEATURES CONTENT -->
-        <div style="margin-top: 60px; margin-bottom: 80px;">
-            <header style="text-align: center; margin-bottom: 80px;">
-                <h2 class="section-title" style="font-size: clamp(24px, 3.2vw, 36px);" data-i18n="industries.features_title">El poder detrás
-                    de cada <span class="text-gradient">Space</span></h2>
-                <p class="subtitle" style="max-width: 700px; margin: 0 auto;" data-i18n="industries.features_subtitle">
-                    Todos los Pixy Spaces incluyen estas capacidades nucleares, adaptadas a la lógica de tu industria.
-                </p>
-            </header>
-
-            <!-- Feature 1: CRM & AI -->
-            <section class="detail-grid reversed" style="align-items: center;">
-                <div class="detail-content" style="text-align: right;">
-                    <span class="neon-badge" data-i18n="industries.feat_crm_badge">El Cerebro</span>
-                    <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="industries.feat_crm_title">CRM Impulsado
-                        por IA</h2>
-                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;"
-                        data-i18n="industries.feat_crm_desc">
-                        Olvídate de las hojas de cálculo. Pixy centraliza cada cliente, cada interacción y cada venta en
-                        una
-                        base de datos viva.
-                    </p>
-                    <ul class="feature-list">
-                        <li class="feature-item" style="flex-direction: row-reverse;"><span class="feature-icon"
-                                style="margin-right: 0; margin-left: 12px;">✓</span> <span
-                                data-i18n="industries.feat_crm_1"><strong>Base de Datos
-                                    Unificada:</strong> Historial 360° de cada cliente.</span></li>
-                        <li class="feature-item" style="flex-direction: row-reverse;"><span class="feature-icon"
-                                style="margin-right: 0; margin-left: 12px;">✓</span> <span
-                                data-i18n="industries.feat_crm_2"><strong>Pipelines
-                                    Visuales:</strong> Mueve tus ventas de "Prospecto" a "Pagado".</span></li>
-                        <li class="feature-item" style="flex-direction: row-reverse;"><span class="feature-icon"
-                                style="margin-right: 0; margin-left: 12px;">✓</span> <span
-                                data-i18n="industries.feat_crm_3"><strong>Etiquetado
-                                    Automático:</strong> Segmentación inteligente.</span></li>
-                    </ul>
-                </div>
-                <div class="detail-image glass-card"
-                    style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
-                    <div style="text-align: center; opacity: 0.6;">
-                        <span style="font-size: 42px;">🧠</span>
-                        <p data-i18n="industries.feat_crm_img">Inteligencia de Negocio</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Feature 2: Communication -->
-            <section class="detail-grid" style="align-items: center;">
-                <div class="detail-content" style="text-align: left;">
-                    <span class="neon-badge" data-i18n="industries.feat_chat_badge">La Voz</span>
-                    <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="industries.feat_chat_title">Inbox
-                        Omnicanal</h2>
-                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;"
-                        data-i18n="industries.feat_chat_desc">
-                        Tus clientes están en todas partes. Responde WhatsApp, Instagram y Messenger desde una sola
-                        pantalla compartida.
-                    </p>
-                    <ul class="feature-list">
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="industries.feat_chat_1"><strong>Chat Multi-Agente:</strong>
-                                Colaboración en tiempo real.</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="industries.feat_chat_2"><strong>Multimedia Full:</strong>
-                                Audios, fotos y documentos.</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="industries.feat_chat_3"><strong>Notas Internas:</strong>
-                                Chatea con tu equipo sin salir del chat.</span></li>
-                    </ul>
-                </div>
-                <div class="detail-image glass-card"
-                    style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
-                    <div style="text-align: center; opacity: 0.6;">
-                        <span style="font-size: 42px;">💬</span>
-                        <p data-i18n="industries.feat_chat_img">Centro de Comando</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Feature 3: Finance -->
-            <section class="detail-grid reversed" style="align-items: center;">
-                <div class="detail-content" style="text-align: right;">
-                    <span class="neon-badge" data-i18n="industries.feat_fin_badge">Lo Financiero</span>
-                    <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="industries.feat_fin_title">Cobros y Pagos
-                    </h2>
-                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;"
-                        data-i18n="industries.feat_fin_desc">
-                        Genera cotizaciones y cuentas de cobro, envía enlaces de pago y automatiza el recaudo.
-                    </p>
-                    <ul class="feature-list">
-                        <li class="feature-item" style="flex-direction: row-reverse;"><span class="feature-icon"
-                                style="margin-right: 0; margin-left: 12px;">✓</span> <span
-                                data-i18n="industries.feat_fin_1"><strong>Recaudo
-                                    Automático:</strong> Recordatorios que salen solos.</span></li>
-                        <li class="feature-item" style="flex-direction: row-reverse;"><span class="feature-icon"
-                                style="margin-right: 0; margin-left: 12px;">✓</span> <span
-                                data-i18n="industries.feat_fin_2"><strong>Cotizaciones Web:</strong>
-                                Propuestas interactivas.</span></li>
-                        <li class="feature-item" style="flex-direction: row-reverse;"><span class="feature-icon"
-                                style="margin-right: 0; margin-left: 12px;">✓</span> <span
-                                data-i18n="industries.feat_fin_3"><strong>Conciliación:</strong>
-                                Conectado a tu flujo de caja.</span></li>
-                    </ul>
-                </div>
-                <div class="detail-image glass-card"
-                    style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
-                    <div style="text-align: center; opacity: 0.6;">
-                        <span style="font-size: 42px;">💳</span>
-                        <p data-i18n="industries.feat_fin_img">Flujo de Caja</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Feature 4: Automation -->
-            <section class="detail-grid" style="align-items: center;">
-                <div class="detail-content" style="text-align: left;">
-                    <span class="neon-badge" data-i18n="industries.feat_auto_badge">Piloto Automático</span>
-                    <h2 style="font-size: 2.5rem; margin: 16px 0;" data-i18n="industries.feat_auto_title">Automatización
-                        24/7</h2>
-                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;"
-                        data-i18n="industries.feat_auto_desc">
-                        Duplica tu capacidad operativa sin contratar más personal. Diseña flujos que califican leads y
-                        agendan citas.
-                    </p>
-                    <ul class="feature-list">
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="industries.feat_auto_1"><strong>Chatbots IA:</strong>
-                                Atención inmediata.</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="industries.feat_auto_2"><strong>Webhooks:</strong> Conecta
-                                con +5000 apps.</span></li>
-                        <li class="feature-item"><span class="feature-icon">✓</span> <span
-                                data-i18n="industries.feat_auto_3"><strong>Reglas de Negocio:</strong>
-                                "Si pasa X, haz Y".</span></li>
-                    </ul>
-                </div>
-                <div class="detail-image glass-card"
-                    style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
-                    <div style="text-align: center; opacity: 0.6;">
-                        <span style="font-size: 42px;">⚡</span>
-                        <p data-i18n="industries.feat_auto_img">Productividad Infinita</p>
-                    </div>
-                </div>
-            </section>
+    <section class="sh-section sp-catalog" data-no-reveal>
+        <div class="container sp-catalog-grid">
+            <div class="sp-blocks">
+                <article class="sp-block" id="resto" data-model="resto" data-accent="#FF6A2B" style="--a:#FF6A2B">
+                    <h2 class="sh-display">Space Resto</h2>
+                    <p class="sh-body sv-promise" data-i18n="pages2.spaces.resto_p">De la mesa a la cocina y a la caja, sin un papel.</p>
+                    <dl class="sp-mods"><div><dt data-i18n="pages2.spaces.resto_m0">Menú digital</dt><dd data-i18n="pages2.spaces.resto_m0_d">Categorías, modificadores, etiquetas y platos agotados con un toque.</dd></div><div><dt data-i18n="pages2.spaces.resto_m1">Pedido desde la mesa</dt><dd data-i18n="pages2.spaces.resto_m1_d">Con QR y seguimiento en vivo.</dd></div><div><dt data-i18n="pages2.spaces.resto_m2">Cocina</dt><dd data-i18n="pages2.spaces.resto_m2_d">Gestor de pedidos y pantalla de cocina con sonidos.</dd></div><div><dt data-i18n="pages2.spaces.resto_m3">Equipo por rol</dt><dd data-i18n="pages2.spaces.resto_m3_d">Mesero, caja, barra, cocina y anfitrión con PIN. El mesero cobra en mesa si su rol lo permite.</dd></div><div><dt data-i18n="pages2.spaces.resto_m4">Gemelo del salón</dt><dd data-i18n="pages2.spaces.resto_m4_d">Plano 3D o 2D con zonas, mesas, QR por mesa y estado en vivo.</dd></div></dl>
+                    <a class="sh-link" href="contact.html?space=resto" data-warp-click="hop" data-i18n="pages2.spaces.resto_cta">Quiero ver este Space</a>
+                </article>
+                <article class="sp-block" id="agencias" data-model="agencias" data-accent="#8B5CF6" style="--a:#8B5CF6">
+                    <h2 class="sh-display">Space Agencias</h2>
+                    <p class="sh-body sv-promise" data-i18n="pages2.spaces.agencias_p">Clientes, proyectos, cobros y resultados, conectados.</p>
+                    <dl class="sp-mods"><div><dt data-i18n="pages2.spaces.agencias_m0">Proyectos y tareas</dt><dd data-i18n="pages2.spaces.agencias_m0_d">Tablero, calendario, reuniones y ritmo semanal.</dd></div><div><dt data-i18n="pages2.spaces.agencias_m1">Portal del cliente</dt><dd data-i18n="pages2.spaces.agencias_m1_d">Facturas pagables, cotizaciones, servicios y briefings.</dd></div><div><dt data-i18n="pages2.spaces.agencias_m2">Servicios recurrentes</dt><dd data-i18n="pages2.spaces.agencias_m2_d">Facturación y cobro automático.</dd></div><div><dt data-i18n="pages2.spaces.agencias_m3">Contratos y briefings</dt><dd data-i18n="pages2.spaces.agencias_m3_d">Generador de contratos y briefings con enlace público.</dd></div><div><dt data-i18n="pages2.spaces.agencias_m4">Marca blanca</dt><dd data-i18n="pages2.spaces.agencias_m4_d">Tu marca en toda la plataforma y un panel para revender.</dd></div></dl>
+                    <a class="sh-link" href="contact.html?space=agencias" data-warp-click="hop" data-i18n="pages2.spaces.agencias_cta">Quiero ver este Space</a>
+                </article>
+                <article class="sp-block" id="tiendas" data-model="tiendas" data-accent="#2E7BFF" style="--a:#2E7BFF">
+                    <h2 class="sh-display">Space Tiendas</h2>
+                    <p class="sh-body sv-promise" data-i18n="pages2.spaces.tiendas_p">Tu tienda en línea lista hoy y cada comentario convertido en venta.</p>
+                    <dl class="sp-mods"><div><dt data-i18n="pages2.spaces.tiendas_m0">Catálogo</dt><dd data-i18n="pages2.spaces.tiendas_m0_d">Productos, variantes, colecciones y servicios, con textos e imágenes asistidos por IA.</dd></div><div><dt data-i18n="pages2.spaces.tiendas_m1">Tienda generada</dt><dd data-i18n="pages2.spaces.tiendas_m1_d">Siete estilos, carrito, pago por pasos, cupones y envío.</dd></div><div><dt data-i18n="pages2.spaces.tiendas_m2">Tres formas de comprar</dt><dd data-i18n="pages2.spaces.tiendas_m2_d">Pago en línea, pedido por WhatsApp o solicitud de cotización.</dd></div><div><dt data-i18n="pages2.spaces.tiendas_m3">Comentarios que venden</dt><dd data-i18n="pages2.spaces.tiendas_m3_d">Pixy Social responde a quien comenta y le envía el link de pago.</dd></div><div><dt data-i18n="pages2.spaces.tiendas_m4">Dominio propio</dt><dd data-i18n="pages2.spaces.tiendas_m4_d">Tu tienda con tu dirección web.</dd></div></dl>
+                    <a class="sh-link" href="contact.html?space=tiendas" data-warp-click="hop" data-i18n="pages2.spaces.tiendas_cta">Quiero ver este Space</a>
+                </article>
+                <article class="sp-block" id="inmobiliaria" data-model="inmobiliaria" data-accent="#10D9A0" style="--a:#10D9A0">
+                    <h2 class="sh-display">Space Inmobiliaria</h2>
+                    <p class="sh-body sv-promise" data-i18n="pages2.spaces.inmobiliaria_p">Tu inventario publicado con tu marca y tus arriendos liquidados en un clic.</p>
+                    <dl class="sp-mods"><div><dt data-i18n="pages2.spaces.inmobiliaria_m0">Propiedades</dt><dd data-i18n="pages2.spaces.inmobiliaria_m0_d">Inventario con editor por pasos y categorías listas.</dd></div><div><dt data-i18n="pages2.spaces.inmobiliaria_m1">Portal inmobiliario</dt><dd data-i18n="pages2.spaces.inmobiliaria_m1_d">Generado desde tu inventario, con estilos a elegir y contacto directo al CRM.</dd></div><div><dt data-i18n="pages2.spaces.inmobiliaria_m2">Arriendos</dt><dd data-i18n="pages2.spaces.inmobiliaria_m2_d">Contratos con codeudor, garantía, canon y administración, y recaudo mensual.</dd></div><div><dt data-i18n="pages2.spaces.inmobiliaria_m3">Liquidación al propietario</dt><dd data-i18n="pages2.spaces.inmobiliaria_m3_d">Comisión, impuestos y deducciones calculados, con avisos por WhatsApp.</dd></div></dl>
+                    <a class="sh-link" href="contact.html?space=inmobiliaria" data-warp-click="hop" data-i18n="pages2.spaces.inmobiliaria_cta">Quiero ver este Space</a>
+                </article>
+                <article class="sp-block" id="edu" data-model="edu" data-accent="#FFC233" style="--a:#FFC233">
+                    <h2 class="sh-display">Pixy Edu</h2>
+                    <p class="sh-body sv-promise" data-i18n="pages2.spaces.edu_p">El colegio entero en una plataforma: académico, familias, convivencia y pensiones.</p>
+                    <dl class="sp-mods"><div><dt data-i18n="pages2.spaces.edu_m0">Académico</dt><dd data-i18n="pages2.spaces.edu_m0_d">Calendario, grados, plan de estudios, notas por periodo, asistencia con alerta temprana y horarios.</dd></div><div><dt data-i18n="pages2.spaces.edu_m1">Bienestar</dt><dd data-i18n="pages2.spaces.edu_m1_d">Observador con firmas y ruta de convivencia.</dd></div><div><dt data-i18n="pages2.spaces.edu_m2">Documentos</dt><dd data-i18n="pages2.spaces.edu_m2_d">Boletines, carnets con QR y certificados verificables en línea.</dd></div><div><dt data-i18n="pages2.spaces.edu_m3">Pensiones</dt><dd data-i18n="pages2.spaces.edu_m3_d">Cartera, emisión masiva y pago en línea desde el portal de familias.</dd></div><div><dt data-i18n="pages2.spaces.edu_m4">Portales</dt><dd data-i18n="pages2.spaces.edu_m4_d">Portal de familias y portal docente, circulares con confirmación de lectura y admisiones en línea.</dd></div></dl>
+                    <a class="sh-link" href="contact.html?space=edu" data-warp-click="hop" data-i18n="pages2.spaces.edu_cta">Quiero ver este Space</a>
+                </article>
+                <article class="sp-block" id="saas" data-model="saas" data-accent="#00E0FF" style="--a:#00E0FF">
+                    <h2 class="sh-display">Space SaaS</h2>
+                    <p class="sh-body sv-promise" data-i18n="pages2.spaces.saas_p">Usuarios, planes, cobro recurrente y soporte, conectados.</p>
+                    <dl class="sp-mods"><div><dt data-i18n="pages2.spaces.saas_m0">Usuarios y planes</dt><dd data-i18n="pages2.spaces.saas_m0_d">Cada cliente con su plan, su historial y sus pagos.</dd></div><div><dt data-i18n="pages2.spaces.saas_m1">Suscripciones</dt><dd data-i18n="pages2.spaces.saas_m1_d">Cobro recurrente con links de pago y recordatorios escalonados.</dd></div><div><dt data-i18n="pages2.spaces.saas_m2">Tickets de soporte</dt><dd data-i18n="pages2.spaces.saas_m2_d">Estados, responsables y prioridades.</dd></div><div><dt data-i18n="pages2.spaces.saas_m3">Sprints y tareas</dt><dd data-i18n="pages2.spaces.saas_m3_d">Tablero, calendario y ritmo semanal para el equipo de producto.</dd></div><div><dt data-i18n="pages2.spaces.saas_m4">CRM y automatizaciones</dt><dd data-i18n="pages2.spaces.saas_m4_d">Onboarding, renovaciones y seguimiento.</dd></div></dl>
+                    <a class="sh-link" href="contact.html?space=saas" data-warp-click="hop" data-i18n="pages2.spaces.saas_cta">Quiero ver este Space</a>
+                </article>
+            </div>
+            <div class="sp-model-col" aria-hidden="true"><div class="sp-model"></div></div>
         </div>
+    </section>
 
-        <!-- CTA Enterprise -->
-        <section class="glass-card" style="text-align: center; padding: 60px;">
-            <h2 style="font-size: 2rem; margin-bottom: 16px;" data-i18n="industries.cta_enterprise_title">¿Necesitas un
-                Space a medida?</h2>
-            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 32px;"
-                data-i18n="industries.cta_enterprise_desc">
-                Si tu operación es única, podemos configurar un Pixy Space Enterprise para ti.
-            </p>
-            <a href="contact.html" class="btn-neon-outline" data-i18n="industries.cta_enterprise_btn">Hablar con
-                Consultor</a>
-        </section>
+    <section class="sh-section">
+        <div class="container sh-split">
+            <div class="sh-sticky">
+                <h2 class="sh-h2" data-i18n="pages2.spaces.core_t">Lo que todos los Spaces comparten.</h2>
+                <p class="sh-body" data-i18n="pages2.spaces.core_i">Cada Space le cambia las palabras al núcleo y le suma sus módulos propios.</p>
+                
+            </div>
+            <ol class="sh-list"><li><span class="sh-num">01</span><div><h3 class="sh-h3" data-i18n="pages2.spaces.core_0_t">Bandeja omnicanal</h3><p class="sh-body" data-i18n="pages2.spaces.core_0_d">WhatsApp con la conexión oficial, Instagram y Messenger en una bandeja compartida por tu equipo.</p></div></li><li><span class="sh-num">02</span><div><h3 class="sh-h3" data-i18n="pages2.spaces.core_1_t">IA que atiende y califica</h3><p class="sh-body" data-i18n="pages2.spaces.core_1_d">Responde con la información real de tu negocio y califica a cada cliente con la frase que lo demuestra.</p></div></li><li><span class="sh-num">03</span><div><h3 class="sh-h3" data-i18n="pages2.spaces.core_2_t">Pipeline vivo</h3><p class="sh-body" data-i18n="pages2.spaces.core_2_d">Te dice a quién responder hoy y qué trato se está enfriando.</p></div></li><li><span class="sh-num">04</span><div><h3 class="sh-h3" data-i18n="pages2.spaces.core_3_t">Cotizaciones, facturas y links de pago</h3><p class="sh-body" data-i18n="pages2.spaces.core_3_d">Se envían por WhatsApp y el cliente paga en línea.</p></div></li><li><span class="sh-num">05</span><div><h3 class="sh-h3" data-i18n="pages2.spaces.core_4_t">Portal del cliente</h3><p class="sh-body" data-i18n="pages2.spaces.core_4_d">Tu cliente ve sus servicios, facturas y cotizaciones, y paga, con tu marca.</p></div></li><li><span class="sh-num">06</span><div><h3 class="sh-h3" data-i18n="pages2.spaces.core_5_t">Modo 3D</h3><p class="sh-body" data-i18n="pages2.spaces.core_5_d">Tu sede como una ciudad en miniatura con lo que está pasando ahora.</p></div></li></ol>
+        </div>
+    </section>
 
-    </main>
+    <section class="sh-section sh-final">
+        <div class="container">
+            <h2 class="sh-h2" data-i18n="pages2.spaces.close_t">Tu Space, <span class="sh-accent">listo para tu negocio.</span></h2>
+            <p class="sh-body" data-i18n="pages2.spaces.close_s">Te lo mostramos con los flujos de tu industria en una demo guiada.</p>
+            <a class="btn-neon" href="contact.html" data-warp-click="departure" data-i18n="pages2.spaces.close_b">Agenda tu demo</a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -455,40 +164,46 @@
             <div class="footer-brand">
                 <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
-                <p data-i18n="footer.slogan">Tu negocio, bien diseñado.</p>
+                <p data-i18n="chrome.slogan_spaces">El sistema operativo de tu negocio.</p>
+                <p class="footer-meta" data-i18n="chrome.meta_tp">Pixy es Tech Provider de Meta.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/pixyspaces/" target="_blank" rel="noopener me" aria-label="Pixy en Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg></a>
+                    <a href="https://www.facebook.com/pixyspaces" target="_blank" rel="noopener me" aria-label="Pixy en Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9.1 23.69v-7.98H6.63v-3.67H9.1v-1.58c0-4.09 1.85-5.98 5.86-5.98.4 0 .96.04 1.47.1.38.04.76.11 1.14.2v3.32c-.22-.02-.43-.03-.65-.04-.25 0-.49-.01-.74-.01-.7 0-1.26.1-1.67.31-.29.15-.52.36-.68.62-.26.42-.38 1-.38 1.75v1.3h3.92l-.39 2.1-.28 1.57h-3.25v8.24C19.4 23.24 24 18.18 24 12.04 24 5.42 18.63.04 12 .04S0 5.42 0 12.04c0 5.63 3.87 10.35 9.1 11.65z"/></svg></a>
+                </div>
             </div>
-
-            <nav class="footer-links">
-                <h4 data-i18n="footer.product">Producto</h4>
-
-                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
-                <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
+            <nav class="footer-links" aria-label="Producto">
+                <h4 data-i18n="chrome.col_product">Producto</h4>
+                <a href="spaces.html" class="neon-link" data-i18n="chrome.spaces">Spaces</a>
+                <a href="features.html" class="neon-link" data-i18n="chrome.platform">Plataforma</a>
+                <a href="pricing.html" class="neon-link" data-i18n="chrome.plans">Planes</a>
+                <a href="partners.html" class="neon-link" data-i18n="chrome.partners">Partners</a>
             </nav>
-
-            <nav class="footer-links">
-                <h4 data-i18n="footer.company">Empresa</h4>
-                <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
-                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
-                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+            <nav class="footer-links" aria-label="Pixy">
+                <h4 data-i18n="chrome.col_company">Pixy</h4>
+                <a href="blog.html" class="neon-link" data-i18n="chrome.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="chrome.contact">Contacto</a>
+                <a href="agency.html" class="neon-link" data-i18n="chrome.studio">Pixy Studio</a>
+                <a href="https://wa.me/573504076800" class="neon-link" target="_blank" rel="noopener" data-i18n="chrome.whatsapp">WhatsApp</a>
             </nav>
-
-            <nav class="footer-links">
-                <h4 data-i18n="footer.legal">Legal</h4>
-                <a href="privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
-                <a href="terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
-                <a href="data-deletion.html" class="neon-link" data-i18n="footer.deletion">Eliminación de Datos</a>
-                <a href="cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
-                <a href="permissions.html" class="neon-link" data-i18n="footer.permissions">Permisos</a>
+            <nav class="footer-links" aria-label="Legal">
+                <h4 data-i18n="chrome.col_legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="chrome.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="chrome.terms">Términos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="chrome.cookies">Cookies</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="chrome.deletion">Eliminación de datos</a>
+                <a href="legal/uso-aceptable.html" class="neon-link" data-i18n="chrome.acceptable">Uso aceptable</a>
+                <a href="legal/index.html" class="neon-link" data-i18n="chrome.legal_all">Todos los documentos</a>
             </nav>
         </div>
         <div class="footer-bottom">
-            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
+            <p data-i18n="chrome.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <button class="theme-toggle" onclick="toggleTheme()"><svg class="sun-icon" xmlns="http://www.w3.org/2000/svg"
-            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -498,19 +213,36 @@
             <line x1="21" y1="12" x2="23" y2="12"></line>
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg><svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg></button>
-    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Volver arriba">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="18 15 12 9 6 15"></polyline>
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
     </button>
-    <script src="js/i18n.js"></script>
-    <script src="js/main.js"></script>
 
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Fondo espacial (estrellas en viaje, reacciona al scroll) -->
+    <script src="js/space-bg.js?v=c747942c56"></script>
+    <script src="js/smooth-scroll.js?v=9b99cab1f0"></script>
+
+    <!-- i18n Script -->
+    <script src="js/i18n.js?v=5a387474c3" data-locales="13ffb5a119"></script>
+
+    <!-- Main Script -->
+    <script src="js/main.js?v=9907957753"></script>
+
+    <!-- Portada de Spaces: titular cinético, Bandeja en vivo, cinta de la IA, ciudad del Modo 3D y planes -->
+    <script src="js/spaces-home.js?v=38871573f5"></script>
+
+    <!-- Sección de IA en actos -->
+    <script src="js/spaces-ai.js?v=1ad5913302"></script>
+
+    <!-- Orbe viajero: el orbe de la IA recorre la portada con el scroll -->
+    <script src="js/orb-route.js?v=4d82a46bd1"></script>
+    <div id="pixy-end" hidden></div>
 </body>
 
 </html>

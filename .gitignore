@@ -1,2 +1,7 @@
 .vercel
 .env*.local
+
+tools/space-bg/node_modules/
+
+# Originales de las portadas del blog (pesados); se publican las versiones de assets/blog
+tools/blog/covers-raw/

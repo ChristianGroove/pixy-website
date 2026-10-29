@@ -3,15 +3,35 @@
  * Client-side language switcher with nested key lookup,
  * input placeholder translation, and real-time custom event dispatching.
  */
-document.addEventListener('DOMContentLoaded', () => {
+(function () {
+    // Versión de las traducciones (la pone tools/pages/version-assets.mjs en la etiqueta del script)
+    const localesV = (document.currentScript && document.currentScript.dataset.locales) || '';
+    const withV = (url) => (localesV ? `${url}?v=${localesV}` : url);
     const langToggle = document.getElementById('lang-toggle');
     const langText = document.getElementById('lang-text');
     let currentLang = localStorage.getItem('pixy_lang') || 'es';
     let currentTranslations = {};
 
-    // Initial Load
-    loadLanguage(currentLang);
+    // El script va al final del <body>: con el diccionario guardado de la visita anterior los textos
+    // quedan traducidos antes del primer pintado (sin destello del español al navegar en inglés).
+    // Después se descarga el actual y se avisa a los componentes como siempre.
+    const cacheKey = (lang) => `pixy_i18n_${lang}`;
+    let appliedRaw = '';
+    try {
+        const raw = localStorage.getItem(cacheKey(currentLang));
+        const cached = JSON.parse(raw || 'null');
+        if (cached) {
+            appliedRaw = raw;
+            currentTranslations = cached;
+            applyTranslations(cached);
+            document.documentElement.lang = currentLang;
+        }
+    } catch (e) { }
     updateToggleUI(currentLang);
+
+    // Initial Load (los scripts de la página escuchan pixy:langChange; se registran antes de DOMContentLoaded)
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => loadLanguage(currentLang));
+    else loadLanguage(currentLang);
 
     // Toggle Event
     if (langToggle) {
@@ -29,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let response = null;
             // 1. Try root-relative
             try {
-                response = await fetch(`/locales/${lang}.json`);
+                response = await fetch(withV(`/locales/${lang}.json`));
             } catch (e) { }
 
             // 2. Try relative based on path
@@ -37,25 +57,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 try {
                     const isSubfolder = window.location.pathname.includes('/agency/');
                     const rel = isSubfolder ? `../locales/${lang}.json` : `locales/${lang}.json`;
-                    response = await fetch(rel);
+                    response = await fetch(withV(rel));
                 } catch (e) { }
             }
 
             // 3. Fallbacks
             if (!response || !response.ok) {
-                try { response = await fetch(`locales/${lang}.json`); } catch (e) { }
+                try { response = await fetch(withV(`locales/${lang}.json`)); } catch (e) { }
             }
             if (!response || !response.ok) {
-                try { response = await fetch(`../locales/${lang}.json`); } catch (e) { }
+                try { response = await fetch(withV(`../locales/${lang}.json`)); } catch (e) { }
             }
 
             if (!response || !response.ok) {
                 throw new Error(`Could not load ${lang}.json`);
             }
 
-            const translations = await response.json();
+            const raw = await response.text();
+            const translations = JSON.parse(raw);
+            try { localStorage.setItem(cacheKey(lang), raw); } catch (e) { }
             currentTranslations = translations;
-            applyTranslations(translations);
+            // Si es lo mismo que ya se aplicó desde la copia guardada, no se reescriben los textos (evita
+            // un segundo repintado de toda la página en cada visita)
+            if (raw !== appliedRaw) applyTranslations(translations);
+            appliedRaw = raw;
             document.documentElement.lang = lang;
 
             // Notify dynamic components (AI Architect, Calculators, etc.)
@@ -140,4 +165,4 @@ document.addEventListener('DOMContentLoaded', () => {
             updateToggleUI(lang);
         }
     };
-});
+})();

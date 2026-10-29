@@ -1,0 +1,25 @@
+// Construye todo el sitio en el orden correcto. Uso: node tools/build-all.mjs
+// 1. Encabezado y pie de las páginas fijas  2. Páginas de Spaces y de Studio (generadores)
+// 3. Blog (artículos, índice, feed, portadas)  4. Páginas legales  5. SEO de todas las páginas, sitemap y robots
+import { execFileSync } from "node:child_process";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const here = dirname(fileURLToPath(import.meta.url));
+const run = (script) => execFileSync(process.execPath, [join(here, script)], { stdio: "inherit" });
+
+// Primero el encabezado y pie de la portada: build-pages copia el pie desde index.html
+run("pages/apply-chrome.mjs");
+run("pages/build-pages.mjs");
+run("pages/build-studio.mjs");
+const { buildBlog } = await import("./blog/build-blog.mjs");
+const posts = await buildBlog();
+const { buildLegal } = await import("./legal/build-legal.mjs");
+await buildLegal();
+const { build404 } = await import("./pages/build-404.mjs");
+build404();
+const { buildSeo } = await import("./seo/seo.mjs");
+await buildSeo(posts);
+// Al final: versión de CSS, JS y traducciones en todas las páginas ya generadas
+const { versionAssets } = await import("./pages/version-assets.mjs");
+versionAssets();

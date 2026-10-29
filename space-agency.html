@@ -15,347 +15,120 @@
         })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixy Agency - Automatización para Agencias</title>
-    <meta name="description"
-        content="Gestiona múltiples clientes y centraliza operaciones con marca blanca. La plataforma definitiva para escalar tu agencia sin caos.">
+    <!-- seo: tools/seo/seo.mjs -->
+    <title>Software para agencias: Space Agencias de Pixy</title>
+    <meta name="description" content="Proyectos, freelancers con PIN, briefings, cobros recurrentes, portal del cliente e informes de redes para tu agencia, con marca blanca para revender.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://pixy.com.co/space-agency.html">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="preload" href="assets/logos/logo-light.svg" as="image" type="image/svg+xml">
-    <link rel="preload" href="assets/logos/logo-dark.svg" as="image" type="image/svg+xml">
-
-    <!-- Open Graph -->
+    <meta name="theme-color" content="#000000">
+    <meta property="og:site_name" content="Pixy">
+    <meta property="og:locale" content="es_ES">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pixy.com.co/space-agency.html">
-    <meta property="og:title" content="Pixy Agency - Automatización para Agencias">
-    <meta property="og:description"
-        content="Gestiona múltiples clientes y centraliza operaciones con marca blanca. La plataforma definitiva para escalar tu agencia sin caos.">
-    <meta property="og:image" content="https://pixy.com.co/assets/og-image.png">
-
-    <!-- Twitter Card -->
+    <meta property="og:title" content="Software para agencias: Space Agencias de Pixy">
+    <meta property="og:description" content="Proyectos, freelancers con PIN, briefings, cobros recurrentes, portal del cliente e informes de redes para tu agencia, con marca blanca para revender.">
+    <meta property="og:image" content="https://pixy.com.co/assets/og/pixy.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://pixy.com.co/space-agency.html">
-    <meta name="twitter:title" content="Pixy Agency - Automatización para Agencias">
-    <meta name="twitter:description"
-        content="Gestiona múltiples clientes y centraliza operaciones con marca blanca. La plataforma definitiva para escalar tu agencia sin caos.">
+    <meta name="twitter:title" content="Software para agencias: Space Agencias de Pixy">
+    <meta name="twitter:description" content="Proyectos, freelancers con PIN, briefings, cobros recurrentes, portal del cliente e informes de redes para tu agencia, con marca blanca para revender.">
+    <meta name="twitter:image" content="https://pixy.com.co/assets/og/pixy.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://pixy.com.co/#org","name":"Pixy","url":"https://pixy.com.co/","logo":{"@type":"ImageObject","url":"https://pixy.com.co/assets/favicon.png"},"email":"contact@pixy.com.co","contactPoint":[{"@type":"ContactPoint","contactType":"sales","email":"contact@pixy.com.co","telephone":"+57 350 407 6800","availableLanguage":["es","en"]}],"sameAs":["https://www.instagram.com/pixyspaces/","https://www.facebook.com/pixyspaces"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://pixy.com.co/"},{"@type":"ListItem","position":2,"name":"Space Agencias","item":"https://pixy.com.co/space-agency.html"}]},{"@type":"WebPage","@id":"https://pixy.com.co/space-agency.html#page","url":"https://pixy.com.co/space-agency.html","name":"Software para agencias: Space Agencias de Pixy","description":"Proyectos, freelancers con PIN, briefings, cobros recurrentes, portal del cliente e informes de redes para tu agencia, con marca blanca para revender.","inLanguage":"es","isPartOf":{"@id":"https://pixy.com.co/#site"},"publisher":{"@id":"https://pixy.com.co/#org"}}]}</script>
+    <!-- /seo -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 
-    <meta name="twitter:image" content="https://pixy.com.co/assets/og-image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
 
-    <!-- Dependencies -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <!-- GSAP (Critical for Agency Page Effects) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/agency-v2.css">
-    <style>
-        body {
-            visibility: visible;
-            opacity: 1;
-        }
-        html[data-theme="dark"] body {
-            background-color: #0F0F1A;
-        }
-        html[data-theme="light"] body {
-            background-color: #ffffff;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css?v=1ecea70862">
+    <link rel="stylesheet" href="css/components.css?v=3f57890380">
+    <link rel="stylesheet" href="css/agency-modern.css?v=00d53ae6f1">
+    <link rel="stylesheet" href="css/pages.css?v=0adab6f63c">
+    <link rel="stylesheet" href="css/spaces-home.css?v=a81f982b84">
+    <link rel="expect" href="#pixy-end" blocking="render">
 </head>
 
-<body class="agency-page">
-    <div class="mouse-spotlight"></div>
+<body class="landing-page spaces-face">
+    <!-- Generado por tools/pages/build-pages.mjs: editar ahí, no aquí -->
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
-
-    <!-- Navigation (Shared) -->
     <nav class="nav">
         <div class="nav-content">
-            <div class="nav-left-group" style="display: flex; align-items: center; gap: 32px;">
-                <a href="index.html" class="nav-brand">
+            <div class="nav-left-group">
+                <a href="index.html" class="nav-brand" aria-label="Pixy">
                     <img src="assets/logos/logo-dark.svg" alt="Pixy" class="nav-logo nav-logo-dark" width="149" height="32" loading="eager" decoding="sync">
                     <img src="assets/logos/logo-light.svg" alt="Pixy" class="nav-logo nav-logo-light" width="149" height="32" loading="eager" decoding="sync">
                 </a>
-                <div class="universe-switcher" role="tablist" aria-label="Ecosistema">
-                    <a href="agency.html" class="universe-tab" data-mode="agency">Agency</a>
+                <div class="universe-switcher" role="tablist" aria-label="Pixy">
+                    <a href="agency.html" class="universe-tab" data-mode="agency">Studio</a>
                     <a href="index.html" class="universe-tab active" data-mode="spaces">Spaces</a>
                 </div>
             </div>
-            <div class="nav-links">
-                <a href="index.html" class="neon-link" data-i18n="nav.home">Inicio</a>
-                <div class="nav-item has-dropdown">
-                    <a href="spaces.html" class="neon-link active" data-i18n="nav.spaces">Spaces</a>
-                </div>
-                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
-                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
-                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
+            <div class="nav-links" id="nav-links">
+                <a href="spaces.html" class="neon-link active" data-i18n="chrome.spaces">Spaces</a>
+                <a href="features.html" class="neon-link" data-i18n="chrome.platform">Plataforma</a>
+                <a href="pricing.html" class="neon-link" data-i18n="chrome.plans">Planes</a>
+                <a href="blog.html" class="neon-link" data-i18n="chrome.blog">Blog</a>
+                <a href="contact.html" class="btn-neon nav-links-cta" data-i18n="chrome.demo">Agenda tu demo</a>
             </div>
             <div class="nav-actions">
-                <!-- Language Switcher -->
-                <button id="lang-toggle" class="btn-lang"
-                    style="background:none; border:none; cursor:pointer; font-family:inherit; color:var(--text-primary); font-weight:600; margin-right: 16px;">
+                <button id="lang-toggle" class="btn-lang" type="button" aria-label="Idioma / Language">
                     <span id="lang-text">ES</span>
-                    <span style="color:var(--brand-pink); font-size:10px;">▼</span>
+                    <span class="btn-lang-caret" aria-hidden="true">▼</span>
                 </button>
-
-                <a href="contact.html" class="btn-neon-outline" style="padding: 8px 20px; font-size: 0.9rem;"
-                    data-i18n="nav.demo">Demo</a>
+                <a href="contact.html" class="btn-neon-outline nav-cta" data-i18n="chrome.demo">Agenda tu demo</a>
+                <button class="nav-menu-btn" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Menú" data-i18n-aria="chrome.menu">
+                    <span class="nav-menu-bar" aria-hidden="true"></span>
+                    <span class="nav-menu-bar" aria-hidden="true"></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
-
-        <!-- HERO SECTION: Refactored with BEM -->
-        <section class="agency-hero">
-            <!-- Left: Text -->
-            <div class="agency-hero__content">
-                <h1 class="agency-hero__title" data-i18n="agency.hero_title">
-                    Tu Agencia, <br>
-                    <span class="gradient-text">Bajo Control.</span>
-                </h1>
-                <p class="subtitle"
-                    style="font-size: 1.25rem; margin-bottom: 40px; color: var(--text-secondary); max-width: 600px;"
-                    data-i18n="agency.hero_subtitle">
-                    El sistema operativo (OS) definitivo para agencias creativas. Centraliza proyectos, finanzas y
-                    clientes en un solo dashboard inteligente.
-                </p>
-                <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-                    <a href="contact.html" class="btn-neon" data-i18n="agency.cta_start">Empezar Ahora</a>
-                    <a href="#features" class="btn-neon-outline" data-i18n="agency.cta_demo">Ver Demo</a>
+    <section class="sh-section sp-hero sp-space-hero" data-no-reveal>
+        <div class="container sp-catalog-grid">
+            <div>
+                <h1 class="sh-h1">Space Agencias</h1>
+                <p class="sh-body sp-sub" data-i18n="pages2.agency.sub">Clientes, proyectos, cobros y resultados, conectados.</p>
+                <div class="sp-actions">
+                    <a class="btn-neon" href="contact.html?space=agencias" data-warp-click="hop" data-i18n="pages2.agency.cta">Quiero ver este Space</a>
+                    <a class="sh-link" href="pricing.html" data-i18n="pages2.agency.cta2">Ver planes</a>
                 </div>
             </div>
+            <div class="sp-model-col" aria-hidden="true"><div class="sp-model" data-model="agencias" data-accent="#8B5CF6"></div></div>
+        </div>
+    </section>
 
-            <!-- Right: Astro Visual -->
-            <div class="agency-hero__visual">
-                <div class="agency-hero__glow"></div>
-                <img src="assets/astro4.png" class="astronaut-hero" alt="Pixy Agency Astronaut">
+    <section class="sh-section">
+        <div class="container sh-split">
+            <div class="sh-sticky">
+                <h2 class="sh-h2" data-i18n="pages2.agency.mods_t">Todo lo de tu agencia, en un Space.</h2>
+                <p class="sh-body" data-i18n="pages2.agency.mods_i">Además del núcleo de Pixy: bandeja, IA, pipeline y cobros.</p>
+                
             </div>
-        </section>
+            <ol class="sh-list"><li><span class="sh-num">01</span><div><h3 class="sh-h3" data-i18n="pages2.agency.mods_0_t">Proyectos y tareas</h3><p class="sh-body" data-i18n="pages2.agency.mods_0_d">Tablero, calendario, reuniones y ritmo semanal.</p></div></li><li><span class="sh-num">02</span><div><h3 class="sh-h3" data-i18n="pages2.agency.mods_1_t">Portal de colaboradores</h3><p class="sh-body" data-i18n="pages2.agency.mods_1_d">Tus freelancers trabajan con su PIN, sin ver lo que no les toca.</p></div></li><li><span class="sh-num">03</span><div><h3 class="sh-h3" data-i18n="pages2.agency.mods_2_t">Briefings</h3><p class="sh-body" data-i18n="pages2.agency.mods_2_d">Con un enlace público para que el cliente responda.</p></div></li><li><span class="sh-num">04</span><div><h3 class="sh-h3" data-i18n="pages2.agency.mods_3_t">Servicios recurrentes</h3><p class="sh-body" data-i18n="pages2.agency.mods_3_d">Facturación y cobro automático cada mes.</p></div></li><li><span class="sh-num">05</span><div><h3 class="sh-h3" data-i18n="pages2.agency.mods_4_t">Contratos</h3><p class="sh-body" data-i18n="pages2.agency.mods_4_d">Generador de contratos para cada cliente.</p></div></li><li><span class="sh-num">06</span><div><h3 class="sh-h3" data-i18n="pages2.agency.mods_5_t">Hosting web</h3><p class="sh-body" data-i18n="pages2.agency.mods_5_d">Cuentas, dominios y renovaciones de tus clientes.</p></div></li><li><span class="sh-num">07</span><div><h3 class="sh-h3" data-i18n="pages2.agency.mods_6_t">Portal del cliente</h3><p class="sh-body" data-i18n="pages2.agency.mods_6_d">Facturas pagables, cotizaciones, servicios y briefings, con tu marca.</p></div></li><li><span class="sh-num">08</span><div><h3 class="sh-h3" data-i18n="pages2.agency.mods_7_t">Informe de Pixy Social</h3><p class="sh-body" data-i18n="pages2.agency.mods_7_d">Muestra a cada cliente cuánto vendieron sus publicaciones.</p></div></li></ol>
+        </div>
+    </section>
 
-        <!-- PROBLEM VS SOLUTION SECTION -->
-        <!-- PROBLEM VS SOLUTION SECTION: Redesigned -->
-        <section id="comparison-section" style="margin-bottom: 120px; position: relative; z-index: 5;">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;"
-                data-i18n="agency.comparison_title">El Costo de no Automatizar</h2>
-
-            <div class="comparison-grid">
-                <!-- Left: CHAOS (The Old Way) -->
-                <div class="comparison-card chaos-card">
-                    <div class="card-header-chaos">
-                        <!-- Neon Warning Icon -->
-                        <svg class="neon-icon-red" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
-                            </path>
-                            <line x1="12" y1="9" x2="12" y2="13"></line>
-                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                        </svg>
-                        <h3 data-i18n="agency.chaos_title">Modo Tradicional</h3>
-                    </div>
-                    <div class="chaos-content">
-                        <div class="chaos-item">
-                            <span class="x-mark-neon">✕</span>
-                            <div>
-                                <strong data-i18n="agency.chaos_1_title">Fragmentación Total</strong>
-                                <p data-i18n="agency.chaos_1_desc">Briefs en WhatsApp, archivos en Drive, Excel para
-                                    cobros. Nada conecta.</p>
-                            </div>
-                        </div>
-                        <div class="chaos-item">
-                            <span class="x-mark-neon">✕</span>
-                            <div>
-                                <strong data-i18n="agency.chaos_2_title">Cambios Infinitos</strong>
-                                <p data-i18n="agency.chaos_2_desc">Feedback perdido en correos eternos. "¿Viste la
-                                    v4_final_final.pdf?"</p>
-                            </div>
-                        </div>
-                        <div class="chaos-item">
-                            <span class="x-mark-neon">✕</span>
-                            <div>
-                                <strong data-i18n="agency.chaos_3_title">Ceguera Financiera</strong>
-                                <p data-i18n="agency.chaos_3_desc">Sin reportes de rentabilidad por cliente. Trabajas
-                                    horas gratis.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right: ORDER (The Pixy Way) -->
-                <div class="comparison-card order-card">
-                    <div class="card-header-order">
-                        <!-- Neon Sparkle Icon -->
-                        <svg class="neon-icon-green" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                        </svg>
-                        <h3 data-i18n="agency.order_title">Ecosistema Pixy</h3>
-                    </div>
-                    <div class="order-content">
-                        <div class="order-item">
-                            <span class="check-mark-neon">✓</span>
-                            <div>
-                                <strong data-i18n="agency.order_1_title">Centralización Absoluta</strong>
-                                <p data-i18n="agency.order_1_desc">Un solo link para el cliente: Cronograma, Archivos, Pagos y Chat.</p>
-                            </div>
-                        </div>
-                        <div class="order-item">
-                            <span class="check-mark-neon">✓</span>
-                            <div>
-                                <strong data-i18n="agency.order_2_title">Feedback Visual</strong>
-                                <p data-i18n="agency.order_2_desc">Comentarios puntuales sobre imágenes. Aprobaciones legales en 1 clic.</p>
-                            </div>
-                        </div>
-                        <div class="order-item">
-                            <span class="check-mark-neon">✓</span>
-                            <div>
-                                <strong data-i18n="agency.order_3_title">Profit en Tiempo Real</strong>
-                                <p data-i18n="agency.order_3_desc">Dashboard financiero que cruza horas invertidas vs. ingreso real.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-glow"></div>
-                </div>
+    <section class="sh-section">
+        <div class="container sh-split">
+            <div><h2 class="sh-h2" data-i18n="pages2.agency.partner_t">Y si quieres, con tu marca.</h2></div>
+            <div>
+                <p class="sh-body sh-lead" data-i18n="pages2.agency.partner_d">Con el plan Partner vendes Pixy como propio: marca blanca y un panel para administrar las empresas de tus clientes.</p>
+                <a class="sh-link" href="partners.html" data-i18n="pages2.agency.partner_l">Conocer el plan Partner</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-
-        <!-- ECOSYSTEM DEEP DIVE GRID -->
-        <section id="features" style="margin-bottom: 120px; position: relative; z-index: 5;">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;"
-                data-i18n="agency.features_title">Capacidades de la Plataforma</h2>
-
-            <div class="deep-dive-grid">
-
-                <!-- Card 1: Client Portal -->
-                <div class="feature-card-lg theme-portal">
-                    <h3 data-i18n="agency.feat_portal_title">Portal de Clientes</h3>
-                    <p data-i18n="agency.feat_portal_desc">Un espacio VIP para tus clientes. Acceso a documentos, pagos
-                        online y estatus de proyectos sin
-                        necesidad de preguntarte a ti.</p>
-
-                    <div class="ui-mockup-frame">
-                        <div class="ui-header">
-                            <div class="ui-dots">
-                                <div class="ui-dot"></div>
-                                <div class="ui-dot"></div>
-                                <div class="ui-dot"></div>
-                            </div>
-                            <div class="ui-tag success" data-i18n="agency.mock_client_access">Acceso Cliente</div>
-                        </div>
-                        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-                            <div
-                                style="flex: 1; height: 60px; background: rgba(255,255,255,0.05); border-radius: 8px; padding: 10px;">
-                                <div style="font-size: 0.7rem; color: #888;" data-i18n="agency.mock_pending_invoice">Factura Pendiente</div>
-                                <div style="color: #fff; font-weight: bold;">$1,200.00 USD</div>
-                            </div>
-                            <button
-                                style="height: 60px; padding: 0 20px; background: #10b981; border: none; border-radius: 8px; color: white; font-weight: bold; cursor: pointer;" data-i18n="agency.mock_pay_now" data-i18n="agency.mock_pay_now">Pagar Ahora</button>
-                        </div>
-                        <div class="ui-row"></div>
-                        <div class="ui-row short"></div>
-                    </div>
-                </div>
-
-                <!-- Card 2: Operations Center -->
-                <div class="feature-card-lg theme-ops">
-                    <h3 data-i18n="agency.feat_ops_title">Centro de Operaciones</h3>
-                    <p data-i18n="agency.feat_ops_desc">Briefings estandarizados, catálogo de servicios y asignación de
-                        tareas. Tu equipo sabe qué hacer
-                        y cuándo hacerlo.</p>
-
-                    <div class="ui-mockup-frame">
-                        <div class="ui-header">
-                            <div class="ui-title-bar"></div>
-                            <div class="ui-tag purple" data-i18n="agency.mock_new_briefing">Briefing Nuevo</div>
-                        </div>
-                        <div class="ui-row highlight"
-                            style="height: 40px; border-radius: 8px; display: flex; align-items: center; padding: 0 10px; justify-content: space-between;">
-                            <span style="font-size: 0.8rem; color: #ccc;" data-i18n="agency.mock_campaign_launch">Campaña Q4 Launch</span>
-                            <span style="font-size: 0.7rem; color: #aaa;" data-i18n="agency.mock_2min_ago">Hace 2 min</span>
-                        </div>
-                        <div style="display: flex; gap: 8px;">
-                            <div class="ui-tag" data-i18n="agency.mock_design">Design</div>
-                            <div class="ui-tag" data-i18n="agency.mock_copy_id">Copy ID: #8821</div>
-                        </div>
-                        <div class="ui-row"></div>
-                    </div>
-                </div>
-
-                <!-- Card 3: AI & Legal -->
-                <div class="feature-card-lg theme-ai">
-                    <h3 data-i18n="agency.feat_ai_title">IA & Contratos</h3>
-                    <p data-i18n="agency.feat_ai_desc">Genera documentos legales y propuestas comerciales en segundos
-                        con IA. Firmas digitales
-                        integradas.</p>
-
-                    <div class="ui-mockup-frame">
-                        <div class="ui-header">
-                            <span style="font-size: 0.8rem; color: #f205e2;" data-i18n="agency.mock_ai_gen">✨ Pixy AI Generating...</span>
-                        </div>
-                        <div
-                            style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 8px; border-left: 3px solid #f205e2;">
-                            <div class="ui-row short" style="width: 80%;"></div>
-                            <div class="ui-row" style="width: 90%;"></div>
-                            <div class="ui-row" style="width: 60%;"></div>
-                        </div>
-                        <div
-                            style="align-self: flex-end; width: 100px; height: 30px; background: #f205e2; border-radius: 4px; margin-top: auto;">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4: CRM Canvas -->
-                <div class="feature-card-lg theme-crm">
-                    <h3 data-i18n="agency.feat_crm_title">Super CRM Canvas</h3>
-                    <p data-i18n="agency.feat_crm_desc">Gestión visual de leads. Arrastra y suelta oportunidades en un
-                        canvas infinito. Automatizaciones
-                        nativas.</p>
-
-                    <div class="ui-mockup-frame"
-                        style="background-image: radial-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px); background-size: 20px 20px;">
-                        <div style="display: flex; gap: 15px; height: 100%;">
-                            <!-- Col 1 -->
-                            <div
-                                style="width: 80px; background: rgba(255,255,255,0.05); border-radius: 6px; padding: 8px;">
-                                <div
-                                    style="height: 40px; background: rgba(59, 130, 246, 0.3); border-radius: 4px; margin-bottom: 8px;">
-                                </div>
-                                <div style="height: 40px; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
-                            </div>
-                            <!-- Arrow -->
-                            <div style="align-self: center; font-size: 1.5rem; color: #3b82f6;">→</div>
-                            <!-- Col 2 -->
-                            <div
-                                style="width: 80px; background: rgba(255,255,255,0.05); border-radius: 6px; padding: 8px;">
-                                <div style="height: 40px; background: rgba(16, 185, 129, 0.3); border-radius: 4px;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section style="margin-top: 100px; text-align: center;">
-            <div class="glass-card highlight-card" style="max-width: 800px; margin: 0 auto; padding: 60px;">
-                <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 16px;"
-                    data-i18n="agency.cta_bottom_title">¿Listo para escalar?</h2>
-                <p class="subtitle" style="margin-bottom: 40px; font-size: 1.1rem;"
-                    data-i18n="agency.cta_bottom_subtitle">Únete a las agencias que ya operan
-                    con tranquilidad usando Pixy.</p>
-                <a href="contact.html" class="btn-neon" data-i18n="agency.cta_bottom_btn">Solicitar Demo Agency</a>
-            </div>
-        </section>
-
-    </main>
+    <section class="sh-section sh-final">
+        <div class="container">
+            <h2 class="sh-h2" data-i18n="pages2.agency.close_t">Tu agencia, <span class="sh-accent">en piloto automático.</span></h2>
+            <p class="sh-body" data-i18n="pages2.agency.close_s">Te mostramos Space Agencias con los flujos de tu agencia.</p>
+            <a class="btn-neon" href="contact.html" data-warp-click="departure" data-i18n="pages2.agency.close_b">Agenda tu demo</a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -363,34 +136,39 @@
             <div class="footer-brand">
                 <img src="assets/logos/logo-dark.svg" alt="Pixy" class="footer-logo footer-logo-dark">
                 <img src="assets/logos/logo-light.svg" alt="Pixy" class="footer-logo footer-logo-light">
-                <p data-i18n="footer.slogan">Tu negocio, bien diseñado.</p>
+                <p data-i18n="chrome.slogan_spaces">El sistema operativo de tu negocio.</p>
+                <p class="footer-meta" data-i18n="chrome.meta_tp">Pixy es Tech Provider de Meta.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/pixyspaces/" target="_blank" rel="noopener me" aria-label="Pixy en Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg></a>
+                    <a href="https://www.facebook.com/pixyspaces" target="_blank" rel="noopener me" aria-label="Pixy en Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9.1 23.69v-7.98H6.63v-3.67H9.1v-1.58c0-4.09 1.85-5.98 5.86-5.98.4 0 .96.04 1.47.1.38.04.76.11 1.14.2v3.32c-.22-.02-.43-.03-.65-.04-.25 0-.49-.01-.74-.01-.7 0-1.26.1-1.67.31-.29.15-.52.36-.68.62-.26.42-.38 1-.38 1.75v1.3h3.92l-.39 2.1-.28 1.57h-3.25v8.24C19.4 23.24 24 18.18 24 12.04 24 5.42 18.63.04 12 .04S0 5.42 0 12.04c0 5.63 3.87 10.35 9.1 11.65z"/></svg></a>
+                </div>
             </div>
-
-            <nav class="footer-links">
-                <h4 data-i18n="footer.product">Producto</h4>
-
-                <a href="pricing.html" class="neon-link" data-i18n="nav.pricing">Precios</a>
-                <a href="spaces.html" class="neon-link" data-i18n="footer.solutions">Soluciones</a>
+            <nav class="footer-links" aria-label="Producto">
+                <h4 data-i18n="chrome.col_product">Producto</h4>
+                <a href="spaces.html" class="neon-link" data-i18n="chrome.spaces">Spaces</a>
+                <a href="features.html" class="neon-link" data-i18n="chrome.platform">Plataforma</a>
+                <a href="pricing.html" class="neon-link" data-i18n="chrome.plans">Planes</a>
+                <a href="partners.html" class="neon-link" data-i18n="chrome.partners">Partners</a>
             </nav>
-
-            <nav class="footer-links">
-                <h4 data-i18n="footer.company">Empresa</h4>
-                <a href="partners.html" class="neon-link" data-i18n="footer.partners">Partners</a>
-                <a href="contact.html" class="neon-link" data-i18n="nav.contact">Contacto</a>
-                <a href="blog.html" class="neon-link" data-i18n="nav.blog">Blog</a>
+            <nav class="footer-links" aria-label="Pixy">
+                <h4 data-i18n="chrome.col_company">Pixy</h4>
+                <a href="blog.html" class="neon-link" data-i18n="chrome.blog">Blog</a>
+                <a href="contact.html" class="neon-link" data-i18n="chrome.contact">Contacto</a>
+                <a href="agency.html" class="neon-link" data-i18n="chrome.studio">Pixy Studio</a>
+                <a href="https://wa.me/573504076800" class="neon-link" target="_blank" rel="noopener" data-i18n="chrome.whatsapp">WhatsApp</a>
             </nav>
-
-            <nav class="footer-links">
-                <h4 data-i18n="footer.legal">Legal</h4>
-                <a href="privacy.html" class="neon-link" data-i18n="footer.privacy">Privacidad</a>
-                <a href="terms.html" class="neon-link" data-i18n="footer.terms">Términos</a>
-                <a href="data-deletion.html" class="neon-link" data-i18n="footer.deletion">Eliminación de Datos</a>
-                <a href="cookies.html" class="neon-link" data-i18n="footer.cookies">Cookies</a>
-                <a href="permissions.html" class="neon-link" data-i18n="footer.permissions">Permisos</a>
+            <nav class="footer-links" aria-label="Legal">
+                <h4 data-i18n="chrome.col_legal">Legal</h4>
+                <a href="privacy.html" class="neon-link" data-i18n="chrome.privacy">Privacidad</a>
+                <a href="terms.html" class="neon-link" data-i18n="chrome.terms">Términos</a>
+                <a href="cookies.html" class="neon-link" data-i18n="chrome.cookies">Cookies</a>
+                <a href="data-deletion.html" class="neon-link" data-i18n="chrome.deletion">Eliminación de datos</a>
+                <a href="legal/uso-aceptable.html" class="neon-link" data-i18n="chrome.acceptable">Uso aceptable</a>
+                <a href="legal/index.html" class="neon-link" data-i18n="chrome.legal_all">Todos los documentos</a>
             </nav>
         </div>
         <div class="footer-bottom">
-            <p data-i18n="footer.rights">© 2026 Pixy. Todos los derechos reservados.</p>
+            <p data-i18n="chrome.rights">© 2026 Pixy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -414,70 +192,29 @@
         </svg>
     </button>
 
-    <script src="js/i18n.js"></script>
-    <script src="js/main.js"></script>
-    <!-- Page Specific Animations -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            gsap.registerPlugin(ScrollTrigger);
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-            // 0. Ensure Footer is above Astronaut (Z-Index Fix)
-            gsap.set('.footer', { position: 'relative', zIndex: 50 });
-            gsap.set('.hero-visual-right', { zIndex: 0 }); // Keep Astronaut low
-            gsap.set('#comparison-section, #features', { zIndex: 10, position: 'relative' }); // Keep content high
+    <!-- Fondo espacial (estrellas en viaje, reacciona al scroll) -->
+    <script src="js/space-bg.js?v=c747942c56"></script>
+    <script src="js/smooth-scroll.js?v=9b99cab1f0"></script>
 
-            // 1. Hero Entrance
-            const tl = gsap.timeline();
-            tl.from('.hero-content-left > *', {
-                y: 50,
-                opacity: 0,
-                duration: 0.8,
-                stagger: 0.1,
-                ease: "power2.out"
-            });
+    <!-- i18n Script -->
+    <script src="js/i18n.js?v=5a387474c3" data-locales="13ffb5a119"></script>
 
-            // 2. Astronaut Idle Float
-            gsap.to('.astronaut-hero', {
-                y: 20,
-                rotation: 5,
-                duration: 4, // Slower idle
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut"
-            });
+    <!-- Main Script -->
+    <script src="js/main.js?v=9907957753"></script>
 
-            // 3. SCROLL ODYSSEY: Solid, Slow, Behind Footer
-            // We calculate the exact distance to the footer to prevent overshooting
-            const totalDistance = document.body.scrollHeight - window.innerHeight;
+    <!-- Portada de Spaces: titular cinético, Bandeja en vivo, cinta de la IA, ciudad del Modo 3D y planes -->
+    <script src="js/spaces-home.js?v=38871573f5"></script>
 
-            gsap.to('.hero-visual-right', {
-                scrollTrigger: {
-                    trigger: "body",
-                    start: "top top",
-                    end: "bottom bottom",
-                    scrub: 1.5 // Increased scrub for smoother, "heavier" feel
-                },
-                y: totalDistance * 0.85, // Move down ~85% of page height (slower than scroll)
-                x: -50,
-                scale: 1.2, // Subtle growth
-                ease: "none",
-                willChange: "transform" // Performance optimization
-            });
+    <!-- Sección de IA en actos -->
+    <script src="js/spaces-ai.js?v=1ad5913302"></script>
 
-            // 4. Bento Grid Stagger
-            gsap.from('.bento-grid > div', {
-                scrollTrigger: {
-                    trigger: '.bento-grid',
-                    start: "top 80%"
-                },
-                y: 50,
-                opacity: 0,
-                duration: 0.6,
-                stagger: 0.2,
-                ease: "power2.out"
-            });
-        });
-    </script>
+    <!-- Orbe viajero: el orbe de la IA recorre la portada con el scroll -->
+    <script src="js/orb-route.js?v=4d82a46bd1"></script>
+    <div id="pixy-end" hidden></div>
 </body>
 
 </html>
