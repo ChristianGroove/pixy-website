@@ -274,11 +274,11 @@
 .isl-sign { font: 700 8.5px/1 Inter, system-ui, sans-serif; letter-spacing: 0.08em; fill: var(--isl-sign); }
 .isl-sign-line { stroke: var(--c); stroke-width: 2; stroke-linecap: round; }
 .isl-plate { fill: var(--c); opacity: 0.85; }
-/* Tanque de cristal del Paquete de IA: el líquido es el uso del mes; el orbe viajero lo llena con su color */
+/* Tanque de cristal del Paquete de IA: vacío hasta que el orbe viajero entra y lo llena con su color */
 .isla-stage { --orb-liquid: #38b6e8; --charge: 0; }
 .isl-glass-back { fill: var(--isl-right); opacity: 0.55; stroke: var(--isl-edge); stroke-width: 1; }
-.isl-liquid { fill: color-mix(in srgb, var(--c) calc((1 - var(--charge)) * 100%), var(--orb-liquid)); opacity: calc(0.42 + var(--charge) * 0.3); }
-.isl-liquid-top { fill: color-mix(in srgb, var(--c) calc((1 - var(--charge)) * 100%), var(--orb-liquid)); opacity: calc(0.6 + var(--charge) * 0.35); }
+.isl-liquid { fill: var(--orb-liquid); opacity: calc(min(1, var(--charge) * 12) * 0.72); }
+.isl-liquid-top { fill: var(--orb-liquid); opacity: calc(min(1, var(--charge) * 12) * 0.92); }
 .isl-liquid-glow { fill: var(--orb-liquid); opacity: calc(var(--charge) * 0.55); filter: blur(10px); }
 .isl-glass { fill: rgba(255, 255, 255, 0.04); stroke: var(--isl-sign); stroke-opacity: 0.35; stroke-width: 1.2; }
 .isl-glass-rim { fill: none; stroke: var(--isl-sign); stroke-opacity: 0.5; stroke-width: 1.4; }

@@ -67,7 +67,7 @@
         poly('isl-t ' + (cls || ''), [[a, c, y1], [b, c, y1], [b, e, y1], [a, e, y1]], g);
     }
 
-    /** Tanque de cristal del Paquete de IA, abierto arriba: pared del fondo, líquido (uso del mes), brillo y cristal. */
+    /** Tanque de cristal del Paquete de IA, abierto arriba: pared del fondo, líquido (lo pone el orbe viajero), brillo y cristal. */
     var TANK_R = 1.9, TANK_H = 2.6;
     function tank(g, l) {
         var y0 = l.h, base = P(l.x, l.z, y0), top = P(l.x, l.z, y0 + TANK_H);
@@ -94,8 +94,8 @@
         var g = byId.ai.tankGeo;
         var liquid = stage.querySelector('[data-level]'), glow = stage.querySelector('[data-glow]'), surface = stage.querySelector('[data-surface]');
         if (!g || !liquid) return;
-        var used = Math.min(1, st.used / st.total);
-        var k = used + (1 - used) * charge * 0.94;
+        // Vacío hasta que entra el orbe: el líquido es él
+        var k = charge * 0.94;
         var y = g.base - (g.base - g.top) * k;
         var d = 'M' + (g.x - g.rx) + ',' + y + ' L' + (g.x - g.rx) + ',' + g.base + ' A' + g.rx + ',' + g.ry + ' 0 0 0 ' + (g.x + g.rx) + ',' + g.base + ' L' + (g.x + g.rx) + ',' + y + ' A' + g.rx + ',' + g.ry + ' 0 0 0 ' + (g.x - g.rx) + ',' + y + ' Z';
         liquid.setAttribute('d', d);
